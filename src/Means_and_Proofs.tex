@@ -60,3 +60,99 @@ A_{n + 1} := (\sum_{i=1}^{n + 1} a_i) / (n + 1) = \frac{a_1 + a_2 + \cdots + a_n
 \[
 G_{n + 1} := \sqrt[n + 1]{a_1 a_2 \cdots a_n a_{n + 1}} = \sqrt[n + 1]{(a_1 a_2 \cdots a_n) a_{n + 1}}
 \]
+\[
+A_{n - 1}^{n + 1} = (\frac{a_1 + a_2 + \cdots + a_{n + 1}}{n + 1})^{n - 1} = A_{n + 1}^{n - 1} 
+\]
+\[
+G_{n + 1}^{n + 1} := (\sqrt[n + 1]{a_1 a_2 \cdots a_n a_{n + 1}})^{n + 1} = (a_1 a_2 \cdots a_n) a_{n + 1} = \sqrt[n]{(a_1 a_2 \cdots a_n)^{n}} a_{n + 1}^{n + 1} = G_{n}^{n} a_{n + 1}^{n + 1}
+\]
+Then 
+\begin{center}
+$G_{n + 1}^{n + 1}  A_{n + 1}^{n - 1} = G_{n}^{n} a_{n + 1}^{n + 1} A_{n + 1}^{n - 1} \leq A_{n}^{n} A_{n + 1}^{n - 1}$
+\end{center}
+
+This comes from
+
+\begin{center}
+    \[
+    G_n \leq A_n
+    \]
+    \[
+    G_n^{n} \leq A_n^{n}
+    \]
+    \[
+    G_n^{n} a_{n+1} \leq A_n^{n} a_{n+1}
+    \]
+    \[
+    G_{n}^{n} a_{n + 1}^{n + 1} A_{n + 1}^{n - 1} \leq A_{n}^{n} A_{n + 1}^{n - 1} = \left(A_{n}^{n} \left( a_{n + 1} A_{n +1}\right)^{n -1} \right)^{\frac{n}{n}}
+    \]
+    \[
+    \leq A_{n}^{n} \left( \frac{a_{n + 1} + A_{n + 1} + \dots A_{n + 1}}{n} \right)^{n}
+    \]
+    \[
+    A_{n}^{n} \left( \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n} \right)^{n}
+    \]
+    \[
+     \left( A_{n} \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n} \right)^{n}
+    \]
+\end{center}
+
+Note that
+\begin{center}
+    \[
+    \left( A_{n} \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n} \right) \rightarrow  \left( \sqrt{A_{n} \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n}} \right)^{2}
+    \]
+    \[
+    \leq \left( \frac{ A_n + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n}}{2} \right)^{2n}
+    \]
+\end{center}
+
+Now with power of \textit{n} we have
+\begin{center}
+    \[
+        \left( A_{n} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n} \right)^{n} \leq \left( \frac{A_{n} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n}}{2} \right)^{2n}
+    \]
+
+    \[
+    = \left( \frac{A_n}{2} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{2n}\right)^{2n}
+    \]
+    \[
+    = \left( \frac{A_n n}{2n} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{2n}\right)^{2n}
+    \]
+    \[
+    = \left( \frac{A_n n  + a_{n + 1} + (n - 1)A_{n + 1}}{2n}\right)^{2n}
+    \]
+    \[
+    = \left( \frac{A_{n + 1}(n + 1) + (n - 1)A_{n + 1}}{2n}\right)^{2n}
+    \]
+    \[
+    = \left( \frac{2n A_{n + 1}}{2n}\right)^{2n} = \left(A_{n + 1}\right)^{2n}
+    \]
+\end{center}
+
+Now we have prooven that $G_{n + 1}^{n + 1} A_{n + 1}^{n - 1}\leq \left(A_{n + 1}\right)^{2n}$ by dividing both sides by \( A_{n + 1}^{n - 1} \) we get
+\begin{center}
+    \[
+    G_{n + 1}^{n + 1}\leq A_{n + 1}^{n + 1}
+    \]
+\end{center}
+$\mathfrak{Q} \mathfrak{E} \mathfrak{D}$
+
+\subsection{Proof of the Harmonic Mean Geometric Mean Inequality}
+Let \( a_1, a_2, \ldots, a_n > 0 \). We will prove the inequality.
+\\
+We know that $G_n \leq A_n $
+
+\begin{center}
+    \[
+    G_n \leq A_n
+    \]
+    \[
+    \sqrt[n]{x_1 \cdot x_2 \cdots x_n} \leq \frac{x_1 + x_2 + \ldots + x_n}{n}
+    \]
+    \[
+    \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \ldots + \frac{1}{x_n}} \leq \sqrt[n]{x_1 \cdot x_2 \cdots x_n}
+    \]
+\end{center}
+This concludes the proof of the harmonic mean-geometric mean inequality.\\
+$\mathfrak{Q} \mathfrak{E} \mathfrak{D}$

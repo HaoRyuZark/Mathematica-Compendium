@@ -1,0 +1,94 @@
+\section{The Natural Numbers}
+In this section we will take a look at the natural numbers, which are the numbers we use for counting. The natural numbers are defined as follows:
+This not going not be a deep dive just a look at the axioms and the basic construction of the natural numbers. The natural numbers are defined as follows:
+
+We will now define the set of natural numbers, \( \mathbb{N} \), via the following 9 axioms. These axioms are known as the \textbf{Peano Axioms}. The first 4 axioms define equality on the set \( \mathbb{N} \).
+
+\begin{description}
+  \item[Axiom 1:] For every \( x \in \mathbb{N} \), we have \( x = x \). \hfill (Reflexivity)
+  \item[Axiom 2:] For every \( x, y \in \mathbb{N} \), if \( x = y \) then \( y = x \). \hfill (Symmetry)
+  \item[Axiom 3:] For every \( x, y, z \in \mathbb{N} \), if \( x = y \) and \( y = z \) then \( x = z \). \hfill (Transitivity)
+  \item[Axiom 4:] For all \( x, y \), if \( x \in \mathbb{N} \) and \( x = y \), then \( y \in \mathbb{N} \). \hfill (Closure of Equality)
+\end{description}
+
+The remaining 5 axioms define the structure of \( \mathbb{N} \):
+
+\begin{description}
+  \item[Axiom 5:] \( 0 \in \mathbb{N} \)
+  \item[Axiom 6:] If \( x \in \mathbb{N} \), then the successor \( S(x) \in \mathbb{N} \).
+  \item[Axiom 7:] There is no \( x \in \mathbb{N} \) such that \( S(x) = 0 \).
+  \item[Axiom 8:] For all \( x, y \in \mathbb{N} \), if \( S(x) = S(y) \), then \( x = y \).
+  \item[Axiom 9:] Let \( P(x) \) be a statement about the natural number \( x \). If:
+    \begin{itemize}
+        \item \( P(0) \) is true, and
+        \item for all \( n \in \mathbb{N} \), if \( P(n) \) is true, then \( P(S(n)) \) is also true,
+    \end{itemize}
+    then \( P(x) \) is true for all \( x \in \mathbb{N} \). \hfill (Mathematical Induction)
+\end{description}
+
+As shorthand, we denote:
+\[
+S(0) = 1, \quad S(S(0)) = 2, \quad S(S(S(0))) = 3, \quad \text{and so on.}
+\]
+
+\subsection{Arithmetic on \( \mathbb{N} \)}
+
+We have defined the set \( \mathbb{N} \), but we still have no way of working with its elements. In this section, we will formalize, using only the above 9 axioms, the two basic operations on natural numbers: addition and multiplication.
+
+\subsubsection{Addition}
+
+We define addition recursively:
+
+
+\begin{align*}
+a + 0 &= a \\
+a + S(b) &= S(a + b)
+\end{align*}
+for all \( a, b \in \mathbb{N} \).
+
+
+\textbf{Example:} Show that \( 1 + 2 = 3 \):
+\begin{align*}
+1 + 2 &= 1 + S(1) \\
+&= S(1 + 1) \\
+&= S(1 + S(0)) \\
+&= S(S(1 + 0)) \\
+&= S(S(1)) \\
+&= S(2) \\
+&= 3
+\end{align*}
+
+\subsubsection{Multiplication}
+
+We define multiplication recursively in terms of repeated addition:
+
+
+\begin{align*}
+a \cdot 0 &= 0 \\
+a \cdot S(b) &= a + (a \cdot b)
+\end{align*}
+for all \( a, b \in \mathbb{N} \).
+
+
+\textbf{Example:} Show that \( 2 \cdot 2 = 4 \):
+\begin{align*}
+2 \cdot 2 &= 2 \cdot S(1) \\
+&= 2 + (2 \cdot 1) \\
+&= 2 + (2 \cdot S(0)) \\
+&= 2 + (2 + (2 \cdot 0)) \\
+&= 2 + (2 + 0) \\
+&= 2 + 2 \\
+&= 2 + S(1) \\
+&= S(2 + 1) \\
+&= S(2 + S(0)) \\
+&= S(S(2 + 0)) \\
+&= S(S(2)) \\
+&= S(3) \\
+&= 4
+\end{align*}
+
+\subsection{Ordering the Natural Numbers}
+
+
+For any \( a, b \in \mathbb{N} \), we say \( a \leq b \) if there exists some \( s \in \mathbb{N} \) such that \( a + s = b \). If such \( s \neq 0 \), then \( a < b \).
+\newpage
