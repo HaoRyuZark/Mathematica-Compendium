@@ -1,0 +1,62 @@
+\section{Means and Proofs}
+In math there are a lot of means. In this section I will show some of them with the correspoinding proofs.
+
+\begin{itemize}
+    \item \textbf{Arithmetic Mean:} The arithmetic mean of \( n \) numbers \( x_1, x_2, \ldots, x_n \) is given by:
+    \[
+    A = \frac{x_1 + x_2 + \ldots + x_n}{n}
+    \]
+    \item \textbf{Geometric Mean:} The geometric mean of \( n \) numbers \( x_1, x_2, \ldots, x_n \) is given by:
+    \[
+    G = \sqrt[n]{x_1 \cdot x_2 \cdots x_n}
+    \]
+    \item \textbf{Harmonic Mean:} The harmonic mean of \( n \) numbers \( x_1, x_2, \ldots, x_n \) is given by:
+    \[
+    H = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \ldots + \frac{1}{x_n}}
+    \]
+    \item \textbf{Quadratic Mean:} The quadratic mean (or root mean square) of \( n \) numbers \( x_1, x_2, \ldots, x_n \) is given by:
+    \[
+    Q = \sqrt{\frac{x_1^2 + x_2^2 + \ldots + x_n^2}{n}}
+    \]
+\end{itemize}
+
+\subsection{Proof of the Arithmetic Mean-Geometric Mean Inequality}
+
+Let \( a_1, a_2, \dots, a_n > 0 \). We will prove by induction that:
+\[
+\frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n}
+\]
+with equality if and only if \( a_1 = a_2 = \cdots = a_n \).
+
+\subsection*{Base Case: \( n = 2 \)}
+
+We want to prove:
+\[
+\frac{a_1 + a_2}{2} \geq \sqrt{a_1 a_2}
+\]
+
+Let \( a_1, a_2 > 0 \). Then by the identity
+\[
+\left( \frac{a_1 - a_2}{2} \right)^2 \geq 0,
+\]
+we get
+\[
+\frac{a_1^2 - 2a_1a_2 + a_2^2}{4} \geq 0 \Rightarrow a_1^2 + a_2^2 \geq 2a_1a_2.
+\]
+So,
+\[
+(a_1 + a_2)^2 \geq 4a_1a_2 \Rightarrow \left( \frac{a_1 + a_2}{2} \right)^2 \geq a_1a_2,
+\]
+and taking square roots gives the desired result:
+\[
+\frac{a_1 + a_2}{2} \geq \sqrt{a_1 a_2}.
+\]
+
+\subsection*{For \( n \geq 2 \)}
+
+\[
+A_{n + 1} := (\sum_{i=1}^{n + 1} a_i) / (n + 1) = \frac{a_1 + a_2 + \cdots + a_n + a_{n + 1}}{n + 1}
+\]
+\[
+G_{n + 1} := \sqrt[n + 1]{a_1 a_2 \cdots a_n a_{n + 1}} = \sqrt[n + 1]{(a_1 a_2 \cdots a_n) a_{n + 1}}
+\]

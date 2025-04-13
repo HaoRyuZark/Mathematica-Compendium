@@ -1,0 +1,212 @@
+\section{Mathematical Proofs}
+In this section I will provide with some examples of different types of proofs.
+\subsection{Proof by Direct Argument}
+
+    For any integer \( n \), if \( n \) is even, then \( n^2 \) is even.
+\begin{proof}
+    We will prove this theorem by direct argument. 
+
+    Assume \( n \) is an even integer. Then we can write \( n = 2k \) for some integer \( k \). 
+
+    Now, we compute \( n^2 \):
+    \[
+    n^2 = (2k)^2 = 4k^2 = 2(2k^2)
+    \]
+    This shows that \( n^2 \) is even, as it can be expressed as \( 2m \) where \( m = 2k^2 \) is an integer.
+    Therefore, we conclude that if \( n \) is even, then \( n^2 \) is even.
+\end{proof}
+\subsection{Proof by Contradiction}
+
+    If \( n \) is an integer such that \( n^2 \) is even, then \( n \) is even.
+   
+\begin{proof}
+    We will prove this theorem by contradiction. Assume that \( n \) is an integer such that \( n^2 \) is even, but \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \). 
+
+    Now, we compute \( n^2 \):
+    \[
+    n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
+    \]
+    This shows that \( n^2 \) is odd, which contradicts our assumption that \( n^2 \) is even. Therefore, our assumption that \( n \) is odd must be false, and thus \( n \) must be even.
+\end{proof}
+\subsection{Proof by Induction}
+
+    For all \( n \in \mathbb{N} \), the sum of the first \( n \) positive integers is given by:
+    \[
+    S(n) = 1 + 2 + 3 + \ldots + n = \frac{n(n+1)}{2}
+    \]
+
+\begin{proof}
+    We will prove this theorem by induction on \( n \).
+
+    \textbf{Base Case:} For \( n = 1 \):
+    \[
+    S(1) = 1 = \frac{1(1+1)}{2}
+    \]
+    The base case holds.
+
+    \textbf{Inductive Step:} Assume that the statement holds for some \( n = k \), i.e., assume that:
+    \[
+    S(k) = 1 + 2 + 3 + \ldots + k = \frac{k(k+1)}{2}
+    \]
+    We need to show that the statement holds for \( n = k + 1 \):
+    \[
+    S(k+1) = S(k) + (k + 1)
+    \]
+    By the inductive hypothesis, we have:
+    \[
+    S(k+1) = \frac{k(k+1)}{2} + (k + 1)
+    \]
+    \[    
+    = \frac{k(k+1)}{2} + \frac{2(k + 1)}{2}
+    \]
+    \[      = \frac{k(k+1) + 2(k + 1)}{2}
+    \]
+    \[
+    = \frac{(k + 1)(k + 2)}{2}
+    \]
+    Thus, the statement holds for \( n = k + 1 \).
+    By the principle of mathematical induction, the statement holds for all \( n \in \mathbb{N} \).
+\end{proof}
+\subsection{Proof by Exhaustion}
+
+    The only integer solutions to the equation \( x^2 + y^2 = 1 \) are \( (0, 1), (1, 0), (0, -1), (-1, 0) \).     
+ 
+\begin{proof}
+    We will prove this theorem by exhaustion. We will check all possible integer values of \( x \) and \( y \) such that \( x^2 + y^2 = 1 \).
+
+    The possible integer values for \( x \) and \( y \) are \( -1, 0, 1 \). We will check each case:
+
+    - If \( x = 0 \):
+        - Then \( y^2 = 1 \) gives \( y = 1 \) or \( y = -1 \).
+        - Solutions: \( (0, 1), (0, -1) \).
+    - If \( x = 1 \):
+        - Then \( y^2 = 0 \) gives \( y = 0 \).
+        - Solution: \( (1, 0) \).
+    - If \( x = -1 \):
+        - Then \( y^2 = 0 \) gives \( y = 0 \).
+        - Solution: \( (-1, 0) \).
+
+    Thus, the only integer solutions to the equation are:
+    \[
+    (0, 1), (1, 0), (0, -1), (-1, 0)
+    \]
+\end{proof}
+\subsection{Proof by Cases}
+
+    For any integer \( n \), \( n^2 \) is even if and only if \( n \) is even.
+  
+\begin{proof}
+    We will prove this theorem by cases.
+
+    \textbf{Case 1:} Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \). 
+
+    Now, we compute \( n^2 \):
+    \[
+    n^2 = (2k)^2 = 4k^2 = 2(2k^2)
+    \]
+    This shows that \( n^2 \) is even.
+
+    \textbf{Case 2:} Assume \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \). 
+
+    Now, we compute \( n^2 \):
+    \[
+    n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
+    \]
+    This shows that \( n^2 \) is odd.
+
+    Since both cases have been considered, we conclude that \( n^2 \) is even if and only if \( n \) is even.
+\end{proof}
+\subsection{Proof by Construction} 
+
+    There exists an irrational number \( x \) such that \( x^2 \) is rational.
+
+\begin{proof}
+    We will construct an irrational number \( x \) such that \( x^2 \) is rational.
+
+    Let \( x = \sqrt{2} \). We know that \( \sqrt{2} \) is irrational. Now, we compute \( x^2 \):
+    \[
+    x^2 = (\sqrt{2})^2 = 2
+    \]
+    Since \( 2 \) is a rational number, we have constructed an irrational number \( x = \sqrt{2} \) such that \( x^2 = 2 \) is rational.
+    Therefore, the theorem is proved.
+\end{proof}
+\subsection{Proof by Counterexample}
+
+    The statement "All prime numbers are odd" is false.
+ 
+\begin{proof}
+    To prove this theorem, we will provide a counterexample.
+
+    The number \( 2 \) is a prime number, as its only divisors are \( 1 \) and \( 2 \). However, \( 2 \) is even, which contradicts the statement that all prime numbers are odd.
+
+    Therefore, the statement "All prime numbers are odd" is false.
+\end{proof}
+\subsection{Proof by Contrapositive}    
+
+    If \( n \) is an integer such that \( n^2 \) is odd, then \( n \) is odd.
+  
+\begin{proof}
+    We will prove this theorem by contrapositive. The contrapositive of the statement is: If \( n \) is an integer such that \( n \) is even, then \( n^2 \) is even.
+
+    Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \). 
+
+    Now, we compute \( n^2 \):
+    \[
+    n^2 = (2k)^2 = 4k^2 = 2(2k^2)
+    \]
+    This shows that \( n^2 \) is even.
+
+    Since the contrapositive statement is true, the original statement "If \( n^2 \) is odd, then \( n \) is odd" is also true.
+\end{proof}
+\subsection{Proof by Reduction to Absurdity}    
+
+    The square root of \( 2 \) is irrational.   
+
+\begin{proof}
+    We will prove this theorem by reduction to absurdity. Assume that \( \sqrt{2} \) is rational. Then we can write:
+    \[
+    \sqrt{2} = \frac{p}{q}
+    \]
+    where \( p \) and \( q \) are integers with no common factors (i.e., the fraction is in simplest form).
+
+    Squaring both sides gives:
+    \[
+    2 = \frac{p^2}{q^2}
+    \]
+    Rearranging gives:
+    \[
+    p^2 = 2q^2
+    \]
+    This implies that \( p^2 \) is even, and therefore \( p \) must be even (since the square of an odd number is odd).
+    Let \( p = 2k \) for some integer \( k \). Substituting this back into the equation gives:
+    \[
+    (2k)^2 = 2q^2   
+    \]
+    \[
+    4k^2 = 2q^2
+    \]
+    \[
+    2k^2 = q^2
+    \]
+    This implies that \( q^2 \) is even, and therefore \( q \) must also be even.   
+    Since both \( p \) and \( q \) are even, they have a common factor of \( 2 \), which contradicts our assumption that \( p \) and \( q \) have no common factors.
+    Therefore, our assumption that \( \sqrt{2} \) is rational must be false, and thus \( \sqrt{2} \) is irrational.
+\end{proof}
+
+\subsection{Proof by Analogy}
+
+    The set of rational numbers is dense in the set of real numbers.
+
+\begin{proof}
+    We will prove this theorem by analogy. 
+
+    Consider the set of rational numbers \( \mathbb{Q} \) and the set of real numbers \( \mathbb{R} \). The density of \( \mathbb{Q} \) in \( \mathbb{R} \) means that between any two real numbers, there exists a rational number.
+
+    For example, between the real numbers \( 1 \) and \( 2 \), we can find the rational number \( \frac{3}{2} = 1.5 \). Similarly, between any two real numbers \( a \) and \( b \) (where \( a < b \)), we can find a rational number \( r = \frac{a + b}{2} \).
+
+    This shows that the set of rational numbers is dense in the set of real numbers.
+    Therefore, the theorem is proved by analogy.    
+\end{proof}
+\newpage
+
+

@@ -1,0 +1,364 @@
+\section{Relations, Maps and Functions}
+A relation in mathematics is a connection or relationship between elements of two sets. It's formally defined as a subset of the Cartesian product of the sets.
+
+For example, if we have sets $A$ and $B$, a relation $R$ from $A$ to $B$ consists of ordered pairs $(a,b)$ where $a \in A$ and $b \in B$, such that $a$ is related to $b$ according to some rule or property.
+
+Common types of relations include:
+\begin{itemize}
+    \item Functions (special relations where each input has exactly one output)
+    \item Equivalence relations (reflexive, symmetric, and transitive)
+    \item Partial orders (reflexive, antisymmetric, and transitive)
+\end{itemize}
+
+Relations can be represented using diagrams, matrices, or sets of ordered pairs, and they're fundamental to many areas of mathematics including algebra, calculus, and discrete mathematics.
+
+\subsection{Types of relations}
+
+Let $A$ be a set and $X$ be a relation on $A$.
+
+\begin{itemize}
+    \item \textbf{Reflexive:} $\forall a \in A: (a, a) \in X$ \ \ (or written as $a \sim a$)
+    
+    \item \textbf{Irreflexive:} $\forall a \in A: (a, a) \not\in X$
+    
+    \item \textbf{Symmetric:} $\forall a, b \in A: (a, b) \in X \Rightarrow (b, a) \in X$ \ \ (or written as $(a \sim b) \Rightarrow (b \sim a)$)
+    
+    \item \textbf{Antisymmetric:} $\forall a, b \in A: (a, b) \in X \text{ and } (b, a) \in X \Rightarrow a = b$
+    
+    \item \textbf{Transitive:} $\forall a, b, c \in A: (a, b) \in X \text{ and } (b, c) \in X \Rightarrow (a, c) \in X$ \ \ (or written as \\$(a \sim b) \text{ and } (b \sim c) \Rightarrow (a \sim c)$)
+    
+    \item \textbf{Total:} $\forall a, b \in A: a \neq b \Rightarrow (a, b) \in X \text{ or } (b, a) \in X$
+\end{itemize}
+
+\subsection{Equivalence relation}
+An equivalence relation is a relation that is symmetric, transitive and reflexive.
+\\
+Example:
+\[
+R:= \{ (a,b) \in \mathbb{N} \times \mathbb{N}: a = b\}
+\]
+
+\subsection{The Graph}
+
+\[
+    \text{graph}(f):= \{(x, f(x)): x \in X\}
+\]
+
+\subsection{The identity}
+
+\[
+    \text{id}(f):= \ idx:={(x, x): x \in X}
+\]
+
+\subsection{Image and Domain}
+
+\subsubsection{Image}
+The image (or range) of a relation $R$ from set $A$ to set $B$ is the set of all elements in $B$ that are related to at least one element in $A$. Formally, if $R \subseteq A \times B$ is a relation, then the image of $R$ is defined as:
+
+$$\text{Im}(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}$$
+
+In other words, the image consists of all the "output" values that appear in the ordered pairs of the relation. For example, if $R = \{(1,4), (2,5), (3,4), (2,6)\}$, then $\text{Im}(R) = \{4, 5, 6\}$.
+
+\subsubsection{Domain}
+The domain of a relation $R$ from set $A$ to set $B$ is the set of all elements in $A$ that are related to at least one element in $B$. Formally, if $R \subseteq A \times B$ is a relation, then the domain of $R$ is defined as:
+
+$$\text{Dom}(R) = \{a \in A \mid \exists b \in B \text{ such that } (a,b) \in R\}$$
+
+In other words, the domain consists of all the "input" values that appear in the ordered pairs of the relation. For example, if $R = \{(1,4), (2,5), (3,4), (2,6)\}$, then $\text{Dom}(R) = \{1, 2, 3\}$.
+
+\subsection{Equivalence Class}
+\label{subsection:equivalence_class}
+Let $\sim$ be an equivalence relation on a set $A$. For an element $x \in A$, the \textbf{equivalence class} of $x$, denoted by $[x]$, is the set of all elements in $A$ that are equivalent to $x$. Formally, it is defined as:
+\[[x] := \{y \in A \mid x \sim y\} \subseteq A\]
+In other words, the equivalence class of $x$ contains all elements $y$ in $A$ such that $x$ is related to $y$ under the equivalence relation $\sim$.
+
+\subsection{Quotient Space}
+\label{subsection:quotient_space}
+Let $\sim$ be an equivalence relation on a set $A$. The \textbf{quotient space} of $A$ by $\sim$, denoted by $A/\sim$ (or sometimes $A/R$), is the set of all distinct equivalence classes of elements in $A$. Formally, it is defined as:
+\[A/\sim := \{[x] \mid x \in A\}\]
+The quotient space $A/\sim$ is a partition of the original set $A$ into disjoint equivalence classes. Each element of the quotient space is an equivalence class $[x]$, which itself is a subset of $A$.
+
+\subsection{Definition of a Map}
+A map (or function) from a set $A$ to a set $B$, denoted as $f: A \rightarrow B$, is a relation that associates each element of the set $A$ with exactly one element of the set $B$. 
+
+Formally, a function $f: A \rightarrow B$ is a subset of $A \times B$ such that for every $a \in A$, there exists exactly one $b \in B$ where $(a,b) \in f$. We typically write $f(a) = b$ to indicate that $f$ maps the element $a$ to the element $b$.
+
+\textbf{Example:} Let $A = \{1, 2, 3\}$ and $B = \{x, y, z\}$. A possible function $f: A \rightarrow B$ could be defined as:
+\[
+f(1) = x, \quad f(2) = y, \quad f(3) = z
+\]
+
+This function can also be represented as the set of ordered pairs $\{(1,x), (2,y), (3,z)\}$.
+
+\subsection{Composition of Maps}
+The composition of two functions is the operation of applying one function to the result of another function. If we have functions $f: A \rightarrow B$ and $g: B \rightarrow C$, then the composition of $g$ and $f$, denoted as $g \circ f$ (read as "g composed with f"), is a function from $A$ to $C$ defined by:
+\[
+(g \circ f)(a) = g(f(a)) \quad \text{for all } a \in A
+\]
+
+The composition applies $f$ first, then applies $g$ to the result. Note that the codomain of $f$ must match the domain of $g$ for the composition to be defined.
+
+\textbf{Example:} Let $f: \mathbb{R} \rightarrow \mathbb{R}$ be defined by $f(x) = x^2$ and $g: \mathbb{R} \rightarrow \mathbb{R}$ be defined by $g(x) = x+3$. Then:
+\[
+(g \circ f)(x) = g(f(x)) = g(x^2) = x^2 + 3
+\]
+\[
+(f \circ g)(x) = f(g(x)) = f(x+3) = (x+3)^2 = x^2 + 6x + 9
+\]
+
+Note that $g \circ f \neq f \circ g$ in general, which shows that function composition is not commutative.
+
+\subsection{Types of Functions}
+\subsubsection{Injective Functions}
+An injective function (also called a one-to-one function) is a function that maps distinct elements from the domain to distinct elements in the codomain. 
+
+Formally, a function $f: A \rightarrow B$ is injective if for all $a_1, a_2 \in A$:
+\[
+a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)
+\]
+
+Equivalently, using the contrapositive:
+\[
+f(a_1) = f(a_2) \Rightarrow a_1 = a_2
+\]
+
+\subsubsection{Surjective Functions}
+A surjective function (also called an onto function) is a function whose image equals its codomain, meaning that every element in the codomain has at least one preimage in the domain.
+
+Formally, a function $f: A \rightarrow B$ is surjective if:
+\[
+\forall b \in B, \exists a \in A \text{ such that } f(a) = b
+\]
+
+\subsubsection{Bijective Functions}
+A bijective function (also called a one-to-one correspondence) is a function that is both injective and surjective. In other words, every element in the codomain is mapped to by exactly one element in the domain.
+
+Formally, a function $f: A \rightarrow B$ is bijective if it is both:
+\begin{itemize}
+    \item Injective: $\forall a_1, a_2 \in A, a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)$
+    \item Surjective: $\forall b \in B, \exists a \in A \text{ such that } f(a) = b$
+\end{itemize}
+\noindent Bijective functions establish a perfect pairing between elements of the domain and codomain, where each element in the domain corresponds to exactly one element in the codomain, and vice versa. A bijection allows us to define an inverse function $f^{-1}: B \rightarrow A$.
+
+\subsection{Propositions on Images and Preimages under Set Operations}
+
+Let \( f : X \to Y \) be a function.
+
+\subsubsection{Union and Cut Sets}
+\begin{enumerate}[label=\roman*)]
+    \item For subsets \( A_1, A_2 \subseteq X \), we have:
+    \[
+    f(A_1 \cup A_2) = f(A_1) \cup f(A_2)
+    \quad \text{and} \quad
+    f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2)
+    \]
+
+    \item For subsets \( B_1, B_2 \subseteq Y \), we have:
+    \[
+    f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2)
+    \quad \text{and} \quad
+    f^{-1}(B_1 \cap B_2) = f^{-1}(B_1) \cap f^{-1}(B_2)
+    \]
+\end{enumerate}
+
+\paragraph{Proof.}
+We prove the second part of 1 and the first part of 2; the remaining statements are left as exercises.
+
+\begin{enumerate}
+    \item Let \( y \in f(A_1 \cap A_2) \). Then there exists \( x \in A_1 \cap A_2 \) such that \( f(x) = y \). Since \( x \in A_1 \) and \( x \in A_2 \), it follows that \( y \in f(A_1) \) and \( y \in f(A_2) \), hence \( y \in f(A_1) \cap f(A_2) \). Therefore, every element of \( f(A_1 \cap A_2) \) is also an element of \( f(A_1) \cap f(A_2) \), so:
+    \[
+    f(A_1 \cap A_2) \subseteq f(A_1) \cap f(A_2)
+    \]
+    
+    \item Let \( x \in f^{-1}(B_1 \cup B_2) \). Then \( f(x) \in B_1 \cup B_2 \), which means \( f(x) \in B_1 \) or \( f(x) \in B_2 \). Thus, \( x \in f^{-1}(B_1) \) or \( x \in f^{-1}(B_2) \), which implies:
+    \[
+    x \in f^{-1}(B_1) \cup f^{-1}(B_2)
+    \]
+    Hence, both sets contain the same elements and are therefore equal:
+    \[
+    f^{-1}(B_1 \cup B_2) = f^{-1}(B_1) \cup f^{-1}(B_2)
+    \]
+\end{enumerate}
+
+\subsubsection{Union and Cut of the whole Domain and Range}
+Let \( f : X \to Y \) be a function.
+\begin{enumerate}[label=\roman*)]
+    \item Let \( \mathcal{F} \) be a collection of subsets of \( X \). Then:
+    \[
+    f\left( \bigcup_{A \in \mathcal{F}} A \right) = \bigcup_{A \in \mathcal{F}} f(A)
+    \quad \text{and} \quad
+    f\left( \bigcap_{A \in \mathcal{F}} A \right) \subseteq \bigcap_{A \in \mathcal{F}} f(A)
+    \]
+    
+    \item Let \( \mathcal{G} \) be a collection of subsets of \( Y \). Then:
+    \[
+    f^{-1}\left( \bigcup_{B \in \mathcal{G}} B \right) = \bigcup_{B \in \mathcal{G}} f^{-1}(B)
+    \quad \text{and} \quad
+    f^{-1}\left( \bigcap_{B \in \mathcal{G}} B \right) = \bigcap_{B \in \mathcal{G}} f^{-1}(B)
+    \]
+\end{enumerate}
+
+\paragraph{Proof (partial).}
+We show the first statement of part (ii); the rest follows analogously.
+
+Let \( x \in f^{-1} \left( \bigcup_{B \in \mathcal{G}} B \right) \). Then:
+\[
+f(x) \in \bigcup_{B \in \mathcal{G}} B
+\quad \Leftrightarrow \quad
+\exists B \in \mathcal{G} \text{ such that } f(x) \in B
+\quad \Leftrightarrow \quad
+\exists B \in \mathcal{G} \text{ such that } x \in f^{-1}(B)
+\]
+Hence:
+\[
+x \in \bigcup_{B \in \mathcal{G}} f^{-1}(B)
+\]
+It follows that:
+\[
+f^{-1} \left( \bigcup_{B \in \mathcal{G}} B \right) = \bigcup_{B \in \mathcal{G}} f^{-1}(B)
+\]
+
+
+\subsection{Inverse of a Function}
+The inverse of a function $f: A \rightarrow B$ is a function $f^{-1}: B \rightarrow A$ that reverses the operation of $f$. That is, if $f$ maps an element $a \in A$ to an element $b \in B$, then the inverse function $f^{-1}$ maps $b$ back to $a$.
+
+\noindent Formally, a function $f: A \rightarrow B$ has an inverse $f^{-1}: B \rightarrow A$ if and only if $f$ is bijective (both injective and surjective). The inverse function satisfies the following properties:
+\[
+f^{-1}(f(a)) = a \quad \text{for all } a \in A
+\]
+\[
+f(f^{-1}(b)) = b \quad \text{for all } b \in B
+\]
+
+In other words, composing a function with its inverse yields the identity function. That is:
+\[
+f^{-1} \circ f = id_A \quad \text{and} \quad f \circ f^{-1} = id_B
+\]
+where $id_A$ and $id_B$ are the identity functions on sets $A$ and $B$, respectively.
+
+\subsubsection{Steps to Find the Inverse of a Function}
+To find the inverse of a function $f(x)$, follow these steps:
+\begin{enumerate}
+    \item Replace $f(x)$ with $y$: $y = f(x)$
+    \item Interchange the variables $x$ and $y$: $x = f(y)$
+    \item Solve for $y$ in terms of $x$: $y = f^{-1}(x)$
+    \item Verify that the resulting function is indeed the inverse by checking that $f^{-1}(f(x)) = x$ and $f(f^{-1}(x)) = x$
+\end{enumerate}
+
+\subsubsection{Example: Finding the Inverse of $f(x) = 2x + 3$}
+Let's apply the steps above to find the inverse of $f(x) = 2x + 3$.
+
+\textbf{Step 1:} Replace $f(x)$ with $y$.
+\[
+y = 2x + 3
+\]
+
+\textbf{Step 2:} Interchange the variables $x$ and $y$.
+\[
+x = 2y + 3
+\]
+
+\textbf{Step 3:} Solve for $y$ in terms of $x$.
+\begin{align}
+x &= 2y + 3\\
+x - 3 &= 2y\\
+\frac{x - 3}{2} &= y
+\end{align}
+
+So, the inverse function is:
+\[
+f^{-1}(x) = \frac{x - 3}{2}
+\]
+
+\textbf{Step 4:} Verify that $f^{-1}(f(x)) = x$ and $f(f^{-1}(x)) = x$.
+
+Let's verify $f^{-1}(f(x)) = x$:
+\begin{align}
+f^{-1}(f(x)) &= f^{-1}(2x + 3)\\
+&= \frac{(2x + 3) - 3}{2}\\
+&= \frac{2x}{2}\\
+&= x
+\end{align}
+
+And let's verify $f(f^{-1}(x)) = x$:
+\begin{align}
+f(f^{-1}(x)) &= f\left(\frac{x - 3}{2}\right)\\
+&= 2\left(\frac{x - 3}{2}\right) + 3\\
+&= (x - 3) + 3\\
+&= x
+\end{align}
+
+Since both compositions yield the identity function, $f^{-1}(x) = \frac{x - 3}{2}$ is indeed the inverse of $f(x) = 2x + 3$.
+
+
+\subsubsection{Properties of the Inverse Function}
+Let $f:X\rightarrow Y$ be a function.
+
+\begin{itemize}
+    \item Assume $x \sim y $ if $f(x)= f(y)$ so is $\sim$ an equivalence relation.
+
+    \item Consider the quotient set \( X_f := X/\sim \), where \( \sim \) is the equivalence relation defined by \( x \sim x' \iff f(x) = f(x') \). Let \( q_f : X \to X_f \) be the canonical projection defined by \( q_f(x) = [x] \), and let \( \iota_f : f(X) \to Y \) be the inclusion map, \( y \mapsto y \). Then the function
+\[
+\hat{f} : X_f \to f(X), \quad [x] \mapsto f(x)
+\]
+is a bijection, and the original map \( f \) can be written as the composition
+\[
+f = \iota_f \circ \hat{f} \circ q_f.
+\]
+Here, \( q_f \) is surjective, \( \hat{f} \) is bijective, and \( \iota_f \) is injective. This yields the following commutative diagram:
+\begin{center}
+\begin{tikzcd}
+X \arrow[d, "q_f"'] \arrow[rr, "f"] & & Y \\
+X_f \arrow[r, "\hat{f}"'] & f(X) \arrow[ur, "\iota_f"']
+\end{tikzcd}
+\end{center}
+
+
+\end{itemize}
+
+
+\subsection{Transformations of a Function}
+
+Transformations modify the appearance of a function's graph without altering its basic shape. Here, we examine how different algebraic changes to a function \( f(x) \) affect its graph:
+
+\begin{itemize}
+    \item \textbf{Vertical Translation:} \( f(x) + a \)
+    \begin{itemize}
+        \item Shifts the graph \textbf{upward} if \( a > 0 \), and \textbf{downward} if \( a < 0 \).
+        \item Each point on the graph moves vertically by \( a \) units.
+    \end{itemize}
+
+    \item \textbf{Horizontal Translation:} \( f(x + a) \)
+    \begin{itemize}
+        \item Shifts the graph \textbf{left} if \( a > 0 \), and \textbf{right} if \( a < 0 \).
+        \item This is opposite of what might be expected: adding to \( x \) shifts the graph in the negative direction.
+    \end{itemize}
+
+    \item \textbf{Vertical Scaling (Stretch/Compression):} \( a f(x) \)
+    \begin{itemize}
+        \item If \( |a| > 1 \): the graph is \textbf{stretched} vertically (taller and narrower).
+        \item If \( 0 < |a| < 1 \): the graph is \textbf{compressed} vertically (shorter and wider).
+        \item If \( a < 0 \): includes a reflection across the \textbf{x-axis}.
+    \end{itemize}
+
+    \item \textbf{Horizontal Scaling (Stretch/Compression):} \( f(a x) \)
+    \begin{itemize}
+        \item If \( |a| > 1 \): the graph is \textbf{compressed} horizontally (narrower).
+        \item If \( 0 < |a| < 1 \): the graph is \textbf{stretched} horizontally (wider).
+        \item If \( a < 0 \): includes a reflection across the \textbf{y-axis}.
+    \end{itemize}
+
+    \item \textbf{Reflection across the x-axis:} \( -f(x) \)
+    \begin{itemize}
+        \item Flips the graph upside-down over the x-axis.
+        \item Each point \( (x, y) \) becomes \( (x, -y) \).
+    \end{itemize}
+
+    \item \textbf{Reflection across the y-axis:} \( f(-x) \)
+    \begin{itemize}
+        \item Flips the graph left-to-right over the y-axis.
+        \item Each point \( (x, y) \) becomes \( (-x, y) \).
+    \end{itemize}
+\end{itemize}
+
+\newpage

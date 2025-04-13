@@ -1,0 +1,547 @@
+\section{Propositional Logic}
+Propositional logic is also called Boolean logic as it works on 0 and 1. In propositional logic, we use symbolic variables to represent the logic, and we can use any symbol for a representing a proposition, such \textit{A, B, C, P, Q, R}, etc. Propositions can be either \textit{true} or \textit{false}, but it cannot be both.
+
+\subsection{Logic Operators and Truth Tables}
+\smallskip
+\begin{multicols}{2}
+
+\subsection*{NOT ($\neg$ , $\sim$)}
+
+\begin{tabular}{cc}
+\toprule
+$A$ & $\neg A$ \\
+\midrule
+0 & 1 \\
+1 & 0 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subsection*{AND ($\land$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A \land B$ \\
+\midrule
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subsection*{OR ($\lor$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A \lor B$ \\
+\midrule
+0 & 0 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subsection*{IMPLIES ($\implies$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A => B$ \\
+\midrule
+0 & 0 & 1 \\
+0 & 1 & 1 \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+
+\columnbreak
+
+\subsection*{IFF ($\iff$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A <=> B$ \\
+\midrule
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subsection*{XOR ($\oplus$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A \oplus B$ \\
+\midrule
+0 & 0 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subsection*{NOR ($\downarrow$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A \downarrow B$ \\
+\midrule
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+1 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+
+\subsection*{NAND ($\uparrow$)}
+
+\begin{tabular}{ccc}
+\toprule
+$A$ & $B$ & $A \uparrow B$ \\
+\midrule
+0 & 0 & 1 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+
+\end{multicols}
+\medskip
+\subsection{Tautology and Contradiction}
+\smallskip
+\textit{- Tautology}: A logical formula that is always true.
+\\\\
+\textit{- Contradiction}: A formula that is always false.
+\newpage
+\subsection{Logical Equivalences}
+\smallskip
+\textbf{Commutative Laws}
+\[
+p \land q \Leftrightarrow q \land p \qquad p \lor q \Leftrightarrow q \lor p
+\]
+
+\textbf{Associative Laws}
+\[
+(p \land q) \land r \Leftrightarrow p \land (q \land r) \qquad (p \lor q) \lor r \Leftrightarrow p \lor (q \lor r)
+\]
+
+\textbf{Distributive Laws}
+\[
+p \land (q \lor r) \Leftrightarrow (p \land q) \lor (p \land r) \qquad
+p \lor (q \land r) \Leftrightarrow (p \lor q) \land (p \lor r)
+\]
+
+\textbf{Identity Laws}
+\[
+p \land \text{T} \Leftrightarrow p \qquad p \lor \text{F} \Leftrightarrow p
+\]
+
+\textbf{Negation Laws}
+\[
+p \lor \sim p \Leftrightarrow \text{T} \qquad p \land \sim p \Leftrightarrow \text{F}
+\]
+
+\textbf{Double Negation Law}
+\[
+\sim(\sim p) \Leftrightarrow p
+\]
+
+\textbf{Idempotent Laws}
+\[
+p \land p \Leftrightarrow p \qquad p \lor p \Leftrightarrow p
+\]
+
+\textbf{Universal Bound Laws}
+\[
+p \lor \text{T} \Leftrightarrow \text{T} \qquad p \land \text{F} \Leftrightarrow \text{F}
+\]
+
+\textbf{De Morgan’s Laws}
+\[
+\sim (p \land q) \Leftrightarrow (\sim p) \lor (\sim q) \qquad
+\sim (p \lor q) \Leftrightarrow (\sim p) \land (\sim q)
+\]
+
+\textbf{Absorption Laws}
+\[
+p \lor (p \land q) \Leftrightarrow p \qquad p \land (p \lor q) \Leftrightarrow p
+\]
+
+\textbf{Conditional Laws}
+\[
+(p \Rightarrow q) \Leftrightarrow (\sim p \lor q) \qquad \sim(p \Rightarrow q) \Leftrightarrow (p \land \sim q)
+\]
+
+\textbf{Complement Law}
+\[
+p \lor \neg p \Leftrightarrow \text{T} \qquad p \land \neg p \Leftrightarrow \text{F}
+\]
+
+\textbf{Biconditional}
+\[
+p \Leftrightarrow q \Leftrightarrow (p \Rightarrow q) \land (q \Rightarrow p)
+\]
+
+\textbf{Transitivity}
+\[
+(p \Rightarrow q) \land (q \Rightarrow r) \Rightarrow (p \Rightarrow r)
+\]
+
+\textbf{Indirect Proof (Contrapositive)}
+\[
+(p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)
+\]
+
+\textbf{Disjunctive Syllogism (Disjunctive Exclusion)}
+\[
+   p \nabla q \equiv (p \lor q) \land \neg p \Rightarrow q
+\]
+\[
+  p \nabla q \equiv(p \land q) \lor \neg  (p \land q)
+\]
+
+\subsection{Truth Tables}
+\smallskip
+Truth tables are a fundamental tool in logic that systematically show the truth value (true or false) of a compound statement for every possible combination of the truth values of its individual component statements.\\\\
+Essentially, they lay out all the scenarios and the resulting truth of the overall logical expression. This helps determine if an argument is valid, if statements are logically equivalent, or the circumstances under which a complex statement is true or false.\\
+Example:
+\smallskip
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\neg p$ & $\neg q$ & $\neg p \Rightarrow q$ & $(\neg p \Rightarrow q) \land \neg p$ & $\left[(\neg p \Rightarrow q) \land \neg p\right] \Rightarrow q$ \\
+\hline
+T & T & F & F & T & F & T \\
+T & F & F & T & T & F & T \\
+F & T & T & F & T & T & T \\
+F & F & T & T & F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Filling a truth table}
+\smallskip
+To fill a truth table for a logical expression with truth values (True or False), you follow a specific order for the input variables. This order ensures that all possible combinations of truth values for the variables are covered.
+
+\subsubsection{General Procedure:}
+\begin{enumerate}
+    \item \textbf{List all possible combinations of truth values for the input variables}: If you have \(n\) variables, the number of rows in the truth table will be \(2^n\). Each variable can be either True (T) or False (F).
+   
+    \item \textbf{Order of the input variables}:
+    \begin{itemize}
+        \item Start by filling in the truth values for the first variable. It alternates between True and False every \(2^{n-1}\) rows.
+        \item Then for the second variable, it alternates every \(2^{n-2}\) rows, and so on.
+        \item In short: the first variable alternates every other row, the second variable every two rows, the third every four rows, and so on.
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection{Example with 3 Variables (A, B, and C)}
+
+For 3 variables, there are \(2^3 = 8\) possible combinations of truth values. The truth values are filled in the following order:
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+A & B & C & \text{Expression Result} \\
+\hline
+T & T & T & \\
+T & T & F & \\
+T & F & T & \\
+T & F & F & \\
+F & T & T & \\
+F & T & F & \\
+F & F & T & \\
+F & F & F & \\
+\hline
+\end{array}
+\]
+
+\subsubsection{The pattern for filling the input truth values}
+\begin{itemize}
+    \item The first column (A) alternates every 4 rows: `T, T, F, F, T, T, F, F`.
+    \item The second column (B) alternates every 2 rows: `T, T, F, F, T, T, F, F`.
+    \item The third column (C) alternates every row: `T, F, T, F, T, F, T, F`.
+\end{itemize}
+
+This ensures that all combinations of \(A\), \(B\), and \(C\) are covered, and you can then evaluate the logical expression for each combination.
+
+\subsubsection{Truth Table for the Expression \( (A \land B) \lor C \)}
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+A & B & C & (A \land B) \lor C \\
+\hline
+T & T & T & T \\
+T & T & F & T \\
+T & F & T & T \\
+T & F & F & F \\
+F & T & T & T \\
+F & T & F & F \\
+F & F & T & T \\
+F & F & F & F \\
+\hline
+\end{array}
+\]
+
+\subsection{Disjunctive Normal Form (DNF)}
+
+Disjunctive Normal Form (DNF) is a standard way of writing a logical expression as a disjunction (OR) of conjunctions (ANDs). A DNF expression consists of a series of conjunctions of literals, where each conjunction is connected by disjunctions.\\\\
+To find the DNF in a truth table take the rows of the final result where there are true statements and bind the propositions that generated it with an AND inside parenthesis. Repeat it with each of "true" rows and connect all parenthesis with OR's \\\\
+\textbf{Example of DNF:}
+
+Consider the logical expression:
+\[
+(A \land B) \lor (\neg A \land C) \lor (B \land \neg C)
+\]
+This is in DNF because it is a disjunction (OR) of conjunctions (ANDs) of literals.
+
+\subsection{Conjunctive Normal Form (CNF)}
+
+Conjunctive Normal Form (CNF) is a standard way of writing a logical expression as a conjunction (AND) of disjunctions (ORs). A CNF expression consists of a series of disjunctions of literals, where each disjunction is connected by conjunctions.\\\\
+To find the CNF proceed just as the DNF but with the "false rows and instead of ANDs inside the parenthesis use OR and connect the terms with OR. Also add a negation before each parenthesis.\\\\
+\textbf{Example of CNF:}
+
+Consider the logical expression:
+\[
+\neg (A \lor B) \land \neg (\neg A \lor C) \land \neg (B \lor \neg C)
+\]
+This is in CNF because it is a conjunction (AND) of disjunctions (ORs) of literals.\\\\
+
+\subsection{Karnaugh Maps}
+
+Karnaugh Maps (K-Maps) are a graphical method used to simplify Boolean expressions. The main goal of a K-map is to group adjacent cells that contain 1's in order to simplify the expression. A K-map helps identify common terms, allowing the Boolean expression to be reduced to its simplest form.
+
+\subsubsection{Karnaugh Map for Two Variables}
+
+Consider the Boolean expression \( (A \lor (B \land \neg A \land \neg B)) \). 
+
+We first construct a K-map for two variables, \( A \) and \( B \). The truth table for this expression gives the following values:
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+A & B & (A \lor (B \land \neg A \land \neg B)) \\
+\hline
+0 & 0 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1 \\
+1 & 1 & 1 \\
+\hline
+\end{array}
+\]
+
+The corresponding K-map is:
+
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+AB & 00 & 01 & 11 & 10 \\
+\hline
+\text{Value} & 0  & 1  & 1  & 1 \\
+\hline
+\end{array}
+\]
+
+Here, we group the ones together to simplify the Boolean expression. The simplified expression is:
+\[
+A \lor B
+\]
+
+\subsubsection{Karnaugh Map for Three Variables}
+
+Now, let's consider the expression \( \neg C \). This expression only depends on one variable, but for illustration, we will use a 3-variable K-map with variables \( A \), \( B \), and \( C \).
+
+The truth table for \( \neg C \) is as follows:
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+A & B & C & \neg C \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 0 \\
+\hline
+\end{array}
+\]
+
+The corresponding K-map for three variables \( A \), \( B \), and \( C \) is:
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+AB \backslash C & 0 & 1 \\
+\hline
+00 & 1 & 0 \\
+01 & 1 & 0 \\
+11 & 1 & 0 \\
+10 & 1 & 0 \\
+\hline
+\end{array}
+\]
+
+We see that the ones are grouped in a column, leading to the simplified Boolean expression:
+\[
+\neg C
+\]
+
+\subsubsection{Solving a Karnaugh Map (K-Map)}
+
+To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these steps:
+
+\begin{enumerate}
+    \item \textbf{Determine the Number of Variables:} \\
+    Decide how many variables are in the Boolean function. This determines the size of the K-Map:
+    \begin{itemize}
+        \item 2 variables: $2 \times 2$
+        \item 3 variables: $2 \times 4$
+        \item 4 variables: $4 \times 4$
+        \item etc.
+    \end{itemize}
+
+    \item \textbf{Fill in the K-Map:} \\
+    Place 1's in the cells that correspond to the minterms (where the function outputs 1). You may also include don't-care conditions (usually denoted as $X$).
+
+    \item \textbf{Group the 1's:} \\
+    Form groups (called \emph{implicants}) of 1's. The groups must follow these rules:
+    \begin{itemize}
+        \item Each group must contain $1, 2, 4, 8, \ldots$ (powers of 2) 1's.
+        \item Groups must be rectangular (e.g., $1 \times 2$, $2 \times 2$).
+        \item Groups can wrap around the edges of the K-Map.
+        \item Try to form the largest groups possible to simplify the expression.
+        \item Each 1 should be included in at least one group.
+    \end{itemize}
+
+    \item \textbf{Write the Simplified Expression:} \\
+    For each group:
+    \begin{itemize}
+        \item Identify the variables that are constant (either always 0 or always 1) across the group.
+        \item Write a product term (AND) using only the constant variables.
+        \item Combine all product terms with OR operations to get the final simplified SOP (Sum of Products) expression.
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Example:}
+
+Given minterms $F(A, B, C) = \sum m(1, 3, 5, 7)$:
+
+\begin{multicols}{2}
+K-Map:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+AB \textbackslash C & 0 & 1 \\
+\hline
+00 & 0 & 1 \\
+01 & 0 & 1 \\
+11 & 0 & 1 \\
+10 & 0 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+\columnbreak
+
+Simplified expression:
+
+\[
+F = B \lor C
+\]
+\end{multicols}
+
+\subsection{Mathematical Quantifiers with Negations and Examples}
+
+\begin{description}[leftmargin=1.5cm, labelindent=1cm, style=sameline]
+
+\item[\textbf{Universal Quantifier:} \quad $\forall$] 
+Means \textbf{``for all''} or \textbf{``for every''}.
+
+\begin{itemize}
+    \item \textbf{Example:} \quad $\forall x \in \mathbb{R},\ x^2 \geq 0$ \\
+    (For all real numbers, the square is greater than or equal to zero.)
+    
+    \item \textbf{Negation:} \quad $\neg (\forall x)\,P(x) \equiv (\exists x)\, \neg P(x)$ \\
+    (``Not all'' is the same as ``There exists one that does not''.)
+    
+    \item \textbf{Negated Example:} \quad $\exists x \in \mathbb{R},\ x^2 < 0$ \\
+    (There exists a real number whose square is less than zero — this is false.)
+\end{itemize}
+
+\item[\textbf{Existential Quantifier:} \quad $\exists$] 
+Means \textbf{``there exists at least one''}.
+
+\begin{itemize}
+    \item \textbf{Example:} \quad $\exists x \in \mathbb{N},\ x > 10$ \\
+    (There exists a natural number greater than 10.)
+    
+    \item \textbf{Negation:} \quad $\neg (\exists x)\,P(x) \equiv (\forall x)\, \neg P(x)$ \\
+    (``There does not exist'' is the same as ``For all, not''.)
+    
+    \item \textbf{Negated Example:} \quad $\forall x \in \mathbb{N},\ x \leq 10$ \\
+    (All natural numbers are less than or equal to 10 — this is false.)
+\end{itemize}
+
+\item[\textbf{Unique Existential Quantifier:} \quad $\exists!$] 
+Means \textbf{``there exists exactly one''}.
+
+\begin{itemize}
+    \item \textbf{Example:} \quad $\exists! x \in \mathbb{R},\ x + 5 = 0$ \\
+    (There exists exactly one real number such that \( x + 5 = 0 \).)
+
+    \item \textbf{Negation:} \quad ``Not exactly one'' means:
+    \[
+    \neg (\exists! x)\, P(x) \equiv (\forall x)\, \neg P(x)\ \lor\ (\exists x_1 \neq x_2)\, P(x_1) \land P(x_2)
+    \]
+    (Either no such \( x \) exists, or more than one does.)
+
+    \item \textbf{Negated Example:} \quad $\exists x_1 \neq x_2 \in \mathbb{R},\ x_1^2 = 4 \land x_2^2 = 4$ \\
+    (There are multiple solutions to \( x^2 = 4 \).)
+\end{itemize}
+
+\end{description}
+
+\subsection{Common Symbols Used in Mathematical Expressions}
+\begin{itemize}
+    \item $>$ \quad (greater than) \\
+    \item $<$ \quad (less than) \\
+    \item $\geq$ \quad (greater than or equal to) \\
+    \item $\leq$ \quad (less than or equal to) \\
+    \item $=$ \quad (equals) \\
+    \item $\neq$ \quad (not equal) \\
+    \item $\in$ \quad (element of a set) \\
+    \item $\notin$ \quad (not an element of) \\
+    \item $\subset$ \quad (proper subset) \\
+    \item $\subseteq$ \quad (subset) \\
+    \item $\supset$ \quad (proper superset) \\
+    \item $\supseteq$ \quad (superset) \\
+    \item $\land$ \quad (logical AND) \\
+    \item $\lor$ \quad (logical OR) \\
+    \item $\Rightarrow$ \quad (implies) \\
+    \item $\Leftrightarrow$ \quad (if and only if)
+\end{itemize}
+
+\newpage
