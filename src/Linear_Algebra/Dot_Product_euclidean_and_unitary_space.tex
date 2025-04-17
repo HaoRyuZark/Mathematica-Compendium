@@ -1,0 +1,150 @@
+\section{Dot Product, Euclidean and Unitary Space}
+
+\subsection{Scalar Product}
+
+Let $V$ be a vector space over a field $K$. A mapping $\langle \cdot, \cdot \rangle : V \times V \to K$ is called a scalar product (or inner product) if the following conditions are satisfied:
+
+\textbf{SP1: Symmetry}
+
+For all $a, b \in V$:
+
+\[
+\langle a, b \rangle = 
+\begin{cases}
+\langle b, a \rangle & \text{if } K = \mathbb{R}, \\
+\overline{\langle b, a \rangle} & \text{if } K = \mathbb{C}.
+\end{cases}
+\]
+
+\textbf{SP2: Linearity in the First Argument}
+
+For all $a, b, c \in V$:
+
+\[
+\langle a, b + c \rangle = \langle a, b \rangle + \langle a, c \rangle
+\]
+and
+\[
+\langle a + b, c \rangle = \langle a, c \rangle + \langle b, c \rangle.
+\]
+
+\textbf{SP3: Homogeneity in the First Argument}
+
+For all $\alpha \in K$, we have:
+
+\[
+\langle \alpha a, b \rangle = \alpha \langle a, b \rangle = 
+\begin{cases}
+\langle a, \alpha b \rangle & \text{if } K = \mathbb{R}, \\
+\langle a, \alpha b \rangle & \text{if } K = \mathbb{C}.
+\end{cases}
+\]
+
+\textbf{SP4: Positive Definiteness}
+
+For all $a \in V \setminus \{0\}$:
+
+\[
+\langle a, a \rangle > 0,
+\]
+and
+\[
+\langle 0, 0 \rangle = 0.
+\]
+
+\subsection{Standard Scalar Product for Complex Number}
+
+Let \( a = (a_i)_{i=1}^n \) and \( b = (b_i)_{i=1}^n \) be vectors in \( \mathbb{C}^n \). The standard scalar product is defined by
+
+\[
+\langle a, b \rangle := \sum_{i=1}^n a_i b_i.
+\]
+
+\subsection{Scalar Product on \( C[a, b] \)}
+
+Let \( f, g \in C[a, b] \). The scalar product on \( C[a, b] \) is defined by
+
+\[
+\langle f, g \rangle := \int_a^b f(x) \cdot g(x) \, dx.
+\]
+
+\subsection{Euclidean and Unitary Vector Spaces}
+
+A real vector space equipped with a scalar product is called an \textit{Euclidean vector space}, while a complex vector space with a scalar product is called a \textit{unitary vector space}.
+
+\subsection{Norms in Vector Spaces}
+
+Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cdot \| : V \to \mathbb{R} \) is called a norm if and only if the following conditions hold:
+
+\begin{itemize}
+    \item \( \text{N0: } \|a\| \in \mathbb{R} \),
+    \item \( \text{N1: } \|a\| \geq 0 \),
+    \item \( \text{N2: } \|a\| = 0 \iff a = 0 \),
+    \item \( \text{N3: } \forall \lambda \in K, \ \| \lambda a \| = |\lambda| \| a \| \),
+    \item \( \text{N4: (Triangle Inequality) } \| a + b \| \leq \| a \| + \| b \| \).
+\end{itemize}
+
+\subsubsection{Induced Norm by a Scalar Product}
+
+As in the special case \( V = \mathbb{R}^n \), a scalar product induces a norm.
+In a unitary (or Euclidean) space, the scalar product induces a (standard) norm defined by
+
+\[
+\| \cdot \| = \sqrt{\langle \cdot, \cdot \rangle}.
+\]
+
+\subsection{Cauchy-Schwarz Inequality in Unitary Vector Spaces}
+
+In all unitary vector spaces \( V \), the Cauchy-Schwarz inequality holds:
+
+\[
+| \langle a, b \rangle | \leq \| a \| \| b \| \quad \forall a, b \in V.
+\]
+\subsubsection*{Proof of the Triangle Inequality}
+
+Both sides of the triangle inequality are real and, in particular, non-negative. Therefore, it is sufficient to prove that the squares of both sides satisfy the desired inequality, i.e., we need to show:
+
+\[
+\langle a + b, a + b \rangle \leq (\|a\| + \|b\|)^2.
+\]
+
+First, we expand the left-hand side:
+
+\[
+\langle a + b, a + b \rangle = \langle a, a \rangle + \langle a, b \rangle + \langle b, a \rangle + \langle b, b \rangle.
+\]
+
+Since \( \langle b, a \rangle = \langle a, b \rangle \), we have:
+
+\[
+\langle a, b \rangle + \langle b, a \rangle = 2 \, \text{Re} \langle a, b \rangle.
+\]
+
+Now, we know that the absolute value of a complex number is always greater than or equal to its real part, so:
+
+\[
+2 \, \text{Re} \langle a, b \rangle \leq 2 |\langle a, b \rangle|.
+\]
+
+Using the Cauchy-Schwarz inequality (3.6), we can further bound this by:
+
+\[
+2 \, \text{Re} \langle a, b \rangle \leq 2 \|a\| \|b\|.
+\]
+
+Thus, we have:
+
+\[
+\langle a + b, a + b \rangle \leq \langle a, a \rangle + 2 \|a\| \|b\| + \langle b, b \rangle.
+\]
+
+Using the definition of the norm, \( \|a\|^2 = \langle a, a \rangle \) and \( \|b\|^2 = \langle b, b \rangle \), we obtain:
+
+\[
+\langle a + b, a + b \rangle \leq \|a\|^2 + 2 \|a\| \|b\| + \|b\|^2.
+\]
+
+This is exactly the expansion of \( (\|a\| + \|b\|)^2 \), which completes the proof.
+
+\newpage
+

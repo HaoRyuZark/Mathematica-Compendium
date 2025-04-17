@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.4.9)  14 APR 2025 07:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.4.9)  17 APR 2025 11:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -713,6 +713,9 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@cntb=\count352
 \multirow@dima=\skip64
 \bigstrutjot=\dimen345
+) (/usr/share/texlive/texmf-dist/tex/latex/polynom/polynom.sty
+Package: polynom 2017/07/17 0.19 (CH,HA)
+\pld@currstage=\count353
 ) (/usr/share/texlive/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
  (/usr/share/texlive/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
@@ -733,20 +736,20 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks54
 \XKV@tempa@toks=\toks55
 )
-\XKV@depth=\count353
+\XKV@depth=\count354
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pstricks.tex (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pst-fp.tex `pst-fp' v0.06, 2020/11/20 (hv)
-\pstFP@xs=\count354
-\pstFP@xia=\count355
-\pstFP@xib=\count356
-\pstFP@xfa=\count357
-\pstFP@xfb=\count358
-\pstFP@rega=\count359
-\pstFP@regb=\count360
-\pstFP@regs=\count361
-\pstFP@times=\count362
+\pstFP@xs=\count355
+\pstFP@xia=\count356
+\pstFP@xib=\count357
+\pstFP@xfa=\count358
+\pstFP@xfb=\count359
+\pstFP@rega=\count360
+\pstFP@regb=\count361
+\pstFP@regs=\count362
+\pstFP@times=\count363
 )
-\psLoopIndex=\count363
+\psLoopIndex=\count364
 
 `PSTricks' v3.18  <2022/11/28> (tvz,hv)
 \pst@dima=\dimen346
@@ -762,24 +765,24 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \pst@hbox=\box124
 \pst@ibox=\box125
 \pst@boxg=\box126
-\pst@cnta=\count364
-\pst@cntb=\count365
-\pst@cntc=\count366
-\pst@cntd=\count367
-\pst@cntg=\count368
-\pst@cnth=\count369
-\pst@cntm=\count370
-\pst@cntn=\count371
-\pst@cnto=\count372
-\pst@cntp=\count373
-\@zero=\count374
+\pst@cnta=\count365
+\pst@cntb=\count366
+\pst@cntc=\count367
+\pst@cntd=\count368
+\pst@cntg=\count369
+\pst@cnth=\count370
+\pst@cntm=\count371
+\pst@cntn=\count372
+\pst@cnto=\count373
+\pst@cntp=\count374
+\@zero=\count375
 \pst@toks=\toks56
 --- We are running latex or xelatex ---
 (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pstricks.con) (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pstricks-color.tex)
 \psunit=\dimen356
 \psxunit=\dimen357
 \psyunit=\dimen358
-\pst@C@@rType=\count375
+\pst@C@@rType=\count376
 \pslinewidth=\dimen359
 \psk@startLW=\dimen360
 \psk@endLW=\dimen361
@@ -799,7 +802,7 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \sh@wgridXunit=\dimen370
 \sh@wgridYunit=\dimen371
 \pst@shift=\dimen372
-\ps@imagectr=\count376
+\ps@imagectr=\count377
  (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pstricks.con))
 File: pstricks.tex 2022/11/28 v3.18 `PSTricks' (tvz,hv)
  (/usr/share/texlive/texmf-dist/tex/generic/pstricks/pst-fp.tex `pst-fp' v0.06, 2020/11/20 (hv))
@@ -808,21 +811,21 @@ File: pst-fp.tex 2020/11/20 v0.06 `PST-fp' (hv)
 Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
 Package: pst-node 2010/04/22 package wrapper for pst-node.tex
  (/usr/share/texlive/texmf-dist/tex/generic/pst-node/pst-node.tex  v1.43, 2022/01/31
-\psrow=\count377
-\pscol=\count378
-\psmatrixcnt=\count379
+\psrow=\count378
+\pscol=\count379
+\psmatrixcnt=\count380
 \psrowsep=\skip65
 \pscolsep=\skip66
-\pst@args=\count380
-\num@pts=\count381
-\pst@argcnt=\count382
+\pst@args=\count381
+\num@pts=\count382
+\pst@argcnt=\count383
 )
 File: pst-node.tex 2022/01/31 1.43 `pst-node' (tvz,hv)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pst-tools/pst-tools.sty
 Package: pst-tools 2012/01/01 package wrapper for pst-tools.tex (hv)
  (/usr/share/texlive/texmf-dist/tex/generic/pst-tools/pst-tools.tex `PST-tools' v0.12, 2021/09/23 (hv)
-\randomi=\count383
-\ranval=\count384
+\randomi=\count384
+\ranval=\count385
 )
 File: pst-tools.tex 2021/09/23 v0.12 `PST-tools' (hv)
 ) (/usr/share/texlive/texmf-dist/tex/latex/pst-calculate/pst-calculate.sty
@@ -831,31 +834,31 @@ Package: pst-calculate 2019/01/24 v. 0.02(Herbert Voss) Support for caculations 
 Package: expl3 2023-02-22 L3 programming layer (loader) 
  (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count385
+\l__color_backend_stack_int=\count386
 \l__pdf_internal_box=\box127
 ))
 Package: xparse 2023-02-02 L3 Experimental document command parser
 ))
 Package: pst-eucl 2020/09/29 package wrapper for PSTricks pst-eucl.tex
  (/usr/share/texlive/texmf-dist/tex/generic/pst-eucl/pst-eucl.tex (/usr/share/texlive/texmf-dist/tex/generic/pst-arrow/pst-arrow.tex `pst-arrow' v0.05, 2021/11/16 (dr,hv)) (/usr/share/texlive/texmf-dist/tex/generic/pst-plot/pst-plot.tex (/usr/share/texlive/texmf-dist/tex/generic/pst-tools/pst-tools.tex) (/usr/share/texlive/texmf-dist/tex/generic/pstricks-add/pstricks-add.tex (/usr/share/texlive/texmf-dist/tex/generic/pst-3d/pst-3d.tex `PST-3d' v1.11, 2010/02/14 (tvz)) (/usr/share/texlive/texmf-dist/tex/generic/multido/multido.tex  v1.42, 2010/05/14 <tvz>
-\multido@count=\count386
-\multidocount=\count387
+\multido@count=\count387
+\multidocount=\count388
 \multido@stuff=\toks59
 ) (/usr/share/texlive/texmf-dist/tex/generic/pst-math/pst-math.tex `pst-math' v0.66 , (CJ,hv)) `pstricks-add' v3.93, 2022/11/21 (dr,hv)
 \psparallelogramsep=\dimen373
-\pst@cntC=\count388
-\pst@stepcount=\count389
+\pst@cntC=\count389
+\pst@stepcount=\count390
 \chart@ColorIndex=\dimen374
 \chart@ColorStep=\dimen375
 \pst@chartHeight=\dimen376
 \pst@chartStackDepth=\dimen377
 \pst@chartStackWidth=\dimen378
-\chart@Toggle=\count390
-\psVectorCtr=\count391
+\chart@Toggle=\count391
+\psVectorCtr=\count392
 ) (/usr/share/texlive/texmf-dist/tex/generic/multido/multido.tex  v1.42, 2010/05/14 <tvz>)  v1.94, 2022/11/21 (tvz,hv)
 \pstRadUnit=\dimen379
 \pstRadUnitInv=\dimen380
-\pst@linecnt=\count392
+\pst@linecnt=\count393
 \RCD@file=\read3
 \psxlabelsep=\dimen381
 \psylabelsep=\dimen382
@@ -866,7 +869,7 @@ Package: pst-eucl 2020/09/29 package wrapper for PSTricks pst-eucl.tex
 \pst@yticksizeA=\dimen387
 \pst@yticksizeB=\dimen388
 \pst@yticksizeC=\dimen389
-\@digitcounter=\count393
+\@digitcounter=\count394
 \psk@llx=\dimen390
 \psk@lly=\dimen391
 \psk@urx=\dimen392
@@ -878,42 +881,75 @@ Package: pst-eucl 2020/09/29 package wrapper for PSTricks pst-eucl.tex
 \psMarkHashSep=\dimen397
 )
 File: pst-eucl.tex 2020/09/29 v1.75 `PST-eucl' (dr,hv)
+) (/usr/share/texlive/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-issues-for-future-maintainer) + intermediate FMi
+ (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box128
+\sift@deathcycles=\count395
+\@vwid@loff=\dimen398
+\@vwid@roff=\dimen399
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 26.
+\c@taburow=\count396
+\tabu@nbcols=\count397
+\tabu@cnt=\count398
+\tabu@Xcol=\count399
+\tabu@alloc=\count400
+\tabu@nested=\count401
+\tabu@target=\dimen400
+\tabu@spreadtarget=\dimen401
+\tabu@naturalX=\dimen402
+\tabucolX=\dimen403
+\tabu@Xsum=\dimen404
+\extrarowdepth=\dimen405
+\abovetabulinesep=\dimen406
+\belowtabulinesep=\dimen407
+\tabustrutrule=\dimen408
+\tabu@thebody=\toks60
+\tabu@footnotes=\toks61
+\tabu@box=\box129
+\tabu@arstrutbox=\box130
+\tabu@hleads=\box131
+\tabu@vleads=\box132
+\tabu@cellskip=\skip67
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+\pgf@intersect@solutions=\count402
+))
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 71.
  (./Mathematica_Compendium.aux)
 \openout1 = `Mathematica_Compendium.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count394
-\scratchdimen=\dimen398
-\scratchbox=\box128
-\nofMPsegments=\count395
-\nofMParguments=\count396
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count397
-\MPscratchDim=\dimen399
-\MPnumerator=\count398
-\makeMPintoPDFobject=\count399
-\everyMPtoPDFconversion=\toks61
+\scratchcounter=\count403
+\scratchdimen=\dimen409
+\scratchbox=\box133
+\nofMPsegments=\count404
+\nofMParguments=\count405
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count406
+\MPscratchDim=\dimen410
+\MPnumerator=\count407
+\makeMPintoPDFobject=\count408
+\everyMPtoPDFconversion=\toks63
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -954,7 +990,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 71.
 (./Mathematica_Compendium.out) (./Mathematica_Compendium.out)
 \@outlinefile=\write4
 \openout4 = `Mathematica_Compendium.out'.
@@ -962,24 +998,24 @@ Package hyperref Info: Link coloring OFF on input line 26.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 26.
+ on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 26.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 71.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 29.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 74.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
@@ -1012,228 +1048,150 @@ Non-PDF special ignored!
 <special> ps:0.8 setlinewidth 0 setgray
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Mathematica_Compendium.toc [2] [3])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Mathematica_Compendium.toc [2] [3] [4] [5] [6])
 \tf@toc=\write5
 \openout5 = `Mathematica_Compendium.toc'.
 
- [4] (./src/Logic.tex
-Underfull \hbox (badness 10000) in paragraph at lines 127--130
+ [7] (./src/Introction_and_others/Introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 220--225
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
 
  []
 
-[6]
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--25
+
+ []
+
+[8]) (./src/Sets_and_Logic/Logic.tex [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 284.
+(hyperref)                removing `math shift' on input line 288.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\land' on input line 284.
+(hyperref)                removing `\land' on input line 288.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lor' on input line 284.
+(hyperref)                removing `\lor' on input line 288.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--308
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--308
-
- []
-
-[7{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--326
-
- []
-
-[8] [9]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 456.
+[11{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [12] [13]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 471.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 456.
-
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 531--532
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--533
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 537--538
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 543--544
-
- []
-
-[11]) (./src/Set_Theory.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-[12] [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 375--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
-
- []
-
-[16]) (./src/Functions.tex [17] [18] [19]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 248.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 248.
-
-[20] [21] [22]) (./src/Topology.tex
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-[23]) (./src/Mathematical_Proofs.tex [24] [25] [26]) (./src/Means_and_Proofs.tex [27]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 139.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 471.
+ [14] [15]) (./src/Sets_and_Logic/Set_Theory.tex [16] [17] [18] [19] [20]) (./src/Sets_and_Logic/Functions.tex [21] [22] [23] [24] [25] [26]) (./src/Sets_and_Logic/Mathematical_Proofs.tex [27] [28] [29]) (./src/Numbers/The_Natural_Numbers.tex [30] [31]) (./src/Numbers/Archimedes.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 23.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [28] [29]) (./src/The_Natural_Numbers.tex
+) [32]) (./src/Numbers/Arithmetic.tex [33] [34]) (./src/Numbers/Real_Numbers.tex [35]) (./src/Numbers/Complex.tex [36] [37] [38]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 233.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 233.
+
+Missing character: There is no � in font cmr10!
+[39]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 321.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 321.
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 330.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 330.
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr5!
+[40]) (./src/Topology/Topology.tex
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+[41]) (./src/Algebra/Fractions_Roots_and_Exponents.tex [42]) (./src/Algebra/Logarithms.tex [43] [44]) (./src/Algebra/Sum_and_Product.tex [45] [46] [47]) (./src/Algebra/Means_and_Proofs.tex [48] [49] [50]) (./src/Algebra/Solving_Polynomials.tex [51] [52]) (./src/Algebra/Fundamental_Theoreme_of_Algebra.tex [53] [54]) (./src/Algebra/Binomial_Coeffient.tex [55]) (./src/Algebra/Rule_of_Three.tex [56] [57]) (./src/Algebra/Factorization.tex [58] [59]) (./src/Algebra/Partial_Fractions.tex [60] [61]) (./src/Algebra/Inequalities.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 34.
-
-[30] [31]) (./src/Archimedes.tex [32]) (./src/Arithmetic.tex [33] [34]) (./src/Complex.tex [35]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 125.
+(hyperref)                removing `math shift' on input line 19.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 125.
+(hyperref)                removing `\leq' on input line 19.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 125.
+(hyperref)                removing `math shift' on input line 19.
 
-[36] [37] [38]) (./src/Geometry.tex [39] [40] [41] [42] [43]) (./Mathematica_Compendium.aux)
+[62] [63]) (./src/Geometry_and_Trig/Geometry.tex [64] [65] [66] [67] [68]) (./src/Geometry_and_Trig/Trigonometry.tex [69] [70] [71] [72]) (./src/Linear_Algebra/Linear_Systems_of_Equations.tex [73] [74] [75] [76] [77]) (./src/Linear_Algebra/Analytical_Geometry.tex [78] [79] [80] [81] [82] [83] [84] [85] [86] [87]) (./src/Linear_Algebra/Algebraic_Structures.tex [88] [89]) (./src/Linear_Algebra/Vector_Spaces.tex [90] [91]
+Overfull \hbox (1.4743pt too wide) in paragraph at lines 150--151
+[]\OT1/cmr/m/n/10 Then there ex-ists at least one $\OML/cmm/m/it/10 w[]$ \OT1/cmr/m/n/10 such that $\OML/cmm/m/it/10 w[] [] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]; [] ; v[]\OT1/cmr/m/n/10 )$; oth-er-wise, if all $\OML/cmm/m/it/10 w[] \OMS/cmsy/m/n/10 2 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[]; [] ; v[]\OT1/cmr/m/n/10 )$,
+ []
+
+[92]
+Overfull \hbox (6.7415pt too wide) in paragraph at lines 215--216
+[]\OT1/cmr/m/n/10 Therefore, we have $\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = 0$, which proves that the set of poly-no-mi-als $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; x; x[]; [] ; x[]\OMS/cmsy/m/n/10 g$
+ []
+
+[93] [94]) (./src/Linear_Algebra/Dot_Product_euclidean_and_unitary_space.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 63.
+
+[95] [96]) (./src/Linear_Algebra/Orthogonality.tex [97] [98] [99] [100]) (./src/Linear_Algebra/Linear_Maps.tex [101] [102] [103]) (./src/Linear_Algebra/Matrices.tex [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116]) (./Mathematica_Compendium.aux)
 Package rerunfilecheck Info: File `Mathematica_Compendium.out' has not changed.
-(rerunfilecheck)             Checksum: 241B8C920F6BECF628AE48448FFB2034;21166.
+(rerunfilecheck)             Checksum: C10272B8A91E0530F7E8EBA0D623D186;59601.
  ) 
 Here is how much of TeX's memory you used:
- 58970 strings out of 476041
- 1485579 string characters out of 5793175
- 2350577 words of memory out of 6000000
- 78413 multiletter control sequences out of 15000+600000
- 523236 words of font info for 77 fonts, out of 8000000 for 9000
+ 61068 strings out of 476041
+ 1521891 string characters out of 5793175
+ 2389343 words of memory out of 6000000
+ 80031 multiletter control sequences out of 15000+600000
+ 524476 words of font info for 81 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 87i,14n,91p,787b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Mathematica_Compendium.pdf (43 pages, 373736 bytes).
+ 87i,15n,91p,787b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Mathematica_Compendium.pdf (116 pages, 625110 bytes).
 PDF statistics:
- 1017 PDF objects out of 1200 (max. 8388607)
- 915 compressed objects within 10 object streams
- 245 named destinations out of 1000 (max. 500000)
- 907 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2504 PDF objects out of 2984 (max. 8388607)
+ 2311 compressed objects within 24 object streams
+ 634 named destinations out of 1000 (max. 500000)
+ 2435 words of extra memory for PDF output out of 10000 (max. 10000000)
 

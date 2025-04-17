@@ -1,0 +1,63 @@
+\section{Solving Inequalities}
+
+Inequalities in mathematics express the relative order of two values. Unlike equations that assert equality, inequalities use symbols such as $<$, $>$, $\leq$, and $\geq$ to indicate that one value is less than, greater than, less than or equal to, or greater than or equal to another. Solving an inequality involves finding the set of all values that satisfy the given relationship.
+
+\subsection{Basic Principles}
+
+Solving inequalities often involves similar algebraic manipulations as solving equations, with one crucial difference: when multiplying or dividing both sides of an inequality by a negative number, the direction of the inequality sign must be reversed. For example, if $a < b$ and $c < 0$, then $ac > bc$.
+
+\subsection{Inequalities Involving Absolute Value}
+
+Inequalities involving absolute values require careful consideration due to the piecewise definition of the absolute value function:
+\[|x| = \begin{cases}
+x & \text{if } x \geq 0 \\
+-x & \text{if } x < 0
+\end{cases}\]
+
+To solve inequalities with absolute values, we typically break down the problem into cases based on the values that make the expressions inside the absolute value equal to zero. These critical points divide the number line into intervals, and we analyze the inequality in each interval.
+
+\subsubsection{Example: $|x + 1| \leq 10 + |2x - 6|$}
+
+To solve the inequality $|x + 1| \leq 10 + |2x - 6|$, we first identify the critical points where the expressions inside the absolute values are zero:
+\begin{itemize}
+    \item $x + 1 = 0 \implies x = -1$
+    \item $2x - 6 = 0 \implies x = 3$
+\end{itemize}
+These critical points divide the number line into three intervals: $(-\infty, -1)$, $[-1, 3)$, and $[3, \infty)$. We will analyze the inequality in each interval.
+
+\paragraph{Case 1: $x < -1$}
+In this interval, $x + 1 < 0$, so $|x + 1| = -(x + 1) = -x - 1$. Also, $2x - 6 < 2(-1) - 6 = -8 < 0$, so $|2x - 6| = -(2x - 6) = -2x + 6$. Substituting these into the inequality, we get:
+\begin{align*}
+-x - 1 &\leq 10 + (-2x + 6) \\
+-x - 1 &\leq 16 - 2x \\
+2x - x &\leq 16 + 1 \\
+x &\leq 17
+\end{align*}
+Combining this with the condition $x < -1$, the solution in this interval is $(-\infty, -1)$.
+
+\paragraph{Case 2: $-1 \leq x < 3$}
+In this interval, $x + 1 \geq 0$, so $|x + 1| = x + 1$. Also, $2x - 6 < 2(3) - 6 = 0$, so $|2x - 6| = -(2x - 6) = -2x + 6$. Substituting these into the inequality, we get:
+\begin{align*}
+x + 1 &\leq 10 + (-2x + 6) \\
+x + 1 &\leq 16 - 2x \\
+x + 2x &\leq 16 - 1 \\
+3x &\leq 15 \\
+x &\leq 5
+\end{align*}
+Combining this with the condition $-1 \leq x < 3$, the solution in this interval is $[-1, 3)$.
+
+\paragraph{Case 3: $x \geq 3$}
+In this interval, $x + 1 > 0$, so $|x + 1| = x + 1$. Also, $2x - 6 \geq 2(3) - 6 = 0$, so $|2x - 6| = 2x - 6$. Substituting these into the inequality, we get:
+\begin{align*}
+x + 1 &\leq 10 + (2x - 6) \\
+x + 1 &\leq 4 + 2x \\
+1 - 4 &\leq 2x - x \\
+-3 &\leq x
+\end{align*}
+Combining this with the condition $x \geq 3$, the solution in this interval is $[3, \infty)$.
+
+\paragraph{Overall Solution}
+To find the complete solution to the inequality, we take the union of the solutions from each case:
+\[(-\infty, -1) \cup [-1, 3) \cup [3, \infty) = (-\infty, \infty)\]
+Therefore, the inequality $|x + 1| \leq 10 + |2x - 6|$ is true for all real numbers $x$.
+\newpage

@@ -1,0 +1,110 @@
+\section{Fundamental Theorem of Arithmetic}
+
+\begin{itemize}
+	\item The Fundamental Theorem of Arithmetic says that every integer greater than 1 can be factored uniquely into a product of primes.
+	\item Euclid’s lemma says that if a prime divides a product of two numbers, it must divide at least one of the numbers.
+	\item The least common multiple $[a, b]$ of nonzero integers $a$ and $b$ is the smallest positive integer divisible by both $a$ and $b$.
+\end{itemize}
+
+\textbf{Fundamental Theorem of Arithmetic:}
+Every integer greater than 1 can be written in the form
+\[
+	p_1^{n_1}p_2^{n_2} \cdots p_k^{n_k}
+\]
+where $n_i \geq 0$ and the $p_i$ are distinct primes. The factorization is unique, except possibly for the order of the factors.
+
+\textbf{Example.}
+\[
+	4312 = 2 \cdot 2156 = 2 \cdot 2 \cdot 1078 = 2 \cdot 2 \cdot 2 \cdot 539 = 2 \cdot 2 \cdot 2 \cdot 7 \cdot 77 = 2 \cdot 2 \cdot 2 \cdot 7 \cdot 7 \cdot 11
+\]
+That is,
+\[
+	4312 = 2^3 \cdot 7^2 \cdot 11
+\]
+
+\subsection{Lemmas}
+
+\textbf{Lemma.} If $m \mid pq$ and $\gcd(m, p) = 1$, then $m \mid q$.
+
+\textbf{Proof.} Write $1 = \gcd(m, p) = am + bp$ for some $a, b \in \mathbb{Z}$.
+Then
+\[
+	q = amq + bpq
+\]
+Since $m \mid amq$ and $m \mid bpq$ (because $m \mid pq$), we conclude $m \mid q$.
+
+\bigskip
+
+\textbf{Lemma.} If $p$ is prime and $p \mid a_1a_2 \cdots a_n$, then $p \mid a_i$ for some $i$.
+
+\textbf{Proof.} (Case $n=2$): Suppose $p \mid a_1a_2$, and $p \nmid a_1$.
+Then $\gcd(p, a_1) = 1$, and by the previous lemma, $p \mid a_2$.
+
+For general $n > 2$: Assume the result is true for $n-1$. Suppose $p \mid a_1a_2 \cdots a_n$.
+Group as $(a_1a_2 \cdots a_{n-1})a_n$.
+
+By the $n=2$ case, either $p \mid a_n$ or $p \mid a_1a_2 \cdots a_{n-1}$, and by induction, $p \mid a_i$ for some $i$.
+
+\subsection{Proof of the Fundamental Theorem}
+
+\textbf{Existence:}
+Use induction on $n > 1$.
+Base case: $n = 2$ is prime.
+
+Inductive step: If $n$ is prime, done. Otherwise $n = ab$, with $1 < a, b < n$.
+By induction, both $a$ and $b$ factor into primes, so $n$ does too.
+
+\textbf{Uniqueness:}
+Suppose:
+\[
+	p_1^{m_1} \cdots p_j^{m_j} = q_1^{n_1} \cdots q_k^{n_k}
+\]
+with all $p_i$ and $q_i$ distinct primes.
+
+Since $p_1$ divides the LHS, it divides the RHS. So $p_1 \mid q_i^{n_i}$ for some $i$, hence $p_1 = q_i$.
+Reorder so $p_1 = q_1$. Then:
+
+If $m_1 > n_1$, divide both sides by $q_1^{n_1}$:
+\[
+	p_1^{m_1-n_1} \cdots p_j^{m_j} = q_2^{n_2} \cdots q_k^{n_k}
+\]
+But then $p_1$ divides LHS but not RHS, contradiction. So $m_1 = n_1$. Cancel and repeat.
+
+Eventually, all $p_i$ match with some $q_i$, and the exponents are equal. So the factorizations are the same up to order.
+
+\subsection{Least Common Multiple}
+
+The least common multiple of $a$ and $b$, denoted $[a, b]$, is the smallest positive integer divisible by both.
+
+\textbf{Example:}
+\[
+	[6, 4] = 12, \quad [33, 15] = 165
+\]
+
+\textbf{Fact:}
+\[
+	[a, b] \cdot \gcd(a, b) = ab
+\]
+
+Let:
+\[
+	a = p_1 \cdots p_lq_1 \cdots q_m, \quad b = q_1 \cdots q_mr_1 \cdots r_n
+\]
+
+Then:
+\begin{align*}
+	\gcd(a, b) & = q_1 \cdots q_m                                 \\
+	[a, b]     & = p_1 \cdots p_lq_1 \cdots q_mr_1 \cdots r_n     \\
+	ab         & = p_1 \cdots p_lq_1^2 \cdots q_m^2r_1 \cdots r_n
+\end{align*}
+So:
+\[
+	[a, b] \cdot \gcd(a, b) = ab
+\]
+
+\textbf{Example:}
+\[
+	\gcd(36, 90) = 18, \quad [36, 90] = 180, \quad 36 \cdot 90 = 32400 = 18 \cdot 180
+\]
+
+\newpage

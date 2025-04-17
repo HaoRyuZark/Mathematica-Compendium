@@ -1,0 +1,288 @@
+\section{Vector Spaces}
+
+\subsection{Definition}
+
+A \textbf{vector space} is a set $V$ with two operations, vector addition and scalar multiplication, such that:
+
+\begin{itemize}[label=$-$]
+	\item The set $V$ is closed under vector addition.
+	\item The set $V$ is closed under scalar multiplication.
+	\item Vector addition is commutative.
+	\item Vector addition is associative.
+	\item There exists a zero vector $\vec{0} \in V$ such that $\vec{v} + \vec{0} = \vec{v}$ for all $\vec{v} \in V$.
+	\item For every vector $\vec{v} \in V$, there exists a vector $-\vec{v} \in V$ such that $\vec{v} + (-\vec{v}) = \vec{0}$.
+	\item Scalar multiplication is distributive with respect to vector addition: $a(\vec{u} + \vec{v}) = a\vec{u} + a\vec{v}$ for all $a \in F$ and $\vec{u}, \vec{v} \in V$.
+	\item Scalar multiplication is distributive with respect to field addition: $(a + b)\vec{v} = a\vec{v} + b\vec{v}$ for all $a, b \in F$ and $\vec{v} \in V$.
+	\item Scalar multiplication is associative: $a(b\vec{v}) = (ab)\vec{v}$ for all $a, b \in F$ and $\vec{v} \in V$.
+	\item The multiplicative identity acts as a scalar: $1\vec{v} = \vec{v}$ for all $\vec{v} \in V$.
+\end{itemize}
+The set $F$ is a field, and the elements of $V$ are called \textbf{vectors}.
+
+\subsection{Examples}
+
+\begin{enumerate}
+	\item The set of all $n$-tuples of real numbers $\mathbb{R}^n$ is a vector space over the field of real numbers $\mathbb{R}$.
+	\item The set of all polynomials of degree less than or equal to $n$ is a vector space over the field of real numbers $\mathbb{R}$.
+	\item The set of all continuous functions from $\mathbb{R}$ to $\mathbb{R}$ is a vector space over the field of real numbers $\mathbb{R}$.
+	\item The set of all $m \times n$ matrices with real entries is a vector space over the field of real numbers $\mathbb{R}$.
+\end{enumerate}
+
+\subsection{Subspaces}
+
+A subset $W$ of a vector space $V$ is a \textbf{subspace} of $V$ if:
+\begin{itemize}[label=$-$]
+
+	\item The zero vector $\vec{0} \in W$.
+	\item For all $\vec{u}, \vec{v} \in W$, $\vec{u} + \vec{v} \in W$.
+	\item For all $a \in F$ and $\vec{v} \in W$, $a\vec{v} \in W$.
+\end{itemize}
+If $W$ is a subspace of $V$, we write $W \subseteq V$.
+
+\textbf{Note:} The intersection of two subspaces is also a subspace.
+
+\subsection{Linear Combinations}
+
+A \textbf{linear combination} of vectors $\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n$ in a vector space $V$ is an expression of
+the form:
+\[
+	a_1\vec{v}_1 + a_2\vec{v}_2 + \ldots + a_n\vec{v}_n
+\]
+where $a_1, a_2, \ldots, a_n$ are scalars from the field $F$.
+The set of all linear combinations of a set of vectors $\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}$ is called the \textbf{span} of those vectors,
+denoted by $\text{span}(\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n)$.
+The span of a set of vectors is a subspace of the vector space $V$.
+\textbf{Note:} The span of a set of vectors is the smallest subspace containing those vectors.
+
+\subsection{Properties of the subspaces}
+
+\begin{itemize}[label=$-$]
+	\item The intersection of two subspaces is a subspace.
+	\item The union of two subspaces is not necessarily a subspace.
+	\item The sum of two subspaces $U$ and $W$ is defined as:
+	      \[
+		      U + W = \{\vec{u} + \vec{w} : \vec{u} \in U, \vec{w} \in W\}
+	      \]
+	      The sum of two subspaces is a subspace.
+\end{itemize}
+\textbf{Note:} The sum of two subspaces is the smallest subspace containing both subspaces.
+\begin{itemize}[label=$-$]
+	\item The direct sum of two subspaces $U$ and $W$ is defined as:
+	      \[
+		      U \oplus W = \{\vec{u} + \vec{w} : \vec{u} \in U, \vec{w} \in W\}
+	      \]
+	      The direct sum of two subspaces is a subspace.
+	\item The direct sum of two subspaces is the smallest subspace containing both subspaces, such that $U \cap W = \{\vec{0}\}$.
+	\item The direct sum of two subspaces is denoted by $U \oplus W$.
+\end{itemize}
+
+\subsection{Linear Independence}
+
+A set of vectors $\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}$ in a vector space $V$ is said to be \textbf{linearly independent} if the only solution to the equation:
+\[
+	\lambda_1\vec{v}_1 + \lambda_2\vec{v}_2 + \ldots + \lambda_n\vec{v}_n = 0
+\]
+or
+\[
+	\sum_{i=1}^n \lambda_i \vec{v}_i = 0
+\]
+is $a_1 = a_2 = \ldots = a_n = 0$.
+If there exists a non-trivial solution to this equation, then the set of vectors is said to be \textbf{linearly dependent}.
+A set of vectors is linearly independent if and only if the only linear combination of those vectors that equals the zero vector is the trivial combination where all coefficients are zero.
+
+\subsubsection{Properties of the linear independence}
+
+\begin{itemize}[label=$-$]
+	\item A set of vectors $\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}$ is linearly independent if and only if the only linear combination of those vectors that equals the zero vector is the trivial combination where all coefficients are zero.
+	\item If a set of vectors $\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}$ is linearly independent, then any subset of that set is also linearly independent.
+	\item If a set of vectors $\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}$ is linearly dependent, then at least one vector in that set can be expressed as a linear combination of the others.
+\end{itemize}
+
+\subsection{Base}
+
+\begin{itemize}[label=$-$]
+\item A \textbf{base} of a vector space $V$ is a set of vectors $\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}$ that is linearly independent and spans the vector space $V$.
+\item The number of vectors in a base of a vector space is called the \textbf{dimension} of the vector space.
+\item The dimension of a vector space $V$ is denoted by $\dim(V)$.
+\item If $V$ has a finite base, then it is said to be \textbf{finite-dimensional}.
+\item If $V$ does not have a finite base, then it is said to be \textbf{infinite-dimensional}.
+\end{itemize}
+
+\subsection{Dimension}
+The \textbf{dimension} of a vector space $V$ is the number of vectors in a base of $V$.
+
+\begin{itemize}[label=$-$]
+	\item The dimension of a vector space is denoted by $\dim(V)$.
+	\item The dimension of a vector space can be finite or infinite.
+	\item If the dimension of a vector space is finite, then it is said to be \textbf{finite-dimensional}.
+	\item If the dimension of a vector space is infinite, then it is said to be \textbf{infinite-dimensional}.
+\end{itemize}
+
+\subsubsection{How to find the base of a set vector}
+To find the base of a set of vectors, we can use the following steps:
+\begin{enumerate}
+	\item Write the vectors as columns of a matrix.
+	\item Row reduce the matrix to echelon form.
+	\item The non-zero rows of the echelon form matrix correspond to the base of the vector space spanned by the original set of vectors.
+\end{enumerate}
+The number of non-zero rows in the echelon form matrix is equal to the dimension of the vector space spanned by the original set of vectors.
+
+\noindent\textbf{Note:} The base of a vector space is not unique. Different bases can span the same vector space.
+
+\subsection{Basis Extension Theorem}
+
+Let $V$ be a vector space over a field $K$, and let 
+\[
+v_1, \ldots, v_r,\quad w_1, \ldots, w_s \in V.
+\]
+Suppose that $(v_1, \ldots, v_r)$ is a linearly independent tuple and that
+\[
+\text{span}(v_1, \ldots, v_r, w_1, \ldots, w_s) = V.
+\]
+Then it is possible to extend $(v_1, \ldots, v_r)$ to a basis of $V$ by possibly adding suitable vectors from the set $\{w_1, \ldots, w_s\}$.
+
+\subsubsection*{Proof}
+
+If $\text{span}(v_1, \ldots, v_r) = V$, the statement is obvious. So assume
+\[
+\text{span}(v_1, \ldots, v_r) \neq V.
+\]
+
+Then there exists at least one $w_i$ such that $w_i \notin \text{span}(v_1, \ldots, v_r)$; otherwise, if all $w_i \in \text{span}(v_1, \ldots, v_r)$, then
+\[
+\text{span}(v_1, \ldots, v_r, w_1, \ldots, w_s) = \text{span}(v_1, \ldots, v_r) = V,
+\]
+which contradicts our assumption that $\text{span}(v_1, \ldots, v_r) \neq V$.
+
+The tuple $(w_i, v_1, \ldots, v_r)$ is linearly independent, because from
+\[
+\sum_{j=1}^r \lambda_j v_j + \lambda w_i = 0
+\]
+it follows that $\lambda = 0$ (since $w_i \notin \text{span}(v_1, \ldots, v_r)$), and then also $\lambda_j = 0$ for all $j$ because the $v_j$ are linearly independent.
+
+Possibly, $(w_i, v_1, \ldots, v_r)$ is still not a basis of $V$. Then we repeat the previous step and keep adding further $w_i$ until the tuple extends $(v_1, \ldots, v_r)$ to a basis of $V$. This process terminates after finitely many steps, since
+\[
+\text{span}(v_1, \ldots, v_r, w_1, \ldots, w_s) = V.
+\]
+$\mathfrak{QED}$
+
+\noindent\textbf{Note:} Every finitely generated vector space $V$ has a basis.
+
+\subsection{Exchange Lemma}
+
+Let $(v_1, \ldots, v_n)$ and $(w_1, \ldots, w_m)$ be bases of a vector space $V$. Then, for every $v_i$, there exists a $w_j$ such that if we replace $v_i$ by $w_j$ in the tuple $(v_1, \ldots, v_n)$, it still forms a basis of $V$.
+
+\subsubsection*{Proof}
+
+Let $(v_1, \ldots, v_n)$ and $(w_1, \ldots, w_m)$ be two bases of $V$. Suppose we remove $v_i$ from the first basis. The truncated tuple $(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n)$ satisfies
+\[
+\text{span}(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n) \neq V,
+\]
+because if $\text{span}(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n) = V$, then $v_i$ would lie in the span of the remaining vectors and could be written as a linear combination of them. This would contradict the assumption that $(v_1, \ldots, v_n)$ is linearly independent and a basis of $V$.
+
+By the Basis Extension Theorem, we can extend the truncated tuple $(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n)$ to a basis of $V$ by adding vectors from $(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n, w_1, \ldots, w_m)$. Therefore, by the Basis Extension Theorem, there exists a $w_j$ such that
+\[
+w_j \notin \text{span}(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n),
+\]
+and the tuple $(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n, w_j)$ is linearly independent.
+
+If this tuple does not form a basis, we can again apply the Basis Extension Theorem and add one of the vectors $v_1, \ldots, v_n$ to complete the basis. Clearly, the only possibility is to add $v_i$, but this would imply that the tuple $(v_1, \ldots, v_n, w_j)$ is not a basis, as $w_j$ would then be linearly dependent on the other vectors. Therefore, $(v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n, w_j)$ must form a basis of $V$.
+
+\noindent$\mathfrak{QED}$
+
+\subsection{Dimension of a sum of subspaces}
+Let $U$ and $W$ be two subspaces of a vector space $V$. Then the dimension of the sum of the two subspaces is given by:
+\[
+    \dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W)    
+\]
+
+\subsection{Linear Independence of polynomials}
+Let $P_n$ be the vector space of polynomials of degree at most $n$. The set of polynomials $\{1, x, x^2, \ldots, x^n\}$ is a basis for $P_n$.
+The dimension of $P_n$ is $n + 1$.
+\begin{itemize}[label=$-$]
+    \item The set of polynomials $\{1, x, x^2, \ldots, x^n\}$ is linearly independent.
+    \item The set of polynomials $\{1, x, x^2, \ldots, x^n\}$ spans the vector space $P_n$.
+    \item The dimension of $P_n$ is $n + 1$.
+\end{itemize}
+
+To prove that the set of polynomials $\{1, x, x^2, \ldots, x^n\}$ is linearly independent, we can use the following steps:
+\begin{enumerate}
+    \item Assume that there exists a linear combination of the polynomials that equals zero:
+    \[
+        a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n = 0
+    \]
+    where $a_0, a_1, \ldots, a_n$ are scalars.
+    \item Since the left-hand side is a polynomial of degree at most $n$, it can only be equal to zero if all coefficients are zero.
+    \item Therefore, we have $a_0 = a_1 = \ldots = a_n = 0$, which proves that the set of polynomials $\{1, x, x^2, \ldots, x^n\}$ is linearly independent.
+\end{enumerate}
+
+So you only have to prove that the set of coefficients vector is linearly independent.
+
+\subsection{Interpolation Polynomial}
+
+Given the $n+1$ points $(x_k, y_k)$, with $0 \leq k \leq n$ and all $x_k$ distinct, there exists exactly one polynomial $p_n \in P_n$ such that $y_k = p_n(x_k)$ for all $0 \leq k \leq n$. This polynomial is called the interpolation polynomial.
+
+\subsubsection*{Proof}
+
+The uniqueness follows immediately from Remark 3.100. We prove the existence by induction on $n$. For $n = 0$, choose $p_0(x) = y_0$. 
+
+Now assume the statement is true for $n-1$. Let the polynomial $p_{n-1}$ interpolate the points $(x_0, y_0), \ldots, (x_{n-1}, y_{n-1})$. Define
+\[
+p_n(x) = p_{n-1}(x) + q(x),
+\]
+where
+\[
+q(x) = \frac{(x - x_0)(x - x_1)\cdots(x - x_{n-1})}{(x_n - x_0)(x_n - x_1)\cdots(x_n - x_{n-1})} (y_n - p_{n-1}(x_n)).
+\]
+We have $q \in P_n$, and by Corollary 3.98, it follows that $p_n \in P_n$. Furthermore, $q(x_k) = 0$ for $k \leq n-1$ because a linear factor in the numerator always vanishes at $x_k$. Therefore, $p_n(x_k) = y_k$ for $k \leq n-1$. Additionally, we have
+\[
+q(x_n) = y_n - p_{n-1}(x_n),
+\]
+so that $p_n(x_n) = y_n$. 
+
+\noindent$\mathfrak{QED}$
+
+\subsubsection{Example of the interpolation polynomial}
+
+Consider the three points $(-2, 1)$, $(-1, -1)$, and $(1, 1)$. By Theorem 3.101, these points uniquely define an interpolating parabola $p_2$. This parabola can be determined using the definition of $p_n$ from the proof of Theorem 3.101. For hand calculations and a small number of points to interpolate, the following approach is also useful. The general form of the polynomial is 
+\[
+p_2(x) = ax^2 + bx + c.
+\]
+Substituting the three points into this form gives the system of equations:
+
+\[
+1 = a + b + c \quad \text{(from the point (1, 1))}
+\]
+\[
+-1 = a - b + c \quad \text{(from the point (-1, -1))}
+\]
+\[
+1 = 4a - 2b + c \quad \text{(from the point (-2, 1))}
+\]
+
+This leads to the system of equations:
+\[
+\begin{pmatrix}
+1 & 1 & 1 \\
+1 & -1 & 1 \\
+4 & -2 & 1
+\end{pmatrix}
+\begin{pmatrix}
+a \\
+b \\
+c
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \\
+-1 \\
+1
+\end{pmatrix}
+\]
+
+Solving this system gives $a = 1$, $b = 1$, and $c = -1$, so the interpolation polynomial is
+\[
+p_2(x) = x^2 + x - 1.
+\]
+
+\newpage
+

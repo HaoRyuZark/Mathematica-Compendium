@@ -1,0 +1,145 @@
+\section{Linear Maps}
+A linear map \( f: V \to W \) is a function that satisfies the following properties:
+
+\begin{enumerate}
+    \item \( f(v_1 + v_2) = f(v_1) + f(v_2) \) for all \( v_1, v_2 \in V \).
+    \item \( f(\lambda v) = \lambda f(v) \) for all \( v \in V \) and \( \lambda \in \mathbb{R} \).
+    \item \( f(0) = 0 \).
+\end{enumerate} 
+
+\noindent This kind of function is also called \textbf{Homomorphism}.
+
+\noindent If \(V = W\) is it called \textbf{Endomorphism}.
+
+\subsection{Types of Linear Maps}
+\begin{enumerate}
+    \item \textbf{Injective or Monomorphism} (One-to-One): A linear map \( f: V \to W \) is injective if \( f(v_1) = f(v_2) \) implies \( v_1 = v_2 \).
+    \item \textbf{Surjective or Epimorphism} (Onto): A linear map \( f: V \to W \) is surjective if for every \( w \in W \), there exists a \( v \in V \) such that \( f(v) = w \).
+    \item \textbf{Bijective or Isomorphism}: A linear map \( f: V \to W \) is bijective if it is both injective and surjective.
+\end{enumerate}
+
+\noindent\textbf{Note:} Two vector spcaces are called 
+\textbf{isomorphic} if there exists a bijective linear map between them. In this case, we can say that the two vector spaces are \textbf{isomorphic} and we write \( V \cong W \).
+
+\subsection{Properties of Linear Maps}
+\begin{enumerate}
+    \item The composition of two linear maps is a linear map.
+    \item The inverse of a bijective linear map is also a linear map.
+    \item The zero map \( f: V \to W \) defined by \( f(v) = 0 \) 
+    for all \( v \in V \) is a linear map.
+    \item The identity map \( \text{id}_V: V \to V \) defined by \( \text{id}_V(v) = v \) for all \( v \in V \) is a linear map.
+    \item The sum of two linear maps \( f: V \to W \) 
+    and \( g: V \to W \) is a linear map defined by \( (f + g)(v) = f(v) + g(v) \).
+    \item The scalar multiplication of a linear map \( f: V \to W \) by a scalar \( c \) is a linear map defined by \( (cf)(v) = c(f(v)) \).
+    \item The composition of linear maps is associative, i.e., \( (f \circ g) \circ h = f \circ (g \circ h) \).
+    \item The composition of linear maps is distributive over addition, i.e., \( f \circ (g + h) = f \circ g + f \circ h \).
+    \item The composition of linear maps is compatible with scalar multiplication, i.e., \( (cf) \circ g = c(f \circ g) \).
+    \item Linear Maps compose a vector space 
+    over the field of scalars.
+    \[
+    (Hom(V,W), +, \cdot )
+    \]
+\end{enumerate}
+
+\subsection{The Kernel of a Linear Map}
+The kernel of a linear map \( f: V \to W \) is the set of all vectors in \( V \) that are mapped to the zero vector in \( W \):
+    \[
+    \ker(f) = \{ v \in V \mid f(v) = 0 \}.
+    \]
+
+\subsection{The Image of a Linear Map}
+The image of a linear map \( f: V \to W \) is the set of all vectors in \( W \) that can be expressed as \( f(v) \) for some \( v \in V \):
+    \[
+    \text{Im}(f) = \{ w \in W \mid w = f(v) \text{ for some } v \in V \}.
+    \]
+ 
+\subsection{The Rank of a Linear Map}
+The rank of a linear map \( f: V \to W \) is the ension of its image:
+    \[
+    \text{rank}(f) = \text{}(\text{Im}(f)).
+    \]
+\subsection{The Nullity of a Linear Map}
+The nullity of a linear map \( f: V \to W \) is the ension of its kernel:
+    \[
+    \text{nullity}(f) = \text{}(\ker(f)).
+    \]
+\subsection{The Rank-Nullity Theorem}
+The rank-nullity theorem states that for a linear map \( f: V \to W \):
+\[
+\text{}(\ker(f)) + \text{dim}(\text{Im}(f)) = \text{dim}(V).
+\]
+
+\subsection{Proof of the injectivity of the Kernel}
+
+Suppose we have a linear map \(f\) and two vectors \(v_1\) and \(v_2\) which are not equal.
+\noindent We are going to assume that they both map to the $\vec{0}$ therefore:
+\[
+f(v_1) = f(v_2) = \vec{0}
+\]
+
+\noindent Because of the linearity of the map we can write:
+\[
+f(v_1 - v_2) = f(v_1) - f(v_2) = \vec{0} - \vec{0} = \vec{0}
+\]
+
+\noindent And that contradicts the assumption that \(v_1\) and \(v_2\) are not equal. Therefore, the kernel of a linear map is injective.
+
+\subsection{Dimension Formula for Linear Mappings}
+    Let $f: V \to W$ be linear and $\dim(V) = n$. Then
+    \[\dim(\ker(f)) + \operatorname{rank}(f) = n.\]
+    
+    
+   \noindent Remember that $\ker(f)$ forms a subspace of $V$ and therefore $\dim(\ker(f)) := r \leq n$. We extend an arbitrary basis $(v_1, \ldots, v_r)$ of $\ker(f)$ to a basis $(v_1, \ldots, v_r, v_{r+1}, \ldots, v_n)$ of $V$. Setting $w_{r+i} = f(v_{r+i})$ for $i = 1, \ldots, n - r$, we have $\forall v \in V$:
+    \begin{align*}
+    f(v) &= f(\lambda_1v_1 + \cdots + \lambda_rv_r + \lambda_{r+1}v_{r+1} + \cdots + \lambda_nv_n) \\
+    &= \lambda_1 \underbrace{f(v_1)}_{=0} + \cdots + \lambda_r \underbrace{f(v_r)}_{=0} + \lambda_{r+1} f(v_{r+1}) + \cdots + \lambda_n f(v_n) \\
+    &= \lambda_{r+1} f(v_{r+1}) + \cdots + \lambda_n f(v_n) \\
+    &= \lambda_{r+1}w_{r+1} + \cdots + \lambda_nw_n
+    \end{align*}
+    
+    Thus, $\operatorname{Im}(f) = \operatorname{span}(w_{r+1}, \ldots, w_n)$. We now show that $w_{r+1}, \ldots, w_n$ are linearly independent. Let 
+    \[\lambda_{r+1}w_{r+1} + \cdots + \lambda_nw_n = 0.\]
+    
+    From
+    \[0 = \lambda_{r+1}w_{r+1} + \cdots + \lambda_nw_n = f(\lambda_{r+1}v_{r+1} + \cdots + \lambda_nv_n)\]
+    it follows that
+    \[\lambda_{r+1}v_{r+1} + \cdots + \lambda_nv_n \in \ker(f).\]
+    
+    Therefore,
+    \[\lambda_{r+1}v_{r+1} + \cdots + \lambda_nv_n = \lambda_1v_1 + \cdots + \lambda_rv_r\]
+    for some $\lambda_1, \ldots, \lambda_r$. Since $v_1, \ldots, v_n$ are linearly independent, we have $\lambda_1 = \cdots = \lambda_n = 0$. Thus, the vectors $w_{r+1}, \ldots, w_n$ are linearly independent.
+    
+    It follows that $\dim(\operatorname{Im}(f)) = \operatorname{rank}(f) = n - r$ and therefore
+    \[\dim(\ker(f)) + \dim(\operatorname{Im}(f)) = \dim(\ker(f)) + \operatorname{rank}(f) = r + n - r = n.\]
+  $\mathfrak{QED}$
+  
+\subsection{Identifying the type of linear map}
+
+\begin{itemize}
+    
+\item If $\dim(\ker(f)) = 0$ then the map is injective.
+
+\item If $\dim(\ker(f)) = \dim(V)$ then the map is surjective.
+
+\item If $\dim(\ker(f)) = \dim(V)$ and $\dim(W) = 0$ then the map is bijective.
+\end{itemize}
+
+\subsection{Image of the basis}
+
+Let $(V) = \dim(W)$, For the basis $(v_1, \cdots, v_n)$ of $V$ we have the image $(w_1, \cdots, w_n)$ of $W$. Then:
+\begin{itemize}
+    \item If $\dim(\ker(f)) = 0$ then the map is injective and $(w_1, \cdots, w_n)$ is a basis of $W$.
+    
+    \item If $\dim(\ker(f)) = \dim(V)$ then the map is surjective and $(w_1, \cdots, w_n)$ is a spanning set of $W$.
+    
+    \item If $\dim(\ker(f)) = \dim(V)$ and $\dim(W) = 0$ then the map is bijective and $(w_1, \cdots, w_n)$ is a basis of $W$.
+\end{itemize}
+\subsection{Linear Maps and Matrices}
+\noindent Let \( V \) and \( W \) be finite-ensional vector spaces over the same field \( K \). If \( \dim V = n \) and \( \dim W = m \), then a linear map \( f: V \to W \) can be represented by an \( m \times n \) matrix. The action of the linear map on a vector can be expressed as:
+\[
+f(x) = A \cdot x,
+\]
+where \( A \) is the matrix representation of \( f \) and \( v \) is the vector represented in a column format. The columns of the matrix \( A \) are the images of the basis vectors of \( V \) under the linear map \( f \).
+
+
+\newpage

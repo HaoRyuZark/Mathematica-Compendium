@@ -1,0 +1,992 @@
+\section{Matrices}
+
+In this section, we explore the fundamental concepts of matrices, their operations, and important properties that form the foundation of linear algebra.
+
+\subsection{Definition of a Matrix}
+
+A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns. Formally, an $m \times n$ matrix $A$ consists of $mn$ elements $a_{ij}$ where $i = 1, 2, \ldots, m$ and $j = 1, 2, \ldots, n$:
+
+\begin{equation*}
+A = 
+\begin{pmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{pmatrix}
+\end{equation*}
+
+The set of all $m \times n$ matrices with real entries is denoted by $\mathbb{R}^{m \times n}$. Special cases include:
+\begin{itemize}[label=$-$]
+    \item Square matrix: A matrix with the same number of rows and columns ($m = n$)
+    \item Column vector: An $m \times 1$ matrix
+    \item Row vector: A $1 \times n$ matrix
+    \item Identity matrix $I_n$: An $n \times n$ matrix with ones on the main diagonal and zeros elsewhere
+    \item Zero matrix: A matrix where all entries are zero
+\end{itemize}
+
+\subsection{Matrix Addition and Subtraction}
+
+Matrix addition and subtraction are defined for matrices of the same dimensions.
+
+\subsubsection{Addition}
+For matrices $A, B \in \mathbb{R}^{m \times n}$, their sum $C = A + B$ is defined as:
+\begin{equation*}
+c_{ij} = a_{ij} + b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
+\end{equation*}
+
+\subsubsection{Subtraction}
+Similarly, the difference $C = A - B$ is defined as:
+\begin{equation*}
+c_{ij} = a_{ij} - b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
+\end{equation*}
+
+Matrix addition satisfies the following properties:
+\begin{align*}
+A + B &= B + A \quad \text{(Commutativity)} \\
+(A + B) + C &= A + (B + C) \quad \text{(Associativity)} \\
+A + O &= A \quad \text{(Identity element)} \\
+A + (-A) &= O \quad \text{(Inverse element)}
+\end{align*}
+where $O$ is the zero matrix.
+
+\subsection{Matrix Multiplication}
+
+Matrix multiplication is defined between matrices where the number of columns in the first matrix equals the number of rows in the second matrix.
+
+For $A \in \mathbb{R}^{m \times p}$ and $B \in \mathbb{R}^{p \times n}$, their product $C = AB \in \mathbb{R}^{m \times n}$ is defined as:
+\begin{equation*}
+c_{ij} = \sum_{k=1}^{p} a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ip}b_{pj}
+\end{equation*}
+
+Matrix multiplication satisfies the following properties:
+\begin{align*}
+A(BC) &= (AB)C \quad \text{(Associativity)} \\
+A(B+C) &= AB + AC \quad \text{(Left distributivity)} \\
+(A+B)C &= AC + BC \quad \text{(Right distributivity)} \\
+AI_n &= A \quad \text{and} \quad I_m A = A \quad \text{(Identity)}
+\end{align*}
+
+Note that matrix multiplication is generally not commutative, i.e., $AB \neq BA$ in most cases.
+
+\subsection{The Transpose of a Matrix}
+
+The transpose of a matrix $A \in \mathbb{R}^{m \times n}$, denoted $A^T \in \mathbb{R}^{n \times m}$, is obtained by interchanging rows and columns:
+\begin{equation*}
+(A^T)_{ij} = a_{ji} \quad \text{for all } i = 1, 2, \ldots, n \text{ and } j = 1, 2, \ldots, m
+\end{equation*}
+
+Properties of the transpose include:
+\begin{align*}
+(A^T)^T &= A \\
+(A + B)^T &= A^T + B^T \\
+(AB)^T &= B^T A^T \\
+(\alpha A)^T &= \alpha A^T \quad \text{for any scalar } \alpha
+\end{align*}
+
+Special matrices related to the transpose include:
+\begin{itemize}
+    \item Symmetric matrix: $A = A^T$
+    \item Skew-symmetric matrix: $A = -A^T$
+\end{itemize}
+
+\subsection{The Equivalence of Matrices}
+
+Two matrices $A$ and $B$ are said to be equivalent if one can be transformed into the other through a finite sequence of elementary row operations. We write $A \sim B$ to denote this equivalence.
+
+The elementary row operations are:
+\begin{itemize}[label=$-$]
+    \item Interchanging two rows: $R_i \leftrightarrow R_j$
+    \item Multiplying a row by a non-zero scalar: $R_i \mapsto \alpha R_i$ where $\alpha \neq 0$
+    \item Adding a multiple of one row to another: $R_i \mapsto R_i + \alpha R_j$ where $i \neq j$
+\end{itemize}
+
+Matrix equivalence is an equivalence relation, satisfying reflexivity, symmetry, and transitivity. Equivalent matrices represent the same linear system in different bases.
+
+\subsubsection{Row Echelon Form (REF)}
+A matrix is in row echelon form if:
+\begin{itemize}[label=$-$]
+    \item All rows consisting entirely of zeros are at the bottom of the matrix.
+    \item The leading entry (first non-zero element) of each non-zero row is to the right of the leading entry of the row above it.
+    \item All entries in a column below a leading entry are zeros.
+\end{itemize}
+
+\subsubsection{Reduced Row Echelon Form (RREF)}
+A matrix is in reduced row echelon form if:
+\begin{itemize}[label=$-$]
+    \item It is in row echelon form.
+    \item Each leading entry is 1.
+    \item Each leading entry is the only non-zero entry in its column.
+\end{itemize}
+
+The Gauß-Jordan elimination algorithm proceeds as follows:
+\begin{itemize}[label=$-$]
+    \item Start with the leftmost non-zero column.
+    \item Find the pivot (non-zero element) in this column. If necessary, swap rows to move a non-zero element to the pivot position.
+    \item Divide the pivot row by the pivot value to make the pivot equal to 1.
+    \item Eliminate all other entries in the pivot column by subtracting appropriate multiples of the pivot row.
+    \item Cover the pivot row and column, and repeat steps 1-4 on the submatrix until all rows are processed.
+    \item For RREF, eliminate all entries above each pivot as well.
+\end{itemize}
+
+\subsection{The Inverse of a Matrix and Its Properties}
+
+For a square matrix $A \in \mathbb{R}^{n \times n}$, the inverse matrix $A^{-1}$ (if it exists) satisfies:
+\begin{equation*}
+A A^{-1} = A^{-1} A = I_n
+\end{equation*}
+
+\subsubsection{Properties of the Inverse}
+\begin{align*}
+(A^{-1})^{-1} &= A \\
+(AB)^{-1} &= B^{-1}A^{-1} \\
+(A^T)^{-1} &= (A^{-1})^T \\
+\det(A^{-1}) &= \frac{1}{\det(A)}
+\end{align*}
+
+\subsubsection{Finding the Inverse}
+There are several methods to find the inverse of a matrix:
+
+\paragraph{Gauß-Jordan Method} 
+Form the augmented matrix $[A|I_n]$ and apply Gauß-Jordan elimination to transform it into $[I_n|A^{-1}]$:
+\begin{enumerate}
+    \item Create the augmented matrix $[A|I_n]$
+    \item Apply row operations to transform the left side into $I_n$
+    \item The right side will be $A^{-1}$
+\end{enumerate}
+
+\paragraph{Adjoint Method}
+For an $n \times n$ matrix $A$:
+\begin{equation*}
+A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
+\end{equation*}
+where $\text{adj}(A)$ is the adjoint (or adjugate) of $A$, defined as the transpose of the cofactor matrix.
+
+A matrix is invertible if and only if its determinant is non-zero. Such matrices are called non-singular or regular matrices.
+
+\subsection{The Rank of a Matrix and How to Find It}
+
+The rank of a matrix $A$, denoted $\text{rank}(A)$ or $\text{rg}(A)$, is the dimension of the column space (or equivalently, the row space) of $A$.
+
+Equivalent definitions of rank include:
+\begin{itemize}[label=$-$]
+    \item The maximum number of linearly independent columns of $A$
+    \item The maximum number of linearly independent rows of $A$
+    \item The order of the largest non-zero minor of $A$
+    \item The number of non-zero rows in any row echelon form of $A$
+\end{itemize}
+
+\subsubsection{Finding the Rank}
+To find the rank of a matrix:
+\begin{enumerate}
+    \item Transform the matrix into row echelon form using Gauß-Jordan elimination
+    \item Count the number of non-zero rows in the resulting matrix
+\end{enumerate}
+
+Properties of rank include:
+\begin{align*}
+\text{rank}(A) &\leq \min(m,n) \text{ for } A \in \mathbb{R}^{m \times n} \\
+\text{rank}(A^T) &= \text{rank}(A) \\
+\text{rank}(AB) &\leq \min(\text{rank}(A), \text{rank}(B)) \\
+\text{rank}(A+B) &\leq \text{rank}(A) + \text{rank}(B)
+\end{align*}
+
+For a square matrix $A \in \mathbb{R}^{n \times n}$, the following are equivalent:
+\begin{itemize}[label=$-$]
+    \item $A$ is invertible
+    \item $\text{rank}(A) = n$
+    \item $\det(A) \neq 0$
+    \item The columns of $A$ are linearly independent
+    \item The rows of $A$ are linearly independent
+    \item $Ax = 0$ has only the trivial solution $x = 0$
+\end{itemize}
+
+\subsection{The Definitions of Column Space, Row Space, and Null Space}
+
+These fundamental spaces associated with a matrix $A \in \mathbb{R}^{m \times n}$ provide important insights into its structure.
+
+\subsubsection{Column Space}
+The column space of $A$, denoted $\text{Col}(A)$, is the span of the columns of $A$:
+\begin{equation*}
+\text{Col}(A) = \{\vec{y} \in \mathbb{R}^m : \vec{y} = A\vec{x} \text{ for some } \vec{x} \in \mathbb{R}^n\}
+\end{equation*}
+
+This is also called the range or image of the linear transformation represented by $A$. The dimension of the column space equals the rank of $A$.
+
+\subsubsection{Row Space}
+The row space of $A$, denoted $\text{Row}(A)$, is the span of the rows of $A$:
+\begin{equation*}
+\text{Row}(A) = \text{Col}(A^T)
+\end{equation*}
+
+The dimension of the row space also equals the rank of $A$.
+
+\subsubsection{Null Space}
+The null space (or kernel) of $A$, denoted $\text{Null}(A)$ or $\text{Ker}(A)$, is the set of all vectors that $A$ maps to zero:
+\begin{equation*}
+\text{Null}(A) = \{\vec{x} \in \mathbb{R}^n : A\vec{x} = \vec{0}\}
+\end{equation*}
+
+The dimension of the null space is called the nullity of $A$, denoted $\text{nullity}(A)$.
+
+\subsubsection{Left Null Space}
+The left null space of $A$ is the null space of $A^T$:
+\begin{equation*}
+\text{Null}(A^T) = \{\vec{y} \in \mathbb{R}^m : A^T\vec{y} = \vec{0}\} = \{\vec{y} \in \mathbb{R}^m : \vec{y}^T A = \vec{0}^T\}
+\end{equation*}
+
+The Rank-Nullity Theorem connects these spaces:
+\begin{equation*}
+\text{rank}(A) + \text{nullity}(A) = n
+\end{equation*}
+
+To find a basis for these spaces:
+\begin{itemize}[label=$-$]
+    \item Column space: Take the linearly independent columns of $A$
+    \item Row space: Take the non-zero rows from any row echelon form of $A$
+    \item Null space: Solve the homogeneous system $A\vec{x} = \vec{0}$ and express the general solution in terms of free variables
+\end{itemize}
+\subsection{Examples of Matrix Operations}
+
+In this subsection, we provide detailed examples of Gauß-Jordan elimination and matrix multiplication to illustrate these fundamental matrix operations.
+
+\subsubsection{Example of Matrix Multiplication}
+
+Consider the matrices $A$ and $B$ given by:
+
+\begin{equation*}
+A = 
+\begin{pmatrix}
+2 & 3 & 1 \\
+1 & 0 & -2
+\end{pmatrix} \in \mathbb{R}^{2 \times 3}
+\quad \text{and} \quad
+B = 
+\begin{pmatrix}
+1 & 2 \\
+-1 & 3 \\
+4 & 0
+\end{pmatrix} \in \mathbb{R}^{3 \times 2}
+\end{equation*}
+
+To compute the product $C = AB \in \mathbb{R}^{2 \times 2}$, we calculate each entry $c_{ij}$ using the formula:
+
+\begin{equation*}
+c_{ij} = \sum_{k=1}^{3} a_{ik} b_{kj}
+\end{equation*}
+
+Let's calculate each entry of $C$:
+
+\begin{align*}
+c_{11} &= a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} \\
+&= 2 \cdot 1 + 3 \cdot (-1) + 1 \cdot 4 \\
+&= 2 - 3 + 4 = 3
+\end{align*}
+
+\begin{align*}
+c_{12} &= a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32} \\
+&= 2 \cdot 2 + 3 \cdot 3 + 1 \cdot 0 \\
+&= 4 + 9 + 0 = 13
+\end{align*}
+
+\begin{align*}
+c_{21} &= a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31} \\
+&= 1 \cdot 1 + 0 \cdot (-1) + (-2) \cdot 4 \\
+&= 1 + 0 - 8 = -7
+\end{align*}
+
+\begin{align*}
+c_{22} &= a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32} \\
+&= 1 \cdot 2 + 0 \cdot 3 + (-2) \cdot 0 \\
+&= 2 + 0 + 0 = 2
+\end{align*}
+
+Therefore, the product $C = AB$ is:
+\begin{equation*}
+C = AB = 
+\begin{pmatrix}
+3 & 13 \\
+-7 & 2
+\end{pmatrix}
+\end{equation*}
+
+Let's verify that matrix multiplication is not generally commutative by attempting to compute $BA$:
+
+Since $B$ is a $3 \times 2$ matrix and $A$ is a $2 \times 3$ matrix, the product $BA$ would be a $3 \times 3$ matrix. However, this calculation cannot be performed since the number of columns in $B$ (which is 2) does not equal the number of rows in $A$ (which is 2). Thus, $BA$ is undefined, demonstrating that matrix multiplication is not always commutative.
+
+\subsubsection{Example of Gauß-Jordan Elimination}
+
+We'll use Gauß-Jordan elimination to solve the linear system:
+\begin{align*}
+2x + y - z &= 8 \\
+-3x - y + 2z &= -11 \\
+x + y + z &= 3
+\end{align*}
+
+First, we set up the augmented matrix:
+\begin{equation*}
+\begin{pmatrix}
+2 & 1 & -1 & | & 8 \\
+-3 & -1 & 2 & | & -11 \\
+1 & 1 & 1 & | & 3
+\end{pmatrix}
+\end{equation*}
+
+Now we apply Gauß-Jordan elimination to transform this into reduced row echelon form:
+
+\textbf{Step 1:} We'll choose the first element in the first row as our pivot. Let's first swap row 1 and row 3 to get a simpler pivot:
+
+\begin{equation*}
+\begin{pmatrix}
+1 & 1 & 1 & | & 3 \\
+-3 & -1 & 2 & | & -11 \\
+2 & 1 & -1 & | & 8
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 2:} Eliminate the first elements in rows 2 and 3:
+
+Row 2 + 3 $\times$ Row 1:
+\begin{equation*}
+\begin{pmatrix}
+1 & 1 & 1 & | & 3 \\
+0 & 2 & 5 & | & -2 \\
+2 & 1 & -1 & | & 8
+\end{pmatrix}
+\end{equation*}
+
+Row 3 - 2 $\times$ Row 1:
+\begin{equation*}
+\begin{pmatrix}
+1 & 1 & 1 & | & 3 \\
+0 & 2 & 5 & | & -2 \\
+0 & -1 & -3 & | & 2
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 3:} Make the pivot in row 2 equal to 1 by dividing the entire row by 2:
+\begin{equation*}
+\begin{pmatrix}
+1 & 1 & 1 & | & 3 \\
+0 & 1 & \frac{5}{2} & | & -1 \\
+0 & -1 & -3 & | & 2
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 4:} Eliminate the second element in rows 1 and 3:
+
+Row 1 - Row 2:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & -\frac{3}{2} & | & 4 \\
+0 & 1 & \frac{5}{2} & | & -1 \\
+0 & -1 & -3 & | & 2
+\end{pmatrix}
+\end{equation*}
+
+Row 3 + Row 2:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & -\frac{3}{2} & | & 4 \\
+0 & 1 & \frac{5}{2} & | & -1 \\
+0 & 0 & -\frac{1}{2} & | & 1
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 5:} Make the pivot in row 3 equal to 1 by multiplying the entire row by -2:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & -\frac{3}{2} & | & 4 \\
+0 & 1 & \frac{5}{2} & | & -1 \\
+0 & 0 & 1 & | & -2
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 6:} Eliminate the third element in rows 1 and 2:
+
+Row 1 + $\frac{3}{2} \times$ Row 3:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & 0 & | & 1 \\
+0 & 1 & \frac{5}{2} & | & -1 \\
+0 & 0 & 1 & | & -2
+\end{pmatrix}
+\end{equation*}
+
+Row 2 - $\frac{5}{2} \times$ Row 3:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & 0 & | & 1 \\
+0 & 1 & 0 & | & -1 + 5 = 4 \\
+0 & 0 & 1 & | & -2
+\end{pmatrix}
+\end{equation*}
+
+The matrix is now in reduced row echelon form:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & 0 & | & 1 \\
+0 & 1 & 0 & | & 4 \\
+0 & 0 & 1 & | & -2
+\end{pmatrix}
+\end{equation*}
+
+This corresponds to the system:
+\begin{align*}
+x &= 1 \\
+y &= 4 \\
+z &= -2
+\end{align*}
+
+Therefore, the solution to the original system is $x = 1$, $y = 4$, and $z = -2$.
+
+\subsubsection{Example of Finding the Inverse of a Matrix using Gauß-Jordan Elimination}
+
+Let's find the inverse of the matrix:
+\begin{equation*}
+A = 
+\begin{pmatrix}
+2 & 1 & 1 \\
+3 & 2 & 1 \\
+2 & 1 & 2
+\end{pmatrix}
+\end{equation*}
+
+We form the augmented matrix $[A|I_3]$:
+\begin{equation*}
+\begin{pmatrix}
+2 & 1 & 1 & | & 1 & 0 & 0 \\
+3 & 2 & 1 & | & 0 & 1 & 0 \\
+2 & 1 & 2 & | & 0 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+Now we apply Gauß-Jordan elimination:
+
+\textbf{Step 1:} Make the first pivot equal to 1 by dividing the first row by 2:
+\begin{equation*}
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+3 & 2 & 1 & | & 0 & 1 & 0 \\
+2 & 1 & 2 & | & 0 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 2:} Eliminate the first element in rows 2 and 3:
+
+Row 2 - 3 $\times$ Row 1:
+\begin{equation*}
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
+2 & 1 & 2 & | & 0 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+Row 3 - 2 $\times$ Row 1:
+\begin{equation*}
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
+0 & 0 & 1 & | & -1 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 3:} Make the second pivot equal to 1 by multiplying the second row by 2:
+\begin{equation*}
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+0 & 1 & -1 & | & -3 & 2 & 0 \\
+0 & 0 & 1 & | & -1 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 4:} Eliminate the second element in row 1 and the third element in row 2:
+
+Row 1 - $\frac{1}{2} \times$ Row 2:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & 1 & | & 2 & -1 & 0 \\
+0 & 1 & -1 & | & -3 & 2 & 0 \\
+0 & 0 & 1 & | & -1 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+Row 2 + Row 3:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & 1 & | & 2 & -1 & 0 \\
+0 & 1 & 0 & | & -4 & 2 & 1 \\
+0 & 0 & 1 & | & -1 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+\textbf{Step 5:} Eliminate the third element in row 1:
+
+Row 1 - Row 3:
+\begin{equation*}
+\begin{pmatrix}
+1 & 0 & 0 & | & 3 & -1 & -1 \\
+0 & 1 & 0 & | & -4 & 2 & 1 \\
+0 & 0 & 1 & | & -1 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+The right side of the augmented matrix now gives us $A^{-1}$:
+\begin{equation*}
+A^{-1} = 
+\begin{pmatrix}
+3 & -1 & -1 \\
+-4 & 2 & 1 \\
+-1 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+
+To verify, we can check that $AA^{-1} = I_3$:
+\begin{align*}
+AA^{-1} &= 
+\begin{pmatrix}
+2 & 1 & 1 \\
+3 & 2 & 1 \\
+2 & 1 & 2
+\end{pmatrix}
+\begin{pmatrix}
+3 & -1 & -1 \\
+-4 & 2 & 1 \\
+-1 & 0 & 1
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+2 \cdot 3 + 1 \cdot (-4) + 1 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 1 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 1 \cdot 1 \\
+3 \cdot 3 + 2 \cdot (-4) + 1 \cdot (-1) & 3 \cdot (-1) + 2 \cdot 2 + 1 \cdot 0 & 3 \cdot (-1) + 2 \cdot 1 + 1 \cdot 1 \\
+2 \cdot 3 + 1 \cdot (-4) + 2 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 2 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 2 \cdot 1
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+6 - 4 - 1 & -2 + 2 + 0 & -2 + 1 + 1 \\
+9 - 8 - 1 & -3 + 4 + 0 & -3 + 2 + 1 \\
+6 - 4 - 2 & -2 + 2 + 0 & -2 + 1 + 2
+\end{pmatrix} \\
+&= 
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix} = I_3
+\end{align*}
+
+This confirms that we have correctly found the inverse of matrix $A$.
+
+\subsection{The Determinant of a Matrix}
+The determinant of a square matrix $A \in \mathbb{R}^{n \times n}$, denoted $\det(A)$ or $|A|$, is a scalar value that provides important information about the matrix, including whether it is invertible and the volume scaling factor of the linear transformation represented by $A$.
+The determinant can be computed using various methods, including the Laplace expansion, row reduction, or the Leibniz formula.
+The determinant of a $2 \times 2$ matrix is given by:
+\begin{equation*}
+\det(A) =
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
+= ad - bc
+\end{equation*}
+For a $3 \times 3$ matrix, the determinant can be computed using the rule of Sarrus or the cofactor expansion:
+\begin{equation*}
+\det(A) =
+\begin{vmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{vmatrix}
+= aei + bfg + cdh - ceg - bdi - afh
+\end{equation*}
+The determinant of larger matrices can be computed using cofactor expansion along any row or column:
+\begin{equation*}
+\det(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \det(A_{ij})
+\end{equation*}
+where $A_{ij}$ is the $(n-1) \times (n-1)$ submatrix obtained by deleting the $i$-th row and $j$-th column of $A$.
+The determinant has several important properties:
+\begin{itemize}[label=$-$]
+    \item $\det(A) = 0$ if and only if $A$ is singular (not invertible).
+    \item $\det(AB) = \det(A) \cdot \det(B)$ for any square matrices $A$ and $B$ of the same size.
+    \item $\det(A^T) = \det(A)$.
+    \item If a row (or column) of $A$ is multiplied by a scalar $\alpha$, then $\det(A)$ is multiplied by $\alpha$.
+    \item If two rows (or columns) of $A$ are swapped, then $\det(A)$ changes sign.
+    \[\det(a,b,c) = - \det(b,a,c)\]
+    \item If a row (or column) of $A$ is added to another row (or column), then $\det(A)$ remains unchanged.
+    \item If one of the columns is a linear combination of the others, then $\det(A) = 0$.
+    \item The determinant of the identity matrix $I_n$ is 1.
+    \item The determinant of can splitet into the sum of more determinants:
+    \[
+    \det(a,b,c + d) = \det(a,b,c) + \det(a,b,d)
+    \]
+    \item The determinant of a diagonal matrix is the product of its diagonal entries.
+    \item The determinant of a triangular matrix (upper or lower) is the product of its diagonal entries.
+    \item The determinant of a matrix is a multilinear function of its rows (or columns).
+    \item The determinant is a continuous function of the entries of the matrix.
+    \item The determinant can be computed using the Leibniz formula:
+    \begin{equation*}
+    \det(A) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)}
+    \end{equation*}
+    where $S_n$ is the set of all permutations of $\{1, 2, \ldots, n\}$ and $\text{sgn}(\sigma)$ is the sign of the permutation $\sigma$. 
+\end{itemize}
+
+\subsection*{Laplace's Method (Cofactor Expansion)}
+
+Here's how to find the determinant of a matrix using Laplace's method:
+
+Laplace's method, also known as cofactor expansion, allows you to compute the determinant of a square matrix by expanding along any row or column.
+
+\subsubsection*{Steps:}
+
+1.\textbf{Choose a Row or Column:} Select any row or column of the matrix.  It's often easiest to choose one with many zeros.
+
+\noindent 2.\textbf{For Each Element:} For each element, \(a_{ij}\), in the chosen row or column:
+
+    \textbf{Find the Minor, \(M_{ij}\):} The minor \(M_{ij}\) is the determinant of the submatrix formed by deleting the 
+    \indent \(i\)-th row and the \(j\)-th column of the original matrix.
+
+    \textbf{Find the Cofactor, \(C_{ij}\):} The cofactor \(C_{ij}\) is the minor multiplied by a sign factor:
+        \[
+        C_{ij} = (-1)^{i+j} M_{ij}
+        \]
+        The term  \((-1)^{i+j}\)  gives a checkerboard pattern of signs:
+        \[
+        \begin{pmatrix}
+        + & - & + & - & \cdots \\
+        - & + & - & + & \cdots \\
+        + & - & + & - & \cdots \\
+        - & + & - & + & \cdots \\
+        \vdots & \vdots & \vdots & \vdots & \ddots
+        \end{pmatrix}
+        \]
+
+\noindent 3.\textbf{Calculate the Determinant:} The determinant of the matrix, \(A\), is the sum of the products of the elements in the chosen row or column and their corresponding cofactors.
+
+    \textbf{Expansion along the \(i\)-th row:}
+        \[
+        \det(A) = \sum_{j=1}^{n} a_{ij} C_{ij} = a_{i1}C_{i1} + a_{i2}C_{i2} + \cdots + a_{in}C_{in}
+        \]
+
+    \textbf{Expansion along the \(j\)-th column:}
+        \[
+        \det(A) = \sum_{i=1}^{n} a_{ij} C_{ij} = a_{1j}C_{1j} + a_{2j}C_{2j} + \cdots + a_{nj}C_{nj}
+        \]
+        Both expansions give the same result.
+
+\subsubsection*{Example ($3\times3$ Matrix):}
+
+Let
+\[
+A = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}
+\]
+
+Expanding along the first row:
+
+1.\(a_{11}\):  \(M_{11} = \det \begin{pmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{pmatrix}\),  \(C_{11} = +M_{11}\)
+
+2.\(a_{12}\):  \(M_{12} = \det \begin{pmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{pmatrix}\),  \(C_{12} = -M_{12}\)
+
+3.\(a_{13}\):  \(M_{13} = \det \begin{pmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{pmatrix}\),  \(C_{13} = +M_{13}\)
+
+Therefore,
+\[
+\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}
+\]
+
+
+\subsubsection{Example of Determinant Calculation}
+Let's calculate the determinant of the matrix:
+\begin{equation*}
+A =
+\begin{pmatrix}
+2 & 1 & 3 \\
+1 & 0 & 2 \\
+0 & 1 & 1
+\end{pmatrix}
+\end{equation*}
+Using the rule of Sarrus for $3 \times 3$ matrices:
+\begin{align*}
+\det(A) &= 2 \cdot 0 \cdot 1 + 1 \cdot 2 \cdot 3 + 3 \cdot 1 \cdot 1 - (3 \cdot 0 \cdot 0 + 1 \cdot 2 \cdot 2 + 2 \cdot 1 \cdot 1) \\
+&= 0 + 6 + 3 - (0 + 4 + 2) \\
+&= 9 - 6 = 3
+\end{align*}
+\noindent Thus, the determinant of matrix $A$ is $\det(A) = 3$.
+
+\noindent Now consider the following $4 \times 4$ matrix:
+
+\begin{equation*}
+A = 
+\begin{pmatrix}
+2 & 1 & 3 & 2 \\
+4 & 0 & -1 & 3 \\
+-2 & 3 & 1 & 5 \\
+1 & -1 & 0 & 2
+\end{pmatrix}
+\end{equation*}
+
+For a $4 \times 4$ matrix, we can use Laplace Method along the first row:
+\begin{align*}
+\det(A) &= a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13} + a_{14}C_{14} \\
+&= 2 \cdot \det\begin{pmatrix} 0 & -1 & 3 \\ 3 & 1 & 5 \\ -1 & 0 & 2 \end{pmatrix} 
+- 1 \cdot \det\begin{pmatrix} 4 & -1 & 3 \\ -2 & 1 & 5 \\ 1 & 0 & 2 \end{pmatrix} \\
+&\quad + 3 \cdot \det\begin{pmatrix} 4 & 0 & 3 \\ -2 & 3 & 5 \\ 1 & -1 & 2 \end{pmatrix} 
+- 2 \cdot \det\begin{pmatrix} 4 & 0 & -1 \\ -2 & 3 & 1 \\ 1 & -1 & 0 \end{pmatrix}
+\end{align*}
+
+\[\det(A) = 145\]
+
+\subsection{Linear Maps as matrices and Their Properties}
+
+Let $V$ and $W$ be vector spaces over the field $K$.
+
+\noindent Let $v_1, \dots, v_n \in V$ and $w_1, \dots, w_n \in W$. If $(v_1, \dots, v_n)$ forms a basis of $V$, then there exists a unique $f \in \text{Hom}(V, W)$ with $f(v_i) = w_i$, $1 \leq i \leq n$. The map $f$ has the following properties:
+
+1.  $\text{Im}(f) = \text{span}(f(v_1), \dots, f(v_n))$.
+
+2.  $f$ is injective $\Leftrightarrow$ $w_1, \dots, w_n$ are linearly independent.
+
+\noindent Let $V$ and $W$ be two $K$-vector spaces, $B_V = (v_1, \dots, v_n)$ a basis of $V$ and $B_W = (w_1, \dots, w_m)$ a basis of $W$, and let $f : V \rightarrow W$ be linear. Then there exists a unique matrix $M_{B_V}^{B_W}(f) = (a_{ij}) \in K^{m \times n}$ with
+\[
+f(v_j) = \sum_{i=1}^{m} a_{ij}w_i \quad \forall j = 1, \dots, n
+\]
+
+\subsection{Example of an exercise}
+
+1.  Determination of the kernel
+2.  Determination of the dimension of the kernel
+3.  Determination of the rank (dimension formula)
+4.  Determination of the image
+
+Example 4.51: Given
+\[
+f\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix} =
+\begin{pmatrix}
+2x_1 + x_2 \\
+x_1 - x_2 + x_3 \\
+4x_1 - x_2 + 2x_3
+\end{pmatrix} .
+\]
+
+It should be shown that $f$ is linear, and $\ker(f)$, $\text{Im}(f)$ and their dimensions should be determined.
+
+A direct proof of linearity or by means of Remark 4.12.2 is easily possible. Instead, we give the transformation matrix $A$. The images of the (canonical) basis vectors are
+\[
+f\begin{pmatrix}
+1 \\
+0 \\
+0
+\end{pmatrix} =
+\begin{pmatrix}
+2 \\
+1 \\
+4
+\end{pmatrix} , \quad
+f\begin{pmatrix}
+0 \\
+1 \\
+0
+\end{pmatrix} =
+\begin{pmatrix}
+1 \\
+-1 \\
+-1
+\end{pmatrix} , \quad
+f\begin{pmatrix}
+0 \\
+0 \\
+1
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+1 \\
+2
+\end{pmatrix} .
+\]
+We obtain
+\[
+A =
+\begin{pmatrix}
+2 & 1 & 0 \\
+1 & -1 & 1 \\
+4 & -1 & 2
+\end{pmatrix} .
+\]
+But now it must be shown that indeed $f(x) = Ax \quad \forall x \in \mathbb{R}^3$ holds, by, 
+for example, calculating both $Ax$ and $f(x)$ for a 
+general $x$ and showing equality: Here, with $x = (x_1, x_2, x_3)^T$
+\[
+A \cdot x =
+\begin{pmatrix}
+2 & 1 & 0 \\
+1 & -1 & 1 \\
+4 & -1 & 2
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{pmatrix} =
+\begin{pmatrix}
+2x_1 + x_2 \\
+x_1 - x_2 + x_3 \\
+4x_1 - x_2 + 2x_3
+\end{pmatrix} .
+\]
+This obviously corresponds to $f(x)$, so that by Theorem 4.36, the map $f$ is linear. To determine the kernel, one has to solve the system of linear equations
+\[
+\begin{array}{cccc}
+2 & 1 & 0 & 0 \\
+1 & -1 & 1 & 0 \\
+4 & -1 & 2 & 0
+\end{array}
+\]
+which corresponds to the equation $Ax = f(x) = 0$. Gaussian elimination yields $x_3 = \lambda'$; $x_2 = \frac{2}{3} \cdot \lambda'$; $x_1 = -\frac{1}{3} \cdot \lambda'$, thus with $\lambda = \frac{1}{3} \lambda'$:
+\[
+\ker(f) =
+\left\{
+x = \lambda
+\begin{pmatrix}
+-1 \\
+2 \\
+3
+\end{pmatrix}
+\, \middle| \, \lambda \in \mathbb{R}
+\right\}
+\]
+It follows that $\dim(\ker(f)) = 1$ and because of $\dim(V) = 3$ from the dimension 
+formula $\dim(\text{Im}(f)) = 2$. By a corallary, $\text{Im}(f)$ corresponds to the linear 
+span of the columns of the matrix. One chooses consequently $\dim(\text{Im}(f))$ column vectors, e.g., the first ones, and tests if they are linearly independent. In the concrete case, this is obvious, because the second column is 
+not a multiple of the first. It follows therefore
+\[
+\text{Im}(f) =
+\left\{
+x \, \middle| \, x = \lambda
+\begin{pmatrix}
+2 \\
+1 \\
+4
+\end{pmatrix} + \mu
+\begin{pmatrix}
+1 \\
+-1 \\
+-1
+\end{pmatrix}
+, \quad \lambda, \mu \in \mathbb{R}
+\right\}
+\]
+
+\subsection{Eigenvectors and Eigenvalues}
+
+\paragraph{Eigenvector}
+An eigenvector of a square matrix $A$ is a non-zero vector $\vec{v}$ that, when multiplied by $A$, results in a vector that is a scalar multiple of itself. In other words, the direction of the vector $\mathbf{v}$ remains unchanged (up to scaling) when the linear transformation represented by $A$ is applied to it.
+
+\paragraph{Eigenvalue}
+The scalar multiple, denoted by $\lambda$, is called the eigenvalue associated with the eigenvector $\mathbf{v}$. It represents the factor by which the eigenvector is scaled when transformed by the matrix $A$.
+
+Mathematically, the relationship between a square matrix $A$, an eigenvector $\vec{v}$, and its corresponding eigenvalue $\lambda$ is expressed by the following equation:
+\[
+A\vec{v} = \lambda\vec{v}
+\]
+
+\subsubsection{How to find the Eigenvectors and Eigenvalues}
+
+To find the eigenvalues and eigenvectors of a square matrix $A$, we solve the eigenvalue equation:
+
+\noindent 1.\textbf{Form the characteristic equation:}
+    Rewrite the equation $A\mathbf{v} = \lambda\mathbf{v}$ as $(A - \lambda I)\mathbf{v} = \mathbf{0}$, where $I$ is the identity matrix of the same size as $A$. To have a non-trivial solution for $\mathbf{v}$, the matrix $(A - \lambda I)$ must be singular, which means its determinant must be zero. Thus, we have the characteristic equation:
+    \[
+    \det(A - \lambda I) = 0
+    \]
+
+\noindent 2.\textbf{Solve for the eigenvalues:}
+    Solve the characteristic equation for $\lambda$. The solutions $\lambda_1, \lambda_2, \dots, \lambda_n$ are the eigenvalues of the matrix $A$.
+
+\noindent 3.\textbf{Find the eigenvectors:}
+    For each eigenvalue $\lambda_i$, substitute it back into the equation $(A - \lambda_i I)\mathbf{v} = \mathbf{0}$ and solve for the vector $\mathbf{v}$. The non-zero solutions for $\mathbf{v}$ are the eigenvectors corresponding to the eigenvalue $\lambda_i$.
+
+\subsubsection{How to diagonalize a matrix}
+
+Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. A square matrix $A$ is diagonalizable if there exists an invertible matrix $P$ such that $P^{-1}AP = D$, where $D$ is a diagonal matrix.
+The process of diagonalization is as follows:
+
+\noindent 1.  \textbf{Find the eigenvalues and eigenvectors of $A$.\/}
+
+\noindent 2.  \textbf{Form the matrix $P$:}
+    Create a matrix $P$ whose columns are the linearly independent eigenvectors of $A$.
+
+    \noindent 3.  \textbf{Form the diagonal matrix $D$:}
+    Create a diagonal matrix $D$ whose diagonal entries are the eigenvalues of $A$, corresponding to the order of the eigenvectors in $P$. That is, if the $i$-th column of $P$ is the eigenvector corresponding to the eigenvalue $\lambda_i$, then the $i$-th diagonal entry of $D$ is $\lambda_i$.
+
+    \noindent 4.  \textbf{Verify the diagonalization:}
+    Check that $P^{-1}AP = D$.
+
+A matrix $A$ is diagonalizable if and only if it has $n$ linearly independent eigenvectors, where $n$ is the size of the matrix.
+
+\subsubsection*{Example}
+
+Consider the matrix
+\[
+A = \begin{pmatrix}
+2 & 1 \\
+1 & 2
+\end{pmatrix}
+\]
+
+1.  \textbf{Find the eigenvalues:}
+    The characteristic equation is
+    \[
+    \det(A - \lambda I) = \det \begin{pmatrix}
+    2 - \lambda & 1 \\
+    1 & 2 - \lambda
+    \end{pmatrix} = (2 - \lambda)^2 - 1 = \lambda^2 - 4\lambda + 3 = 0
+    \]
+    Solving for $\lambda$, we get $\lambda_1 = 1$ and $\lambda_2 = 3$.
+
+2.  \textbf{Find the eigenvectors:}
+    For $\lambda_1 = 1$:
+    \[
+    (A - I)\mathbf{v} = \begin{pmatrix}
+    1 & 1 \\
+    1 & 1
+    \end{pmatrix} \begin{pmatrix}
+    x \\
+    y
+    \end{pmatrix} = \begin{pmatrix}
+    0 \\
+    0
+    \end{pmatrix}
+    \]
+    This gives $x + y = 0$, so an eigenvector is $\mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}$.
+
+    For $\lambda_2 = 3$:
+    \[
+    (A - 3I)\mathbf{v} = \begin{pmatrix}
+    -1 & 1 \\
+    1 & -1
+    \end{pmatrix} \begin{pmatrix}
+    x \\
+    y
+    \end{pmatrix} = \begin{pmatrix}
+    0 \\
+    0
+    \end{pmatrix}
+    \]
+    This gives $-x + y = 0$, so an eigenvector is $\mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$.
+
+3.  \textbf{Diagonalize the matrix:}
+    Let $P = \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}$. Then $P^{-1} = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}$.
+    \[
+    P^{-1}AP = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 3 \end{pmatrix} = D
+    \]
+    Thus, $A$ is diagonalized as $P^{-1}AP = D$.
+
+\newpage

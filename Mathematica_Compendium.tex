@@ -14,14 +14,59 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{polynom}
 \usepackage{tikz-cd}
 \usepackage[utf8]{inputenc}
 \usepackage{pst-eucl}
+\usepackage{tabu}
+\usetikzlibrary{calc,intersections,decorations.pathreplacing}
 \geometry{margin=1in}
+
+\makeatletter
+\def\pld@CF@loop#1+{%
+    \ifx\relax#1\else
+        \begingroup
+          \pld@AccuSetX11%
+          \def\pld@frac{{}{}}\let\pld@symbols\@empty\let\pld@vars\@empty
+          \pld@false
+          #1%
+          \let\pld@temp\@empty
+          \pld@AccuIfOne{}{\pld@AccuGet\pld@temp
+                            \edef\pld@temp{\noexpand\pld@R\pld@temp}}%
+           \pld@if \pld@Extend\pld@temp{\expandafter\pld@F\pld@frac}\fi
+           \expandafter\pld@CF@loop@\pld@symbols\relax\@empty
+           \expandafter\pld@CF@loop@\pld@vars\relax\@empty
+           \ifx\@empty\pld@temp
+               \def\pld@temp{\pld@R11}%
+           \fi
+          \global\let\@gtempa\pld@temp
+        \endgroup
+        \ifx\@empty\@gtempa\else
+            \pld@ExtendPoly\pld@tempoly\@gtempa
+        \fi
+        \expandafter\pld@CF@loop
+    \fi}
+\def\pld@CMAddToTempoly{%
+    \pld@AccuGet\pld@temp\edef\pld@temp{\noexpand\pld@R\pld@temp}%
+    \pld@CondenseMonomials\pld@false\pld@symbols
+    \ifx\pld@symbols\@empty \else
+        \pld@ExtendPoly\pld@temp\pld@symbols
+    \fi
+    \ifx\pld@temp\@empty \else
+        \pld@if
+            \expandafter\pld@IfSum\expandafter{\pld@temp}%
+                {\expandafter\def\expandafter\pld@temp\expandafter
+                    {\expandafter\pld@F\expandafter{\pld@temp}{}}}%
+                {}%
+        \fi
+        \pld@ExtendPoly\pld@tempoly\pld@temp
+        \pld@Extend\pld@tempoly{\pld@monom}%
+    \fi}
+\makeatother
 
 \title{Mathematica Compendium}
 \author{Miguel Antonio Méndez Hernández}
-\date{April 2025}
+\date{\today}
 
 \begin{document}
 
@@ -29,19 +74,52 @@
 \thispagestyle{empty}
 \newpage
 \tableofcontents
+
 \newpage
 
-\input{./src/Logic.tex}
-\input{./src/Set_Theory.tex}
-\input{./src/Functions.tex}
-\input{./src/Topology.tex}
-\input{./src/Mathematical_Proofs.tex}
-\input{./src/Means_and_Proofs.tex}
-\input{./src/The_Natural_Numbers.tex}
-\input{./src/Archimedes.tex}
-\input{./src/Arithmetic.tex}
-\input{./src/Complex.tex}
-\input{./src/Geometry.tex}
+\input{src/Introction_and_others/Introduction.tex}
+
+
+\input{src/Sets_and_Logic/Logic.tex}
+\input{src/Sets_and_Logic/Set_Theory.tex}
+\input{src/Sets_and_Logic/Functions.tex}
+\input{src/Sets_and_Logic/Mathematical_Proofs.tex}
+
+
+\input{src/Numbers/The_Natural_Numbers.tex}
+\input{src/Numbers/Archimedes.tex}
+\input{src/Numbers/Arithmetic.tex}
+\input{src/Numbers/Real_Numbers.tex}
+\input{src/Numbers/Complex.tex}
+
+
+\input{src/Topology/Topology.tex}
+
+
+\input{src/Algebra/Fractions_Roots_and_Exponents.tex}
+\input{src/Algebra/Logarithms.tex}
+\input{src/Algebra/Sum_and_Product.tex}
+\input{src/Algebra/Means_and_Proofs.tex}
+\input{src/Algebra/Solving_Polynomials.tex}
+\input{src/Algebra/Fundamental_Theoreme_of_Algebra.tex}
+\input{src/Algebra/Binomial_Coeffient.tex}
+\input{src/Algebra/Rule_of_Three.tex}
+\input{src/Algebra/Factorization.tex}
+\input{src/Algebra/Partial_Fractions.tex}
+\input{src/Algebra/Inequalities.tex}
+
+\input{src/Geometry_and_Trig/Geometry.tex}
+\input{src/Geometry_and_Trig/Trigonometry.tex}
+
+
+\input{src/Linear_Algebra/Linear_Systems_of_Equations.tex}
+\input{src/Linear_Algebra/Analytical_Geometry.tex}
+\input{src/Linear_Algebra/Algebraic_Structures.tex}
+\input{src/Linear_Algebra/Vector_Spaces.tex}
+\input{src/Linear_Algebra/Dot_Product_euclidean_and_unitary_space.tex}
+\input{src/Linear_Algebra/Orthogonality.tex}
+\input{src/Linear_Algebra/Linear_Maps.tex}
+\input{src/Linear_Algebra/Matrices.tex}
 
 
 

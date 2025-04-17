@@ -1,0 +1,138 @@
+\section{Factorization Techniques}
+
+Factorization is the process of writing a mathematical expression as a product of its factors. This is a fundamental technique in algebra used to simplify expressions, solve equations, and analyze functions.
+
+\subsection{Common Factor}
+
+Factor out the greatest common divisor (GCD) of all terms.
+
+\textbf{Example:}
+\[
+6x^2 + 9x = 3x(2x + 3)
+\]
+
+\subsection{Difference of Squares}
+
+A difference of squares follows the identity:
+\[
+a^2 - b^2 = (a - b)(a + b)
+\]
+
+\textbf{Example:}
+\[
+x^2 - 16 = (x - 4)(x + 4)
+\]
+
+\subsection{Sum/Difference of Cubes}
+
+\textbf{Sum of Cubes:}
+\[
+a^3 + b^3 = (a + b)(a^2 - ab + b^2)
+\]
+
+\textbf{Difference of Cubes:}
+\[
+a^3 - b^3 = (a - b)(a^2 + ab + b^2)
+\]
+
+\textbf{Example:}
+\[
+x^3 + 8 = (x + 2)(x^2 - 2x + 4)
+\]
+
+\subsection{Trinomial: General Form \texorpdfstring{$ax^2 + bx + c$}{ax² + bx + c}}
+
+Find two numbers $m$ and $n$ such that:
+\[
+m \cdot n = a \cdot c \quad \text{and} \quad m + n = b
+\]
+
+Then rewrite and factor by grouping.
+
+\textbf{Example:}
+\[
+6x^2 + 11x + 3 = 6x^2 + 9x + 2x + 3 = 3x(2x + 3) + 1(2x + 3) = (3x + 1)(2x + 3)
+\]
+
+\subsection{Trinomial: Special Case \texorpdfstring{$x^2 + bx + c$}{x² + bx + c}}
+
+This is the case where $a = 1$. Find two numbers whose product is $c$ and sum is $b$.
+
+\textbf{Example:}
+\[
+x^2 + 5x + 6 = (x + 2)(x + 3)
+\]
+
+\subsection{Perfect Square Trinomials}
+
+These follow the identities:
+
+\[
+(a + b)^2 = a^2 + 2ab + b^2
+\]
+\[
+(a - b)^2 = a^2 - 2ab + b^2
+\]
+
+\textbf{Example:}
+\[
+x^2 + 6x + 9 = (x + 3)^2
+\]
+
+\subsection{Substitution}
+
+Substitute a more complex expression with a single variable, factor, then back-substitute.
+
+\textbf{Example:}
+\[
+x^4 + 2x^2 + 1 \Rightarrow \text{Let } y = x^2 \Rightarrow y^2 + 2y + 1 = (y + 1)^2 \Rightarrow (x^2 + 1)^2
+\]
+
+\subsection{Rationalization of Radicals}
+
+Rationalizing removes radicals from the denominator.
+
+\textbf{Example (Single Radical):}
+\[
+\frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}
+\]
+
+\textbf{Example (Binomial):}
+\[
+\frac{1}{\sqrt{3} + 1} = \frac{\sqrt{3} - 1}{(\sqrt{3} + 1)(\sqrt{3} - 1)} = \frac{\sqrt{3} - 1}{2}
+\]
+
+\subsection{Ruffini’s Rule (Horner’s Method)}
+
+Used to divide a polynomial by a binomial of the form $(x - r)$.
+
+\textbf{Steps:}
+\begin{itemize}
+    \item Write coefficients of the polynomial.
+    \item Bring down the first coefficient.
+    \item Multiply it by $r$, add to next coefficient.
+    \item Repeat until the remainder.
+\end{itemize}
+
+\textbf{Example:}
+Divide $P(x) = x^3 - 6x^2 + 11x - 6$ by $x - 1$:
+
+\[
+\begin{array}{r|rrrr}
+1 & 1 & -6 & 11 & -6 \\
+  &   & 1 & -5 & 6 \\
+\hline
+  & 1 & -5 & 6 & 0 \\
+\end{array}
+\Rightarrow Q(x) = x^2 - 5x + 6
+\]
+
+\subsection{Long Division of Polynomials}
+
+Use the same algorithm as numerical long division.
+
+\noindent\textbf{Example:}
+
+\bigskip
+\polylongdiv{X^3+X^2+0X-1}{X-1}
+\newpage

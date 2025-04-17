@@ -1,0 +1,108 @@
+\section{The Natural Numbers}
+
+In this section we will take a look at the natural numbers, which are the numbers we use for counting. The natural numbers are defined as follows:
+This not going not be a deep dive just a look at the axioms and the basic construction of the natural numbers. The natural numbers are defined as follows:
+
+We will now define the set of natural numbers, \( \mathbb{N} \), via the following 9 axioms. These axioms are known as the \textbf{Peano Axioms}. The first 4 axioms define equality on the set \( \mathbb{N} \).
+
+\begin{description}
+	\item[Axiom 1:] For every \( x \in \mathbb{N} \), we have \( x = x \).\hfill (Reflexivity)
+	\item[Axiom 2:] For every \( x, y \in \mathbb{N} \), if \( x = y \) then \( y = x \).\hfill (Symmetry)
+	\item[Axiom 3:] For every \( x, y, z \in \mathbb{N} \), if \( x = y \) and \( y = z \) then \( x = z \).\hfill (Transitivity)
+	\item[Axiom 4:] For all \( x, y \), if \( x \in \mathbb{N} \) and \( x = y \), then \( y \in \mathbb{N} \).\hfill (Closure of Equality)
+\end{description}
+
+The remaining 5 axioms define the structure of \( \mathbb{N} \):
+
+\begin{description}
+	\item[Axiom 5:] \( 1 \in \mathbb{N} \)
+	\item[Axiom 6:] If \( x \in \mathbb{N} \), then the successor \( S(x) \in \mathbb{N} \).
+	\item[Axiom 7:] There is no \( x \in \mathbb{N} \) such that \( S(x) = 1 \).
+	\item[Axiom 8:] For all \( x, y \in \mathbb{N} \), if \( S(x) = S(y) \), then \( x = y \).
+	\item[Axiom 9:] Let \( P(x) \) be a statement about the natural number \( x \). If:
+		\begin{itemize}
+			\item \( P(1) \) is true, and
+			\item for all \( n \in \mathbb{N} \), if \( P(n) \) is true, then \( P(S(n)) \) is also true,
+		\end{itemize}
+		then \( P(x) \) is true for all \( x \in \mathbb{N} \).\hfill (Mathematical Induction)
+\end{description}
+
+As shorthand, we denote:
+\[
+	S(1) = 2, \quad S(S(1)) = 3, \quad S(S(S(1))) = 4, \quad \text{and so on.}
+\]
+
+\subsection{Propositions and Proofs}
+
+\subsubsection{Proposition 1: \texorpdfstring{$n \ne m \implies S(n) \ne S(m)$}{n!= m implies S (n)!=S (m)}}
+\textbf{Proof:} We will prove this by contradiction. Assume \( n \ne m \) and \( S(n) = S(m) \). By Axiom 8, we have \( n = m \), which is a contradiction. Therefore, \( S(n) \ne S(m) \).
+
+\subsubsection{Proposition 2: \texorpdfstring{\text{For any} \(n \in \mathbb{N},\ n \ne S(n)\)}{For any n in N, n!= S (n)}}
+\textbf{Proof:} $M = \{n \in mathbb{N} \| n \ne S(n) \}\ $
+By $1 \ne S(n)\ $ for any $n \in \mathbb{N}$, this implies that 1 is part of the set $M$. This implies that $S(n) \ne S(S(n)) \implies S(n) \in M\ $ By Axiom 9 $M = \mathbb{N}$
+
+\subsubsection{Proposition 3: \texorpdfstring{$n \ne 1\ \exists m \in \mathbb{N} \mid n = S(m)$}{n!= 1, exists m in N | n = S (m)}}
+\textbf{Proof:}
+\[
+	M = \{1\} \cup\{n \in \mathbb{N} | \text{Proposition 3 is true}\}
+\]
+We know that 1 ins in the set $M$. An by prosposition 1 we know that
+\[
+	S(n) = S(S(m)) \implies S(n) \in M
+\]
+And by Axiom 9 we know that $M = \mathbb{N}$
+
+\subsection{Definition of Addition in \texorpdfstring{$\mathbb{N}$}{}}
+
+For any pair n,m $\in \mathbb{N}$ there is a unique way to define
+\[
+	Add(n , m) = n + m
+\]
+\begin{enumerate}
+	\item \textbf{Base Case:} $n + 1 = S(n)$
+	\item \textbf{Inductive Step:} $n + S(m) = S(n + m) \iff S(n + m)$
+\end{enumerate}
+
+\noindent\textbf{Uniqueness:} Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let $M = \{ m \in \mathbb{N} | A(n,m) = B(n, m)\}$. Then
+\[
+	A(n,1) = S(n) = B(n,1) \implies 1 \in M
+\]
+\[
+	m \in M \implies A(n, m) = B(n, m) \implies A(n, S(m)) = S(A(n, m)) = S(B(n, m)) = B(n, S(m))
+\]
+\[
+	\implies A(n , S(m)) = B(n, S(m))
+\]
+
+\noindent by Axiom 9 we know that $M = \mathbb{N}$ and A = B
+
+\noindent\textbf{Construction:} For $n = 1$ Define $A(n, m) = S(m)$
+\begin{enumerate}
+	\item $A(n, 1) = S(n) = S(1)$
+	\item $A(n, S(m)) = S(A(n, m)) = S(S(m))$
+\end{enumerate}
+
+\noindent Define: $A(S(n), S(m)) = S(A(n, m))$
+
+\begin{enumerate}
+	\item $A(S(n), 1) = S(A(n, 1)) = S(S(n))$
+	\item $A(S(n), S(m)) = S(A(n, m)) = S(S(m))$
+\end{enumerate}
+
+\noindent\textbf{Commutativity of Addition:}
+The prosposition says $n + m = m + n$ for any $n, m \in \mathbb{N}$. We will prove this by induction on $m$.
+\noindent Fix n and consider $M = \{ n \in \mathbb{N} | A(n, m) = A(n, m)\}$
+
+\noindent Now recall that $A(n, 1) = S(n)$\\
+For $n = 1$:
+\[
+	A(n, 1) = S(1) = A(1, n) \implies 1 \in \mathbb{N}
+\]
+also $A(n , k) = 1 + k \implies 1 + m = S(m) \implies 1 + m = m + 1 \implies 1 \in \mathbb{N}$
+
+\noindent Suppose: $n \in \mathbb{N} \implies n + m = m + n$ or $A(n, m) = A(m, n)$
+
+\noindent By construction $A(S(n), m) = S(A(n, m))$ and by definition
+$A(S(n), m) = S(A(n, m)) = A(m, S(n)) = S(n) + m =  m + S(n) \implies S(n) \in M \implies \text{by induction } M = \mathbb{N}$.
+
+\newpage
