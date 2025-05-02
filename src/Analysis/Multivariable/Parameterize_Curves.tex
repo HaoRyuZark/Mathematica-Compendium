@@ -1,0 +1,41 @@
+\section{Parameterized Curves}
+
+\subsection{Definition}
+A \textbf{parameterized curve} is a mathematical object where each point on the curve is described as a function of one or more parameters, typically denoted by \( t \). Formally, a parameterized curve in \( \mathbb{R}^n \) is a continuous function:
+\[
+\mathbf{r}(t) = (x(t), y(t), z(t), \ldots)
+\]
+where \( t \) ranges over some interval \( I \subseteq \mathbb{R} \), and each component function (e.g., \( x(t) \), \( y(t) \)) is real-valued.
+
+\subsection{Purpose}
+The purpose of parameterizing a curve is to provide a flexible and detailed way of describing geometric objects, particularly when they cannot be easily expressed as a simple function \( y = f(x) \). Parameterizations allow us to:
+\begin{itemize}[label=\(-\)]
+    \item Describe curves that loop, cross themselves, or have vertical segments.
+    \item Compute quantities like arc length, tangent vectors, and curvature.
+    \item Easily model motion along a curve, where \( t \) can represent time.
+\end{itemize}
+
+\subsection{How to Parameterize a Function}
+To parameterize a curve or a function:
+\begin{enumerate}
+    \item Introduce a new parameter \( t \), often representing time or distance along the curve.
+    \item Express the coordinates \( (x, y) \) (or \( (x, y, z) \)) as functions of \( t \).
+    \item Ensure that as \( t \) varies over a chosen interval, the set of points \( (x(t), y(t)) \) traces the desired curve.
+\end{enumerate}
+Sometimes, parameterizations are natural (e.g., circles using trigonometric functions), while in other cases, one must carefully design a suitable parameterization based on the curve's properties.
+
+\subsection{Example}
+
+\textbf{Parameterizing a Circle:}  
+Consider the unit circle defined by the equation:
+\[
+x^2 + y^2 = 1
+\]
+A natural parameterization uses the trigonometric functions sine and cosine:
+\[
+x(t) = \cos(t), \quad y(t) = \sin(t)
+\]
+for \( t \in [0, 2\pi] \).  
+As \( t \) varies from \( 0 \) to \( 2\pi \), the point \( (x(t), y(t)) \) traces out the entire circle exactly once.
+
+\newpage

@@ -1,0 +1,705 @@
+\section{Multivariable Differentiation}
+
+\subsection{Partial Derivatives}
+
+Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) and \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \in U \). Then \( f \) is \textbf{partially differentiable with respect to \( x_i \)} at \( \vec{X}_0 \) if the limit:
+
+\[
+\frac{\partial f}{\partial x_i}(\vec{X}_0) := \lim_{h \to 0} \frac{f(x_1^{(0)}, \dots, x_i^{(0)} + h, \dots, x_n^{(0)}) - f(\vec{X}_0)}{h}
+\]
+
+exists. This derivative measures the rate of change of \( f \) in the direction of the \( x_i \)-axis while keeping all other variables fixed.
+
+A function is \textbf{(partially) differentiable} at \( \vec{X}_0 \) if all partial derivatives \( \frac{\partial f}{\partial x_i}(\vec{X}_0) \) exist.
+
+\subsection{Differentiability}
+We call a function \(f\) differentiable at \((x_0, y_0, \cdots)\) if and only if:
+
+\[
+f(x_0 + \Delta x, y_0 + \Delta y, \dots) - f(x_0, y_0, \dots) = 
+\]
+
+\[
+\frac{\partial f(x_0, y_0, \dots)}{\partial x} \Delta x + \frac{\partial f(x_0, y_0, \dots)}{\partial y} \Delta y + \cdots + E_1(\Delta x) + E_2(\Delta y) + \cdots
+\]
+
+where \(\lim_{\Delta x \to 0}\frac{E_1(\Delta x)}{\Delta x} = \lim_{\Delta y \to 0}\frac{E_2(\Delta y)}{\Delta y} = \cdots = 0\)
+
+\subsection{The Gradient}
+
+Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \). The \textbf{gradient} of \( f \) at \( \vec{X}_0 \) is:
+
+\[
+\nabla f(\vec{X}_0) = \begin{pmatrix}
+\frac{\partial f}{\partial x_1}(\vec{X}_0) \\
+\vdots \\
+\frac{\partial f}{\partial x_n}(\vec{X}_0)
+\end{pmatrix}
+\]
+
+\subsubsection{Derivating the fomula}
+
+Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_n(t)\hat{v_n}\) that \(f(x_1(t), \dots, x_n(t)) = C\)
+
+\[
+\frac{\partial}{\partial t}f(x_1(t), \dots, x_n(t)) = \frac{\partial}{\partial t}C
+\]
+
+\[
+\frac{\partial f}{\partial x_1}\frac{dx_1}{dt} + \cdots + \frac{\partial f}{\partial x_n}\frac{dx_n}{dt} = 0
+\]
+
+\[
+\langle \left(\frac{\partial f}{\partial x_1}\hat{v_1} + \cdots + \frac{\partial f}{\partial x_n}\hat{v_n}\right) , \left( \frac{dx_1}{dt}\hat{v_1} + \cdots + \frac{dx_n}{dt}\hat{v_n}\right)\rangle = 0
+\]
+
+From the formula we see that: \(\nabla f\) is tre normal and \(\frac{d\vec{r}}{dt}\) the tangent of the curve
+
+\(\mathfrak{QED}\)
+\subsubsection{Gradient Operations:}
+\begin{itemize}[label=\(-\)]
+\item \( \nabla(f + g) = \nabla f + \nabla g \)
+\item \( \nabla(\lambda f) = \lambda \nabla f \) for \( \lambda \in \mathbb{R} \)
+\item \( \nabla(fg) = f \nabla g + g \nabla f \)
+\end{itemize}
+
+The \(\frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) points in the direction of steepest increase of \( f \) and
+ \(- \frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) in the lowest increase.
+
+
+
+\subsection{The Tangent Plane}
+
+The tangent plane to a differentiable surface \( z = f(x, y) \) at the point \( (x_0, y_0) \) is the plane that best approximates the surface near that point. It is given by the linearization of \( f \):
+
+\[
+T(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
+\]
+
+\noindent This plane touches the graph of the function at a single point\\
+and shares its slope in both \( x \)- and \( y \)-directions.
+
+\noindent It can also be written in the parameterized form:
+
+\[
+T(x,y) = \begin{pmatrix} x_0\\ y_0\\ z_0\end{pmatrix} + \lambda 
+\begin{pmatrix} 1\\ 0 \\ f_x(x_0,y_0)\end{pmatrix} + \mu \begin{pmatrix}
+0 \\ 1 \\ f_y(x_0, y_0)
+\end{pmatrix}
+\]
+
+\subsubsection{Generalization}
+\[
+T(\vec{X}) = f(\vec{x_0}) + \sum_{i = 1}^{n} f_{x_i}(\vec{x_0})(x_i - x_{i}^0)
+\]
+\[
+ = f(\vec{x_0}) + \langle \nabla f, (\vec{x} - \vec{x_0})\rangle
+\]
+
+\subsubsection*{Example: \( f(x, y) = 4x^2y + xy^2 + 1 \)}
+
+Compute partial derivatives:
+\[
+f_x(x, y) = 8xy + y^2, \quad f_y(x, y) = 4x^2 + 2xy
+\]
+
+At the point \( (1, 1) \):
+\[
+f(1, 1) = 4(1)^2(1) + 1(1)^2 + 1 = 6 \\
+f_x(1, 1) = 8(1)(1) + 1 = 9, \quad f_y(1, 1) = 4(1)^2 + 2(1)(1) = 6
+\]
+
+Thus, the tangent plane is:
+\[
+T(x, y) = 6 + 9(x - 1) + 6(y - 1)
+\Rightarrow T(x, y) = 9x + 6y - 9
+\]
+
+\subsection{The Directional Derivative}
+
+Let \( f : \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{x}_0 \), and let \( \vec{v} \in \mathbb{R}^n \) be a direction vector with \( \|\vec{v}\| = 1 \). The \textbf{directional derivative} of \( f \) at \( \vec{x}_0 \) in the direction \( \vec{v} \) is defined as:
+
+\[
+D_{\vec{v}}f(\vec{x}_0) := \lim_{h \to 0} \frac{f(\vec{x}_0 + h\vec{v}) - f(\vec{x}_0)}{h}
+\]
+
+\textbf{Formula:}
+\[
+D_{\vec{v}}f(\vec{x}_0) = \langle \nabla f(\vec{x}_0), \vec{v} \rangle
+\]
+
+\textbf{Schwarz Inequality (Cauchy–Schwarz):}
+\[
+|\langle \vec{a}, \vec{b} \rangle| \le \|\vec{a}\| \cdot \|\vec{b}\|
+\]
+
+This implies:
+\[
+|D_{\vec{v}}f(\vec{x}_0)| \le \|\nabla f(\vec{x}_0)\|
+\]
+
+\subsubsection*{Derivation of the Directional Derivative Formula}
+
+Let \( f(x, y) \) be differentiable, and let \( \vec{v} = (e_1, e_2) \) be a direction vector. We aim to derive the formula for the directional derivative \( D_{\vec{v}} f(x_0, y_0) \).
+
+We begin by considering the tangent plane to the surface \( z = f(x, y) \) at the point \( (x_0, y_0, f(x_0, y_0)) \). This plane is spanned by the vectors:
+
+\[
+\vec{u}_1 = 
+\begin{pmatrix}
+1 \\
+0 \\
+f_x(x_0, y_0)
+\end{pmatrix}, \quad
+\vec{u}_2 = 
+\begin{pmatrix}
+0 \\
+1 \\
+f_y(x_0, y_0)
+\end{pmatrix}
+\]
+
+These correspond to directional derivatives along the \( x \)- and \( y \)-axes, respectively.
+
+Now consider the direction vector \( \vec{v} = (e_1, e_2) \). Lift it into 3D space (onto the tangent plane) as:
+
+\[
+\vec{u}_3 =
+\begin{pmatrix}
+e_1 \\
+e_2 \\
+D_{\vec{v}}f
+\end{pmatrix}
+\]
+
+Since all three vectors lie in the same plane, the determinant of the matrix formed by these vectors as columns must vanish:
+
+\[
+\det(\vec{u}_1, \vec{u}_2, \vec{u}_3) = 0
+\]
+
+Explicitly:
+\[
+\det
+\begin{pmatrix}
+1 & 0 & e_1 \\
+0 & 1 & e_2 \\
+f_x(x_0, y_0) & f_y(x_0, y_0) & D_{\vec{v}}f
+\end{pmatrix} = 0
+\]
+
+Expanding the determinant gives:
+\[
+f_x(x_0, y_0) \cdot e_2 - f_y(x_0, y_0) \cdot e_1 + D_{\vec{v}}f = 0
+\]
+
+Solving for \( D_{\vec{v}}f \), we obtain:
+\[
+D_{\vec{v}}f = f_x(x_0, y_0) \cdot e_1 + f_y(x_0, y_0) \cdot e_2
+\]
+
+\textbf{Vector notation:}
+\[
+D_{\vec{v}}f = \langle \nabla f(x_0, y_0), \vec{v} \rangle
+\]
+
+This is the desired result: the directional derivative equals the dot product of the gradient of \( f \) and the direction vector \( \vec{v} \).
+
+\subsection{The Total Differential}
+
+If \( f : \mathbb{R}^n \to \mathbb{R} \) is differentiable at \( \vec{x}_0 \), then the \textbf{total differential} of \( f \) at \( \vec{x}_0 \) is the linear approximation:
+
+\[
+df = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\vec{x}_0) \, dx_i = \langle \nabla f(\vec{x}_0), d\vec{x} \rangle
+\]
+
+This expresses how small changes in the input variables propagate into changes in the function value.
+
+
+\subsection{Absolute and Relative Error}
+
+Given an approximate value \( \tilde{x} \) for the exact value \( x \):
+
+\begin{itemize}[label=\(-\)]
+\item \textbf{Absolute error:} \(\Delta z_{\max} \le |f_{x_1}||\Delta x_1| + \cdots + |f_{x_n}||\Delta x_n| \)
+\item \textbf{Relative error:} \( \varepsilon = \frac{\Delta z_{\max}}{z}\) with dependence on the error of the inputs \(\frac{\Delta x}{x}\) etc.
+\end{itemize}
+
+In multivariable contexts, similar formulas apply using vector norms.
+
+\subsubsection*{Absolute Error Example}
+
+We consider the function:
+\[
+z = \sqrt{x^2 + y^2}
+\]
+
+with the measured values:
+\[
+x = 4 \, \text{cm}, \quad y = 3 \, \text{cm}
+\]
+
+Both \( x \) and \( y \) are measured with a precision of \( \Delta x = \Delta y = 0{,}1 \, \text{cm} \). The side length calculated is \( z = 5 \, \text{cm} \). We now determine the maximum possible absolute error in \( z \).
+
+\textbf{Step 1: Partial derivatives of \( z \):}
+\[
+\frac{\partial z}{\partial x} = \frac{x}{\sqrt{x^2 + y^2}}, \quad
+\frac{\partial z}{\partial y} = \frac{y}{\sqrt{x^2 + y^2}}
+\]
+
+\textbf{Step 2: Evaluate at the given point:}
+\[
+\frac{\partial z}{\partial x}(4, 3) = \frac{4}{5}, \quad
+\frac{\partial z}{\partial y}(4, 3) = \frac{3}{5}
+\]
+
+\textbf{Step 3: Use the absolute error formula:}
+\[
+\Delta z \leq \left| \frac{\partial z}{\partial x} \right| \cdot \Delta x + \left| \frac{\partial z}{\partial y} \right| \cdot \Delta y
+\]
+\[
+\Delta z \leq \frac{4}{5} \cdot 0{,}1 + \frac{3}{5} \cdot 0{,}1 = \frac{7}{5} \cdot 0{,}1 = 0{,}14 \, \text{cm}
+\]
+
+\textbf{Conclusion:}  
+The result for \( z \) is accurate to within \( \boxed{0{,}14 \, \text{cm}} \).
+
+
+\subsection{The Chain Rule in \( \mathbb{R}^n \)}
+
+Let \( f : \mathbb{R}^n \to \mathbb{R} \) be differentiable, and suppose \( \vec{x} = \vec{x}(t) \in \mathbb{R}^n \) is a differentiable path. Then:
+
+\[
+\frac{d}{dt} f(\vec{x}(t)) = \langle \nabla f(\vec{x}(t)), \vec{x}'(t) \rangle
+\]
+
+This is the chain rule in vector form.
+
+Or to be more explicit, the small change in \(t\) makes a change in \(x_1, x_2, \cdots\) and the addtion of all this changes
+sum up to the dotal change in the original function.
+
+\[
+\frac{dz}{dt} = \frac{dz}{dx_1}\frac{dx_1}{dt} + \cdots + \frac{dz}{dx_n}\frac{dx_n}{dt}
+\]
+\subsubsection*{Relative Error Example}
+
+The relative error of a function \( z = f(x_1, \dots, x_n) \) is defined by:
+\[
+\varepsilon = \frac{\Delta z_{\max}}{z}
+\]
+
+Assuming \( z \) depends on variables with known relative measurement errors, and the function is differentiable, we estimate:
+
+\[
+\varepsilon = \frac{|\partial f / \partial x_1| \cdot \Delta x_1 + \dots + |\partial f / \partial x_n| \cdot \Delta x_n}{f(x_1, \dots, x_n)}
+\]
+
+or more directly using relative errors:
+
+\[
+\varepsilon \approx \left| \frac{\Delta x_1}{x_1} \right| + \dots + \left| \frac{\Delta x_n}{x_n} \right|
+\]
+
+\textbf{Example: Volume of a Cuboid}
+
+Let:
+\[
+z = f(a, b, c) = a \cdot b \cdot c
+\]
+
+Assume the side lengths \( a = b = c \) are measured with a uniform relative error \( \varepsilon_{\text{in}} = \frac{\Delta a}{a} = \frac{\Delta b}{b} = \frac{\Delta c}{c} = \varepsilon \)
+
+Then the partial derivatives are:
+\[
+\frac{\partial z}{\partial a} = b c, \quad
+\frac{\partial z}{\partial b} = a c, \quad
+\frac{\partial z}{\partial c} = a b
+\]
+
+Applying the relative error formula:
+\[
+\frac{\Delta z_{\max}}{z} \leq \frac{bc \cdot \Delta a + ac \cdot \Delta b + ab \cdot \Delta c}{abc}
+= \frac{\Delta a}{a} + \frac{\Delta b}{b} + \frac{\Delta c}{c} = 3 \varepsilon
+\]
+
+\textbf{Target accuracy:}  
+If the final result \( z \) must be accurate within \( \varepsilon_z = 0{,}01 \) (i.e., 1%), then we must satisfy:
+\[
+3 \varepsilon \leq 0{,}01 \Rightarrow \varepsilon \leq \frac{0{,}01}{3} = \boxed{0{,}0033} \quad \text{(or } 0{,}33\% \text{)}
+\]
+
+\textbf{Conclusion:}  
+Each input measurement must be made with a maximum relative error of \( \boxed{0{,}33\%} \) to ensure the output \( z = abc \) is accurate to within 1%.
+
+\subsubsection*{Implicit Differentiation}
+
+If a function \( F(x, y) = 0 \) defines \( y \) implicitly as a function of \( x \), and \( F \) is differentiable, then:
+
+\[
+\frac{dy}{dx} = -\frac{F_x}{F_y}
+\]
+
+This generalizes to higher dimensions using the total differential and the implicit function theorem.
+
+
+\subsection{Divergence and Curl (Rotation)}
+
+Let \( \vec{F} = (F_1, F_2, F_3) : \mathbb{R}^3 \to \mathbb{R}^3 \) be a vector field.
+
+\textbf{Divergence:}
+\[
+\operatorname{div} \vec{F} = \langle\nabla, \vec{F}\rangle = \frac{\partial F_1}{\partial x_1} + \frac{\partial F_2}{\partial x_2} + \frac{\partial F_3}{\partial x_3}
+\]
+
+\textbf{Curl (Rotation):}
+\[
+\operatorname{rot} \vec{F} = \nabla \times \vec{F} = \begin{pmatrix}
+\frac{\partial F_3}{\partial x_2} - \frac{\partial F_2}{\partial x_3} \\
+\frac{\partial F_1}{\partial x_3} - \frac{\partial F_3}{\partial x_1} \\
+\frac{\partial F_2}{\partial x_1} - \frac{\partial F_1}{\partial x_2}
+\end{pmatrix}
+\]
+
+These describe how the field spreads or rotates around a point.
+
+Where vector field \( \operatorname{div}\vec{f} > 0\) then that region is a called a source.
+and where \(\operatorname{rot}\vec{f} = 0\) is called a whirlpool
+\subsection{Schwarz’s Theorem (Clairaut’s Theorem)}
+
+Let \( f : \mathbb{R}^n \to \mathbb{R} \) be twice continuously differentiable. Then for any \( i \ne j \), the mixed partial derivatives satisfy:
+
+\[
+\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f}{\partial x_j \partial x_i}
+\]
+
+That is, the order of partial differentiation does not matter if all second derivatives are continuous.
+
+\subsection{The Jacobian}
+
+Let \( \vec{f} : \mathbb{R}^n \to \mathbb{R}^m \), where
+\[
+\vec{f}(\vec{x}) = \begin{pmatrix}
+f_1(x_1, \dots, x_n) \\
+\vdots \\
+f_m(x_1, \dots, x_n)
+\end{pmatrix}
+\]
+
+The \textbf{Jacobian matrix} of \( \vec{f} \) is the \( m \times n \) matrix:
+\[
+J_{\vec{f}}(\vec{x}) = \begin{pmatrix}
+\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\
+\vdots & \ddots & \vdots \\
+\frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}
+\end{pmatrix}
+\]
+
+In the case \( n = m \), the \textbf{Jacobian determinant} \( \det J_{\vec{f}}(\vec{x}) \) describes local invertibility and orientation.
+
+
+\subsection{Taylor's Theorem in \( \mathbb{R}^n \)}
+
+Let \( f : \mathbb{R}^n \to \mathbb{R} \) be \( k \)-times continuously differentiable at \( \vec{x}_0 \). Then the Taylor polynomial of degree 2 around \( \vec{x}_0 \) is:
+
+\[
+f(\vec{x}) \approx f(\vec{x}_0) + \langle \nabla f(\vec{x}_0), \vec{x} - \vec{x}_0 \rangle + \frac{1}{2} (\vec{x} - \vec{x}_0)^T H_f(\vec{x}_0)(\vec{x} - \vec{x}_0)
+\]
+
+where \( H_f(\vec{x}_0) \) is the \textbf{Hessian matrix} of second partial derivatives.
+
+
+\subsection{Relative Extrema in \( \mathbb{R}^n \)}
+
+To determine local extrema for \( f : \mathbb{R}^n \to \mathbb{R} \), follow this procedure:
+
+\textbf{Step 1:} Find critical points by solving:
+\[
+\nabla f(\vec{x}) = 0
+\]
+
+\textbf{Step 2:} Compute the Hessian matrix:
+\[
+H_f(\vec{x}) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j} \right)
+\]
+
+\textbf{Step 3:} Analyze the Hessian at critical points:
+\begin{itemize}[label=\(-\)]
+\item If \( H_f \) is positive definite \( \Rightarrow \) local minimum
+\item If \( H_f \) is negative definite \( \Rightarrow \) local maximum
+\item If \( H_f \) has mixed signs (indefinite) \( \Rightarrow \) saddle point
+\end{itemize}
+
+\begin{itemize}[label=\(-\)]
+    \item If \(f_{xx}(x_0, y_0) > 0, d > 0 \implies\) positive definite
+    \item If \(f_{xx}(x_0, y_0) < 0, d > 0 \implies\) negative definite
+    \item If \(d < 0 \implies \) saddle point indefinite
+    \item If \(d = 0 \implies \) Next derivative decides
+\end{itemize}
+
+\subsubsection*{Example: \( f(x, y) = x^2 + y^2 \)}
+
+\[
+\nabla f = \begin{pmatrix} 2x \\ 2y \end{pmatrix} \Rightarrow \text{Critical point at } (0, 0)
+\]
+
+\[
+H_f = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \Rightarrow \text{positive definite}
+\Rightarrow (0, 0) \text{ is a local minimum}
+\]
+
+\subsection{Finding Candidate Points for Zeros While Seeking Relative Extrema in \( \mathbb{R}^n \)}
+
+To find local minima or maxima of a function \( f : \mathbb{R}^n \to \mathbb{R} \), we first identify \textbf{critical points}, which are the candidates for relative extrema. These are the points where the gradient of \( f \) vanishes or does not exist.
+
+\subsubsection{Step 1: Compute the Gradient}
+
+The gradient of \( f \), denoted \( \nabla f \), collects all the first partial derivatives:
+
+\[
+\nabla f(x_1, \dots, x_n) =
+\begin{pmatrix}
+\frac{\partial f}{\partial x_1} \\
+\vdots \\
+\frac{\partial f}{\partial x_n}
+\end{pmatrix}
+\]
+
+\subsubsection{Step 2: Solve the System \( \nabla f = 0 \)}
+
+Find all points \( \vec{x}_0 \in \mathbb{R}^n \) such that:
+
+\[
+\nabla f(\vec{x}_0) = \vec{0}
+\]
+
+This is a nonlinear system of \( n \) equations in \( n \) variables. The solutions \( \vec{x}_0 \) are the \textbf{candidate points for extrema}, and also referred to as the \textbf{stationary points} or \textbf{critical points} of the function.
+\\\\
+You use the following techniques to find the points: 
+\begin{itemize}[label=\(-\)]
+    \item Factorization
+    \item Addtion of rows
+    \item Substitution
+\end{itemize}
+
+there are more but which one to use depends on the kind problem.
+
+\subsubsection{Step 3: Analyze the Nature of the Critical Points}
+
+Once all critical points \( \vec{x}_0 \) satisfying \( \nabla f(\vec{x}_0) = 0 \) are found, analyze each using the \textbf{second derivative test} involving the Hessian matrix \( H_f \):
+
+\[
+H_f(\vec{x}) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j} \right)
+\]
+
+Evaluate \( H_f \) at each critical point and use the eigenvalues or definiteness to classify:
+
+\begin{itemize}[label=\(-\)]
+    \item If \( f_{xx}(x_0, y_0) > 0 \) and \( D > 0 \), then \( f \) has a \textbf{local minimum} at \( (x_0, y_0) \).
+    \item If \( f_{xx}(x_0, y_0) < 0 \) and \( D > 0 \), then \( f \) has a \textbf{local maximum} at \( (x_0, y_0) \).
+    \item If \( D < 0 \), then \( (x_0, y_0) \) is a \textbf{saddle point}.
+    \item If \( D = 0 \), the \textbf{second derivative test is inconclusive}; higher-order derivatives must be considered.
+\end{itemize}
+
+\subsubsection{Note: Non-differentiable Points}
+
+If the function \( f \) is not differentiable at some point \( \vec{x}_0 \), but defined there, this point may also be a candidate for extremum and should be examined separately using limit-based analysis or directional behavior.
+
+\subsection{Lagrange Multipliers}
+
+Let \( f : \mathbb{R}^n \to \mathbb{R} \) be the function to optimize, subject to the constraint \( g(\vec{x}) = 0 \), where \( g : \mathbb{R}^n \to \mathbb{R} \).  
+
+If we look at the constraint intersection with the original function we are going to notice that along the intersection
+there are maxima and minima with their respective tangent lines
+and gradients that are normal to them. We also are going to see that both the gradient of \(f\) and 
+the gradient of \(g\) are just scalar version of each other so: 
+
+This leads to the \textbf{Lagrange system}:
+
+\[
+\begin{cases}
+\nabla f(\vec{x}) = \lambda \nabla g(\vec{x}) \\
+g(\vec{x}) = 0
+\end{cases}
+\]
+
+For more conditions  we can use \(g_1, \dots, g_n\) and \(\lambda_1, \dots, \lambda_n\)
+
+\[
+\begin{cases}
+\nabla f(\vec{x}) = \lambda_1 \nabla g_1(\vec{x}) + \cdots + \lambda_n \nabla g_n(\vec{c}) \\
+g_1(\vec{x}) = 0 \\
+\vdots \\
+g_n(\vec{x}) = 0
+\end{cases}
+\]
+
+
+We can also compact this equations in the \textbf{Lagrangian}
+
+\[
+\mathcal{L}(x,y, \dots, \lambda_1, \dots, \lambda_n) = f(x, y, \dots) + \lambda_1 g_1(x, y, \dots) + \cdots + \lambda_n g_n(x, y, \dots)
+\]
+
+\subsubsection{Determinant method}
+
+Sometimes it a good way to solve a problem of this topic is to:
+
+\begin{enumerate}
+    \item Build the \textbf{Lagrangian}
+    \item \(\nabla L = 0\) and maybe compute the determinant to generate another equation to solve
+    \item Get rid of \(\lambda\) via factorization, substitution, addtion of rows (prefered), etc.
+    \item Solve the system without \(\lambda\)
+\end{enumerate}
+
+\subsubsection{The Bordered Hessian}
+The Bordered Hessian matrix is:
+\[
+H_B =
+\begin{bmatrix}
+0 & \left( \nabla g(x_1, \dots, x_n) \right)^T \\
+\nabla g(x_1, \dots, x_n) & \nabla^2 \mathcal{L}(x, \dots, x_n, \lambda_1, \dots, \lambda_n)
+\end{bmatrix}
+\]
+Where:
+\begin{itemize}
+  \item \( \nabla  g(x_1, \dots, x_n) \) is the \( m \times n \) Jacobian matrix of the constraints.
+  \item \( \nabla^2 \mathcal{L}(x, \dots, x_n, \lambda_1, \dots, \lambda_n) \) is the \( n \times n \) Hessian of the Lagrangian with respect to \( x \).
+\end{itemize}
+
+Or basically a Hessian of the Lagrangian starting with\(lambda_1\).
+
+\subsubsection*{Example: Maximizing \( f(x, y) = xy \) under the constraint \( 2x + 2y = 40 \)}
+
+We want to find the maximum of the function:
+\[
+f(x, y) = xy
+\]
+subject to the constraint:
+\[
+g(x, y) = 2x + 2y - 40 = 0
+\]
+
+The gradient of the constraint is:
+\[
+\nabla g = \begin{pmatrix} 2 \\ 2 \end{pmatrix}
+\]
+Since \( \nabla g \ne 0 \), the rank condition is fulfilled, and no further critical points need to be analyzed.
+
+\textbf{Step 1: Build the Lagrangian}
+\[
+\mathcal{L}(x, y, \lambda) = f(x, y) + \lambda g(x, y) = xy + \lambda (2x + 2y - 40)
+\]
+
+\textbf{Step 2: Compute the necessary conditions}
+\[
+\frac{\partial \mathcal{L}}{\partial x} = y + 2\lambda = 0 \quad \Rightarrow \quad \lambda = -\frac{y}{2}
+\]
+\[
+\frac{\partial \mathcal{L}}{\partial y} = x + 2\lambda = 0 \quad \Rightarrow \quad \lambda = -\frac{x}{2}
+\]
+Equating:
+\[
+-\frac{y}{2} = -\frac{x}{2} \Rightarrow x = y
+\]
+Using the constraint:
+\[
+2x + 2x = 40 \Rightarrow 4x = 40 \Rightarrow x = y = 10
+\]
+
+\textbf{Step 3: Hessian Test with Constraint}
+
+We construct the bordered Hessian:
+\[
+H = \begin{pmatrix}
+0 & 1 & 2 \\
+1 & 0 & 2 \\
+2 & 2 & 0
+\end{pmatrix}
+\]
+
+Since \( \det(H) = 8 > 0 \), and the Lagrange conditions are satisfied, this indicates a \textbf{local maximum}.
+
+\textbf{Conclusion:}
+
+The maximum value is:
+\[
+f(10, 10) = 10 \cdot 10 = \boxed{100}
+\]
+
+
+\subsection{The Tangent Vector}
+
+Let \( \vec{X}(t) \in \mathbb{R}^n \) be a differentiable parametrized curve. The \textbf{tangent vector} at the point \( \vec{X}(t_0) \) is given by:
+
+\[
+\vec{X}'(t_0) = \begin{pmatrix}
+    x_1 ' (t_0) \\ x_2 ' (t_0) \\ \vdots \\ x_n ' (t_0)
+\end{pmatrix}
+\]
+
+This vector points in the direction in which the curve is moving at \( t_0 \), and its magnitude corresponds to the instantaneous speed. The unit tangent vector is:
+
+\[
+\vec{X}(t) = \frac{\vec{X}'(t)}{\|\vec{X}'(t)\|}
+\]
+
+The speed of the vector in \(\mathbb{R}^2\) is given by:
+
+\[
+\vec{X}(t) = \begin{pmatrix}
+    t \\ f(t)
+\end{pmatrix}
+\]
+
+and the tangent is:
+
+\[
+T(t) = \begin{pmatrix}
+    t \\ f(t)
+\end{pmatrix} + \lambda \begin{pmatrix}
+    1 \\ f'(t)
+\end{pmatrix}
+\]
+
+\subsubsection{Derivation of the Tangent Vector Formula}
+
+Given a position vector function \(\vec{r}(t)\), the tangent vector to the curve described by \(\vec{r}(t)\) is obtained by taking the derivative of \(\vec{r}(t)\) with respect to time. This derivative is defined as the following limit:
+
+\[
+\frac{d\vec{r}}{dt} = \lim_{\Delta t \to 0} \frac{\vec{r}(t + \Delta t) - \vec{r}(t)}{\Delta t}
+\]
+
+Assuming that \(\vec{r}(t)\) is expressed in terms of the canonical basis vectors \(\hat{\imath}, \hat{\jmath}, \hat{k}\), we can write:
+
+\[
+\vec{r}(t) = x(t)\hat{\imath} + y(t)\hat{\jmath} + z(t)\hat{k}
+\]
+
+Then, the increment becomes:
+
+\[
+\vec{r}(t + \Delta t) = x(t + \Delta t)\hat{\imath} + y(t + \Delta t)\hat{\jmath} + z(t + \Delta t)\hat{k}
+\]
+
+So the difference in the numerator of the derivative is:
+
+\begin{align*}
+\vec{r}(t + \Delta t) - \vec{r}(t) &= \left[x(t + \Delta t) - x(t)\right]\hat{\imath} \\
+&\quad + \left[y(t + \Delta t) - y(t)\right]\hat{\jmath} \\
+&\quad + \left[z(t + \Delta t) - z(t)\right]\hat{k}
+\end{align*}
+
+Dividing by \(\Delta t\) and taking the limit:
+
+\begin{align*}
+\frac{d\vec{r}}{dt} &= \lim_{\Delta t \to 0} \frac{\vec{r}(t + \Delta t) - \vec{r}(t)}{\Delta t} \\
+&= \left( \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t} \right) \hat{\imath} \\
+&\quad + \left( \lim_{\Delta t \to 0} \frac{y(t + \Delta t) - y(t)}{\Delta t} \right) \hat{\jmath} \\
+&\quad + \left( \lim_{\Delta t \to 0} \frac{z(t + \Delta t) - z(t)}{\Delta t} \right) \hat{k} \\
+&= \frac{dx}{dt} \hat{\imath} + \frac{dy}{dt} \hat{\jmath} + \frac{dz}{dt} \hat{k}
+\end{align*}
+
+This vector \(\frac{d\vec{r}}{dt}\) points in the direction of motion and is tangent to the curve at each point \(t\).
+
+
+\newpage

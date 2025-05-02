@@ -1,0 +1,164 @@
+\section{The Determinant of a Matrix}
+
+The determinant of a square matrix \(A \in \mathbb{R}^{n \times n}\), denoted \(\det(A)\) or \(|A|\), is a scalar value that provides important information about the matrix, including whether it is invertible and the volume scaling factor of the linear transformation represented by \(A\).
+The determinant can be computed using various methods, including the Laplace expansion, row reduction, or the Leibniz formula.
+The determinant of a \(2 \times 2\) matrix is given by:
+\begin{equation*}
+\det(A) =
+\begin{vmatrix}
+a & b \\
+c & d
+\end{vmatrix}
+= ad - bc
+\end{equation*}
+For a \(3 \times 3\) matrix, the determinant can be computed using the rule of Sarrus or the cofactor expansion:
+\begin{equation*}
+\det(A) =
+\begin{vmatrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{vmatrix}
+= aei + bfg + cdh - ceg - bdi - afh
+\end{equation*}
+The determinant of larger matrices can be computed using cofactor expansion along any row or column:
+\begin{equation*}
+\det(A) = \sum_{j=1}^{n} (-1)^{i+j} a_{ij} \det(A_{ij})
+\end{equation*}
+where \(A_{ij}\) is the \((n-1) \times (n-1)\) submatrix obtained by deleting the \(i\)-th row and \(j\)-th column of \(A\).
+The determinant has several important properties:
+\begin{itemize}[label=\(-\)]
+    \item \(\det(A) = 0\) if and only if \(A\) is singular (not invertible).
+    \item \(\det(AB) = \det(A) \cdot \det(B)\) for any square matrices \(A\) and \(B\) of the same size.
+    \item \(\det(A^T) = \det(A)\).
+    \item If a row (or column) of \(A\) is multiplied by a scalar \(\alpha\), then \(\det(A)\) is multiplied by \(\alpha\).
+    \item If two rows (or columns) of \(A\) are swapped, then \(\det(A)\) changes sign.
+    \[\det(a,b,c) = - \det(b,a,c)\]
+    \item If a row (or column) of \(A\) is added to another row (or column), then \(\det(A)\) remains unchanged.
+    \item If one of the columns is a linear combination of the others, then \(\det(A) = 0\).
+    \item The determinant of the identity matrix \(I_n\) is 1.
+    \item The determinant of can splitet into the sum of more determinants:
+    \[
+    \det(a,b,c + d) = \det(a,b,c) + \det(a,b,d)
+    \]
+    \item The determinant of a diagonal matrix is the product of its diagonal entries.
+    \item The determinant of a triangular matrix (upper or lower) is the product of its diagonal entries.
+    \item The determinant of a matrix is a multilinear function of its rows (or columns).
+    \item The determinant is a continuous function of the entries of the matrix.
+    \item The determinant can be computed using the Leibniz formula:
+    \begin{equation*}
+    \det(A) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)}
+    \end{equation*}
+    where \(S_n\) is the set of all permutations of \(\{1, 2, \ldots, n\}\) and \(\text{sgn}(\sigma)\) is the sign of the permutation \(\sigma\). 
+\end{itemize}
+
+\subsection{Laplace's Method (Cofactor Expansion)}
+
+Here's how to find the determinant of a matrix using Laplace's method:
+
+Laplace's method, also known as cofactor expansion, allows you to compute the determinant of a square matrix by expanding along any row or column.
+
+\textbf{Steps:}
+
+1.\textbf{Choose a Row or Column:} Select any row or column of the matrix.  It's often easiest to choose one with many zeros.
+
+ 2.\textbf{For Each Element:} For each element, \(a_{ij}\), in the chosen row or column:
+
+    \textbf{Find the Minor, \(M_{ij}\):} The minor \(M_{ij}\) is the determinant of the submatrix formed by deleting the 
+    \indent \(i\)-th row and the \(j\)-th column of the original matrix.
+
+    \textbf{Find the Cofactor, \(C_{ij}\):} The cofactor \(C_{ij}\) is the minor multiplied by a sign factor:
+        \[
+        C_{ij} = (-1)^{i+j} M_{ij}
+        \]
+        The term  \((-1)^{i+j}\)  gives a checkerboard pattern of signs:
+        \[
+        \begin{pmatrix}
+        + & - & + & - & \cdots \\
+        - & + & - & + & \cdots \\
+        + & - & + & - & \cdots \\
+        - & + & - & + & \cdots \\
+        \vdots & \vdots & \vdots & \vdots & \ddots
+        \end{pmatrix}
+        \]
+
+ 3.\textbf{Calculate the Determinant:} The determinant of the matrix, \(A\), is the sum of the products of the elements in the chosen row or column and their corresponding cofactors.
+
+    \textbf{Expansion along the \(i\)-th row:}
+        \[
+        \det(A) = \sum_{j=1}^{n} a_{ij} C_{ij} = a_{i1}C_{i1} + a_{i2}C_{i2} + \cdots + a_{in}C_{in}
+        \]
+
+    \textbf{Expansion along the \(j\)-th column:}
+        \[
+        \det(A) = \sum_{i=1}^{n} a_{ij} C_{ij} = a_{1j}C_{1j} + a_{2j}C_{2j} + \cdots + a_{nj}C_{nj}
+        \]
+        Both expansions give the same result.
+
+\subsubsection*{Example (\(3\times3\) Matrix):}
+
+Let
+\[
+A = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}
+\]
+
+Expanding along the first row:
+
+1.\(a_{11}\):  \(M_{11} = \det \begin{pmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{pmatrix}\),  \(C_{11} = +M_{11}\)
+
+2.\(a_{12}\):  \(M_{12} = \det \begin{pmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{pmatrix}\),  \(C_{12} = -M_{12}\)
+
+3.\(a_{13}\):  \(M_{13} = \det \begin{pmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{pmatrix}\),  \(C_{13} = +M_{13}\)
+
+Therefore,
+\[
+\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}
+\]
+
+
+\subsubsection{Example of Determinant Calculation}
+Let's calculate the determinant of the matrix:
+\begin{equation*}
+A =
+\begin{pmatrix}
+2 & 1 & 3 \\
+1 & 0 & 2 \\
+0 & 1 & 1
+\end{pmatrix}
+\end{equation*}
+Using the rule of Sarrus for \(3 \times 3\) matrices:
+\begin{align*}
+\det(A) &= 2 \cdot 0 \cdot 1 + 1 \cdot 2 \cdot 3 + 3 \cdot 1 \cdot 1 - (3 \cdot 0 \cdot 0 + 1 \cdot 2 \cdot 2 + 2 \cdot 1 \cdot 1) \\
+&= 0 + 6 + 3 - (0 + 4 + 2) \\
+&= 9 - 6 = 3
+\end{align*}
+ Thus, the determinant of matrix \(A\) is \(\det(A) = 3\).
+
+ Now consider the following \(4 \times 4\) matrix:
+
+\begin{equation*}
+A = 
+\begin{pmatrix}
+2 & 1 & 3 & 2 \\
+4 & 0 & -1 & 3 \\
+-2 & 3 & 1 & 5 \\
+1 & -1 & 0 & 2
+\end{pmatrix}
+\end{equation*}
+
+For a \(4 \times 4\) matrix, we can use Laplace Method along the first row:
+\begin{align*}
+\det(A) &= a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13} + a_{14}C_{14} \\
+&= 2 \cdot \det\begin{pmatrix} 0 & -1 & 3 \\ 3 & 1 & 5 \\ -1 & 0 & 2 \end{pmatrix} 
+- 1 \cdot \det\begin{pmatrix} 4 & -1 & 3 \\ -2 & 1 & 5 \\ 1 & 0 & 2 \end{pmatrix} \\
+&\quad + 3 \cdot \det\begin{pmatrix} 4 & 0 & 3 \\ -2 & 3 & 5 \\ 1 & -1 & 2 \end{pmatrix} 
+- 2 \cdot \det\begin{pmatrix} 4 & 0 & -1 \\ -2 & 3 & 1 \\ 1 & -1 & 0 \end{pmatrix}
+\end{align*}
+
+\[\det(A) = 145\]
+
+\newpage

@@ -1,0 +1,351 @@
+\section{Sequences and Series}
+
+A sequence is an ordered list of numbers, usually defined by a formula or a recurrence relation. It is one of the fundamental objects of study in mathematical analysis.
+
+\subsection{Arithmetic Sequence}
+
+An \textbf{arithmetic sequence} is a sequence where the difference between consecutive terms is constant.
+
+\[
+a_n = a_1 + (n - 1)d
+\]
+
+\begin{itemize}[label=\(-\)]
+\item \(a_1\) is the first term
+\item \(d\) is the common difference \(d = a_{n + 1} - a_{n}\)
+\end{itemize}
+
+\textbf{Example:}
+\[
+a_n = 3 + (n - 1) \cdot 2 = 2n + 1 \quad \text{(Odd numbers)}
+\]
+
+\subsection{Geometric Sequence}
+
+A \textbf{geometric sequence} is a sequence where each term is obtained by multiplying the previous term by a fixed non-zero constant.
+
+\[
+a_n = a_1 \cdot r^{n-1}
+\]
+
+\begin{itemize}[label=\(-\)]
+\item \(a_1\) is the first term
+\item \(r\) is the common ratio \(r = \frac{a_{n + 1}}{a_n}\)
+\end{itemize}
+
+\textbf{Example:}
+\[
+a_n = 2 \cdot 3^{n-1} = 2, 6, 18, 54, \dots
+\]
+
+\subsection{Function Squence}
+
+A \textbf{function sequence} is sequence composed of functions and its noted like:
+
+\[
+(f)_n \text{with } x^t := \{ f: D\to R | \ f \text{ is a funtion}\}
+\]
+
+\subsection{Convergence}
+
+A sequence \((a_n)\) \textbf{converges} to a limit \(L\) if for every \(\varepsilon > 0\), there exists an integer \(n_0\) such that for all \(n \ge n_0\):
+
+\[
+|\forall \varepsilon > 0\ \exists n \in \mathbb{N}: \forall i \ge n\ |a_i - L| < \varepsilon
+\]
+
+In this case, we write:
+\[
+\lim_{n \to \infty} a_n = L
+\]
+
+\subsection{Cauchy Sequence}
+
+A sequence \((a_n)\) is a \textbf{Cauchy sequence} if for every \(\varepsilon > 0\), there exists an integer \(n_0\) such that for all \(n, m \ge n_0\):
+
+\[
+\forall \varepsilon > 0\ \exists n,m \in \mathbb{N}: |a_n - a_m| < \varepsilon\ \text{with } n < m
+\]
+
+Every convergent sequence is a Cauchy sequence. In complete metric spaces (like \(\mathbb{R}\)), the converse also holds.
+
+\subsubsection*{Example: Convergence Exercise}
+
+Let \(a_i = \frac{1}{i}\) and \(\varepsilon = 0.01\). We want to find \(i_0\) such that:
+
+\[
+\left|\frac{1}{n} - 0\right| < \varepsilon \implies \frac{1}{i} \le \frac{1}{n} < \varepsilon \rightarrow \frac{1}{\varepsilon} < n
+\]
+\[
+\Rightarrow \frac{1}{i} < 0.01 \Rightarrow i > 100
+\Rightarrow i_0 = 101
+\]
+
+\subsection{Definition of \texorpdfstring{\(\varepsilon\)}{ε}-Neighborhood}
+
+The \textbf{\(\varepsilon\)-neighborhood} of a point \(a \in \mathbb{R}\) is the set:
+\[
+B_\varepsilon(a) = \{x \in \mathbb{R} \mid |x - a| < \varepsilon\}
+\]
+This is the open interval \((a - \varepsilon, a + \varepsilon)\).
+
+\subsection{Supremum, Infimum, Maximum and Minimum}
+
+\begin{itemize}[label=\(-\)]
+\item The \textbf{supremum} of a set \(A \subseteq \mathbb{R}\) is the least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
+\item The \textbf{infimum} of a set \(A\) is the greatest lower bound: the largest number \(t\) such that \(a \ge t\) for all \(a \in A\).
+\item The \textbf{maximum} is the largest element in the set, if it exists.
+\item The \textbf{minimum} is the smallest element in the set, if it exists.
+\end{itemize}
+
+\textbf{Example:} For \(A = (0,1)\):
+\begin{itemize}[label=\(-\)]
+\item \(\sup A = 1\) (not in \(A\))
+\item \(\inf A = 0\) (not in \(A\))
+\item \(\max A\) and \(\min A\) do not exist
+\end{itemize}
+
+\subsection{Limit and Accumulation Point}
+
+\begin{itemize}[label=\(-\)]
+\item A \textbf{limit} of a sequence \((a_n)\) is the value the terms get arbitrarily close to as \(n \to \infty\).
+\item An \textbf{accumulation point} (or limit point) of a set \(A\) is a point \(x\) such that every neighborhood of \(x\) contains infinitely many points of \(A\).
+\end{itemize}
+
+\textbf{Example:} The sequence \(a_n = (-1)^n + \frac{1}{n}\) has two accumulation points: \(1\) and \(-1\).
+
+\subsection{Monotonicity by Difference and Quotient}
+
+\textbf{Monotonicity by Difference:}
+\begin{itemize}[label=\(-\)]
+\item If \(a_{n+1} - a_n \ge 0\) for all \(n\), then the sequence is non-decreasing.
+\item If \(a_{n+1} - a_n \le 0\), it is non-increasing.
+\end{itemize}
+
+\textbf{Monotonicity by Quotient:} (Typically for positive sequences)
+\begin{itemize}[label=\(-\)]
+\item If \(\frac{a_{n+1}}{a_n} \ge 1\), then the sequence is non-decreasing.
+\item If \(\frac{a_{n+1}}{a_n} \le 1\), it is non-increasing.
+\end{itemize}
+
+\subsection{Divergence (Definition)}
+
+A sequence \textbf{diverges} if it does not converge. That is, there is no real number \(L\) such that:
+
+\[
+\lim_{n \to \infty} a_n = L
+\]
+
+\begin{itemize}[label=\(-\)]
+\item A sequence can diverge to \(\infty\) or \(-\infty\)
+\item A sequence can also oscillate without approaching any limit
+\end{itemize}
+
+\textbf{Example:} The sequence \(a_n = (-1)^n\) diverges since it oscillates between \(1\) and \(-1\).
+
+
+\subsection{Subsequences and Their Properties}
+
+A \textbf{subsequence} of a sequence \((a_n)\) is a sequence \((a_{n_k})\) where \((n_k)\) is a strictly increasing sequence of natural numbers.
+
+\textbf{Properties:}
+\begin{itemize}[label=\(-\)]
+\item Every subsequence of a convergent sequence converges to the same limit.
+\item A sequence converges if and only if all of its subsequences converge to the same limit.
+\item A bounded sequence always has at least one convergent subsequence (Bolzano-Weierstraß theorem).
+\end{itemize}
+
+\subsubsection{Serie}
+
+A \textbf{series} is the sum of the terms of a sequence:
+\[
+\sum_{n=1}^{\infty} a_n
+\]
+We define the partial sums \(S_n = \sum_{k=1}^n a_k\). If the sequence \((S_n)\) converges to a limit \(S\), then the series is said to converge:
+\[
+\sum_{n=1}^{\infty} a_n = S
+\]
+
+\subsection{Power Series}
+
+A \textbf{power series} is a series of the form:
+\[
+\sum_{n=0}^{\infty} a_n (x - x_0)^n
+\]
+where \(x_0\) is the center of the expansion. Power series converge within a radius \(R\):
+\[
+R = \frac{1}{\limsup\limits_{n \to \infty} \sqrt[n]{|a_n|}}
+\]
+
+\subsection{Pointwise Convergence}
+
+A sequence of functions \((f_n)\) converges \textbf{pointwise} to a function \(f\) on a set \(A\) if:
+\[
+\forall x \in A, \quad \lim_{n \to \infty} f_n(x) = f(x)
+\]
+
+Pointwise convergence does not preserve properties like continuity or differentiability.
+
+\subsection{Uniform Convergence}
+
+A sequence of functions \((f_n)\) converges \textbf{uniformly} to \(f\) on \(A\) if:
+\[
+\forall \varepsilon > 0, \exists n_0 \in \mathbb{N} \text{ such that } \forall n \ge n_0, \forall x \in A, \quad |f_n(x) - f(x)| < \varepsilon
+\]
+
+\textbf{Key Property:} Uniform convergence preserves continuity, integration, and differentiation under certain conditions.
+
+\subsection{Cauchy Criterion for Series (Cauchy-Kriterium)}
+
+A series \(\sum a_n\) converges if and only if for every \(\varepsilon > 0\) there exists \(n_0\) such that:
+\[
+\left| \sum_{k = m}^{n} a_k \right| < \varepsilon \quad \forall n > m \ge n_0
+\]
+
+\subsection{Interval Nesting and the Interval Nesting Theoreme}
+
+Let \((I_n)\) be a sequence of closed intervals:
+\[
+I_n = [a_n, b_n] \quad \text{with } I_{n+1} \subseteq I_n, \text{ and } \lim_{n \to \infty} (b_n - a_n) = 0
+\]
+Then, the intersection contains exactly one point:
+\[
+\bigcap_{n=1}^{\infty} I_n = \{x\}
+\]
+
+This is useful in proving the existence of limits, roots, and fixed points.
+
+\subsection{Weierstraß Approximation Theorem}
+
+The \textbf{Weierstraß Approximation Theorem} states:
+
+\begin{quote}
+Every continuous function \(f: [a, b] \rightarrow \mathbb{R}\) can be uniformly approximated by a polynomial \(P(x)\), i.e., for every \(\varepsilon > 0\) there exists a polynomial \(P(x)\) such that:
+\[
+|f(x) - P(x)| < \varepsilon \quad \forall x \in [a, b]
+\]
+\end{quote}
+
+This theorem is foundational in numerical analysis and approximation theory.
+
+\subsection{Zero Sequence}
+
+A sequence \((a_n)\) is called a \textbf{null sequence} or \textbf{zero sequence} if:
+\[
+\lim_{n \to \infty} a_n = 0
+\]
+Every zero sequence is convergent (to 0), and plays an essential role in convergence proofs and epsilon-delta arguments.
+
+\subsection{The Monotony Principle}
+
+\textbf{Theorem:} Every bounded monotonic sequence converges.
+
+\begin{itemize}[label=\(-\)]
+\item If \((a_n)\) is non-decreasing and bounded above, then \(\lim a_n\) exists and equals \(\sup \{a_n\}\).
+\item If \((a_n)\) is non-increasing and bounded below, then \(\lim a_n = \inf \{a_n\}\).
+\end{itemize}
+
+To prove the converge of a sequence via this principle we follow the next steps
+
+\begin{enumerate}
+    \item Prove the Monotonicity by induction
+    \item Calulate the limit
+    \item Prove the boundness via induction
+    \item Write the conclusion
+\end{enumerate}
+
+\textbf{Example: } \(a_{n + 1} = \sqrt{2a_n - 3} + 1\)
+
+Lets assume that the series is decreasing or \(a_{n + 1} < a_{n}\)
+
+\begin{align*}
+    a_{n + 2} &< a{n + 1} \\
+    \sqrt{2a_{n + 1} -3} + 1 &< \sqrt{2a_{n} - 3} + 1 \\
+    \sqrt{2a_{n + 1} -3} &< \sqrt{2a_{n} - 3} \\
+    2a_{n + 1} - 3 &< 2a_{n} - 3 \\
+    a_{n + 1} &< a_{n}
+\end{align*}
+\qed
+
+Now lets calculated the limit
+\[
+\lim_{n \rightarrow \infty} a_{n + 1} = \lim_{n \rightarrow \infty} \sqrt{2a_n - 3} + 1
+\]
+
+Because of the recursion we know that both \(a_{n + 1}\) and \(a_n\) have the same same value and we call it \(a\).
+\[
+a = \sqrt{2a -3} +1
+\]
+\[
+a = 2
+\]
+
+We only have to prove the boundness now:
+
+For \(n = 0\) we have \(a_1 = 4 > 2\) then lets assume that the \(a\) is never going bellow 2.
+
+\[
+a_{n + 1} = \sqrt{2a_n - 3} + 1 \ge \sqrt{2(2) - 3} + 1 = 2
+\]
+
+By setting \(a_n = 2\) we get the limit againg
+
+\(\mathfrak{QED}\)
+
+\subsection{Operations on Sequences}
+
+\subsubsection{Sum of Sequences}
+The sum of two sequences \((a_n)\) and \((b_n)\) is a new sequence \((c_n)\) where each term \(c_n\) is the sum of the corresponding terms of \((a_n)\) and \((b_n)\):
+\[
+c_n = a_n + b_n, \quad \forall n \in \mathbb{N}.
+\]
+If \(\lim_{n \to \infty} a_n = A\) and \(\lim_{n \to \infty} b_n = B\), then the limit of the sum sequence is:
+\[
+\lim_{n \to \infty} (a_n + b_n) = A + B.
+\]
+
+\subsubsection{Multiplication of Sequences}
+The product of two sequences \((a_n)\) and \((b_n)\) is a new sequence \((d_n)\) where each term \(d_n\) is the product of the corresponding terms of \((a_n)\) and \((b_n)\):
+\[
+d_n = a_n \cdot b_n, \quad \forall n \in \mathbb{N}.
+\]
+If \(\lim_{n \to \infty} a_n = A\) and \(\lim_{n \to \infty} b_n = B\), then the limit of the product sequence is:
+\[
+\lim_{n \to \infty} (a_n \cdot b_n) = A \cdot B.
+\]
+
+\subsubsection{Absolute Value of a Sequence}
+The absolute value of a sequence \((a_n)\) is a new sequence \((e_n)\) where each term \(e_n\) is the absolute value of the corresponding term of \((a_n)\):
+\[
+e_n = |a_n|, \quad \forall n \in \mathbb{N}.
+\]
+If \(\lim_{n \to \infty} a_n = A\), then the limit of the absolute value sequence is:
+\[
+\lim_{n \to \infty} |a_n| = |A|.
+\]
+
+\subsubsection{Conjugate of a Complex Sequence}
+If \((a_n)\) is a sequence of complex numbers, where \(a_n = x_n + i y_n\) with \(x_n, y_n \in \mathbb{R}\), then the conjugate of \((a_n)\) is a new sequence \((\overline{a_n})\) where each term \(\overline{a_n}\) is the complex conjugate of \(a_n\):
+\[
+\overline{a_n} = x_n - i y_n, \quad \forall n \in \mathbb{N}.
+\]
+If \(\lim_{n \to \infty} a_n = A = X + i Y\), then the limit of the conjugate sequence is:
+\[
+\lim_{n \to \infty} \overline{a_n} = \overline{A} = X - i Y.
+\]
+
+\subsubsection{Complex Limit (Real and Imaginary Parts)}
+For a sequence of complex numbers \((a_n)\) where \(a_n = x_n + i y_n\), the limit of the sequence \(\lim_{n \to \infty} a_n = A = X + i Y\) exists if and only if the limits of the real part sequence \((x_n)\) and the imaginary part sequence \((y_n)\) exist individually:
+\[
+\lim_{n \to \infty} a_n = A \iff \left( \lim_{n \to \infty} \text{Re}(a_n) = \text{Re}(A) = X \quad \text{and} \quad \lim_{n \to \infty} \text{Im}(a_n) = \text{Im}(A) = Y \right).
+\]
+This means we can analyze the convergence of a complex sequence by examining the convergence of its real and imaginary parts separately.
+
+\subsubsection{Asymptotic Equality}
+Two sequences \((a_n)_{n \in \mathbb{N}}\) and \((b_n)_{n \in \mathbb{N}}\) are said to be asymptotically equal, denoted by \(a_n \sim b_n\), if
+\[
+\lim_{n \to \infty} \frac{a_n}{b_n} = 1,
+\]
+provided that \(b_n \neq 0\) for all sufficiently large \(n\). Asymptotic equality implies that the sequences behave similarly as \(n\) approaches infinity.
+
+\newpage

@@ -1,0 +1,54 @@
+\section{The Basel Problem}
+
+The Basel Problem seeks to determine the exact value of the infinite series:
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+\]
+
+Leonhard Euler famously solved this in 1735, showing that:
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\]
+
+\subsection{Euler's Proof via the Function \( \frac{\sin(x)}{x} \)}
+
+Euler's approach involves expressing \( \frac{\sin(x)}{x} \) both as a power series and as an infinite product, then equating the coefficients of like powers of \( x \).
+
+\subsubsection*{Step 1: Power Series Expansion}
+
+The Taylor series expansion of \( \frac{\sin(x)}{x} \) around \( x = 0 \) is:
+\[
+\frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots
+\]
+
+\subsubsection*{Step 2: Infinite Product Representation}
+
+The sine function has zeros at \( x = n\pi \) for all non-zero integers \( n \). Euler utilized this to express \( \frac{\sin(x)}{x} \) as an infinite product over its zeros:
+\[
+\frac{\sin(x)}{x} = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{n^2\pi^2}\right)
+\]
+
+\subsubsection*{Step 3: Equating Coefficients}
+
+Expanding the infinite product, the coefficient of \( x^2 \) is:
+\[
+-\sum_{n=1}^{\infty} \frac{1}{n^2\pi^2}
+\]
+
+From the power series, the coefficient of \( x^2 \) is \( -\frac{1}{6} \). Equating these coefficients:
+\[
+-\sum_{n=1}^{\infty} \frac{1}{n^2\pi^2} = -\frac{1}{6}
+\]
+
+Multiplying both sides by \( -\pi^2 \) yields:
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\]
+
+\subsection{Key Observations}
+
+\begin{itemize}[label=\(-\)]
+    \item Euler's method ingeniously connects the zeros of \( \sin(x) \) with the sum of reciprocal squares.
+    \item This approach laid foundational work for the development of complex analysis and the theory of entire functions.
+    \item The infinite product representation of sine was later rigorously justified by Weierstrass's factorization theorem.
+\end{itemize}

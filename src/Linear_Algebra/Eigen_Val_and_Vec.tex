@@ -1,0 +1,106 @@
+\section{Eigenvectors and Eigenvalues}
+
+\paragraph{Eigenvector}
+An eigenvector of a square matrix \(A\) is a non-zero vector \(\vec{v}\) that, when multiplied by \(A\), results in a vector that is a scalar multiple of itself. In other words, the direction of the vector \(\mathbf{v}\) remains unchanged (up to scaling) when the linear transformation represented by \(A\) is applied to it.
+
+\paragraph{Eigenvalue}
+The scalar multiple, denoted by \(\lambda\), is called the eigenvalue associated with the eigenvector \(\mathbf{v}\). It represents the factor by which the eigenvector is scaled when transformed by the matrix \(A\).
+
+Mathematically, the relationship between a square matrix \(A\), an eigenvector \(\vec{v}\), and its corresponding eigenvalue \(\lambda\) is expressed by the following equation:
+\[
+A\vec{v} = \lambda\vec{v}
+\]
+
+\subsection{How to find the Eigenvectors and Eigenvalues}
+
+To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the eigenvalue equation:
+
+ 1.\textbf{Form the characteristic equation:}
+    Rewrite the equation \(A\mathbf{v} = \lambda\mathbf{v}\) as \((A - \lambda I)\mathbf{v} = \mathbf{0}\), where \(I\) is the identity matrix of the same size as \(A\). To have a non-trivial solution for \(\mathbf{v}\), the matrix \((A - \lambda I)\) must be singular, which means its determinant must be zero. Thus, we have the characteristic equation:
+    \[
+    \det(A - \lambda I) = 0
+    \]
+
+ 2.\textbf{Solve for the eigenvalues:}
+    Solve the characteristic equation for \(\lambda\). The solutions \(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of the matrix \(A\).
+
+ 3.\textbf{Find the eigenvectors:}
+    For each eigenvalue \(\lambda_i\), substitute it back into the equation \((A - \lambda_i I)\mathbf{v} = \mathbf{0}\) and solve for the vector \(\mathbf{v}\). The non-zero solutions for \(\mathbf{v}\) are the eigenvectors corresponding to the eigenvalue \(\lambda_i\).
+
+\subsection{How to diagonalize a matrix}
+
+Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(P\) such that \(P^{-1}AP = D\), where \(D\) is a diagonal matrix.
+The process of diagonalization is as follows:
+
+ 1.  \textbf{Find the eigenvalues and eigenvectors of \(A\).\/}
+
+ 2.  \textbf{Form the matrix \(P\):}
+    Create a matrix \(P\) whose columns are the linearly independent eigenvectors of \(A\).
+
+     3.  \textbf{Form the diagonal matrix \(D\):}
+    Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
+
+     4.  \textbf{Verify the diagonalization:}
+    Check that \(P^{-1}AP = D\).
+
+A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independent eigenvectors, where \(n\) is the size of the matrix.
+
+\subsubsection*{Example}
+
+Consider the matrix
+\[
+A = \begin{pmatrix}
+2 & 1 \\
+1 & 2
+\end{pmatrix}
+\]
+
+1.  \textbf{Find the eigenvalues:}
+    The characteristic equation is
+    \[
+    \det(A - \lambda I) = \det \begin{pmatrix}
+    2 - \lambda & 1 \\
+    1 & 2 - \lambda
+    \end{pmatrix} = (2 - \lambda)^2 - 1 = \lambda^2 - 4\lambda + 3 = 0
+    \]
+    Solving for \(\lambda\), we get \(\lambda_1 = 1\) and \(\lambda_2 = 3\).
+
+2.  \textbf{Find the eigenvectors:}
+    For \(\lambda_1 = 1\):
+    \[
+    (A - I)\mathbf{v} = \begin{pmatrix}
+    1 & 1 \\
+    1 & 1
+    \end{pmatrix} \begin{pmatrix}
+    x \\
+    y
+    \end{pmatrix} = \begin{pmatrix}
+    0 \\
+    0
+    \end{pmatrix}
+    \]
+    This gives \(x + y = 0\), so an eigenvector is \(\mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}\).
+
+    For \(\lambda_2 = 3\):
+    \[
+    (A - 3I)\mathbf{v} = \begin{pmatrix}
+    -1 & 1 \\
+    1 & -1
+    \end{pmatrix} \begin{pmatrix}
+    x \\
+    y
+    \end{pmatrix} = \begin{pmatrix}
+    0 \\
+    0
+    \end{pmatrix}
+    \]
+    This gives \(-x + y = 0\), so an eigenvector is \(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\).
+
+3.  \textbf{Diagonalize the matrix:}
+    Let \(P = \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}\). Then \(P^{-1} = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}\).
+    \[
+    P^{-1}AP = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 3 \end{pmatrix} = D
+    \]
+    Thus, \(A\) is diagonalized as \(P^{-1}AP = D\).
+
+\newpage

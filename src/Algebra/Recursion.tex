@@ -1,0 +1,80 @@
+\section{Recursion}
+
+Recursion is term used to refer to a 'thing' define in terms
+of itself. An example the factorial \(n! = (n - 1)!\) with \(0! = 1\) being the
+base case where the recursion stops.
+
+\subsection{From Recursive to Closed Form}
+
+A sequence defined recursively can often be rewritten in an explicit or closed form.
+
+\begin{itemize}[label=\(-\)]
+    \item A \textbf{recursive form} defines \( a_n \) based on previous terms (e.g., \( a_n = a_{n-1} + 2 \)).
+    \item A \textbf{closed form} expresses \( a_n \) directly in terms of \( n \), with no reference to previous terms.
+\end{itemize}
+
+\textbf{General Method (when linear):}
+\begin{enumerate}
+    \item Calculate some terms and watch the difference or quotient between them
+    maybe the difference is clear and you can build a geom. or arith. sequence directly.
+    \item Identify the type (e.g., linear, homogeneous, constant coefficients).
+    \item Solve the characteristic equation (if linear).
+    \item Use initial conditions to determine constants.
+\end{enumerate}
+
+\subsection{Linear Recursion}
+
+A linear recurrence has the form:
+
+\begin{align*}
+a_n & = \lambda a_{n -1} + c \\
+a_1 & = \lambda a_0 + c \implies a_2 = \lambda (\lambda a_0 + c) + c \\
+\implies a_n & = \lambda^n a_0 + (1 + \lambda + \lambda² + \cdots + \lambda^{n - 1})c
+\end{align*}
+
+Therefore
+
+\[a_n = \lambda^n a_0 + \frac{\lambda^n - 1}{\lambda - 1}c\]
+
+\subsection{Recursive Inequalities}
+
+A \textbf{recursive inequality} bounds a sequence rather than defines it exactly.
+
+\textbf{Example:} Suppose
+
+\[
+a_{n+1} \le \frac{1}{2} a_n + 3
+\]
+
+To analyze:
+\begin{itemize}[label=\(-\)]
+    \item Guess a bound (e.g., show \( a_n \le M \) for all \( n \))
+    \item Use induction or iteration to justify convergence or boundedness
+    \item Compare with a simpler sequence (e.g., geometric series)
+\end{itemize}
+
+These techniques are common in analysis, approximation, and numerical algorithms.
+
+\subsection{Fibonacci Numbers and Closed Form}
+
+The Fibonacci sequence is defined recursively:
+\[
+F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}
+\]
+
+The characteristic equation is:
+\[
+x^2 - x - 1 = 0 \Rightarrow x = \varphi = \frac{1 + \sqrt{5}}{2}, \quad \psi = \frac{1 - \sqrt{5}}{2}
+\]
+
+The closed form (Binet’s Formula) is:
+\[
+F_n = \frac{1}{\sqrt{5}} \left( \varphi^n - \psi^n \right)
+\]
+
+\begin{itemize}[label=\(-\)]
+    \item \( \varphi \approx 1.618 \) is the golden ratio
+    \item This formula demonstrates exponential growth of \( F_n \)
+\end{itemize}
+
+\newpage

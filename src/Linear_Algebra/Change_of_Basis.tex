@@ -1,0 +1,182 @@
+\section{Changig between Basis}
+
+Given a vertor \(\vec{x} = \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n\) 
+with \(\vec{v}_1, \dots, \vec{v}_n\)
+being a the basis vector, we can write \(\vec{x}\) in term of its components \((a, b, c, \dots)^T\).
+
+Now imagine having another basis \(\vec{b}_1, \dots, \vec{b}_n\) and a the same vector \(\vec{x}\)
+with all of its components. The key here is that we want to know how our original
+vector is described in with other basis.
+
+So our vector \(\vec{x}\) is described:
+
+\[\lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n\]
+
+in the corresponding bases.
+
+Now lets write then a matrix vector multiplication
+\[
+(\vec{v}_1, \dots, \vec{v}_ n) 
+\begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix}
+ =
+(\vec{b}_1, \dots, \vec{b}_ n) 
+\begin{pmatrix} \mu_1 \\ \vdots \\ \mu_n \end{pmatrix}
+\]
+
+Now lets use the following notation for the Basis and the coefficient vectors.
+
+\begin{center}
+    \boxed{P_B (\vec{x})_B = P_C (\vec{x})_C}
+\end{center}
+
+Here \(P_{X}\) is the matrix of the generic basis \(X\) vectors and \((\vec{x})_X\) the coefficients of the
+vector \(\vec{x}\) described by that basis.
+
+Now that convertion of basis is just a matter of solving for 
+our desired vector by multipliying
+by the inverse of the corresponding basis matrix.
+
+\textbf{Example:}
+
+Lets find \(\vec{x}\) in terms of tha basis \(C\)
+
+\[P_{C}^{-1} P_B (\vec{x})_B = (\vec{x})_C\]
+
+Now let us understan what really is happening in the step where we multiply by the inverse matrix.
+
+\begin{align*}
+P_{C}^{-1} P_B &= P_{C}^{-1}(\vec{b}_1, \dots, \vec{b}_n) \\
+&= (P_{C}^{-1}\vec{b}_1, \dots, P_{C}^{-1}\vec{b}_n)\\
+&= ((\vec{b}_1)_C, \dots, (\vec{b}_n)_C)
+\end{align*}
+
+Now it is clear that the inverse is just taking our basis vector and tranforming
+them in to basis vector with respect to \(C\).
+
+For the sake of completness here some importan Theoremes and definitions:
+
+\subsection{Theoremes and definitions concerning the change of basis}
+
+In this section we will use a slightly different notation. Here \(K_X\) is 
+the \textbf{coefficient} vector with respect to a basis also called the coordinates
+of the vector. And \(\varphi_X\) is the \(P_X\) that is the matrix of the basis vectors with
+respect to \(X\).
+
+\textbf{I} Let \( V \) be a \( K \)-vector space with a 
+basis \( B = (v_1, \ldots, v_n) \).  
+Then there exists exactly one isomorphism 
+\[
+\varphi_B : K^n \to V
+\]
+such that
+\[
+\varphi_B(e_i) = v_i, \quad \text{for } 1 \leq i \leq n.
+\]
+
+\textbf{II} The isomorphism \( \varphi_B \) from the previous 
+Theorem is called the \emph{coordinate mapping},  
+and for \( v \in V \), we define
+\[
+K_B (\vec{v}) := \varphi_B^{-1} (v) \in K^n
+\]
+as the \emph{coordinates of \( v \) with respect to \( B \)}. Or like above 
+\(P_{B}^{-1} P_C (\vec{x})_C = (\vec{x})_B\)
+
+This is the previously discussed \(\vec{v} = P_{B}^{-1} \vec{v}\) 
+that takes a vector from the other basis and translates its into our basis.
+ 
+\textbf{III} We define the \emph{Traslation} of a vector to another
+basis as:
+
+\[
+T_{B}^{A} = \varphi_{B}^{-1} \circ \varphi_A
+\]
+
+With \(\varphi_A\) begin the matrix of basis vectors of the new coordinate
+system and \(\varphi_{B}^{-1}\) the inverse of the starting basis 
+Or \(P_{B}^{-1} \circ P_C\).
+
+Another way of finding this transition matrix is to write our basis vectors as a linear
+combination of the basis vector of the other base and then use Gauß-Jordan to find the coefficients.
+the result of the corresponding matrices are going to make our transition matrix.
+
+\[
+\begin{tikzcd}
+& V & \\
+K^n \arrow[ur, "\varphi_A"] \arrow[rr, "T_{B}^{A} = \varphi_B^{-1} \circ \varphi_A"'] & & K^n \arrow[ul, "\varphi_B"']
+\end{tikzcd}
+\]
+
+ \textbf{IV} Let \( v \in V \) be arbitrary, 
+with \( K_A(v) = (x_1, \ldots, x_n)^T \) 
+and \( K_B(v) = (y_1, \ldots, y_n)^T \).  
+Then the following holds:
+\[
+\begin{pmatrix}
+y_1 \\
+\vdots \\
+y_n
+\end{pmatrix}
+=
+T_B^A
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}
+\]
+If the coordinates of \( v \) with respect to \( A \) are known, then the matrix \( T_B^A \) can be used to compute the coordinates of \( v \) with respect to \( B \).
+\[ T_B^A = B^{-1}A \].
+
+ \textbf{V} Let \( V \) and \( W \) be finitely 
+generated \( K \)-vector spaces with 
+bases \( A \) and \( B \), respectively, and let \( f \in \mathrm{Hom}(V, W) \).
+Then we have
+\[
+M_B^A(f) = \varphi_B^{-1} \circ f \circ \varphi_A
+\]
+
+In plain english the matrix that represents \( f \) with respect to 
+the bases \( A \) and \( B \)
+ is obtained by "coordinatizing" \( V \) (via \( \varphi_A \)), 
+ applying \( f \), and then transforming the result into coordinates of 
+ \( W \) (via \( \varphi_B^{-1} \)).
+
+\begin{itemize}[label=\(-\)]
+    \item First, \( \varphi_A \) turns a vector \( v \in V \) 
+    into its coordinate vector in \( K^n \). This is just the matrix of the 
+    base of \(K^n\).
+    \item Then \( f \) acts on the original vector \( v \). This us our linear transformation matrix in our
+    basis
+    \item  Finally, \( \varphi_B^{-1} \) translates the result \( f(v) \) into a 
+coordinate vector in \( K^m \) (according to basis \( B \)).
+\end{itemize}
+
+Thus, \( M_B^A(f) \) tells you how the coordinates change through \( f \).
+
+ \textbf{VI} Let \( V \) and \( W \) be finitely generated vector spaces with bases \( A \) and \( A' \) for \( V \), and \( B \) and \( B' \) for \( W \), respectively.  
+Furthermore, let \( f: V \to W \) be a linear map. Then the following holds:
+\[
+M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot \left( T_{A'}^{A} \right)^{-1}.
+\]
+
+Now here’s what this means:
+
+\begin{itemize}[label=\(-\)]
+\item \( M_{B}^{A}(f) \) is the matrix representing \( f \) relative to the original bases \( A \) (for \( V \)) and \( B \) (for \( W \)).
+\item \( M_{B'}^{A'}(f) \) is the matrix representing \( f \) relative to the new bases \( A' \) and \( B' \).
+\item\( T_{A'}^{A} \) is the change of basis matrix from \( A' \) to \( A \).
+\item \( T_{B'}^{B} \) is the change of basis matrix from \( B \) to \( B' \).
+\end{itemize}
+
+The formula says that to itepret a linear transformation in terms of the
+new coordinates we have to:
+\begin{enumerate}
+    \item Take a vector of the new coordinates
+    \item Muliply it the matrix of its basis vectors. (Translate to our basis)
+    \item Apply the linear transformation
+    \item Inverse the change of basis by taking the inverse of the 
+    matrix in step 2.
+\end{enumerate}
+
+\newpage

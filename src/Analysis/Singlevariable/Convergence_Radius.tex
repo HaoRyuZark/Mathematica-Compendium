@@ -1,0 +1,18 @@
+\section{Convergence Radius}
+\subsection{Definition}
+Consider a power series of the form
+\[
+f(x) = \sum_{n=0}^{\infty} c_n (x - a)^n,
+\]
+where \(c_n\) are the coefficients, \(x\) is the variable, and \(a\) is the center of the series. The radius of convergence, denoted by \(R\), is a non-negative real number (or \(\infty\)) such that the series converges if \(|x - a| < R\) and diverges if \(|x - a| > R\). In other words, the interval of convergence is \((a - R, a + R)\), possibly including one or both endpoints.
+
+\subsection{Test of the Borders}
+When the absolute value of the difference between \(x\) and \(a\) is equal to the radius of convergence (i.e., \(|x - a| = R\)), the convergence of the power series must be checked separately. This involves substituting the values \(x = a \pm R\) into the series and determining whether the resulting series converges or diverges using other convergence tests (e.g., the comparison test, ratio test, alternating series test).
+
+\subsection{Approximating the Error}
+When a power series is used to approximate a function, it is often necessary to estimate the error in the approximation. If the power series converges, the error can be made arbitrarily small by including a sufficient number of terms. For an alternating series that satisfies the conditions of the Alternating Series Test, the error in approximating the sum by the first \(n\) terms is bounded by the absolute value of the \((n+1)\)-th term:
+\[
+\left| \sum_{k=0}^{\infty} c_k (x - a)^k - \sum_{k=0}^{n} c_k (x - a)^k \right| \leq |c_{n+1} (x - a)^{n+1}|.
+\]
+For other power series, techniques such as Taylor's Theorem with remainder can be used to estimate the error.
+\newpage
