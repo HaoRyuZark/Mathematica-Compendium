@@ -3,46 +3,44 @@
 In this section, we introduce essential vocabulary used in topology. Each term is accompanied by a brief explanation and its formal mathematical definition.
 
 \subsection{Introduction to topological nomenclature}
-\begin{itemize}[label=$-$]
 
-	\item \textbf{Open Set} \\
-	      A subset \( U \subseteq X \) of a topological space is called \emph{open} if for every point \( x \in U \), there exists an \( \varepsilon > 0 \) such that the open ball \( B_\varepsilon(x) \subseteq U \). \\
+	 \subsection{Open Set}
+	      A subset \( U \subseteq X \) of a topological space is called \emph{open} if for every point \( x \in U \), there exists an \( \varepsilon > 0 \) such that the open ball \( B_\varepsilon(x) \subseteq U \). 
 	      Intuitively, an open set contains none of its boundary points and every point has some <<wiggle>> room around it.
 
-	\item \textbf{Closed Set} \\
-	      A subset \( A \subseteq X \) is called \emph{closed} if its complement \( X \setminus A \) is open. Equivalently, \( A \) contains all its limit points. \\
+	 \subsection{Closed Set} 
+	      A subset \( A \subseteq X \) is called \emph{closed} if its complement \( X \setminus A \) is open. Equivalently, \( A \) contains all its limit points. 
 	      That is, \( A \) is closed if it includes its boundary.
 
-	\item \textbf{Interior Point}\\
-	      A point \( x \in A \) is an \emph{interior point} of \( A \subseteq X \) if there exists \( \varepsilon > 0 \) such that \( B_\varepsilon(x) \subseteq A \). \\
+	 \subsection{Interior Point}
+	      A point \( x \in A \) is an \emph{interior point} of \( A \subseteq X \) if there exists \( \varepsilon > 0 \) such that \( B_\varepsilon(x) \subseteq A \). 
 	      The set of all interior points of \( A \) is called the \emph{interior} of \( A \), denoted \( \mathrm{int}(A) \).
 
-	\item \textbf{Boundary Point}\\
-	      A point \( x \in X \) is a \emph{boundary point} of a set \( A \subseteq X \) if every open ball around \( x \) contains both points in \( A \) and in \( X \setminus A \). \\
+	 \subsection{Boundary Point}
+	      A point \( x \in X \) is a \emph{boundary point} of a set \( A \subseteq X \) if every open ball around \( x \) contains both points in \( A \) and in \( X \setminus A \). 
 	      The set of all boundary points is called the \emph{boundary} of \( A \), denoted \( \partial A \).
 
-	\item \textbf{Accumulation Point / Limit Point}\\
-	      A point \( x \in X \) is an \emph{accumulation point} of a set \( A \subseteq X \) if every open ball \( B_\varepsilon(x) \) contains a point of \( A \setminus \{x\} \). \\
+	 \subsection{Accumulation Point / Limit Point}
+	      A point \( x \in X \) is an \emph{accumulation point} of a set \( A \subseteq X \) if every open ball \( B_\varepsilon(x) \) contains a point of \( A \setminus \{x\} \). 
 	      In other words, points of \( A \) cluster arbitrarily close to \( x \), even if \( x \notin A \).
 
-	\item \textbf{Isolated Point} \\
-	      A point \( x \in A \) is an \emph{isolated point} if there exists \( \varepsilon > 0 \) such that \( B_\varepsilon(x) \cap A = \{x\} \). \\
+	 \subsection{Isolated Point} 
+	      A point \( x \in A \) is an \emph{isolated point} if there exists \( \varepsilon > 0 \) such that \( B_\varepsilon(x) \cap A = \{x\} \). 
 	      That is, \( x \) stands alone in \( A \) without other points of \( A \) nearby.
 
-	\item \textbf{Compact Set} \\
-	      A set \( K \subseteq X \) is \emph{compact} if every open cover of \( K \) has a finite subcover. \\
+	 \subsection{Compact Set} 
+	      A set \( K \subseteq X \) is \emph{compact} if every open cover of \( K \) has a finite subcover. 
 	      In \(\mathbb{R}^n\), this is equivalent to \( K \) being closed and bounded (by the Heine–Borel theorem).
 
-	\item \textbf{Dense Set} \\
-	      A subset \( D \subseteq X \) is \emph{dense} in \( X \) if every point \( x \in X \) is either in \( D \) or is a limit point of \( D \). \\
+	 \subsection{Dense Set} 
+	      A subset \( D \subseteq X \) is \emph{dense} in \( X \) if every point \( x \in X \) is either in \( D \) or is a limit point of \( D \). 
 	      Equivalently, the closure of \( D \) is \( X \), i.e., \( \overline{D} = X \).
 
-	\item \textbf{Open Ball} (\( B_\varepsilon(x) \)) \\
-	      For a metric space \( (X, d) \), the \emph{open ball} centered at \( x \in X \) with radius \( \varepsilon > 0 \) is defined as: \\
+	 \subsection{Open Ball} (\( B_\varepsilon(x) \)) 
+	      For a metric space \( (X, d) \), the \emph{open ball} centered at \( x \in X \) with radius \( \varepsilon > 0 \) is defined as: 
 	      \[
 		      B_\varepsilon(x) := \{ y \in X \mid d(x, y) < \varepsilon \}
 	      \]
 	      It represents the set of all points within distance \( \varepsilon \) from \( x \), excluding the boundary.
-\end{itemize}
 
 \newpage

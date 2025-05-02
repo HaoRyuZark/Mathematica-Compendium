@@ -1,28 +1,28 @@
 \section{Logarithms}
 
-The logarithm of a number $x$ with base $b$ is the exponent to which the base must be raised to produce that number. It is denoted as:
+The logarithm of a number \(x\) with base \(b\) is the exponent to which the base must be raised to produce that number. It is denoted as:
   \[
     \log_b(x) = y \iff b^y = x
   \]
-where $b > 0$, $b \neq 1$, and $x > 0$.
+where \(b > 0\), \(b \neq 1\), and \(x > 0\).
   \[
     \log_2(8) = 3 \quad \text{because} \quad 2^3 = 8
   \]
 
 
 \subsection{Properties of Logarithms}
-\begin{itemize}[label=$-$]
-  \item $\log_b(xy) = \log_b(x) + \log_b(y)$
-  \item $\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)$
-  \item $\log_b(x^k) = k \cdot \log_b(x)$
-  \item $\log_b(b) = 1$
-  \item $\log_b(1) = 0$
-  \item $\log_{b^k}(x^w) = \frac{1}{k} \cdot \log_b(x)$
-  \item $\log_b\left(\frac{1}{x}\right) = -\log_b(x)$
-  \item $\log_b(b^x) = x$
-  \item $\log_b(x) = \frac{\log_k(x)}{\log_k(b)}$ for any positive $k \neq 1$
-  \item $e^{\ln(x)} = x$
-  \item If $0 < a < 1$ then $\ln(a)$ is a negative number. 
+\begin{itemize}[label=\(-\)]
+  \item \(\log_b(xy) = \log_b(x) + \log_b(y)\)
+  \item \(\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)\)
+  \item \(\log_b(x^k) = k \cdot \log_b(x)\)
+  \item \(\log_b(b) = 1\)
+  \item \(\log_b(1) = 0\)
+  \item \(\log_{b^k}(x^w) = \frac{1}{k} \cdot \log_b(x)\)
+  \item \(\log_b\left(\frac{1}{x}\right) = -\log_b(x)\)
+  \item \(\log_b(b^x) = x\)
+  \item \(\log_b(x) = \frac{\log_k(x)}{\log_k(b)}\) for any positive \(k \neq 1\)
+  \item \(e^{\ln(x)} = x\)
+  \item If \(0 < a < 1\) then \(\ln(a)\) is a negative number. 
 \end{itemize}
 
 \subsection{Fundamental Identity of Logarithms}
@@ -34,7 +34,7 @@ a^{\log_a(x)} = x
 \[
 \log_b(x) = \frac{\log_k(x)}{\log_k(b)}
 \]
-where $k$ is any positive number different from 1.
+where \(k\) is any positive number different from 1.
 
 \subsection{The Chain Rule}
 \[
@@ -47,7 +47,7 @@ where $k$ is any positive number different from 1.
 f\prime(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 \]
 
-\noindent Let $f(x) = \ln(x)$, then
+ Let \(f(x) = \ln(x)\), then
 \[
 f\prime(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}
 \]
@@ -61,7 +61,7 @@ f\prime(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}
 = f\prime(x) = \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}
 \]
 
-\noindent Now let $n = \frac{h}{x}$
+ Now let \(n = \frac{h}{x}\)
 \[
 f\prime(x) = \lim_{n \to 0} \ln\left(1 + n\right)^{\frac{x}{h} \frac{1}{x}}
 \]
@@ -77,12 +77,58 @@ f\prime(x) = \frac{1}{x} \ln(e)
 \[
 f\prime(x) = \frac{1}{x}
 \]
-\noindent Therefore, the derivative of the natural logarithm is:
+ Therefore, the derivative of the natural logarithm is:
 \[
 \frac{d}{dx} \ln(x) = \frac{1}{x}
 \]
-$\mathfrak{QED}$
+\QED
+
+\subsection{Demonstration of the Properties}
+
+\subsubsection{Product}
+
+Let \(a^n a^m = a^{n + m}\) and \(a^n = x\) and \(a^m = y\) then
+
+\[
+\log_a x = n \text{ and } \log_a y = m \rightarrow \log_a (xy) = n + m
+\]
+\[
+\log_a xy = \log_a x + \log_a y
+\]
+\QED
+
+\subsubsection{Quotient}
+
+Let \(\frac{a^n}{a^m} = a^{n - m}\) and \(a^n = x\) and \(a^m = y\) then like in the previous proof
+\[
+\log_a \left(\frac{x}{y}\right)) = \log_a x - \log_a y
+\]
+\QED 
+
+\subsubsection{Power}
+
+Let \((a^n)^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
+\[
+\log_x y = m \text{ and } \log_a x = n \text{ thus } \log_a y = (\log_a x )m
+\]
+\QED
+
+\textbf{General Case:}
+
+Let \((a^n)^m = b^x\) then \(\log_{a^n} b^x = m\) now lets manipulate the original expression
+
+\[
+\log_a (a^n)^m = \log_a b^x
+\]
+\[
+nm \log_a a = x \log_a b
+\]
+
+\[
+m = \frac{x}{n} \log_a b =  \log_{a^n} b^x
+\]
+
+\QED
+
 
 \newpage
-
-

@@ -6,10 +6,9 @@ The Archimedean Principle is a fundamental property of the real numbers \( \math
 
 For any real number \( x \in \mathbb{R} \), there exists a natural number \( n \in \mathbb{N} \) such that \( n > x \).
 
-
 In other words, no matter how large a real number you choose, there is always a natural number that is larger. Similarly, for any positive real number \( \epsilon > 0 \), there exists a natural number \( n \in \mathbb{N} \) such that \( \frac{1}{n} < \epsilon \).
 
-\subsection{Proof}
+\textbf{Proof:}
 
 We prove the Archimedean Principle by contradiction.
 
@@ -20,13 +19,14 @@ Let \( S = \sup(\mathbb{N}) \), the least upper bound of \( \mathbb{N} \). Then 
 	n_0 > S - 1 \Rightarrow n_0 + 1 > S
 \]
 But \( n_0 + 1 \in \mathbb{N} \), which contradicts the assumption that \( S \) is an upper bound of \( \mathbb{N} \). Therefore, our assumption must be false, and the theorem is proven.
-$\mathfrak{QED}$
+
+\QED
 
 \subsection{Equivalent Formulations}
 
 The Archimedean Principle is often stated in different but equivalent ways:
 
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
 	\item For any \( \epsilon > 0 \), there exists \( n \in \mathbb{N} \) such that \( \frac{1}{n} < \epsilon \).
 	\item For any \( a, b \in \mathbb{R} \) with \( a > 0 \), there exists \( n \in \mathbb{N} \) such that \( na > b \).
 \end{itemize}

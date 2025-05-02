@@ -16,7 +16,7 @@ A linear system can be represented in matrix form as:
 \end{equation*}
 where \( A \) is the coefficient matrix, \( \mathbf{x} \) is the vector of variables, and \( \mathbf{b} \) is the vector of constants. The coefficient matrix \( A \) is an \( m \times n \) matrix, where \( m \) is the number of equations and \( n \) is the number of variables.
 The vector \( \mathbf{x} \) is an \( n \times 1 \) column vector, and the vector \( \mathbf{b} \) is an \( m \times 1 \) column vector. The system can be solved using various methods, including:
-\begin{itemize}[label=$-$]
+\begin{itemize}[label=\(-\)]
 	\item Gaussian elimination
 	\item LU decomposition
 	\item Matrix inversion (if \( A \) is square and invertible)
@@ -32,7 +32,7 @@ Gaussian elimination is a method for solving linear systems by transforming the 
 	\item Back substitution: Solve for the variables starting from the last equation and substituting back into the previous equations.
 \end{enumerate}
 The forward elimination process involves performing row operations on the augmented matrix \([A | \mathbf{b}]\) to create zeros below the diagonal. The row operations include:
-\begin{itemize}[label=$-$]
+\begin{itemize}[label=\(-\)]
 	\item Swapping two rows
 	\item Multiplying a row by a non-zero scalar
 	\item Adding or subtracting a multiple of one row from another row
@@ -87,7 +87,7 @@ A linear equation is said to be \textbf{homogeneous} if its constant term is zer
 	a_1x_1 + a_2x_2 + \cdots + a_nx_n = 0
 \]
 
-Such equations always have at least the trivial solution $x_1 = x_2 = \cdots = x_n = 0$.
+Such equations always have at least the trivial solution \(x_1 = x_2 = \cdots = x_n = 0\).
 
 \subsection{Particular Solution}
 A particular solution to a linear system of equations is a specific solution that satisfies the system. It can be found using various methods, including substitution, elimination, or matrix methods. A particular solution is not unique; there may be multiple particular solutions depending on the system.
@@ -116,14 +116,14 @@ The homogeneous system is obtained by setting the right-hand side of the equatio
 	A \mathbf{x} = \mathbf{0}
 \end{equation*}
 
-\noindent The theoreme says:
+ The theoreme says:
 
 Any linear system's solution set has the form:
 \[
 	\left\{ \vec{p} + c_1\vec{\beta}_1 + \cdots + c_k\vec{\beta}_k \;\middle|\; c_1, \ldots, c_k \in \mathbb{R} \right\}
 \]
 
-where $\vec{p}$ is a particular solution to the system, and the vectors $\vec{\beta}_1, \ldots, \vec{\beta}_k$ form a basis of the solution space to the corresponding homogeneous system. The number $k$ equals the number of \textbf{free variables} the system has after applying Gaussian elimination.
+where \(\vec{p}\) is a particular solution to the system, and the vectors \(\vec{\beta}_1, \ldots, \vec{\beta}_k\) form a basis of the solution space to the corresponding homogeneous system. The number \(k\) equals the number of \textbf{free variables} the system has after applying Gaussian elimination.
 
 \subsection{Linear Combination Lemma}
 Any linear combination of linear combinations is a linear combination.
@@ -150,7 +150,7 @@ Consider the following system of linear equations:
 
 \subsubsection*{Step 2: Eliminate below pivot in column 1}
 
-\begin{itemize}[label=$-$]
+\begin{itemize}[label=\(-\)]
 	\item Row 2 = Row 2 - 2 × Row 1
 	\item Row 3 = Row 3 - Row 1
 \end{itemize}
@@ -165,7 +165,7 @@ Consider the following system of linear equations:
 
 \subsubsection*{Step 3: Eliminate below pivot in column 2}
 
-\begin{itemize}[label=$-$]
+\begin{itemize}[label=\(-\)]
 	\item Row 3 = Row 3 - Row 2
 \end{itemize}
 
@@ -203,7 +203,7 @@ Substitute:
 
 \subsubsection*{General Solution}
 
-Let $x_4 = t$ (free variable), then:
+Let \(x_4 = t\) (free variable), then:
 
 \[
 	\begin{aligned}
@@ -233,7 +233,7 @@ Let $x_4 = t$ (free variable), then:
 \subsection{The Determinant, the cross product and the solutions of linear Systems of Equations}
 A linear system of three equation has the following properties:
 
-\begin{itemize}[label=$-$]
+\begin{itemize}[label=\(-\)]
 	\item There is a unique solution if the determinant of the coefficient matrix is non-zero. 
 	\[\langle (a x b), c\rangle = \det(a,b,c) \ne 0\]
 	\item There are infinitely many solutions if the determinant of the coefficient matrix is zero.

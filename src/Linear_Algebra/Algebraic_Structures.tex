@@ -6,7 +6,7 @@ Algebraic structures are mathematical systems consisting of a set equipped with 
 
 \subsection{Operations: Internal and External}
 
-An \textbf{internal composition law} is a binary operation that takes two elements from a set and returns another element in the same set. Formally, for a set $S$ and operation $\circ$, we have:
+An \textbf{internal composition law} is a binary operation that takes two elements from a set and returns another element in the same set. Formally, for a set \(S\) and operation \(\circ\), we have:
 \[
 \circ: S \times S \rightarrow S
 \]
@@ -15,36 +15,36 @@ An \textbf{external composition law} involves a second set acting on the structu
 \[
 \cdot: K \times V \rightarrow V
 \]
-where $K$ is a field and $V$ is a vector space.
+where \(K\) is a field and \(V\) is a vector space.
 
 \subsection{Properties of Operations}
 
-Let $\ast$ be a binary operation on a set $S$. The most important properties include:
+Let \(\ast\) be a binary operation on a set \(S\). The most important properties include:
 
-\begin{itemize}
-    \item \textbf{Associativity:} $(a \ast b) \ast c = a \ast (b \ast c)$ for all $a,b,c \in S$
-    \item \textbf{Commutativity:} $a \ast b = b \ast a$ for all $a,b \in S$
-    \item \textbf{Identity Element:} There exists $e \in S$ such that $a \ast e = e \ast a = a$ for all $a \in S$
-    \item \textbf{Inverse Element:} For every $a \in S$, there exists $a^{-1} \in S$ such that $a \ast a^{-1} = a^{-1} \ast a = e$
-    \item \textbf{Distributivity:} $a \circ (b \bullet c) = (a \circ b) \bullet (a \circ c)$ and/or $(b \bullet c) \circ a = (b \circ a) \bullet (c \circ a)$
+\begin{itemize}[label=\(-\)]
+    \item \textbf{Associativity:} \((a \ast b) \ast c = a \ast (b \ast c)\) for all \(a,b,c \in S\)
+    \item \textbf{Commutativity:} \(a \ast b = b \ast a\) for all \(a,b \in S\)
+    \item \textbf{Identity Element:} There exists \(e \in S\) such that \(a \ast e = e \ast a = a\) for all \(a \in S\)
+    \item \textbf{Inverse Element:} For every \(a \in S\), there exists \(a^{-1} \in S\) such that \(a \ast a^{-1} = a^{-1} \ast a = e\)
+    \item \textbf{Distributivity:} \(a \circ (b \bullet c) = (a \circ b) \bullet (a \circ c)\) and/or \((b \bullet c) \circ a = (b \circ a) \bullet (c \circ a)\)
 \end{itemize}
 
 \subsection{Homomorphisms and Isomorphisms}
 
-Let $(G, \oplus)$ and $(H, \oplus')$ be two algebraic structures.
+Let \((G, \oplus)\) and \((H, \oplus')\) be two algebraic structures.
 
-\begin{itemize}
-    \item A \textbf{homomorphism} is a function $\varphi: G \rightarrow H$ such that:
+\begin{itemize}[label=\(-\)]
+    \item A \textbf{homomorphism} is a function \(\varphi: G \rightarrow H\) such that:
     \[
     \varphi(a \oplus b) = \varphi(a) \oplus' \varphi(b), \quad \forall a,b \in G
     \]
     
-    \item An \textbf{isomorphism} is a bijective homomorphism. If such a map exists, we say the structures are \textbf{isomorphic}, written as $G \cong H$.
+    \item An \textbf{isomorphism} is a bijective homomorphism. If such a map exists, we say the structures are \textbf{isomorphic}, written as \(G \cong H\).
 \end{itemize}
 
 \subsection{Common Algebraic Structures}
 
-The following table lists common algebraic structures along with their notation and defining properties. Let $\oplus$ denote the additive operation and $\odot$ the multiplicative one:
+The following table lists common algebraic structures along with their notation and defining properties. Let \(\oplus\) denote the additive operation and \(\odot\) the multiplicative one:
 
 \begin{center}
 \renewcommand{\arraystretch}{1.4}
@@ -52,22 +52,23 @@ The following table lists common algebraic structures along with their notation 
 \hline
 \textbf{Name} & \textbf{Notation} & \textbf{Properties} \\
 \hline
-\textbf{Semigroup} & $(S, \oplus)$ & Associative \\
+\textbf{Semigroup} & \((S, \oplus)\) & Associative \\
 \hline
-\textbf{Monoid} & $(M, \oplus)$ & Associative, Identity element \\
+\textbf{Monoid} & \((M, \oplus)\) & Associative, Identity element \\
 \hline
-\textbf{Group} & $(G, \oplus)$ & Associative, Identity, Inverses \\
+\textbf{Group} & \((G, \oplus)\) & Associative, Identity, Inverses \\
 \hline
-\textbf{Abelian Group} & $(A, \oplus)$ & Group + Commutativity \\
+\textbf{Abelian Group} & \((A, \oplus)\) & Group + Commutativity \\
 \hline
-\textbf{Ring} & $(R, \oplus, \odot)$ & \begin{tabular}[c]{@{}l@{}}$(R, \oplus)$ is an abelian group,\\ $(R, \odot)$ is a semigroup,\\ Distributivity: $a \odot (b \oplus c) = a \odot b \oplus a \odot c$\end{tabular} \\
+\textbf{Ring} & \((R, \oplus, \odot)\) & \begin{tabular}[c]{@{}l@{}}\((R, \oplus)\) is an abelian group,\\ \((R, \odot)\) is a semigroup,\\ Distributivity: \(a \odot (b \oplus c) = a \odot b \oplus a \odot c\)\end{tabular} \\
 \hline
-\textbf{Commutative Ring} & $(R, \oplus, \odot)$ & Ring + $(R, \odot)$ is commutative \\
+\textbf{Commutative Ring} & \((R, \oplus, \odot)\) & Ring + \((R, \odot)\) is commutative \\
 \hline
-\textbf{Field} & $(K, \oplus, \odot)$ & \begin{tabular}[c]{@{}l@{}}Commutative Ring +\\ $(K \setminus \{0\}, \odot)$ is an abelian group\end{tabular} \\
+\textbf{Field} & \((K, \oplus, \odot)\) & \begin{tabular}[c]{@{}l@{}}Commutative Ring +\\ \((K \setminus \{0\}, \odot)\) is an abelian group\end{tabular} \\
 \hline
-\textbf{Vector Space} & $(V, \oplus, \cdot)$ & \begin{tabular}[c]{@{}l@{}}$(V, \oplus)$ is an abelian group,\\ $\cdot: K \times V \to V$ (scalar mult.),\\ Distributivity, associativity, identities\end{tabular} \\
+\textbf{Vector Space} & \((V, \oplus, \cdot)\) & \begin{tabular}[c]{@{}l@{}}\((V, \oplus)\) is an abelian group,\\ \(\cdot: K \times V \to V\) (scalar mult.),\\ Distributivity, associativity, identities\end{tabular} \\
 \hline
 \end{tabular}
-\newpage
 \end{center}
+
+\newpage

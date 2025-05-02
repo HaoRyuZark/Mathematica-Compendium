@@ -44,7 +44,7 @@ Geometrically, it reflects the point \( z \) across the real axis in the complex
 
 Let \( z_1 = a + bi \) and \( z_2 = c + di \) be two complex numbers.
 
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
 	\item \textbf{Addition:}
 	      \[
 		      z_1 + z_2 = (a + c) + (b + d)i
@@ -74,7 +74,7 @@ where:
 \end{align*}
 
 \textbf{Important:} The value of \( \theta \) depends on the quadrant where the complex number lies:
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
 	\item Quadrant I: \( a > 0, b > 0 \) — use \( \tan^{-1}(b/a) \)
 	\item Quadrant II: \( a < 0, b > 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
 	\item Quadrant III: \( a < 0, b < 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
@@ -88,7 +88,7 @@ Given:
 	z_1 = r_1 e^{i\theta_1}, \quad z_2 = r_2 e^{i\theta_2},
 \]
 
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
 	\item \textbf{Multiplication:}
 	      \[
 		      z_1 \cdot z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
@@ -139,7 +139,7 @@ So,
 	w = 2 \left( \cos\left( \frac{\pi}{3} \right) + i \sin\left( \frac{\pi}{3} \right) \right)
 \]
 
-\textbf{Step 2: Solve \( z^4 = w \Rightarrow z = w^{1/4} \)}
+\textbf{Step 2: Solve \( z^4 = w \to z = w^{1/4} \)}
 
 Using the root formula:
 \[
@@ -160,7 +160,7 @@ These represent the four complex 4th roots of \( 1 + \sqrt{3}i \), equally space
 
 Solving equations in \( \mathbb{C} \) can involve various forms. Here are the most common cases:
 
-\begin{enumerate}
+\begin{itemize}[label=\(-\)]
 	\item \textbf{Linear Equations:}
 	      Solve for \( z \) in \( az + b = 0 \), where \( a, b \in \mathbb{C} \), \( a \neq 0 \):
 	      \[
@@ -171,7 +171,7 @@ Solving equations in \( \mathbb{C} \) can involve various forms. Here are the mo
 	      Solve for \( z \) in equations like \( z + \overline{z} = 4 \).
 	      Let \( z = x + iy \), then \( \overline{z} = x - iy \). So:
 	      \[
-		      z + \overline{z} = 2x \quad \Rightarrow \quad x = 2 \quad \Rightarrow \quad z = 2 + iy
+		      z + \overline{z} = 2x \quad \to \quad x = 2 \quad \Rightarrow \quad z = 2 + iy
 	      \]
 	      The imaginary part remains free unless further constraints are given.
 
@@ -179,7 +179,7 @@ Solving equations in \( \mathbb{C} \) can involve various forms. Here are the mo
 	      Solve \( |z| = r \):
 	      Let \( z = x + iy \), then:
 	      \[
-		      \sqrt{x^2 + y^2} = r \Rightarrow x^2 + y^2 = r^2
+		      \sqrt{x^2 + y^2} = r \to x^2 + y^2 = r^2
 	      \]
 	      This is a circle of radius \( r \) centered at the origin in the complex plane.
 
@@ -187,24 +187,25 @@ Solving equations in \( \mathbb{C} \) can involve various forms. Here are the mo
 	      Recall \( z \cdot \overline{z} = |z|^2 \).
 	      For example, solve:
 	      \[
-		      z \cdot \overline{z} = 9 \Rightarrow |z| = 3
+		      z \cdot \overline{z} = 9 \to |z| = 3
 	      \]
 	      Again, a circle in the complex plane of radius 3.
 
 	\item \textbf{Quadratic Equations:}
 	      Complex roots occur naturally. For example:
 	      \[
-		      z^2 + 1 = 0 \Rightarrow z^2 = -1 \Rightarrow z = \pm i
+		      z^2 + 1 = 0 \to z^2 = -1 \Rightarrow z = \pm i
 	      \]
 
 	\item \textbf{General Polynomial Equations:}
 	      Use De Moivre’s Theorem or polar form. Example:
 	      \[
-		      z^n = w \Rightarrow z_k = \sqrt[n]{|w|} \cdot e^{i\left( \frac{\arg(w) + 2k\pi}{n} \right)}, \quad k = 0, 1, \dots, n-1
+		      z^n = w \to z_k = \sqrt[n]{|w|} \cdot e^{i\left( \frac{\arg(w) + 2k\pi}{n} \right)}, \quad k = 0, 1, \dots, n-1
 	      \]
-\end{enumerate}
+\end{itemize}
 
-\subsubsection{Example 1:}
+\textbf{Example 1:}
+
 Solve:
 \[
 	\left( \frac{2 + 3i}{1 + i} + \frac{4 + 5i}{2 - 2i}\right) \hat{z} = \frac{i + 2}{i}
@@ -216,7 +217,8 @@ Solve:
 	\hat{z} = \frac{i + 2}{i} : \frac{-3 -i}{4}
 \]
 
-\subsubsection{Example 2:}
+\textbf{Example 2:}
+
 Solve:
 \[
 	z - 3i + (2 -i)\hat{z} + 2 = 0
@@ -260,7 +262,7 @@ Let \( z = re^{i\theta} \) with \( r > 0 \), \( \theta \in \mathbb{R} \). Then:
 \]
 
 Here:
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
 	\item \( \ln r \) is the natural (real) logarithm of the modulus.
 	\item \( \theta \) is the principal argument \( \arg(z) \in (-\pi, \pi] \).
 	\item The term \( 2\pi k \) accounts for the infinitely many branches of the logarithm in \( \mathbb{C} \).
@@ -275,25 +277,26 @@ The principal value of the complex logarithm is often written:
 \textbf{Example:}
 Let \( z = -1 \). Then:
 \[
-	|z| = 1, \quad \arg(z) = \pi, \quad \Rightarrow \log(-1) = i(\pi + 2\pi k), \quad k \in \mathbb{Z}
+	|z| = 1, \quad \arg(z) = \pi, \quad \to \log(-1) = i(\pi + 2\pi k), \quad k \in \mathbb{Z}
 \]
 \[
-	\Rightarrow \mathrm{Log}(-1) = i\pi
+	\to \mathrm{Log}(-1) = i\pi
 \]
 
 The multi-valued nature of \( \log z \) is crucial in advanced complex analysis, especially in defining analytic continuations and branch cuts.
 
 \subsection{Complex Exponents}
-$a^x \approx 1 \left(a + \alpha \frac{x}{N} \right)^N \rightarrow e^z := \lim_{N \rightarrow \inf} \left( 1 + \frac{z}{N}\right)^N $
-The process above is called linearization of the exponential function by <<zooming>>  $\alpha \approx \frac{dy}{d}$
+\(a^x \approx 1 \left(a + \alpha \frac{x}{N} \right)^N \to e^z := \lim_{N \rightarrow \inf} \left( 1 + \frac{z}{N}\right)^N \)
+The process above is called linearization of the exponential function by <<zooming>>  \(\alpha \approx \frac{dy}{d}\)
 
-\noindent For $e^{ci} = \cos{\theta} + i\sin{\theta}$ every exponentiation of a complex number is a rotation in the complex plane.
+ For  \(e^{ci} = \cos{\theta} + i\sin{\theta}\) every exponentiation of a complex number is a rotation 
+in the complex plane.
 
 \[
-	e^{ic} = \lim_{N \rightarrow \inf} \left( 1 + \frac{ic}{N}\right)^N
+	e^{ic} = \lim_{N \to \inf} \left( 1 + \frac{ic}{N}\right)^N
 \]
 
-\noindent Now imagine that in a sector of a circunference you put trinagles one above the other with base of lenght one and a height of $\frac{C}{N}$ and an angle of $\delta$
+ Now imagine that in a sector of a circunference you put trinagles one above the other with base of lenght one and a height of $\frac{C}{N}$ and an angle of $\delta$
 \[
 	\tan{\delta} \approx \delta \text{ for } \delta \ll 1
 \]
@@ -301,7 +304,7 @@ The process above is called linearization of the exponential function by <<zoomi
 	1 + \frac{ci}{N} = 1 \angle \frac{c}{N}, N \gg 1
 \]
 \[
-	e^{ic} = \lim_{N \rightarrow \inf} \left( 1 + \frac{c}{N}\right)^N \rightarrow e^{ci} = 1 \angle c = \cos{c} + i\sin{c}
+	e^{ic} = \lim_{N \to \inf} \left( 1 + \frac{c}{N}\right)^N \to e^{ci} = 1 \angle c = \cos{c} + i\sin{c}
 \]
 
 \subsection{Euler's Formula Proof}
@@ -311,12 +314,14 @@ We know that
 \]
 
 \[
-	e^{z} = \lim_{n \rightarrow \infty} \left( 1 + \frac{z}{n}\right)^n \implies\ e^{i\pi} = \lim_{n \rightarrow \infty} \left( 1 + \frac{i\pi}{n}\right)^n = -1
+	e^{z} = \lim_{n \to \infty} \left( 1 + \frac{z}{n}\right)^n \implies\ e^{i\pi} = \lim_{n \to \infty} \left( 1 + \frac{i\pi}{n}\right)^n = -1
 \]
+
 \[
-	\implies \lim_{n \rightarrow \infty} |r_n| = 1\ \lim_{n \rightarrow \infty} \theta = 0+
+	\implies \lim_{n \to \infty} |r_n| = 1\ \lim_{n \to \infty} \theta = 0+
 \]
-\noindent Now we can demonstrate the formula.
+ Now we can demonstrate the formula.
+
 \[
 	|r_n| = \left( 1 + \left|\frac{z}{n}\right)^n\right| \implies \left( \sqrt{1 + \frac{\pi²}{n²}}\right)
 \]
@@ -326,16 +331,16 @@ We know that
 \]
 
 \[
-	\lim_{n \rightarrow \infty} \left( \sqrt{1 + \frac{\pi²}{n²}}\right)^n = \lim_{n \rightarrow \infty} \left( 1 + \frac{\pi²}{2n}\right)^\frac{n}{2}
-	= \lim_{n \rightarrow \infty} e^{ln\left(1 +\frac{\pi²}{2}\right) \frac{n}{2}} = e^0 = 1
+	\lim_{n \to \infty} \left( \sqrt{1 + \frac{\pi²}{n²}}\right)^n = \lim_{n \to \infty} \left( 1 + \frac{\pi²}{2n}\right)^\frac{n}{2}
+	= \lim_{n \to \infty} e^{ln\left(1 +\frac{\pi²}{2}\right) \frac{n}{2}} = e^0 = 1
 \]
 
 \[
-	\lim_{n \rightarrow \infty} \theta = \lim_{n \rightarrow \infty} n \arctan \frac{\pi}{n} = \lim_{n \rightarrow \infty} n^{-1} \arctan\frac{\pi}{n} = 0
+	\lim_{n \to \infty} \theta = \lim_{n \to \infty} n \arctan \frac{\pi}{n} = \lim_{n \to \infty} n^{-1} \arctan\frac{\pi}{n} = 0
 \]
 
-Thus for $e^{i\pi} = 1$ for $x = \pi \forall x \in \lim r_n (x) = 1$ and $ \lim \theta (x) = x$
+Thus for \(e^{i\pi} = 1\) for \(x = \pi \forall x \in \lim r_n (x) = 1\) and \( \lim \theta (x) = x\)
 
-$\mathfrak{QED}$
+\QED
 
 \newpage
