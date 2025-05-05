@@ -56,14 +56,14 @@ An equivalence relation is a relation that is symmetric, transitive and reflexiv
 
 \subsection{Image and Domain}
 
-\subsubsection{Image}
+\textbf{Image}
 The image (or range) of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(B\) that are related to at least one element in \(A\). Formally, if \(R \subseteq A \times B\) is a relation, then the image of \(R\) is defined as:
 
 \[\text{Im}(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}\]
 
 In other words, the image consists of all the <<output>> values that appear in the ordered pairs of the relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\text{Im}(R) = \{4, 5, 6\}\).
 
-\subsubsection{Domain}
+\textbf{Domain}
 The domain of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(A\) that are related to at least one element in \(B\). Formally, if \(R \subseteq A \times B\) is a relation, then the domain of \(R\) is defined as:
 
 \[\text{Dom}(R) = \{a \in A \mid \exists b \in B \text{ such that } (a,b) \in R\}\]
@@ -114,7 +114,8 @@ Note that \(g \circ f \neq f \circ g\) in general, which shows that function com
 
 \subsection{Types of Functions}
 
-\subsubsection{Injective Functions}
+\textbf{Injective Functions}
+
 An injective function (also called a one-to-one function) is a function that maps distinct elements from the domain to distinct elements in the codomain.
 
 Formally, a function \(f: A \to B\) is injective if for all \(a_1, a_2 \in A\):
@@ -127,7 +128,8 @@ Equivalently, using the contrapositive:
 	f(a_1) = f(a_2) \to a_1 = a_2
 \]
 
-\subsubsection{Surjective Functions}
+\textbf{Surjective Functions}
+
 A surjective function (also called an onto function) is a function whose image equals its codomain, meaning that every element in the codomain has at least one preimage in the domain.
 
 Formally, a function \(f: A \to B\) is surjective if:
@@ -135,7 +137,8 @@ Formally, a function \(f: A \to B\) is surjective if:
 	\forall b \in B, \exists a \in A \text{ such that } f(a) = b
 \]
 
-\subsubsection{Bijective Functions}
+\textbf{Bijective Functions}
+
 A bijective function (also called a one-to-one correspondence) is a function that is both injective and surjective. In other words, every element in the codomain is mapped to by exactly one element in the domain.
 
 Formally, a function \(f: A \to B\) is bijective if it is both:
@@ -168,6 +171,7 @@ Let \( f : X \to Y \) be a function.
 \end{itemize}
 
 \textbf{Proof:}
+
 We prove the second part of 1 and the first part of 2; the 
 remaining statements are left as exercises.
 
@@ -194,6 +198,7 @@ remaining statements are left as exercises.
 \end{itemize}
 
 \subsubsection{Union and Cut of the whole Domain and Range}
+
 Let \( f : X \to Y \) be a function.
 \begin{itemize}[label =\(-\)]
 	\item Let \( \mathcal{F} \) be a collection of subsets of \( X \). Then:
@@ -212,6 +217,7 @@ Let \( f : X \to Y \) be a function.
 \end{itemize}
 
 \textbf{Proof (partial).}
+
 We show the first statement of part (ii); the rest follows analogously.
 
 Let \( x \in f^{-1} \left( \bigcup_{B \in \mathcal{G}} B \right) \). Then:

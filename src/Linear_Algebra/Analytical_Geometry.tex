@@ -62,7 +62,7 @@ with the following properties:
 	\langle\vec{a}, \vec{b}\rangle = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n = \sum_{i = 1}^{n} a_i b_i
 \]
 
-\subsubsection{Proof}
+\textbf{Proof:}
 
 Lets look at the following Triangle:
 \begin{center}
@@ -134,19 +134,22 @@ The angle \(\theta\) between two vectors is:
 	\cos\theta = \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{a}\|\|\vec{b}\|}, \quad \theta = \arccos\left( \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{a}\|\|\vec{b}\|} \right)
 \]
 
-\subsubsection*{Line-Line Angle}
+\textbf{Line-Line Angle}
+
 Use direction vectors \(\vec{v}_1\) and \(\vec{v}_2\):
 \[
 	\theta = \arccos\left( \frac{\langle\vec{v}_1, \vec{v}_2\rangle}{\|\vec{v}_1\|\|\vec{v}_2\|} \right)
 \]
 
-\subsubsection*{Line-Plane Angle}
+\textbf{Line-Plane Angle}
+
 Let \(\vec{v}\) be the line's direction and \(\vec{n}\) the plane's normal:
 \[
 	\theta = \arcsin\left( \frac{\langle\vec{v}, \vec{n}\rangle}{\|\vec{v}\|\|\vec{n}\|} \right)
 \]
 
-\subsubsection*{Plane-Plane Angle}
+\textbf{Plane-Plane Angle}
+
 Angle between planes is angle between their normals:
 \[
 	\theta = \arccos\left( \frac{\langle\vec{n}_1, \vec{n}_2\rangle}{\|\vec{n}_1\|\|\vec{n}_2\|} \right)
@@ -189,7 +192,7 @@ The orthogonal projection of vector \(\vec{a}\) onto vector \(\vec{b}\) is given
 	\text{p}_{\vec{b}}(\vec{a}) = \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{b}\|^2} \cdot \vec{b}
 \]
 
-\subsubsection*{Proof of the projection formula}
+\textbf{Proof of the projection formula}
 \[
 	p \| q \implies \alpha q = p\ \forall \alpha \in \mathbb{K}\ \text{and}\ \forall\ p, q \in V
 \]
@@ -487,44 +490,58 @@ Now compute the dot product:
 \QED
 
 \subsection{Distances between points, lines and planes}
-\subsubsection*{Distance between two points}
+
+\textbf{Distance between two points}
+
 The distance between two points \(\vec{P_1}\) and \(\vec{P_2}\) in \(\mathbb{R}^n\) is given by:
 \[
 	d(\vec{P_1}, \vec{P_2}) = \|\vec{P_1} - \vec{P_2}\| = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + \cdots + (z_1 - z_2)^2}
 \]
 where \(\vec{P_1} = (x_1, y_1, \cdots,z_1)\) and \(\vec{P_2} = (x_2, y_2, \cdots,z_2)\).
-\subsubsection*{Distance between a point and a hyperplane}
+
+\textbf{Distance between a point and a hyperplane}
+
 The distance between a point \(\vec{P}\) and a hyperplane defined by the equation \(\langle \vec{n}, \vec{x} - \vec{P_0} \rangle = 0\) is given by:
 \[
 	d(\vec{P}, \text{hyperplane}) = \frac{|\langle \vec{n}, \vec{P} - \vec{P_0} \rangle|}{\|\vec{n}\|}
 \]
 where \(\vec{P_0}\) is a point on the hyperplane and \(\vec{n}\) is the normal vector of the hyperplane.
-\subsubsection*{Distance between two lines}
+
+\textbf{Distance between two lines}
+
 The distance between two lines in \(\mathbb{R}^3\) can be calculated using the formula:
 \[
 	d = \frac{|\langle \vec{v_1} \times \vec{v_2}, \vec{P_2} - \vec{P_1} \rangle|}{\|\vec{v_1} \times \vec{v_2}\|}
 \]
 where \(\vec{P_1}\) and \(\vec{P_2}\) are points on the two lines, and \(\vec{v_1}\) and \(\vec{v_2}\) are the direction vectors of the lines.
-\subsubsection*{Distance between a point and a line}
+
+\textbf{Distance between a point and a line}
+
 The distance between a point \(\vec{P}\) and a line defined by the parametric equation \(\vec{r}(t) = \vec{P_0} + t\vec{v}\) is given by:
 \[
 	d(\vec{P}, \text{line}) = \frac{\|\vec{v} \times (\vec{P} - \vec{P_0})\|}{\|\vec{v}\|}
 \]
 where \(\vec{P_0}\) is a point on the line and \(\vec{v}\) is the direction vector of the line.
-\subsubsection*{Distance between two planes}
+
+\textbf{Distance between two planes}
+
 The distance between two parallel planes defined by the equations \(\langle \vec{n}, \vec{x} - \vec{P_1} \rangle = 0\) and \(\langle \vec{n}, \vec{x} - \vec{P_2} \rangle = 0\) is given by:
 \[
 	d = \frac{|\langle \vec{n}, \vec{P_2} - \vec{P_1} \rangle|}{\|\vec{n}\|}
 \]
 where \(\vec{P_1}\) and \(\vec{P_2}\) are points on the two planes, and \(\vec{n}\) is the normal vector of the planes.
-\subsubsection*{Distance between a point and a plane}
+
+\textbf{Distance between a point and a plane}
+
 The distance between a point \(\vec{P}\) and a plane defined by the equation \(\langle \vec{n}, \vec{x} - \vec{P_0} \rangle = 0\) is given by:
 \[
 	d(\vec{P}, \text{plane}) = \frac{|\langle \vec{n}, \vec{P} - \vec{P_0} \rangle|}{\|\vec{n}\|}
 \]
 where \(\vec{P_0}\) is a point on the plane and \(\vec{n}\) is the normal vector of the plane.
 
-\subsubsection{Example: Distance Between Two Skew Lines}
+\textbf{Example:} 
+
+Distance Between Two Skew Lines
 
 To find the shortest distance between two skew lines, we use the formula:
 \[
@@ -595,7 +612,7 @@ Where:
 
 \subsection{Foot of the Perpendicular and Mirror Point}
 
-\subsubsection{Foot of the Perpendicular}
+\textbf{Foot of the Perpendicular}
 
 The \textbf{foot of the perpendicular} from a point \(\vec{P}\) to a line (or plane) is the point on the line (or plane) where the perpendicular from \(\vec{P}\) meets it.
 
@@ -623,7 +640,7 @@ then the foot of the perpendicular from point \(\vec{P}\) to the plane is:
 	\vec{F} = \vec{P} - ((\vec{P} - \vec{Q}) \cdot \vec{n}) \cdot \vec{n}
 \]
 
-\subsubsection{Mirror Point}
+\textbf{Mirror Point}
 
 The \textbf{mirror point} (or reflected point) of \(\vec{P}\) across a line or plane is the point \(\vec{P}'\) such that the midpoint between \(\vec{P}\) and \(\vec{P}'\) is the foot of the perpendicular.
 

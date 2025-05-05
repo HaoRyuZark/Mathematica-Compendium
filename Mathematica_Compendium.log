@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.4.23)  2 MAY 2025 13:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2025.4.23)  5 MAY 2025 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,27 +1113,490 @@ Non-PDF special ignored!
 <special> ps:0.8 setlinewidth 0 setgray
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Mathematica_Compendium.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Mathematica_Compendium.toc [2] [3] [4] [5] [6] [7] [8] [9] [10] [11])
 \tf@toc=\write7
 \openout7 = `Mathematica_Compendium.toc'.
 
- [2] (./src/Linear_Algebra/Change_of_Basis.tex [3] [4]) (./Mathematica_Compendium.aux)
+ [12] (./src/Introction_and_others/Introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--26
+
+ []
+
+[13]) (./src/Sets_and_Logic/Logic.tex [14]
+Underfull \hbox (badness 10000) in paragraph at lines 227--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--236
+
+ []
+
+[15] [16] [17] [18] [19]) (./src/Sets_and_Logic/Set_Theory.tex [20] [21] [22] [23] [24]) (./src/Sets_and_Logic/Relations_and_functions.tex
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+[25] [26] [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 340--344
+
+ []
+
+[29] [30]) (./src/Sets_and_Logic/Mathematical_Proofs.tex
+LaTeX Font Info:    Trying to load font information for U+euf on input line 19.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [31] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 218--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--225
+
+ []
+
+[33]) (./src/Numbers/The_Natural_Numbers.tex [34{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [35] [36]) (./src/Numbers/Archimedes.tex [37]) (./src/Numbers/Arithmetic.tex [38] [39]) (./src/Numbers/Real_Numbers.tex [40]) (./src/Numbers/Complex.tex [41] [42] [43]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 240.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 240.
+
+Missing character: There is no � in font cmr10!
+[44]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 331.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 331.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 331.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 331.
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 339.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 340.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 340.
+
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr10!
+Missing character: There is no � in font cmr5!
+[45]) (./src/Topology/Topology.tex [46]) (./src/Algebra/Means_and_Proofs.tex [47] [48]) (./src/Algebra/Solving_Polynomials.tex [49] [50]) (./src/Algebra/Binomial_Coeffient.tex [51]) (./src/Algebra/Rule_of_Three.tex [52] [53]) (./src/Algebra/Partial_Fractions.tex [54] [55]) (./src/Algebra/Recursion.tex
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 32.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 32.
+
+Missing character: There is no � in font cmr10!
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 32.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 32.
+
+Missing character: There is no � in font cmr10!
+[56] [57]) (./src/Algebra/Logarithms.tex [58] [59]) (./src/Algebra/Fractions_Roots_and_Exponents.tex [60]) (./src/Algebra/Fundamental_Theoreme_of_Algebra.tex [61] [62]) (./src/Algebra/Generating_Functions.tex [63] [64]) (./src/Geometry_and_Trig/Geometry.tex [65] [66] [67] [68] [69] [70] [71] [72] [73]) (./src/Geometry_and_Trig/Trigonometry.tex
+<./resources/images/trig.jpg, id=3061, 235.6002pt x 338.2236pt>
+File: ./resources/images/trig.jpg Graphic file (type jpg)
+<use ./resources/images/trig.jpg>
+Package pdftex.def Info: ./resources/images/trig.jpg  used on input line 39.
+(pdftex.def)             Requested size: 235.59961pt x 338.22278pt.
+ [74] [75 <./resources/images/trig.jpg>] [76] [77] [78]) (./src/Linear_Algebra/Linear_Systems_of_Equations.tex [79] [80] [81] [82] [83]) (./src/Linear_Algebra/Analytical_Geometry.tex [84]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 75.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 75.
+
+Missing character: There is no � in font cmr10!
+[85] [86] [87] [88] [89] [90] [91] [92] [93]) (./src/Linear_Algebra/Algebraic_Structures.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 47.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 54.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 61.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 61.
+
+[94]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 68.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\odot' on input line 75.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\odot' on input line 87.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\odot' on input line 94.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\oplus' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cdot' on input line 101.
+
+[95]) (./src/Linear_Algebra/Vector_Spaces.tex [96] [97] [98]
+Overfull \hbox (6.7415pt too wide) in paragraph at lines 213--214
+[]\OT1/cmr/m/n/10 Therefore, we have $\OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = [] = \OML/cmm/m/it/10 a[] \OT1/cmr/m/n/10 = 0$, which proves that the set of poly-no-mi-als $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; x; x[]; [] ; x[]\OMS/cmsy/m/n/10 g$
+ []
+
+
+Overfull \hbox (44.33153pt too wide) in paragraph at lines 226--227
+[]\OT1/cmr/m/n/10 Now as-sume the state-ment is true for $\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1$. Let the poly-no-mial $\OML/cmm/m/it/10 p[]$ \OT1/cmr/m/n/10 in-ter-po-late the points $(\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 )$.
+ []
+
+[99] [100]) (./src/Linear_Algebra/Dot_Product_euclidean_and_unitary_space.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 63.
+
+[101] [102]) (./src/Linear_Algebra/Matrices.tex [103] [104] [105] [106] [107] [108] [109] [110] [111]) (./src/Linear_Algebra/Change_of_Basis.tex [112] [113]) (./src/Linear_Algebra/Determinants.tex [114] [115] [116]) (./src/Linear_Algebra/Eigen_Val_and_Vec.tex [117] [118]) (./src/Analysis/Singlevariable/The_exponential.tex [119] [120]) (./src/Analysis/Singlevariable/Growth.tex
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 46.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction x). Replacing it with a default range and clearing all plots. on input line 47.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+[121] [122] [123]) (./src/Analysis/Singlevariable/Asymptopes.tex [124] [125]) (./src/Analysis/Singlevariable/Sequences_and_Series.tex [126] [127] [128] [129] [130]) (./src/Analysis/Singlevariable/Limits.tex [131] [132] [133] [134]) (./src/Analysis/Singlevariable/Convergence_Radius.tex [135]) (./src/Analysis/Singlevariable/Value_of_a_Series.tex [136]) (./src/Analysis/Singlevariable/Power_Series.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 14.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 20.
+
+[137] [138]) (./src/Analysis/Singlevariable/Continuity.tex [139] [140]) (./src/Analysis/Singlevariable/Differentiation.tex [141] [142] [143]) (./src/Analysis/Singlevariable/Integrals.tex [144] [145] [146] [147] [148]) (./src/Analysis/Singlevariable/Importan_Theoremes.tex [149] [150]) (./src/Analysis/Multivariable/Coordinates_Systems.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 16.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 16.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 40.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 40.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 63.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 63.
+
+[151]) (./src/Analysis/Multivariable/Parameterize_Curves.tex [152]) (./src/Analysis/Multivariable/Multivariable_Functions.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 31.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 31.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 70.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 70.
+
+[153]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 130.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 130.
+
+[154]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 167.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 167.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 179.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 179.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 191.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 191.
+
+[155]) (./src/Analysis/Multivariable/Multivariable_Differentiation.tex [156] [157] [158]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 269.
+
+[159]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 413.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 413.
+
+[160]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 452.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 452.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--480
+
+ []
+
+[161] [162] [163] [164]) (./src/Analysis/Multivariable/Multidimensional_Integrals.tex
+<./resources/images/Line-integral.png, id=3557, 752.8125pt x 506.89375pt>
+File: ./resources/images/Line-integral.png Graphic file (type png)
+<use ./resources/images/Line-integral.png>
+Package pdftex.def Info: ./resources/images/Line-integral.png  used on input line 70.
+(pdftex.def)             Requested size: 226.48395pt x 152.49469pt.
+ [165] [166 <./resources/images/Line-integral.png>] [167] [168]
+Package pgfplots info on input line 341: fill between: activating layered graphics
+\pgf@layerbox@axis background=\box143
+\pgf@layerboxsaved@axis background=\box144
+\pgf@layerbox@axis grid=\box145
+\pgf@layerboxsaved@axis grid=\box146
+\pgf@layerbox@axis ticks=\box147
+\pgf@layerboxsaved@axis ticks=\box148
+\pgf@layerbox@axis lines=\box149
+\pgf@layerboxsaved@axis lines=\box150
+\pgf@layerbox@axis tick labels=\box151
+\pgf@layerboxsaved@axis tick labels=\box152
+\pgf@layerbox@pre main=\box153
+\pgf@layerboxsaved@pre main=\box154
+\pgf@layerbox@axis descriptions=\box155
+\pgf@layerboxsaved@axis descriptions=\box156
+\pgf@layerbox@axis foreground=\box157
+\pgf@layerboxsaved@axis foreground=\box158
+Package pgfplots info on input line 341: Setting layers 'axis background,axis grid,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis foreground'...
+ [169] [170] [171] [172] [173]) (./src/Analysis/Multivariable/Differential_Equations.tex [174] [175] [176] [177] [178]) (./src/Probability/Probability.tex [179] [180]) (./src/Probability/Combinatorics.tex [181]
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 71.
+
+[182]) [183] (./Mathematica_Compendium.aux)
 Package rerunfilecheck Info: File `Mathematica_Compendium.out' has not changed.
-(rerunfilecheck)             Checksum: E95ECE39F9D9B2D0641D6AE0CFB48D27;512.
+(rerunfilecheck)             Checksum: CA7EBC6DB9DAF03FC78CAFBD3C4D3D54;101102.
  ) 
 Here is how much of TeX's memory you used:
- 63030 strings out of 476041
- 1580602 string characters out of 5793174
- 2462833 words of memory out of 6000000
- 82665 multiletter control sequences out of 15000+600000
- 521485 words of font info for 70 fonts, out of 8000000 for 9000
+ 65936 strings out of 476041
+ 1640292 string characters out of 5793174
+ 3366956 words of memory out of 6000000
+ 84498 multiletter control sequences out of 15000+600000
+ 526429 words of font info for 89 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 87i,15n,91p,787b,1006s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Mathematica_Compendium.pdf (4 pages, 175897 bytes).
+ 87i,15n,91p,787b,2777s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Mathematica_Compendium.pdf (183 pages, 995837 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3972 PDF objects out of 4296 (max. 8388607)
+ 3688 compressed objects within 37 object streams
+ 906 named destinations out of 1000 (max. 500000)
+ 4243 words of extra memory for PDF output out of 10000 (max. 10000000)
 

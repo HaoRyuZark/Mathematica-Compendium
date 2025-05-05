@@ -1,0 +1,318 @@
+\section{Differential Equations}
+
+A Differential Equation is an equation that relates a function (the dependent varible)
+with a varible or multiple variables (the independent variables) and its derivative.
+
+They can be categorized in \emph{Ordinary} and \emph{Partial} Differential Equations.
+
+\subsection{Ordinary Differential Equations}
+
+An equation of the form 
+
+\[
+y^n = f(x, y, x', y', \dots, y^{n -1})
+\]
+
+is called \emph{Ordinary Explicit Differential Equations of order} \(n\)
+
+If \(y^n = 0\) then it is \emph{implicit}
+
+If the exponent of the dependent varible is 1 and it
+is build like a linear equation then it is categorized as \emph{Linear}
+
+\subsection{Initial Value Problems and Solutions}
+
+The specification of an explicit differential equation and the values
+\[
+x_0,\quad y(x_0) = y_0,\quad y'(x_0) = y_1,\quad \dots,\quad y^{(n-1)}(x_0) = y_{n-1}
+\]
+is called an \emph{initial value problem (IVP)}.
+
+An \emph{n}-times differentiable function \( y(x) \) that satisfies 
+the explicit differential equation is called the \emph{general solution} of the 
+differential equation. If it also satisfies the conditions of the initial value problem 
+from the previous definition, it is called the \emph{particular solution} of the IVP.
+
+\subsection{Volterra Integral}
+
+The function \(y(x)\) is a solution of the IVP \(y' = f(x,y),\quad y(x_0) = y_0\) if and only if
+
+\[y(x) = y_0 + \int_{x_0}^{x} f(t, y(t))dt\]
+
+\textbf{Proof:}
+
+\[\int_{x_0}^{x} f(t, y(t))dt = \int_{x_0}^{x} y'\]
+\[y(x) = y(x_0)\]
+
+The other way would be
+
+\[\left(\int_{x_0}^{x} f(t, y(t))dt + y_0\right)' = f(x, y(x)) = y' \]
+
+\QED
+
+\subsection{The Picard-Lindelöf Iteration Method}
+
+We can approximate the desired solution using the Volterra integral equation as follows. Start with an arbitrary initial function, for example a constant — preferably the initial value:
+\[
+g_0(x) = y_0
+\]
+Then form the next approximation to the desired function \( y(x) \) as:
+\[
+g_{n+1}(x) = y_0 + \int_{x_0}^{x} f(t, g_n(t)) \, dt
+\]
+
+\subsection{Integration case}
+
+To solve a ODE of the form \(y' = f(x)\) it is as easy as integrating \(f(x)\).
+
+\subsection{Separation of Variables}
+
+An equation \(F(x,y,y',\dots) = 0\) is a called an equation of \emph{separable variables} if it can
+be written in one of the following forms:
+
+\begin{itemize}[label=\(-\)]
+    \item \(\frac{dy}{dx} = f(x) g(y)\)
+    \item \(\frac{dy}{dx} = \frac{f(x)}{g(y)}\)
+     \item \(\frac{dy}{dx} = \frac{g(y)}{f(x)}\)
+\end{itemize}
+
+\subsubsection{Steps to solve a ODE of separable variables}
+
+\begin{enumerate}
+    \item Solve for the derivative
+    \item Check that it is indeed an ODE of separable variables
+    \item Separate the variables
+    \item Integrate with respect to the independent variable
+\end{enumerate}
+
+\textbf{Example:}
+
+Given is \((y - 2)y' = 3x - 5\)
+
+It is an ODE of separable varible
+\[y' = \frac{3x - 5}{y - 2}\]
+
+Now we separate the variables and Integrate
+
+\[\int (y - 2)y' dx = \int 3x - 5 dx\]
+
+Note that \(y' = \frac{dy}{dx}\) and \( \frac{dy}{dx} dx = dy\) (only as a convinient fiction :D 
+in reality we are changing the variables) thus
+
+\[\int (y - 2)dy = \int 3x - 5 dx\]
+\[\frac{y^2}{2} - 2y + c = \frac{3x^2}{2} - 5x + c\]
+
+The solution we get is a implicit solution. To make it look nice solve for \(y\)
+if you can.
+
+\subsection{Geometry of ODE}
+
+You can imagine the plot of an ODE as a \emph{Slope field} where the slope (derivative) of a function
+obeys a certain condition, this being the differential equation \(\frac{dy}{dx} = expr\).
+
+A point on this field is called an \emph{Initial Condition} and the curve that goes through
+that point in the slope field is called an \emph{Integral curve} which a solution to the differential
+equation with respect to that initial condition.
+
+\subsection{Existence and Uniqueness}
+
+Let \( f(x, y) \) be continuous on a rectangle \( [a, b] \times \mathbb{R} \). Then the differential equation
+\[
+y' = f(x, y)
+\]
+has at least one solution. A unique solution is only guaranteed under additional conditions.
+
+A function \( f : \mathbb{R}^2 \to \mathbb{R} \) is called \emph{Lipschitz continuous with respect to \( y \)} if there exists a constant \( L > 0 \) such that
+\[
+|f(x, y_1) - f(x, y_2)| \leq L |y_1 - y_2|
+\quad \text{for all } (x, y_1), (x, y_2) \in D.
+\]
+
+Let \( x_0 \in [a, b] \), and let \( f : [a, b] \times \mathbb{R} \to \mathbb{R} \) be continuous and bounded, and Lipschitz continuous in \( y \). Then the initial value problem
+\[
+y' = f(x, y), \quad y(x_0) = y_0
+\]
+has a unique solution on \( [a, b] \).
+
+Or in easier words
+
+If \(f\) and \(\frac{\partial f}{\partial y}\) are continuous near \((x_0, y_0)\) then
+there is a unique solution on an interval \(\alpha < x_0 < \beta\) to the IVP
+
+\[y' = f(x,y), \quad y(x_0) = y_0\]
+
+\subsection{How to deal with initial conditions}
+
+After solving a differential equation we may have the problem that certain initial
+conditions were set at the start, thus making our general solution not specific.
+
+Solving this problem is pretty easy, because we just have to solve for the constant terms
+in our general solution with respect to our initial conditions. Like for example \(y(0) = 1\)
+we would plug 0 for all \(x\)'s in our general solution the whole equation will be set equal to 1.
+
+\subsection{Linear Differential Equations}
+
+An ODE is called linar if all occurences of the dependent varible and its
+derivatives have a exponent of at most 1.
+
+\[a_n(x)y^n + a_{n - 1}y^{n -1} + \cdots + a_1(x)y' + a_0(x)y = b(x)\]
+
+If such an Equation has also the property \(b(x) = 0\) it is called \emph{Homogeneous}
+
+\subsubsection{How to solve a Linear Differential Equation}
+
+In this case we will focus on first Order. ODE.
+
+Write it in the standard form \(y' + p(x)y = f(x)\)
+
+Now use \emph{Integrating Factor Method}
+
+\subsection{Integrating Factor Method}
+
+We are going to multiply our expression by function \(r(x)\) 
+
+\[r(x)y' + r(x)p(x)y = r(x)f(x)\]
+
+Now we would like to write the left side as \(\frac{d}{dx} y r(x)\) because now if we
+were to integrate it would take us to the expression in the right.
+
+When we evaluate this new expression we get that
+
+\[\frac{d}{dx} y r(x) = y'r(x) + r'(x)y\]
+
+whihc is not quite what we actually have but it is close. Now note that we can say
+
+\[r'(x) = r(x)p(x)\]
+
+This is a differential equation of separable variables thus we can
+
+\[\frac{r'(x)}{r(x)} = p(x)\]
+
+\[\int \frac{r'(x)}{r(x)}dx = \int p(x)dx\]
+
+\[ \ln(r(x)) = \int p(x)\]
+
+afer using \(e\)
+
+\[ r(x) = e^{\int p(x)}\]
+
+Now we have found a \(r(x)\) and now that we know that such a function exists we can return 
+to our initial problem and say
+
+\[\frac{d}{dx}r(x)y = r(x)f(x)\]
+\begin{center}
+    \boxed{y = \frac{1}{r (x) } \int r (x) f (x) dx}
+\end{center}
+
+and 
+
+\[r(x) = e^{\int p (x) }\]
+
+\textbf{Example}
+
+Give are \(y' + 4y = e^{-x}\) and \(y(0) = \frac{4}{3}\)
+
+Here \(4 = p(x)\) and \(e^{-x} = f(x)\)
+
+Now lets use the formula for \(r(x) = e^{\int p (x)}\)
+
+this gives us \(r(x) = e^{\int 4dx} = e^{4x}\)
+
+Now recall the what we saw earlier
+
+\[e^{4x}y' + e^{4x}4y = e^{4x}e^{-x} = e^{3x}\]
+
+Our left side is just \(\frac{d}{dx} e^{4x}y\)
+
+Now lets complete the exercise with our last formula by integrating both sides
+
+\[\frac{d}{dx} e^{4x}y = e^{3x}\]
+\[y = \frac{1}{e^4x}\int e^{3x}\]
+\[y = \frac{1}{e^4x} \frac{1}{3}e^{3x} + c\]
+
+Which is our general solution
+
+To find our specific solution we just plug 0 in to our general solution that gives us
+\(\frac{1}{3} + c = \frac{4}{3}\) thus \(c = 1\)
+
+\subsection{Homogeneous Differential Equations}
+
+A differential equation 
+
+\[M(x,y)dx + N(x,y)dy = 0\]
+
+is considered \emph{Homogeneous} if and only if
+\(M(x)\) and \(N(x)\) are \emph{homogeneous} and they have the same degree.
+
+\subsubsection{Homogeneous Equation}
+
+A function \(f(x,y)\) is called \emph{homogeneous} if and only if it can be written
+
+\[f(xt, yt) = t^n f(x,y)\]
+
+\textbf{Example: }
+
+\[f(x,y) = x^3 + y^3\]
+\[f(tx, ty) = (tx)^3 + (ty)^3\]
+\[t^3 (x^3 + y^3) = t^3 f(x,y)\]
+
+It is important to note that the key is the each term have a toltal degree of \(n\).
+For example: \(x^2y + x3y^2\)
+
+\subsubsection{Homogeneous Functions Theoreme}
+
+If \(f(x,y)\) is homogeneous of degree \(0\) in \(x\) and \(y\) then 
+\(f\) is a function of \(\frac{y}{x}\)
+
+Or \(f(x,y,y')\) is homogeneous if it can be written as \(y' = f(\frac{x}{y})\) or \(y' = f(\frac{y}{x})\)
+
+\subsection{Steps for solving Homogeneous DE}
+
+\begin{enumerate}
+    \item Write in the form \(M(x,y)dx + N(x,y)dy = 0\)
+    \item Check if it is homogeneous
+    \item Change the variables to \(y = ux\) or \(x = uy\) depending on the situation
+    \item Solve using the separable variables method
+    \item Rewrite the answer in term of the original variables again
+\end{enumerate}
+
+\textbf{Example:}
+
+Give is the function \((x -y)dx = - xdy\)
+
+\textbf{Step 1.} We write it in the desired form \((x - y)dx + xdy = 0\)
+
+\textbf{Step 2.} We notice that both are of degree \(1\). This time we skip the rigorous check.
+
+\textbf{Step 3.} We are going to choose the simpler function to do the change of variable 
+depending on the \textbf{differential!} 
+
+The simpler function is \(xdy\) thus we are to change \(y\)
+
+\[y = ux\]
+\[dy = ux' + xu'\]
+
+and 
+
+\[u = \frac{y}{x}\]
+
+Now substitute
+
+\[(x - ux)dx + x(udx + xdu) = 0\]
+\[xdx - uxdx + xudx + x^{2}du = 0\]
+\[(x - ux + xu)dx + x^{2}du = 0\]
+\[xdx + x^{2}du = 0\]
+\[xdx = - x^{2}du\]
+\[dx = - xdu\]
+
+\textbf{Step 4.} Now we can integrate both sides
+\[\int \frac{1}{x}dx = \int du\]
+\[\ln x + c = -u + c\]
+
+\textbf{Step 5.} No we use \(u = \frac{y}{x}\) to return to our original variables
+
+\[\ln x + c = -\frac{y}{x} + c\]
+\[-x\ln x - xc = y\]
+
+
+\newpage

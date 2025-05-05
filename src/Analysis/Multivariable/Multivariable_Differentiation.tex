@@ -37,7 +37,7 @@ Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \v
 \end{pmatrix}
 \]
 
-\subsubsection{Derivating the fomula}
+\textbf{Derivating the fomula}
 
 Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_n(t)\hat{v_n}\) that \(f(x_1(t), \dots, x_n(t)) = C\)
 
@@ -55,7 +55,8 @@ Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_
 
 From the formula we see that: \(\nabla f\) is tre normal and \(\frac{d\vec{r}}{dt}\) the tangent of the curve
 
-\(\mathfrak{QED}\)
+\QED
+
 \subsubsection{Gradient Operations:}
 \begin{itemize}[label=\(-\)]
 \item \( \nabla(f + g) = \nabla f + \nabla g \)
@@ -76,10 +77,10 @@ The tangent plane to a differentiable surface \( z = f(x, y) \) at the point \( 
 T(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
 \]
 
-\noindent This plane touches the graph of the function at a single point\\
+This plane touches the graph of the function at a single point\\
 and shares its slope in both \( x \)- and \( y \)-directions.
 
-\noindent It can also be written in the parameterized form:
+It can also be written in the parameterized form:
 
 \[
 T(x,y) = \begin{pmatrix} x_0\\ y_0\\ z_0\end{pmatrix} + \lambda 
@@ -96,7 +97,7 @@ T(\vec{X}) = f(\vec{x_0}) + \sum_{i = 1}^{n} f_{x_i}(\vec{x_0})(x_i - x_{i}^0)
  = f(\vec{x_0}) + \langle \nabla f, (\vec{x} - \vec{x_0})\rangle
 \]
 
-\subsubsection*{Example: \( f(x, y) = 4x^2y + xy^2 + 1 \)}
+\textbf{Example: \( f(x, y) = 4x^2y + xy^2 + 1 \)}
 
 Compute partial derivatives:
 \[
@@ -138,7 +139,7 @@ This implies:
 |D_{\vec{v}}f(\vec{x}_0)| \le \|\nabla f(\vec{x}_0)\|
 \]
 
-\subsubsection*{Derivation of the Directional Derivative Formula}
+\textbf{Derivation of the Directional Derivative Formula}
 
 Let \( f(x, y) \) be differentiable, and let \( \vec{v} = (e_1, e_2) \) be a direction vector. We aim to derive the formula for the directional derivative \( D_{\vec{v}} f(x_0, y_0) \).
 
@@ -227,7 +228,7 @@ Given an approximate value \( \tilde{x} \) for the exact value \( x \):
 
 In multivariable contexts, similar formulas apply using vector norms.
 
-\subsubsection*{Absolute Error Example}
+\textbf{Absolute Error Example}
 
 We consider the function:
 \[
@@ -281,7 +282,8 @@ sum up to the dotal change in the original function.
 \[
 \frac{dz}{dt} = \frac{dz}{dx_1}\frac{dx_1}{dt} + \cdots + \frac{dz}{dx_n}\frac{dx_n}{dt}
 \]
-\subsubsection*{Relative Error Example}
+
+\textbf{Relative Error Example}
 
 The relative error of a function \( z = f(x_1, \dots, x_n) \) is defined by:
 \[
@@ -331,7 +333,7 @@ If the final result \( z \) must be accurate within \( \varepsilon_z = 0{,}01 \)
 \textbf{Conclusion:}  
 Each input measurement must be made with a maximum relative error of \( \boxed{0{,}33\%} \) to ensure the output \( z = abc \) is accurate to within 1%.
 
-\subsubsection*{Implicit Differentiation}
+\subsubsection{Implicit Differentiation}
 
 If a function \( F(x, y) = 0 \) defines \( y \) implicitly as a function of \( x \), and \( F \) is differentiable, then:
 
@@ -436,7 +438,7 @@ H_f(\vec{x}) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j} \right)
     \item If \(d = 0 \implies \) Next derivative decides
 \end{itemize}
 
-\subsubsection*{Example: \( f(x, y) = x^2 + y^2 \)}
+\textbf{Example: \( f(x, y) = x^2 + y^2 \)}
 
 \[
 \nabla f = \begin{pmatrix} 2x \\ 2y \end{pmatrix} \Rightarrow \text{Critical point at } (0, 0)
@@ -451,7 +453,7 @@ H_f = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \Rightarrow \text{positive de
 
 To find local minima or maxima of a function \( f : \mathbb{R}^n \to \mathbb{R} \), we first identify \textbf{critical points}, which are the candidates for relative extrema. These are the points where the gradient of \( f \) vanishes or does not exist.
 
-\subsubsection{Step 1: Compute the Gradient}
+\textbf{Step 1: Compute the Gradient}
 
 The gradient of \( f \), denoted \( \nabla f \), collects all the first partial derivatives:
 
@@ -464,7 +466,7 @@ The gradient of \( f \), denoted \( \nabla f \), collects all the first partial 
 \end{pmatrix}
 \]
 
-\subsubsection{Step 2: Solve the System \( \nabla f = 0 \)}
+\textbf{Step 2: Solve the System \( \nabla f = 0 \)}
 
 Find all points \( \vec{x}_0 \in \mathbb{R}^n \) such that:
 
@@ -483,7 +485,7 @@ You use the following techniques to find the points:
 
 there are more but which one to use depends on the kind problem.
 
-\subsubsection{Step 3: Analyze the Nature of the Critical Points}
+\textbf{Step 3: Analyze the Nature of the Critical Points}
 
 Once all critical points \( \vec{x}_0 \) satisfying \( \nabla f(\vec{x}_0) = 0 \) are found, analyze each using the \textbf{second derivative test} involving the Hessian matrix \( H_f \):
 
@@ -561,14 +563,14 @@ H_B =
 \end{bmatrix}
 \]
 Where:
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
   \item \( \nabla  g(x_1, \dots, x_n) \) is the \( m \times n \) Jacobian matrix of the constraints.
   \item \( \nabla^2 \mathcal{L}(x, \dots, x_n, \lambda_1, \dots, \lambda_n) \) is the \( n \times n \) Hessian of the Lagrangian with respect to \( x \).
 \end{itemize}
 
 Or basically a Hessian of the Lagrangian starting with\(lambda_1\).
 
-\subsubsection*{Example: Maximizing \( f(x, y) = xy \) under the constraint \( 2x + 2y = 40 \)}
+\textbf{Example: Maximizing \( f(x, y) = xy \) under the constraint \( 2x + 2y = 40 \)}
 
 We want to find the maximum of the function:
 \[
@@ -661,7 +663,7 @@ T(t) = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-\subsubsection{Derivation of the Tangent Vector Formula}
+\textbf{Derivation of the Tangent Vector Formula}
 
 Given a position vector function \(\vec{r}(t)\), the tangent vector to the curve described by \(\vec{r}(t)\) is obtained by taking the derivative of \(\vec{r}(t)\) with respect to time. This derivative is defined as the following limit:
 

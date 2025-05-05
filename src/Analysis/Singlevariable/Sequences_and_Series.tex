@@ -69,7 +69,7 @@ A sequence \((a_n)\) is a \textbf{Cauchy sequence} if for every \(\varepsilon > 
 
 Every convergent sequence is a Cauchy sequence. In complete metric spaces (like \(\mathbb{R}\)), the converse also holds.
 
-\subsubsection*{Example: Convergence Exercise}
+\textbf{Example: Convergence Exercise}
 
 Let \(a_i = \frac{1}{i}\) and \(\varepsilon = 0.01\). We want to find \(i_0\) such that:
 
@@ -91,12 +91,11 @@ This is the open interval \((a - \varepsilon, a + \varepsilon)\).
 
 \subsection{Supremum, Infimum, Maximum and Minimum}
 
-\begin{itemize}[label=\(-\)]
-\item The \textbf{supremum} of a set \(A \subseteq \mathbb{R}\) is the least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
-\item The \textbf{infimum} of a set \(A\) is the greatest lower bound: the largest number \(t\) such that \(a \ge t\) for all \(a \in A\).
-\item The \textbf{maximum} is the largest element in the set, if it exists.
-\item The \textbf{minimum} is the smallest element in the set, if it exists.
-\end{itemize}
+The \textbf{supremum} of a set \(A \subseteq \mathbb{R}\) is the least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
+
+The \textbf{infimum} of a set \(A\) is the greatest lower bound: the largest number \(t\) such that \(a \ge t\) for all \(a \in A\).The \textbf{maximum} is the largest element in the set, if it exists.
+
+The \textbf{minimum} is the smallest element in the set, if it exists.
 
 \textbf{Example:} For \(A = (0,1)\):
 \begin{itemize}[label=\(-\)]
@@ -155,7 +154,7 @@ A \textbf{subsequence} of a sequence \((a_n)\) is a sequence \((a_{n_k})\) where
 \item A bounded sequence always has at least one convergent subsequence (Bolzano-Weierstraß theorem).
 \end{itemize}
 
-\subsubsection{Serie}
+\subsection{Serie}
 
 A \textbf{series} is the sum of the terms of a sequence:
 \[
@@ -219,12 +218,10 @@ This is useful in proving the existence of limits, roots, and fixed points.
 
 The \textbf{Weierstraß Approximation Theorem} states:
 
-\begin{quote}
 Every continuous function \(f: [a, b] \rightarrow \mathbb{R}\) can be uniformly approximated by a polynomial \(P(x)\), i.e., for every \(\varepsilon > 0\) there exists a polynomial \(P(x)\) such that:
 \[
 |f(x) - P(x)| < \varepsilon \quad \forall x \in [a, b]
 \]
-\end{quote}
 
 This theorem is foundational in numerical analysis and approximation theory.
 
@@ -238,7 +235,7 @@ Every zero sequence is convergent (to 0), and plays an essential role in converg
 
 \subsection{The Monotony Principle}
 
-\textbf{Theorem:} Every bounded monotonic sequence converges.
+Every bounded monotonic sequence converges.
 
 \begin{itemize}[label=\(-\)]
 \item If \((a_n)\) is non-decreasing and bounded above, then \(\lim a_n\) exists and equals \(\sup \{a_n\}\).
@@ -265,7 +262,7 @@ Lets assume that the series is decreasing or \(a_{n + 1} < a_{n}\)
     2a_{n + 1} - 3 &< 2a_{n} - 3 \\
     a_{n + 1} &< a_{n}
 \end{align*}
-\qed
+\QED
 
 Now lets calculated the limit
 \[
@@ -290,7 +287,7 @@ a_{n + 1} = \sqrt{2a_n - 3} + 1 \ge \sqrt{2(2) - 3} + 1 = 2
 
 By setting \(a_n = 2\) we get the limit againg
 
-\(\mathfrak{QED}\)
+\QED
 
 \subsection{Operations on Sequences}
 

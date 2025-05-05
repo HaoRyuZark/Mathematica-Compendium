@@ -1,21 +1,24 @@
 \section{Linear Systems of Equations}
+
 In this section, we will discuss the solution of linear systems of equations. A linear system of equations is a set of equations that can be expressed in the form:
-\begin{equation*}
-	\begin{aligned}
-		a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n & = b_1  \\
-		a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n & = b_2  \\
-		                                           & \vdots \\
-		a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n & = b_m
-	\end{aligned}
-\end{equation*}
+\begin{align*}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n & = b_1  \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n & = b_2  \\
+& \vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n & = b_m
+\end{align*}
+
 where \( a_{ij} \) are the coefficients of the variables \( x_j \), and \( b_i \) are the constants on the right-hand side of the equations. The goal is to find the values of \( x_1, x_2, \ldots, x_n \) that satisfy all equations simultaneously.
+
 \subsection{Matrix Representation}
+
 A linear system can be represented in matrix form as:
 \begin{equation*}
 	A \mathbf{x} = \mathbf{b}
 \end{equation*}
 where \( A \) is the coefficient matrix, \( \mathbf{x} \) is the vector of variables, and \( \mathbf{b} \) is the vector of constants. The coefficient matrix \( A \) is an \( m \times n \) matrix, where \( m \) is the number of equations and \( n \) is the number of variables.
 The vector \( \mathbf{x} \) is an \( n \times 1 \) column vector, and the vector \( \mathbf{b} \) is an \( m \times 1 \) column vector. The system can be solved using various methods, including:
+
 \begin{itemize}[label=\(-\)]
 	\item Gaussian elimination
 	\item LU decomposition
@@ -25,7 +28,9 @@ The vector \( \mathbf{x} \) is an \( n \times 1 \) column vector, and the vector
 	\item Special methods for structured matrices (e.g., banded, Toeplitz)
 	\item Special methods for large-scale problems (e.g., conjugate gradient, GMRES)
 \end{itemize}
+
 \subsection{Gaussian Elimination}
+
 Gaussian elimination is a method for solving linear systems by transforming the system into an upper triangular form. The steps involved in Gaussian elimination are:
 \begin{enumerate}
 	\item Forward elimination: Transform the system into an upper triangular form by eliminating the variables from the equations.
@@ -38,7 +43,9 @@ The forward elimination process involves performing row operations on the augmen
 	\item Adding or subtracting a multiple of one row from another row
 \end{itemize}
 Once the matrix is in upper triangular form, back substitution is used to find the values of the variables. The last equation gives the value of the last variable, which can then be substituted into the previous equations to find the other variables.
+
 \subsection{Gauss-Jordan Elimination}
+
 Gauss-Jordan elimination is an extension of Gaussian elimination that transforms the matrix into reduced row echelon form (RREF). In RREF, each leading entry in a row is 1, and all entries above and below the leading entry are zeros. The steps involved in Gauss-Jordan elimination are:
 \begin{enumerate}
 	\item Forward elimination: Transform the system into an upper triangular form.
@@ -46,6 +53,7 @@ Gauss-Jordan elimination is an extension of Gaussian elimination that transforms
 	\item Solve for the variables directly from the RREF matrix.
 \end{enumerate}
 The Gauss-Jordan elimination method is particularly useful for finding the inverse of a matrix, as it can be applied to the augmented matrix \([A | I]\), where \(I\) is the identity matrix. If the left side of the augmented matrix becomes \(I\), then the right side will be the inverse of \(A\).
+
 \textbf{Example:} Solve the following system of equations using Gaussian elimination:
 \begin{align*}
 	2x + 3y + z  & = 1 \\
@@ -80,6 +88,7 @@ Thus, the solution to the system is:
 	y & = -\frac{3}{5} \\
 	z & = 1
 \end{align*}
+
 \subsection{Homogeneous Linear Equations}
 
 A linear equation is said to be \textbf{homogeneous} if its constant term is zero. That is, it can be written in the form:

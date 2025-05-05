@@ -7,6 +7,7 @@
 \end{itemize}
 
 \subsection{Fundamental Theorem of Arithmetic}
+
 Every integer greater than 1 can be written in the form
 \[
 	p_1^{n_1}p_2^{n_2} \cdots p_k^{n_k}
@@ -24,9 +25,13 @@ That is,
 
 \subsection{Lemmas}
 
-\textbf{Lemma.} If \(m \mid pq\) and \(\gcd(m, p) = 1\), then \(m \mid q\).
+\textbf{Lemma} 
 
-\textbf{Proof:} Write \(1 = \gcd(m, p) = am + bp\) for some \(a, b \in \mathbb{Z}\).
+If \(m \mid pq\) and \(\gcd(m, p) = 1\), then \(m \mid q\).
+
+\textbf{Proof:} 
+
+Write \(1 = \gcd(m, p) = am + bp\) for some \(a, b \in \mathbb{Z}\).
 Then
 \[
 	q = amq + bpq
@@ -36,9 +41,13 @@ Since \(m \mid amq\) and \(m \mid bpq\) (because \(m \mid pq\)), we conclude \(m
 \QED
 
 
-\textbf{Lemma.} If \(p\) is prime and \(p \mid a_1a_2 \cdots a_n\), then \(p \mid a_i\) for some \(i\).
+\textbf{Lemma} 
 
-\textbf{Proof:} (Case \(n=2\)): Suppose \(p \mid a_1a_2\), and \(p \nmid a_1\).
+If \(p\) is prime and \(p \mid a_1a_2 \cdots a_n\), then \(p \mid a_i\) for some \(i\).
+
+\textbf{Proof (Case \(n=2\)):} 
+
+Suppose \(p \mid a_1a_2\), and \(p \nmid a_1\).
 Then \(\gcd(p, a_1) = 1\), and by the previous lemma, \(p \mid a_2\).
 
 For general \(n > 2\): Assume the result is true for \(n-1\). Suppose \(p \mid a_1a_2 \cdots a_n\).
@@ -51,6 +60,7 @@ By the \(n=2\) case, either \(p \mid a_n\) or \(p \mid a_1a_2 \cdots a_{n-1}\), 
 \subsection{Proof of the Fundamental Theorem}
 
 \textbf{Existence:}
+
 Use induction on \(n > 1\).
 Base case: \(n = 2\) is prime.
 
@@ -58,6 +68,7 @@ Inductive step: If \(n\) is prime, done. Otherwise \(n = ab\), with \(1 < a, b <
 By induction, both \(a\) and \(b\) factor into primes, so \(n\) does too.
 
 \textbf{Uniqueness:}
+
 Suppose:
 \[
 	p_1^{m_1} \cdots p_j^{m_j} = q_1^{n_1} \cdots q_k^{n_k}

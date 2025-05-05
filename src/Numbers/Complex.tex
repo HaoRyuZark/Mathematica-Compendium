@@ -74,6 +74,7 @@ where:
 \end{align*}
 
 \textbf{Important:} The value of \( \theta \) depends on the quadrant where the complex number lies:
+
 \begin{itemize}[label=\(-\)]
 	\item Quadrant I: \( a > 0, b > 0 \) — use \( \tan^{-1}(b/a) \)
 	\item Quadrant II: \( a < 0, b > 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
@@ -160,49 +161,53 @@ These represent the four complex 4th roots of \( 1 + \sqrt{3}i \), equally space
 
 Solving equations in \( \mathbb{C} \) can involve various forms. Here are the most common cases:
 
-\begin{itemize}[label=\(-\)]
-	\item \textbf{Linear Equations:}
-	      Solve for \( z \) in \( az + b = 0 \), where \( a, b \in \mathbb{C} \), \( a \neq 0 \):
+\textbf{Linear Equations:}
+
+Solve for \( z \) in \( az + b = 0 \), where \( a, b \in \mathbb{C} \), \( a \neq 0 \):
 	      \[
 		      z = -\frac{b}{a}
 	      \]
 
-	\item \textbf{Equations Involving the Conjugate:}
-	      Solve for \( z \) in equations like \( z + \overline{z} = 4 \).
+\textbf{Equations Involving the Conjugate:}
+
+Solve for \( z \) in equations like \( z + \overline{z} = 4 \).
 	      Let \( z = x + iy \), then \( \overline{z} = x - iy \). So:
 	      \[
 		      z + \overline{z} = 2x \quad \to \quad x = 2 \quad \Rightarrow \quad z = 2 + iy
 	      \]
 	      The imaginary part remains free unless further constraints are given.
 
-	\item \textbf{Modulus Equations:}
-	      Solve \( |z| = r \):
+\textbf{Modulus Equations:}
+
+Solve \( |z| = r \):
 	      Let \( z = x + iy \), then:
 	      \[
 		      \sqrt{x^2 + y^2} = r \to x^2 + y^2 = r^2
 	      \]
 	      This is a circle of radius \( r \) centered at the origin in the complex plane.
 
-	\item \textbf{Equations Involving \( z \cdot \overline{z} \):}
-	      Recall \( z \cdot \overline{z} = |z|^2 \).
+\textbf{Equations Involving \( z \cdot \overline{z} \):}
+
+Recall \( z \cdot \overline{z} = |z|^2 \).
 	      For example, solve:
 	      \[
 		      z \cdot \overline{z} = 9 \to |z| = 3
 	      \]
 	      Again, a circle in the complex plane of radius 3.
 
-	\item \textbf{Quadratic Equations:}
-	      Complex roots occur naturally. For example:
+\textbf{Quadratic Equations:}
+
+Complex roots occur naturally. For example:
 	      \[
 		      z^2 + 1 = 0 \to z^2 = -1 \Rightarrow z = \pm i
 	      \]
 
-	\item \textbf{General Polynomial Equations:}
-	      Use De Moivre’s Theorem or polar form. Example:
+ \textbf{General Polynomial Equations:}
+
+ Use De Moivre’s Theorem or polar form. Example:
 	      \[
 		      z^n = w \to z_k = \sqrt[n]{|w|} \cdot e^{i\left( \frac{\arg(w) + 2k\pi}{n} \right)}, \quad k = 0, 1, \dots, n-1
 	      \]
-\end{itemize}
 
 \textbf{Example 1:}
 

@@ -1,13 +1,12 @@
 \section{The Fundamental Theorem of Algebra}
 
-\subsection{Fundamental Theorem of Algebra} 
 Given any positive integer \(n \geq 1\) and any choice of complex numbers \(a_0, a_1, \ldots, a_n\), such that \(a_n \neq 0\), the polynomial equation
 \[
 	a_n z^n + \cdots + a_1 z + a_0 = 0 \tag{1}
 \]
 has at least one solution \(z \in \mathbb{C}\).
 
-\subsection{Gist of the Proof}
+\textbf{Gist of the Proof}
 For readers familiar with Newton’s method for solving equations, one starts with a reasonably close approximation to a root, then adjusts the approximation by moving closer in an appropriate direction. We will employ the same strategy here, showing that if one assumes that the argument where the polynomial function achieves its minimum absolute value is not a root, then there is a nearby argument where the polynomial function has an even smaller absolute value, contradicting the assumption that the argument of the minimum absolute value is not a root.
 
 \subsection{Definitions and Axioms}
@@ -36,7 +35,8 @@ and similarly translate the circle. Presumably the polynomial \(q(z)\), defined 
 
 Our proof strategy is to construct some point \(x\), close to the origin, such that \(|q(x)| < |q(0)|\), thus contradicting the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
 
-\subsubsection*{Construction of \(x\) such that \(|q(x)| < |q(0)|\)}
+\textbf{Construction of \(x\) such that \(|q(x)| < |q(0)|\)}
+
 Let the first nonzero coefficient of \(q(z)\) following \(q_0\) be \(q_m\), so that
 \[
 	q(z) = q_0 + q_m z^m + q_{m+1} z^{m+1} + \cdots + q_n z^n.
@@ -53,7 +53,10 @@ Unlike the real numbers, in the complex number system the \(m\)-th roots of any 
 \]
 where \(R = \sqrt{z_1^2 + z_2^2}\) and \(\theta = \arctan(z_2 / z_1)\).
 
-\subsubsection*{Proof that \(|q(x)| < |q(0)|\)}
+\textbf{Proof:} 
+
+\[|q(x)| < |q(0)|\]
+
 With the definition of \(x\), we can write
 \[
 	q(x) = q_0 - q_0 r^m + q_{m+1} r^{m+1} \left(-\frac{q_0}{q_m}\right)^{(m+1)/m} + \cdots + q_n r^n \left(-\frac{q_0}{q_m}\right)^{n/m} = q_0 - q_0 r^m + E,
@@ -68,6 +71,7 @@ Thus \(|E|\) can be made arbitrarily small compared to \(|q_0 r^m| = |q_0| r^m\)
 \]
 which contradicts the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
 \QED
+
 \subsection{Theorem 2}
 Every polynomial of degree \(n\) with real or complex coefficients has exactly \(n\) complex roots, when counting multiplicities.
 

@@ -14,7 +14,7 @@ Equivalently,
 \lim_{x \to x_0} f(x) = f(x_0)
 \]
 
-\subsubsection*{Example: \(\varepsilon \delta\) Exercise for \(f(x) = \frac{1}{x}\) at \(x_0 > 0\)}
+\textbf{Example: \(\varepsilon \delta\) Exercise for \(f(x) = \frac{1}{x}\) at \(x_0 > 0\)}
 
 We want to find \(\delta\) such that:
 \[
@@ -65,8 +65,6 @@ A function \(f: D \subset \mathbb{R} \to \mathbb{R}\) is \textbf{Lipschitz conti
 
 \subsection{Banach Fixed Point Theorem}
 
-\subsubsection*{Definition}
-
 Let \((X, d)\) be a complete metric space, and \(f: X \to X\) a \textbf{contraction mapping}, i.e.,
 \[
 \exists L < 1 \text{ such that } d(f(x), f(y)) \le L \cdot d(x, y)
@@ -78,7 +76,7 @@ Then:
 \item Iterating \(x_{n+1} = f(x_n)\) converges to \(x^*\)
 \end{itemize}
 
-\subsubsection*{Interpretation and Meaning}
+\textbf{Interpretation and Meaning}
 
 The Banach Fixed Point Theorem ensures:
 \begin{itemize}[label=\(-\)]
@@ -87,7 +85,7 @@ The Banach Fixed Point Theorem ensures:
 \item Powerful tool in numerical methods and differential equations
 \end{itemize}
 
-\subsubsection*{A Priori and A Posteriori Approximations}
+\subsubsection{A Priori and A Posteriori Approximations}
 
 \textbf{A priori estimate:}
 \[
@@ -99,7 +97,7 @@ The Banach Fixed Point Theorem ensures:
 |x_n - x^*| \le \frac{L}{1 - L} |x_n - x_{n-1}|
 \]
 
-\subsubsection*{Steps for a Fixed Point Exercise}
+\subsubsection{Steps for a Fixed Point Exercise}
 
 Given \(f: [a, b] \to [a, b]\), to prove existence and convergence:
 
@@ -111,7 +109,7 @@ Given \(f: [a, b] \to [a, b]\), to prove existence and convergence:
     \item \textbf{Apply a priori or a posteriori bound}
 \end{enumerate}
 
-\subsubsection*{Example: \(f(x) = \frac{1}{x} + 3\) on \([2, 5]\)}
+\textbf{Example: \(f(x) = \frac{1}{x} + 3\) on \([2, 5]\)}
 
 \begin{itemize}[label=\(-\)]
 \item \textbf{Domain check:} \(x \in [2, 5] \Rightarrow \frac{1}{x} \in [0.2, 0.5] \Rightarrow f(x) \in [3.2, 3.5] \subset [2, 5]\)

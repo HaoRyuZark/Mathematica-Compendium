@@ -1,6 +1,7 @@
 \section{Logarithms}
 
-The logarithm of a number \(x\) with base \(b\) is the exponent to which the base must be raised to produce that number. It is denoted as:
+The \emph{Logarithm} of a number \(x\) 
+with base \(b\) is the exponent to which the base must be raised to produce that number. It is denoted as:
   \[
     \log_b(x) = y \iff b^y = x
   \]
@@ -47,37 +48,25 @@ where \(k\) is any positive number different from 1.
 f\prime(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 \]
 
- Let \(f(x) = \ln(x)\), then
-\[
-f\prime(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}
-\]
-\[
-= f\prime(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}
-\]
-\[
-= f\prime(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}
-\]
-\[
-= f\prime(x) = \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}
-\]
+Let \(f(x) = \ln(x)\), then
 
- Now let \(n = \frac{h}{x}\)
-\[
-f\prime(x) = \lim_{n \to 0} \ln\left(1 + n\right)^{\frac{x}{h} \frac{1}{x}}
-\]
-\[
-f\prime(x) = \lim_{n \to 0} \frac{1}{x} \ln\left(1 + n\right)^{\frac{1}{n}}
-\]
-\[
-f\prime(x) = \frac{1}{x} \ln \left(\lim_{n \to 0} (1 + n)^{\frac{1}{n}}\right)
-\]
-\[
-f\prime(x) = \frac{1}{x} \ln(e)
-\]
-\[
-f\prime(x) = \frac{1}{x}
-\]
- Therefore, the derivative of the natural logarithm is:
+\begin{align*}
+&f\prime(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}\\
+&= f\prime(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}\\
+&= f\prime(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}\\
+&= f\prime(x) = \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}
+\end{align*}
+ 
+Now let \(n = \frac{h}{x}\)
+
+\begin{align*}
+f\prime(x) &= \lim_{n \to 0} \ln\left(1 + n\right)^{\frac{x}{h} \frac{1}{x}}\\
+f\prime(x) &= \lim_{n \to 0} \frac{1}{x} \ln\left(1 + n\right)^{\frac{1}{n}}\\
+f\prime(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} (1 + n)^{\frac{1}{n}}\right)\\
+f\prime(x) &= \frac{1}{x}
+\end{align*}
+
+Therefore, the derivative of the natural logarithm is:
 \[
 \frac{d}{dx} \ln(x) = \frac{1}{x}
 \]
@@ -85,7 +74,7 @@ f\prime(x) = \frac{1}{x}
 
 \subsection{Demonstration of the Properties}
 
-\subsubsection{Product}
+\textbf{Product}
 
 Let \(a^n a^m = a^{n + m}\) and \(a^n = x\) and \(a^m = y\) then
 
@@ -95,9 +84,10 @@ Let \(a^n a^m = a^{n + m}\) and \(a^n = x\) and \(a^m = y\) then
 \[
 \log_a xy = \log_a x + \log_a y
 \]
+
 \QED
 
-\subsubsection{Quotient}
+\textbf{Quotient}
 
 Let \(\frac{a^n}{a^m} = a^{n - m}\) and \(a^n = x\) and \(a^m = y\) then like in the previous proof
 \[
@@ -105,7 +95,7 @@ Let \(\frac{a^n}{a^m} = a^{n - m}\) and \(a^n = x\) and \(a^m = y\) then like in
 \]
 \QED 
 
-\subsubsection{Power}
+\textbf{Power}
 
 Let \((a^n)^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
 \[
@@ -113,22 +103,15 @@ Let \((a^n)^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
 \]
 \QED
 
-\textbf{General Case:}
+\textbf{Power Rule General Case:}
 
 Let \((a^n)^m = b^x\) then \(\log_{a^n} b^x = m\) now lets manipulate the original expression
 
-\[
-\log_a (a^n)^m = \log_a b^x
-\]
-\[
-nm \log_a a = x \log_a b
-\]
-
-\[
-m = \frac{x}{n} \log_a b =  \log_{a^n} b^x
-\]
+\begin{align*}
+\log_a (a^n)^m &= \log_a b^x\\
+nm \log_a a &= x \log_a b\\
+m = \frac{x}{n} \log_a b &=  \log_{a^n} b^x 
+\end{align*}
 
 \QED
-
-
 \newpage

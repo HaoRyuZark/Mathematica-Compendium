@@ -1,8 +1,7 @@
-\section{Important Theorems}
+\section{Important Theorems of Single Variable Calculus}
 
 \subsection{Intermediate Value Theorem}
 
-\textbf{Theorem:}  
 Let \( f \) be a continuous function on the closed interval \([a, b]\). If \( f(a) \ne f(b) \) and \( N \) is any number between \( f(a) \) and \( f(b) \), then there exists \( c \in (a, b) \) such that \( f(c) = N \).
 
 \textbf{Proof:}  
@@ -22,7 +21,7 @@ Since \( f(x) \le N \) for all \( x < c \), and for any \( \varepsilon > 0 \), t
 f(c) = N
 \]
 
-\[\mathfrak{QED}\]
+\QED
 
 \begin{center}
 \begin{tikzpicture}[scale=1]
@@ -40,11 +39,8 @@ f(c) = N
 \end{tikzpicture}
 \end{center}
 
-
-
 \subsection{Extreme Value Theorem}
 
-\textbf{Theorem:}  
 If \( f \) is continuous on the closed interval \([a, b] \), then \( f \) attains a maximum and a minimum value on \([a, b]\).  
 That is, there exist \( c, d \in [a, b] \) such that:
 \[
@@ -65,7 +61,6 @@ f(d) = \max\{f(x): x \in [a, b]\}
 
 \subsection{Rolle’s Theorem}
 
-\textbf{Theorem:}  
 Let \( f \) be continuous on \([a, b] \), differentiable on \((a, b) \), and suppose \( f(a) = f(b) \).  
 Then, there exists \( c \in (a, b) \) such that \( f'(c) = 0 \).
 
@@ -94,7 +89,6 @@ If the maximum or minimum occurs at \( a \) or \( b \), since \( f(a) = f(b) \),
 
 \subsection{Mean Value Theorem}
 
-\textbf{Theorem:}  
 Let \( f \) be continuous on \([a, b] \) and differentiable on \((a, b) \).  
 Then there exists \( c \in (a, b) \) such that:
 \[
@@ -117,7 +111,7 @@ Then:
 g'(x) = f'(x) - \left( \frac{f(b) - f(a)}{b - a} \right) \Rightarrow f'(c) = \frac{f(b) - f(a)}{b - a}
 \]
 
-\[\mathfrak{QED}\]
+\QED
 
 \begin{tikzpicture}[thick]
     \path ( 1,4)        node[coordinate] (a1) {}

@@ -1,8 +1,10 @@
 \section{Calculating Series Values}
+
 \subsection{Telescoping Sums and Partial Fraction Decomposition}
 Telescoping sums are series where most of the terms cancel out, leaving only a few terms. Partial fraction decomposition is a technique used to rewrite rational functions as a sum of simpler fractions, which can often lead to telescoping sums.
 
-\subsubsection{Example: \(\sum_{k=1}^{\infty} \frac{1}{4k^2 - 1}\)}
+\textbf{Example: \(\sum_{k=1}^{\infty} \frac{1}{4k^2 - 1}\)}
+
 Consider the infinite series
 \[
 S = \sum_{k=1}^{\infty} \frac{1}{4k^2 - 1}.
@@ -16,7 +18,7 @@ Multiplying both sides by \((2k - 1)(2k + 1)\) gives
 1 = A(2k + 1) + B(2k - 1).
 \]
 To solve for \(A\) and \(B\), we can use the following values of \(k\):
-\begin{itemize}
+\begin{itemize}[label=\(-\)]
     \item For \(k = \frac{1}{2}\): \(1 = A(1 + 1) + B(0) \implies A = \frac{1}{2}\).
     \item For \(k = -\frac{1}{2}\): \(1 = A(0) + B(-1 - 1) \implies B = -\frac{1}{2}\).
 \end{itemize}

@@ -46,6 +46,7 @@ M^\perp = \{ v \in V \mid v \perp u \, \forall u \in M \}.
 \end{itemize}
 
 \textbf{Proof:}
+
 1.) We need to check the closure property. For \( u \in M \), \( x, y \in M^\perp \), and \( \lambda \in \mathbb{R} \), we have:
 
 \[
@@ -99,7 +100,9 @@ Using the Kronecker delta symbol \( \delta_{i,j} \):
 we have \( \langle v_i, v_j \rangle = \delta_{i,j} \) for any orthonormal system.
 
 \subsection{Writing a vector in terms of the Orthogonal Basis}
-\textbf{Example:} The vectors
+\textbf{Example:} 
+
+The vectors
 \[
 a_1 =
 \begin{pmatrix}
@@ -116,7 +119,9 @@ a_2 =
 \]
 are orthogonal and normalized, but do not form a basis. Thus, they constitute an \textbf{orthonormal system}.
 
-\textbf{Example:} The vectors
+\textbf{Example:} 
+
+The vectors
 \[
 a_1 =
 \begin{pmatrix}
@@ -142,7 +147,9 @@ form a basis, are orthogonal and normalized. Therefore, they form an \textbf{ort
 \subsection{Linear Independence of Orthogonal Systems}
 An orthogonal system \( (v_1, \ldots, v_n) \) is linearly independent.
 
-\textit{Proof:} Let \( \sum_{i=1}^n \lambda_i v_i = 0 \). Then, for any \( v_j \), it follows that
+\textbf{Proof:} 
+
+Let \( \sum_{i=1}^n \lambda_i v_i = 0 \). Then, for any \( v_j \), it follows that
 \[
 \left\langle \sum_{i=1}^n \lambda_i v_i, v_j \right\rangle = \sum_{i=1}^n \lambda_i \langle v_i, v_j \rangle = 0.
 \]
@@ -188,6 +195,7 @@ Let \( B = (v_1, \ldots, v_m) \) be an orthogonal system in \( V \), and let \( 
 \end{itemize}
 
 \subsection{The Gram-Schmidt Process}
+
 The Gram-Schmidt process is a method for orthonormalizing a set of vectors in an inner product space. Given a finite set of linearly independent vectors \( (v_1, \ldots, v_n) \), the process generates an orthonormal basis \( (u_1, \ldots, u_n) \) as follows:
 \begin{enumerate}
     \item Set \( u_1 = \frac{v_1}{\|v_1\|} \).
@@ -199,7 +207,10 @@ The Gram-Schmidt process is a method for orthonormalizing a set of vectors in an
     \item The resulting set \( (u_1, \ldots, u_n) \) is an orthonormal basis of the subspace spanned by \( (v_1, \ldots, v_n) \).
 \end{enumerate}
 \textbf{Note:} The Gram-Schmidt process can be applied to any finite set of linearly independent vectors in an inner product space, and it is particularly useful for constructing orthonormal bases in Euclidean spaces.
-\textbf{Example:} Let \( v_1 = (1, 0, 0) \), \( v_2 = (1, 1, 0) \), and \( v_3 = (1, 1, 1) \). The Gram-Schmidt process yields:
+
+\textbf{Example:} 
+
+Let \( v_1 = (1, 0, 0) \), \( v_2 = (1, 1, 0) \), and \( v_3 = (1, 1, 1) \). The Gram-Schmidt process yields:
 \[
 u_1 = \frac{v_1}{\|v_1\|} = (1, 0, 0), \quad
 u_2 = \frac{v_2 - \langle v_2, u_1 \rangle u_1}{\|v_2 - \langle v_2, u_1 \rangle u_1\|} = \left(0, 1, 0\right), \quad
@@ -233,7 +244,7 @@ Thus, the orthonormal basis is \( (1, 0, 0), (0, 1, 0), (0, 0, 1) \).
 \end{itemize}
 
 
-\subsubsection{Visualization of the Gram-Schmidt process in 2 dimension}
+\textbf{Visualization of the Gram-Schmidt process in 2 dimension}
 
 \begin{center}
 \begin{tikzpicture}

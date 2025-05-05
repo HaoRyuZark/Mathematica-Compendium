@@ -4,15 +4,13 @@ An \textbf{asymptote} of a curve is a line that the curve approaches but never t
 
 \subsection{Vertical Asymptotes}
 
-\subsubsection*{Definition}
-
 A \textbf{vertical asymptote} is a vertical line \(x = a\) where the function grows without bound as \(x\) approaches \(a\) from the left or right.
 
 \[
 \lim_{x \to a^-} f(x) = \pm \infty \quad \text{or} \quad \lim_{x \to a^+} f(x) = \pm \infty
 \]
 
-\subsubsection*{How to Find Vertical Asymptotes}
+\subsubsection{How to Find Vertical Asymptotes}
 
 \begin{enumerate}
     \item Find values of \(x\) that make the denominator of a rational function zero.
@@ -27,19 +25,17 @@ f(x) = \frac{1}{x - 2} \quad \Rightarrow \quad x = 2 \text{ is a vertical asympt
 
 \subsection{Horizontal Asymptotes}
 
-\subsubsection*{Definition}
-
 A \textbf{horizontal asymptote} is a horizontal line \(y = L\) that the function approaches as \(x\) tends to infinity or negative infinity:
 
 \[
 \lim_{x \to \pm\infty} f(x) = L
 \]
 
-\subsubsection*{How to Find Horizontal Asymptotes (Rational Functions)}
+\subsubsection{How to Find Horizontal Asymptotes (Rational Functions)}
 
 \begin{enumerate}
     \item Compare the degrees of the numerator (\(n\)) and denominator (\(m\)):
-    \begin{itemize}
+    \begin{itemize}[label=\(-\)]
         \item If \(n < m\): Horizontal asymptote at \(y = 0\)
         \item If \(n = m\): Horizontal asymptote at \(y = \frac{\text{leading coefficient of numerator}}{\text{leading coefficient of denominator}}\)
         \item If \(n > m\): No horizontal asymptote (check for slant)
@@ -53,15 +49,13 @@ f(x) = \frac{2x^2 + 3}{x^2 - 1} \quad \Rightarrow \quad y = \frac{2}{1} = 2 \tex
 
 \subsection{Oblique (Slant) Asymptotes}
 
-\subsubsection*{Definition}
-
 An \textbf{oblique or slant asymptote} occurs when the degree of the numerator is exactly one more than the degree of the denominator.
 
 \[
 \lim_{x \to \infty} [f(x) - (mx + b)] = 0
 \]
 
-\subsubsection*{How to Find Oblique Asymptotes}
+\subsubsection{How to Find Oblique Asymptotes}
 
 \begin{enumerate}
     \item Perform polynomial long division (or synthetic division) on the rational function.

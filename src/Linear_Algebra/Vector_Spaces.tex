@@ -1,10 +1,8 @@
 \section{Vector Spaces}
 
-\subsection{Definition}
-
 A \textbf{vector space} is a set \(V\) with two operations, vector addition and scalar multiplication, such that:
 
-\begin{itemize}[label=\(-\)]
+\begin{enumerate}[label=\Roman*.]
 	\item The set \(V\) is closed under vector addition.
 	\item The set \(V\) is closed under scalar multiplication.
 	\item Vector addition is commutative.
@@ -15,10 +13,10 @@ A \textbf{vector space} is a set \(V\) with two operations, vector addition and 
 	\item Scalar multiplication is distributive with respect to field addition: \((a + b)\vec{v} = a\vec{v} + b\vec{v}\) for all \(a, b \in F\) and \(\vec{v} \in V\).
 	\item Scalar multiplication is associative: \(a(b\vec{v}) = (ab)\vec{v}\) for all \(a, b \in F\) and \(\vec{v} \in V\).
 	\item The multiplicative identity acts as a scalar: \(1\vec{v} = \vec{v}\) for all \(\vec{v} \in V\).
-\end{itemize}
+\end{enumerate}
 The set \(F\) is a field, and the elements of \(V\) are called \textbf{vectors}.
 
-\subsection{Examples}
+\textbf{Examples:}
 
 \begin{enumerate}
 	\item The set of all \(n\)-tuples of real numbers \(\mathbb{R}^n\) is a vector space over the field of real numbers \(\mathbb{R}\).
@@ -30,12 +28,12 @@ The set \(F\) is a field, and the elements of \(V\) are called \textbf{vectors}.
 \subsection{Subspaces}
 
 A subset \(W\) of a vector space \(V\) is a \textbf{subspace} of \(V\) if:
-\begin{itemize}[label=\(-\)]
 
+\begin{enumerate}[label=\Roman*.]
 	\item The zero vector \(\vec{0} \in W\).
 	\item For all \(\vec{u}, \vec{v} \in W\), \(\vec{u} + \vec{v} \in W\).
 	\item For all \(a \in F\) and \(\vec{v} \in W\), \(a\vec{v} \in W\).
-\end{itemize}
+\end{enumerate}
 If \(W\) is a subspace of \(V\), we write \(W \subseteq V\).
 
 \textbf{Note:} The intersection of two subspaces is also a subspace.
@@ -171,7 +169,7 @@ Possibly, \((w_i, v_1, \ldots, v_r)\) is still not a basis of \(V\). Then we rep
 
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be bases of a vector space \(V\). Then, for every \(v_i\), there exists a \(w_j\) such that if we replace \(v_i\) by \(w_j\) in the tuple \((v_1, \ldots, v_n)\), it still forms a basis of \(V\).
 
-\subsubsection*{Proof}
+\textbf{Proof:}
 
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be two bases of \(V\). Suppose we remove \(v_i\) from the first basis. The truncated tuple \((v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n)\) satisfies
 \[
@@ -221,7 +219,7 @@ So you only have to prove that the set of coefficients vector is linearly indepe
 
 Given the \(n+1\) points \((x_k, y_k)\), with \(0 \leq k \leq n\) and all \(x_k\) distinct, there exists exactly one polynomial \(p_n \in P_n\) such that \(y_k = p_n(x_k)\) for all \(0 \leq k \leq n\). This polynomial is called the interpolation polynomial.
 
-\subsubsection*{Proof}
+\textbf{Proof}
 
 The uniqueness follows immediately from Remark 3.100. We prove the existence by induction on \(n\). For \(n = 0\), choose \(p_0(x) = y_0\). 
 
@@ -241,7 +239,7 @@ so that \(p_n(x_n) = y_n\).
 
 \QED
 
-\subsubsection{Example of the interpolation polynomial}
+\textbf{Example of the interpolation polynomial}
 
 Consider the three points \((-2, 1)\), \((-1, -1)\), and \((1, 1)\). By Theorem 3.101, these points uniquely define an interpolating parabola \(p_2\). This parabola can be determined using the definition of \(p_n\) from the proof of Theorem 3.101. For hand calculations and a small number of points to interpolate, the following approach is also useful. The general form of the polynomial is 
 \[

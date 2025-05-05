@@ -44,31 +44,72 @@ Let \((G, \oplus)\) and \((H, \oplus')\) be two algebraic structures.
 
 \subsection{Common Algebraic Structures}
 
-The following table lists common algebraic structures along with their notation and defining properties. Let \(\oplus\) denote the additive operation and \(\odot\) the multiplicative one:
+\subsection{Semigroup \((S, \oplus)\)}
+A \textbf{semigroup} is a set \(S\) equipped with a binary operation \(\oplus\) that is \textbf{associative}. This means:
+\[
+(a \oplus b) \oplus c = a \oplus (b \oplus c) \quad \text{for all } a, b, c \in S.
+\]
+There is no requirement for an identity element or inverses. Semigroups capture the essence of combining elements in a consistent way (e.g., string concatenation).
 
-\begin{center}
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|c|c|l|}
-\hline
-\textbf{Name} & \textbf{Notation} & \textbf{Properties} \\
-\hline
-\textbf{Semigroup} & \((S, \oplus)\) & Associative \\
-\hline
-\textbf{Monoid} & \((M, \oplus)\) & Associative, Identity element \\
-\hline
-\textbf{Group} & \((G, \oplus)\) & Associative, Identity, Inverses \\
-\hline
-\textbf{Abelian Group} & \((A, \oplus)\) & Group + Commutativity \\
-\hline
-\textbf{Ring} & \((R, \oplus, \odot)\) & \begin{tabular}[c]{@{}l@{}}\((R, \oplus)\) is an abelian group,\\ \((R, \odot)\) is a semigroup,\\ Distributivity: \(a \odot (b \oplus c) = a \odot b \oplus a \odot c\)\end{tabular} \\
-\hline
-\textbf{Commutative Ring} & \((R, \oplus, \odot)\) & Ring + \((R, \odot)\) is commutative \\
-\hline
-\textbf{Field} & \((K, \oplus, \odot)\) & \begin{tabular}[c]{@{}l@{}}Commutative Ring +\\ \((K \setminus \{0\}, \odot)\) is an abelian group\end{tabular} \\
-\hline
-\textbf{Vector Space} & \((V, \oplus, \cdot)\) & \begin{tabular}[c]{@{}l@{}}\((V, \oplus)\) is an abelian group,\\ \(\cdot: K \times V \to V\) (scalar mult.),\\ Distributivity, associativity, identities\end{tabular} \\
-\hline
-\end{tabular}
-\end{center}
+\subsection{Monoid \((M, \oplus)\)}
+A \textbf{monoid} builds on a semigroup by adding an \textbf{identity element} \(e\) such that:
+\[
+a \oplus e = e \oplus a = a \quad \text{for all } a \in M.
+\]
+This structure is useful when an operation must have a “do nothing” element, like \(0\) for addition or \(1\) for multiplication.
+
+\subsection{Group \((G, \oplus)\)}
+A \textbf{group} is a monoid where every element has an \textbf{inverse}:
+\[
+\text{For each } a \in G, \text{ there exists } a^{-1} \in G \text{ such that } a \oplus a^{-1} = a^{-1} \oplus a = e.
+\]
+Groups model reversible processes and are foundational in symmetry and abstract algebra.
+
+\subsection{Abelian Group \((A, \oplus)\)}
+An \textbf{abelian group} (or commutative group) is a group where the operation is \textbf{commutative}:
+\[
+a \oplus b = b \oplus a \quad \text{for all } a, b \in A.
+\]
+This property makes abelian groups especially important in number theory and linear algebra.
+
+\subsection{Ring \((R, \oplus, \odot)\)}
+A \textbf{ring} is a set with two operations:
+\begin{itemize}[label=\(-\)]
+  \item \((R, \oplus)\) is an abelian group.
+  \item \((R, \odot)\) is a semigroup (associative multiplication).
+  \item Multiplication distributes over addition:
+  \[
+  a \odot (b \oplus c) = a \odot b \oplus a \odot c.
+  \]
+\end{itemize}
+Rings generalize arithmetic of integers, where addition and multiplication interact in a structured way.
+
+\subsection{Commutative Ring \((R, \oplus, \odot)\)}
+A \textbf{commutative ring} is a ring where multiplication is also \textbf{commutative}:
+\[
+a \odot b = b \odot a \quad \text{for all } a, b \in R.
+\]
+This is the kind of ring most often encountered in basic algebra, such as the integers \(\mathbb{Z}\).
+
+\subsection{Field \((K, \oplus, \odot)\)}
+A \textbf{field} is a commutative ring where every nonzero element has a \textbf{multiplicative inverse}:
+\[
+(K \setminus \{0\}, \odot) \text{ is an abelian group}.
+\]
+Fields like \(\mathbb{Q}\), \(\mathbb{R}\), and \(\mathbb{C}\) allow division (except by zero), enabling the full range of arithmetic operations.
+
+\subsection{Vector Space \((V, \oplus, \cdot)\)}
+A \textbf{vector space} over a field \(K\) consists of:
+\begin{itemize}[label=\(-\)]
+  \item An abelian group \((V, \oplus)\) for vector addition.
+  \item A scalar multiplication \(\cdot: K \times V \to V\) satisfying:
+  \begin{itemize}
+    \item Distributivity over vector addition: \(a \cdot (v_1 + v_2) = a \cdot v_1 + a \cdot v_2\)
+    \item Distributivity over field addition: \((a + b) \cdot v = a \cdot v + b \cdot v\)
+    \item Associativity: \(a \cdot (b \cdot v) = (ab) \cdot v\)
+    \item Identity: \(1 \cdot v = v\)
+  \end{itemize}
+\end{itemize}
+Vector spaces provide the foundation for linear algebra, where scalars from a field combine with vectors from a set.
 
 \newpage

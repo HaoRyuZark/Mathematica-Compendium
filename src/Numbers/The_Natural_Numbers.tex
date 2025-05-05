@@ -41,7 +41,7 @@ An \textbf{ordered field} is a field \( F \) equipped with a total order \( < \)
 
 A field \( F \) is called an \textbf{ordered field} if it satisfies the following properties for all \( a, b, c \in F \):
 
-\begin{itemize}[label=\(-\)]
+\begin{enumerate}[label=\Roman*.]
     \item \textbf{Trichotomy:} Exactly one of the following holds:
     \[
     a < b, \quad a = b, \quad a > b
@@ -52,7 +52,7 @@ A field \( F \) is called an \textbf{ordered field} if it satisfies the followin
     \item \textbf{Additive Compatibility:} If \( a < b \), then \( a + c < b + c \).
 
     \item \textbf{Multiplicative Compatibility:} If \( 0 < a \) and \( 0 < b \), then \( 0 < ab \).
-\end{itemize}
+\end{enumerate}
 
 These properties ensure that arithmetic operations respect the order structure.
 
@@ -78,11 +78,15 @@ These properties ensure that arithmetic operations respect the order structure.
 
 \subsubsection{Proposition 1: \texorpdfstring{\(n \ne m \implies S(n) \ne S(m)\)}{n!= m implies S (n)!=S (m)}}
 
-\textbf{Proof:} We will prove this by contradiction. Assume \( n \ne m \) and \( S(n) = S(m) \). By Axiom 8, we have \( n = m \), which is a contradiction. Therefore, \( S(n) \ne S(m) \).
+\textbf{Proof:} 
+
+We will prove this by contradiction. Assume \( n \ne m \) and \( S(n) = S(m) \). By Axiom 8, we have \( n = m \), which is a contradiction. Therefore, \( S(n) \ne S(m) \).
 
 \subsubsection{Proposition 2: \texorpdfstring{\text{For any} \(n \in \mathbb{N},\ n \ne S(n)\)}{For any n in N, n!= S (n)}}
 
-\textbf{Proof:} \(M = \{n \in mathbb{N} \| n \ne S(n) \}\ \)
+\textbf{Proof:} 
+
+\(M = \{n \in mathbb{N} \| n \ne S(n) \}\ \)
 By \(1 \ne S(n)\ \) for any \(n \in \mathbb{N}\), this implies that 1 is part of the set \(M\). This implies that \(S(n) \ne S(S(n)) \implies S(n) \in M\ \) By Axiom 9 \(M = \mathbb{N}\)
 
 \subsubsection{Proposition 3: \texorpdfstring{\(n \ne 1\ \exists m \in \mathbb{N} \mid n = S(m)\)}{n!= 1, exists m in N | n = S (m)}}
@@ -108,7 +112,9 @@ For any pair n,m \(\in \mathbb{N}\) there is a unique way to define
 	\item \textbf{Inductive Step:} \(n + S(m) = S(n + m) \iff S(n + m)\)
 \end{enumerate}
 
-\textbf{Uniqueness:} Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \mathbb{N} | A(n,m) = B(n, m)\}\). Then
+\textbf{Uniqueness:} 
+
+Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \mathbb{N} | A(n,m) = B(n, m)\}\). Then
 \[
 	A(n,1) = S(n) = B(n,1) \implies 1 \in M
 \]
@@ -135,6 +141,7 @@ For any pair n,m \(\in \mathbb{N}\) there is a unique way to define
 \end{enumerate}
 
 \textbf{Commutativity of Addition:}
+
 The prosposition says \(n + m = m + n\) for any \(n, m \in \mathbb{N}\). We will prove this by induction on \(m\).
  Fix n and consider \(M = \{ n \in \mathbb{N} | A(n, m) = A(n, m)\}\)
 

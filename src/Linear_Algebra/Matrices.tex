@@ -29,13 +29,15 @@ The set of all \(m \times n\) matrices with real entries is denoted by \(\mathbb
 
 Matrix addition and subtraction are defined for matrices of the same dimensions.
 
-\subsubsection{Addition}
+\textbf{Addition}
+
 For matrices \(A, B \in \mathbb{R}^{m \times n}\), their sum \(C = A + B\) is defined as:
 \begin{equation*}
 c_{ij} = a_{ij} + b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
 \end{equation*}
 
-\subsubsection{Subtraction}
+\textbf{Subtraction}
+
 Similarly, the difference \(C = A - B\) is defined as:
 \begin{equation*}
 c_{ij} = a_{ij} - b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
@@ -104,6 +106,7 @@ The elementary row operations are:
 Matrix equivalence is an equivalence relation, satisfying reflexivity, symmetry, and transitivity. Equivalent matrices represent the same linear system in different bases.
 
 \subsubsection{Row Echelon Form (REF)}
+
 A matrix is in row echelon form if:
 \begin{itemize}[label=\(-\)]
     \item All rows consisting entirely of zeros are at the bottom of the matrix.
@@ -147,7 +150,8 @@ A A^{-1} = A^{-1} A = I_n
 \subsubsection{Finding the Inverse}
 There are several methods to find the inverse of a matrix:
 
-\paragraph{Gauß-Jordan Method} 
+\textbf{Gauß-Jordan Method} 
+
 Form the augmented matrix \([A|I_n]\) and apply Gauß-Jordan elimination to transform it into \([I_n|A^{-1}]\):
 \begin{enumerate}
     \item Create the augmented matrix \([A|I_n]\)
@@ -155,7 +159,8 @@ Form the augmented matrix \([A|I_n]\) and apply Gauß-Jordan elimination to tran
     \item The right side will be \(A^{-1}\)
 \end{enumerate}
 
-\paragraph{Adjoint Method}
+\textbf{Adjoint Method}
+
 For an \(n \times n\) matrix \(A\):
 \begin{equation*}
 A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
@@ -177,6 +182,7 @@ Equivalent definitions of rank include:
 \end{itemize}
 
 \subsubsection{Finding the Rank}
+
 To find the rank of a matrix:
 \begin{enumerate}
     \item Transform the matrix into row echelon form using Gauß-Jordan elimination
@@ -314,7 +320,7 @@ Let's verify that matrix multiplication is not generally commutative by attempti
 
 Since \(B\) is a \(3 \times 2\) matrix and \(A\) is a \(2 \times 3\) matrix, the product \(BA\) would be a \(3 \times 3\) matrix. However, this calculation cannot be performed since the number of columns in \(B\) (which is 2) does not equal the number of rows in \(A\) (which is 2). Thus, \(BA\) is undefined, demonstrating that matrix multiplication is not always commutative.
 
-\subsubsection{Example of Gauß-Jordan Elimination}
+\textbf{Example of Gauß-Jordan Elimination}
 
 We'll use Gauß-Jordan elimination to solve the linear system:
 \begin{align*}
@@ -440,7 +446,7 @@ z &= -2
 
 Therefore, the solution to the original system is \(x = 1\), \(y = 4\), and \(z = -2\).
 
-\subsubsection{Example of Finding the Inverse of a Matrix using Gauß-Jordan Elimination}
+\textbf{Example of Finding the Inverse of a Matrix using Gauß-Jordan Elimination}
 
 Let's find the inverse of the matrix:
 \begin{equation*}
@@ -594,12 +600,17 @@ f(v_j) = \sum_{i=1}^{m} a_{ij}w_i \quad \forall j = 1, \dots, n
 
 \subsection{Example of an exercise}
 
-1.  Determination of the kernel
-2.  Determination of the dimension of the kernel
-3.  Determination of the rank (dimension formula)
-4.  Determination of the image
+\begin{enumerate}
+    \item Determination of the kernel
+    \item Determination of the dimension of the kernel
+    \item Determination of the rank (dimension formula)
+    \item Determination of the image
+\end{enumerate}
 
-Example 4.51: Given
+
+\textbf{Example:} 
+
+Given
 \[
 f\begin{pmatrix}
 x_1 \\
@@ -615,7 +626,7 @@ x_1 - x_2 + x_3 \\
 
 It should be shown that \(f\) is linear, and \(\ker(f)\), \(\text{Im}(f)\) and their dimensions should be determined.
 
-A direct proof of linearity or by means of Remark 4.12.2 is easily possible. Instead, we give the transformation matrix \(A\). The images of the (canonical) basis vectors are
+A direct proof of linearity is easily possible. Instead, we give the transformation matrix \(A\). The images of the (canonical) basis vectors are
 \[
 f\begin{pmatrix}
 1 \\
