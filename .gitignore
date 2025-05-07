@@ -1,8 +1,0 @@
-# LaTeX intermediate and log files
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.gz
-*.toc
-
