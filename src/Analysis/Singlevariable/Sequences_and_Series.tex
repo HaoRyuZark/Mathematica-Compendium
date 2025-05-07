@@ -4,7 +4,7 @@ A sequence is an ordered list of numbers, usually defined by a formula or a recu
 
 \subsection{Arithmetic Sequence}
 
-An \textbf{arithmetic sequence} is a sequence where the difference between consecutive terms is constant.
+An \emph{arithmetic sequence} is a sequence where the difference between consecutive terms is constant.
 
 \[
 a_n = a_1 + (n - 1)d
@@ -22,7 +22,7 @@ a_n = 3 + (n - 1) \cdot 2 = 2n + 1 \quad \text{(Odd numbers)}
 
 \subsection{Geometric Sequence}
 
-A \textbf{geometric sequence} is a sequence where each term is obtained by multiplying the previous term by a fixed non-zero constant.
+A \emph{geometric sequence} is a sequence where each term is obtained by multiplying the previous term by a fixed non-zero constant.
 
 \[
 a_n = a_1 \cdot r^{n-1}
@@ -40,7 +40,7 @@ a_n = 2 \cdot 3^{n-1} = 2, 6, 18, 54, \dots
 
 \subsection{Function Squence}
 
-A \textbf{function sequence} is sequence composed of functions and its noted like:
+A \emph{function sequence} is sequence composed of functions and its noted like:
 
 \[
 (f)_n \text{with } x^t := \{ f: D\to R | \ f \text{ is a funtion}\}
@@ -48,7 +48,7 @@ A \textbf{function sequence} is sequence composed of functions and its noted lik
 
 \subsection{Convergence}
 
-A sequence \((a_n)\) \textbf{converges} to a limit \(L\) if for every \(\varepsilon > 0\), there exists an integer \(n_0\) such that for all \(n \ge n_0\):
+A sequence \((a_n)\) \emph{converges} to a limit \(L\) if for every \(\varepsilon > 0\), there exists an integer \(n_0\) such that for all \(n \ge n_0\):
 
 \[
 |\forall \varepsilon > 0\ \exists n \in \mathbb{N}: \forall i \ge n\ |a_i - L| < \varepsilon
@@ -61,7 +61,7 @@ In this case, we write:
 
 \subsection{Cauchy Sequence}
 
-A sequence \((a_n)\) is a \textbf{Cauchy sequence} if for every \(\varepsilon > 0\), there exists an integer \(n_0\) such that for all \(n, m \ge n_0\):
+A sequence \((a_n)\) is a \emph{Cauchy sequence} if for every \(\varepsilon > 0\), there exists an integer \(n_0\) such that for all \(n, m \ge n_0\):
 
 \[
 \forall \varepsilon > 0\ \exists n,m \in \mathbb{N}: |a_n - a_m| < \varepsilon\ \text{with } n < m
@@ -83,7 +83,7 @@ Let \(a_i = \frac{1}{i}\) and \(\varepsilon = 0.01\). We want to find \(i_0\) su
 
 \subsection{Definition of \texorpdfstring{\(\varepsilon\)}{ε}-Neighborhood}
 
-The \textbf{\(\varepsilon\)-neighborhood} of a point \(a \in \mathbb{R}\) is the set:
+The \emph{\(\varepsilon\)-neighborhood} of a point \(a \in \mathbb{R}\) is the set:
 \[
 B_\varepsilon(a) = \{x \in \mathbb{R} \mid |x - a| < \varepsilon\}
 \]
@@ -91,11 +91,11 @@ This is the open interval \((a - \varepsilon, a + \varepsilon)\).
 
 \subsection{Supremum, Infimum, Maximum and Minimum}
 
-The \textbf{supremum} of a set \(A \subseteq \mathbb{R}\) is the least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
+The \emph{supremum} of a set \(A \subseteq \mathbb{R}\) is the least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
 
-The \textbf{infimum} of a set \(A\) is the greatest lower bound: the largest number \(t\) such that \(a \ge t\) for all \(a \in A\).The \textbf{maximum} is the largest element in the set, if it exists.
+The \emph{infimum} of a set \(A\) is the greatest lower bound: the largest number \(t\) such that \(a \ge t\) for all \(a \in A\).The \emph{maximum} is the largest element in the set, if it exists.
 
-The \textbf{minimum} is the smallest element in the set, if it exists.
+The \emph{minimum} is the smallest element in the set, if it exists.
 
 \textbf{Example:} For \(A = (0,1)\):
 \begin{itemize}[label=\(-\)]
@@ -107,21 +107,21 @@ The \textbf{minimum} is the smallest element in the set, if it exists.
 \subsection{Limit and Accumulation Point}
 
 \begin{itemize}[label=\(-\)]
-\item A \textbf{limit} of a sequence \((a_n)\) is the value the terms get arbitrarily close to as \(n \to \infty\).
-\item An \textbf{accumulation point} (or limit point) of a set \(A\) is a point \(x\) such that every neighborhood of \(x\) contains infinitely many points of \(A\).
+\item A \emph{limit} of a sequence \((a_n)\) is the value the terms get arbitrarily close to as \(n \to \infty\).
+\item An \emph{accumulation point} (or limit point) of a set \(A\) is a point \(x\) such that every neighborhood of \(x\) contains infinitely many points of \(A\).
 \end{itemize}
 
 \textbf{Example:} The sequence \(a_n = (-1)^n + \frac{1}{n}\) has two accumulation points: \(1\) and \(-1\).
 
 \subsection{Monotonicity by Difference and Quotient}
 
-\textbf{Monotonicity by Difference:}
+\emph{Monotonicity by Difference:}
 \begin{itemize}[label=\(-\)]
 \item If \(a_{n+1} - a_n \ge 0\) for all \(n\), then the sequence is non-decreasing.
 \item If \(a_{n+1} - a_n \le 0\), it is non-increasing.
 \end{itemize}
 
-\textbf{Monotonicity by Quotient:} (Typically for positive sequences)
+\emph{Monotonicity by Quotient:} (Typically for positive sequences)
 \begin{itemize}[label=\(-\)]
 \item If \(\frac{a_{n+1}}{a_n} \ge 1\), then the sequence is non-decreasing.
 \item If \(\frac{a_{n+1}}{a_n} \le 1\), it is non-increasing.
@@ -129,7 +129,7 @@ The \textbf{minimum} is the smallest element in the set, if it exists.
 
 \subsection{Divergence (Definition)}
 
-A sequence \textbf{diverges} if it does not converge. That is, there is no real number \(L\) such that:
+A sequence \emph{diverges} if it does not converge. That is, there is no real number \(L\) such that:
 
 \[
 \lim_{n \to \infty} a_n = L
@@ -145,7 +145,7 @@ A sequence \textbf{diverges} if it does not converge. That is, there is no real 
 
 \subsection{Subsequences and Their Properties}
 
-A \textbf{subsequence} of a sequence \((a_n)\) is a sequence \((a_{n_k})\) where \((n_k)\) is a strictly increasing sequence of natural numbers.
+A \emph{subsequence} of a sequence \((a_n)\) is a sequence \((a_{n_k})\) where \((n_k)\) is a strictly increasing sequence of natural numbers.
 
 \textbf{Properties:}
 \begin{itemize}[label=\(-\)]
@@ -156,7 +156,7 @@ A \textbf{subsequence} of a sequence \((a_n)\) is a sequence \((a_{n_k})\) where
 
 \subsection{Serie}
 
-A \textbf{series} is the sum of the terms of a sequence:
+A \emph{series} is the sum of the terms of a sequence:
 \[
 \sum_{n=1}^{\infty} a_n
 \]
@@ -167,7 +167,7 @@ We define the partial sums \(S_n = \sum_{k=1}^n a_k\). If the sequence \((S_n)\)
 
 \subsection{Power Series}
 
-A \textbf{power series} is a series of the form:
+A \emph{power series} is a series of the form:
 \[
 \sum_{n=0}^{\infty} a_n (x - x_0)^n
 \]
@@ -178,7 +178,7 @@ R = \frac{1}{\limsup\limits_{n \to \infty} \sqrt[n]{|a_n|}}
 
 \subsection{Pointwise Convergence}
 
-A sequence of functions \((f_n)\) converges \textbf{pointwise} to a function \(f\) on a set \(A\) if:
+A sequence of functions \((f_n)\) converges \emph{pointwise} to a function \(f\) on a set \(A\) if:
 \[
 \forall x \in A, \quad \lim_{n \to \infty} f_n(x) = f(x)
 \]
@@ -187,12 +187,12 @@ Pointwise convergence does not preserve properties like continuity or differenti
 
 \subsection{Uniform Convergence}
 
-A sequence of functions \((f_n)\) converges \textbf{uniformly} to \(f\) on \(A\) if:
+A sequence of functions \((f_n)\) converges \emph{uniformly} to \(f\) on \(A\) if:
 \[
 \forall \varepsilon > 0, \exists n_0 \in \mathbb{N} \text{ such that } \forall n \ge n_0, \forall x \in A, \quad |f_n(x) - f(x)| < \varepsilon
 \]
 
-\textbf{Key Property:} Uniform convergence preserves continuity, integration, and differentiation under certain conditions.
+\emph{Key Property:} Uniform convergence preserves continuity, integration, and differentiation under certain conditions.
 
 \subsection{Cauchy Criterion for Series (Cauchy-Kriterium)}
 
@@ -216,7 +216,7 @@ This is useful in proving the existence of limits, roots, and fixed points.
 
 \subsection{Weierstraß Approximation Theorem}
 
-The \textbf{Weierstraß Approximation Theorem} states:
+The \emph{Weierstraß Approximation Theorem} states:
 
 Every continuous function \(f: [a, b] \rightarrow \mathbb{R}\) can be uniformly approximated by a polynomial \(P(x)\), i.e., for every \(\varepsilon > 0\) there exists a polynomial \(P(x)\) such that:
 \[
@@ -227,7 +227,7 @@ This theorem is foundational in numerical analysis and approximation theory.
 
 \subsection{Zero Sequence}
 
-A sequence \((a_n)\) is called a \textbf{null sequence} or \textbf{zero sequence} if:
+A sequence \((a_n)\) is called a \emph{null sequence} or \emph{zero sequence} if:
 \[
 \lim_{n \to \infty} a_n = 0
 \]

@@ -2,7 +2,7 @@
 
 \subsection{Partial Derivatives}
 
-Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) and \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \in U \). Then \( f \) is \textbf{partially differentiable with respect to \( x_i \)} at \( \vec{X}_0 \) if the limit:
+Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) and \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \in U \). Then \( f \) is \emph{partially differentiable with respect to \( x_i \)} at \( \vec{X}_0 \) if the limit:
 
 \[
 \frac{\partial f}{\partial x_i}(\vec{X}_0) := \lim_{h \to 0} \frac{f(x_1^{(0)}, \dots, x_i^{(0)} + h, \dots, x_n^{(0)}) - f(\vec{X}_0)}{h}
@@ -10,7 +10,7 @@ Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) and \( \vec{X}_0 = (x_1^{(
 
 exists. This derivative measures the rate of change of \( f \) in the direction of the \( x_i \)-axis while keeping all other variables fixed.
 
-A function is \textbf{(partially) differentiable} at \( \vec{X}_0 \) if all partial derivatives \( \frac{\partial f}{\partial x_i}(\vec{X}_0) \) exist.
+A function is \emph{(partially) differentiable} at \( \vec{X}_0 \) if all partial derivatives \( \frac{\partial f}{\partial x_i}(\vec{X}_0) \) exist.
 
 \subsection{Differentiability}
 We call a function \(f\) differentiable at \((x_0, y_0, \cdots)\) if and only if:
@@ -27,7 +27,7 @@ where \(\lim_{\Delta x \to 0}\frac{E_1(\Delta x)}{\Delta x} = \lim_{\Delta y \to
 
 \subsection{The Gradient}
 
-Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \). The \textbf{gradient} of \( f \) at \( \vec{X}_0 \) is:
+Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \). The \emph{gradient} of \( f \) at \( \vec{X}_0 \) is:
 
 \[
 \nabla f(\vec{X}_0) = \begin{pmatrix}
@@ -37,7 +37,7 @@ Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \v
 \end{pmatrix}
 \]
 
-\textbf{Derivating the fomula}
+\subsubsection*{Derivating the fomula}
 
 Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_n(t)\hat{v_n}\) that \(f(x_1(t), \dots, x_n(t)) = C\)
 
@@ -118,7 +118,9 @@ T(x, y) = 6 + 9(x - 1) + 6(y - 1)
 
 \subsection{The Directional Derivative}
 
-Let \( f : \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{x}_0 \), and let \( \vec{v} \in \mathbb{R}^n \) be a direction vector with \( \|\vec{v}\| = 1 \). The \textbf{directional derivative} of \( f \) at \( \vec{x}_0 \) in the direction \( \vec{v} \) is defined as:
+Let \( f : \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{x}_0 \), 
+and let \( \vec{v} \in \mathbb{R}^n \) be a direction vector with \( \|\vec{v}\| = 1 \). The 
+\emph{directional derivative} of \( f \) at \( \vec{x}_0 \) in the direction \( \vec{v} \) is defined as:
 
 \[
 D_{\vec{v}}f(\vec{x}_0) := \lim_{h \to 0} \frac{f(\vec{x}_0 + h\vec{v}) - f(\vec{x}_0)}{h}
@@ -129,7 +131,7 @@ D_{\vec{v}}f(\vec{x}_0) := \lim_{h \to 0} \frac{f(\vec{x}_0 + h\vec{v}) - f(\vec
 D_{\vec{v}}f(\vec{x}_0) = \langle \nabla f(\vec{x}_0), \vec{v} \rangle
 \]
 
-\textbf{Schwarz Inequality (Cauchy–Schwarz):}
+\emph{Schwarz Inequality (Cauchy–Schwarz):}
 \[
 |\langle \vec{a}, \vec{b} \rangle| \le \|\vec{a}\| \cdot \|\vec{b}\|
 \]
@@ -139,7 +141,7 @@ This implies:
 |D_{\vec{v}}f(\vec{x}_0)| \le \|\nabla f(\vec{x}_0)\|
 \]
 
-\textbf{Derivation of the Directional Derivative Formula}
+\subsubsection*{Derivation of the Directional Derivative Formula}
 
 Let \( f(x, y) \) be differentiable, and let \( \vec{v} = (e_1, e_2) \) be a direction vector. We aim to derive the formula for the directional derivative \( D_{\vec{v}} f(x_0, y_0) \).
 
@@ -208,7 +210,8 @@ This is the desired result: the directional derivative equals the dot product of
 
 \subsection{The Total Differential}
 
-If \( f : \mathbb{R}^n \to \mathbb{R} \) is differentiable at \( \vec{x}_0 \), then the \textbf{total differential} of \( f \) at \( \vec{x}_0 \) is the linear approximation:
+If \( f : \mathbb{R}^n \to \mathbb{R} \) is differentiable at \( \vec{x}_0 \), then the 
+\emph{total differential} of \( f \) at \( \vec{x}_0 \) is the linear approximation:
 
 \[
 df = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\vec{x}_0) \, dx_i = \langle \nabla f(\vec{x}_0), d\vec{x} \rangle
@@ -222,8 +225,8 @@ This expresses how small changes in the input variables propagate into changes i
 Given an approximate value \( \tilde{x} \) for the exact value \( x \):
 
 \begin{itemize}[label=\(-\)]
-\item \textbf{Absolute error:} \(\Delta z_{\max} \le |f_{x_1}||\Delta x_1| + \cdots + |f_{x_n}||\Delta x_n| \)
-\item \textbf{Relative error:} \( \varepsilon = \frac{\Delta z_{\max}}{z}\) with dependence on the error of the inputs \(\frac{\Delta x}{x}\) etc.
+\item \emph{Absolute error:} \(\Delta z_{\max} \le |f_{x_1}||\Delta x_1| + \cdots + |f_{x_n}||\Delta x_n| \)
+\item \emph{Relative error:} \( \varepsilon = \frac{\Delta z_{\max}}{z}\) with dependence on the error of the inputs \(\frac{\Delta x}{x}\) etc.
 \end{itemize}
 
 In multivariable contexts, similar formulas apply using vector norms.
@@ -348,12 +351,12 @@ This generalizes to higher dimensions using the total differential and the impli
 
 Let \( \vec{F} = (F_1, F_2, F_3) : \mathbb{R}^3 \to \mathbb{R}^3 \) be a vector field.
 
-\textbf{Divergence:}
+\subsubsection{Divergence:}
 \[
 \operatorname{div} \vec{F} = \langle\nabla, \vec{F}\rangle = \frac{\partial F_1}{\partial x_1} + \frac{\partial F_2}{\partial x_2} + \frac{\partial F_3}{\partial x_3}
 \]
 
-\textbf{Curl (Rotation):}
+\subsubsection{Curl:}
 \[
 \operatorname{rot} \vec{F} = \nabla \times \vec{F} = \begin{pmatrix}
 \frac{\partial F_3}{\partial x_2} - \frac{\partial F_2}{\partial x_3} \\
@@ -366,6 +369,7 @@ These describe how the field spreads or rotates around a point.
 
 Where vector field \( \operatorname{div}\vec{f} > 0\) then that region is a called a source.
 and where \(\operatorname{rot}\vec{f} = 0\) is called a whirlpool
+
 \subsection{Schwarz’s Theorem (Clairaut’s Theorem)}
 
 Let \( f : \mathbb{R}^n \to \mathbb{R} \) be twice continuously differentiable. Then for any \( i \ne j \), the mixed partial derivatives satisfy:
@@ -387,7 +391,7 @@ f_m(x_1, \dots, x_n)
 \end{pmatrix}
 \]
 
-The \textbf{Jacobian matrix} of \( \vec{f} \) is the \( m \times n \) matrix:
+The \emph{Jacobian matrix} of \( \vec{f} \) is the \( m \times n \) matrix:
 \[
 J_{\vec{f}}(\vec{x}) = \begin{pmatrix}
 \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\
@@ -396,7 +400,8 @@ J_{\vec{f}}(\vec{x}) = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-In the case \( n = m \), the \textbf{Jacobian determinant} \( \det J_{\vec{f}}(\vec{x}) \) describes local invertibility and orientation.
+In the case \( n = m \), the \emph{Jacobian determinant} \( \det J_{\vec{f}}(\vec{x}) \) 
+describes local invertibility and orientation.
 
 
 \subsection{Taylor's Theorem in \( \mathbb{R}^n \)}
@@ -407,7 +412,7 @@ Let \( f : \mathbb{R}^n \to \mathbb{R} \) be \( k \)-times continuously differen
 f(\vec{x}) \approx f(\vec{x}_0) + \langle \nabla f(\vec{x}_0), \vec{x} - \vec{x}_0 \rangle + \frac{1}{2} (\vec{x} - \vec{x}_0)^T H_f(\vec{x}_0)(\vec{x} - \vec{x}_0)
 \]
 
-where \( H_f(\vec{x}_0) \) is the \textbf{Hessian matrix} of second partial derivatives.
+where \( H_f(\vec{x}_0) \) is the \emph{Hessian matrix} of second partial derivatives.
 
 
 \subsection{Relative Extrema in \( \mathbb{R}^n \)}
@@ -451,7 +456,9 @@ H_f = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \Rightarrow \text{positive de
 
 \subsection{Finding Candidate Points for Zeros While Seeking Relative Extrema in \( \mathbb{R}^n \)}
 
-To find local minima or maxima of a function \( f : \mathbb{R}^n \to \mathbb{R} \), we first identify \textbf{critical points}, which are the candidates for relative extrema. These are the points where the gradient of \( f \) vanishes or does not exist.
+To find local minima or maxima of a function \( f : \mathbb{R}^n \to \mathbb{R} \), we first identify 
+\emph{critical points}, which are the candidates for relative extrema. 
+These are the points where the gradient of \( f \) vanishes or does not exist.
 
 \textbf{Step 1: Compute the Gradient}
 
@@ -474,7 +481,9 @@ Find all points \( \vec{x}_0 \in \mathbb{R}^n \) such that:
 \nabla f(\vec{x}_0) = \vec{0}
 \]
 
-This is a nonlinear system of \( n \) equations in \( n \) variables. The solutions \( \vec{x}_0 \) are the \textbf{candidate points for extrema}, and also referred to as the \textbf{stationary points} or \textbf{critical points} of the function.
+This is a nonlinear system of \( n \) equations in \( n \) variables. The solutions \( \vec{x}_0 \) 
+are the \emph{candidate points for extrema}, and also referred to as the 
+\textbf{stationary points} or \emph{critical points} of the function.
 \\\\
 You use the following techniques to find the points: 
 \begin{itemize}[label=\(-\)]
@@ -485,9 +494,10 @@ You use the following techniques to find the points:
 
 there are more but which one to use depends on the kind problem.
 
-\textbf{Step 3: Analyze the Nature of the Critical Points}
+\emph{Step 3: Analyze the Nature of the Critical Points}
 
-Once all critical points \( \vec{x}_0 \) satisfying \( \nabla f(\vec{x}_0) = 0 \) are found, analyze each using the \textbf{second derivative test} involving the Hessian matrix \( H_f \):
+Once all critical points \( \vec{x}_0 \) satisfying \( \nabla f(\vec{x}_0) = 0 \) are found, analyze each using
+ the \emph{second derivative test} involving the Hessian matrix \( H_f \):
 
 \[
 H_f(\vec{x}) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j} \right)
@@ -496,15 +506,16 @@ H_f(\vec{x}) = \left( \frac{\partial^2 f}{\partial x_i \partial x_j} \right)
 Evaluate \( H_f \) at each critical point and use the eigenvalues or definiteness to classify:
 
 \begin{itemize}[label=\(-\)]
-    \item If \( f_{xx}(x_0, y_0) > 0 \) and \( D > 0 \), then \( f \) has a \textbf{local minimum} at \( (x_0, y_0) \).
-    \item If \( f_{xx}(x_0, y_0) < 0 \) and \( D > 0 \), then \( f \) has a \textbf{local maximum} at \( (x_0, y_0) \).
-    \item If \( D < 0 \), then \( (x_0, y_0) \) is a \textbf{saddle point}.
-    \item If \( D = 0 \), the \textbf{second derivative test is inconclusive}; higher-order derivatives must be considered.
+    \item If \( f_{xx}(x_0, y_0) > 0 \) and \( D > 0 \), then \( f \) has a \emph{local minimum} at \( (x_0, y_0) \).
+    \item If \( f_{xx}(x_0, y_0) < 0 \) and \( D > 0 \), then \( f \) has a \emph{local maximum} at \( (x_0, y_0) \).
+    \item If \( D < 0 \), then \( (x_0, y_0) \) is a \emph{saddle point}.
+    \item If \( D = 0 \), the \emph{second derivative test is inconclusive}; higher-order derivatives must be considered.
 \end{itemize}
 
 \subsubsection{Note: Non-differentiable Points}
 
-If the function \( f \) is not differentiable at some point \( \vec{x}_0 \), but defined there, this point may also be a candidate for extremum and should be examined separately using limit-based analysis or directional behavior.
+If the function \( f \) is not differentiable at some point \( \vec{x}_0 \), but defined there, this point may also be a 
+candidate for extremum and should be examined separately using limit-based analysis or directional behavior.
 
 \subsection{Lagrange Multipliers}
 
@@ -515,7 +526,7 @@ there are maxima and minima with their respective tangent lines
 and gradients that are normal to them. We also are going to see that both the gradient of \(f\) and 
 the gradient of \(g\) are just scalar version of each other so: 
 
-This leads to the \textbf{Lagrange system}:
+This leads to the \emph{Lagrange system}:
 
 \[
 \begin{cases}
@@ -536,7 +547,7 @@ g_n(\vec{x}) = 0
 \]
 
 
-We can also compact this equations in the \textbf{Lagrangian}
+We can also compact this equations in the \emph{Lagrangian}
 
 \[
 \mathcal{L}(x,y, \dots, \lambda_1, \dots, \lambda_n) = f(x, y, \dots) + \lambda_1 g_1(x, y, \dots) + \cdots + \lambda_n g_n(x, y, \dots)
@@ -547,7 +558,7 @@ We can also compact this equations in the \textbf{Lagrangian}
 Sometimes it a good way to solve a problem of this topic is to:
 
 \begin{enumerate}
-    \item Build the \textbf{Lagrangian}
+    \item Build the \emph{Lagrangian}
     \item \(\nabla L = 0\) and maybe compute the determinant to generate another equation to solve
     \item Get rid of \(\lambda\) via factorization, substitution, addtion of rows (prefered), etc.
     \item Solve the system without \(\lambda\)
@@ -619,7 +630,7 @@ H = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-Since \( \det(H) = 8 > 0 \), and the Lagrange conditions are satisfied, this indicates a \textbf{local maximum}.
+Since \( \det(H) = 8 > 0 \), and the Lagrange conditions are satisfied, this indicates a \emph{local maximum}.
 
 \textbf{Conclusion:}
 
@@ -631,7 +642,8 @@ f(10, 10) = 10 \cdot 10 = \boxed{100}
 
 \subsection{The Tangent Vector}
 
-Let \( \vec{X}(t) \in \mathbb{R}^n \) be a differentiable parametrized curve. The \textbf{tangent vector} at the point \( \vec{X}(t_0) \) is given by:
+Let \( \vec{X}(t) \in \mathbb{R}^n \) be a differentiable parametrized curve. The \emph{tangent vector} at the point 
+\( \vec{X}(t_0) \) is given by:
 
 \[
 \vec{X}'(t_0) = \begin{pmatrix}
@@ -639,7 +651,8 @@ Let \( \vec{X}(t) \in \mathbb{R}^n \) be a differentiable parametrized curve. Th
 \end{pmatrix}
 \]
 
-This vector points in the direction in which the curve is moving at \( t_0 \), and its magnitude corresponds to the instantaneous speed. The unit tangent vector is:
+This vector points in the direction in which the curve is moving at \( t_0 \), and its magnitude corresponds to the
+ instantaneous speed. The unit tangent vector is:
 
 \[
 \vec{X}(t) = \frac{\vec{X}'(t)}{\|\vec{X}'(t)\|}
@@ -665,13 +678,15 @@ T(t) = \begin{pmatrix}
 
 \textbf{Derivation of the Tangent Vector Formula}
 
-Given a position vector function \(\vec{r}(t)\), the tangent vector to the curve described by \(\vec{r}(t)\) is obtained by taking the derivative of \(\vec{r}(t)\) with respect to time. This derivative is defined as the following limit:
+Given a position vector function \(\vec{r}(t)\), the tangent vector to the curve described by \(\vec{r}(t)\) is 
+obtained by taking the derivative of \(\vec{r}(t)\) with respect to time. This derivative is defined as the following limit:
 
 \[
 \frac{d\vec{r}}{dt} = \lim_{\Delta t \to 0} \frac{\vec{r}(t + \Delta t) - \vec{r}(t)}{\Delta t}
 \]
 
-Assuming that \(\vec{r}(t)\) is expressed in terms of the canonical basis vectors \(\hat{\imath}, \hat{\jmath}, \hat{k}\), we can write:
+Assuming that \(\vec{r}(t)\) is expressed in terms of the canonical basis vectors \(\hat{\imath}, \hat{\jmath}, \hat{k}\), 
+we can write:
 
 \[
 \vec{r}(t) = x(t)\hat{\imath} + y(t)\hat{\jmath} + z(t)\hat{k}

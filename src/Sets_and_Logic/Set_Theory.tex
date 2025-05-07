@@ -3,29 +3,28 @@ Set theory is a foundational branch of mathematics that studies sets, which are 
 It might seem simple, but set theory provides the basic language and tools to define and reason about almost all mathematical objects, from numbers and functions to more complex structures. It helps us understand the concept of infinity, organize mathematical ideas logically, and resolve paradoxes that arise from dealing with collections.\\
 In essence, set theory provides the building blocks upon which much of modern mathematics is constructed.
 
-
 \subsection{Basics}
 To be concise, a set is a collection of mathematical objects that can also be other sets.\\
 Here is a list of common symbols for set theory.
 
 \begin{itemize}[label=\(-\)]
-	\item \textbf{Empty set (\(\emptyset\))}: The set that contains no elements. It is the unique set with zero elements.
+	\item \emph{Empty set (\(\emptyset\))}: The set that contains no elements. It is the unique set with zero elements.
 
-	\item \textbf{Example set with two elements}: A set that contains exactly two elements, such as \(\{1, 2\}\).
+	\item \emph{Example set with two elements}: A set that contains exactly two elements, such as \(\{1, 2\}\).
 
-	\item \textbf{\(A \subseteq B\)}: Set \(A\) is a subset of \(B\). This means every element of \(A\) is also in \(B\).
+	\item \(A \subseteq B\): Set \(A\) is a subset of \(B\). This means every element of \(A\) is also in \(B\).
 
-	\item \textbf{\(A \subseteq B\) or \(A = B\)}: This notation already includes the possibility that \(A\) equals \(B\) since a set is always a subset of itself.
+	\item \(A \subseteq B\) or \(A = B\): This notation already includes the possibility that \(A\) equals \(B\) since a set is always a subset of itself.
 
-	\item \textbf{\(A \cup B\)}: The union of sets \(A\) and \(B\). It includes all elements that are in \(A\), in \(B\), or in both.
+	\item \(A \cup B\): The union of sets \(A\) and \(B\). It includes all elements that are in \(A\), in \(B\), or in both.
 
-	\item \textbf{\(A \cap B\)}: The intersection of sets \(A\) and \(B\). It includes only the elements that are in both sets.
+	\item \(A \cap B\): The intersection of sets \(A\) and \(B\). It includes only the elements that are in both sets.
 
-	\item \textbf{\(A \setminus B\)}: The difference of sets. Elements in \(A\) that are not in \(B\).
+	\item \(A \setminus B\): The difference of sets. Elements in \(A\) that are not in \(B\).
 
-	\item \textbf{\(A^c\) or \(\overline{A}\)}: The complement of set \(A\). All elements not in \(A\), relative to a universal set.
+	\item \(A^c\) or \(\overline{A}\): The complement of set \(A\). All elements not in \(A\), relative to a universal set.
 
-	\item \textbf{\(|A|\)}: The cardinality of set \(A\), which is the number of elements in the set.
+	\item \(|A|\): The cardinality of set \(A\), which is the number of elements in the set.
 \end{itemize}
 
 \smallskip
@@ -141,19 +140,19 @@ Here is a list of common symbols for set theory.
 
 \subsection{Axioms of Set Theory (Zermelo Fraenkel)}
 \smallskip
-This are Zermelo Fraenkel axioms of set theory including \textit{The Axiom of Choice}.
+This are Zermelo Fraenkel axioms of set theory including \emph{The Axiom of Choice}.
 
 \begin{enumerate}[label = \Roman*.]
-	\item \textbf{Axiom of Extensionality:} \quad \(\forall A, B: A = B \Rightarrow (\forall C: C \in A \Leftrightarrow C \in B)\)
-	\item \textbf{Empty-Set Axiom:} \quad \(\exists \emptyset : \forall X: X \notin \emptyset\)
-	\item \textbf{Axiom of Pairing:} \quad \(\forall A, B: \exists C: \forall D: D \in C \Leftrightarrow (D = A \lor D = B)\)
-	\item \textbf{Axiom of Union:} \quad \(\forall A: \exists B: \forall C: C \in B \Leftrightarrow (\exists D: C \in D \land D \in A)\)
-	\item \textbf{Axiom of Infinity:} \quad \(\exists N: \emptyset \in N \land (\forall x: x \in N \Rightarrow x \cup \{x\} \in N)\)
-	\item \textbf{Axiom Schema of Specification:} \quad \(\forall A: \exists B: \forall C: C \in B \Leftrightarrow (C \in A \land P(C))\)
-	\item \textbf{Axiom Schema of Replacement:} \quad \(\forall A: \exists B: \forall y: y \in B \Rightarrow \exists x \in A: y = F(x)\)
-	\item \textbf{Powerset Axiom:} \quad \(\forall A: \exists B: \forall C: C \subseteq A \Rightarrow C \in B\)
-	\item \textbf{Foundation Axiom:} \quad \(\forall A \ne \emptyset: \exists B \in A: A \cap B = \emptyset\)
-	\item \textbf{Axiom of Choice:} \quad \(\forall X:
+	\item \emph{Axiom of Extensionality:} \quad \(\forall A, B: A = B \Rightarrow (\forall C: C \in A \Leftrightarrow C \in B)\)
+	\item \emph{Empty-Set Axiom:} \quad \(\exists \emptyset : \forall X: X \notin \emptyset\)
+	\item \emph{Axiom of Pairing:} \quad \(\forall A, B: \exists C: \forall D: D \in C \Leftrightarrow (D = A \lor D = B)\)
+	\item \emph{Axiom of Union:} \quad \(\forall A: \exists B: \forall C: C \in B \Leftrightarrow (\exists D: C \in D \land D \in A)\)
+	\item \emph{Axiom of Infinity:} \quad \(\exists N: \emptyset \in N \land (\forall x: x \in N \Rightarrow x \cup \{x\} \in N)\)
+	\item \emph{Axiom Schema of Specification:} \quad \(\forall A: \exists B: \forall C: C \in B \Leftrightarrow (C \in A \land P(C))\)
+	\item \emph{Axiom Schema of Replacement:} \quad \(\forall A: \exists B: \forall y: y \in B \Rightarrow \exists x \in A: y = F(x)\)
+	\item \emph{Powerset Axiom:} \quad \(\forall A: \exists B: \forall C: C \subseteq A \Rightarrow C \in B\)
+	\item \emph{Foundation Axiom:} \quad \(\forall A \ne \emptyset: \exists B \in A: A \cap B = \emptyset\)
+	\item \emph{Axiom of Choice:} \quad \(\forall X:
 		      \left( \left[ \forall A \in X: A \ne \emptyset \right] \land
 		      \left[ \forall B, C \in X: B \ne C \Rightarrow B \cap C = \emptyset \right] \right) \\
 		      \qquad \Rightarrow \exists Y: \forall I \in X: \exists! J \in Y: J \in I\)
@@ -186,7 +185,7 @@ The Cartesian product of two sets \(A\) and \(B\), written \(A \times B\), is th
 	\label{tab:cartesian_product}
 \end{table}
 
-The general cartesian product of \textit{n} sets can be written as:
+The general cartesian product of \emph{n} sets can be written as:
 \begin{align*}
 	X_{i = 1}^{n + 1} A_i & = \left( X_{i = 1}^{n} A_i \right) \times A_{n + 1} \quad \text{with} \quad X_{i = 1}^{1} A_i = A_1 \\
 	\text{When } A_i      & = M \ \text{for all } i:                                                                            \\
@@ -253,9 +252,10 @@ and use Law (11) to show the disjoint decomposition:
 \end{align*}
 
 \subsection{Indexed Sets}
-Let \( X \) be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \( J \) is the index set.
 
-\textbf{a If \( J = \{1, 2, \dots, n\} \):}
+Let \( X \) be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \( J \) is the index set.
+\\\\
+a If \( J = \{1, 2, \dots, n\} \):
 \[
 	\bigcup_{i=1}^{n} A_i := A_1 \cup A_2 \cup \dots \cup A_n = \{ x \mid \exists i \in J \ (x \in A_i) \}
 \]
@@ -266,7 +266,7 @@ Let \( X \) be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \( 
 	X_{i=1}^{n} A_i = \{(a_1, \dots, a_n) \mid a_i \in A_i \}
 \]
 
-\textbf{b If \( J \) is any set:}
+b If \( J \) is any set:
 \[
 	\bigcup_{i \in J} A_i := \{ x \mid \exists i \in J \ (x \in A_i) \}
 \]
@@ -274,12 +274,12 @@ Let \( X \) be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \( 
 	\bigcap_{i \in J} A_i := \{ x \mid \forall i \in J \ (x \in A_i) \}
 \]
 
-\textbf{c If \( J \) is any set, then \( (A_i)_{i \in J} \) are pairwise disjoint if and only if:}
+c If \( J \) is any set, then \( (A_i)_{i \in J} \) are pairwise disjoint if and only if:
 \[
 	\forall i_1, i_2 \in J, \ i_1 \neq i_2 \Rightarrow A_{i_1} \cap A_{i_2} = \emptyset
 \]
 
-\textbf{d If \( J \) is any set, then \( (A_i)_{i \in J} \) forms a (disjoint) decomposition of \( X \) if and only if:}
+d If \( J \) is any set, then \( (A_i)_{i \in J} \) forms a (disjoint) decomposition of \( X \) if and only if:
 \[
 	(A_{i})_{i \in J} \text{ are pairwise disjoint and } \bigcup_{i \in J} A_i = X
 \]
@@ -290,7 +290,7 @@ Let \( A_i, B_j \subseteq X \) for \( i \in I \) and \( j \in J \). Then the fol
 \begin{itemize}[label=\(-\)]
 
 
-	\item\textbf{De Morgan's Laws:}
+	\item\emph{De Morgan's Laws:}
 	\[
 		\overline{\bigcap_{i \in I} A_i}= \bigcup_{i \in I} \overline{A_i} \quad \text{and} \quad \overline{\bigcup_{i \in I} A_i} = \bigcap_{i \in I} \overline{A_i}
 	\]
@@ -314,16 +314,17 @@ Here, \( I = \{ 1, 2, 3, \dots, n \} \) and \( J = \{ 1, 2, 3, \dots, m \} \). T
 \]
 
 \subsection{Cardinality}
-The cardinality of a set is the number of elements in that set.
 
+The cardinality of a set is the number of elements in that set.
+\\
 Let \( A \) and \( B \) be finite sets with \( |A| = n \), \( |B| = m \), and let \( X \) be the finite universal set. Then the following holds:
 
-\textbf{Cardinality of a Set}
+\subsubsection*{Cardinality of a Set}
 \[
 	A = (A \cap B) \cup (A \setminus B), \quad |A| = |A \cap B| + |A \setminus B|
 \]
 
-\textbf{Cardinality of the complements}
+\subsubsection*{Cardinality of the complements}
 \[
 	|A| = |X \setminus A| = |X| - |A|
 \]
@@ -331,23 +332,23 @@ Let \( A \) and \( B \) be finite sets with \( |A| = n \), \( |B| = m \), and le
 	A \setminus B = A \cap (X \setminus B), \quad |A \setminus B| = |A| - |A \cap B|
 \]
 
-\textbf{Cardinality of the Cartesian Product}
+\subsubsection*{Cardinality of the Cartesian Product}
 \[
 	|A \times B| = |A| \cdot |B| = n \cdot m
 \]
 
-\textbf{Inclusion-Exclusion Formula for Two Disjoint Sets}
+\subsubsection*{Inclusion-Exclusion Formula for Two Disjoint Sets}
 \[
 	|A \cup B| = |A| + |B| = n + m
 \]
 
-\textbf{Inclusion-Exclusion Formula for Two Non-Disjoint Sets}
+\subsubsection*{Inclusion-Exclusion Formula for Two Non-Disjoint Sets}
 Let \( |A \cap B| = k \), then:
 \[
 	|A \cup B| = |A| + |B| - |A \cap B| = n + m - k \quad \text{(since we do not count the intersection twice)}
 \]
 
-\textbf{Inclusion-Exclusion Formula for Three Non-Disjoint Sets}
+\subsubsection*{Inclusion-Exclusion Formula for Three Non-Disjoint Sets}
 \[
 	|A \cup B \cup C| = |(A \cup B) \cup C| = |A \cup B| + |C| - |(A \cup B) \cap C|
 \]
@@ -368,13 +369,13 @@ Let \( |A \cap B| = k \), then:
 The Power Set of a set is the set of all subsets of a given set \[
 	P(x):= \{ M: M \subset X\}
 \]
-Its cardinality is \(2^n\) with \textit{n} being the number of elements in the original set \textit{X}.
+Its cardinality is \(2^n\) with \emph{n} being the number of elements in the original set \textit{X}.
 
 \subsection{Family of Subsets}
-Let \textit{X} be a non empty set. A subset \(\mathscr{F}\) of the power set of \textit{X} is called a set system of \textit{X}
+Let \emph{X} be a non empty set. A subset \(\mathscr{F}\) of the power set of \textit{X} is called a set system of \textit{X}
 
 \subsection{Partition}
-Let \textit{X} be a non empty set. A subset \(\mathscr{F}\) of the power set of \textit{X} is called a partition if:\\
+Let \emph{X} be a non empty set. A subset \(\mathscr{F}\) of the power set of \textit{X} is called a partition if:\\
 - \(M \neq  \emptyset\ \forall M \in \mathscr{F}\)\\
 - \(\bigcap \mathscr{F} = X\)\\
 - \(M_1 \bigcap M_2 \ne \emptyset \implies M_1 = M_2\ \forall\ M_1, M_2 \in \mathscr{F} \)

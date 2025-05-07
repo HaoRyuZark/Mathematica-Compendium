@@ -2,7 +2,7 @@
 
 In this section we will take a look at the natural numbers, which are the numbers we use for counting. The natural numbers are defined as follows:
 This not going not be a deep dive just a look at the axioms and the basic construction of the natural numbers. The natural numbers are defined as follows:
-
+\\\\
 We will now define the set of natural numbers, \( \mathbb{N} \), via the following 9 axioms. These axioms are known as the \textbf{Peano Axioms}. The first 4 axioms define equality on the set \( \mathbb{N} \).
 
 \begin{enumerate}[label=\Roman*.]
@@ -35,23 +35,23 @@ As shorthand, we denote:
 
 \subsection{Order in Fields}
 
-An \textbf{ordered field} is a field \( F \) equipped with a total order \( < \) that is compatible with the field operations \( + \) and \( \cdot \). That is, the order satisfies both algebraic and ordering properties.
+An \emph{ordered field} is a field \( F \) equipped with a total order \( < \) that is compatible with the field operations \( + \) and \( \cdot \). That is, the order satisfies both algebraic and ordering properties.
 
 \subsubsection{Order Axioms for Fields}
 
-A field \( F \) is called an \textbf{ordered field} if it satisfies the following properties for all \( a, b, c \in F \):
+A field \( F \) is called an \emph{ordered field} if it satisfies the following properties for all \( a, b, c \in F \):
 
 \begin{enumerate}[label=\Roman*.]
-    \item \textbf{Trichotomy:} Exactly one of the following holds:
+    \item \emph{Trichotomy:} Exactly one of the following holds:
     \[
     a < b, \quad a = b, \quad a > b
     \]
 
-    \item \textbf{Transitivity:} If \( a < b \) and \( b < c \), then \( a < c \).
+    \item \emph{Transitivity:} If \( a < b \) and \( b < c \), then \( a < c \).
 
-    \item \textbf{Additive Compatibility:} If \( a < b \), then \( a + c < b + c \).
+    \item \emph{Additive Compatibility:} If \( a < b \), then \( a + c < b + c \).
 
-    \item \textbf{Multiplicative Compatibility:} If \( 0 < a \) and \( 0 < b \), then \( 0 < ab \).
+    \item \emph{Multiplicative Compatibility:} If \( 0 < a \) and \( 0 < b \), then \( 0 < ab \).
 \end{enumerate}
 
 These properties ensure that arithmetic operations respect the order structure.
@@ -113,7 +113,7 @@ For any pair n,m \(\in \mathbb{N}\) there is a unique way to define
 \end{enumerate}
 
 \textbf{Uniqueness:} 
-
+\\\\
 Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \mathbb{N} | A(n,m) = B(n, m)\}\). Then
 \[
 	A(n,1) = S(n) = B(n,1) \implies 1 \in M
@@ -141,7 +141,7 @@ Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M
 \end{enumerate}
 
 \textbf{Commutativity of Addition:}
-
+\\\\
 The prosposition says \(n + m = m + n\) for any \(n, m \in \mathbb{N}\). We will prove this by induction on \(m\).
  Fix n and consider \(M = \{ n \in \mathbb{N} | A(n, m) = A(n, m)\}\)
 

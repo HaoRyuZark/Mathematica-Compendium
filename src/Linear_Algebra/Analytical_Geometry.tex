@@ -5,10 +5,10 @@ An maybe also in higher dimensions.
 
 \subsection{Vectors and Points}
 In analytical geometry, points and vectors are the basic elements.
-
+\\\\
 A point in \(\mathbb{R}^3\) is represented as \(\vec{P} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}\).
 Or as \((x_1, x_2, \cdots , x_n)\).
-
+\\\\
 A vector is an object with direction and magnitude (in this case), also represented as \(\vec{v} = \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix}\).
 
 Or as \((x_1, x_2, \cdots , x_n)^{T}\).
@@ -114,15 +114,15 @@ It also has the following properties:
 This are the most common norms, although we will be using primarly the euclidean norm:
 
 \begin{itemize}[label=\(-\)]
-	\item \textbf{Euclidean norm}:
+	\item \emph{Euclidean norm}:
 	      \[
 		      \|\vec{a}\| = \sqrt{\langle\vec{a}, \vec{a}\rangle} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}
 	      \]
-	\item \textbf{Manhattan norm}:
+	\item \emph{Manhattan norm}:
 	      \[
 		      \|\vec{a}\|_1 = |a_1| + |a_2| + \cdots + |a_n|
 	      \]
-	\item \textbf{Maximum norm}:
+	\item \emph{Maximum norm}:
 	      \[
 		      \|\vec{a}\|_\infty = \max(|a_1|, |a_2|, \cdots , |a_n|)
 	      \]
@@ -134,21 +134,21 @@ The angle \(\theta\) between two vectors is:
 	\cos\theta = \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{a}\|\|\vec{b}\|}, \quad \theta = \arccos\left( \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{a}\|\|\vec{b}\|} \right)
 \]
 
-\textbf{Line-Line Angle}
+\subsubsection*{Line-Line Angle}
 
 Use direction vectors \(\vec{v}_1\) and \(\vec{v}_2\):
 \[
 	\theta = \arccos\left( \frac{\langle\vec{v}_1, \vec{v}_2\rangle}{\|\vec{v}_1\|\|\vec{v}_2\|} \right)
 \]
 
-\textbf{Line-Plane Angle}
+\subsubsection*{Line-Plane Angle}
 
 Let \(\vec{v}\) be the line's direction and \(\vec{n}\) the plane's normal:
 \[
 	\theta = \arcsin\left( \frac{\langle\vec{v}, \vec{n}\rangle}{\|\vec{v}\|\|\vec{n}\|} \right)
 \]
 
-\textbf{Plane-Plane Angle}
+\subsubsection*{Plane-Plane Angle}
 
 Angle between planes is angle between their normals:
 \[
@@ -159,10 +159,10 @@ Angle between planes is angle between their normals:
 Two lines can be:
 
 \begin{itemize}[label=\(-\)]
-	\item \textbf{Identical}: same direction vector and point
-	\item \textbf{Parallel}: direction vectors are proportional
-	\item \textbf{Intersecting}: one solution for \(t_1\), \(t_2\) such that \(\vec{r}_1(t_1) = \vec{r}_2(t_2)\)
-	\item \textbf{Skew}: not parallel, do not intersect
+	\item \emph{Identical}: same direction vector and point
+	\item \emph{Parallel}: direction vectors are proportional
+	\item \emph{Intersecting}: one solution for \(t_1\), \(t_2\) such that \(\vec{r}_1(t_1) = \vec{r}_2(t_2)\)
+	\item \emph{Skew}: not parallel, do not intersect
 \end{itemize}
 
 To find the relation:
@@ -491,7 +491,7 @@ Now compute the dot product:
 
 \subsection{Distances between points, lines and planes}
 
-\textbf{Distance between two points}
+\subsubsection*{Distance between two points}
 
 The distance between two points \(\vec{P_1}\) and \(\vec{P_2}\) in \(\mathbb{R}^n\) is given by:
 \[
@@ -499,7 +499,7 @@ The distance between two points \(\vec{P_1}\) and \(\vec{P_2}\) in \(\mathbb{R}^
 \]
 where \(\vec{P_1} = (x_1, y_1, \cdots,z_1)\) and \(\vec{P_2} = (x_2, y_2, \cdots,z_2)\).
 
-\textbf{Distance between a point and a hyperplane}
+\subsubsection*{Distance between a point and a hyperplane}
 
 The distance between a point \(\vec{P}\) and a hyperplane defined by the equation \(\langle \vec{n}, \vec{x} - \vec{P_0} \rangle = 0\) is given by:
 \[
@@ -507,7 +507,7 @@ The distance between a point \(\vec{P}\) and a hyperplane defined by the equatio
 \]
 where \(\vec{P_0}\) is a point on the hyperplane and \(\vec{n}\) is the normal vector of the hyperplane.
 
-\textbf{Distance between two lines}
+\subsubsection*{Distance between two lines}
 
 The distance between two lines in \(\mathbb{R}^3\) can be calculated using the formula:
 \[
@@ -515,7 +515,7 @@ The distance between two lines in \(\mathbb{R}^3\) can be calculated using the f
 \]
 where \(\vec{P_1}\) and \(\vec{P_2}\) are points on the two lines, and \(\vec{v_1}\) and \(\vec{v_2}\) are the direction vectors of the lines.
 
-\textbf{Distance between a point and a line}
+\subsubsection*{Distance between a point and a line}
 
 The distance between a point \(\vec{P}\) and a line defined by the parametric equation \(\vec{r}(t) = \vec{P_0} + t\vec{v}\) is given by:
 \[
@@ -523,7 +523,7 @@ The distance between a point \(\vec{P}\) and a line defined by the parametric eq
 \]
 where \(\vec{P_0}\) is a point on the line and \(\vec{v}\) is the direction vector of the line.
 
-\textbf{Distance between two planes}
+\subsubsection*{Distance between two planes}
 
 The distance between two parallel planes defined by the equations \(\langle \vec{n}, \vec{x} - \vec{P_1} \rangle = 0\) and \(\langle \vec{n}, \vec{x} - \vec{P_2} \rangle = 0\) is given by:
 \[
@@ -531,7 +531,7 @@ The distance between two parallel planes defined by the equations \(\langle \vec
 \]
 where \(\vec{P_1}\) and \(\vec{P_2}\) are points on the two planes, and \(\vec{n}\) is the normal vector of the planes.
 
-\textbf{Distance between a point and a plane}
+\subsubsection*{Distance between a point and a plane}
 
 The distance between a point \(\vec{P}\) and a plane defined by the equation \(\langle \vec{n}, \vec{x} - \vec{P_0} \rangle = 0\) is given by:
 \[
@@ -612,9 +612,9 @@ Where:
 
 \subsection{Foot of the Perpendicular and Mirror Point}
 
-\textbf{Foot of the Perpendicular}
+\subsubsection*{Foot of the Perpendicular}
 
-The \textbf{foot of the perpendicular} from a point \(\vec{P}\) to a line (or plane) is the point on the line (or plane) where the perpendicular from \(\vec{P}\) meets it.
+The \emph{foot of the perpendicular} from a point \(\vec{P}\) to a line (or plane) is the point on the line (or plane) where the perpendicular from \(\vec{P}\) meets it.
 
 \textbf{Line case:}
 Given a line in parametric form:
@@ -640,9 +640,9 @@ then the foot of the perpendicular from point \(\vec{P}\) to the plane is:
 	\vec{F} = \vec{P} - ((\vec{P} - \vec{Q}) \cdot \vec{n}) \cdot \vec{n}
 \]
 
-\textbf{Mirror Point}
+\subsubsection*{Mirror Point}
 
-The \textbf{mirror point} (or reflected point) of \(\vec{P}\) across a line or plane is the point \(\vec{P}'\) such that the midpoint between \(\vec{P}\) and \(\vec{P}'\) is the foot of the perpendicular.
+The \emph{mirror point} (or reflected point) of \(\vec{P}\) across a line or plane is the point \(\vec{P}'\) such that the midpoint between \(\vec{P}\) and \(\vec{P}'\) is the foot of the perpendicular.
 
  \textbf{Formula:}
 \[

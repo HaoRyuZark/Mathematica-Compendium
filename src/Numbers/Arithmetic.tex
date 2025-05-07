@@ -28,7 +28,7 @@ That is,
 \textbf{Lemma} 
 
 If \(m \mid pq\) and \(\gcd(m, p) = 1\), then \(m \mid q\).
-
+\\\\
 \textbf{Proof:} 
 
 Write \(1 = \gcd(m, p) = am + bp\) for some \(a, b \in \mathbb{Z}\).
@@ -44,7 +44,7 @@ Since \(m \mid amq\) and \(m \mid bpq\) (because \(m \mid pq\)), we conclude \(m
 \textbf{Lemma} 
 
 If \(p\) is prime and \(p \mid a_1a_2 \cdots a_n\), then \(p \mid a_i\) for some \(i\).
-
+\\\\
 \textbf{Proof (Case \(n=2\)):} 
 
 Suppose \(p \mid a_1a_2\), and \(p \nmid a_1\).
@@ -60,21 +60,21 @@ By the \(n=2\) case, either \(p \mid a_n\) or \(p \mid a_1a_2 \cdots a_{n-1}\), 
 \subsection{Proof of the Fundamental Theorem}
 
 \textbf{Existence:}
-
+\\\\
 Use induction on \(n > 1\).
 Base case: \(n = 2\) is prime.
-
+\\\\
 Inductive step: If \(n\) is prime, done. Otherwise \(n = ab\), with \(1 < a, b < n\).
 By induction, both \(a\) and \(b\) factor into primes, so \(n\) does too.
-
+\\\\
 \textbf{Uniqueness:}
-
+\\\\
 Suppose:
 \[
 	p_1^{m_1} \cdots p_j^{m_j} = q_1^{n_1} \cdots q_k^{n_k}
 \]
 with all \(p_i\) and \(q_i\) distinct primes.
-
+\\\\
 Since \(p_1\) divides the LHS, it divides the RHS. So \(p_1 \mid q_i^{n_i}\) for some \(i\), hence \(p_1 = q_i\).
 Reorder so \(p_1 = q_1\). Then:
 

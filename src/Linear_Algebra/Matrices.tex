@@ -29,14 +29,14 @@ The set of all \(m \times n\) matrices with real entries is denoted by \(\mathbb
 
 Matrix addition and subtraction are defined for matrices of the same dimensions.
 
-\textbf{Addition}
+\subsubsection*{Addition}
 
 For matrices \(A, B \in \mathbb{R}^{m \times n}\), their sum \(C = A + B\) is defined as:
 \begin{equation*}
 c_{ij} = a_{ij} + b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
 \end{equation*}
 
-\textbf{Subtraction}
+\subsubsection*{Subtraction}
 
 Similarly, the difference \(C = A - B\) is defined as:
 \begin{equation*}
@@ -150,7 +150,7 @@ A A^{-1} = A^{-1} A = I_n
 \subsubsection{Finding the Inverse}
 There are several methods to find the inverse of a matrix:
 
-\textbf{Gauß-Jordan Method} 
+\emph{Gauß-Jordan Method} 
 
 Form the augmented matrix \([A|I_n]\) and apply Gauß-Jordan elimination to transform it into \([I_n|A^{-1}]\):
 \begin{enumerate}
@@ -159,7 +159,7 @@ Form the augmented matrix \([A|I_n]\) and apply Gauß-Jordan elimination to tran
     \item The right side will be \(A^{-1}\)
 \end{enumerate}
 
-\textbf{Adjoint Method}
+\emph{Adjoint Method}
 
 For an \(n \times n\) matrix \(A\):
 \begin{equation*}
@@ -317,11 +317,11 @@ C = AB =
 \end{equation*}
 
 Let's verify that matrix multiplication is not generally commutative by attempting to compute \(BA\):
-
+\\\\
 Since \(B\) is a \(3 \times 2\) matrix and \(A\) is a \(2 \times 3\) matrix, the product \(BA\) would be a \(3 \times 3\) matrix. However, this calculation cannot be performed since the number of columns in \(B\) (which is 2) does not equal the number of rows in \(A\) (which is 2). Thus, \(BA\) is undefined, demonstrating that matrix multiplication is not always commutative.
-
+\\\\
 \textbf{Example of Gauß-Jordan Elimination}
-
+\\\\
 We'll use Gauß-Jordan elimination to solve the linear system:
 \begin{align*}
 2x + y - z &= 8 \\
@@ -339,7 +339,7 @@ First, we set up the augmented matrix:
 \end{equation*}
 
 Now we apply Gauß-Jordan elimination to transform this into reduced row echelon form:
-
+\\\\
 \textbf{Step 1:} We'll choose the first element in the first row as our pivot. Let's first swap row 1 and row 3 to get a simpler pivot:
 
 \begin{equation*}
@@ -351,7 +351,7 @@ Now we apply Gauß-Jordan elimination to transform this into reduced row echelon
 \end{equation*}
 
 \textbf{Step 2:} Eliminate the first elements in rows 2 and 3:
-
+\\\\
 Row 2 + 3 \(\times\) Row 1:
 \begin{equation*}
 \begin{pmatrix}
@@ -380,7 +380,7 @@ Row 3 - 2 \(\times\) Row 1:
 \end{equation*}
 
 \textbf{Step 4:} Eliminate the second element in rows 1 and 3:
-
+\\\\
 Row 1 - Row 2:
 \begin{equation*}
 \begin{pmatrix}
@@ -409,7 +409,7 @@ Row 3 + Row 2:
 \end{equation*}
 
 \textbf{Step 6:} Eliminate the third element in rows 1 and 2:
-
+\\\\
 Row 1 + \(\frac{3}{2} \times\) Row 3:
 \begin{equation*}
 \begin{pmatrix}
@@ -445,9 +445,9 @@ z &= -2
 \end{align*}
 
 Therefore, the solution to the original system is \(x = 1\), \(y = 4\), and \(z = -2\).
-
+\\\\
 \textbf{Example of Finding the Inverse of a Matrix using Gauß-Jordan Elimination}
-
+\\\\
 Let's find the inverse of the matrix:
 \begin{equation*}
 A = 
@@ -468,7 +468,7 @@ We form the augmented matrix \([A|I_3]\):
 \end{equation*}
 
 Now we apply Gauß-Jordan elimination:
-
+\\\\
 \textbf{Step 1:} Make the first pivot equal to 1 by dividing the first row by 2:
 \begin{equation*}
 \begin{pmatrix}
@@ -479,7 +479,7 @@ Now we apply Gauß-Jordan elimination:
 \end{equation*}
 
 \textbf{Step 2:} Eliminate the first element in rows 2 and 3:
-
+\\\\
 Row 2 - 3 \(\times\) Row 1:
 \begin{equation*}
 \begin{pmatrix}
@@ -508,7 +508,7 @@ Row 3 - 2 \(\times\) Row 1:
 \end{equation*}
 
 \textbf{Step 4:} Eliminate the second element in row 1 and the third element in row 2:
-
+\\\\
 Row 1 - \(\frac{1}{2} \times\) Row 2:
 \begin{equation*}
 \begin{pmatrix}
@@ -528,7 +528,7 @@ Row 2 + Row 3:
 \end{equation*}
 
 \textbf{Step 5:} Eliminate the third element in row 1:
-
+\\\\
 Row 1 - Row 3:
 \begin{equation*}
 \begin{pmatrix}
@@ -586,8 +586,8 @@ This confirms that we have correctly found the inverse of matrix \(A\).
 \subsection{Linear Maps as matrices and Their Properties}
 
 Let \(V\) and \(W\) be vector spaces over the field \(K\).
-
- Let \(v_1, \dots, v_n \in V\) and \(w_1, \dots, w_n \in W\). If \((v_1, \dots, v_n)\) forms a basis of \(V\), then there exists a unique \(f \in \text{Hom}(V, W)\) with \(f(v_i) = w_i\), \(1 \leq i \leq n\). The map \(f\) has the following properties:
+\\\\
+Let \(v_1, \dots, v_n \in V\) and \(w_1, \dots, w_n \in W\). If \((v_1, \dots, v_n)\) forms a basis of \(V\), then there exists a unique \(f \in \text{Hom}(V, W)\) with \(f(v_i) = w_i\), \(1 \leq i \leq n\). The map \(f\) has the following properties:
 
 1.  \(\text{Im}(f) = \text{span}(f(v_1), \dots, f(v_n))\).
 

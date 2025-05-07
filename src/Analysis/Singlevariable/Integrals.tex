@@ -4,7 +4,7 @@ Integration is the reverse process of differentiation and is used to calculate a
 
 \subsection{Definition (Riemann Integral)}
 
-Let \(f: [a, b] \to \mathbb{R}\) be a bounded function. We define the \textbf{definite integral} as:
+Let \(f: [a, b] \to \mathbb{R}\) be a bounded function. We define the \emph{definite integral} as:
 \[
 \int_a^b f(x)\,dx = \lim_{\|P\| \to 0} \sum_{i=1}^n f(\xi_i)\Delta x_i
 \]
@@ -27,8 +27,8 @@ If \(\sup \underline{S} = \inf \overline{S}\), then \(f\) is Riemann integrable.
 \subsection{Concrete and Non-Concrete Integrals}
 
 \begin{itemize}[label=\(-\)]
-\item \textbf{Concrete:} Can be explicitly evaluated with antiderivatives.
-\item \textbf{Non-concrete:} Cannot be integrated in elementary terms (e.g., \(\int e^{-x^2} dx\)).
+\item \emph{Concrete:} Can be explicitly evaluated with antiderivatives.
+\item \emph{Non-concrete:} Cannot be integrated in elementary terms (e.g., \(\int e^{-x^2} dx\)).
 \end{itemize}
 
 \subsection{Rules of Integration}
@@ -62,7 +62,7 @@ If \(u = g(x)\) and \(f = F'\), then:
 \int u\,dv = uv - \int v\,du
 \]
 
-\textbf{ILATE:} Use this order to choose \(u\):
+\emph{ILATE:} Use this order to choose \(u\):
 \begin{enumerate}
     \item Inverse Trig
     \item Logarithmic
@@ -71,7 +71,7 @@ If \(u = g(x)\) and \(f = F'\), then:
     \item Exponential
 \end{enumerate}
 
-\textbf{Cyclic Integrals:} Some integrals cycle back to the original (e.g., \(e^x \sin x\)).
+\emph{Cyclic Integrals:} Some integrals cycle back to the original (e.g., \(e^x \sin x\)).
 
 \textbf{Example:} \(\int e^x \sin x\,dx\)
 
@@ -225,19 +225,19 @@ If \(f\) is continuous on \([a, b]\), then:
 
 \subsection{Length, Area, Volume Formulas}
 
-\textbf{Arc length:}
+\emph{Arc length:}
 \[
 L = \int_a^b \sqrt{1 + [f'(x)]^2}\,dx
 \]
-\textbf{Area between curves:}
+\emph{Area between curves:}
 \[
 A = \int_a^b |f(x) - g(x)|\,dx
 \]
-\textbf{Volume (disk):}
+\emph{Volume (disk):}
 \[
 V = \pi \int_a^b f(x)^2\,dx
 \]
-\textbf{Shell:}
+\emph{Shell:}
 \[
 V = 2\pi \int_a^b x f(x) \sqrt{1 + f'(x)^2}\,dx
 \]
@@ -289,8 +289,8 @@ Let \(F(p) = \int_a^b f(x, p)\,dx\). If \(f\) is continuous and differentiable i
 \subsection{Convergence Criteria for Improper Integrals}
 
 \begin{itemize}[label=\(-\)]
-\item \textbf{Majorant:} If \(0 \le f(x) \le g(x)\) and \(\int g(x)\,dx\) converges, then so does \(\int f(x)\,dx\).
-\item \textbf{Minorant:} If \(f(x) \ge g(x) \ge 0\) and \(\int g(x)\,dx\) diverges, then \(\int f(x)\,dx\) diverges.
+\item \emph{Majorant:} If \(0 \le f(x) \le g(x)\) and \(\int g(x)\,dx\) converges, then so does \(\int f(x)\,dx\).
+\item \emph{Minorant:} If \(f(x) \ge g(x) \ge 0\) and \(\int g(x)\,dx\) diverges, then \(\int f(x)\,dx\) diverges.
 \end{itemize}
 
 \subsection{Integral Test for Series}

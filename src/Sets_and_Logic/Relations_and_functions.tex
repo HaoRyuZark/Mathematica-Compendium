@@ -2,10 +2,10 @@
 
 A relation in mathematics is a connection or relationship between elements of two sets. It's formally
 defined as a subset of the Cartesian product of the sets.
-
+\\\\
 For example, if we have sets \(A\) and \(B\), a relation \(R\) from \(A\) to \(B\) consists
 of ordered pairs \((a,b)\) where \(a \in A\) and \(b \in B\), such that \(a\) is related to \(b\) according to some rule or property.
-
+\\\\
 Common types of relations include:
 \begin{itemize}[label =\(-\)]
 	\item Functions (special relations where each input has exactly one output)
@@ -21,17 +21,17 @@ ordered pairs, and they're fundamental to many areas of mathematics including al
 Let \(A\) be a set and \(X\) be a relation on \(A\).
 
 \begin{itemize}[label =\(-\)]
-	\item \textbf{Reflexive:} \(\forall a \in A: (a, a) \in X\) \ \ (or written as \(a \sim a\))
+	\item \emph{Reflexive:} \(\forall a \in A: (a, a) \in X\) \ \ (or written as \(a \sim a\))
 
-	\item \textbf{Irreflexive:} \(\forall a \in A: (a, a) \not\in X\)
+	\item \emph{Irreflexive:} \(\forall a \in A: (a, a) \not\in X\)
 
-	\item \textbf{Symmetric:} \(\forall a, b \in A: (a, b) \in X \to (b, a) \in X\) \ \ (or written as \((a \sim b) \Rightarrow (b \sim a)\))
+	\item \emph{Symmetric:} \(\forall a, b \in A: (a, b) \in X \to (b, a) \in X\) \ \ (or written as \((a \sim b) \Rightarrow (b \sim a)\))
 
-	\item \textbf{Antisymmetric:} \(\forall a, b \in A: (a, b) \in X \text{ and } (b, a) \in X \to a = b\)
+	\item \emph{Antisymmetric:} \(\forall a, b \in A: (a, b) \in X \text{ and } (b, a) \in X \to a = b\)
 
-	\item \textbf{Transitive:} \(\forall a, b, c \in A: (a, b) \in X \text{ and } (b, c) \in X \to (a, c) \in X\) \ \ (or written as \\\((a \sim b) \text{ and } (b \sim c) \Rightarrow (a \sim c)\))
+	\item \emph{Transitive:} \(\forall a, b, c \in A: (a, b) \in X \text{ and } (b, c) \in X \to (a, c) \in X\) \ \ (or written as \\\((a \sim b) \text{ and } (b \sim c) \Rightarrow (a \sim c)\))
 
-	\item \textbf{Total:} \(\forall a,b \in A: a \neq b \to (a, b) \in X \text{ or } (b, a) \in X\)
+	\item \emph{Total:} \(\forall a,b \in A: a \neq b \to (a, b) \in X \text{ or } (b, a) \in X\)
 \end{itemize}
 
 \subsection{Equivalence relation}
@@ -56,14 +56,14 @@ An equivalence relation is a relation that is symmetric, transitive and reflexiv
 
 \subsection{Image and Domain}
 
-\textbf{Image}
+\subsubsection*{Image}
 The image (or range) of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(B\) that are related to at least one element in \(A\). Formally, if \(R \subseteq A \times B\) is a relation, then the image of \(R\) is defined as:
 
 \[\text{Im}(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}\]
 
 In other words, the image consists of all the <<output>> values that appear in the ordered pairs of the relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\text{Im}(R) = \{4, 5, 6\}\).
 
-\textbf{Domain}
+\subsubsection*{Domain}
 The domain of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(A\) that are related to at least one element in \(B\). Formally, if \(R \subseteq A \times B\) is a relation, then the domain of \(R\) is defined as:
 
 \[\text{Dom}(R) = \{a \in A \mid \exists b \in B \text{ such that } (a,b) \in R\}\]
@@ -72,13 +72,13 @@ In other words, the domain consists of all the <<input>> values that appear in t
 
 \subsection{Equivalence Class}
 
-Let \(\sim\) be an equivalence relation on a set \(A\). For an element \(x \in A\), the \textbf{equivalence class} of \(x\), denoted by \([x]\), is the set of all elements in \(A\) that are equivalent to \(x\). Formally, it is defined as:
+Let \(\sim\) be an equivalence relation on a set \(A\). For an element \(x \in A\), the \emph{equivalence class} of \(x\), denoted by \([x]\), is the set of all elements in \(A\) that are equivalent to \(x\). Formally, it is defined as:
 \[[x] := \{y \in A \mid x \sim y\} \subseteq A\]
 In other words, the equivalence class of \(x\) contains all elements \(y\) in \(A\) such that \(x\) is related to \(y\) under the equivalence relation \(\sim\).
 
 \subsection{Quotient Space}
 
-Let \(\sim\) be an equivalence relation on a set \(A\). The \textbf{quotient space} of \(A\) by \(\sim\), denoted by \(A/\sim\) (or sometimes \(A/R\)), is the set of all distinct equivalence classes of elements in \(A\). Formally, it is defined as:
+Let \(\sim\) be an equivalence relation on a set \(A\). The \emph{quotient space} of \(A\) by \(\sim\), denoted by \(A/\sim\) (or sometimes \(A/R\)), is the set of all distinct equivalence classes of elements in \(A\). Formally, it is defined as:
 \[A/\sim := \{[x] \mid x \in A\}\]
 The quotient space \(A/\sim\) is a partition of the original set \(A\) into disjoint equivalence classes. Each element of the quotient space is an equivalence class \([x]\), which itself is a subset of \(A\).
 
@@ -86,7 +86,7 @@ The quotient space \(A/\sim\) is a partition of the original set \(A\) into disj
 A map (or function) from a set \(A\) to a set \(B\), denoted as \(f: A \to B\), is a relation that associates each element of the set \(A\) with exactly one element of the set \(B\).
 
 Formally, a function \(f: A \to B\) is a subset of \(A \times B\) such that for every \(a \in A\), there exists exactly one \(b \in B\) where \((a,b) \in f\). We typically write \(f(a) = b\) to indicate that \(f\) maps the element \(a\) to the element \(b\).
-
+\\\\
 \textbf{Example:} Let \(A = \{1, 2, 3\}\) and \(B = \{x, y, z\}\). A possible function \(f: A \to B\) could be defined as:
 \[
 	f(1) = x, \quad f(2) = y, \quad f(3) = z
@@ -101,7 +101,7 @@ The composition of two functions is the operation of applying one function to th
 \]
 
 The composition applies \(f\) first, then applies \(g\) to the result. Note that the codomain of \(f\) must match the domain of \(g\) for the composition to be defined.
-
+\\\\
 \textbf{Example:} Let \(f: \mathbb{R} \to \mathbb{R}\) be defined by \(f(x) = x^2\) and \(g: \mathbb{R} \rightarrow \mathbb{R}\) be defined by \(g(x) = x+3\). Then:
 \[
 	(g \circ f)(x) = g(f(x)) = g(x^2) = x^2 + 3
@@ -114,7 +114,7 @@ Note that \(g \circ f \neq f \circ g\) in general, which shows that function com
 
 \subsection{Types of Functions}
 
-\textbf{Injective Functions}
+\subsubsection*{Injective Functions}
 
 An injective function (also called a one-to-one function) is a function that maps distinct elements from the domain to distinct elements in the codomain.
 
@@ -128,7 +128,7 @@ Equivalently, using the contrapositive:
 	f(a_1) = f(a_2) \to a_1 = a_2
 \]
 
-\textbf{Surjective Functions}
+\subsubsection*{Surjective Functions}
 
 A surjective function (also called an onto function) is a function whose image equals its codomain, meaning that every element in the codomain has at least one preimage in the domain.
 
@@ -137,7 +137,7 @@ Formally, a function \(f: A \to B\) is surjective if:
 	\forall b \in B, \exists a \in A \text{ such that } f(a) = b
 \]
 
-\textbf{Bijective Functions}
+\subsubsection*{Bijective Functions}
 
 A bijective function (also called a one-to-one correspondence) is a function that is both injective and surjective. In other words, every element in the codomain is mapped to by exactly one element in the domain.
 
@@ -340,33 +340,33 @@ Let \(f:X\to Y\) be a function.
 Transformations modify the appearance of a function's graph without altering its basic shape.
 Here, we examine how different algebraic changes to a function \( f(x) \) affect its graph:
 \\\\
-	 \textbf{Vertical Translation:} \( f(x) + a \)
+	 \emph{Vertical Translation:} \( f(x) + a \)
 	      \begin{itemize}[label=\(-\)]
 		      \item Shifts the graph \textbf{upward} if \( a > 0 \), and \textbf{downward} if \( a < 0 \).
 		      \item Each point on the graph moves vertically by \( a \) units.
 	      \end{itemize}
 
-	\textbf{Horizontal Translation:} \( f(x + a) \)
+	\emph{Horizontal Translation:} \( f(x + a) \)
 	      \begin{itemize}[label=\(-\)]
 		      \item Shifts the graph \textbf{left} if \( a > 0 \), and \textbf{right} if \( a < 0 \).
 		      \item This is opposite of what might be expected: adding to \( x \) shifts the graph in the negative direction.
 	      \end{itemize}
 
-	\textbf{Vertical Scaling (Stretch/Compression):} \( a f(x) \)
+	\emph{Vertical Scaling (Stretch/Compression):} \( a f(x) \)
 	      \begin{itemize}[label=\(-\)]
 		      \item If \( |a| > 1 \): the graph is \textbf{stretched} vertically (taller and narrower).
 		      \item If \( 0 < |a| < 1 \): the graph is \textbf{compressed} vertically (shorter and wider).
 		      \item If \( a < 0 \): includes a reflection across the \textbf{x-axis}.
 	      \end{itemize}
 
-	\textbf{Horizontal Scaling (Stretch/Compression):} \( f(a x) \)
+	\emph{Horizontal Scaling (Stretch/Compression):} \( f(a x) \)
 	      \begin{itemize}[label=\(-\)]
 		      \item If \( |a| > 1 \): the graph is \textbf{compressed} horizontally (narrower).
 		      \item If \( 0 < |a| < 1 \): the graph is \textbf{stretched} horizontally (wider).
 		      \item If \( a < 0 \): includes a reflection across the \textbf{y-axis}.
 	      \end{itemize}
 
-	 \textbf{Reflection across the x-axis:} \( -f(x) \)
+	 \emph{Reflection across the x-axis:} \( -f(x) \)
 	      \begin{itemize}[label=\(-\)]
 		      \item Flips the graph upside-down over the x-axis.
 		      \item Each point \( (x, y) \) becomes \( (x, -y) \).

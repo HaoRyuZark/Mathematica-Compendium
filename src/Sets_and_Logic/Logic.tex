@@ -1,8 +1,9 @@
 \section{Propositional Logic}
+
 Propositional logic is also called Boolean logic as 
 it works on 0 and 1. In propositional logic, we use symbolic variables to represent the 
 logic, and we can use any symbol for a representing a proposition, such 
-\emph{A, B, C, P, Q, R}, etc. Propositions can be either \textit{true} or \textit{false}, but it cannot be both.
+\emph{A, B, C, P, Q, R}, etc. Propositions can be either \emph{true} oremtextit{false}, but it cannot be both.
 
 \subsection{Logic Operators and Truth Tables}
 \smallskip
@@ -316,11 +317,11 @@ This ensures that all combinations of \(A\), \(B\), and \(C\) are covered, and y
 Disjunctive Normal Form (DNF) is a standard way of writing a logical expression as a disjunction
 (OR) of conjunctions (ANDs). A DNF expression consists of a series of
 conjunctions of literals, where each conjunction is connected by disjunctions.
-
+\\\\
 To find the DNF in a truth table take the rows of the final result where there are
 true statements and bind the propositions that generated it with an AND inside parenthesis.
 Repeat it with each of true rows and connect all parenthesis with OR's
-
+\\\\
 \textbf{Example of DNF:}
 
 Consider the logical expression:
@@ -334,10 +335,10 @@ This is in DNF because it is a disjunction (OR) of conjunctions (ANDs) of litera
 Conjunctive Normal Form (CNF) is a standard way of writing a logical expression as a conjunction (AND)
 of disjunctions (ORs). A CNF expression consists of a series of disjunctions of
 literals, where each disjunction is connected by conjunctions.
-
+\\\\
 To find the CNF proceed just as the DNF but with the "false rows and instead
 of ANDs inside the parenthesis use OR and connect the terms with OR. Also add a negation before each parenthesis.
-
+\\\\
 \textbf{Example of CNF:}
 
 Consider the logical expression:
@@ -353,7 +354,7 @@ Karnaugh Maps (K-Maps) are a graphical method used to simplify Boolean expressio
 \subsubsection*{Karnaugh Map for Two Variables}
 
 Consider the Boolean expression \( (A \lor (B \land \neg A \land \neg B)) \).
-
+\\\\
 We first construct a K-map for two variables, \( A \) and \( B \). The truth table for this expression gives the following values:
 
 \[
@@ -389,7 +390,7 @@ Here, we group the ones together to simplify the Boolean expression. The simplif
 \subsubsection*{Karnaugh Map for Three Variables}
 
 Now, let's consider the expression \( \neg C \). This expression only depends on one variable, but for illustration, we will use a 3-variable K-map with variables \( A \), \( B \), and \( C \).
-
+\\\\
 The truth table for \( \neg C \) is as follows:
 
 \[

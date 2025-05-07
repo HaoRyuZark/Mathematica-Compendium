@@ -6,46 +6,46 @@ This is basicly Wheel Math or division with residual \(b : n \text{residual} = a
 
 \subsection{Properties}
 
-\textbf{Addition}
+\emph{Addition}
 \[(a + b) \mod n = (a \mod n + b \mod n) \mod n\]
 
-\textbf{Multiplication}
+\emph{Multiplication}
 \[(a * b) \mod n = (a \mod n * b \mod n) \mod n\]
 
-\textbf{Exponentiation}
+\emph{Exponentiation}
 \[(a^m) \mod n = ((a \mod n)^n) \mod n\]
 
-\textbf{Division}
+\emph{Division}
 \[(\frac{a}{b}) \mod n \ne  \frac{a \mod n}{b \mod n}\]
 
 \subsection{Generall Division Rules}
 
-\textbf{Sum Rules}
+\subsubsection*{Sum Rules}
 
 If the number \( a \) can be expressed as a sum and \( b \) is a common divisor of all the summands, then \( b \) is also a divisor of \( a \). \\
  Example: \( 742 = 700 + 42 \). Then 7, as a common divisor of 700 and 42, is a divisor of 742.
 
-\textbf{Product Rule}
+\subsubsection*{Product Rule}
 
 If the number \( a \) can be written as a product of two factors and \( b \) is a divisor of one of these factors, then \( b \) is also a divisor of \( a \). \\
 Example: \( 1500 = 15 \cdot 100 \). Then 3 and 5 are divisors of 15, and 2, 4, 5, 10, 25, and 50 are divisors of 100—thus all are divisors of 1500.
 
-\textbf{Divisor Pair Rules}
+\subsubection*{Divisor Pair Rules}
 
 If the number \( a \) has \( b \) as a divisor, then \( \frac{a}{b} \) is also a divisor of \( a \). \\
 Example: 3 is a divisor of 315. Then \( 105 = \frac{315}{3} \) is also a divisor of 315.
 
-\textbf{Divisor Rule}
+\subsubsection*{Divisor Rule}
 
 If the number \( a \) has \( b \) as a divisor, then every divisor of \( b \) is also a divisor of \( a \). \\
 Example: 45 is a divisor of 450. Then 3, 5, 9, and 15 (divisors of 45) are also divisors of 450.
 
-\textbf{Difference Rule}
+\subsubsection*{Difference Rule}
 
 If the number \( a \) can be expressed as a difference and \( b \) is a common divisor of the minuend and subtrahend, then \( b \) is also a divisor of \( a \). \\
 Example: \( 686 = 700 - 14 \). Then 7, as a common divisor of 700 and 14, is a divisor of 686.
 
-\textbf{Relative Primality Rule}
+\subsubsection*{Relative Primality Rule}
 
 If the number \( a \) has two relatively prime numbers \( b \) and \( c \) as divisors, then their product \( b \cdot c \) is also a divisor of \( a \). \\
 Example: 1540 has the relatively prime numbers 7 and 11 as divisors. Then \( 77 = 7 \cdot 11 \) is also a divisor of 1540.
@@ -64,12 +64,12 @@ We can continue this process and we will notice a pattern. After some iteration 
 
 The Gaussian brackets refer to two closely related functions used to round real numbers to integers in specific ways:
 
-\textbf{Floor Function}
+\emph{Floor Function}
 
 The floor function, denoted by \(\lfloor x \rfloor\), gives the greatest integer less than or equal to a real number \(x\). \\
     Example: \(\lfloor 3.7 \rfloor = 3\), \(\lfloor -1.2 \rfloor = -2\)
 
-\textbf{Ceiling Function} 
+\emph{Ceiling Function} 
     
 The ceiling function, denoted by \(\lceil x \rceil\), gives the smallest integer greater than or equal to a real number \(x\). \\
     Example: \(\lceil 3.7 \rceil = 4\), \(\lceil -1.2 \rceil = -1\)

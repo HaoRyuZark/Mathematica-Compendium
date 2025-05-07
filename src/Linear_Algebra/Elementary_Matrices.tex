@@ -1,0 +1,78 @@
+\section{Elementary Matrix}
+
+We are going to define 3 matrices that can be obtained from the Elementary Row
+Operations on the \emph{Identity Matrix} and calle them \emph{Elementary Matrices}.
+\\\\
+\emph{C1: Row Addtion}
+
+\[
+C_1 := 
+\begin{pmatrix}
+1      &        &        &        &        \\
+       & \ddots &        &        &        \\
+       &        & 1      &        &        \\
+       &        & \lambda & 1     &        \\
+       &        &        &        & \ddots \\
+\end{pmatrix}
+\in K^{n \times n}
+\quad \text{or} \quad
+C_1 := 
+\begin{pmatrix}
+1      &        &        &        &        \\
+       & \ddots &        &        &        \\
+       &        & 1      & \lambda &        \\
+       &        &        & 1      &        \\
+       &        &        &        & \ddots \\
+\end{pmatrix}
+\in K^{n \times n}
+\]
+
+
+\emph{C2: Row swap}
+
+\[
+C_2 := 
+\begin{pmatrix}
+1      &        &        &        &        \\
+       & \ddots &        &        &        \\
+       &        & 0      & 1      &        \\
+       &        & 1      & 0      &        \\
+       &        &        &        & \ddots \\
+\end{pmatrix}
+\in K^{n \times n}
+\]
+
+
+\emph{C3: Row Scaling}
+\[
+C_3 := 
+\begin{pmatrix}
+1      &        &        &        &        \\
+       & \ddots &        &        &        \\
+       &        & \lambda &       &        \\
+       &        &        & \ddots &        \\
+       &        &        &        & 1      \\
+\end{pmatrix}
+\in K^{n \times n}
+\]
+
+Each of them also encodes the row Operations from where they came from.
+So now Gaußian Elimination can be encoded as matrix multiplication.
+
+\subsection{Invertibility}
+
+Because every row operation is invertible now we can also claim that
+Elementary Matrices are invertible and thy also represented that inverted row operation.
+
+
+\subsection{determinants}
+
+The determinants corresponding to each matrix are:
+
+\[\det C1 = 1\]
+
+\[\det C2 = -1\]
+
+\[\det C3 = \lambda\]
+
+\newpage

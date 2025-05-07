@@ -41,7 +41,7 @@ For differentiable function on the interval \(t \in [a; b]\)
 
 \subsubsection{Over Vector Field}
 
-Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a vector field, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). The \textbf{line integral} of \( F \) 
+Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a vector field, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). The \emph{line integral} of \( F \) 
 along \( \gamma \) is:
 
 \[
@@ -129,13 +129,13 @@ curves depend only on endpoints, and
 
 \subsection{Potential Function}
 
-A vector field \( \vec{F} : \mathbb{R}^n \to \mathbb{R}^n \) is called \textbf{conservative} if there exists a scalar function \( \phi : \mathbb{R}^n \to \mathbb{R} \) such that:
+A vector field \( \vec{F} : \mathbb{R}^n \to \mathbb{R}^n \) is called \emph{conservative} if there exists a scalar function \( \phi : \mathbb{R}^n \to \mathbb{R} \) such that:
 
 \[
 \vec{F} = \nabla \phi
 \]
 
-The function \( \phi \) is then called a \textbf{potential function} of \( \vec{F} \).
+The function \( \phi \) is then called a \emph{potential function} of \( \vec{F} \).
 
 \textbf{Properties:}
 \begin{itemize}[label=\(-\)]
@@ -368,7 +368,7 @@ f_2(x_1, \ldots, x_n) \\
 f_m(x_1, \ldots, x_n)
 \end{bmatrix},
 \]
-the \textit{Jacobian matrix} of \(f\) is the \(m \times n\) matrix of all first-order partial derivatives:
+the \emph{Jacobian matrix} of \(f\) is the \(m \times n\) matrix of all first-order partial derivatives:
 \[
 J_f(x) = \begin{bmatrix}
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
@@ -381,7 +381,7 @@ J_f(x) = \begin{bmatrix}
 \subsubsection{Local linearity}
 While performing non linear transformations on a space. We can see that in a tiny neighborhood
 arround a point, the transformation appears to be linear. And the matrix that encodes that
-transformation is the \textbf{Jacobian}.
+transformation is the \emph{Jacobian}.
 
 For intuition, just imagine that in the tiny neighborhood the transformation is composed
 of a small steps in the \(x_1, \dots, x_n\) directions which give of the partial derivatives that
@@ -421,7 +421,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
 
 \begin{itemize}[label=\(-\)]
 
-    \item \textbf{Cartesian Coordinates}:
+    \item \emph{Cartesian Coordinates}:
     \begin{itemize}
         \item Definition: The position of a point is given by \((x, y, z)\) in a 3D space along orthogonal axes.
         \item Jacobian: 
@@ -430,7 +430,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
         \]
     \end{itemize}
 
-    \item \textbf{Polar Coordinates (2D)}:
+    \item \emph{Polar Coordinates (2D)}:
     \begin{itemize}
         \item Definition: The position of a point in a plane is given by \((r, \theta)\), where \(r\) is the radial distance and \(\theta\) is the angle from the positive \(x\)-axis.
         \item Jacobian:
@@ -439,7 +439,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
         \]
     \end{itemize}
 
-    \item \textbf{Cylindrical Coordinates}:
+    \item \emph{Cylindrical Coordinates}:
     \begin{itemize}
         \item Definition: The position of a point in 3D space is given by \((r, \theta, z)\), where \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \(z\) is the height along the \(z\)-axis.
         \item Jacobian:
@@ -448,7 +448,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
         \]
     \end{itemize}
 
-    \item \textbf{Spherical Coordinates}:
+    \item \emph{Spherical Coordinates}:
     \begin{itemize}
         \item Definition: The position of a point in 3D space is given by \((\rho, \theta, \phi)\), where:
         \begin{itemize}
@@ -479,7 +479,7 @@ dA = r\, dr\, d\varphi
 \]
 
 
-\textbf{Integral:}
+\emph{Integral:}
 \[
 \iint_D f(x, y)\, dA = \int_{\varphi_0}^{\varphi_1} \int_{0}^{R(\varphi)} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
 \]
@@ -488,16 +488,16 @@ dA = r\, dr\, d\varphi
 When we divide our circle in the sections we get both a difference in then angle and the radius which generate anorther area.
 The difference \(\Delta A =\) Area of big wedge \(-\) Area of small wedge
 
-\textbf{Radius: }
+\emph{Radius: }
 
 \(r_k + \frac{\Delta r}{2}\) for the big wedge and \(r_k - \frac{\Delta r}{2}\) for the small wedge
 
-\textbf{Angle: }
+\emph{Angle: }
 
 \(\frac{\Delta \theta}{2 \pi}\) which is the angle of the fraction of the circle because the formula for the area is \(r^2 \pi\)
 and the whole circle would be \(2\pi\)
 
-\textbf{Final Formula for the difference in the Area}
+\emph{Final Formula for the difference in the Area}
 
 \[\Delta A = \frac{\Delta \theta}{2 \pi} \left ( \left[r_k + \frac{\Delta r}{2}\right]^2 - \left[r_k - \frac{\Delta r}{2}\right]^2\right)\] 
 \[ = r_k \Delta r \Delta \theta\]
@@ -538,6 +538,31 @@ Often, using polar coordinates simplifies such cases, reducing multiple limits t
 \iint_{\mathbb{R}^2} f(x, y)\, dx\, dy = \int_0^{2\pi} \int_0^{\infty} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
 \]
 
+
+\subsubsection{Gaussian Integral}
+
+We are going to find the integral of the \emph{unbounded integral} 
+\(e^{-x^2}\)using a combination of techniques.
+
+\begin{align*}
+S &= \int_{-\infty}^{\infty} e^{-x^2}dx\\
+S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right)\\
+S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-y^2}dy\right)
+\end{align*}
+
+Now lets conver to polar coordinates
+
+\begin{align*}
+S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r\cos\theta)^2} re^{-(r\sin\theta)^2}drd\theta\right)\\
+S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r\cos\theta)^2 + (r\sin\theta)^2}drd\theta\right)\\
+S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r^2)}drd\theta\right)\\
+S^2 &=  \left(\int_{0}^{2\pi} \int_{0}^{\infty}\frac{1}{2}e^{-(s)}dsd\theta\right)\\
+S^2 &= \left(\int_{0}^{2\pi}d\theta\right)\\
+S^2 &= \pi\\
+S   &= \sqrt{\pi}
+\end{align*}
+
+\QED
 
 \subsection{Triple Integrals}
 
@@ -647,7 +672,7 @@ Then the triple integral transforms as:
 \iiint_{(x, y, z)} f(x, y, z)\, dx\, dy\, dz = \iiint_{(u, v, w)} f(x(u, v, w), y(u, v, w), z(u, v, w)) \cdot \left| \det J \right|\, du\, dv\, dw
 \]
 
-where \( J \) is the \textbf{Jacobian matrix} of the transformation:
+where \( J \) is the \emph{Jacobian matrix} of the transformation:
 \[
 J = 
 \begin{pmatrix}
@@ -680,4 +705,14 @@ Thus, the triple integral in cylindrical coordinates becomes:
 \iiint f(x, y, z)\, dx\, dy\, dz = \iiint f(r \cos \varphi, r \sin \varphi, z)\, r\, dr\, d\varphi\, dz
 \]
 
+\subsubsection{Calculating the center of mass with triple integrals}
+
+We can make use of triple integration to calculate the center of mass of a body with
+respect to \(x\), \(y\) or \(z\) with the following formulas:
+
+\[x_s = \iiint_V xp(x,z,y)dz\ dy \ dx\]
+\[y_s = \iiint_V yp(x,z,y)dz\ dy \ dx\]
+\[z_s = \iiint_V zp(x,z,y)dz\ dy \ dx\]
+
+Where \(p(x,y,z)\) is our mass function.
 \newpage

@@ -11,14 +11,14 @@ The summation symbol \(\sum\) represents the addition of a sequence of terms:
 where \(i\) is the index of summation, \(m\) is the lower bound, and \(n\) is the upper bound.
 
 \begin{itemize}[label=\(-\)]
-    \item \textbf{Linearity:}
+    \item \emph{Linearity:}
     \[
     \sum_{i = m}^{n} (a_i + b_i) = \sum_{i = m}^{n} a_i + \sum_{i = m}^{n} b_i
     \]
     \[
     \sum_{i = m}^{n} c \cdot a_i = c \cdot \sum_{i = m}^{n} a_i
     \]
-    \item \textbf{Splitting:}
+    \item \emph{Splitting:}
     \[
     \sum_{i = m}^{n} a_i = \sum_{i = m}^{k} a_i + \sum_{i = k+1}^{n} a_i \quad (m \le k < n)
     \]
@@ -45,7 +45,7 @@ Let \(j = i + k\), then:
 \sum_{i = 1}^{n} i^k &= \text{(Higher-order polynomial in \(n\))}
 \end{align*}
 
-\textbf{Derivation of \texorpdfstring{\(\sum_{i=1}^{n} i^2\)}{∑i²}}
+\subsubsection{Derivation of \texorpdfstring{\(\sum_{i=1}^{n} i^2\)}{∑i²}}
 
 We use the method of finite differences or induction. Assume a quadratic form:
 \[
@@ -68,15 +68,15 @@ A telescoping sum is a sum where intermediate terms cancel out, leaving only the
 = 1 - \frac{1}{n+1}
 \]
 
-\subsubsection{Geometric Series}
+\subsection{Geometric Series}
 
-\textbf{Finite Geometric Series:}
+\subsubsection{Finite Geometric Series:}
 For a geometric sequence \(a, ar, ar^2, \dots, ar^{n-1}\):
 \[
 \sum_{i = 0}^{n - 1} ar^i = a \cdot \frac{1 - r^n}{1 - r}, \quad r \ne 1
 \]
 
-\textbf{Infinite Geometric Series:}
+\subsubsection{Infinite Geometric Series:}
 If \(|r| < 1\), then:
 \[
 \sum_{i = 0}^{\infty} ar^i = \frac{a}{1 - r}
@@ -91,11 +91,11 @@ The product notation \(\prod\) represents repeated multiplication:
 
 
 \begin{itemize}[label=\(-\)]
-    \item \textbf{Multiplicativity:}
+    \item \emph{Multiplicativity:}
     \[
     \prod_{i = m}^{n} (a_i \cdot b_i) = \left( \prod_{i = m}^{n} a_i \right) \cdot \left( \prod_{i = m}^{n} b_i \right)
     \]
-    \item \textbf{Power Rule:}
+    \item \emph{Power Rule:}
     \[
     \prod_{i = m}^{n} a^k = a^{k(n - m + 1)}
     \]

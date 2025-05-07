@@ -1,19 +1,19 @@
 \section{Means and Proofs}
 In math there are a lot of means. In this section I will show some of them with the correspoinding proofs.
 
-\textbf{Arithmetic Mean:} The arithmetic mean of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
+\emph{Arithmetic Mean:} The arithmetic mean of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
 	      \[
 		      A = \frac{x_1 + x_2 + \cdots + x_n}{n}
 	      \]
-\textbf{Geometric Mean:} The geometric mean of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
+\emph{Geometric Mean:} The geometric mean of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
 	      \[
 		      G = \sqrt[n]{x_1 \cdot x_2 \cdots x_n}
 	      \]
-\textbf{Harmonic Mean:} The harmonic mean of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
+\emph{Harmonic Mean:} The harmonic mean of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
 	      \[
 		      H = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \cdots + \frac{1}{x_n}}
 	      \]
-\textbf{Quadratic Mean:} The quadratic mean (or root mean square) of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
+\emph{Quadratic Mean:} The quadratic mean (or root mean square) of \( n \) numbers \( x_1, x_2, \dots, x_n \) is given by:
 	      \[
 		      Q = \sqrt{\frac{x_1^2 + x_2^2 + \cdots + x_n^2}{n}}
 	      \]
@@ -25,7 +25,7 @@ Let \( a_1, a_2, \dots, a_n > 0 \). We will prove by induction that:
 	\frac{a_1 + a_2 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 a_2 \cdots a_n}
 \]
 with equality if and only if \( a_1 = a_2 = \cdots = a_n \).
-
+\\\\
 \textbf{Base Case: \( n = 2 \)}
 
 We want to prove:
@@ -82,7 +82,7 @@ Note that
 	\leq \left( \frac{ A_n + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n}}{2} \right)^{2n}
 \end{align*}
 
-Now with power of \textit{n} we have
+Now with power of \(n\) we have
 \begin{align*}
 		\left( A_{n} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n} \right)^{n} \leq \left( \frac{A_{n} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{n}}{2} \right)^{2n}\\
 		= \left( \frac{A_n}{2} + \frac{a_{n + 1} + (n - 1)A_{n + 1}}{2n}\right)^{2n}\\

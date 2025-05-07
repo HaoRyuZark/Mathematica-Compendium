@@ -8,24 +8,24 @@ U_\varepsilon(\vec{x}_0) := \left\{ \vec{x} \in \mathbb{R}^n \mid \| \vec{x} - \
 \]
 
 A point \( \vec{x}_0 \in D \subseteq \mathbb{R}^n \) is called an \emph{interior point} of \( D \) if there exists \( \varepsilon > 0 \) such that \( U_\varepsilon(\vec{x}_0) \subseteq D \).  
-A set \( D \) is called \textbf{open} if all its points are interior points.
+A set \( D \) is called \emph{open} if all its points are interior points.
 
-\textit{Remark:} Although \( \varepsilon \)-neighborhoods depend on the chosen norm, due to the equivalence of norms in \( \mathbb{R}^n \), openness is norm-independent.
+\textbf{Note:} Although \( \varepsilon \)-neighborhoods depend on the chosen norm, due to the equivalence of norms in \( \mathbb{R}^n \), openness is norm-independent.
 
 
 \subsection{Closed Sets}
 
 Let \( D \subseteq \mathbb{R}^n \) and \( \| \cdot \| \) a norm. A point \( \vec{x}_0 \) is called an \emph{accumulation point} (or limit point) of \( D \) if for every \( \varepsilon > 0 \), the neighborhood \( U_\varepsilon(\vec{x}_0) \) contains a point \( \vec{x} \ne \vec{x}_0 \) such that \( \vec{x} \in D \).
 
-A set \( D \subseteq \mathbb{R}^n \) is called \textbf{closed} if it contains all its accumulation points.
+A set \( D \subseteq \mathbb{R}^n \) is called \emph{closed} if it contains all its accumulation points.
 
 \subsection{Boundedness and Order}
 
-A set \( D \subseteq \mathbb{R}^n \) is called \textbf{bounded} if there exists a real number \( M > 0 \) such that:
+A set \( D \subseteq \mathbb{R}^n \) is called \emph{bounded} if there exists a real number \( M > 0 \) such that:
 \[
 \|\vec{x}\| < M \quad \text{for all } \vec{x} \in D
 \]
-If no such bound \( M \) exists, the set is called \textbf{unbounded}.
+If no such bound \( M \) exists, the set is called \emph{unbounded}.
 
 
 \subsection{Sequences in \( \mathbb{R}^n \)}
@@ -35,9 +35,9 @@ Let \( (\vec{x}_n) \subseteq \mathbb{R}^n \) be a sequence of vectors. We say th
 \|\vec{x}_n - \vec{x}\| < \varepsilon \quad \text{for all } n > n_0
 \]
 
-The sequence \( (\vec{x}_n) \) is called \textbf{convergent} if such \( \vec{x} \) exists.
+The sequence \( (\vec{x}_n) \) is called \emph{convergent} if such \( \vec{x} \) exists.
 
-The sequence \( (\vec{x}_n) \) is called a \textbf{Cauchy sequence} if for every \( \varepsilon > 0 \), there exists \( n_0 \in \mathbb{N} \) such that:
+The sequence \( (\vec{x}_n) \) is called a \emph{Cauchy sequence} if for every \( \varepsilon > 0 \), there exists \( n_0 \in \mathbb{N} \) such that:
 \[
 \|\vec{x}_n - \vec{x}_m\| < \varepsilon \quad \text{for all } n, m > n_0
 \]
@@ -53,7 +53,7 @@ The sequence \( (\vec{x}_n) \) is called a \textbf{Cauchy sequence} if for every
 
 \subsection{Accumulation Point}
 
-A vector \( \vec{x}_0 \in \mathbb{R}^n \) is called an \textbf{accumulation point} of a set \( D \subseteq \mathbb{R}^n \) if for every \( \varepsilon > 0 \), the neighborhood \( U_\varepsilon(\vec{x}_0) \) contains a point \( \vec{x} \in D \setminus \{\vec{x}_0\} \).
+A vector \( \vec{x}_0 \in \mathbb{R}^n \) is called an \emph{accumulation point} of a set \( D \subseteq \mathbb{R}^n \) if for every \( \varepsilon > 0 \), the neighborhood \( U_\varepsilon(\vec{x}_0) \) contains a point \( \vec{x} \in D \setminus \{\vec{x}_0\} \).
 
 In the context of sequences, an accumulation point of a sequence \( (\vec{x}_n) \) is a point \( \vec{x} \in \mathbb{R}^n \) for which there exists a subsequence \( (\vec{x}_{n_k}) \) such that \( \vec{x}_{n_k} \to \vec{x} \).
 
@@ -63,7 +63,7 @@ Every infinite, bounded sequence in \( \mathbb{R}^n \) has at least one accumula
 
 \begin{itemize}[label=\(-\)]
 \item Every bounded infinite sequence has at least one convergent subsequence.
-\item A bounded sequence is \textbf{convergent} if and only if it has exactly one accumulation point.
+\item A bounded sequence is \emph{convergent} if and only if it has exactly one accumulation point.
 \item Every Cauchy sequence in \( \mathbb{R}^n \) is convergent (since \( \mathbb{R}^n \) is complete).
 \end{itemize}
 
@@ -86,7 +86,7 @@ The convergence must hold along all possible paths to the point \( \vec{X}_0 \),
 
 \subsection{Partial Functions}
 
-For a function \( f: U \subseteq \mathbb{R}^n \to \mathbb{R} \), a \textbf{partial function} is a restriction of \( f \) to a variable by fixing all others.
+For a function \( f: U \subseteq \mathbb{R}^n \to \mathbb{R} \), a \emph{partial function} is a restriction of \( f \) to a variable by fixing all others.
 
 \textbf{Examples in \( \mathbb{R}^3 \):}
 \[
@@ -107,7 +107,7 @@ Each \( f_i \) reduces the multivariable function to a single-variable slice (cr
 
 \subsection{Continuity in \( \mathbb{R}^n \)}
 
-Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \), and \( \vec{X}_0 \in U \). The function \( f \) is said to be \textbf{continuous at \( \vec{X}_0 \)} if:
+Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \), and \( \vec{X}_0 \in U \). The function \( f \) is said to be \emph{continuous at \( \vec{X}_0 \)} if:
 
 \[
 \lim_{\vec{X} \to \vec{X}_0} f(\vec{X}) = f(\vec{X}_0)
@@ -144,7 +144,7 @@ This alternative approach helps evaluate limits and continuity at the origin usi
 \subsection{Uniform and Lipschitz Continuity}
 
 \subsubsection{Uniform Continuity:}  
-A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is called \textbf{uniformly continuous} on \( D \) if:
+A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is called \emph{uniformly continuous} on \( D \) if:
 
 \[
 \forall \varepsilon > 0 \ \exists \delta > 0 \text{ such that } \|\vec{X} - \vec{X}_0\| < \delta \Rightarrow |f(\vec{X}) - f(\vec{X}_0)| < \varepsilon
@@ -154,13 +154,13 @@ A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is called \textbf{u
 If \( f \) is continuous on a compact set (closed and bounded), then \( f \) is uniformly continuous.
 
 \subsubsection{Lipschitz Continuity:}  
-A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is \textbf{Lipschitz continuous} if there exists a constant \( L > 0 \) such that:
+A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is \emph{Lipschitz continuous} if there exists a constant \( L > 0 \) such that:
 
 \[
 |f(\vec{X}) - f(\vec{Y})| \le L \|\vec{X} - \vec{Y}\| \quad \text{for all } \vec{X}, \vec{Y} \in D
 \]
 
-If \( L < 1 \), then \( f \) is called a \textbf{contraction}.
+If \( L < 1 \), then \( f \) is called a \emph{contraction}.
 
 
 
@@ -178,7 +178,7 @@ This generalizes the familiar epsilon-delta criterion from single-variable calcu
 
 \subsection{Fixpoints in \( \mathbb{R}^n \)}
   
-A point \( \vec{X}_0 \in D \subseteq \mathbb{R}^n \) is called a \textbf{fixpoint} of a function \( \vec{\varphi} : D \to \mathbb{R}^n \) if:
+A point \( \vec{X}_0 \in D \subseteq \mathbb{R}^n \) is called a \emph{fixpoint} of a function \( \vec{\varphi} : D \to \mathbb{R}^n \) if:
 
 \[
 \vec{\varphi}(\vec{X}_0) = \vec{X}_0
@@ -190,7 +190,7 @@ That is, applying the function does not change the point — it maps to itself.
 
 \subsection{Banach Fixed Point Theorem in \( \mathbb{R}^n \)}
 
-Let \( \vec{\varphi} : D \subseteq \mathbb{R}^n \to \mathbb{R}^n \) be a \textbf{contraction mapping}, i.e., there exists a constant \( L < 1 \) such that:
+Let \( \vec{\varphi} : D \subseteq \mathbb{R}^n \to \mathbb{R}^n \) be a \emph{contraction mapping}, i.e., there exists a constant \( L < 1 \) such that:
 
 \[
 \|\vec{\varphi}(\vec{X}) - \vec{\varphi}(\vec{Y})\| \le L \|\vec{X} - \vec{Y}\| \quad \text{for all } \vec{X}, \vec{Y} \in D

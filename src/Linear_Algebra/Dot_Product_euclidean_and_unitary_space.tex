@@ -4,7 +4,7 @@
 
 Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V \to K\) is called a scalar product (or inner product) if the following conditions are satisfied:
 
-\textbf{SP1: Symmetry}
+\emph{Symmetry}
 
 For all \(a, b \in V\):
 
@@ -16,7 +16,7 @@ For all \(a, b \in V\):
 \end{cases}
 \]
 
-\textbf{SP2: Linearity in the First Argument}
+\emph{Linearity in the First Argument}
 
 For all \(a, b, c \in V\):
 
@@ -28,7 +28,7 @@ and
 \langle a + b, c \rangle = \langle a, c \rangle + \langle b, c \rangle.
 \]
 
-\textbf{SP3: Homogeneity in the First Argument}
+\emph{Homogeneity in the First Argument}
 
 For all \(\alpha \in K\), we have:
 
@@ -40,7 +40,7 @@ For all \(\alpha \in K\), we have:
 \end{cases}
 \]
 
-\textbf{SP4: Positive Definiteness}
+\emph{Positive Definiteness}
 
 For all \(a \in V \setminus \{0\}\):
 
@@ -77,11 +77,11 @@ A real vector space equipped with a scalar product is called an \textit{Euclidea
 Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cdot \| : V \to \mathbb{R} \) is called a norm if and only if the following conditions hold:
 
 \begin{itemize}[label=\(-\)]
-    \item \( \text{N0: } \|a\| \in \mathbb{R} \),
-    \item \( \text{N1: } \|a\| \geq 0 \),
-    \item \( \text{N2: } \|a\| = 0 \iff a = 0 \),
-    \item \( \text{N3: } \forall \lambda \in K, \ \| \lambda a \| = |\lambda| \| a \| \),
-    \item \( \text{N4: (Triangle Inequality) } \| a + b \| \leq \| a \| + \| b \| \).
+    \item \( \|a\| \in \mathbb{R} \),
+    \item \( \|a\| \geq 0 \),
+    \item \( \|a\| = 0 \iff a = 0 \),
+    \item \( \forall \lambda \in K, \ \| \lambda a \| = |\lambda| \| a \| \),
+    \item \( \| a + b \| \leq \| a \| + \| b \| \).
 \end{itemize}
 
 \subsubsection{Induced Norm by a Scalar Product}
@@ -101,7 +101,7 @@ In all unitary vector spaces \( V \), the Cauchy-Schwarz inequality holds:
 | \langle a, b \rangle | \leq \| a \| \| b \| \quad \forall a, b \in V.
 \]
 
-\textbf{Proof of the Triangle Inequality}
+\subsubsection*{Proof of the Triangle Inequality}
 
 Both sides of the triangle inequality are real and, in particular, non-negative. Therefore, it is sufficient to prove that the squares of both sides satisfy the desired inequality, i.e., we need to show:
 

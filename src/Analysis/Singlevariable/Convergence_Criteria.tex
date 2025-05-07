@@ -41,11 +41,13 @@ If a series \(\sum a_n\) converges, then:
 \]
 The converse is not true — the harmonic series is a classic counterexample.
 
-\subsection{Majorant and Minorant Criteria}
+\subsection{Majorant (Comparison Test)} 
 
-\textbf{Majorant (Comparison Test):} If \(0 \le a_n \le b_n\) for all \(n\) and \(\sum b_n\) converges, then \(\sum a_n\) converges.
+If \(0 \le a_n \le b_n\) for all \(n\) and \(\sum b_n\) converges, then \(\sum a_n\) converges.
 
-\textbf{Minorant:} If \(0 \le b_n \le a_n\) and \(\sum b_n\) diverges, then \(\sum a_n\) diverges.
+\subsection{Minorant} 
+
+If \(0 \le b_n \le a_n\) and \(\sum b_n\) diverges, then \(\sum a_n\) diverges.
 
 \subsection{Root Test}
 
@@ -88,7 +90,7 @@ A sequence \((x_n)\) in \(\mathbb{R}^n\) has a convergent subsequence if and onl
 
 \subsection{Cauchy Criterion I}
 
-A sequence \((a_n)\) converges if and only if it is a \textbf{Cauchy sequence}:
+A sequence \((a_n)\) converges if and only if it is a \emph{Cauchy sequence}:
 \[
 \forall \varepsilon > 0, \exists n_0 \in \mathbb{N}, \forall n, m \ge n_0 \Rightarrow |a_n - a_m| < \varepsilon
 \]
@@ -103,7 +105,7 @@ A series \(a_n = \sum_{i = 0}^{k}x_i\) converges \(\iff \forall d \in \mathbb{R}
 
 \subsection{The Cauchy Product}
 
-Let \(\sum a_n\), \(\sum b_n\) be convergent series. The \textbf{Cauchy product} is:
+Let \(\sum a_n\), \(\sum b_n\) be convergent series. The \emph{Cauchy product} is:
 \[
 \sum_{n=0}^\infty c_n, \quad \text{where } c_n = \sum_{k=0}^n a_k b_{n-k}
 \]
@@ -133,7 +135,7 @@ Finally
 \[
   e^x e^y = \sum_{n = 0}^{\infty}\sum_{k = 0}^{n}x^k y^{n - k} \binom{n}{k} \frac{1}{n!} = \sum_{n = 0}^{\infty} \frac{(x + y)^n}{n!}
 \]
-\(\mathfrak{QED}\)
+\QED
 \subsection{Geometric Series}
 
 \[

@@ -1,10 +1,10 @@
 \section{Eigenvectors and Eigenvalues}
 
-\textbf{Eigenvector}
-
+\emph{Eigenvector}
+\\
 An eigenvector of a square matrix \(A\) is a non-zero vector \(\vec{v}\) that, when multiplied by \(A\), results in a vector that is a scalar multiple of itself. In other words, the direction of the vector \(\mathbf{v}\) remains unchanged (up to scaling) when the linear transformation represented by \(A\) is applied to it.
-
-\textbf{Eigenvalue}
+\\
+\emph{Eigenvalue}
 
 The scalar multiple, denoted by \(\lambda\), is called the eigenvalue associated with the eigenvector \(\mathbf{v}\). It represents the factor by which the eigenvector is scaled when transformed by the matrix \(A\).
 
@@ -34,17 +34,19 @@ To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the 
 Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(P\) such that \(P^{-1}AP = D\), where \(D\) is a diagonal matrix.
 The process of diagonalization is as follows:
 
- 1.  \textbf{Find the eigenvalues and eigenvectors of \(A\).\/}
-
- 2.  \textbf{Form the matrix \(P\):}
+\begin{enumerate}
+    \item \textbf{Find the eigenvalues and eigenvectors of \(A\).}
+    
+    \item \textbf{Form the matrix \(P\):} \\
     Create a matrix \(P\) whose columns are the linearly independent eigenvectors of \(A\).
-
-     3.  \textbf{Form the diagonal matrix \(D\):}
+    
+    \item \textbf{Form the diagonal matrix \(D\):} \\
     Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
-
-     4.  \textbf{Verify the diagonalization:}
+    
+    \item \textbf{Verify the diagonalization:} \\
     Check that \(P^{-1}AP = D\).
-
+\end{enumerate}
+  
 A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independent eigenvectors, where \(n\) is the size of the matrix.
 
 \textbf{Example}
