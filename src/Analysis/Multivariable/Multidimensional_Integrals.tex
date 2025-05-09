@@ -45,7 +45,7 @@ Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a vector field, and let \( \gamma
 along \( \gamma \) is:
 
 \[
-\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \vec{r}\prime(t) \rangle \, dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
+\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \vec{r}'(t) \rangle \, dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
 \]
 
 
@@ -100,7 +100,7 @@ Let the curve \( C \) be the quarter-circle of radius 1 from \( (1, 0) \) to \( 
 We compute the line integral of \( \vec{F} \) along \( C \):
 
 \[
-\int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} \langle\vec{F}(\vec{r}(t)) \vec{r}\prime(t) \rangle\, dt
+\int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} \langle\vec{F}(\vec{r}(t)) \vec{r}'(t) \rangle\, dt
 \]
 
 First, compute:
@@ -112,7 +112,7 @@ First, compute:
 Now compute the dot product:
 
 \[
-\langle\vec{F}(\vec{r}(t)), \vec{r}\prime(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
+\langle\vec{F}(\vec{r}(t)), \vec{r}'(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
 \]
 
 Therefore, the line integral is:

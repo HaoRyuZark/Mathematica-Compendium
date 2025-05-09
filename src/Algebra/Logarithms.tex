@@ -45,25 +45,25 @@ where \(k\) is any positive number different from 1.
 \subsection{The derivative of the Natural Logarithm}
 
 \[
-f\prime(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 \]
 
 Let \(f(x) = \ln(x)\), then
 
 \begin{align*}
-&f\prime(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}\\
-&= f\prime(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}\\
-&= f\prime(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}\\
-&= f\prime(x) = \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}
+&f'(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}\\
+&= f'(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}\\
+&= f'(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}\\
+&= f'(x) = \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}
 \end{align*}
  
 Now let \(n = \frac{h}{x}\)
 
 \begin{align*}
-f\prime(x) &= \lim_{n \to 0} \ln\left(1 + n\right)^{\frac{x}{h} \frac{1}{x}}\\
-f\prime(x) &= \lim_{n \to 0} \frac{1}{x} \ln\left(1 + n\right)^{\frac{1}{n}}\\
-f\prime(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} (1 + n)^{\frac{1}{n}}\right)\\
-f\prime(x) &= \frac{1}{x}
+f'(x) &= \lim_{n \to 0} \ln\left(1 + n\right)^{\frac{x}{h} \frac{1}{x}}\\
+f'(x) &= \lim_{n \to 0} \frac{1}{x} \ln\left(1 + n\right)^{\frac{1}{n}}\\
+f'(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} (1 + n)^{\frac{1}{n}}\right)\\
+f'(x) &= \frac{1}{x}
 \end{align*}
 
 Therefore, the derivative of the natural logarithm is:

@@ -137,6 +137,19 @@ A point on this field is called an \emph{Initial Condition} and the curve that g
 that point in the slope field is called an \emph{Integral curve} which a solution to the differential
 equation with respect to that initial condition.
 
+\begin{center}
+\begin{tikzpicture}[
+    declare function={f(\x) = 2*\x;} % Define which function we're using
+]
+\begin{axis}[
+    MaoYiyi, title={$\dfrac{\mathrm{d}y}{\mathrm{d}x}=2x$}
+]
+\addplot3 (x,y,0);
+\addplot {x^2+0.15}; % You need to find the antiderivative yourself, unfortunately. Good exercise!
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
 \subsection{Existence and Uniqueness}
 
 Let \( f(x, y) \) be continuous on a rectangle \( [a, b] \times \mathbb{R} \). Then the differential equation
@@ -351,6 +364,8 @@ A differential equation
 
 is considered \emph{Homogeneous} if and only if
 \(M(x)\) and \(N(x)\) are \emph{homogeneous} and they have the same degree.
+\\\\
+The equation \(y' + f(x)y = 0\) is called \emph{homogeneous linear differential equation of first order}.
 
 \subsubsection{Homogeneous Equation}
 
@@ -421,6 +436,56 @@ Now substitute
 
 \[\ln x + c = -\frac{y}{x} + c\]
 \[-x\ln x - xc = y\]
+
+\subsection{Inhomogenous Equation}
+
+The equation \(y' + f(x)y = g(x)\) is called \emph{linear inhomogenous differential equation of first order}
+. \(g(x)\) is called the \emph{distortion function}. The correspondent IVP is called
+\emph{linear} IVP.
+
+\subsection{Solutions of LDE}
+
+Every linear IVP with continuous functions \(f(x)\) and \(g(x)\) plus a bounded \(f(x)\) 
+has exactly one solution.
+\\\\
+\textbf{Proof:}
+
+\begin{align*}
+y' = -f(x)y + g(x) \text{ therefore } |-f(x)y_1 + g(x) + -f(x)y_2 + g(x) | &= |f(x)||y_1 - y_2|\\
+                                                                        &\le M |y_1 - y_2|
+\end{align*}
+
+Therefore the function is Lipschitz continuous, thus a solution is possible.
+\QED
+
+
+\subsubsection{Solving of Inhomogenous DE}
+
+Recall that for the homogeneous case \(y' + f(x)y = 0\) case we use 
+\(y = c e^{\int -f(x) dx}\) but now we have \(y' + f(x)y = g(x)\), thus lets use the following
+approach
+
+\[y = c(x) e^{\int -f(x) dx}\]
+
+Now use the product rule to derivate
+
+\begin{align*}
+y' &= c'(x) e^{\int -f(x) dx} + c(x)e^{\int -f(x) dx}(-(-f(x)))\\
+   &= c'(x)e^{\int -f(x) dx} - f(x)y
+\end{align*}
+
+thus 
+
+\[y' + f(x)y = c'(x)e^{\int -f(x) dx}\]
+
+therefore \(g(x) = c'(x)e^{\int -f(x) dx}\)
+\\\\
+Then we can get a solution for \(c(x)\) from
+
+\[
+    c'(x) = g(x)e^{\int f(x) dx}
+\]
+
 
 \subsection{Bernoulli Equation}
 This is an equation of the form 
@@ -504,6 +569,21 @@ u = \frac{x}{2} - \frac{1}{20} + \frac{c}{e^{10x}} = y^{-2}
 \]
 
 
+\subsection{Autonomous Equations}
+
+An \emph{Autonomous Differential Equation} only depends on the dependent
+variable \(y\).\textbf{Example: } \(\frac{dy}{dt} = (1 + y)(1 -y)\).
+
+\subsubsection{Equilibrium Solutions}
+Values where \(f(y) = 0\) are \emph{Equilibrium Solutions}.
+
+\subsubsection*{Asymptotically stable}
+An equilibrium solution \(y = a\) is \emph{asymptotically stable} if solutions
+that start near \(a\) tend towards \(a\) as \(t \to \infty\).
+
+\subsubsection*{Asymptotically unstable}
+An equilibrium solution \(y = a\) is \emph{asymptotically unstable} if solutions
+that start near \(a\) leave as \(t \to \infty\)
 
 
 \newpage
