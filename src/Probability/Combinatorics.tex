@@ -15,13 +15,13 @@ is the number a specific item is repeaed in the original set.
 
 \subsection{Variation}
 
-Ways of put \(n\) objects in \(k\) with repetition.
+Ways of put \(n\) objects in \(k\) slots with repetition.
 
 \[n^k\]
 
 \subsection{Variation without repetition}
 
-Ways of put \(n\) objects in \(k\) without repetition.
+Ways of put \(n\) objects in \(k\) slots without repetition.
 
 \[\frac{n!}{(n -k)!}\]
 
@@ -74,20 +74,20 @@ Ways of permuting \(N\) items with \(K\) exchanges.
 
 Ways of groupping \(n\) items in \(k\) slots.
 
-\[ \{ N \atop K\} = \frac{1}{K!} \sum_{j=0}^{k}(-1)^{k - j}\binom{K}{j}j^N \]
+\[ \left\{ \begin{matrix} N \atop K \end{matrix}\right\} = \frac{1}{K!} \sum_{j=0}^{K}(-1)^{k - j}\binom{K}{j}j^N \]
 
 \subsection{Lah Numbers}
 
 Ways of building \(K\) lists with a set \(N\) elements.
 
-\[\lfloor N \atop K\rfloor  = \binom{N - 1}{K - 1}\frac{N!}{K!} = \sum_{j=0}^{k}\left[N \atop K\right]\left\{N \atop K\right\}\]
+\[\left\lfloor \begin{matrix} N \atop K \end{matrix}\right\rfloor  = \binom{N - 1}{K - 1}\frac{N!}{K!} = \sum_{j=0}^{K}\left[N \atop K\right]\left\{N \atop K\right\}\]
 
 \subsection{Eulers Numbers}
 
 Number of permutations of a set of \(N\) elements of different size in which
 \(K\) elements are bigger than the their previous element.
 
-\[\langle N \atop K\langle = \sum_{j = 0}^{k}(-1)^j \binom{N + 1}{j}(K +1 -j)^N\]
+\[\left\langle \begin{matrix} N \atop K \end{matrix}\right\rangle = \sum_{j = 0}^{k}(-1)^j \binom{N + 1}{j}(K +1 -j)^N\]
 
 \subsection{Catalan Numbers}
 

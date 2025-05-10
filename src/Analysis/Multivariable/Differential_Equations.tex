@@ -486,8 +486,140 @@ Then we can get a solution for \(c(x)\) from
     c'(x) = g(x)e^{\int f(x) dx}
 \]
 
+\textbf{Example: }
+
+Given is \(y' -\cos(x)y = x e^{\sin(x)}\) with \(y(0) = 3\).
+\\\\
+\textbf{1. Solve as if it were homogeneous}
+
+\[y' -\cos(x)y = 0\]
+\[y' = \cos(x)y\]
+\[\frac{y'}{y} = \cos(x)\]
+\[\int\frac{1}{y}dy = \int \cos(x)dx \]
+\[ \ln |y|  + c= \sin(x) + c \]
+\[ y = e^{\sin(x)}c \]
+
+\textbf{2. Use \(y = c(x)e^{\sin(x)dx}\)}
+
+\[y' = c(x)\cos(x)e^{\sin(x)} + c'(x)e^{\sin(x)}\]
+\[y' = \cos(x)y + c'(x)e^{\sin(x)}\]
+\[y' - \cos(x)y = c'(x)e^{\sin(x)}\]
+
+\textbf{3. Compare with the original equation}
+
+\[y' -\cos(x)y = x e^{\sin(x)}\]
+\[y' - \cos(x)y = c'(x)e^{\sin(x)}\]
+
+\textbf{4. Solve for \(c'(x)\)}
+
+\[xe^{\sin(x)} = c'(x)e^{\sin(x)}\]
+\[x = c'(x)\]
+
+\textbf{5.Integrate}
+
+\[\int x dx= \int c'(x)dx\]
+\[\frac{x^2}{2} + c = c(x)\]
+
+\textbf{6. Substitute in our approach \(y = g(x)e^{\sin(x)}\) from earlier}
+
+\[y = \left(\frac{x^2}{2} + c\right)e^{\sin(x)}\]
+
+\textbf{7. Solve for \(c\) using our initial condition if asked}
+
+\[y(0) = 3\]
+\[3 = \left(\frac{0^2}{2} + c\right)e^{\sin(0)}\]
+\[3 = c\]
+
+
+\subsection{Constant Coeffitients (Superposition Postulate)}
+
+Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
+The homogeneous equation to this case will be \(y' + ay = 0\) with a solution \(y_h\) and some
+partial solution \(y_p\). Now remember from \emph{Linear Algebra} the \(general = particular + homogeneous\)
+more precissely \(y = y_p + y_h\) therefore adding a particular solution to a homogeneous does not change
+the general solution of our DE.
+\\\\
+Now lets substitute in our differential equation.
+
+\begin{align*}
+(y_h + y_p)' + a(y_h + y_p) &= y_h' + y_p' + ay_h + ay_p\\   
+&= (y_h' + ay_h) + (y_p' + ay_p) = 0 + g(x) = g(x) 
+\end{align*}
+
+\subsubsection*{Steps for solving the kind of problems}
+\begin{enumerate}
+    \item Find the \emph{homogeneous} solution for \(y' + ay = 0\). \(y_h\) is going
+    to have a free parameter.
+    \item Find a partial solution for \(y' + ay = g(x)\)
+    \item Use \(y = y_h + y_p\)
+    \item If you have an IVP solve for the free parameter in \(y_h\)
+\end{enumerate}
+
+Now we have to find a way to solve for \(y_p\) and \(y_h\)
+
+\subsubsection{Find the partial solution \(y_p\)}
+
+We will use the method called based on guessing the type of the function on the right side.
+\\\\
+\textbf{Example: }
+Given is the following IVP: \(y' + 2y = 2x + 13\) with \(y(0) = 8\)
+\\\\
+By looking carefully we see that on the righthand side we just have a normal polynomial,
+thus we can substitute \(y = bx + c\) and therefore \(y' = b\). Now substitute
+\[
+b + 2(bx + c) = 2x + 13
+\]
+\[
+2bx + b + 2c = 2x + 13
+\]
+Now by comparing the Coeffitients with the other side 
+\[2b = 2\]
+\[b + 2c = 13\]
+
+we get: \(b = 1\), \(c = 6\). And we have found a \emph{particular} solution for our DE 
+\(y_p = x + 6\)
+
+Now we have to find an \emph{homogeneous} solution with the formula we already know
+\(y_h = c e^{\int -f(x)dx}\) in our case \(y_h = c e^{\int 2dx} = ce^{-2x}\)
+
+\[
+y = y_h + y_p = c e^{-2x} + x + 6
+\]
+
+Now considering the condition \( y(0) = 8 \), this gives:
+
+\[
+y(0) = c + 6 = 8 \Rightarrow c = 2
+\]
+
+and we obtain the particular solution:
+
+\[
+y = 2 e^{-2x} + x + 6
+\]
+
+\subsubsection{Table of reference}
+
+\begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Type of Forcing Function} & \textbf{Disturbance Function \( g(x) \)} & \textbf{Ansatz for \( y_p \)} \\
+    \hline
+    Constant & \( k_0 \) & \( c_0 \) \\
+    \hline
+    Linear & \( k_0 + k_1 x \) & \( c_0 + c_1 x \) \\
+    \hline
+    Polynomial & \( \sum\limits_{i=0}^{n} k_i x^i \) & \( \sum\limits_{i=0}^{n} c_i x^i \) \\
+    \hline
+    Exponential & \( k e^{bx}, \; b \ne a \) & \( c_0 e^{bx} \) \\
+               & \( k e^{ax} \) & \( c_0 x e^{ax} \) \\
+    \hline
+    Trigonometric & \( k \sin(bx) + l \cos(bx) \) & \( c_0 \sin(bx) + c_1 \cos(bx) \) \\
+    \hline
+\end{tabular}
+    
 
 \subsection{Bernoulli Equation}
+
 This is an equation of the form 
 
 \[
