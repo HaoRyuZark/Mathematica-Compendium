@@ -4,13 +4,13 @@
 
 \subsubsection{Probability}
 
-\(E\) is the choosen event and \(\Omega\) the total. Example \(\frac{1}{2}\)
+\(E\) is the event we are studying and \(\Omega\) the total. Example \(\frac{1}{2}\)
 
 \[P(E) = \frac{E}{\Omega}\]
 
 \subsubsection{Expected Result}
 
-Here \(p\) represenst the probability of 
+Here \(p\) represents the probability of 
 something and \(x\) the expected reward
 
 \[E(x) = p_1 x_1 + \cdots + p_n x_n\]
@@ -30,7 +30,7 @@ something and \(x\) the expected reward
     \item \emph{Probability: } \(P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}\)
     \item \emph{Expected Result: } \(E(X) = n * p\)
     \item \emph{Standard Deviation: } \(\sqrt{E(X)(1-p)}\)
-    \item  \emph{Varianz: } \(E(x)(1-p)\)
+    \item  \emph{Variance: } \(E(x)(1-p)\)
 \end{itemize}
 
 \subsubsection{Continuous Probability}
@@ -63,7 +63,7 @@ something and \(x\) the expected reward
 \begin{itemize}[label=\(-\)]
     \item \emph{Probability: } \(\frac{1}{\sqrt{2\pi \sigma^2} e^{\frac{1}{2} \left(\frac{x - u}{\sigma}\right)^2}}\)
     \item \emph{Expected Result: } \(E(x) = np = \mu\)
-    \item \emph{Varianz: } \(Var(x) = E(X) (1-p)\)
+    \item \emph{Variance: } \(Var(x) = E(X) (1-p)\)
     \item \emph{Standard Deviation: } \(\sqrt{Var(x)}\)
 \end{itemize}
 
@@ -81,7 +81,7 @@ Probability of \(a\) under the condition \(b\).
 
 \[P(a | b) = \frac{P(b | a) P(a)}{P(b)}\]
 
-\subsection{Hypergeometric Distribution}
+\subsection{Hyper-geometric Distribution}
 
 \[P(X = k) = \frac{\binom{M}{K} \binom{N - M}{n - K}}{\binom{N}{n}}\]
 
@@ -89,14 +89,14 @@ Probability of \(a\) under the condition \(b\).
 \begin{itemize}[label=\(-\)]
     \item \(N\): Total number of elements
     \item \(M\): Elements with the trait \(A\)
-    \item \(N - M\): Elements withou the trait \(A\)
+    \item \(N - M\): Elements without the trait \(A\)
     \item \(n = k\): Number to elements to take
 \end{itemize}
 
 \textbf{Formulas }
 \begin{itemize}[label=\(-\)]
     \item \emph{Expected Results: } \(E(x) = n \frac{M}{N}\)
-    \item \emph{Varianz: } \(Var(X) = E(x)\left(1 - \frac{M}{N}\right) \left(\frac{N - n}{N - 1}\right)\)
+    \item \emph{Variance: } \(Var(X) = E(x)\left(1 - \frac{M}{N}\right) \left(\frac{N - n}{N - 1}\right)\)
 \end{itemize}
 
 \newpage

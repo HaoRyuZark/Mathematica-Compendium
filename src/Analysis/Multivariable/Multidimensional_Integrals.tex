@@ -1,14 +1,15 @@
 \section{Multidimensional Integrals}
 
-\subsection{Arclength of a Curve}
+\subsection{Arc-length of a Curve}
 
-We will use the famous technique of approximating the lenght/area/volume of someting
-by divinding it in to equally smaller section that are stringht lines in this case. In other will
-be prisms, squares, etc. Now if we look at the difference between two points in our 3D spacem, for this Example
+We will use the famous technique of approximating the lenght/area/volume of something
+by dividing it in to equally smaller section that are straight lines in this case. In other will
+be prisms, squares, etc. Now if we look at the difference between two points in our 3D space, 
+for this Example
 we notice that there are three differences \(\Delta i\) \(\Delta j\) \(\Delta k\).j
 Now lets take the length of the vector \(\sqrt{(\Delta i)^2 + (\Delta j)^2 + (\Delta k)^2}\)
 
-The total Arclength is going to be the sum of all of this sectors
+The total Arc-length is going to be the sum of all of this sectors
 \[
 L =  \sum_{i = 1}^{n}\sqrt{(\Delta i)^2 + (\Delta j)^2 + (\Delta k)^2}
 \]
@@ -343,14 +344,14 @@ The steps are the same as in the previous Example.
 \end{center}
 
 Here the original bounds are: \(x\) goes from 0 to 8 and \(y\) goes from \(\sqrt[3]{x}\) to 2.
-As you can see in the diagram by slicing verticaly the value of \(x\) is fixed and we move towards the upperbound of \(y\) which is 2.
-Therefore the smallest \(x\) can get is 0 and the biggest is 2. While for \(y\) by slicing verticly we get that \(x\) goes from 0
-to \(\sqrt[3]{x}\) but we dont want to left that y so we solve for y and get \(y^3\). Now we caput all of this together and integrate.
+As you can see in the diagram by slicing vertically the value of \(x\) is fixed and we move towards the upper-bound of \(y\) which is 2.
+Therefore the smallest \(x\) can get is 0 and the biggest is 2. While for \(y\) by slicing vertically we get that \(x\) goes from 0
+to \(\sqrt[3]{x}\) but we do not want to left that y so we solve for y and get \(y^3\). Now we caput all of this together and integrate.
 
 
 \subsection{The Jacobian}
 
-The Jacobian matrix is a fundamental concept in multivariable calculus. The Jacobian is best
+The Jacobian matrix is a fundamental concept in multi-variable calculus. The Jacobian is best
 approximation of a linear transformation for a point.
 
 For the intuition of why, we use partial derivatives, just think about
@@ -380,7 +381,7 @@ J_f(x) = \begin{bmatrix}
 
 \subsubsection{Local linearity}
 While performing non linear transformations on a space. We can see that in a tiny neighborhood
-arround a point, the transformation appears to be linear. And the matrix that encodes that
+around a point, the transformation appears to be linear. And the matrix that encodes that
 transformation is the \emph{Jacobian}.
 
 For intuition, just imagine that in the tiny neighborhood the transformation is composed
@@ -404,7 +405,7 @@ and provides important information about the local behavior of the function. For
 \end{itemize}
 
 When we change our systems of coordinates it is important
-that our differential make sense in the orignal system we were.
+that our differential make sense in the original system we were.
 Because of that, we take the determinant with respect to the new
 coordinates to tell us the scaling factor that we have to use for our
 result to make sense.
@@ -550,7 +551,7 @@ S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\in
 S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-y^2}dy\right)
 \end{align*}
 
-Now lets conver to polar coordinates
+Now lets translate to polar coordinates
 
 \begin{align*}
 S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r\cos\theta)^2} re^{-(r\sin\theta)^2}drd\theta\right)\\
@@ -574,7 +575,7 @@ Let \( V \subset \mathbb{R}^3 \) be a bounded region, then:
 \iiint_V f(x, y, z)\, dV = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k, z_k) \, \Delta V_k
 \]
 
-where \( \Delta V_k \) are small subvolumes approximating \( V \).
+where \( \Delta V_k \) are small sub-volumes approximating \( V \).
 
 In practice, evaluate:
 \[
@@ -632,7 +633,7 @@ Given are the functions \(f_1(x,y) = x^2 + y^2\) and \(f_2(x,y) = 3 - x^2 - y^2\
 \end{tikzpicture}
 \end{center}
 
-Lets find the itersection
+Lets find the intersection
 
 \[
 x^2 + y^2 = 3 -x^2 - y^2 
@@ -655,7 +656,7 @@ using our constraint and our original functions.
 Here \(z\) means the height which is just the output
 of the original functions.
 
-The bounds of \(y\) just by looking at out constraint and solveing for it.
+The bounds of \(y\) just by looking at out constraint and solving for it.
 
 And \(x\) only depends on the concrete limit of integration.
 

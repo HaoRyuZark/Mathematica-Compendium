@@ -25,18 +25,18 @@ Ways of put \(n\) objects in \(k\) slots without repetition.
 
 \[\frac{n!}{(n -k)!}\]
 
-\subsection{Cobination I}
+\subsection{Combination I}
 
 Ways of choose \(k\) objects of \(n\) elements.
 
 \[\binom{n}{k} = \frac{n!}{k!(n-k)!}\]
 
-Here \(n!\) is the number of perputations of the original set.
-\((n-k)!\) has the function of eliminating the permutations of elements we arent interested in, and
+Here \(n!\) is the number of permutations of the original set.
+\((n-k)!\) has the function of eliminating the permutations of elements we are not interested in, and
 \(k!\) is to eliminate the duplicates because for a combination the order does not matter, contrary to
 the permutations.
 
-\subsection{combination II}
+\subsection{Combination II}
 
 This focuses more not on the 'slots' but in the 'separations' between the slots.
 More specific the number of ways to distribute \(k\) identical objects into \(n\) identical boxes. 
@@ -51,7 +51,7 @@ Number of permutation in which no object ends in the same initial spot. Also kno
 
 \subsection{Bell Numbers}
 
-Number of ways of groupping \(n\) objects in an arbitrary number of slots.
+Number of ways of grouping \(n\) objects in an arbitrary number of slots.
 
 \[B(N) = \sum_{k = 0}^{N-1}\binom{N}{K}B(K)\]
 
@@ -72,7 +72,7 @@ Ways of permuting \(N\) items with \(K\) exchanges.
 
 \subsection{Stirling Numbers II}
 
-Ways of groupping \(n\) items in \(k\) slots.
+Ways of grouping \(n\) items in \(k\) slots.
 
 \[ \left\{ \begin{matrix} N \atop K \end{matrix}\right\} = \frac{1}{K!} \sum_{j=0}^{K}(-1)^{k - j}\binom{K}{j}j^N \]
 
@@ -82,7 +82,7 @@ Ways of building \(K\) lists with a set \(N\) elements.
 
 \[\left\lfloor \begin{matrix} N \atop K \end{matrix}\right\rfloor  = \binom{N - 1}{K - 1}\frac{N!}{K!} = \sum_{j=0}^{K}\left[N \atop K\right]\left\{N \atop K\right\}\]
 
-\subsection{Eulers Numbers}
+\subsection{Euler's Numbers}
 
 Number of permutations of a set of \(N\) elements of different size in which
 \(K\) elements are bigger than the their previous element.
@@ -102,7 +102,7 @@ or
 
 \subsection{Pascals Triangle}
 
-This is a tringale build by the formula \(\binom{n + 1}{k + 1} = \binom{n}{k}\binom{n}{k + 1}\)
+This is a triangle build by the formula \(\binom{n + 1}{k + 1} = \binom{n}{k}\binom{n}{k + 1}\)
 \begin{center}
     
 \begin{tabular}{>{$n=}l<{$\hspace{12pt}}*{13}{c}}
@@ -117,7 +117,7 @@ This is a tringale build by the formula \(\binom{n + 1}{k + 1} = \binom{n}{k}\bi
 
 \vspace{1cm}
 
-Here the tringale but with the Binomial Coeffients
+Here the triangle but with the Binomial Coefficients
 \smallskip
 
 \begin{tabular}{>{$n=}l<{$\hspace{12pt}}*{13}{c}}
@@ -128,7 +128,7 @@ Here the tringale but with the Binomial Coeffients
 \end{tabular}
 \end{center}
 
-It can be used with the Binomial Theoreme to get the Coeffients of a polynomial of degree \(n\).
+It can be used with the Binomial Theorem to get the Coefficients of a polynomial of degree \(n\).
 
 Example:
 

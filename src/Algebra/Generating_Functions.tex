@@ -44,7 +44,7 @@ Lets use generating function to find a closed form for the Fibonacci number.
 \\\\
 We know that \(F_0 = 1\) and \(F_1 = 1\) and for \(n \ge 2\) \(F_n = F_{n-1} + F_{n-2}\)
 \\\\
-Now lets use the following funcion
+Now lets use the following function
 \[
     F(x) = \sum_{n = 0}^{\infty} F_n x^{n}
 \]
@@ -55,7 +55,7 @@ Which is going to have the Fibonacci numbers as the coefficients of the power se
     1 + x + 2x^2 + 3x^3 + 5x^4 + \dots
 \]
 
-But before that we have to look at when our recursive formula is definned.
+But before that we have to look at when our recursive formula is defined.
 In this case \(n = 2\). Thus we have to write our expression in the following way.
 
 \begin{align*}
@@ -63,7 +63,7 @@ F(x) &= 1 + x + \sum_{n = 2}^{\infty} F_n x^{n}\\
 &= 1 + x + \sum_{n = 2}^{\infty} F_{n -1} x^{n} + \sum_{n = 2}^{\infty} F_{n - 2}x^n 
 \end{align*}
 
-Here we are going to adjust our expresion by making our \(n\) be equal.
+Here we are going to adjust our expression by making our \(n\) be equal.
 
 \begin{align*}
 F(x) &= 1 + x + \sum_{n = 2}^{\infty} F_{n -1} x^{n} + \sum_{n = 2}^{\infty} F_{n - 2}x^n \\ 
@@ -84,14 +84,14 @@ F(x) = \frac{x}{1 - x - x^2}
 \]
 
 Now we can use partial fraction decomposition to make this expression even more explicit
-by using the following expresion where \(\alpha\) and \(\beta\) are zeroes of the polynomial in the
+by using the following expression where \(\alpha\) and \(\beta\) are zeroes of the polynomial in the
 denominator.
 
 \[
 \frac{x}{\left(1 - \alpha x\right)\left(1 - \beta x\right)}
 \]
 
-The zeros of the polynom are:
+The zeros of the polynomial are:
 \[
     x_1 = \frac{1 + \sqrt{5}}{2} \text{ and }  x_2 = \frac{1 - \sqrt{5}}{2}    
 \]

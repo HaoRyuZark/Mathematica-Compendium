@@ -1,4 +1,4 @@
-\section{Multivariable Functions}
+\section{Multi-variable Functions}
 
 \subsection{Open Sets}
 
@@ -81,7 +81,7 @@ means that for every sequence \( (\vec{X}_n) \subset U \) converging to \( \vec{
 \lim_{n \to \infty} f(\vec{X}_n) = g
 \]
 
-The convergence must hold along all possible paths to the point \( \vec{X}_0 \), making the multivariable limit path-independent and unique (if it exists).
+The convergence must hold along all possible paths to the point \( \vec{X}_0 \), making the multi-variable limit path-independent and unique (if it exists).
 
 
 \subsection{Partial Functions}
@@ -102,7 +102,7 @@ x_1 = 2, \quad x_3 = 5 \Rightarrow f_2(x_2) = 10 + 5x_2 \\
 x_1 = 2, \quad x_2 = 3 \Rightarrow f_3(x_3) = 10 + 3x_3
 \]
 
-Each \( f_i \) reduces the multivariable function to a single-variable slice (cross-section), allowing analysis along coordinate axes.
+Each \( f_i \) reduces the multi-variable function to a single-variable slice (cross-section), allowing analysis along coordinate axes.
 
 
 \subsection{Continuity in \( \mathbb{R}^n \)}
@@ -118,7 +118,7 @@ This means that for any sequence \( (\vec{X}_n) \to \vec{X}_0 \), we have:
 \lim_{n \to \infty} f(\vec{X}_n) = f(\vec{X}_0)
 \]
 
-To check if a multivariable function is continuous it is enough to prove that it is continuous towards the origin
+To check if a multi-variable function is continuous it is enough to prove that it is continuous towards the origin
 
 \begin{align*}
     \lim_{\vec{X} \to \vec{X_0}}f(\vec{X}) &= f(\vec{X_0}) \\
@@ -172,13 +172,13 @@ Let \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \), and \( \vec{X}_0 \in D \)
 \forall \varepsilon > 0 \ \exists \delta > 0 \text{ such that } \|\vec{X} - \vec{X}_0\| < \delta \Rightarrow |f(\vec{X}) - f(\vec{X}_0)| < \varepsilon
 \]
 
-This generalizes the familiar epsilon-delta criterion from single-variable calculus to multivariable settings using norms.
+This generalizes the familiar epsilon-delta criterion from single-variable calculus to multi-variable settings using norms.
 
 
 
 \subsection{Fixpoints in \( \mathbb{R}^n \)}
   
-A point \( \vec{X}_0 \in D \subseteq \mathbb{R}^n \) is called a \emph{fixpoint} of a function \( \vec{\varphi} : D \to \mathbb{R}^n \) if:
+A point \( \vec{X}_0 \in D \subseteq \mathbb{R}^n \) is called a \emph{fix-point} of a function \( \vec{\varphi} : D \to \mathbb{R}^n \) if:
 
 \[
 \vec{\varphi}(\vec{X}_0) = \vec{X}_0
@@ -198,8 +198,8 @@ Let \( \vec{\varphi} : D \subseteq \mathbb{R}^n \to \mathbb{R}^n \) be a \emph{c
 
 Then:
 \begin{itemize}[label=\(-\)]
-\item There exists a unique fixpoint \( \vec{X}^* \in D \) such that \( \vec{\varphi}(\vec{X}^*) = \vec{X}^* \)
-\item Iteratively defined sequences \( \vec{X}_{n+1} = \vec{\varphi}(\vec{X}_n) \) converge to the fixpoint
+\item There exists a unique fix-point \( \vec{X}^* \in D \) such that \( \vec{\varphi}(\vec{X}^*) = \vec{X}^* \)
+\item Iteratively defined sequences \( \vec{X}_{n+1} = \vec{\varphi}(\vec{X}_n) \) converge to the fix-point
 \end{itemize}
 
 This result is fundamental in nonlinear analysis and iterative numerical methods.
