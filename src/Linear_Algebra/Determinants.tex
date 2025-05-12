@@ -1,8 +1,13 @@
 \section{The Determinant of a Matrix}
 
-The determinant of a square matrix \(A \in \mathbb{R}^{n \times n}\), denoted \(\det(A)\) or \(|A|\), is a scalar value that provides important information about the matrix, including whether it is invertible and the volume scaling factor of the linear transformation represented by \(A\).
-The determinant can be computed using various methods, including the Laplace expansion, row reduction, or the Leibniz formula.
+The determinant of a square matrix \(A \in \mathbb{R}^{n \times n}\), denoted \(\det(A)\) or \(|A|\), is a 
+scalar value that provides important information about the matrix, including whether it is 
+invertible and the volume scaling factor of the linear transformation represented by \(A\).
+The determinant can be computed using various methods, including the Laplace 
+expansion, row reduction, or the Leibniz formula.
+
 The determinant of a \(2 \times 2\) matrix is given by:
+
 \begin{equation*}
 \det(A) =
 \begin{vmatrix}
@@ -11,7 +16,9 @@ c & d
 \end{vmatrix}
 = ad - bc
 \end{equation*}
+
 For a \(3 \times 3\) matrix, the determinant can be computed using the rule of Sarrus or the cofactor expansion:
+
 \begin{equation*}
 \det(A) =
 \begin{vmatrix}
@@ -29,13 +36,15 @@ The determinant of larger matrices can be computed using cofactor expansion alon
 \end{equation*}
 
 where \(A_{ij}\) is the \((n-1) \times (n-1)\) submatrix obtained by deleting the \(i\)-th row and \(j\)-th column of \(A\).
-The determinant has several important properties:
+
+\subsubsection{Properties}
 
 \begin{itemize}[label=\(-\)]
     \item \(\det(A) = 0\) if and only if \(A\) is singular (not invertible).
     \item \(\det(AB) = \det(A) \cdot \det(B)\) for any square matrices \(A\) and \(B\) of the same size.
     \item \(\det(A^T) = \det(A)\).
-    \item If a row (or column) of \(A\) is multiplied by a scalar \(\alpha\), then \(\det(A)\) is multiplied by \(\alpha\).
+    \item If a row (or column) of \(A\) is multiplied by a scalar \(\alpha\), 
+    then \(\det(A)\) is multiplied by \(\alpha\).
     \item If two rows (or columns) of \(A\) are swapped, then \(\det(A)\) changes sign.
     \[\det(a,b,c) = - \det(b,a,c)\]
     \item If a row (or column) of \(A\) is added to another row (or column), then \(\det(A)\) remains unchanged.
@@ -46,7 +55,50 @@ The determinant has several important properties:
     \det(a,b,c + d) = \det(a,b,c) + \det(a,b,d)
     \]
     \item The determinant of a diagonal matrix is the product of its diagonal entries.
+    \item For elementary matrices \(\det C1 = 1\), \(\det C2 = -1\), \(\det C3 = \lambda\)
 \end{itemize}
+
+\subsection{Proof of \(\det(AB) = \det(A) \det(B)\)}
+
+For \( A, B \in K^{n \times n} \), it holds that
+\[
+\det(AB) = \det(A)\det(B).
+\]
+
+\textbf{Proof:} \\
+If \( \det(A) = 0 \) or \( \det(B) = 0 \), 
+then \( \text{rank}(L_A) < n \) or \( \text{rank}(L_B) < n \). \\
+Thus, \( \text{rank}(L_{AB}) < n \), 
+and the statement is trivial.
+
+So let us assume that \( A \) and \( B \) are 
+invertible, i.e., \( \text{rank}(A) = \text{rank}(B) = n \). \\
+We now assume that in such a case, a matrix can 
+always be transformed into reduced row 
+echelon form using the row operations 
+from Gaussian elimination.
+
+Then, \( A = C_k \cdot \ldots \cdot C_1 \) for certain elementary matrices \( C_i \), and therefore, by Corollary 5.13:
+
+\begin{align*}
+\det(AB) &= \det(C_k \cdot \ldots \cdot C_1 B) \\
+&= \det(C_k)\det(C_{k-1} \cdot \ldots \cdot C_1 B) \\
+&\quad \vdots \\
+&= \det(C_k) \cdots \det(C_1)\det(B) \\
+&= \det(C_k \cdot \ldots \cdot C_1)\det(B) \\
+&= \det(A)\det(B).
+\end{align*}
+
+Therefore also if \( A \) is invertible, then
+\[
+\det(A^{-1}) = (\det(A))^{-1}.
+\]
+
+\textbf{Proof:} \\
+It holds that
+\[
+\det(A)\det(A^{-1}) = \det(AA^{-1}) = \det(E) = 1.
+\]
 
 \subsection{The Leibniz Formula}
 
