@@ -66,7 +66,7 @@ Let \(N(x)\) and \(D(x)\) be polynomials of degree \(n\) and \(d\) respectively,
 Suppose that \(a\) is NOT a zero of \(D(x)\). Then there is a polynomial \(P(x)\) of degree \(p < d\) and
 numbers \(A_1, \dots, A_m\) such that
 \[
-\frac{N(x)}{D(x) (x-a)^m} = \frac{P(x)}{D(x)} + \frac{A_1}{x-a} + \frac{A_2}{(x-a)^2} + \cdots + \frac{A_m}{(x-a)^m}
+\frac{N(x)}{D(x) {(x-a)}^m} = \frac{P(x)}{D(x)} + \frac{A_1}{x-a} + \frac{A_2}{{(x-a)}^2} + \cdots + \frac{A_m}{{(x-a)}^m}
 \]
 
 \textbf{Proof:} 
@@ -115,14 +115,14 @@ after having chosen \(A_1 = \frac{\tilde{N}_{m-1}(0)}{\tilde{D}(0)}\). There is 
 
 Now back to
 \[
-\frac{N(x)}{(x-a_1)^{n_1} \times \cdots \times (x-a_d)^{n_d}}
+\frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}}
 \]
-Apply Lemma 2, with \(D(x) = (x - a_2)^{n_2} \times \cdots \times (x - a_d)^{n_d}\), \(m = n_1\) and \(a = a_1\). It says
+Apply Lemma 2, with \(D(x) = {(x - a_2)}^{n_2} \times \cdots \times {(x - a_d)}^{n_d}\), \(m = n_1\) and \(a = a_1\). It says
 \[
-\frac{N(x)}{(x-a_1)^{n_1} \times \cdots \times (x-a_d)^{n_d}} = \frac{P(x)}{(x-a_2)^{n_2} \times \cdots \times (x-a_d)^{n_d}} + \frac{A_{1,1}}{x-a_1} + \frac{A_{1,2}}{(x-a_1)^2} + \cdots + \frac{A_{1,n_1}}{(x-a_1)^{n_1}}
+\frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}} = \frac{P(x)}{{(x-a_2)}^{n_2} \times \cdots \times {(x-a_d)}^{n_d}} + \frac{A_{1,1}}{x-a_1} + \frac{A_{1,2}}{{(x-a_1)}^2} + \cdots + \frac{A_{1,n_1}}{{(x-a_1)}^{n_1}}
 \]
-Apply Lemma 2 a second time, with \(D(x) = (x - a_3)^{n_3} \times \cdots \times (x - a_d)^{n_d}\), \(N(x) = P(x)\),
+Apply Lemma 2 a second time, with \(D(x) = {(x - a_3)}^{n_3} \times \cdots \times {(x - a_d)}^{n_d}\), \(N(x) = P(x)\),
 \(m = n_2\) and \(a = a_2\). And so on. Eventually, we end up with
 \[
-\frac{N(x)}{(x-a_1)^{n_1} \times \cdots \times (x-a_d)^{n_d}} = \left[ \frac{A_{1,1}}{x-a_1} + \cdots + \frac{A_{1,n_1}}{(x-a_1)^{n_1}} \right] + \cdots + \left[ \frac{A_{d,1}}{x-a_d} + \cdots + \frac{A_{d,n_d}}{(x-a_d)^{n_d}} \right]
+\frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}} = \left[ \frac{A_{1,1}}{x-a_1} + \cdots + \frac{A_{1,n_1}}{{(x-a_1)}^{n_1}} \right] + \cdots + \left[ \frac{A_{d,1}}{x-a_d} + \cdots + \frac{A_{d,n_d}}{{(x-a_d)}^{n_d}} \right]
 \]

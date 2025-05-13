@@ -55,7 +55,7 @@ Let \(f(x) = \ln(x)\), then
 &f'(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}\\
 &= f'(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}\\
 &= f'(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}\\
-&= f'(x) = \lim_{h \to 0} \ln\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}
+&= f'(x) = \lim_{h \to 0} \ln{\left(1 + \frac{h}{x}\right)}^{\frac{1}{h}}
 \end{align*}
  
 Now let \(n = \frac{h}{x}\)
@@ -63,7 +63,7 @@ Now let \(n = \frac{h}{x}\)
 \begin{align*}
 f'(x) &= \lim_{n \to 0} \ln\left(1 + n\right)^{\frac{x}{h} \frac{1}{x}}\\
 f'(x) &= \lim_{n \to 0} \frac{1}{x} \ln\left(1 + n\right)^{\frac{1}{n}}\\
-f'(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} (1 + n)^{\frac{1}{n}}\right)\\
+f'(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} {(1 + n)}^{\frac{1}{n}}\right)\\
 f'(x) &= \frac{1}{x}
 \end{align*}
 
@@ -92,13 +92,13 @@ Let \(a^n a^m = a^{n + m}\) and \(a^n = x\) and \(a^m = y\) then
 
 Let \(\frac{a^n}{a^m} = a^{n - m}\) and \(a^n = x\) and \(a^m = y\) then like in the previous proof
 \[
-\log_a \left(\frac{x}{y}\right)) = \log_a x - \log_a y
+\log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y
 \]
 \QED 
 
 \subsubsection{Power}
 
-Let \((a^n)^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
+Let \({(a^n)}^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
 \[
 \log_x y = m \text{ and } \log_a x = n \text{ thus } \log_a y = (\log_a x )m
 \]
@@ -106,10 +106,10 @@ Let \((a^n)^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
 
 \subsubsection{Power Rule General Case:}
 
-Let \((a^n)^m = b^x\) then \(\log_{a^n} b^x = m\) now lets manipulate the original expression
+Let \({(a^n)}^m = b^x\) then \(\log_{a^n} b^x = m\) now lets manipulate the original expression
 
 \begin{align*}
-\log_a (a^n)^m &= \log_a b^x\\
+\log_a {(a^n)}^m &= \log_a b^x\\
 nm \log_a a &= x \log_a b\\
 m = \frac{x}{n} \log_a b &=  \log_{a^n} b^x 
 \end{align*}

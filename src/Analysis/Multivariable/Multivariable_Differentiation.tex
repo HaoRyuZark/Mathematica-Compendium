@@ -107,8 +107,8 @@ f_x(x, y) = 8xy + y^2, \quad f_y(x, y) = 4x^2 + 2xy
 
 At the point \( (1, 1) \):
 \[
-f(1, 1) = 4(1)^2(1) + 1(1)^2 + 1 = 6 \\
-f_x(1, 1) = 8(1)(1) + 1 = 9, \quad f_y(1, 1) = 4(1)^2 + 2(1)(1) = 6
+f(1, 1) = 4{(1)}^2(1) + 1{(1)}^2 + 1 = 6 \\
+f_x(1, 1) = 8(1)(1) + 1 = 9, \quad f_y(1, 1) = 4{(1)}^2 + 2(1)(1) = 6
 \]
 
 Thus, the tangent plane is:
@@ -270,7 +270,7 @@ Both \( x \) and \( y \) are measured with a precision of \( \Delta x = \Delta y
 The result for \( z \) is accurate to within \( \boxed{0{,}14 \, \text{cm}} \).
 
 
-\subsection{The Chain Rule in \( \mathbb{R}^n \)}
+\subsection{The Chain Rule}
 
 Let \( f : \mathbb{R}^n \to \mathbb{R} \) be differentiable, and suppose \( \vec{x} = \vec{x}(t) \in \mathbb{R}^n \) is a differentiable path. Then:
 
@@ -297,13 +297,13 @@ The relative error of a function \( z = f(x_1, \dots, x_n) \) is defined by:
 Assuming \( z \) depends on variables with known relative measurement errors, and the function is differentiable, we estimate:
 
 \[
-\varepsilon = \frac{|\partial f / \partial x_1| \cdot \Delta x_1 + \dots + |\partial f / \partial x_n| \cdot \Delta x_n}{f(x_1, \dots, x_n)}
+\varepsilon = \frac{|\partial f / \partial x_1| \cdot \Delta x_1 + \cdots + |\partial f / \partial x_n| \cdot \Delta x_n}{f(x_1, \dots, x_n)}
 \]
 
 or more directly using relative errors:
 
 \[
-\varepsilon \approx \left| \frac{\Delta x_1}{x_1} \right| + \dots + \left| \frac{\Delta x_n}{x_n} \right|
+\varepsilon \approx \left| \frac{\Delta x_1}{x_1} \right| + \cdots + \left| \frac{\Delta x_n}{x_n} \right|
 \]
 
 \textbf{Example: Volume of a Cuboid}
@@ -329,7 +329,7 @@ Applying the relative error formula:
 \]
 
 \textbf{Target accuracy:}  
-If the final result \( z \) must be accurate within \( \varepsilon_z = 0{,}01 \) (i.e., 1%), then we must satisfy:
+If the final result \( z \) must be accurate within \( \varepsilon_z = 0{,}01 \) (i.e., 1), then we must satisfy:
 \[
 3 \varepsilon \leq 0{,}01 \Rightarrow \varepsilon \leq \frac{0{,}01}{3} = \boxed{0{,}0033} \quad \text{(or } 0{,}33\% \text{)}
 \]
@@ -405,18 +405,18 @@ In the case \( n = m \), the \emph{Jacobian determinant} \( \det J_{\vec{f}}(\ve
 describes local invertibility and orientation.
 
 
-\subsection{Taylor's Theorem in \( \mathbb{R}^n \)}
+\subsection{Taylor's Theorem}
 
 Let \( f : \mathbb{R}^n \to \mathbb{R} \) be \( k \)-times continuously differentiable at \( \vec{x}_0 \). Then the Taylor polynomial of degree 2 around \( \vec{x}_0 \) is:
 
 \[
-f(\vec{x}) \approx f(\vec{x}_0) + \langle \nabla f(\vec{x}_0), \vec{x} - \vec{x}_0 \rangle + \frac{1}{2} (\vec{x} - \vec{x}_0)^T H_f(\vec{x}_0)(\vec{x} - \vec{x}_0)
+f(\vec{x}) \approx f(\vec{x}_0) + \langle \nabla f(\vec{x}_0), \vec{x} - \vec{x}_0 \rangle + \frac{1}{2} {(\vec{x} - \vec{x}_0)}^T H_f(\vec{x}_0)(\vec{x} - \vec{x}_0)
 \]
 
 where \( H_f(\vec{x}_0) \) is the \emph{Hessian matrix} of second partial derivatives.
 
 
-\subsection{Relative Extrema in \( \mathbb{R}^n \)}
+\subsection{Relative Extrema}
 
 To determine local extrema for \( f : \mathbb{R}^n \to \mathbb{R} \), follow this procedure:
 
@@ -455,7 +455,7 @@ H_f = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \Rightarrow \text{positive de
 \Rightarrow (0, 0) \text{ is a local minimum}
 \]
 
-\subsection{Finding Candidate Points for Zeros While Seeking Relative Extrema in \( \mathbb{R}^n \)}
+\subsection{Finding Candidate Points for Zeros While Seeking Relative Extrema}
 
 To find local minima or maxima of a function \( f : \mathbb{R}^n \to \mathbb{R} \), we first identify 
 \emph{critical points}, which are the candidates for relative extrema. 

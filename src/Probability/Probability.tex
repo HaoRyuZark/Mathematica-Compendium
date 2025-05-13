@@ -19,7 +19,7 @@ something and \(x\) the expected reward
 \subsection{Standard Deviation}
 
 \[
-\sigma = \sqrt{ \frac{ (\overline{x} - x_1)^2 + \cdots + (\overline{x} - x_n)^2 }{ n } }
+\sigma = \sqrt{ \frac{ {(\overline{x} - x_1)}^2 + \cdots + {(\overline{x} - x_n)}^2 }{ n } }
 \]
 
 
@@ -28,7 +28,7 @@ something and \(x\) the expected reward
 \textbf{Formulas:}
 
 \begin{itemize}[label=\(-\)]
-    \item \emph{Probability: } \(P(X = k) = \binom{n}{k} p^k (1 - p)^{n - k}\)
+    \item \emph{Probability: } \(P(X = k) = \binom{n}{k} p^k {(1 - p)}^{n - k}\)
     \item \emph{Expected Result: } \(E(X) = n * p\)
     \item \emph{Standard Deviation: } \(\sqrt{E(X)(1-p)}\)
     \item  \emph{Variance: } \(E(x)(1-p)\)
@@ -62,7 +62,7 @@ something and \(x\) the expected reward
 \subsection{Normal Distribution}
 
 \begin{itemize}[label=\(-\)]
-    \item \emph{Probability: } \(\frac{1}{\sqrt{2\pi \sigma^2} e^{\frac{1}{2} \left(\frac{x - u}{\sigma}\right)^2}}\)
+    \item \emph{Probability: } \(\frac{1}{\sqrt{2\pi \sigma^2} e^{\frac{1}{2} {\left(\frac{x - u}{\sigma}\right)}^2}}\)
     \item \emph{Expected Result: } \(E(x) = np = \mu\)
     \item \emph{Variance: } \(Var(x) = E(X) (1-p)\)
     \item \emph{Standard Deviation: } \(\sqrt{Var(x)}\)

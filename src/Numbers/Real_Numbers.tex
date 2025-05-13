@@ -13,28 +13,28 @@ On the set
 		\]
 		we can define an addition and a multiplication using 1.2.55 and 1.2.57 as follows:
 
-		If \( x = (x_n)_{n \in \mathbb{N}} \) and \( y = (y_n)_{n \in \mathbb{N}} \) are Cauchy sequences (respectively, convergent sequences), then their sum is defined as
+		If \( x = {(x_n)}_{n \in \mathbb{N}} \) and \( y = {(y_n)}_{n \in \mathbb{N}} \) are Cauchy sequences (respectively, convergent sequences), then their sum is defined as
 		\[
-			x + y := (x_n)_{n \in \mathbb{N}} + (y_n)_{n \in \mathbb{N}} := (x_n + y_n)_{n \in \mathbb{N}},
+			x + y := {(x_n)}_{n \in \mathbb{N}} + {(y_n)}_{n \in \mathbb{N}} := {(x_n + y_n)}_{n \in \mathbb{N}},
 		\]
 		and their product is defined as
 		\[
-			x \cdot y := (x_n)_{n \in \mathbb{N}} \cdot (y_n)_{n \in \mathbb{N}} := (x_n \cdot y_n)_{n \in \mathbb{N}}.
+			x \cdot y := {(x_n)}_{n \in \mathbb{N}} \cdot {(y_n)}_{n \in \mathbb{N}} := {(x_n \cdot y_n)}_{n \in \mathbb{N}}.
 		\]
 
 The sum and product satisfy all field axioms except for the existence of the multiplicative inverse.
-The zero element is \( 0_{\mathbb{N}} = (0, 0, \ldots) \), the unit element is \( 1_{\mathbb{N}} = (1, 1, \ldots) \), and the additive inverse of \( x = (x_n)_{n \in \mathbb{N}} \) is \( -x = (-x_n)_{n \in \mathbb{N}} \).
+The zero element is \( 0_{\mathbb{N}} = (0, 0, \ldots) \), the unit element is \( 1_{\mathbb{N}} = (1, 1, \ldots) \), and the additive inverse of \( x = {(x_n)}_{n \in \mathbb{N}} \) is \( -x = {(-x_n)}_{n \in \mathbb{N}} \).
 We demonstrate the distributive law as an example:
 
-Let \( x = (x_n)_{n \in \mathbb{N}},\ y = (y_n)_{n \in \mathbb{N}},\ z = (z_n)_{n \in \mathbb{N}} \) be Cauchy sequences (convergent sequences). Then we have:
+Let \( x = {(x_n)}_{n \in \mathbb{N}}, y = {(y_n)}_{n \in \mathbb{N}}, z = {(z_n)}_{n \in \mathbb{N}} \) be Cauchy sequences (convergent sequences). Then we have:
 \[
-	x(y + z) = (x_n)_{n \in \mathbb{N}} \cdot \left( (y_n)_{n \in \mathbb{N}} + (z_n)_{n \in \mathbb{N}} \right)
-	= (x_n)_{n \in \mathbb{N}} \cdot (y_n + z_n)_{n \in \mathbb{N}}
-	= (x_n (y_n + z_n))_{n \in \mathbb{N}}
+	x(y + z) = {(x_n)}_{n \in \mathbb{N}} \cdot \left( {(y_n)}_{n \in \mathbb{N}} + {(z_n)}_{n \in \mathbb{N}} \right)
+	= {(x_n)}_{n \in \mathbb{N}} \cdot {(y_n + z_n)}_{n \in \mathbb{N}}
+	= {(x_n (y_n + z_n))}_{n \in \mathbb{N}}
 \]
 \[
-	= (x_n y_n + x_n z_n)_{n \in \mathbb{N}}
-	= (x_n y_n)_{n \in \mathbb{N}} + (x_n z_n)_{n \in \mathbb{N}}
+	= {(x_n y_n + x_n z_n)}_{n \in \mathbb{N}}
+	= {(x_n y_n)}_{n \in \mathbb{N}} + {(x_n z_n)}_{n \in \mathbb{N}}
 	= xy + xz.
 \]
 
@@ -66,7 +66,7 @@ We define the following relation on the set \( \operatorname{ch}(\mathbb{Q}) \) 
 	x \sim y \quad \text{if and only if} \quad x - y \text{ is a null sequence}.
 \]
 
-That is, \( (x_n)_{n \in \mathbb{N}} \sim (y_n)_{n \in \mathbb{N}} \) if and only if
+That is, \( {(x_n)}_{n \in \mathbb{N}} \sim {(y_n)}_{n \in \mathbb{N}} \) if and only if
 \[
 	x_n - y_n \to 0 \quad (n \to \infty).
 \]
@@ -74,12 +74,12 @@ That is, \( (x_n)_{n \in \mathbb{N}} \sim (y_n)_{n \in \mathbb{N}} \) if and onl
 \subsection{Definition}
 The set
 \[
-	\mathbb{R} := \{ [x]_{\sim} : x \in \operatorname{ch}(\mathbb{Q}) \}
+	\mathbb{R} := \{ {[x]}_{\sim} : x \in \operatorname{ch}(\mathbb{Q}) \}
 \]
 is called the set of real numbers.
 
 Analogous to the construction of the rational numbers, the real numbers consist of equivalence classes.
-Roughly speaking, an equivalence class consists of those Cauchy sequences in \( \mathbb{Q} \) that exhibit the same "limit behavior."
+Roughly speaking, an equivalence class consists of those Cauchy sequences in \( \mathbb{Q} \) that exhibit the same limit behavior.
 
 Equipped with the addition
 \[

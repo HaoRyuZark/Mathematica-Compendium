@@ -54,7 +54,7 @@ If \(u = g(x)\) and \(f = F'\), then:
 
 \textbf{Example:}
 \[
-\int \frac{1}{(x - 1)^4}\,dx, \quad u = x - 1 \Rightarrow \int \frac{1}{u^4} du = -\frac{1}{3u^3} + C = -\frac{1}{3(x - 1)^3} + C
+\int \frac{1}{{(x - 1)}^4}\,dx, \quad u = x - 1 \Rightarrow \int \frac{1}{u^4} du = -\frac{1}{3u^3} + C = -\frac{1}{3{(x - 1)}^3} + C
 \]
 
 \subsection{Integration by Parts}
@@ -139,7 +139,7 @@ Use: \( x = 2\tan \theta \Rightarrow dx = 2\sec^2 \theta\, d\theta \)
 
 Substitute:
 \[
-\int \frac{x^3}{\sqrt{x^2 + 4}}\,dx = \int \frac{(2\tan \theta)^3}{2\sec \theta} \cdot 2\sec^2 \theta\, d\theta
+\int \frac{x^3}{\sqrt{x^2 + 4}}\,dx = \int \frac{{(2\tan \theta)}^3}{2\sec \theta} \cdot 2\sec^2 \theta\, d\theta
 = \int \frac{8\tan^3 \theta}{\sec \theta} \cdot 2\sec^2 \theta\, d\theta
 \]
 
@@ -182,7 +182,7 @@ Then solve the integral using trigonometric identities and reduction formulas. R
 This leaves us with
 
 \[
-    \frac{8}{3} \left(\frac{\sqrt{x^2 + 4}}{2}\right)^3 - 8 \left( \frac{\sqrt{x^2 + 4}}{2}\right) + c
+    \frac{8}{3} {\left(\frac{\sqrt{x^2 + 4}}{2}\right)}^3 - 8 \left( \frac{\sqrt{x^2 + 4}}{2}\right) + c
 \]
 
 \textbf{Example 3: \( \int \frac{x^3}{\sqrt{x^4 - 4}} \,dx \)}
@@ -191,7 +191,7 @@ Use: \(x = 2\sec \theta, \ dx = 2\sec \theta \tan \theta \,d\theta \)
 
 Then
 \[
-\int \frac{(2\sec\theta)^2 2\sec\theta \tan\theta \,d\theta}{2\tan\theta} = \int 8\sec^4 \theta\,d\theta
+\int \frac{{(2\sec\theta)}^2 2\sec\theta \tan\theta \,d\theta}{2\tan\theta} = \int 8\sec^4 \theta\,d\theta
 \]
 
 \[
@@ -209,7 +209,7 @@ Now we return to x via our triangle:
 \[\tan\theta = \frac{\sqrt{x^2 + 4}}{2}\]
 
 \[
-\frac{8}{3}\left(\frac{\sqrt{x^2 + 4}}{2}\right)^3 + 8 \frac{\sqrt{x^2 + 4}}{2} + c
+\frac{8}{3}{\left(\frac{\sqrt{x^2 + 4}}{2}\right)}^3 + 8 \frac{\sqrt{x^2 + 4}}{2} + c
 \]
 \subsection{Average Value of a Function}
 
@@ -228,7 +228,7 @@ If \(f\) is continuous on \([a, b]\), then:
 
 \emph{Arc length:}
 \[
-L = \int_a^b \sqrt{1 + [f'(x)]^2}\,dx
+L = \int_a^b \sqrt{1 + {f'(x)}^2}\,dx
 \]
 \emph{Area between curves:}
 \[
@@ -236,11 +236,11 @@ A = \int_a^b |f(x) - g(x)|\,dx
 \]
 \emph{Volume (disk):}
 \[
-V = \pi \int_a^b f(x)^2\,dx
+V = \pi \int_a^b {f(x)}^2\,dx
 \]
 \emph{Shell:}
 \[
-V = 2\pi \int_a^b x f(x) \sqrt{1 + f'(x)^2}\,dx
+V = 2\pi \int_a^b x f(x) \sqrt{1 + {f'(x)}^2}\,dx
 \]
 
 \subsection{Differentiation of Integrals with Variable Bounds}

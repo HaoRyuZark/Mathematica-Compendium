@@ -44,7 +44,7 @@ a_n = 2 \cdot 3^{n-1} = 2, 6, 18, 54, \dots
 A \emph{function sequence} is sequence composed of functions and its noted like:
 
 \[
-(f)_n \text{with } x^t := \{ f: D\to R | \ f \text{ is a funtion}\}
+{(f)}_n \text{with } x^t := \{ f: D\to R | \ f \text{ is a function}\}
 \]
 
 \subsection{Convergence}
@@ -112,7 +112,7 @@ The \emph{minimum} is the smallest element in the set, if it exists.
 \item An \emph{accumulation point} (or limit point) of a set \(A\) is a point \(x\) such that every neighborhood of \(x\) contains infinitely many points of \(A\).
 \end{itemize}
 
-\textbf{Example:} The sequence \(a_n = (-1)^n + \frac{1}{n}\) has two accumulation points: \(1\) and \(-1\).
+\textbf{Example:} The sequence \(a_n = {(-1)}^n + \frac{1}{n}\) has two accumulation points: \(1\) and \(-1\).
 
 \subsection{Monotonicity by Difference and Quotient}
 
@@ -141,7 +141,7 @@ A sequence \emph{diverges} if it does not converge. That is, there is no real nu
 \item A sequence can also oscillate without approaching any limit
 \end{itemize}
 
-\textbf{Example:} The sequence \(a_n = (-1)^n\) diverges since it oscillates between \(1\) and \(-1\).
+\textbf{Example:} The sequence \(a_n = {(-1)}^n\) diverges since it oscillates between \(1\) and \(-1\).
 
 
 \subsection{Subsequences and Their Properties}
@@ -155,7 +155,7 @@ A \emph{subsequence} of a sequence \((a_n)\) is a sequence \((a_{n_k})\) where \
 \item A bounded sequence always has at least one convergent subsequence (Bolzano-Weierstraß theorem).
 \end{itemize}
 
-\subsection{Serie}
+\subsection{Series}
 
 A \emph{series} is the sum of the terms of a sequence:
 \[
@@ -170,7 +170,7 @@ We define the partial sums \(S_n = \sum_{k=1}^n a_k\). If the sequence \((S_n)\)
 
 A \emph{power series} is a series of the form:
 \[
-\sum_{n=0}^{\infty} a_n (x - x_0)^n
+\sum_{n=0}^{\infty} a_n {(x - x_0)}^n
 \]
 where \(x_0\) is the center of the expansion. Power series converge within a radius \(R\):
 \[
@@ -340,7 +340,7 @@ For a sequence of complex numbers \((a_n)\) where \(a_n = x_n + i y_n\), the lim
 This means we can analyze the convergence of a complex sequence by examining the convergence of its real and imaginary parts separately.
 
 \subsubsection{Asymptotic Equality}
-Two sequences \((a_n)_{n \in \mathbb{N}}\) and \((b_n)_{n \in \mathbb{N}}\) are said to be asymptotically equal, denoted by \(a_n \sim b_n\), if
+Two sequences \({(a_n)}_{n \in \mathbb{N}}\) and \({(b_n)}_{n \in \mathbb{N}}\) are said to be asymptotically equal, denoted by \(a_n \sim b_n\), if
 \[
 \lim_{n \to \infty} \frac{a_n}{b_n} = 1,
 \]

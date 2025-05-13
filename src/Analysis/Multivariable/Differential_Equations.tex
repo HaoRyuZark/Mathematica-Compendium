@@ -1,8 +1,8 @@
 \newpage
 \section{Differential Equations}
 
-A Differential Equation is an equation that relates a function (the dependent varible)
-with a varible or multiple variables (the independent variables) and its derivative.
+A Differential Equation is an equation that relates a function (the dependent variable)
+with a variable or multiple variables (the independent variables) and its derivative.
 
 They can be categorized in \emph{Ordinary} and \emph{Partial} Differential Equations.
 
@@ -18,7 +18,7 @@ is called \emph{Ordinary Explicit Differential Equations of order} \(n\)
 
 If \(y^n = 0\) then it is \emph{implicit}
 
-If the exponent of the dependent varible is 1 and it
+If the exponent of the dependent variable is 1 and it
 is build like a linear equation then it is categorized as \emph{Linear}
 
 \subsection{Initial Value Problems and Solutions}
@@ -90,14 +90,14 @@ be written in one of the following forms:
 
 Given is \((y - 2)y' = 3x - 5\)
 
-It is an ODE of separable varible
+It is an ODE of separable variable
 \[y' = \frac{3x - 5}{y - 2}\]
 
 Now we separate the variables and Integrate
 
 \[\int (y - 2)y' dx = \int 3x - 5 dx\]
 
-Note that \(y' = \frac{dy}{dx}\) and \( \frac{dy}{dx} dx = dy\) (only as a convinient fiction :D 
+Note that \(y' = \frac{dy}{dx}\) and \( \frac{dy}{dx} dx = dy\) (only as a convenient fiction
 in reality we are changing the variables) thus
 
 \[\int (y - 2)dy = \int 3x - 5 dx\]
@@ -195,8 +195,8 @@ In some cases a complex function can be simplified via a substitution.
 
 \[y' = f(ax + by(x) + c)\]
 
-With a substitution like \(z(x) = ax + by(x) + c\) the righthand side will become \(f(z)\)
-and for the lefthand side we get \(y(x) = \frac{z(x) - ax - c}{b}\).
+With a substitution like \(z(x) = ax + by(x) + c\) the right hand side will become \(f(z)\)
+and for the left hand side we get \(y(x) = \frac{z(x) - ax - c}{b}\).
 \\\\
 Now we can substitute in the original equation and we get
 
@@ -220,18 +220,18 @@ z(x) = x + y(x)
 \[y'(x) = z'(x) - 1\]
 
 \textbf{2. Plug in the DE}
-\[y' = (x + y(x))^2\]
-\[z'(x) - 1 = z(x)^2\]
+\[y' = {(x + y(x))}^2\]
+\[z'(x) - 1 = {z(x)}^2\]
 
 \textbf{3. Integrate}
 
-\[z'(x) = 1 + z(x)^2\]
-\[\frac{z'(x)}{1 + z(x)^2}\]
+\[z'(x) = 1 + {z(x)}^2\]
+\[\frac{z'(x)}{1 + {z(x)}^2}\]
 \[\int \frac{1}{1 + z^2} dz = \int 1 dx\]
 \[\arctan (z) = x + c\]
 \[z = \tan(x + c)\]
 
-\textbf{4. Return to the orignial variables}
+\textbf{4. Return to the original variables}
 
 \[x + y(x) = \tan(x + c)\]
 \[y(x) = \tan(x + c) - x\]
@@ -242,13 +242,13 @@ z(x) = x + y(x)
 
 For this to be valid \(z(x) = \frac{y}{x}\) our \(y(x)\) needs to look like \(y(x) = z(x)x\) and so \(y' = z(x) + z'(x)x\).
 \\\\
-Now we substitute in the differential equation unsing \(f(z) = z(x) + z'(x)x\)
+Now we substitute in the differential equation using \(f(z) = z(x) + z'(x)x\)
 
 \[
 z'(x) = \frac{f(z) - z(x)}{x}
 \]
 
-Now we can integrate and then return to our orignial variables. \(y(x) = z(x) x\) where \(z(x)\) is our
+Now we can integrate and then return to our orignial variables. \(y(x) = z(x)x \) where \(z(x)\) is our
 result of the integration.
 \\\\
 \textbf{Example:}
@@ -283,7 +283,7 @@ If such an Equation has also the property \(b(x) = 0\) it is called \emph{Homoge
 
 \subsubsection{How to solve a Linear Differential Equation}
 
-In this case we will focus on first Order. ODE.
+In this case we will focus on first Order ODE.
 
 Write it in the standard form \(y' + p(x)y = f(x)\)
 
@@ -322,9 +322,10 @@ Now we have found a \(r(x)\) and now that we know that such a function exists we
 to our initial problem and say
 
 \[\frac{d}{dx}r(x)y = r(x)f(x)\]
-\begin{center}
-    \boxed{y = \frac{1}{r (x) } \int r (x) f (x) dx}
-\end{center}
+
+\[
+y = \frac{1}{r (x) } \int r (x) f (x) dx
+\]
 
 and 
 
@@ -377,7 +378,7 @@ A function \(f(x,y)\) is called \emph{homogeneous} if and only if it can be writ
 \textbf{Example: }
 
 \[f(x,y) = x^3 + y^3\]
-\[f(tx, ty) = (tx)^3 + (ty)^3\]
+\[f(tx, ty) = {(tx)}^3 + {(ty)}^3\]
 \[t^3 (x^3 + y^3) = t^3 f(x,y)\]
 
 It is important to note that the key is the each term have a total degree of \(n\).
@@ -441,7 +442,7 @@ Now substitute
 \subsection{Inhomogeneous Equation}
 
 The equation \(y' + f(x)y = g(x)\) is called \emph{linear inhomogeneous differential equation of first order}
-. \(g(x)\) is called the \emph{distortion function}. The correspondent IVP is called
+ \(g(x)\) is called the \emph{distortion function}. The correspondent IVP is called
 \emph{linear} IVP.
 
 \subsection{Solutions of LDE}
@@ -532,12 +533,12 @@ Given is \(y' -\cos(x)y = x e^{\sin(x)}\) with \(y(0) = 3\).
 \[3 = c\]
 
 
-\subsection{Constant Coeffitients (Superposition Postulate)}
+\subsection{Constant Coefficients (Superposition Postulate)}
 
 Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
 The homogeneous equation to this case will be \(y' + ay = 0\) with a solution \(y_h\) and some
 partial solution \(y_p\). Now remember from \emph{Linear Algebra} the \(general = particular + homogeneous\)
-more precissely \(y = y_p + y_h\) therefore adding a particular solution to a homogeneous does not change
+more precisely \(y = y_p + y_h\) therefore adding a particular solution to a homogeneous does not change
 the general solution of our DE.
 \\\\
 Now lets substitute in our differential equation.
@@ -558,7 +559,7 @@ Now lets substitute in our differential equation.
 
 Now we have to find a way to solve for \(y_p\) and \(y_h\)
 
-\subsubsection{Find the partial solution \(y_p\)}
+\subsubsection{Find the partial solution}
 
 We will use the method called based on guessing the type of the function on the right side.
 \\\\

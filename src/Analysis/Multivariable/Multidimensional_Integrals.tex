@@ -8,33 +8,33 @@ by dividing it in to equally smaller section that are straight lines in this cas
 be prisms, squares, etc. Now if we look at the difference between two points in our 3D space, 
 for this Example
 we notice that there are three differences \(\Delta i\) \(\Delta j\) \(\Delta k\).j
-Now lets take the length of the vector \(\sqrt{(\Delta i)^2 + (\Delta j)^2 + (\Delta k)^2}\)
+Now lets take the length of the vector \(\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}\)
 
 The total Arc-length is going to be the sum of all of this sectors
 \[
-L =  \sum_{i = 1}^{n}\sqrt{(\Delta i)^2 + (\Delta j)^2 + (\Delta k)^2}
+L =  \sum_{i = 1}^{n}\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}
 \]
 
 if we use a clever one we get
 
 \[
-L =  \sum_{i = 1}^{n}\sqrt{\frac{\left(\frac{\Delta i}{\Delta t}\right)^2 + \left(\frac{\Delta j}{\Delta t}\right)^2 + \left(\frac{\Delta k}{\Delta t}\right)^2}{\Delta t}}
+L =  \sum_{i = 1}^{n}\sqrt{\frac{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}{\Delta t}}
 \]
 
 Now if we take the limit we get
 
 \[
-L =  \lim_{n\to \infty}\sum_{i = 1}^{n}\sqrt{\frac{\left(\frac{\Delta i}{\Delta t}\right)^2 + \left(\frac{\Delta j}{\Delta t}\right)^2 + \left(\frac{\Delta k}{\Delta t}\right)^2}{\Delta t}}
+L =  \lim_{n\to \infty}\sum_{i = 1}^{n}\sqrt{\frac{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}{\Delta t}}
 \]
 
 which is 
 
 \[
-L =  \int_{a}^{b}\sqrt{\left(\frac{\Delta i}{\Delta t}\right)^2 + \left(\frac{\Delta j}{\Delta t}\right)^2 + \left(\frac{\Delta k}{\Delta t}\right)^2}\,dt
+L =  \int_{a}^{b}\sqrt{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}\,dt
 \]
 
 \[
-L =  \int_{a}^{b}\sqrt{(f'(t))^2 + (g'(t))^2 + (h'(t))^2}\,dt
+L =  \int_{a}^{b}\sqrt{{(f'(t))}^2 + {(g'(t))}^2 + {(h'(t))}^2}\,dt
 \]
 
 For differentiable function on the interval \(t \in [a; b]\)
@@ -501,7 +501,7 @@ and the whole circle would be \(2\pi\)
 
 \emph{Final Formula for the difference in the Area}
 
-\[\Delta A = \frac{\Delta \theta}{2 \pi} \left ( \left[r_k + \frac{\Delta r}{2}\right]^2 - \left[r_k - \frac{\Delta r}{2}\right]^2\right)\] 
+\[\Delta A = \frac{\Delta \theta}{2 \pi} \left ( {\left[r_k + \frac{\Delta r}{2}\right]}^2 - {\left[r_k - \frac{\Delta r}{2}\right]}^2\right)\] 
 \[ = r_k \Delta r \Delta \theta\]
 
 Which multiplied by the function value and by taking the limit of this sections we get that the volume:
@@ -521,7 +521,7 @@ V = \int_{0}^{2\pi}\int_{0}^{1 - \sin \theta} r r dr d\theta
 \]
 
 \[
-= \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} \frac{(1 - \sin\theta)^3}{3} d\theta = \frac{5 \pi}{3}
+= \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} \frac{{(1 - \sin\theta)}^3}{3} d\theta = \frac{5 \pi}{3}
 \]
 
 
@@ -555,8 +555,8 @@ S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\in
 Now lets translate to polar coordinates
 
 \begin{align*}
-S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r\cos\theta)^2} re^{-(r\sin\theta)^2}drd\theta\right)\\
-S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r\cos\theta)^2 + (r\sin\theta)^2}drd\theta\right)\\
+S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2} re^{-{(r\sin\theta)}^2}drd\theta\right)\\
+S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2 + {(r\sin\theta)}^2}drd\theta\right)\\
 S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r^2)}drd\theta\right)\\
 S^2 &=  \left(\int_{0}^{2\pi} \int_{0}^{\infty}\frac{1}{2}e^{-(s)}dsd\theta\right)\\
 S^2 &= \left(\int_{0}^{2\pi}d\theta\right)\\
