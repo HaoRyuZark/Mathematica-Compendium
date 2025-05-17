@@ -6,11 +6,11 @@ In this section I will provide with some examples of different types of proofs.
 \subsection{Proof by Direct Argument}
 
 For any integer \( n \), if \( n \) is even, then \( n^2 \) is even.
-\\\\
+\newline
 	We will prove this theorem by direct argument.
-\\\\
+\newline
 	Assume \( n \) is an even integer. Then we can write \( n = 2k \) for some integer \( k \).
-\\\\
+\newline
 	Now, we compute \( n^2 \):
 	\[
 		n^2 = {(2k)}^2 = 4k^2 = 2(2k^2)
@@ -22,9 +22,9 @@ For any integer \( n \), if \( n \) is even, then \( n^2 \) is even.
 \subsection{Proof by Contradiction}
 
 If \( n \) is an integer such that \( n^2 \) is even, then \( n \) is even.
-\\\\
+\newline
 	We will prove this theorem by contradiction. Assume that \( n \) is an integer such that \( n^2 \) is even, but \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \).
-\\\\
+\newline
 	Now, we compute \( n^2 \):
 	\[
 		n^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
@@ -39,7 +39,7 @@ For all \( n \in \mathbb{N} \), the sum of the first \( n \) positive integers i
 	S(n) = 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
 \]
 We will prove this theorem by induction on \( n \).
-\\\\
+\newline
 	\textbf{Base Case:} For \( n = 1 \):
 	\[
 		S(1) = 1 = \frac{1(1+1)}{2}
@@ -74,9 +74,9 @@ We will prove this theorem by induction on \( n \).
 \subsection{Proof by Exhaustion}
 
 The only integer solutions to the equation \( x^2 + y^2 = 1 \) are \( (0, 1), (1, 0), (0, -1), (-1, 0) \).
-\\\\
+\newline
 	We will prove this theorem by exhaustion. We will check all possible integer values of \( x \) and \( y \) such that \( x^2 + y^2 = 1 \).
-\\\\
+\newline
 	The possible integer values for \( x \) and \( y \) are \( -1, 0, 1 \). We will check each case:
 	\\
 	- If \( x = 0 \):
@@ -96,7 +96,7 @@ The only integer solutions to the equation \( x^2 + y^2 = 1 \) are \( (0, 1), (1
 	- Then \( y^2 = 0 \) gives \( y = 0 \).
 	\\
 	- Solution: \( (-1, 0) \).
-\\\\
+\newline
 	Thus, the only integer solutions to the equation are:
 	\[
 		(0, 1), (1, 0), (0, -1), (-1, 0)
@@ -107,34 +107,34 @@ The only integer solutions to the equation \( x^2 + y^2 = 1 \) are \( (0, 1), (1
 \subsection{Proof by Cases}
 
 For any integer \( n \), \( n^2 \) is even if and only if \( n \) is even.
-\\\\
+\newline
 	We will prove this theorem by cases.
-\\\\
+\newline
 	\textbf{Case 1:} Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \).
-\\\\
+\newline
 	Now, we compute \( n^2 \):
 	\[
 		n^2 = {(2k)}^2 = 4k^2 = 2(2k^2)
 	\]
 	This shows that \( n^2 \) is even.
-\\\\
+\newline
 	\textbf{Case 2:} Assume \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \).
-\\\\
+\newline
 	Now, we compute \( n^2 \):
 	\[
 		n^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
 	\]
 	This shows that \( n^2 \) is odd.
-\\\\
+\newline
 	Since both cases have been considered, we conclude that \( n^2 \) is even if and only if \( n \) is even.
 \QED
 
 \subsection{Proof by Construction}
 
 There exists an irrational number \( x \) such that \( x^2 \) is rational.
-\\\\
+\newline
 	We will construct an irrational number \( x \) such that \( x^2 \) is rational.
-\\\\
+\newline
 	Let \( x = \sqrt{2} \). We know that \( \sqrt{2} \) is irrational. Now, we compute \( x^2 \):
 	\[
 		x^2 = (\sqrt{2})^2 = 2
@@ -147,41 +147,41 @@ There exists an irrational number \( x \) such that \( x^2 \) is rational.
 \subsection{Proof by Counterexample}
 
 The statement All prime numbers are odd is false.
-\\\\
+\newline
 	To prove this theorem, we will provide a counterexample.
-\\\\
+\newline
 	The number \( 2 \) is a prime number, as its only divisors are \( 1 \) and \( 2 \). However, \( 2 \) is even, which contradicts the statement that all prime numbers are odd.
-\\\\
+\newline
 	Therefore, the statement All prime numbers are odd is false.
 \QED
 
 \subsection{Proof by Contrapositive}
 
 If \( n \) is an integer such that \( n^2 \) is odd, then \( n \) is odd.
-\\\\
+\newline
 	We will prove this theorem by contrapositive. The contrapositive of the statement is: If \( n \) is an integer such that \( n \) is even, then \( n^2 \) is even.
-\\\\
+\newline
 	Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \).
-\\\\
+\newline
 	Now, we compute \( n^2 \):
 	\[
 		n^2 = {(2k)}^2 = 4k^2 = 2(2k^2)
 	\]
 	This shows that \( n^2 \) is even.
-\\\\
+\newline
 	Since the contrapositive statement is true, the original statement "If \( n^2 \) is odd, then \( n \) is odd" is also true.
 \QED
 
 \subsection{Proof by Reduction to Absurdity}
 
 The square root of \( 2 \) is irrational.
-\\\\
+\newline
 	We will prove this theorem by reduction to absurdity. Assume that \( \sqrt{2} \) is rational. Then we can write:
 	\[
 		\sqrt{2} = \frac{p}{q}
 	\]
 	where \( p \) and \( q \) are integers with no common factors (i.e., the fraction is in simplest form).
-\\\\
+\newline
 	Squaring both sides gives:
 	\[
 		2 = \frac{p^2}{q^2}
@@ -212,10 +212,10 @@ The square root of \( 2 \) is irrational.
 The set of rational numbers is dense in the set of real numbers.
 
 We will prove this theorem by analogy.
-\\\\	
+\newline	
 Consider the set of rational numbers \( \mathbb{Q} \) and the set of real numbers \( \mathbb{R} \). The density of \( \mathbb{Q} \) in \( \mathbb{R} \) means that between any two real numbers, there exists a rational number.
 For example, between the real numbers \( 1 \) and \( 2 \), we can find the rational number \( \frac{3}{2} = 1.5 \). Similarly, between any two real numbers \( a \) and \( b \) (where \( a < b \)), we can find a rational number \( r = \frac{a + b}{2} \).
-\\\\
+\newline
 This shows that the set of rational numbers is dense in the set of real numbers.
 Therefore, the theorem is proved by analogy.
 

@@ -4,17 +4,17 @@
 Given a vertor \(\vec{x} = \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n\) 
 with \(\vec{v}_1, \dots, \vec{v}_n\)
 being a the basis vector, we can write \(\vec{x}\) in term of its components \((a, b, c, \dots)^T\).
-\\\\
+\newline
 Now imagine having another basis \(\vec{b}_1, \dots, \vec{b}_n\) and a the same vector \(\vec{x}\)
 with all of its components. The key here is that we want to know how our original
 vector is described in terms of other basis. More precisely what are its coordinates
-\\\\
+\newline
 So our vector \(\vec{x}\) is described:
 
 \[\lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n\]
 
 in the corresponding bases.
-\\\\
+\newline
 Now lets write then a matrix vector multiplication
 \[
 (\vec{v}_1, \dots, \vec{v}_ n) 
@@ -30,23 +30,23 @@ Now lets use the following notation for the Basis and the coefficient vectors.
 
 Here \(P_{X}\) is the matrix of the basis \(X\) vectors and \((\vec{x})_X\) the coefficients of the
 vector \(\vec{x}\) described by that basis.
-\\\\
+\newline
 Now that convertion of basis is just a matter of solving for 
 our desired vector by multipliying
 by the inverse of the corresponding basis matrix.
-\\\\
+\newline
 \textbf{Example I:}
-\\\\
+\newline
 Lets find \(\vec{x}\) in terms of tha basis \(C\)
 
 \[P_{C}^{-1} P_B (\vec{x})_B = (\vec{x})_C\]
 
 \textbf{Example II:}
-\\\\
+\newline
 Give are the vector \(\vec{u}_1 = (1,2)^T\) and \(\vec{u}_2 = (3, 3)^T\)
 and our canonical basis vector \(\imath\) and \(\jmath\). The
 vector in the canonical basis has the coordinates (2, 1). 
-\\\\
+\newline
 We set them equal
 
 \[\lambda_1 \vec{u}_1 + \lambda_2 \vec{u}_2 = \mu_1 \imath + \mu_2 \jmath \]
@@ -78,13 +78,13 @@ Now we can write this in matrix form
 
 This equation relates the coefficient in the standard basis to the new basis
 coefficients
-\\\\
+\newline
 What we are really doing here is taking the basis vectors of \(B\) and writing then as a linear combination
 of the basis vectors of \(C\). This will give us \(n\) matrices that we can solve.
-\\\\
+\newline
 To go the other way arround we take the inverse of the matrix whose column are the basis vectors of \(B\)
 relative to the new basis \(C\)
-\\\\
+\newline
 Now let us understan what really is happening in the step where we multiply by the inverse matrix.
 
 \begin{align*}
@@ -113,10 +113,10 @@ For linear transformation we use the formula.
 where \(\vec{v}\) is a vector in the other basis, \(A\) the
 other basis,\(M\) the linear transformation and \(A^{-1}\) the inverse of
 the basis vector of \(A\).
-\\\\
+\newline
 We interpert this as taking a vector of the new basis, translating it to our language,
 performing the transformation and then returning to the new basis.
-\\\\
+\newline
 For the sake of completness here some importan Theoremes and definitions:
 
 \subsection{Theoremes and definitions concerning the change of basis}

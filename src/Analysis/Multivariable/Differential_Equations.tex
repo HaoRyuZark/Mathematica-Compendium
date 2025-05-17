@@ -182,7 +182,7 @@ there is a unique solution on an interval \(\alpha < x_0 < \beta\) to the IVP
 
 After solving a differential equation we may have the problem that certain initial
 conditions were set at the start, thus making our general solution not specific.
-\\\\
+\newline
 Solving this problem is pretty easy, because we just have to solve for the constant terms
 in our general solution with respect to our initial conditions. Like for example \(y(0) = 1\)
 we would plug 0 for all \(x\)'s in our general solution the whole equation will be set equal to 1.
@@ -197,7 +197,7 @@ In some cases a complex function can be simplified via a substitution.
 
 With a substitution like \(z(x) = ax + by(x) + c\) the right hand side will become \(f(z)\)
 and for the left hand side we get \(y(x) = \frac{z(x) - ax - c}{b}\).
-\\\\
+\newline
 Now we can substitute in the original equation and we get
 
 \[y'(x) = \frac{1}{b} (z'(x) - a) = f(z)\]
@@ -205,7 +205,7 @@ Now we can substitute in the original equation and we get
 \[z'(x) = a + b f(z)\]
 
 Now we can integrate and find the solution and then return to our original variables.
-\\\\
+\newline
 \textbf{Example:}
 
 \[y' = (x + y(x))^2\]
@@ -241,7 +241,7 @@ z(x) = x + y(x)
 \[y' = f(\frac{y}{x})\]
 
 For this to be valid \(z(x) = \frac{y}{x}\) our \(y(x)\) needs to look like \(y(x) = z(x)x\) and so \(y' = z(x) + z'(x)x\).
-\\\\
+\newline
 Now we substitute in the differential equation using \(f(z) = z(x) + z'(x)x\)
 
 \[
@@ -250,12 +250,12 @@ z'(x) = \frac{f(z) - z(x)}{x}
 
 Now we can integrate and then return to our orignial variables. \(y(x) = z(x)x \) where \(z(x)\) is our
 result of the integration.
-\\\\
+\newline
 \textbf{Example:}
 \[y' = \frac{y(x)}{x} + 1\]
 
 This in converted to \(y' = f(z) = z + 1\)
-\\\\
+\newline
 \textbf{1. Substitute}
 
 \[z(x) = \frac{y(x)}{x}\]
@@ -274,7 +274,7 @@ This in converted to \(y' = f(z) = z + 1\)
 
 \subsection{Linear Differential Equations}
 
-An ODE is called linar if all occurences of the dependent varible and its
+An ODE is called linear if all occurrences of the dependent variable and its
 derivatives have a exponent of at most 1.
 
 \[a_n(x)y^n + a_{n - 1}y^{n -1} + \cdots + a_1(x)y' + a_0(x)y = b(x)\]
@@ -312,11 +312,11 @@ This is a differential equation of separable variables thus we can
 
 \[\int \frac{r'(x)}{r(x)}dx = \int p(x)dx\]
 
-\[ \ln(r(x)) = \int p(x)\]
+\[ \ln(r(x)) = \int p(x) dx\]
 
 after using \(e\)
 
-\[ r(x) = e^{\int p(x)}\]
+\[ r(x) = e^{\int p(x) dx}\]
 
 Now we have found a \(r(x)\) and now that we know that such a function exists we can return 
 to our initial problem and say
@@ -329,7 +329,7 @@ y = \frac{1}{r (x) } \int r (x) f (x) dx
 
 and 
 
-\[r(x) = e^{\int p (x) }\]
+\[r(x) = e^{\int p (x) dx}\]
 
 \textbf{Example}
 
@@ -366,7 +366,7 @@ A differential equation
 
 is considered \emph{Homogeneous} if and only if
 \(M(x)\) and \(N(x)\) are \emph{homogeneous} and they have the same degree.
-\\\\
+\newline
 The equation \(y' + f(x)y = 0\) is called \emph{homogeneous linear differential equation of first order}.
 
 \subsubsection{Homogeneous Equation}
@@ -424,7 +424,7 @@ and
 Now substitute
 
 \[(x - ux)dx + x(udx + xdu) = 0\]
-\[xdx - uxdx + xudx + x^{2}du = 0\]
+\[xdx - u x dx + x u dx + x^{2}du = 0\]
 \[(x - ux + xu)dx + x^{2}du = 0\]
 \[xdx + x^{2}du = 0\]
 \[xdx = - x^{2}du\]
@@ -443,13 +443,13 @@ Now substitute
 
 The equation \(y' + f(x)y = g(x)\) is called \emph{linear inhomogeneous differential equation of first order}
  \(g(x)\) is called the \emph{distortion function}. The correspondent IVP is called
-\emph{linear} IVP.
+\emph{linear} IVP\@.
 
 \subsection{Solutions of LDE}
 
 Every linear IVP with continuous functions \(f(x)\) and \(g(x)\) plus a bounded \(f(x)\) 
 has exactly one solution.
-\\\\
+\newline
 \textbf{Proof:}
 
 \begin{align*}
@@ -464,24 +464,24 @@ Therefore the function is Lipschitz continuous, thus a solution is possible.
 \subsubsection{Solving of Inhomogenous DE}
 
 Recall that for the homogeneous case \(y' + f(x)y = 0\) case we use 
-\(y = c e^{\int -f(x) dx}\) but now we have \(y' + f(x)y = g(x)\), thus lets use the following
+\(y = c e^{\int f(x) dx}\) but now we have \(y' + f(x)y = g(x)\), thus lets use the following
 approach
 
-\[y = c(x) e^{\int -f(x) dx}\]
+\[y = c(x) e^{\int f(x) dx}\]
 
 Now use the product rule to derivate
 
 \begin{align*}
-y' &= c'(x) e^{\int -f(x) dx} + c(x)e^{\int -f(x) dx}(-(-f(x)))\\
-   &= c'(x)e^{\int -f(x) dx} - f(x)y
+y' &= c'(x) e^{\int f(x) dx} + c(x)e^{\int f(x) dx}f(x)\\
+   &= c'(x)e^{\int f(x) dx} - f(x)y
 \end{align*}
 
 thus 
 
-\[y' + f(x)y = c'(x)e^{\int -f(x) dx}\]
+\[y' + f(x)y = c'(x)e^{\int f(x) dx}\]
 
-therefore \(g(x) = c'(x)e^{\int -f(x) dx}\)
-\\\\
+therefore \(g(x) = c'(x)e^{\int f(x) dx}\)
+\newline
 Then we can get a solution for \(c(x)\) from
 
 \[
@@ -491,7 +491,7 @@ Then we can get a solution for \(c(x)\) from
 \textbf{Example: }
 
 Given is \(y' -\cos(x)y = x e^{\sin(x)}\) with \(y(0) = 3\).
-\\\\
+\newline
 \textbf{1. Solve as if it were homogeneous}
 
 \[y' -\cos(x)y = 0\]
@@ -533,14 +533,23 @@ Given is \(y' -\cos(x)y = x e^{\sin(x)}\) with \(y(0) = 3\).
 \[3 = c\]
 
 
-\subsection{Constant Coefficients (Superposition Postulate)}
+\subsection{Existence and Uniqueness for Second Order Differential Equations}
+
+For the IVP
+\[y'' + p(x)y + q(x)y = f(x)\]
+\[y(a) = b_0, y'(a) = b_1\]
+If \(p,q,f\) are continuous on the interval \(I\) about \(a\), then there exists a unique
+solution on \(I\). In a generalization for \(n\) order differential equations there would be \(n\) 
+initial conditions. 
+
+\subsection{Constant Coefficients and the Superposition Theorem}
 
 Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
 The homogeneous equation to this case will be \(y' + ay = 0\) with a solution \(y_h\) and some
 partial solution \(y_p\). Now remember from \emph{Linear Algebra} the \(general = particular + homogeneous\)
 more precisely \(y = y_p + y_h\) therefore adding a particular solution to a homogeneous does not change
 the general solution of our DE.
-\\\\
+\newline
 Now lets substitute in our differential equation.
 
 \begin{align*}
@@ -548,7 +557,7 @@ Now lets substitute in our differential equation.
 &= (y_h' + ay_h) + (y_p' + ay_p) = 0 + g(x) = g(x) 
 \end{align*}
 
-\subsubsection*{Steps for solving the kind of problems}
+\subsubsection*{Steps for solving this kind of problems}
 \begin{enumerate}
     \item Find the \emph{homogeneous} solution for \(y' + ay = 0\). \(y_h\) is going
     to have a free parameter.
@@ -562,10 +571,10 @@ Now we have to find a way to solve for \(y_p\) and \(y_h\)
 \subsubsection{Find the partial solution}
 
 We will use the method called based on guessing the type of the function on the right side.
-\\\\
+\newline
 \textbf{Example: }
 Given is the following IVP: \(y' + 2y = 2x + 13\) with \(y(0) = 8\)
-\\\\
+\newline
 By looking carefully we see that on the right hand side we just have a normal polynomial,
 thus we can substitute \(y = bx + c\) and therefore \(y' = b\). Now substitute
 \[
@@ -582,7 +591,7 @@ we get: \(b = 1\), \(c = 6\). And we have found a \emph{particular} solution for
 \(y_p = x + 6\)
 
 Now we have to find an \emph{homogeneous} solution with the formula we already know
-\(y_h = c e^{\int -f(x)dx}\) in our case \(y_h = c e^{\int 2dx} = ce^{-2x}\)
+\(y_h = c e^{\int f(x)dx}\) in our case \(y_h = c e^{\int 2dx} = ce^{-2x}\)
 
 \[
 y = y_h + y_p = c e^{-2x} + x + 6
@@ -619,6 +628,14 @@ y = 2 e^{-2x} + x + 6
     \hline
 \end{tabular}
     
+An alternative to way of using this method is to
+\begin{enumerate}
+    \item Find the homogeneous solution.
+    \item Multiply both sides of the equation by it.
+    \item Integrate
+\end{enumerate}
+
+This will give you the exact same result and is faster.
 
 \subsection{Bernoulli Equation}
 
@@ -642,7 +659,7 @@ Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\) thus after substitution
 \]
 
 Now our equation is \emph{linear}.
-\\\\
+\newline
 \textbf{Example: }
 
 Given is \(y' -5y = \frac{-5}{2}xy^3\).
@@ -703,6 +720,40 @@ Ce^{10x}u = \frac{xe^{10x}}{2} - \frac{5}{100} e^{10x} + c
 \]
 
 
+\subsection{Solutions methods for Differential Equation}
+
+\begin{itemize}[label=\(-\)]
+  \item 
+  \( y' = f(x) \cdot g(y) \) \hfill \emph{Separation of Variables}
+
+  \begin{itemize}[label=\(-\)]
+    \item \( y' = \frac{dy}{dx} \Rightarrow \frac{dy}{g(y)} = f(x) \, dx \)
+  \end{itemize}
+
+  \item 
+  \( y' = f(ax + by + c) \) \hfill \emph{Substitution: } \( z = ax + by + c \)
+
+  \item 
+  \( y' = f\left( \frac{y}{x} \right) \) \hfill \emph{Substitution: } \( z = \frac{y}{x} \)
+
+  \item 
+  \( y' + f(x) \cdot y = g(x) \) \hfill \emph{Variation of Parameters}
+
+  \item 
+  \( y' + a \cdot y = g(x) \) \hfill \emph{Solution: } \( y = y_h + y_p \)
+
+  \item 
+  \( y' + a \cdot y = g(x) \cdot y \) \hfill \emph{Substitution}
+
+  \item 
+  \( y' + f(x) \cdot y = g(x) \cdot y \) \hfill \emph{Bernoulli Substitution}
+  
+  \begin{itemize}
+    \item Bernoulli form: \( y' + P(x)y = Q(x)y^n \)
+    \item Substitution: \( z = y^{1-n} \)
+  \end{itemize}
+\end{itemize}
+
 \subsection{Autonomous Equations}
 
 An \emph{Autonomous Differential Equation} only depends on the dependent
@@ -719,4 +770,190 @@ that start near \(a\) tend towards \(a\) as \(t \to \infty\).
 An equilibrium solution \(y = a\) is \emph{asymptotically unstable} if solutions
 that start near \(a\) leave as \(t \to \infty\)
 
+
+\subsection{Linear Inhomogeneous DEs with Non-Constant Coefficients}
+
+The method of \emph{variation of constants} is often used alongside the \emph{superposition principle}. In this method, the integration constant in the function \( c(x) \) is omitted as it is part of the particular solution.
+
+The superposition principle also holds for linear inhomogeneous differential equations with non-constant coefficients:
+
+\begin{align*}
+y_p' + f(x)y_p &= g(x) \quad \text{(particular solution)} \\
+y_h' + f(x)y_h &= 0 \quad \text{(homogeneous solution)}
+\end{align*}
+
+For the total solution \( y = y_h + y_p \), we get:
+
+\begin{align*}
+y' + f(x)y 
+&= (y_h + y_p)' + f(x)(y_h + y_p) \\
+&= y_h' + y_p' + f(x)y_h + f(x)y_p \\
+&= g(x)
+\end{align*}
+
+Thus, the solution can be decomposed into the general solution of the homogeneous DE and a particular solution based on the form of the right-hand side.
+
+\textbf{Example: }
+
+\[y' = -\frac{y}{x} + 1\]
+
+The homogeneous DE is \(y' = -\frac{y}{x}\) which an be solved by separating the variables.
+\(y_h = \frac{c}{x}\)
+
+Now let use \(y_p = \frac{c(x)}{x}\).
+
+\[
+y_{p}' = \frac{c'(x)x - c(x)}{x^2}
+\]
+
+Lets break down the fraction to find where to put our homogeneous solution we have already found
+
+\[
+\frac{c'(x)}{x} - \frac{c(x)}{x^2} = \frac{c'(x)}{x} + \frac{1}{x}\frac{c}{x} = \frac{c'(x)}{x} + \frac{1}{x}y
+\]
+
+and we get
+
+\[
+y_{p}' = -\frac{y}{x} + \frac{c'(x)}{x} 
+\]
+
+Here we compare with the inhomogeneous part of the original equation and get
+
+\[
+\frac{c'(x)}{x} = 1 \implies c'(x) = x
+\]
+
+then \(c(x)\) is equal to \(\frac{x^2}{2}\) and therefore \(y_p = \frac{x^2}{x}\frac{1}{x} = \frac{x}{2}\)
+\newline
+As our final result we get \(y = \frac{c}{x} + \frac{x}{2}\)
+
+\subsection{Power Series Approach}
+
+Another alternative for solving DE when other methods do not work is to use a \emph{power series} 
+to find the function given an initial conditions. This can be better understood with an example.
+
+\[y' = y\]
+\[y(0) = 1\]
+
+We say \(y = \sum_{n = 0}^{\infty} a_n x^n\) and \(y(0) = a_0 = 1\).
+
+Now lets derivate you \(y\)
+
+\[
+y = \sum_{n = 0}^{\infty} a_n x^n = a_0 x^0 + a_1 x^1 + \cdots = 1 + a_1 x^1 + a_2 x^2 + \cdots
+\]
+\[
+y' = 0  + a_1 + 2 a_2 x + 3 a_3 x^2 + \cdots 
+\]
+
+Thus we can rewrite the sum as 
+
+\[
+y' = \sum_{n = 1}^{\infty} a_n n x^{n - 1}
+\]
+
+starting from 1 because 0 does not contribute to the sum. After shifting the index we get
+
+\[
+y' = \sum_{n = 0}^{\infty} a_{n + 1}(n + 1)x^{n}
+\]
+
+Now we build our original DE with our new definitions for \(y'\) and \(y\)
+
+\[
+\sum_{n = 0}^{\infty} a_{n + 1}(n + 1)x^{n} = \sum_{n = 0}^{\infty} a_n x^n
+\]
+
+If we compare the coefficients we get
+
+\[
+a_n = a_{n+1}(n+1)
+\]
+
+\[
+\frac{a_n}{(n + 1)} = a_{n+1}
+\]
+
+
+after iterating backwards we get
+
+\[
+a_{n + 1} = \frac{a_n}{n + 1} = \frac{\frac{a_{n - 1}}{(n - 1 +1)}}{n + 1} = \frac{\frac{\frac{a_{n - 2}}{(n - 1)}}{(n - 1 + 1)}}{n + 1}   
+\]
+
+\[
+a_n = \frac{a_0}{(n + 1)!} = \frac{1}{(n + 1)!} = 1
+\]
+
+therefore \(a_n = \frac{1}{n!}\) which gives us the solution
+
+\[\sum_{n = 0}^{\infty}\frac{1}{n!}x^n = e^x\]
+
+\subsection{Exact Differential Equations}
+
+We will take a short look at functions with two inputs via implicit differentiation \(F(x,y(x)) = 0\).
+We have:
+
+\[
+F_x dx + F_y dy = 0
+\]
+\[
+p(x,y)dx + q(x,y)dy = 0
+\]
+
+after dividing by \(dx\)
+
+\[
+F_x + F_y y' = 0
+\]
+\[
+p(x,y)dx + q(x,y)y' = 0
+\]
+
+If this is a differential then \(p_x = q_y\) and we define a DE of the form:
+
+\[
+p(x,y)dx + q(x,y)y' = 0 \text{ with } p_x = q_y
+\]
+
+as \emph{exact}. And the \(p_x = q_y\) as \emph{Integrability-Condition}.
+\newline
+By finding the \emph{potential} we can solve this kind of differential equations.
+\newline
+\textbf{Example:}
+
+\textbf{Step 1: Solve for \(y'\)}
+\begin{align*}
+    (12xy + 3)dx + 6x^2dy &= 0\\
+    (12xy + 3) + 6x^2 y' &= 0\\
+    y' = - \frac{12xy + 3}{6x^2}
+\end{align*}
+
+\textbf{Step 2: Test the Integrability-Condition}
+
+\[Q(x,y) = 12xy + 3\]
+\[P(x,y) = 6x^2\] 
+\[P_x = 12x\]
+\[Q_y = 12x\]
+
+\begin{align*}
+F(x,y) &= \int (12xy + 3)dx = \int 6x^2 dy\\
+       &= 6x^2 y + 3x + c(y) = 6yx^2 + c(x)
+\end{align*}
+
+Now we derivate both sides with respect to \(y\) and this gives us
+
+\begin{align*}
+    6x^2y + 3x + c(y) &= 6yx^2 + c(x) \\
+    6x^2 + c'(y) &= 6x^2 \\
+           c'(y) &= 0 \\
+            c(y) &= y \text{ after integrating with respect to } dy
+\end{align*}
+
+and therefore \(F(x,y) = 6x^2y + 3x + \hat{c} = 0\).
+\newline
+\textbf{Step 3: Solve for \(y\)}
+
+\[y = \frac{\hat{c} - 3x}{6x^2} \]
 

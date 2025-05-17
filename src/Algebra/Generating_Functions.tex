@@ -8,7 +8,7 @@ typically used to encode sequences of numbers.
 
 \subsection{Definition}
 
-Given a sequence \( \{a_n\}_{n \ge 0} \), its (ordinary) generating function is defined as:
+Given a sequence \( {\{a_n\}}_{n \ge 0} \), its (ordinary) generating function is defined as:
 \[
 G(x) = \sum_{n=0}^{\infty} a_n x^n
 \]
@@ -34,7 +34,7 @@ There is a deep similarity between generating functions and the process of formi
 {(1 + x)}^n = \sum_{k=0}^n \binom{n}{k} x^k
 \]
 This expansion encodes all subsets of an \( n \)-element set, where each term \( x^k \) corresponds to selecting a subset of size \( k \). The coefficient \( \binom{n}{k} \) gives the number of such subsets.
-\\\\
+\newline
 In this way, generating functions can be viewed as a powerful algebraic analogue of subset selection and counting, with the exponents representing sizes or weights, and the coefficients representing counts.
 \\\
 Generating functions serve as a bridge between algebra and combinatorics, allowing abstract operations to yield concrete combinatorial results.
@@ -42,9 +42,9 @@ Generating functions serve as a bridge between algebra and combinatorics, allowi
 \subsection{Closed form of the Fibonacci Sequence}
 
 Lets use generating function to find a closed form for the Fibonacci number. 
-\\\\
+\newline
 We know that \(F_0 = 1\) and \(F_1 = 1\) and for \(n \ge 2\) \(F_n = F_{n-1} + F_{n-2}\)
-\\\\
+\newline
 Now lets use the following function
 \[
     F(x) = \sum_{n = 0}^{\infty} F_n x^{n}
@@ -71,25 +71,36 @@ F(x) &= 1 + x + \sum_{n = 2}^{\infty} F_{n -1} x^{n} + \sum_{n = 2}^{\infty} F_{
 F(x) &= 1 + x + x \left( \sum_{n = 2}^{\infty} F_{n -1} x^{n-1}\right) + x^2 \left( \sum_{n = 2}^{\infty} F_{n -2} x^{n-2}\right)
 \end{align*}
 
-And now we are going to reset our sum to start from zero.
+And now we are going to reset our sum to start from zero by adding a smart zero to our term with \(n - 1\).
+This allows us to shift the sum to start from 0 because when \(n = 1\) for \(F_{n - 1}x^{n - 1}\) turns into
+\(F_0 x^0\).
 
 \begin{align*}
+F(x) &= 1 + x + x \left( -F_{0}x^0 + F_{0}x^0 + \sum_{n = 2}^{\infty} F_{n-1} x^{n-1}\right) + x^2 \left( \sum_{n = 2}^{\infty} F_{n} x^{n}\right)\\
+F(x) &= 1 + x + x \left( -F_{0}x^0 + \sum_{n = 1}^{\infty} F_{n-1} x^{n-1}\right) + x^2 \left( \sum_{n = 2}^{\infty} F_{n} x^{n}\right)\\
 F(x) &= 1 + x + x \left( \sum_{n = 0}^{\infty} F_{n} x^{n}\right) + x^2 \left( \sum_{n = 2}^{\infty} F_{n} x^{n}\right)\\
-F(x) &= 1 + x + x F(x) + x^2 F(x)
+F(x) &= 1 + x + x F(x) - x + x^2 F(x)
 \end{align*}
 
 Which at end simplifies to:
 
 \[
+F(x) = \frac{1}{1 - x - x^2}
+\]
+
+If you start with \(F_0 = 0\) then the result  is
+
+\[
 F(x) = \frac{x}{1 - x - x^2}
 \]
+
 
 Now we can use partial fraction decomposition to make this expression even more explicit
 by using the following expression where \(\alpha\) and \(\beta\) are zeroes of the polynomial in the
 denominator.
 
 \[
-\frac{x}{\left(1 - \alpha x\right)\left(1 - \beta x\right)}
+\frac{1}{\left(1 - \alpha x\right)\left(1 - \beta x\right)}
 \]
 
 The zeros of the polynomial are:
@@ -100,13 +111,13 @@ The zeros of the polynomial are:
 
 Now we can write our expression like:
 \[
-F(x) = \frac{x}{1 - x - x^2} = \frac{x}{\left(1 - x \cdot \frac{1 + \sqrt{5}}{2}\right)\left(1 - x \cdot \frac{1 - \sqrt{5}}{2}\right)}
+F(x) = \frac{1}{1 - x - x^2} = \frac{1}{\left(1 - x \cdot \frac{1 + \sqrt{5}}{2}\right)\left(1 - x \cdot \frac{1 - \sqrt{5}}{2}\right)}
 \]
 
 Which after performing the partial fraction decomposition left us with:
 
 \[
-    F(x) = \left( \left( \frac{1}{\sqrt{5}} (1 + \sqrt{5}) \right)^n - \left( \frac{1}{\sqrt{5}} (1 - \sqrt{5}) \right)^n \right)
+    F(x) = \left( {\left( \frac{1}{\sqrt{5}} (1 + \sqrt{5}) \right)}^n - {\left( \frac{1}{\sqrt{5}} (1 - \sqrt{5}) \right)}^n \right)
 \]
 
 \QED

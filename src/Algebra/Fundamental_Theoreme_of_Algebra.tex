@@ -22,22 +22,22 @@ We will utilize a fundamental completeness property of real and complex numbers,
 
 \subsection{Theorem 1}
 Every polynomial with real or complex coefficients has at least one complex root.
-\\\\
+\newline
 \textbf{Proof:}
 
 Suppose that \(p(z)\) has no roots in the complex plane. First note that for large \(z\), say \(|z| > 2 \max_i |p_i/p_n|\), the \(z^n\) term of \(p(z)\) is greater in absolute 
 value than the sum of all the other terms. Thus, given some \(B > 0\), for any sufficiently large \(s\), we have \(|p(z)| > B\) for all \(z\) with \(|z| \geq s\). We will take \(B = 2|p(0)| = 2|p_0|\).
-\\\\
+\newline
 Since \(|p(z)|\) is continuous on the interior and boundary of the circle with radius \(s\), it follows by the completeness axiom that \(|p(z)|\) achieves its minimum value at some point \(t\) in this circle. But since \(|p(0)| < \frac{1}{2} |p(z)|\) for all \(z\) on the circumference of the circle, it follows that \(|p(z)|\) achieves its minimum at some point \(t\) in the interior.
-\\\\
+\newline
 Now rewrite the polynomial \(p(z)\) by translating the argument \(z\) by \(t\), thus producing a new polynomial
 \[
 	q(z) = p(z + t) = q_0 + q_1 z + q_2 z^2 + \cdots + q_n z^n,
 \]
 and similarly translate the circle. Presumably the polynomial \(q(z)\), defined on some circle centered at the origin, has a minimum absolute value \(M > 0\) at \(z = 0\). Note that \(M = |q(0)| = |q_0|\).
-\\\\
+\newline
 Our proof strategy is to construct some point \(x\), close to the origin, such that \(|q(x)| < |q(0)|\), thus contradicting the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
-\\\\
+\newline
 \textbf{Construction of \(x\) such that \(|q(x)| < |q(0)|\)}
 
 Let the first nonzero coefficient of \(q(z)\) following \(q_0\) be \(q_m\), so that
@@ -49,13 +49,13 @@ We choose
 	x = r {\left(-\frac{q_0}{q_m}\right)}^{1/m}
 \]
 , where \(r\) is a small positive real value, and \({\left(-\frac{q_0}{q_m}\right)}^{1/m}\) denotes any \(m\)-th root of \(\left(-\frac{q_0}{q_m}\right)\).
-\\\\
+\newline
 Unlike the real numbers, in the complex number system the \(m\)-th roots of any complex number are guaranteed to exist. If \(z = z_1 + i z_2\), then the \(m\)-th roots of \(z\) are given by
 \[
 	\left\{ R^{1/m} \cos\left(\frac{\theta + 2k\pi}{m}\right) + i R^{1/m} \sin\left(\frac{\theta + 2k\pi}{m}\right) \,\bigg|\, k = 0, 1, \ldots, m-1 \right\},
 \]
 where \(R = \sqrt{z_1^2 + z_2^2}\) and \(\theta = \arctan(z_2 / z_1)\).
-\\\\
+\newline
 \textbf{Proof:} 
 
 \[|q(x)| < |q(0)|\]
@@ -77,7 +77,7 @@ which contradicts the assumption that \(|q(z)|\) has a minimum nonzero value at 
 
 \subsection{Theorem 2}
 Every polynomial of degree \(n\) with real or complex coefficients has exactly \(n\) complex roots, when counting multiplicities.
-\\\\
+\newline
 \textbf{Proof}
 
 If \(\alpha\) is a root of the polynomial \(p(z)\) of degree \(n\), then by dividing \(p(z)\) by \((z - \alpha)\), we get:

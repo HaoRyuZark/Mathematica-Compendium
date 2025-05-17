@@ -15,20 +15,72 @@ where \( a_{ij} \) are the coefficients of the variables \( x_j \), and \( b_i \
 
 A linear system can be represented in matrix form as:
 \begin{equation*}
-	A \mathbf{x} = \mathbf{b}
+	A x = b
 \end{equation*}
-where \( A \) is the coefficient matrix, \( \mathbf{x} \) is the vector of variables, and \( \mathbf{b} \) is the vector of constants. The coefficient matrix \( A \) is an \( m \times n \) matrix, where \( m \) is the number of equations and \( n \) is the number of variables.
-The vector \( \mathbf{x} \) is an \( n \times 1 \) column vector, and the vector \( \mathbf{b} \) is an \( m \times 1 \) column vector. The system can be solved using various methods, including:
+where \( A \) is the coefficient matrix, \( x \) is the vector of variables, and \( b \) is the vector of constants. The coefficient matrix \( A \) is an \( m \times n \) matrix, where \( m \) is the number of equations and \( n \) is the number of variables.
+The vector \( x \) is an \( n \times 1 \) column vector, and the vector \( b \) 
+is an \( m \times 1 \) column vector. 
 
-\begin{itemize}[label=\(-\)]
-	\item Gaussian elimination
-	\item LU decomposition
-	\item Matrix inversion (if \( A \) is square and invertible)
-	\item Iterative methods (e.g., Jacobi, Gauss-Seidel)
-	\item Special methods for sparse matrices
-	\item Special methods for structured matrices (e.g., banded, Toeplitz)
-	\item Special methods for large-scale problems (e.g., conjugate gradient, GMRES)
-\end{itemize}
+
+\subsection{Solution Set of a Linear System}
+
+In the context of Definition 6.1, the solution set \( L(A, b) \) of the system of equations associated with \( (A, b) \) is defined as
+\[
+L(A, b) := \{ x \in K^n \mid Ax = b \}.
+\]
+
+\subsection{Equality of the Rank \(\operatorname{rg}(A) = \operatorname{rg}_S(A)\)}
+
+We have \(\operatorname{rg}(A) = \operatorname{rg}_S(A)\).
+
+\textbf{Proof:} For \(x = (x_1, \ldots, x_n)^T \in K^n\), it holds that
+\[
+Ax = \sum_{i=1}^{n} x_i a_i.
+\]
+It follows that
+\[
+\operatorname{rg}(A) = \operatorname{rg}(L_A) = \dim(\operatorname{Im}(L_A))
+= \dim\left(\{L_A(x) \mid x \in K^n\}\right)
+= \dim\left(\{Ax \mid x \in K^n\}\right)
+\]
+\[
+= \dim\left\{ \sum_{i=1}^{n} x_i a_i \,\middle|\, x_i \in K \right\}
+= \dim(L(a_1, \ldots, a_n)) = \operatorname{rg}_S(A).
+\]
+
+\subsection{Solvability of the Linear System \(Ax = b\)}
+
+The linear system \(Ax = b\) is solvable if and only if
+\[
+\operatorname{rg}(a_1, \ldots, a_n) = \operatorname{rg}(a_1, \ldots, a_n, b).
+\]
+More concisely, we write
+\[
+\operatorname{rg}(A) = \operatorname{rg}(A, b).
+\]
+
+\textbf{Proof:} We have
+\[
+Ax = (a_1, \ldots, a_n)x = x_1 a_1 + \cdots + x_n a_n = b.
+\]
+Therefore, a solution vector \(x\) exists if and only if
+\[
+b \in L(a_1, \ldots, a_n) \quad \Leftrightarrow \quad \operatorname{rg}(A) = \operatorname{rg}(A, b),
+\]
+where \(L(a_1, \ldots, a_n)\) denotes the linear span of \(a_1, \ldots, a_n\).
+
+\subsection{Solution Set of the Linear System \(Ax = b\)}
+
+Let \(x_s \in K^n\) be a solution of \(Ax = b\). Then the solution set is given by
+\[
+L(A, b) = x_s + \ker(A) = \{x_s + x \mid x \in \ker(A)\}.
+\]
+
+\textbf{Proof:}
+\[
+x \in \ker(A) \;\Leftrightarrow\; Ax = 0 \;\Leftrightarrow\; A(x_s + x) = Ax_s + Ax = Ax_s = b.
+\]
+
 
 \subsection{Gaussian Elimination}
 
@@ -161,7 +213,7 @@ Consider the following system of linear equations:
 \subsubsection*{Step 2: Eliminate below pivot in column 1}
 
 \begin{itemize}[label=\(-\)]
-	\item Row 2 = Row 2 - 2 × Row 1
+	\item Row 2 = Row 2 - 2 \(\times\) Row 1
 	\item Row 3 = Row 3 - Row 1
 \end{itemize}
 

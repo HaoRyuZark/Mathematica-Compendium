@@ -169,7 +169,7 @@ Possibly, \((w_i, v_1, \ldots, v_r)\) is still not a basis of \(V\). Then we rep
 \subsection{Exchange Lemma}
 
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be bases of a vector space \(V\). Then, for every \(v_i\), there exists a \(w_j\) such that if we replace \(v_i\) by \(w_j\) in the tuple \((v_1, \ldots, v_n)\), it still forms a basis of \(V\).
-\\\\
+\newline
 \textbf{Proof:}
 
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be two bases of \(V\). Suppose we remove \(v_i\) from the first basis. The truncated tuple \((v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n)\) satisfies
@@ -219,11 +219,11 @@ So you only have to prove that the set of coefficients vector is linearly indepe
 \subsection{Interpolation Polynomial}
 
 Given the \(n+1\) points \((x_k, y_k)\), with \(0 \leq k \leq n\) and all \(x_k\) distinct, there exists exactly one polynomial \(p_n \in P_n\) such that \(y_k = p_n(x_k)\) for all \(0 \leq k \leq n\). This polynomial is called the interpolation polynomial.
-\\\\
+\newline
 \textbf{Proof}
 
 The uniqueness follows immediately from Remark 3.100. We prove the existence by induction on \(n\). For \(n = 0\), choose \(p_0(x) = y_0\). 
-\\\\
+\newline
 Now assume the statement is true for \(n-1\). Let the polynomial \(p_{n-1}\) interpolate the points \((x_0, y_0), \ldots, (x_{n-1}, y_{n-1})\). Define
 \[
 p_n(x) = p_{n-1}(x) + q(x),
