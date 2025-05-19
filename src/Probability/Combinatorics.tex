@@ -69,26 +69,35 @@ to decompose a number.
 
 Ways of permuting \(N\) items with \(K\) exchanges.
 
-\[ \left[ N + 1 \atop K\right] = N\left[N \atop K\right] + \left[N \atop K - 1\right]\] 
+\[
+\genfrac{[}{]}{0pt}{}{N + 1}{K} = N \genfrac{[}{]}{0pt}{}{N}{K} + \genfrac{[}{]}{0pt}{}{N}{K - 1}
+\]
+
 
 \subsection{Stirling Numbers II}
 
 Ways of grouping \(n\) items in \(k\) slots.
 
-\[ \left\{ \begin{matrix} N \atop K \end{matrix}\right\} = \frac{1}{K!} \sum_{j=0}^{K}{(-1)}^{k - j}\binom{K}{j}j^N \]
+\[
+\genfrac{\{}{\}}{0pt}{}{N}{K} = \frac{1}{K!} \sum_{j=0}^{K} (-1)^{K - j} \binom{K}{j} j^N
+\]
 
 \subsection{Lah Numbers}
 
 Ways of building \(K\) lists with a set \(N\) elements.
 
-\[\left\lfloor \begin{matrix} N \atop K \end{matrix}\right\rfloor  = \binom{N - 1}{K - 1}\frac{N!}{K!} = \sum_{j=0}^{K}\left[N \atop K\right]\left\{N \atop K\right\}\]
+\[
+\genfrac{\lfloor}{\rfloor}{0pt}{}{N}{K} = \binom{N - 1}{K - 1} \frac{N!}{K!} = \sum_{j=0}^{K} \genfrac{[}{]}{0pt}{}{N}{K} \genfrac{\{}{\}}{0pt}{}{N}{K}
+\]
 
 \subsection{Euler's Numbers}
 
 Number of permutations of a set of \(N\) elements of different size in which
 \(K\) elements are bigger than the their previous element.
 
-\[\left\langle \begin{matrix} N \atop K \end{matrix}\right\rangle = \sum_{j = 0}^{k}{(-1)}^j \binom{N + 1}{j}{(K +1 -j)}^N\]
+\[
+\genfrac{\langle}{\rangle}{0pt}{}{N}{K} = \sum_{j = 0}^{K} (-1)^j \binom{N + 1}{j} (K + 1 - j)^N
+\]
 
 \subsection{Catalan Numbers}
 
