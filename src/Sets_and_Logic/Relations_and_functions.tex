@@ -3,10 +3,12 @@
 
 A relation in mathematics is a connection or relationship between elements of two sets. It's formally
 defined as a subset of the Cartesian product of the sets.
-\newline
+\vspace{\baselineskip}
+
 For example, if we have sets \(A\) and \(B\), a relation \(R\) from \(A\) to \(B\) consists
 of ordered pairs \((a,b)\) where \(a \in A\) and \(b \in B\), such that \(a\) is related to \(b\) according to some rule or property.
-\newline
+\vspace{\baselineskip}
+
 Common types of relations include:
 \begin{itemize}[label =\(-\)]
 	\item Functions (special relations where each input has exactly one output)
@@ -37,8 +39,11 @@ Let \(A\) be a set and \(X\) be a relation on \(A\).
 
 \subsection{Equivalence relation}
 An equivalence relation is a relation that is symmetric, transitive and reflexive.
-\newline
+\vspace{\baselineskip}
+
 \textbf{Example:}
+\vspace{\baselineskip}
+
 \[
 	R:= \{ (a,b) \in \mathbb{N} \times \mathbb{N}: a = b\}
 \]
@@ -57,14 +62,14 @@ An equivalence relation is a relation that is symmetric, transitive and reflexiv
 
 \subsection{Image and Domain}
 
-\subsubsection*{Image}
+\subsubsection{Image}
 The image (or range) of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(B\) that are related to at least one element in \(A\). Formally, if \(R \subseteq A \times B\) is a relation, then the image of \(R\) is defined as:
 
 \[\text{Im}(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}\]
 
 In other words, the image consists of all the <<output>> values that appear in the ordered pairs of the relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\text{Im}(R) = \{4, 5, 6\}\).
 
-\subsubsection*{Domain}
+\subsubsection{Domain}
 The domain of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(A\) that are related to at least one element in \(B\). Formally, if \(R \subseteq A \times B\) is a relation, then the domain of \(R\) is defined as:
 
 \[\text{Dom}(R) = \{a \in A \mid \exists b \in B \text{ such that } (a,b) \in R\}\]
@@ -87,8 +92,13 @@ The quotient space \(A/\sim\) is a partition of the original set \(A\) into disj
 A map (or function) from a set \(A\) to a set \(B\), denoted as \(f: A \to B\), is a relation that associates each element of the set \(A\) with exactly one element of the set \(B\).
 
 Formally, a function \(f: A \to B\) is a subset of \(A \times B\) such that for every \(a \in A\), there exists exactly one \(b \in B\) where \((a,b) \in f\). We typically write \(f(a) = b\) to indicate that \(f\) maps the element \(a\) to the element \(b\).
-\newline
-\textbf{Example:} Let \(A = \{1, 2, 3\}\) and \(B = \{x, y, z\}\). A possible function \(f: A \to B\) could be defined as:
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+
+Let \(A = \{1, 2, 3\}\) and \(B = \{x, y, z\}\). A possible function \(f: A \to B\) could be defined as:
 \[
 	f(1) = x, \quad f(2) = y, \quad f(3) = z
 \]
@@ -96,28 +106,34 @@ Formally, a function \(f: A \to B\) is a subset of \(A \times B\) such that for 
 This function can also be represented as the set of ordered pairs \(\{(1,x), (2,y), (3,z)\}\).
 
 \subsection{Composition of Maps}
-The composition of two functions is the operation of applying one function to the result of another function. If we have functions \(f: A \to B\) and \(g: B \rightarrow C\), then the composition of \(g\) and \(f\), denoted as \(g \circ f\) (read as "g composed with f"), is a function from \(A\) to \(C\) defined by:
+The composition of two functions is the operation of applying one function to the result of another function. If we have functions 
+\(f: A \to B\) and \(g: B \rightarrow C\), then the composition of \(g\) and \(f\), denoted as \(g \circ f\) (read as g composed with f), is a function from \(A\) to \(C\) defined by:
 \[
 	(g \circ f)(a) = g(f(a)) \quad \text{for all } a \in A
 \]
 
-The composition applies \(f\) first, then applies \(g\) to the result. Note that the codomain of \(f\) must match the domain of \(g\) for the composition to be defined.
-\newline
-\textbf{Example:} Let \(f: \mathbb{R} \to \mathbb{R}\) be defined by \(f(x) = x^2\) and \(g: \mathbb{R} \rightarrow \mathbb{R}\) be defined by \(g(x) = x+3\). Then:
+The composition applies \(f\) first, then applies \(g\) to the result. 
+Note that the co-domain of \(f\) must match the domain of \(g\) for the composition to be defined.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+ Let \(f: \mathbb{R} \to \mathbb{R}\) be defined by \(f(x) = x^2\) and \(g: \mathbb{R} \rightarrow \mathbb{R}\) be defined by \(g(x) = x+3\). Then:
 \[
 	(g \circ f)(x) = g(f(x)) = g(x^2) = x^2 + 3
 \]
 \[
-	(f \circ g)(x) = f(g(x)) = f(x+3) = (x+3)^2 = x^2 + 6x + 9
+	(f \circ g)(x) = f(g(x)) = f(x+3) = {(x+3)}^2 = x^2 + 6x + 9
 \]
 
 Note that \(g \circ f \neq f \circ g\) in general, which shows that function composition is not commutative.
 
 \subsection{Types of Functions}
 
-\subsubsection*{Injective Functions}
+\subsubsection{Injective Functions}
 
-An injective function (also called a one-to-one function) is a function that maps distinct elements from the domain to distinct elements in the codomain.
+An injective function (also called a one-to-one function) is a 
+function that maps distinct elements from the domain to distinct elements in the co-domain.
 
 Formally, a function \(f: A \to B\) is injective if for all \(a_1, a_2 \in A\):
 \[
@@ -129,7 +145,7 @@ Equivalently, using the contrapositive:
 	f(a_1) = f(a_2) \to a_1 = a_2
 \]
 
-\subsubsection*{Surjection Functions}
+\subsubsection{Surjection Functions}
 
 A surjective function (also called an onto function) is a function whose image equals its co-domain, meaning that every element in the 
 co-domain has at least one pre-image in the domain.
@@ -139,16 +155,19 @@ Formally, a function \(f: A \to B\) is surjective if:
 	\forall b \in B, \exists a \in A \text{ such that } f(a) = b
 \]
 
-\subsubsection*{Bijection Functions}
+\subsubsection{Bijection Functions}
 
-A bijective function (also called a one-to-one correspondence) is a function that is both injective and surjective. In other words, every element in the codomain is mapped to by exactly one element in the domain.
+A bijective function (also called a one-to-one correspondence) is a 
+function that is both injective and surjective. In other words, every
+ element in the co-domain is mapped to by exactly one element in the domain.
 
 Formally, a function \(f: A \to B\) is bijective if it is both:
 \begin{itemize}[label=\(-\)]
 	\item Injective: \(\forall a_1, a_2 \in A, a_1 \neq a_2 \to f(a_1) \neq f(a_2)\)
 	\item Surjective: \(\forall b \in B, \exists a \in A \text{ such that } f(a) = b\)
 \end{itemize}
- Bijective functions establish a perfect pairing between elements of the domain and codomain, where each element in the domain corresponds to exactly one element in the codomain, and vice versa. A bijection allows us to define an inverse function \(f^{-1}: B \to A\).
+ Bijective functions establish a perfect pairing between elements of the domain and co-domain, where each element in the domain 
+ corresponds to exactly one element in the co-domain, and vice versa. A bijection allows us to define an inverse function \(f^{-1}: B \to A\).
 
 \subsection{Propositions on Images and Pre-images under Set Operations}
 
@@ -218,7 +237,7 @@ Let \( f : X \to Y \) be a function.
 	      \]
 \end{itemize}
 
-\textbf{Proof (partial).}
+\textbf{Proof (partial):}
 
 We show the first statement of part (ii); the rest follows analogously.
 
@@ -241,9 +260,12 @@ It follows that:
 
 
 \subsection{Inverse of a Function}
-The inverse of a function \(f: A \to B\) is a function \(f^{-1}: B \rightarrow A\) that reverses the operation of \(f\). That is, if \(f\) maps an element \(a \in A\) to an element \(b \in B\), then the inverse function \(f^{-1}\) maps \(b\) back to \(a\).
+The inverse of a function \(f: A \to B\) is a function \(f^{-1}: B \rightarrow A\) that 
+reverses the operation of \(f\). That is, if \(f\) maps an element \(a \in A\) to an 
+element \(b \in B\), then the inverse function \(f^{-1}\) maps \(b\) back to \(a\).
 
- Formally, a function \(f: A \to B\) has an inverse \(f^{-1}: B \rightarrow A\) if and only if \(f\) is bijective (both injective and surjective). The inverse function satisfies the following properties:
+ Formally, a function \(f: A \to B\) has an inverse \(f^{-1}: B \rightarrow A\) 
+ if and only if \(f\) is bijective (both injective and surjective). The inverse function satisfies the following properties:
 \[
 	f^{-1}(f(a)) = a \quad \text{for all } a \in A
 \]
@@ -258,6 +280,7 @@ In other words, composing a function with its inverse yields the identity functi
 where \(id_A\) and \(id_B\) are the identity functions on sets \(A\) and \(B\), respectively.
 
 \subsubsection{Steps to Find the Inverse of a Function}
+
 To find the inverse of a function \(f (x)\), follow these steps:
 \begin{enumerate}
 	\item Replace \(f (x)\) with \(y\): \(y = f (x)\)
@@ -268,6 +291,7 @@ To find the inverse of a function \(f (x)\), follow these steps:
 
 \subsubsection{Example: Finding the Inverse of \texorpdfstring{\(f (x) = 2x + 3\)}{}}
 Let's apply the steps above to find the inverse of \(f (x) = 2x + 3\).
+\vspace{\baselineskip}
 
 \textbf{Step 1:} Replace \(f (x)\) with \(y\).
 \[
@@ -341,7 +365,8 @@ Let \(f:X\to Y\) be a function.
 
 Transformations modify the appearance of a function's graph without altering its basic shape.
 Here, we examine how different algebraic changes to a function \( f(x) \) affect its graph:
-\newline
+\vspace{\baselineskip}
+
 	 \emph{Vertical Translation:} \( f(x) + a \)
 	      \begin{itemize}[label=\(-\)]
 		      \item Shifts the graph \textbf{upward} if \( a > 0 \), and \textbf{downward} if \( a < 0 \).

@@ -2,18 +2,18 @@
 \section{Recursion}
 
 Recursion is term used to refer to a thing define in terms
-of itself. An example the factorial \(n! = (n - 1)!\) with \(0! = 1\) being the
+of itself. An example the factorial \(n! = (n - 1)\)! with \(0! = 1\) being the
 base case where the recursion stops.
 
 \subsection{From Recursive to Closed Form}
 
 A sequence defined recursively can often be rewritten in an explicit or closed form.
 
-\emph{recursive form} defines \( a_n \) based on previous terms (e.g., \( a_n = a_{n-1} + 2 \)).
+\emph{Recursive form} defines \( a_n \) based on previous terms (e.g., \( a_n = a_{n-1} + 2 \)).
 
-\emph{closed form} expresses \( a_n \) directly in terms of \( n \), with no reference to previous terms.
+\emph{Closed form} expresses \( a_n \) directly in terms of \( n \), with no reference to previous terms.
 
-\subsubsection*{General Method (when linear):}
+\subsubsection{General Method (when linear):}
 \begin{enumerate}
     \item Calculate some terms and watch the difference or quotient between them
     maybe the difference is clear and you can build a geometric or arithmetic sequence directly.
@@ -29,7 +29,7 @@ A linear recurrence has the form:
 \begin{align*}
 a_n & = \lambda a_{n -1} + c \\
 a_1 & = \lambda a_0 + c \implies a_2 = \lambda (\lambda a_0 + c) + c \\
-\implies a_n & = \lambda^n a_0 + (1 + \lambda + \lambda² + \cdots + \lambda^{n - 1})c
+\implies a_n & = \lambda^n a_0 + (1 + \lambda + \lambda^2 + \cdots + \lambda^{n - 1})c
 \end{align*}
 
 Therefore
@@ -39,8 +39,12 @@ Therefore
 \subsection{Recursive Inequalities}
 
 A \emph{recursive inequality} bounds a sequence rather than defines it exactly.
-\newline
-\textbf{Example:} Suppose
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Suppose
 
 \[
 a_{n+1} \le \frac{1}{2} a_n + 3

@@ -29,11 +29,11 @@ In the context of Definition 6.1, the solution set \( L(A, b) \) of the system o
 L(A, b) := \{ x \in K^n \mid Ax = b \}.
 \]
 
-\subsection{Equality of the Rank \(\operatorname{rg}(A) = \operatorname{rg}_S(A)\)}
+\subsection{Equality of the Rank \texorpdfstring{\(\operatorname{rg}(A) = \operatorname{rg}_S(A)\)}{}}
 
 We have \(\operatorname{rg}(A) = \operatorname{rg}_S(A)\).
 
-\textbf{Proof:} For \(x = (x_1, \ldots, x_n)^T \in K^n\), it holds that
+\textbf{Proof:} For \(x = {(x_1, \ldots, x_n)}^T \in K^n\), it holds that
 \[
 Ax = \sum_{i=1}^{n} x_i a_i.
 \]
@@ -48,7 +48,7 @@ It follows that
 = \dim(L(a_1, \ldots, a_n)) = \operatorname{rg}_S(A).
 \]
 
-\subsection{Solvability of the Linear System \(Ax = b\)}
+\subsection{Solvability of the Linear System \texorpdfstring{\(Ax = b\)}{}}
 
 The linear system \(Ax = b\) is solvable if and only if
 \[
@@ -69,7 +69,7 @@ b \in L(a_1, \ldots, a_n) \quad \Leftrightarrow \quad \operatorname{rg}(A) = \op
 \]
 where \(L(a_1, \ldots, a_n)\) denotes the linear span of \(a_1, \ldots, a_n\).
 
-\subsection{Solution Set of the Linear System \(Ax = b\)}
+\subsection{Solution Set of the Linear System \texorpdfstring{\(Ax = b\)}{}}
 
 Let \(x_s \in K^n\) be a solution of \(Ax = b\). Then the solution set is given by
 \[
@@ -106,8 +106,12 @@ Gauss-Jordan elimination is an extension of Gaussian elimination that transforms
 	\item Solve for the variables directly from the RREF matrix.
 \end{enumerate}
 The Gauss-Jordan elimination method is particularly useful for finding the inverse of a matrix, as it can be applied to the augmented matrix \([A | I]\), where \(I\) is the identity matrix. If the left side of the augmented matrix becomes \(I\), then the right side will be the inverse of \(A\).
+\vspace{\baselineskip}
 
-\textbf{Example:} Solve the following system of equations using Gaussian elimination:
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Solve the following system of equations using Gaussian elimination:
 \begin{align*}
 	2x + 3y + z  & = 1 \\
 	4x + y - z   & = 2 \\
@@ -146,7 +150,7 @@ Thus, the solution to the system is:
 
 A linear equation is said to be \emph{homogeneous} if its constant term is zero. That is, it can be written in the form:
 \[
-	a_1x_1 + a_2x_2 + \cdots + a_nx_n = 0
+	a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = 0
 \]
 
 Such equations always have at least the trivial solution \(x_1 = x_2 = \cdots = x_n = 0\).
@@ -170,15 +174,15 @@ Thus, \((x, y) = (1, 1)\) is a particular solution to the system. However, this 
 The general solution of a linear system of equations is the complete set of solutions that satisfy the system. It can be expressed as the sum of a particular solution and the general solution of the associated homogeneous system.
 The general solution can be written as:
 \begin{equation*}
-	\mathbf{x} = \mathbf{x}_p + \mathbf{x}_h
+	x = x_p + x_h
 \end{equation*}
-where \( \mathbf{x}_p \) is a particular solution to the non-homogeneous system, and \( \mathbf{x}_h \) is the general solution to the homogeneous system.
+where \( x_p \) is a particular solution to the non-homogeneous system, and \( x_h \) is the general solution to the homogeneous system.
 The homogeneous system is obtained by setting the right-hand side of the equations to zero:
 \begin{equation*}
-	A \mathbf{x} = \mathbf{0}
+	A x = 0
 \end{equation*}
 
- The theoreme says:
+ The theorem says:
 
 Any linear system's solution set has the form:
 \[
@@ -200,7 +204,7 @@ Consider the following system of linear equations:
 	x_1 + 3x_2 + 2x_3 + 2x_4 & = 7
 \end{align*}
 
-\subsubsection*{Step 1: Augmented Matrix}
+\textbf{Step 1: Augmented Matrix}
 
 \[
 	\begin{bmatrix}
@@ -210,11 +214,11 @@ Consider the following system of linear equations:
 	\end{bmatrix}
 \]
 
-\subsubsection*{Step 2: Eliminate below pivot in column 1}
+\textbf{Step 2: Eliminate below pivot in column 1}
 
 \begin{itemize}[label=\(-\)]
-	\item Row 2 = Row 2 - 2 \(\times\) Row 1
-	\item Row 3 = Row 3 - Row 1
+	\item Row 2 \(=\) Row 2 \(-\) 2 \(\times\) Row 1
+	\item Row 3 \(=\) Row 3 \(-\) Row 1
 \end{itemize}
 
 \[
@@ -225,10 +229,10 @@ Consider the following system of linear equations:
 	\end{bmatrix}
 \]
 
-\subsubsection*{Step 3: Eliminate below pivot in column 2}
+\textbf{Step 3: Eliminate below pivot in column 2}
 
 \begin{itemize}[label=\(-\)]
-	\item Row 3 = Row 3 - Row 2
+	\item Row 3 \(=\) Row 3 \(-\) Row 2
 \end{itemize}
 
 \[
@@ -239,7 +243,8 @@ Consider the following system of linear equations:
 	\end{bmatrix}
 \]
 
-\subsubsection*{Step 4: Back Substitution}
+\textbf{Step 4: Back Substitution}
+\vspace{\baselineskip}
 
 From Row 3:
 \[
@@ -263,7 +268,8 @@ Substitute:
 	= -1 - \frac{1}{2} + x_4 = -\frac{3}{2} + x_4
 \]
 
-\subsubsection*{General Solution}
+\textbf{General Solution}
+\vspace{\baselineskip}
 
 Let \(x_4 = t\) (free variable), then:
 
@@ -303,3 +309,46 @@ A linear system of three equation has the following properties:
 	\item There is no solution if the determinant of the coefficient matrix is zero and the system is inconsistent.
 	\[\langle (a x b), c\rangle = 0\]
 \end{itemize}
+
+
+\subsection{Chart for the number of solutions}
+
+\begin{tikzpicture}[node distance=1cm and 2cm]
+    % Nodes
+    \node [terminator] (start) {Linear \(n \times n\) System};
+    \node [decision, below=of start] (decision1) {\(\text{rg}(A) = \text{rg}(A,b)?\)};
+    \node [terminator, left=of decision1] (noS) {No solution};
+    \node [decision, below=of decision1] (decision2) {\(\text{rg}(A) = n?\)};
+    \node [terminator, below left=of decision2] (inS) {Inf. sol. with \((n - \text{rg}(A))\) parameters};
+    \node [terminator, below right=of decision2] (oneS) {Exactly one solution};
+
+    % Arrows
+    \path [connector] (start) -- (decision1);
+    \path [connector] (decision1.west) -- node[above] {No} (noS.east);
+    \path [connector] (decision1) -- node[right] {Yes} (decision2);
+    \path [connector] (decision2.south west) -- node[above left] {No} (inS.north east);
+    \path [connector] (decision2.south east) -- node[above right] {Yes} (oneS.north west);
+\end{tikzpicture}
+
+
+
+\begin{tikzpicture}[node distance=1cm and 2cm]
+    % Nodes
+    \node [terminator] (start) {Linear \(m \times n\) System};
+    \node [decision, below=of start] (decision1) {\(\text{rg}(A) = \text{rg}(A,b)?\)};
+    \node [terminator, left=of decision1] (noS) {No solution};
+    \node [decision, below=of decision1] (decision2) {\(\text{rg}(A) = n?\)};
+    \node [terminator, below left=of decision2] (inS) {Inf. sol. with \((n - \text{rg}(A))\) parameters};
+    \node [terminator, below right=of decision2] (oneS) {Exactly one solution};
+
+    % Arrows
+    \path [connector] (start) -- (decision1);
+    \path [connector] (decision1.west) -- node[above] {No} (noS.east);
+    \path [connector] (decision1) -- node[right] {Yes} (decision2);
+    \path [connector] (decision2.south west) -- node[above left] {No} (inS.north east);
+    \path [connector] (decision2.south east) -- node[above right] {Yes} (oneS.north west);
+\end{tikzpicture}
+
+
+
+

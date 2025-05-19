@@ -14,23 +14,24 @@ Leonhard Euler famously solved this in 1735, showing that:
 \subsection{Euler's Proof via the Function \( \frac{\sin(x)}{x} \)}
 
 Euler's approach involves expressing \( \frac{\sin(x)}{x} \) both as a power series and as an infinite product, then equating the coefficients of like powers of \( x \).
+\vspace{\baselineskip}
 
 \textbf{Step 1: Power Series Expansion}
-\newline
+
 The Taylor series expansion of \( \frac{\sin(x)}{x} \) around \( x = 0 \) is:
 \[
 \frac{\sin(x)}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \frac{x^6}{7!} + \cdots
 \]
 
 \textbf{Step 2: Infinite Product Representation}
-\newline
+
 The sine function has zeros at \( x = n\pi \) for all non-zero integers \( n \). Euler utilized this to express \( \frac{\sin(x)}{x} \) as an infinite product over its zeros:
 \[
 \frac{\sin(x)}{x} = \prod_{n=1}^{\infty} \left(1 - \frac{x^2}{n^2\pi^2}\right)
 \]
 
 \textbf{Step 3: Equating Coefficients}
-\newline
+
 Expanding the infinite product, the coefficient of \( x^2 \) is:
 \[
 -\sum_{n=1}^{\infty} \frac{1}{n^2\pi^2}

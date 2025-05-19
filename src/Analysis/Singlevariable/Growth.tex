@@ -21,33 +21,14 @@ P_{n} = P_0 \cdot (1 + r)^n
   \item \(n\) is the number of time steps
 \end{itemize}
 
-\textbf{Example:}  
+\textbf{Example:}
+\vspace{\baselineskip}
+  
 If \(P_0 = 100\) and \(r = 0.1\), after 5 steps:
 
 \[
 P_5 = 100 \cdot {(1 + 0.1)}^5 = 100 \cdot 1.61051 \approx 161.05
 \]
-
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-    xlabel={Time step \(n\)},
-    ylabel={Population \(P_n\)},
-    title={Discrete Exponential Growth},
-    domain=0:10,
-    samples=11,
-    xtick={0,1,...,10},
-    ytick={0,100,200,300},
-    ymin=0, ymax=300,
-    grid=major,
-]
-\addplot+[only marks, mark=*, mark options={blue}, thick] 
-    table [x expr=\thisrow{n}, y expr=100*(1+0.2)^\thisrow{n}] {
-        n 0 1 2 3 4 5 6 7 8 9 10
-    };
-\end{axis}
-\end{tikzpicture}
-\end{center}
 
 \subsubsection{Continuous Exponential Growth}
 
@@ -62,7 +43,9 @@ P(t) = P_0 \cdot e^{rt}
   \item \(r\) is the continuous growth rate
 \end{itemize}
 
-\textbf{Example:}  
+\textbf{Example:}
+\vspace{\baselineskip}
+  
 If \(P_0 = 100\), \(r = 0.1\), and \(t = 5\):
 
 \[
@@ -101,7 +84,9 @@ P_{n+1} = P_n + r \cdot P_n \cdot \left(1 - \frac{P_n}{K}\right)
   \item \(r\) is the intrinsic growth rate
 \end{itemize}
 
-\textbf{Example:}  
+\textbf{Example:}
+\vspace{\baselineskip}
+  
 With \(P_0 = 10\), \(r = 0.5\), \(K = 100\):
 
 \[
@@ -148,7 +133,9 @@ P_1 = 10 + 0.5 \cdot 10 \cdot \left(1 - \frac{10}{100}\right) = 10 + 0.5 \cdot 1
 P(t) = \frac{K}{1 + \left( \frac{K - P_0}{P_0} \right)e^{-rt}}
 \]
 
-\textbf{Example:}  
+\textbf{Example:}
+\vspace{\baselineskip}
+  
 With \(P_0 = 10\), \(K = 100\), and \(r = 0.5\), at \(t = 5\):
 
 \[

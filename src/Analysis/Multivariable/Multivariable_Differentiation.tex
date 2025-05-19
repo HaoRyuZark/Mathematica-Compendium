@@ -38,7 +38,7 @@ Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \v
 \end{pmatrix}
 \]
 
-\subsubsection*{Origin of the formula}
+\subsubsection{Origin of the formula}
 
 Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_n(t)\hat{v_n}\) that \(f(x_1(t), \dots, x_n(t)) = C\)
 
@@ -99,6 +99,7 @@ T(\vec{X}) = f(\vec{x_0}) + \sum_{i = 1}^{n} f_{x_i}(\vec{x_0})(x_i - x_{i}^0)
 \]
 
 \textbf{Example: \( f(x, y) = 4x^2y + xy^2 + 1 \)}
+\vspace{\baselineskip}
 
 Compute partial derivatives:
 \[
@@ -142,7 +143,7 @@ This implies:
 |D_{\vec{v}}f(\vec{x}_0)| \le \|\nabla f(\vec{x}_0)\|
 \]
 
-\subsubsection*{Derivation of the Directional Derivative Formula}
+\subsubsection{Derivation of the Directional Derivative Formula}
 
 Let \( f(x, y) \) be differentiable, and let \( \vec{v} = (e_1, e_2) \) be a direction vector. We aim to derive the formula for the directional derivative \( D_{\vec{v}} f(x_0, y_0) \).
 
@@ -231,8 +232,10 @@ Given an approximate value \( \tilde{x} \) for the exact value \( x \):
 \end{itemize}
 
 In multi-variable contexts, similar formulas apply using vector norms.
+\vspace{\baselineskip}
 
 \textbf{Absolute Error Example}
+\vspace{\baselineskip}
 
 We consider the function:
 \[
@@ -307,6 +310,7 @@ or more directly using relative errors:
 \]
 
 \textbf{Example: Volume of a Cuboid}
+\vspace{\baselineskip}
 
 Let:
 \[
@@ -334,7 +338,9 @@ If the final result \( z \) must be accurate within \( \varepsilon_z = 0{,}01 \)
 3 \varepsilon \leq 0{,}01 \Rightarrow \varepsilon \leq \frac{0{,}01}{3} = \boxed{0{,}0033} \quad \text{(or } 0{,}33\% \text{)}
 \]
 
-\textbf{Conclusion:}  
+\textbf{Conclusion:}
+\vspace{\baselineskip}
+
 Each input measurement must be made with a maximum relative error of \( \boxed{0{,}33\%} \) to ensure the output \( z = abc \) is accurate to within 1%.
 
 \subsubsection{Implicit Differentiation}
@@ -485,7 +491,8 @@ Find all points \( \vec{x}_0 \in \mathbb{R}^n \) such that:
 This is a nonlinear system of \( n \) equations in \( n \) variables. The solutions \( \vec{x}_0 \) 
 are the \emph{candidate points for extrema}, and also referred to as the 
 \textbf{stationary points} or \emph{critical points} of the function.
-\newline
+\vspace{\baselineskip}
+
 You use the following techniques to find the points: 
 \begin{itemize}[label=\(-\)]
     \item Factorization
@@ -561,7 +568,7 @@ Sometimes it a good way to solve a problem of this topic is to:
 \begin{enumerate}
     \item Build the \emph{Lagrangian}
     \item \(\nabla L = 0\) and maybe compute the determinant to generate another equation to solve
-    \item Get rid of \(\lambda\) via factorization, substitution, addtion of rows (prefered), etc.
+    \item Get rid of \(\lambda\) via factorization, substitution, addition of rows (preferred), etc.
     \item Solve the system without \(\lambda\)
 \end{enumerate}
 
@@ -570,7 +577,7 @@ The Bordered Hessian matrix is:
 \[
 H_B =
 \begin{bmatrix}
-0 & \left( \nabla g(x_1, \dots, x_n) \right)^T \\
+0 & {\left( \nabla g(x_1, \dots, x_n) \right)}^T \\
 \nabla g(x_1, \dots, x_n) & \nabla^2 \mathcal{L}(x, \dots, x_n, \lambda_1, \dots, \lambda_n)
 \end{bmatrix}
 \]
@@ -581,8 +588,10 @@ Where:
 \end{itemize}
 
 Or basically a Hessian of the Lagrangian starting with\(lambda_1\).
+\vspace{\baselineskip}
 
 \textbf{Example: Maximizing \( f(x, y) = xy \) under the constraint \( 2x + 2y = 40 \)}
+\vspace{\baselineskip}
 
 We want to find the maximum of the function:
 \[
@@ -632,8 +641,10 @@ H = \begin{pmatrix}
 \]
 
 Since \( \det(H) = 8 > 0 \), and the Lagrange conditions are satisfied, this indicates a \emph{local maximum}.
+\vspace{\baselineskip}
 
 \textbf{Conclusion:}
+\vspace{\baselineskip}
 
 The maximum value is:
 \[

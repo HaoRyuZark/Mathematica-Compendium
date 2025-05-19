@@ -1,7 +1,14 @@
 \newpage
 \section{Set Theory}
-Set theory is a foundational branch of mathematics that studies sets, which are simply collections of objects. At its core, it deals with the fundamental concepts of membership (whether an object belongs to a set), equality (when two sets are the same), and relationships between sets (like subsets, intersections, and unions).\\
-It might seem simple, but set theory provides the basic language and tools to define and reason about almost all mathematical objects, from numbers and functions to more complex structures. It helps us understand the concept of infinity, organize mathematical ideas logically, and resolve paradoxes that arise from dealing with collections.\\
+
+Set theory is a foundational branch of mathematics that studies sets, which are simply 
+collections of objects. At its core, it deals with the fundamental concepts of membership 
+(whether an object belongs to a set), equality (when two sets are the same), and relationships 
+between sets (like subsets, intersections, and unions).\\
+It might seem simple, but set theory provides the basic language and tools to define 
+and reason about almost all mathematical objects, from numbers and functions to 
+more complex structures. It helps us understand the concept of infinity, organize mathematical 
+ideas logically, and resolve paradoxes that arise from dealing with collections.\\
 In essence, set theory provides the building blocks upon which much of modern mathematics is constructed.
 
 \subsection{Basics}
@@ -151,7 +158,7 @@ This are Zermelo Fraenkel axioms of set theory including \emph{The Axiom of Choi
 	\item \emph{Axiom of Infinity:} \quad \(\exists N: \emptyset \in N \land (\forall x: x \in N \Rightarrow x \cup \{x\} \in N)\)
 	\item \emph{Axiom Schema of Specification:} \quad \(\forall A: \exists B: \forall C: C \in B \Leftrightarrow (C \in A \land P(C))\)
 	\item \emph{Axiom Schema of Replacement:} \quad \(\forall A: \exists B: \forall y: y \in B \Rightarrow \exists x \in A: y = F(x)\)
-	\item \emph{Powerset Axiom:} \quad \(\forall A: \exists B: \forall C: C \subseteq A \Rightarrow C \in B\)
+	\item \emph{Power Set Axiom:} \quad \(\forall A: \exists B: \forall C: C \subseteq A \Rightarrow C \in B\)
 	\item \emph{Foundation Axiom:} \quad \(\forall A \ne \emptyset: \exists B \in A: A \cap B = \emptyset\)
 	\item \emph{Axiom of Choice:} \quad \(\forall X:
 		      \left( \left[ \forall A \in X: A \ne \emptyset \right] \land
@@ -165,6 +172,8 @@ The Cartesian product of two sets \(A\) and \(B\), written \(A \times B\), is th
 \[A \times B = \{ (a, b) : a \in A, \land\ b \in B\}.\]
 
 \textbf{Example:}
+\vspace{\baselineskip}
+
 \begin{table}[H]
 	\centering
 	\caption{Cartesian Product of \(A = \{1, 2, 3\}\) and \(B = \{4, 5, 6\}\)}
@@ -225,7 +234,7 @@ and use Law (11) to show the disjoint decomposition:
 	D = C \iff A \cap B = A \cup B
 \]
 
-\textbf{a To show:}
+To show:
 \[
 	D \cup C = X \iff (\overline{A} \cap \overline{B}) \cup (A \cup B) = X
 \]
@@ -238,7 +247,7 @@ and use Law (11) to show the disjoint decomposition:
 	 & = X
 \end{align*}
 
-\textbf{b To show:}
+To show:
 \[
 	D \cap C = \emptyset \iff (\overline{A} \cap \overline{B}) \cap (A \cup B) = \emptyset
 \]
@@ -255,8 +264,9 @@ and use Law (11) to show the disjoint decomposition:
 \subsection{Indexed Sets}
 
 Let \( X \) be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \( J \) is the index set.
-\newline
-a If \( J = \{1, 2, \dots, n\} \):
+\vspace{\baselineskip}
+
+If \( J = \{1, 2, \dots, n\} \):
 \[
 	\bigcup_{i=1}^{n} A_i := A_1 \cup A_2 \cup \dots \cup A_n = \{ x \mid \exists i \in J \ (x \in A_i) \}
 \]
@@ -267,7 +277,7 @@ a If \( J = \{1, 2, \dots, n\} \):
 	X_{i=1}^{n} A_i = \{(a_1, \dots, a_n) \mid a_i \in A_i \}
 \]
 
-b If \( J \) is any set:
+If \( J \) is any set:
 \[
 	\bigcup_{i \in J} A_i := \{ x \mid \exists i \in J \ (x \in A_i) \}
 \]
@@ -275,12 +285,12 @@ b If \( J \) is any set:
 	\bigcap_{i \in J} A_i := \{ x \mid \forall i \in J \ (x \in A_i) \}
 \]
 
-c If \( J \) is any set, then \( {(A_i)}_{i \in J} \) are pairwise disjoint if and only if:
+If \( J \) is any set, then \( {(A_i)}_{i \in J} \) are pairwise disjoint if and only if:
 \[
 	\forall i_1, i_2 \in J, \ i_1 \neq i_2 \Rightarrow A_{i_1} \cap A_{i_2} = \emptyset
 \]
 
-d If \( J \) is any set, then \( {(A_i)}_{i \in J} \) forms a (disjoint) decomposition of \( X \) if and only if:
+If \( J \) is any set, then \( {(A_i)}_{i \in J} \) forms a (disjoint) decomposition of \( X \) if and only if:
 \[
 	{(A_i)}_{i \in J} \text{ are pairwise disjoint and } \bigcup_{i \in J} A_i = X
 \]
@@ -306,6 +316,7 @@ Let \( A_i, B_j \subseteq X \) for \( i \in I \) and \( j \in J \). Then the fol
 	\]
 
 \end{itemize}
+
 Here, \( I = \{ 1, 2, 3, \dots, n \} \) and \( J = \{ 1, 2, 3, \dots, m \} \). Then:
 \[
 	I \times J = \{ (i, j) \mid 1 \leq i \leq n, 1 \leq j \leq m, i, j \in \mathbb{N} \}
@@ -320,12 +331,12 @@ The cardinality of a set is the number of elements in that set.
 \\
 Let \( A \) and \( B \) be finite sets with \( |A| = n \), \( |B| = m \), and let \( X \) be the finite universal set. Then the following holds:
 
-\subsubsection*{Cardinality of a Set}
+\subsubsection{Cardinality of a Set}
 \[
 	A = (A \cap B) \cup (A \setminus B), \quad |A| = |A \cap B| + |A \setminus B|
 \]
 
-\subsubsection*{Cardinality of the complements}
+\subsubsection{Cardinality of the complements}
 \[
 	|A| = |X \setminus A| = |X| - |A|
 \]
@@ -333,23 +344,23 @@ Let \( A \) and \( B \) be finite sets with \( |A| = n \), \( |B| = m \), and le
 	A \setminus B = A \cap (X \setminus B), \quad |A \setminus B| = |A| - |A \cap B|
 \]
 
-\subsubsection*{Cardinality of the Cartesian Product}
+\subsubsection{Cardinality of the Cartesian Product}
 \[
 	|A \times B| = |A| \cdot |B| = n \cdot m
 \]
 
-\subsubsection*{Inclusion-Exclusion Formula for Two Disjoint Sets}
+\subsubsection{Inclusion-Exclusion Formula for Two Disjoint Sets}
 \[
 	|A \cup B| = |A| + |B| = n + m
 \]
 
-\subsubsection*{Inclusion-Exclusion Formula for Two Non-Disjoint Sets}
+\subsubsection{Inclusion-Exclusion Formula for Two Non-Disjoint Sets}
 Let \( |A \cap B| = k \), then:
 \[
 	|A \cup B| = |A| + |B| - |A \cap B| = n + m - k \quad \text{(since we do not count the intersection twice)}
 \]
 
-\subsubsection*{Inclusion-Exclusion Formula for Three Non-Disjoint Sets}
+\subsubsection{Inclusion-Exclusion Formula for Three Non-Disjoint Sets}
 \[
 	|A \cup B \cup C| = |(A \cup B) \cup C| = |A \cup B| + |C| - |(A \cup B) \cap C|
 \]

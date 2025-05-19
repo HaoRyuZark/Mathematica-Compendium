@@ -4,6 +4,7 @@
 \subsection{Scalar Product}
 
 Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V \to K\) is called a scalar product (or inner product) if the following conditions are satisfied:
+\vspace{\baselineskip}
 
 \emph{Symmetry}
 
@@ -55,13 +56,13 @@ and
 
 \subsection{Standard Scalar Product for Complex Number}
 
-Let \( a = (a_i)_{i=1}^n \) and \( b = (b_i)_{i=1}^n \) be vectors in \( \mathbb{C}^n \). The standard scalar product is defined by
+Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \mathbb{C}^n \). The standard scalar product is defined by
 
 \[
 \langle a, b \rangle := \sum_{i=1}^n a_i b_i.
 \]
 
-\subsection{Scalar Product on \( C[a, b] \)}
+\subsection{Scalar Product on \texorpdfstring{\( C[a, b] \)}{}}
 
 Let \( f, g \in C[a, b] \). The scalar product on \( C[a, b] \) is defined by
 
@@ -102,12 +103,12 @@ In all unitary vector spaces \( V \), the Cauchy-Schwarz inequality holds:
 | \langle a, b \rangle | \leq \| a \| \| b \| \quad \forall a, b \in V.
 \]
 
-\subsubsection*{Proof of the Triangle Inequality}
+\subsubsection{Proof of the Triangle Inequality}
 
 Both sides of the triangle inequality are real and, in particular, non-negative. Therefore, it is sufficient to prove that the squares of both sides satisfy the desired inequality, i.e., we need to show:
 
 \[
-\langle a + b, a + b \rangle \leq (\|a\| + \|b\|)^2.
+\langle a + b, a + b \rangle \leq {(\|a\| + \|b\|)}^2.
 \]
 
 First, we expand the left-hand side:
@@ -146,6 +147,6 @@ Using the definition of the norm, \( \|a\|^2 = \langle a, a \rangle \) and \( \|
 \langle a + b, a + b \rangle \leq \|a\|^2 + 2 \|a\| \|b\| + \|b\|^2.
 \]
 
-This is exactly the expansion of \( (\|a\| + \|b\|)^2 \), which completes the proof.
+This is exactly the expansion of \( {(\|a\| + \|b\|)}^2 \), which completes the proof.
 \QED
 

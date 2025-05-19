@@ -27,12 +27,15 @@
 \usepackage{fncychap}
 \usepackage{setspace}
 
-\usetikzlibrary{calc,intersections,decorations.pathreplacing, patterns, angles, quotes, cd}
+\usetikzlibrary{calc,intersections,decorations.pathreplacing, patterns, angles, quotes, cd, shapes, arrows, positioning}
 \usepgfplotslibrary{fillbetween}
 \geometry{margin=1in}
 \graphicspath{{./resources/images}}
 \pgfplotsset{compat=newest}
 \setlength\parindent{0pt}
+\tikzstyle{terminator} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{decision} = [diamond, aspect=2, minimum width=3.5cm, text centered, draw=black, fill=blue!30, inner sep=1pt]
+\tikzstyle{connector} = [draw, -latex']
 
 \input{utilities/macros.tex}
 
@@ -50,6 +53,7 @@
 
 \newpage
 
+\newpage
 
 \input{src/Introction_and_others/Introduction.tex}
 
@@ -64,10 +68,7 @@
 \input{src/Numbers/Real_Numbers.tex}
 \input{src/Numbers/Complex.tex}
 
-
 \input{src/Topology/Topology.tex}
-
-
 
 \input{src/Algebra/Means_and_Proofs.tex}
 \input{src/Algebra/Solving_Polynomials.tex}

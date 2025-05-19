@@ -34,17 +34,21 @@ There is a deep similarity between generating functions and the process of formi
 {(1 + x)}^n = \sum_{k=0}^n \binom{n}{k} x^k
 \]
 This expansion encodes all subsets of an \( n \)-element set, where each term \( x^k \) corresponds to selecting a subset of size \( k \). The coefficient \( \binom{n}{k} \) gives the number of such subsets.
-\newline
+\vspace{\baselineskip}
+
 In this way, generating functions can be viewed as a powerful algebraic analogue of subset selection and counting, with the exponents representing sizes or weights, and the coefficients representing counts.
-\\\
+\vspace{\baselineskip}
+
 Generating functions serve as a bridge between algebra and combinatorics, allowing abstract operations to yield concrete combinatorial results.
 
 \subsection{Closed form of the Fibonacci Sequence}
 
 Lets use generating function to find a closed form for the Fibonacci number. 
-\newline
+\vspace{\baselineskip}
+
 We know that \(F_0 = 1\) and \(F_1 = 1\) and for \(n \ge 2\) \(F_n = F_{n-1} + F_{n-2}\)
-\newline
+\vspace{\baselineskip}
+
 Now lets use the following function
 \[
     F(x) = \sum_{n = 0}^{\infty} F_n x^{n}

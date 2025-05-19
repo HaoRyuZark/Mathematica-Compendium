@@ -3,7 +3,7 @@
 
 \subsection{Arc-length of a Curve}
 
-We will use the famous technique of approximating the lenght/area/volume of something
+We will use the famous technique of approximating the length/area/volume of something
 by dividing it in to equally smaller section that are straight lines in this case. In other will
 be prisms, squares, etc. Now if we look at the difference between two points in our 3D space, 
 for this Example
@@ -50,7 +50,6 @@ along \( \gamma \) is:
 \int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \vec{r}'(t) \rangle \, dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
 \]
 
-
 In the context of physics this integral measures the work done by the field \( \vec{F} \) along the path \( \gamma \), such as force over distance.
 
 \subsection{Over Scalar field}
@@ -73,6 +72,7 @@ Then, the line integral of \( f \) over \( C \) is given by:
 \end{center}
 
 \textbf{Example: Scalar Field}
+\vspace{\baselineskip}
 
 Compute the line integral of \(f(x,y) = x^2 + y^2\) over the straight line segment going
 from \((1,1)\) to \((3,3)\)
@@ -86,6 +86,7 @@ This time or curve is \(y = x\) to the parametrized curve is \(\begin{pmatrix}
 \]
 
 \textbf{Example: Line Integral over a Vector Field}
+\vspace{\baselineskip}
 
 Let \( f(x, y) = x^2 + y^2 \), and define a vector field based on its gradient:
 
@@ -175,12 +176,14 @@ First, check if the field is conservative by verifying:
 \]
 
 Since \( \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \), the field is conservative.
+\vspace{\baselineskip}
 
 \textbf{Step 1: Integrate \( P(x, y) \) with respect to \( x \):}
 \[
 \phi(x, y) = \int (2xy + e^x)\,dx = x^2y + e^x + h(y)
 \]
 Here, \( h(y) \) is a function of \( y \) only.
+\vspace{\baselineskip}
 
 \textbf{Step 2: Differentiate \( \phi(x, y) \) with respect to \( y \):}
 \[
@@ -216,7 +219,7 @@ Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \mathbb
 \iint_A f(x, y)\, dA = \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx
 \]
 
-\textbf{Note:} For rectangular domains, the order of integration does not affect the result:
+For rectangular domains, the order of integration does not affect the result:
 
 \[
 \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx = \int_{y_0}^{y_1} \int_{x_0}^{x_1} f(x, y)\, dx\, dy
@@ -237,8 +240,10 @@ In practice, for regions bounded by curves, we integrate in the form:
 \]
 
 Here, \( y \in [u(x), o(x)] \) describes the vertical bounds as functions of \( x \).
+\vspace{\baselineskip}
 
-\textbf{Example}
+\textbf{Example:}
+\vspace{\baselineskip}
 
 Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1\) and \(y\)-axis \(y = \sqrt{x}\)
 
@@ -269,11 +274,11 @@ Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1
     \end{tikzpicture}
 \end{center}
 
-First we are going to imagine slicing the area under this sector verticly along the \(x\)-axis from \(0\) up to \(1\) which
+First we are going to imagine slicing the area under this sector vertically along the \(x\)-axis from \(0\) up to \(1\) which
 is the volume of an Area under a curve that is represented by going along the \(y\)-axis.
 
 \begin{align*}
-    \int_{0}^{1}\int_{0}^{\sqrt{x}} 1 + x + y^2 dydx \\
+    \int_{0}^{1}\int_{0}^{\sqrt{x}} 1 + x + y^2 dy dx \\
     \int_{0}^{1} \left| y + xy + \frac{y^3}{3} \right|_{0}^{\sqrt{x}} dx \\
     \int_{0}^{1} \left| \sqrt{x} + x\sqrt{x} + \frac{\sqrt{x}^3}{3} \right|_{0}^{\sqrt{x}} dx \\
     = \left| \frac{2}{3} x^{\frac{3}{2}} + \frac{4}{3} \frac{2}{5} x^{\frac{5}{2}} \right|_{0}^{1} = \frac{6}{5}
@@ -281,22 +286,22 @@ is the volume of an Area under a curve that is represented by going along the \(
 
 If we choose the other way then we have an area with a fix \(y\) in the inside that goes from \(y^2\) to \(1\) with respect to \(x\).
 \[
-\int_{0}^{1}\int_{y^2}^{1} 1 + x + y^2 dxdy
+\int_{0}^{1}\int_{y^2}^{1} 1 + x + y^2 dx dy
 \]
 
 \subsection{Changing the order of integration to solve tricky integrals}
 
-Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dydx\) which is very hard to integrate, lets change the order
+Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dy dx\) which is very hard to integrate, lets change the order
 to make it easier.
 
-\[\int_{0}^{2}\int_{0}^{y^3} \frac{1}{y^4 +1}dxdy\]
+\[\int_{0}^{2}\int_{0}^{y^3} \frac{1}{y^4 +1}dx dy\]
 
 The steps are the same as in the previous Example.
 
 \begin{enumerate}
     \item Identify the area you want to integrate, what are the bounds respective to \(x\) and \(y\)
     \item Write the same expression without bounds and change the order of the differentials
-    \item Imagine slicing the area underneath verticaly for \(x\) and horizontaly for \(y\) with their respective bounds corresponding
+    \item Imagine slicing the area underneath vertically for \(x\) and horizontally for \(y\) with their respective bounds corresponding
     to the perspective.
     \item Write the new integral with the opposite of order of integration
 \end{enumerate}
@@ -410,8 +415,11 @@ that our differential make sense in the original system we were.
 Because of that, we take the determinant with respect to the new
 coordinates to tell us the scaling factor that we have to use for our
 result to make sense.
+\vspace{\baselineskip}
 
 \textbf{Use Cases}
+\vspace{\baselineskip}
+
 The Jacobian matrix and its determinant appear in many areas, including:
 \begin{itemize}[label=\(-\)]
   \item \textbf{Change of variables in integrals:} The absolute value of the Jacobian determinant is used to adjust the measure when changing coordinates in multiple integrals.
@@ -424,7 +432,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
 \begin{itemize}[label=\(-\)]
 
     \item \emph{Cartesian Coordinates}:
-    \begin{itemize}
+    \begin{itemize}[label=\(-\)]
         \item Definition: The position of a point is given by \((x, y, z)\) in a 3D space along orthogonal axes.
         \item Jacobian: 
         \[
@@ -433,16 +441,16 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \end{itemize}
 
     \item \emph{Polar Coordinates (2D)}:
-    \begin{itemize}
+    \begin{itemize}[label=\(-\)]
         \item Definition: The position of a point in a plane is given by \((r, \theta)\), where \(r\) is the radial distance and \(\theta\) is the angle from the positive \(x\)-axis.
         \item Jacobian:
         \[
-        J_{\text{Polar}} = rdrd\theta
+        J_{\text{Polar}} = rd rd\theta
         \]
     \end{itemize}
 
     \item \emph{Cylindrical Coordinates}:
-    \begin{itemize}
+    \begin{itemize}[label=\(-\)]
         \item Definition: The position of a point in 3D space is given by \((r, \theta, z)\), where \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \(z\) is the height along the \(z\)-axis.
         \item Jacobian:
         \[
@@ -451,9 +459,9 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \end{itemize}
 
     \item \emph{Spherical Coordinates}:
-    \begin{itemize}
+    \begin{itemize}[label=\(-\)]
         \item Definition: The position of a point in 3D space is given by \((\rho, \theta, \phi)\), where:
-        \begin{itemize}
+        \begin{itemize}[label=\(-\)]
             \item \(\rho\) is the distance from the origin,
             \item \(\theta\) is the azimuthal angle (in the \(xy\)-plane from the positive \(x\)-axis),
             \item \(\phi\) is the polar angle (from the positive \(z\)-axis).
@@ -469,6 +477,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
 \subsection{Integration in Polar Coordinates}
 
 For radially symmetric regions or functions, switching to polar coordinates simplifies the computation.
+\vspace{\baselineskip}
 
 \textbf{Transformation:}
 \[
@@ -487,17 +496,16 @@ dA = r\, dr\, d\varphi
 \]
 
 \subsubsection{Origin of the Area}
-When we divide our circle in the sections we get both a difference in then angle and the radius which generate anorther area.
+When we divide our circle in the sections we get both a difference in then angle and the radius which generate another area.
 The difference \(\Delta A =\) Area of big wedge \(-\) Area of small wedge
+\vspace{\baselineskip}
 
-\emph{Radius: }
+\emph{Radius: }\(r_k + \frac{\Delta r}{2}\) for the big wedge and \(r_k - \frac{\Delta r}{2}\) for the small wedge
+\vspace{\baselineskip}
 
-\(r_k + \frac{\Delta r}{2}\) for the big wedge and \(r_k - \frac{\Delta r}{2}\) for the small wedge
-
-\emph{Angle: }
-
-\(\frac{\Delta \theta}{2 \pi}\) which is the angle of the fraction of the circle because the formula for the area is \(r^2 \pi\)
+\emph{Angle: }\(\frac{\Delta \theta}{2 \pi}\) which is the angle of the fraction of the circle because the formula for the area is \(r^2 \pi\)
 and the whole circle would be \(2\pi\)
+\vspace{\baselineskip}
 
 \emph{Final Formula for the difference in the Area}
 
@@ -511,6 +519,7 @@ V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r
 \]
 
 \textbf{Example:}
+\vspace{\baselineskip}
 
 \(f(r, \theta) = r\) above cardioid \(r = 1 - \sin \theta\)
 
@@ -586,7 +595,7 @@ In practice, evaluate:
 with limits determined by the geometry of the volume. The order of integration may be rearranged to simplify computation.
 
 \[
-\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dzdydx
+\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx
 \]
 
 \subsubsection{Triple Integrals in Cartesian Coordinates}
@@ -596,7 +605,7 @@ between two functions using triple integrals.
 
 Given are the functions \(f_1(x,y) = x^2 + y^2\) and \(f_2(x,y) = 3 - x^2 - y^2\)
 
-\newpage
+
 \begin{center}
     
 \begin{tikzpicture}
@@ -645,13 +654,13 @@ x^2 + y^2 = \frac{3}{2}
 
 Now we have to find the limits of integration for 
 \[
-\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dzdydx
+\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx
 \]
 
 using our constraint and our original functions.
 
 \[
-\int_{x=a}^{x=b}\int_{y=-\sqrt{\frac{3}{2} - x^2}}^{\sqrt{\frac{3}{2} -x^2}} \int_{x^2 + y^3}^{3-x^2-y^2} dzdydx
+\int_{x=a}^{x=b}\int_{y=-\sqrt{\frac{3}{2} - x^2}}^{\sqrt{\frac{3}{2} -x^2}} \int_{x^2 + y^3}^{3-x^2-y^2} dz dy dx
 \]
 
 Here \(z\) means the height which is just the output

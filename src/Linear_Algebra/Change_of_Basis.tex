@@ -1,20 +1,23 @@
 \newpage
-\section{Changig between Basis}
+\section{Changing between Basis}
 
-Given a vertor \(\vec{x} = \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n\) 
+Given a vector \(\vec{x} = \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n\) 
 with \(\vec{v}_1, \dots, \vec{v}_n\)
-being a the basis vector, we can write \(\vec{x}\) in term of its components \((a, b, c, \dots)^T\).
-\newline
+being a the basis vector, we can write \(\vec{x}\) in term of its components \({(a, b, c, \dots)}^T\).
+\vspace{\baselineskip}
+
 Now imagine having another basis \(\vec{b}_1, \dots, \vec{b}_n\) and a the same vector \(\vec{x}\)
 with all of its components. The key here is that we want to know how our original
 vector is described in terms of other basis. More precisely what are its coordinates
-\newline
+\vspace{\baselineskip}
+
 So our vector \(\vec{x}\) is described:
 
 \[\lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n\]
 
 in the corresponding bases.
-\newline
+\vspace{\baselineskip}
+
 Now lets write then a matrix vector multiplication
 \[
 (\vec{v}_1, \dots, \vec{v}_ n) 
@@ -26,32 +29,37 @@ Now lets write then a matrix vector multiplication
 
 Now lets use the following notation for the Basis and the coefficient vectors.
 
-\[P_B (\vec{x})_B = P_C (\vec{x})_C\]
+\[P_B {(\vec{x})}_B = P_C {(\vec{x})}_C\]
 
-Here \(P_{X}\) is the matrix of the basis \(X\) vectors and \((\vec{x})_X\) the coefficients of the
+Here \(P_{X}\) is the matrix of the basis \(X\) vectors and \({(\vec{x})}_X\) the coefficients of the
 vector \(\vec{x}\) described by that basis.
-\newline
-Now that convertion of basis is just a matter of solving for 
+\vspace{\baselineskip}
+
+Now that conversion of basis is just a matter of solving for 
 our desired vector by multipliying
 by the inverse of the corresponding basis matrix.
-\newline
+\vspace{\baselineskip}
+
 \textbf{Example I:}
-\newline
+\vspace{\baselineskip}
+
 Lets find \(\vec{x}\) in terms of tha basis \(C\)
 
-\[P_{C}^{-1} P_B (\vec{x})_B = (\vec{x})_C\]
+\[P_{C}^{-1} P_B {(\vec{x})}_B = {(\vec{x})}_C\]
 
 \textbf{Example II:}
-\newline
-Give are the vector \(\vec{u}_1 = (1,2)^T\) and \(\vec{u}_2 = (3, 3)^T\)
+\vspace{\baselineskip}
+
+Give are the vector \(\vec{u}_1 = {(1,2)}^T\) and \(\vec{u}_2 = {(3, 3)}^T\)
 and our canonical basis vector \(\imath\) and \(\jmath\). The
 vector in the canonical basis has the coordinates (2, 1). 
-\newline
+\vspace{\baselineskip}
+
 We set them equal
 
 \[\lambda_1 \vec{u}_1 + \lambda_2 \vec{u}_2 = \mu_1 \imath + \mu_2 \jmath \]
 
-Lets wriet \(\vec{u}_1\) and \(\vec{u}_2\) in terms of the canonical basis.
+Lets write \(\vec{u}_1\) and \(\vec{u}_2\) in terms of the canonical basis.
 \[\vec{u}_1 = \imath + 2 \jmath\]
 \[\vec{u}_2 = 3 \imath + 3 \jmath\]
 
@@ -78,25 +86,30 @@ Now we can write this in matrix form
 
 This equation relates the coefficient in the standard basis to the new basis
 coefficients
-\newline
+\vspace{\baselineskip}
+
 What we are really doing here is taking the basis vectors of \(B\) and writing then as a linear combination
 of the basis vectors of \(C\). This will give us \(n\) matrices that we can solve.
-\newline
-To go the other way arround we take the inverse of the matrix whose column are the basis vectors of \(B\)
+\vspace{\baselineskip}
+
+To go the other way around we take the inverse of the matrix whose column are the basis vectors of \(B\)
 relative to the new basis \(C\)
-\newline
-Now let us understan what really is happening in the step where we multiply by the inverse matrix.
+\vspace{\baselineskip}
+
+Now let us understand what really is happening in the step where we multiply by the inverse matrix.
 
 \begin{align*}
 P_{C}^{-1} P_B &= P_{C}^{-1}(\vec{b}_1, \dots, \vec{b}_n) \\
 &= (P_{C}^{-1}\vec{b}_1, \dots, P_{C}^{-1}\vec{b}_n)\\
-&= ((\vec{b}_1)_C, \dots, (\vec{b}_n)_C)
+&= ({(\vec{b}_1)}_C, \dots, {(\vec{b}_n)}_C)
 \end{align*}
 
-Now it is clear that the inverse is just taking our basis vector and tranforming
+Now it is clear that the inverse is just taking our basis vector and transforming
 them in to basis vector with respect to \(C\).
+\vspace{\baselineskip}
 
-\subsubsection*{Summary}
+\textbf{Summary}
+\vspace{\baselineskip}
 
 To summarize, take the the coefficients of the vector in the new basis,
 take the basis vector of the new basis and write then in terms of our coordinates
@@ -104,7 +117,7 @@ and Finally multiply that matrix by the coefficients. The other way works
 just the same but this time you take the inverse take the inverse and multiply
 by the coefficients of vector in our basis.
 
-\subsubsection*{Translation under transformation}
+\subsection{Translation under transformation}
 
 For linear transformation we use the formula.
 
@@ -113,20 +126,22 @@ For linear transformation we use the formula.
 where \(\vec{v}\) is a vector in the other basis, \(A\) the
 other basis,\(M\) the linear transformation and \(A^{-1}\) the inverse of
 the basis vector of \(A\).
-\newline
-We interpert this as taking a vector of the new basis, translating it to our language,
-performing the transformation and then returning to the new basis.
-\newline
-For the sake of completness here some importan Theoremes and definitions:
+\vspace{\baselineskip}
 
-\subsection{Theoremes and definitions concerning the change of basis}
+We interpret this as taking a vector of the new basis, translating it to our language,
+performing the transformation and then returning to the new basis.
+\vspace{\baselineskip}
+
+For the sake of completeness here some important theorems and definitions:
+
+\subsection{Theorems and definitions concerning the change of basis}
 
 In this section we will use a slightly different notation. Here \(K_X\) is 
 the \emph{coefficient} vector with respect to a basis also called the coordinates
 of the vector. And \(\varphi_X\) is the \(P_X\) that is the matrix of the basis vectors with
 respect to \(X\).
 
-\subsubsection*{Theorem I} 
+\subsubsection{Theorem I} 
 
 Let \( V \) be a \( K \)-vector space with a 
 basis \( B = (v_1, \ldots, v_n) \).  
@@ -139,7 +154,7 @@ such that
 \varphi_B(e_i) = v_i, \quad \text{for } 1 \leq i \leq n.
 \]
 
-\subsubsection*{Theoreme II} 
+\subsubsection{Theorem II} 
 
 The isomorphism \( \varphi_B \) from the previous 
 Theorem is called the \emph{coordinate mapping},  
@@ -149,7 +164,9 @@ K_B (\vec{v}) := \varphi_B^{-1} (v) \in K^n
 \]
 as the \emph{coordinates of \( v \) with respect to \( B \)}.
 
-\subsubsection*{Theoreme III} We define the \emph{Traslation} of a vector to another
+\subsubsection{Theorem III} 
+
+We define the \emph{Translation} of a vector to another
 basis as:
 
 \[
@@ -163,11 +180,11 @@ K^n \arrow[ur, "\varphi_A"] \arrow[rr, "T_{B}^{A} = \varphi_B^{-1} \circ \varphi
 \end{tikzcd}
 \]
 
-\subsubsection*{Theoreme IV} 
+\subsubsection{Theorem IV} 
 
 Let \( v \in V \) be arbitrary, 
-with \( K_A(v) = (x_1, \ldots, x_n)^T \) 
-and \( K_B(v) = (y_1, \ldots, y_n)^T \).  
+with \( K_A(v) = {(x_1, \dots, x_n)}^T \) 
+and \( K_B(v) = {(y_1, \dots, y_n)}^T \).  
 Then the following holds:
 \[
 \begin{pmatrix}
@@ -192,7 +209,7 @@ If the coordinates of \( v \) with respect to \( A \) are known, then the matrix
         \end{tikzcd}
 \]
 
-\subsubsection*{Theoreme V}
+\subsubsection{Theorem V}
  
 Let \( V \) and \( W \) be finitely 
 generated \( K \)-vector spaces with 
@@ -204,12 +221,12 @@ M_B^A(f) = \varphi_B^{-1} \circ f \circ \varphi_A
 
 Thus, \( M_B^A(f) \) tells you how the coordinates change through \( f \).
 
-\subsubsection*{Theoreme VI} 
+\subsubsection{Theorem VI} 
 
 Let \( V \) and \( W \) be finitely generated vector spaces with bases \( A \) and \( A' \) for \( V \), and \( B \) and \( B' \) for \( W \), respectively.  
 Furthermore, let \( f: V \to W \) be a linear map. Then the following holds:
 \[
-M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot \left( T_{A'}^{A} \right)^{-1}.
+M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot {\left( T_{A'}^{A} \right)}^{-1}.
 \]
 
 \[
@@ -219,11 +236,11 @@ M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot \left( T_{A'}^{A} \right)^{
         K^n \arrow[rrrr, "M_{B'}^{A'}"] \arrow[ru, "\varphi_{A}'"']                    &                   &  &   & K^m \arrow[lu, "\varphi_{B'}"]                       
     \end{tikzcd}
 \]
-The formula says that to itepret a linear transformation in terms of the
+The formula says that to interpret a linear transformation in terms of the
 new coordinates we have to:
 \begin{enumerate}
     \item Take a vector of the new coordinates
-    \item Muliply it the matrix of its basis vectors. (Translate to our basis)
+    \item Multiply it the matrix of its basis vectors. (Translate to our basis)
     \item Apply the linear transformation
     \item Inverse the change of basis by taking the inverse of the 
     matrix in step 2.

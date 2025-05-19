@@ -75,7 +75,7 @@ This rule is used to resolve indeterminate forms \(\frac{0}{0}\) and \(\frac{\in
 
 For expressions like:
 \[
-\lim_{n \to \infty} \left( \frac{a}{b} \right)^n
+\lim_{n \to \infty} {\left( \frac{a}{b} \right)}^n
 \]
 \begin{itemize}[label=\(-\)]
 \item If \(\frac{a}{b} < 1\): limit is \(0\)
@@ -115,6 +115,7 @@ If \(g(x) \le f(x) \le h(x)\) near \(a\), and:
 \]
 
 \textbf{Example:}
+
 \[
 \lim_{x \to 0} x^2 \cos\left( \frac{1}{x} \right) = 0
 \]
@@ -158,7 +159,7 @@ More generally:
 \item \(\arctan x\) is continuous and differentiable everywhere, with a horizontal asymptote at \(y = \pm \frac{\pi}{2}\)
 \end{itemize}
 
-\subsection{Bolzano-Weierstraß Theoreme}
+\subsection{Bolzano-Weierstraß Theorem}
 
 Every bounded, convergent sequence in \(\mathbb{C}\) has a convergent subsequence.
 More precisely the sequence \(a\) has biggest and smallest accumulation point \(h^*\) and \(h_*\)
@@ -221,7 +222,6 @@ Let \( (a_n) \) be a sequence in \( \mathbb{R} \). We say:
 
 If \( (a_n) \) converges, then it is a Cauchy sequence.
 
-\textbf{Reminder:}  
 A sequence \( (a_n) \) is a \emph{Cauchy sequence} if:
 \[
 \forall \varepsilon > 0, \ \exists N \in \mathbb{N} \text{ such that } \forall n, m \ge N, \quad |a_n - a_m| < \varepsilon

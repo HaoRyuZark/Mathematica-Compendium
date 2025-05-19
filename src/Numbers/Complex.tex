@@ -1,8 +1,6 @@
 \newpage
 \section{Complex Numbers}
 
-\subsection{What are Complex Numbers?}
-
 A complex number is a number of the form:
 \[
 	z = a + bi,
@@ -77,7 +75,7 @@ where:
 \textbf{Important:} The value of \( \theta \) depends on the quadrant where the complex number lies:
 
 \begin{itemize}[label=\(-\)]
-	\item Quadrant I: \( a > 0, b > 0 \) — use \( \tan^{-1}(b/a) \)
+	\item Quadrant I: \( a > 0, b > 0 \) - use \( \tan^{-1}(b/a) \)
 	\item Quadrant II: \( a < 0, b > 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
 	\item Quadrant III: \( a < 0, b < 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
 	\item Quadrant IV: \( a > 0, b < 0 \) — use \( \tan^{-1}(b/a) \)
@@ -104,7 +102,7 @@ Given:
 
 This polar form is especially useful in simplifying powers and roots of complex numbers using De Moivre’s Theorem.
 
-\subsection{Exponentiation and Roots (De Moivre's Theorem)}
+\subsection{Exponentiation and Roots (De Moivre´s Theorem)}
 
 Let \( z = r(\cos \theta + i \sin \theta) = re^{i\theta} \) be a complex number in polar form.
 
@@ -162,14 +160,14 @@ These represent the four complex 4th roots of \( 1 + \sqrt{3}i \), equally space
 
 Solving equations in \( \mathbb{C} \) can involve various forms. Here are the most common cases:
 
-\subsubsection*{Linear Equations:}
+\subsubsection{Linear Equations:}
 
 Solve for \( z \) in \( az + b = 0 \), where \( a, b \in \mathbb{C} \), \( a \neq 0 \):
 	      \[
 		      z = -\frac{b}{a}
 	      \]
 
-\subsubsection*{Equations Involving the Conjugate:}
+\subsubsection{Equations Involving the Conjugate:}
 
 Solve for \( z \) in equations like \( z + \overline{z} = 4 \).
 	      Let \( z = x + iy \), then \( \overline{z} = x - iy \). So:
@@ -178,7 +176,7 @@ Solve for \( z \) in equations like \( z + \overline{z} = 4 \).
 	      \]
 	      The imaginary part remains free unless further constraints are given.
 
-\subsubsection*{Modulus Equations:}
+\subsubsection{Modulus Equations:}
 
 Solve \( |z| = r \):
 	      Let \( z = x + iy \), then:
@@ -187,7 +185,7 @@ Solve \( |z| = r \):
 	      \]
 	      This is a circle of radius \( r \) centered at the origin in the complex plane.
 
-\subsubsection*{Equations Involving \( z \cdot \overline{z} \):}
+\subsubsection{Equations Involving \texorpdfstring{\( z \cdot \overline{z} \)}{}}
 
 Recall \( z \cdot \overline{z} = |z|^2 \).
 	      For example, solve:
@@ -196,14 +194,14 @@ Recall \( z \cdot \overline{z} = |z|^2 \).
 	      \]
 	      Again, a circle in the complex plane of radius 3.
 
-\subsubsection*{Quadratic Equations:}
+\subsubsection{Quadratic Equations:}
 
 Complex roots occur naturally. For example:
 	      \[
 		      z^2 + 1 = 0 \to z^2 = -1 \Rightarrow z = \pm i
 	      \]
 
- \subsubsection*{General Polynomial Equations:}
+\subsubsection{General Polynomial Equations:}
 
  Use De Moivre’s Theorem or polar form. Example:
 	      \[
@@ -211,6 +209,7 @@ Complex roots occur naturally. For example:
 	      \]
 
 \textbf{Example 1:}
+\vspace{\baselineskip}
 
 Solve:
 \[
@@ -224,6 +223,7 @@ Solve:
 \]
 
 \textbf{Example 2:}
+\vspace{\baselineskip}
 
 Solve:
 \[
@@ -281,6 +281,8 @@ The principal value of the complex logarithm is often written:
 \]
 
 \textbf{Example:}
+\vspace{\baselineskip}
+
 Let \( z = -1 \). Then:
 \[
 	|z| = 1, \quad \arg(z) = \pi, \quad \to \log(-1) = i(\pi + 2\pi k), \quad k \in \mathbb{Z}
@@ -330,7 +332,7 @@ We know that
  Now we can demonstrate the formula.
 
 \[
-	|r_n| = \left( 1 + \left|\frac{z}{n}\right)^n\right| \implies \left( \sqrt{1 + \frac{\pi^2}{n^2}}\right)
+	|r_n| = \left( 1 + \left|\frac{z}{n}\right|^n \right) \implies \left( \sqrt{1 + \frac{\pi^2}{n^2}}\right)
 \]
 
 \[
@@ -339,7 +341,7 @@ We know that
 
 \[
 	\lim_{n \to \infty} {\left( \sqrt{1 + \frac{\pi^2}{n^2}}\right)}^n = \lim_{n \to \infty} {\left( 1 + \frac{\pi^2}{2n} \right) }^{\frac{n}{2}}
-	= \lim_{n \to \infty} e^{ln\left(1 +\frac{\pi^2}{2}\right) \frac{n}{2}} = e^0 = 1
+	= \lim_{n \to \infty} e^{\ln\left(1 +\frac{\pi^2}{2}\right) \frac{n}{2}} = e^0 = 1
 \]
 
 \[

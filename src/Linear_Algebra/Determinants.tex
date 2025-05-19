@@ -6,6 +6,7 @@ scalar value that provides important information about the matrix, including whe
 invertible and the volume scaling factor of the linear transformation represented by \(A\).
 The determinant can be computed using various methods, including the Laplace 
 expansion, row reduction, or the Leibniz formula.
+\vspace{\baselineskip}
 
 The determinant of a \(2 \times 2\) matrix is given by:
 
@@ -66,7 +67,8 @@ For \( A, B \in K^{n \times n} \), it holds that
 \det(AB) = \det(A)\det(B).
 \]
 
-\textbf{Proof:} \\
+\textbf{Proof:}
+
 If \( \det(A) = 0 \) or \( \det(B) = 0 \), 
 then \( \text{rank}(L_A) < n \) or \( \text{rank}(L_B) < n \). \\
 Thus, \( \text{rank}(L_{AB}) < n \), 
@@ -95,7 +97,8 @@ Therefore also if \( A \) is invertible, then
 \det(A^{-1}) = {(\det(A))}^{-1}.
 \]
 
-\textbf{Proof:} \\
+\textbf{Proof:} 
+
 It holds that
 \[
 \det(A)\det(A^{-1}) = \det(AA^{-1}) = \det(E) = 1.
@@ -115,10 +118,10 @@ where:
     \item \( \operatorname{sgn}(\sigma) \) is the sign of the permutation \( \sigma \), equal to \( +1 \) for even permutations and \( -1 \) for odd ones.
 \end{itemize}
 
-\subsubsection*{Derivation}
+\subsubsection{Derivation}
 
 \textbf{Step 1: Expansion using multilinearity}
-\newline
+
 Each column vector \( a_j \) of the matrix \( A \) can be written as a linear combination of the standard basis vectors \( e_1, \dots, e_n \):
 
 \[
@@ -138,7 +141,7 @@ By multilinearity, this becomes a sum over all \( n \)-tuples \( (i_1, i_2, \dot
 \]
 
 \textbf{Step 2: Eliminate repeated indices}
-\newline
+
 If two indices \( i_j = i_k \) for \( j \neq k \), then the corresponding determinant is zero (because the determinant is alternating and thus zero for repeated columns). Therefore, only terms with pairwise distinct indices remain. These correspond to permutations of \( \{1, 2, \dots, n\} \).
 
 Let \( \sigma \in S_n \) be such a permutation. Then we can write:
@@ -148,14 +151,14 @@ Let \( \sigma \in S_n \) be such a permutation. Then we can write:
 \]
 
 \textbf{Step 3: Sign of the permutation}
-\newline
+
 Since the determinant of \( (e_{\sigma(1)}, \dots, e_{\sigma(n)}) \) is \( \operatorname{sgn}(\sigma) \), we obtain:
 
 \[
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot a_{\sigma(1)1} a_{\sigma(2)2} \cdots a_{\sigma(n)n}.
 \]
 
-Equivalently, by reindexing:
+Equivalently, by re-indexing:
 
 \[
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot \prod_{i=1}^n a_{i \sigma(i)}.
@@ -188,7 +191,7 @@ Where:
 \begin{itemize}[label=\(-\)]
     \item \( a_{ij} \) is the element in the \( i \)-th row and \( j \)-th column of matrix \( A \).
     \item \( M_{ij} \) is the \textbf{minor} of \( a_{ij} \), i.e., the determinant of the submatrix formed by removing the \( i \)-th row and \( j \)-th column from \( A \).
-    \item \( (-1)^{i+j} \) is the \textbf{sign factor}, determining the sign of each cofactor term.
+    \item \( {(-1)}^{i+j} \) is the \textbf{sign factor}, determining the sign of each co-factor term.
 \end{itemize}
 
 \textbf{Steps:}
@@ -308,8 +311,10 @@ but with the catch that for the column case we have to take into consideration h
 operating with columns affect the determinant, in contrast to the row operations, except for scaling
 a row by som \(\lambda\) in this case we would need to un-do the change by multiplying the determinant
 by \(\frac{1}{\lambda}\).
-\newline
+\vspace{\baselineskip}
+
 \textbf{Example: }
+\vspace{\baselineskip}
 
 We are given the matrix:
 

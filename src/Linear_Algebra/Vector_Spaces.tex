@@ -16,6 +16,7 @@ A \emph{vector space} is a set \(V\) with two operations, vector addition and sc
 	\item The multiplicative identity acts as a scalar: \(1\vec{v} = \vec{v}\) for all \(\vec{v} \in V\).
 \end{enumerate}
 The set \(F\) is a field, and the elements of \(V\) are called \emph{vectors}.
+\vspace{\baselineskip}
 
 \textbf{Examples:}
 
@@ -36,21 +37,24 @@ A subset \(W\) of a vector space \(V\) is a \emph{subspace} of \(V\) if:
 	\item For all \(a \in F\) and \(\vec{v} \in W\), \(a\vec{v} \in W\).
 \end{enumerate}
 If \(W\) is a subspace of \(V\), we write \(W \subseteq V\).
+\vspace{\baselineskip}
 
-\emph{Note:} The intersection of two subspaces is also a subspace.
+The intersection of two subspaces is also a subspace.
 
 \subsection{Linear Combinations}
 
 A \emph{linear combination} of vectors \(\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\) in a vector space \(V\) is an expression of
 the form:
 \[
-	a_1\vec{v}_1 + a_2\vec{v}_2 + \ldots + a_n\vec{v}_n
+	a_1\vec{v}_1 + a_2\vec{v}_2 + \cdots + a_n\vec{v}_n
 \]
 where \(a_1, a_2, \ldots, a_n\) are scalars from the field \(F\).
 The set of all linear combinations of a set of vectors \(\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}\) is called the \textbf{span} of those vectors,
 denoted by \(\text{span}(\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n)\).
 The span of a set of vectors is a subspace of the vector space \(V\).
-\textbf{Note:} The span of a set of vectors is the smallest subspace containing those vectors.
+\vspace{\baselineskip}
+
+The span of a set of vectors is the smallest subspace containing those vectors.
 
 \subsection{Properties of the subspaces}
 
@@ -76,15 +80,15 @@ The span of a set of vectors is a subspace of the vector space \(V\).
 
 \subsection{Linear Independence}
 
-A set of vectors \(\{\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n\}\) in a vector space \(V\) is said to be \textbf{linearly independent} if the only solution to the equation:
+A set of vectors \(\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}\) in a vector space \(V\) is said to be \textbf{linearly independent} if the only solution to the equation:
 \[
-	\lambda_1\vec{v}_1 + \lambda_2\vec{v}_2 + \ldots + \lambda_n\vec{v}_n = 0
+	\lambda_1\vec{v}_1 + \lambda_2\vec{v}_2 + \cdots + \lambda_n\vec{v}_n = 0
 \]
 or
 \[
 	\sum_{i=1}^n \lambda_i \vec{v}_i = 0
 \]
-is \(a_1 = a_2 = \ldots = a_n = 0\).
+is \(a_1 = a_2 = \cdots = a_n = 0\).
 If there exists a non-trivial solution to this equation, then the set of vectors is said to be \textbf{linearly dependent}.
 A set of vectors is linearly independent if and only if the only linear combination of those vectors that equals the zero vector is the trivial combination where all coefficients are zero.
 
@@ -124,8 +128,9 @@ To find the base of a set of vectors, we can use the following steps:
 	\item The non-zero rows of the echelon form matrix correspond to the base of the vector space spanned by the original set of vectors.
 \end{enumerate}
 The number of non-zero rows in the echelon form matrix is equal to the dimension of the vector space spanned by the original set of vectors.
+\vspace{\baselineskip}
 
-\textbf{Note:} The base of a vector space is not unique. Different bases can span the same vector space.
+The base of a vector space is not unique. Different bases can span the same vector space.
 
 \subsection{Basis Extension Theorem}
 
@@ -138,8 +143,9 @@ Suppose that \((v_1, \ldots, v_r)\) is a linearly independent tuple and that
 \text{span}(v_1, \ldots, v_r, w_1, \ldots, w_s) = V.
 \]
 Then it is possible to extend \((v_1, \ldots, v_r)\) to a basis of \(V\) by possibly adding suitable vectors from the set \(\{w_1, \ldots, w_s\}\).
+\vspace{\baselineskip}
 
-\subsubsection*{Proof}
+\textbf{Proof:}
 
 If \(\text{span}(v_1, \ldots, v_r) = V\), the statement is obvious. So assume
 \[
@@ -163,13 +169,15 @@ Possibly, \((w_i, v_1, \ldots, v_r)\) is still not a basis of \(V\). Then we rep
 \text{span}(v_1, \ldots, v_r, w_1, \ldots, w_s) = V.
 \]
 \QED
+\vspace{\baselineskip}
 
-\textbf{Note:} Every finitely generated vector space \(V\) has a basis.
+Every finitely generated vector space \(V\) has a basis.
 
 \subsection{Exchange Lemma}
 
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be bases of a vector space \(V\). Then, for every \(v_i\), there exists a \(w_j\) such that if we replace \(v_i\) by \(w_j\) in the tuple \((v_1, \ldots, v_n)\), it still forms a basis of \(V\).
-\newline
+\vspace{\baselineskip}
+
 \textbf{Proof:}
 
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be two bases of \(V\). Suppose we remove \(v_i\) from the first basis. The truncated tuple \((v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n)\) satisfies
@@ -211,7 +219,8 @@ To prove that the set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly 
     \]
     where \(a_0, a_1, \ldots, a_n\) are scalars.
     \item Since the left-hand side is a polynomial of degree at most \(n\), it can only be equal to zero if all coefficients are zero.
-    \item Therefore, we have \(a_0 = a_1 = \ldots = a_n = 0\), which proves that the set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly independent.
+    \item Therefore, we have \(a_0 = a_1 = \cdots = a_n = 0\), which 
+	proves that the set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly independent.
 \end{enumerate}
 
 So you only have to prove that the set of coefficients vector is linearly independent.
@@ -219,12 +228,16 @@ So you only have to prove that the set of coefficients vector is linearly indepe
 \subsection{Interpolation Polynomial}
 
 Given the \(n+1\) points \((x_k, y_k)\), with \(0 \leq k \leq n\) and all \(x_k\) distinct, there exists exactly one polynomial \(p_n \in P_n\) such that \(y_k = p_n(x_k)\) for all \(0 \leq k \leq n\). This polynomial is called the interpolation polynomial.
-\newline
+\vspace{\baselineskip}
+
 \textbf{Proof}
 
-The uniqueness follows immediately from Remark 3.100. We prove the existence by induction on \(n\). For \(n = 0\), choose \(p_0(x) = y_0\). 
-\newline
-Now assume the statement is true for \(n-1\). Let the polynomial \(p_{n-1}\) interpolate the points \((x_0, y_0), \ldots, (x_{n-1}, y_{n-1})\). Define
+The uniqueness follows immediately from Remark 3.100. We prove the existence by induction on 
+\(n\). For \(n = 0\), choose \(p_0(x) = y_0\). 
+\vspace{\baselineskip}
+
+Now assume the statement is true for \(n-1\). Let the polynomial \(p_{n-1}\) 
+interpolate the points \((x_0, y_0), \ldots, (x_{n-1}, y_{n-1})\). Define
 \[
 p_n(x) = p_{n-1}(x) + q(x),
 \]
@@ -239,9 +252,10 @@ q(x_n) = y_n - p_{n-1}(x_n),
 so that \(p_n(x_n) = y_n\). 
 
 \QED
+\vspace{\baselineskip}
 
-\subsubsection*{Example of the interpolation polynomial}
-
+\textbf{Example of the interpolation polynomial}
+\vspace{\baselineskip}
 Consider the three points \((-2, 1)\), \((-1, -1)\), and \((1, 1)\). By Theorem 3.101, these points uniquely define an interpolating parabola \(p_2\). This parabola can be determined using the definition of \(p_n\) from the proof of Theorem 3.101. For hand calculations and a small number of points to interpolate, the following approach is also useful. The general form of the polynomial is 
 \[
 p_2(x) = ax^2 + bx + c.

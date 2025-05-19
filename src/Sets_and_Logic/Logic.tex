@@ -201,7 +201,7 @@ logic, and we can use any symbol for a representing a proposition, such
 	p \lor \neg p \Leftrightarrow \text{T} \qquad p \land \neg p \Leftrightarrow \text{F}
 \]
 
-\textbf{Biconditional}
+\textbf{Bi-conditional}
 \[
 	p \Leftrightarrow q \Leftrightarrow (p \Rightarrow q) \land (q \Rightarrow p)
 \]
@@ -229,12 +229,16 @@ logic, and we can use any symbol for a representing a proposition, such
 Truth tables are a fundamental tool in logic that systematically show the truth value
 (true or false) of a compound statement for every possible combination of the truth values of 
 its individual component statements.
-\newline
+\vspace{\baselineskip}
+
 Essentially, they lay out all the scenarios and the resulting truth of the overall logical expression.
 This helps determine if an argument is valid, if statements are logically equivalent, or the circumstances
 under which a complex statement is true or false.
-\newline
+\vspace{\baselineskip}
+
 \textbf{Example:}
+\vspace{\baselineskip}
+
 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -294,7 +298,7 @@ The pattern for filling the input truth values
 
 This ensures that all combinations of \(A\), \(B\), and \(C\) are covered, and you can then evaluate the logical expression for each combination.
 
-\subsubsection*{Truth Table for the Expression \( (A \land B) \lor C \)}
+\subsubsection{Truth Table for the Expression \( (A \land B) \lor C \)}
 
 \[
 	\begin{array}{|c|c|c|c|}
@@ -318,12 +322,15 @@ This ensures that all combinations of \(A\), \(B\), and \(C\) are covered, and y
 Disjunctive Normal Form (DNF) is a standard way of writing a logical expression as a disjunction
 (OR) of conjunctions (ANDs). A DNF expression consists of a series of
 conjunctions of literals, where each conjunction is connected by disjunctions.
-\newline
+\vspace{\baselineskip}
+
 To find the DNF in a truth table take the rows of the final result where there are
 true statements and bind the propositions that generated it with an AND inside parenthesis.
 Repeat it with each of true rows and connect all parenthesis with OR's
-\newline
+\vspace{\baselineskip}
+
 \textbf{Example of DNF:}
+\vspace{\baselineskip}
 
 Consider the logical expression:
 \[
@@ -336,11 +343,15 @@ This is in DNF because it is a disjunction (OR) of conjunctions (ANDs) of litera
 Conjunctive Normal Form (CNF) is a standard way of writing a logical expression as a conjunction (AND)
 of disjunctions (ORs). A CNF expression consists of a series of disjunctions of
 literals, where each disjunction is connected by conjunctions.
-\newline
-To find the CNF proceed just as the DNF but with the "false rows and instead
-of ANDs inside the parenthesis use OR and connect the terms with OR. Also add a negation before each parenthesis.
-\newline
+\vspace{\baselineskip}
+
+To find the CNF proceed just as the DNF but with the false rows and instead
+of ANDs inside the parenthesis use OR and connect the terms with OR\@. 
+Also add a negation before each parenthesis.
+\vspace{\baselineskip}
+
 \textbf{Example of CNF:}
+\vspace{\baselineskip}
 
 Consider the logical expression:
 \[
@@ -352,10 +363,11 @@ This is in CNF because it is a conjunction (AND) of disjunctions (ORs) of litera
 
 Karnaugh Maps (K-Maps) are a graphical method used to simplify Boolean expressions. The main goal of a K-map is to group adjacent cells that contain 1's in order to simplify the expression. A K-map helps identify common terms, allowing the Boolean expression to be reduced to its simplest form.
 
-\subsubsection*{Karnaugh Map for Two Variables}
+\subsubsection{Karnaugh Map for Two Variables}
 
 Consider the Boolean expression \( (A \lor (B \land \neg A \land \neg B)) \).
-\newline
+\vspace{\baselineskip}
+
 We first construct a K-map for two variables, \( A \) and \( B \). The truth table for this expression gives the following values:
 
 \[
@@ -388,10 +400,13 @@ Here, we group the ones together to simplify the Boolean expression. The simplif
 	A \lor B
 \]
 
-\subsubsection*{Karnaugh Map for Three Variables}
+\subsubsection{Karnaugh Map for Three Variables}
 
-Now, let's consider the expression \( \neg C \). This expression only depends on one variable, but for illustration, we will use a 3-variable K-map with variables \( A \), \( B \), and \( C \).
-\newline
+Now, let's consider the expression \( \neg C \). This expression only 
+depends on one variable, but for illustration, we will use a 
+3-variable K-map with variables \( A \), \( B \), and \( C \).
+\vspace{\baselineskip}
+
 The truth table for \( \neg C \) is as follows:
 
 \[
@@ -446,7 +461,7 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 	      \end{itemize}
 
 	\item \textbf{Fill in the K-Map:} \\
-	      Place 1's in the cells that correspond to the minterms (where the function outputs 1). You may also include don't-care conditions (usually denoted as \(\)X\(\)).
+	      Place 1's in the cells that correspond to the min-terms (where the function outputs 1). You may also include don't-care conditions (usually denoted as \(\)X\(\)).
 
 	\item \textbf{Group the 1's:} \\
 	      Form groups (called \emph{implicants}) of 1's. The groups must follow these rules:
@@ -475,7 +490,9 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 		Means \textbf{``for all''} or \textbf{``for every''}.
 
 		\begin{itemize}
-			\item \textbf{Example:}  \(\forall x \in \mathbb{R},\ x^2 \geq 0\) \\
+			\item \textbf{Example:}
+\vspace{\baselineskip}
+  \(\forall x \in \mathbb{R},\ x^2 \geq 0\) \\
 			      (For all real numbers, the square is greater than or equal to zero.)
 
 			\item \textbf{Negation:}  \(\neg (\forall x)\,P(x) \equiv (\exists x)\, \neg P(x)\) \\
@@ -489,7 +506,9 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 		Means \textbf{``there exists at least one''}.
 
 		\begin{itemize}
-			\item \textbf{Example:}  \(\exists x \in \mathbb{N},\ x > 10\) \\
+			\item \textbf{Example:}
+\vspace{\baselineskip}
+  \(\exists x \in \mathbb{N},\ x > 10\) \\
 			      (There exists a natural number greater than 10.)
 
 			\item \textbf{Negation:}  \(\neg (\exists x)\,P(x) \equiv (\forall x)\, \neg P(x)\) \\
@@ -503,7 +522,9 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 		Means \textbf{``there exists exactly one''}.
 
 		\begin{itemize}
-			\item \textbf{Example:}  \(\exists! x \in \mathbb{R},\ x + 5 = 0\) \\
+			\item \textbf{Example:}
+\vspace{\baselineskip}
+  \(\exists! x \in \mathbb{R},\ x + 5 = 0\) \\
 			      (There exists exactly one real number such that \( x + 5 = 0 \).)
 
 			\item \textbf{Negation:}  ``Not exactly one'' means:

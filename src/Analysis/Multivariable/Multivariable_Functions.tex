@@ -10,8 +10,9 @@ U_\varepsilon(\vec{x}_0) := \left\{ \vec{x} \in \mathbb{R}^n \mid \| \vec{x} - \
 
 A point \( \vec{x}_0 \in D \subseteq \mathbb{R}^n \) is called an \emph{interior point} of \( D \) if there exists \( \varepsilon > 0 \) such that \( U_\varepsilon(\vec{x}_0) \subseteq D \).  
 A set \( D \) is called \emph{open} if all its points are interior points.
+\vspace{\baselineskip}
 
-\textbf{Note:} Although \( \varepsilon \)-neighborhoods depend on the chosen norm, due to the equivalence of norms in \( \mathbb{R}^n \), openness is norm-independent.
+Although \( \varepsilon \)-neighborhoods depend on the chosen norm, due to the equivalence of norms in \( \mathbb{R}^n \), openness is norm-independent.
 
 
 \subsection{Closed Sets}
@@ -88,6 +89,7 @@ The convergence must hold along all possible paths to the point \( \vec{X}_0 \),
 \subsection{Partial Functions}
 
 For a function \( f: U \subseteq \mathbb{R}^n \to \mathbb{R} \), a \emph{partial function} is a restriction of \( f \) to a variable by fixing all others.
+\vspace{\baselineskip}
 
 \textbf{Examples in \( \mathbb{R}^3 \):}
 \[
@@ -151,7 +153,7 @@ A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is called \emph{uni
 \forall \varepsilon > 0 \ \exists \delta > 0 \text{ such that } \|\vec{X} - \vec{X}_0\| < \delta \Rightarrow |f(\vec{X}) - f(\vec{X}_0)| < \varepsilon
 \]
 
-\textit{Note:} The key feature is that \( \delta \) depends only on \( \varepsilon \), not on the points \( \vec{X}, \vec{X}_0 \) themselves.  
+The key feature is that \( \delta \) depends only on \( \varepsilon \), not on the points \( \vec{X}, \vec{X}_0 \) themselves.  
 If \( f \) is continuous on a compact set (closed and bounded), then \( f \) is uniformly continuous.
 
 \subsubsection{Lipschitz Continuity:}  

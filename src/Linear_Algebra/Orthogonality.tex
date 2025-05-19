@@ -10,7 +10,8 @@ Let \( a, b \in V \). The vectors \( a \) and \( b \) are orthogonal to each oth
 \]
 
 This is written as \( a \perp b \).
-\newline
+\vspace{\baselineskip}
+
 With the same proof as in Theorem 2.25, the Pythagorean Theorem holds
 
 \[
@@ -18,7 +19,8 @@ With the same proof as in Theorem 2.25, the Pythagorean Theorem holds
 \]
 
 for \( a \perp b \) in all unitary vector spaces.
-\newline
+\vspace{\baselineskip}
+
 For the orthogonal projection \( p_b(a) \) of a vector \( a \) onto \( b \), with \( b \neq 0 \), the formula in every unitary vector space is:
 
 \[
@@ -34,7 +36,8 @@ a - p_U(a) \perp u \quad \forall u \in U \quad \text{(3.9)}.
 \]
 
 The question arises about well-definedness, i.e., whether such a vector \( p_U(a) \) always exists and if it is unique. The following concept helps in the discussion of uniqueness.
-\newline
+\vspace{\baselineskip}
+
 For \( M \subseteq V \), the \emph{orthogonal complement} of \( M \) is defined as
 
 \[
@@ -47,8 +50,9 @@ M^\perp = \{ v \in V \mid v \perp u \, \forall u \in M \}.
 \end{itemize}
 
 \textbf{Proof:}
-\newline
-1.) We need to check the closure property. For \( u \in M \), \( x, y \in M^\perp \), and \( \lambda \in \mathbb{R} \), we have:
+\vspace{\baselineskip}
+
+We need to check the closure property. For \( u \in M \), \( x, y \in M^\perp \), and \( \lambda \in \mathbb{R} \), we have:
 
 \[
 \langle x + y, u \rangle = \langle x, u \rangle + \langle y, u \rangle = 0
@@ -57,7 +61,7 @@ M^\perp = \{ v \in V \mid v \perp u \, \forall u \in M \}.
 \langle \lambda x, u \rangle = \lambda \langle x, u \rangle = 0.
 \]
 
-2.) Let \( a \in U \cap U^\perp \). Then, we have \( \langle a, u \rangle = 0 \) for all \( u \in U \), because \( a \in U^\perp \), and in particular, \( \langle a, a \rangle = 0 \) since \( a \in U \), which implies \( a = 0 \).
+Let \( a \in U \cap U^\perp \). Then, we have \( \langle a, u \rangle = 0 \) for all \( u \in U \), because \( a \in U^\perp \), and in particular, \( \langle a, a \rangle = 0 \) since \( a \in U \), which implies \( a = 0 \).
 
 \subsection{Orthogonality of the basis to the Complement}
 
@@ -101,7 +105,9 @@ Using the Kronecker delta symbol \( \delta_{i,j} \):
 we have \( \langle v_i, v_j \rangle = \delta_{i,j} \) for any orthonormal system.
 
 \subsection{Writing a vector in terms of the Orthogonal Basis}
-\textbf{Example:} 
+
+\textbf{Example:}
+\vspace{\baselineskip} 
 
 The vectors
 \[
@@ -119,8 +125,11 @@ a_2 =
 \end{pmatrix}
 \]
 are orthogonal and normalized, but do not form a basis. Thus, they constitute an \textbf{orthonormal system}.
-\newline
-\textbf{Example:} 
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+ 
 
 The vectors
 \[
@@ -147,7 +156,8 @@ form a basis, are orthogonal and normalized. Therefore, they form an \emph{ortho
 
 \subsection{Linear Independence of Orthogonal Systems}
 An orthogonal system \( (v_1, \ldots, v_n) \) is linearly independent.
-\newline
+\vspace{\baselineskip}
+
 \textbf{Proof:} 
 
 Let \( \sum_{i=1}^n \lambda_i v_i = 0 \). Then, for any \( v_j \), it follows that
@@ -207,9 +217,13 @@ The Gram-Schmidt process is a method for orthonormalizing a set of vectors in an
     \end{enumerate}
     \item The resulting set \( (u_1, \ldots, u_n) \) is an orthonormal basis of the subspace spanned by \( (v_1, \ldots, v_n) \).
 \end{enumerate}
-\textbf{Note:} The Gram-Schmidt process can be applied to any finite set of linearly independent vectors in an inner product space, and it is particularly useful for constructing orthonormal bases in Euclidean spaces.
 
-\textbf{Example:} 
+The Gram-Schmidt process can be applied to any finite set of linearly independent vectors in an inner product space, and it is particularly useful for constructing orthonormal bases in Euclidean spaces.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+ 
 
 Let \( v_1 = (1, 0, 0) \), \( v_2 = (1, 1, 0) \), and \( v_3 = (1, 1, 1) \). The Gram-Schmidt process yields:
 \[
