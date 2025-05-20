@@ -26,7 +26,7 @@ To parameterize a curve or a function:
 Sometimes, parameterizations are natural (e.g., circles using trigonometric functions), while in other cases, one must carefully design a suitable parameterization based on the curve's properties.
 \vspace{\baselineskip}
 
-\textbf{Example}
+\textbf{Example:}
 \vspace{\baselineskip}
 
 \textbf{Parameterizing a Circle:}  
@@ -40,3 +40,28 @@ x(t) = \cos(t), \quad y(t) = \sin(t)
 \]
 for \( t \in [0, 2\pi] \).  
 As \( t \) varies from \( 0 \) to \( 2\pi \), the point \( (x(t), y(t)) \) traces out the entire circle exactly once.
+
+\subsection{Arclength and t Parameter}
+
+Recall that the arclength of a curve in 3 dimensions is
+
+\[
+\int_{a}^{b} \sqrt{{f'(t9)}^2 + {g'(t)}^2 + {h'(t)}^2} dt
+\]
+
+which is norm of our tangent vector.
+
+\[
+\int_{a}^{b} \sqrt{|\vec{v}(t)|} dt
+\]
+
+\subsubsection{Arclength Parameter}
+
+This is given by
+
+\[
+s(t) = \int_{a}^{t} \sqrt{|\vec{\tau}(t)|} dt
+\]
+
+where \(\tau\) is the length parameter.
+

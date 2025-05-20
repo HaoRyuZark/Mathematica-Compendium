@@ -640,17 +640,26 @@ We will use the method called based on guessing the type of the function on the 
 \vspace{\baselineskip}
 
 \textbf{Example: }
+\vspace{\baselineskip}
+
 Given is the following IVP: \(y' + 2y = 2x + 13\) with \(y(0) = 8\)
 \vspace{\baselineskip}
 
 By looking carefully we see that on the right hand side we just have a normal polynomial,
-thus we can substitute \(y = bx + c\) and therefore \(y' = b\). Now substitute
+thus we can substitute \(y = bx + c\) and derivate \(y' = b\). In the case for when we have higher
+order derivative we would derivate for each of them. 
+\vspace{\baselineskip}
+
+Now substitute
+
 \[
 b + 2(bx + c) = 2x + 13
 \]
+
 \[
 2bx + b + 2c = 2x + 13
 \]
+
 Now by comparing the Coefficients with the other side 
 \[2b = 2\]
 \[b + 2c = 13\]
@@ -697,6 +706,25 @@ y = 2 e^{-2x} + x + 6
 \end{tabular}
 \vspace{\baselineskip}
 
+It is important to point out that sometimes it is necessary to combine different types
+of functions to get the solution.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+
+\[
+y'' -2x' 3y = t^2  + 3e^{-t} \cos (4t)
+\]
+
+Here the approach would be
+
+\[
+y_p = (A + Bt + Ct^2) + D(e^{-t}\cos(4t)) + E(e^{-t}\sin(4t))
+\]
+
+The best way is to tackle down each of the types og functions separately.
+\vspace{\baselineskip}
+
 An alternative to way of using this method is to
 \begin{enumerate}
     \item Find the homogeneous solution.
@@ -708,26 +736,43 @@ This will give you the exact same result and is faster.
 
 \subsection{Bernoulli Equation}
 
-This is an equation of the form 
+This is used for equations of the form 
 
 \[
 y' + P(x)y = Q(x)y^n
 \]
 
-Lets use a substitution \(u = y^{1 - n}\) then \(u' = (1 - n)y^{-n} y'\). Now this kinda similar to the original equation
-divided by \(y^n\) that looks like
+We can not use the methods we already know for this equation because it is linear but with a
+clever substitution we can turn it into a linear differential equation.
+\vspace{\baselineskip}
+
+Lets use a substitution 
+
+\[u = y^{1 - n}\] 
+
+then 
+
+\[u' = (1 - n)y^{-n} y'\]. 
+
+Now this 
+looks kinda similar to the original equation multiply by \(y^{-n}\) that looks like
 
 \[
-y^{-n}y' + P(x)y^{1 -n} = Q(x)
+y^{-n}y' + P(x)y^{-n}y = Q(x)y^{-n}y{n}
 \]
 
-Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\) thus after substitution
+\[
+y^{-n}y' + P(x)y^{1 - n} = Q(x)
+\]
+
+
+Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\), thus after substitution
 
 \[
 \frac{1}{1 - n}u' + P(x)u = Q(x)
 \]
 
-Now our equation is \emph{linear}.
+Now our equation is \emph{linear} and we can use the \emph{integrating factor} method.
 \vspace{\baselineskip}
 
 \textbf{Example: }
@@ -736,23 +781,25 @@ Now our equation is \emph{linear}.
 Given is \(y' -5y = \frac{-5}{2}xy^3\).
 
 \[
-u = y^{-3}  \text{ and } u' = -2y^{-3}y'
+u = y^{-2}  \text{ and } u' = -2y^{-3}y'
 \]
 
 \[
 y^{-3} = \frac{u'}{-2y'}
 \]
 
-And our equation after dividing by \(y^{3}\)
+And our equation after multiplying by \(y^{-3}\)
 
 \[
-\frac{1}{y^3}y' - \frac{5}{y^3}y = -\frac{5}{2}x 
+ y^{-3}y' - 5yy^{-3} = -\frac{5}{2}x 
 \]
 
-Now substitute in the original equation
+\[
+y^{-3}y' - 5y^{-2} = -\frac{5}{2}x 
+\]
 
 \[
-- \frac{1}{2} u' - 5u = \frac{-5}{2}x
+\frac{u'}{-2y'}y' - 5u = -\frac{5}{2}x 
 \]
 
 Now we can use the \emph{Integrating Factor Method}. First bring to the standard form.
@@ -771,7 +818,7 @@ e^{10x}u' + 10ue^{10x} = e^{10x}5x
 Now lets integrate
 
 \[
-\frac{d}{dx} \left[e^{10x}u\right] = e^{10x}5x
+\frac{d}{dx} \left(e^{10x}u\right) = e^{10x}5x
 \]
 
 \[
@@ -1131,6 +1178,22 @@ y_1^{(n-1)}(x) & y_2^{(n-1)}(x) & \cdots & y_n^{(n-1)}(x)
 If \(W(A) \ne 0\) then they are linearly independent.
 
 
+\subsection{Linearity Property}
 
-
+Let \( y_p^{(1)} \) be a particular solution of  
+\[
+y'' + ay' + by = g_1(x)
+\]  
+and \( y_p^{(2)} \) a particular solution of  
+\[
+y'' + ay' + by = g_2(x),
+\]  
+then  
+\[
+y_p = y_p^{(1)} + y_p^{(2)}
+\]  
+is a particular solution of  
+\[
+y'' + ay' + by = g_1(x) + g_2(x).
+\]  
 
