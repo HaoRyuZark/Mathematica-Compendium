@@ -89,7 +89,8 @@ Then the series converges.
 
 \subsection{Compactness Criterion}
 
-A sequence \((x_n)\) in \(\mathbb{R}^n\) has a convergent subsequence if and only if it is bounded. This is a consequence of the \textbf{Bolzano-Weierstraß theorem}, which is a form of sequential compactness in \(\mathbb{R}^n\).
+A sequence \((x_n)\) in \(\mathbb{R}^n\) has a convergent subsequence if and only if it is bounded. 
+This is a consequence of the \textbf{Bolzano-Weierstraß theorem}, which is a form of sequential compactness in \(\mathbb{R}^n\).
 
 \subsection{Cauchy Criterion I}
 
@@ -123,7 +124,7 @@ If \(\sum a_n\) and \(\sum b_n\) converge absolutely, then their Cauchy product 
 Prove that \(e^x  e^y = e^{x + y}\)\\
 Note that \(e^x = \sum_{n = 0}^{\infty} \frac{x^n}{n!}\) and \(e^y = \sum_{n = 0}^{\infty} \frac{y^n}{n!}\)
 
-Therefore
+Therefore,
 
 \[
   e^x e^y = \sum_{n = 0}^{\infty} \frac{x^n}{n!} \sum_{n = 0}^{\infty} \frac{y^n}{n!}
@@ -134,7 +135,8 @@ And because of the absolute convergence
   e^x e^y = \sum_{n = 0}^{\infty}\sum_{k = 0}^{n} \frac{x^k}{n!} \frac{y^{n - k}}{(n-k)!}
 \]
 
-Finally
+Finally,
+
 \[
   e^x e^y = \sum_{n = 0}^{\infty}\sum_{k = 0}^{n}x^k y^{n - k} \binom{n}{k} \frac{1}{n!} = \sum_{n = 0}^{\infty} \frac{{(x + y)}^n}{n!}
 \]

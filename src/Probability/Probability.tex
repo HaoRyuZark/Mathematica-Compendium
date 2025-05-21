@@ -100,3 +100,14 @@ Probability of \(a\) under the condition \(b\).
     \item \emph{Variance: } \(Var(X) = E(x)\left(1 - \frac{M}{N}\right) \left(\frac{N - n}{N - 1}\right)\)
 \end{itemize}
 
+\subsection{The Birthday Paradox}
+
+This is a small question that says: What is the probability of at least two people having 
+their birthday on the same day in a group of \(x\) persons.
+
+\[
+P(x) = 1 - \prod_{n = 0}^{x} \frac{365 - n}{365}
+\]
+
+This formula gives us the probability of total minus all persons having it on different days. Which
+what we are looking for.

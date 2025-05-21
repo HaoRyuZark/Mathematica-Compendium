@@ -3,22 +3,22 @@
 
 Given a vector \(\vec{x} = \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n\) 
 with \(\vec{v}_1, \dots, \vec{v}_n\)
-being a the basis vector, we can write \(\vec{x}\) in term of its components \({(a, b, c, \dots)}^T\).
+being the basis vectors, we can write \(\vec{x}\) in terms of its components \({(a, b, c, \dots)}^T\).
 \vspace{\baselineskip}
 
-Now imagine having another basis \(\vec{b}_1, \dots, \vec{b}_n\) and a the same vector \(\vec{x}\)
+Now imagine having another basis \(\vec{b}_1, \dots, \vec{b}_n\) and the same vector \(\vec{x}\)
 with all of its components. The key here is that we want to know how our original
 vector is described in terms of other basis. More precisely what are its coordinates
 \vspace{\baselineskip}
 
 So our vector \(\vec{x}\) is described:
 
-\[\lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n\]
+\[\lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n,\]
 
 in the corresponding bases.
 \vspace{\baselineskip}
 
-Now lets write then a matrix vector multiplication
+Now let us write then a matrix vector multiplication
 \[
 (\vec{v}_1, \dots, \vec{v}_ n) 
 \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix}
@@ -27,7 +27,7 @@ Now lets write then a matrix vector multiplication
 \begin{pmatrix} \mu_1 \\ \vdots \\ \mu_n \end{pmatrix}
 \]
 
-Now lets use the following notation for the Basis and the coefficient vectors.
+Now let us use the following notation for the Basis and the coefficient vectors.
 
 \[P_B {(\vec{x})}_B = P_C {(\vec{x})}_C\]
 
@@ -36,14 +36,14 @@ vector \(\vec{x}\) described by that basis.
 \vspace{\baselineskip}
 
 Now that conversion of basis is just a matter of solving for 
-our desired vector by multipliying
+our desired vector by multiplying
 by the inverse of the corresponding basis matrix.
 \vspace{\baselineskip}
 
 \textbf{Example I:}
 \vspace{\baselineskip}
 
-Lets find \(\vec{x}\) in terms of tha basis \(C\)
+Let us find \(\vec{x}\) in terms of that basis \(C\)
 
 \[P_{C}^{-1} P_B {(\vec{x})}_B = {(\vec{x})}_C\]
 
@@ -59,7 +59,7 @@ We set them equal
 
 \[\lambda_1 \vec{u}_1 + \lambda_2 \vec{u}_2 = \mu_1 \imath + \mu_2 \jmath \]
 
-Lets write \(\vec{u}_1\) and \(\vec{u}_2\) in terms of the canonical basis.
+Let us write \(\vec{u}_1\) and \(\vec{u}_2\) in terms of the canonical basis.
 \[\vec{u}_1 = \imath + 2 \jmath\]
 \[\vec{u}_2 = 3 \imath + 3 \jmath\]
 
@@ -92,7 +92,7 @@ What we are really doing here is taking the basis vectors of \(B\) and writing t
 of the basis vectors of \(C\). This will give us \(n\) matrices that we can solve.
 \vspace{\baselineskip}
 
-To go the other way around we take the inverse of the matrix whose column are the basis vectors of \(B\)
+To go the other way around we take the inverse of the matrix whose columns are the basis vectors of \(B\)
 relative to the new basis \(C\)
 \vspace{\baselineskip}
 
@@ -111,7 +111,7 @@ them in to basis vector with respect to \(C\).
 \textbf{Summary}
 \vspace{\baselineskip}
 
-To summarize, take the the coefficients of the vector in the new basis,
+To summarize, take the coefficients of the vector in the new basis,
 take the basis vector of the new basis and write then in terms of our coordinates
 and Finally multiply that matrix by the coefficients. The other way works 
 just the same but this time you take the inverse take the inverse and multiply
@@ -121,7 +121,7 @@ by the coefficients of vector in our basis.
 
 For linear transformation we use the formula.
 
-\[A^{-1} M A \vec{v}\]
+\[A^{-1} M A \vec{v},\]
 
 where \(\vec{v}\) is a vector in the other basis, \(A\) the
 other basis,\(M\) the linear transformation and \(A^{-1}\) the inverse of
@@ -201,7 +201,7 @@ x_n
 \end{pmatrix}
 \]
 If the coordinates of \( v \) with respect to \( A \) are known, then the matrix \( T_B^A \) can be used to compute the coordinates of \( v \) with respect to \( B \).
-\[ T_B^A = B^{-1}A \].
+\[ T_B^A = B^{-1}A. \]
 \[
     \begin{tikzcd}
         K^n \arrow[rrrr, "M_{B}^{A}"] \arrow[rd, "\varphi_A"] &                   &  &   & K^m \arrow[ld, "\varphi_B"'] \\

@@ -53,7 +53,8 @@ A \emph{semigroup} is a set \(S\) equipped with a binary operation \(\oplus\) th
 (a \oplus b) \oplus c = a \oplus (b \oplus c) \quad \text{for all } a, b, c \in S.
 \]
 
-There is no requirement for an identity element or inverses. Semigroups capture the essence of combining elements in a consistent way (e.g., string concatenation).
+There is no requirement for an identity element or inverses. Semigroups 
+capture the essence of combining elements consistently (e.g., string concatenation).
 
 \subsection{Monoid \texorpdfstring{\((M, \oplus)\)}{}}
 
@@ -77,20 +78,20 @@ Groups model reversible processes and are foundational in symmetry and abstract 
 
 \subsection{Abelian Group \texorpdfstring{\((A, \oplus)\)}{}}
 
-An \emph{abelian group} (or commutative group) is a group where the operation is \emph{commutative}:
+An \emph{Abelian group} (or commutative group) is a group where the operation is \emph{commutative}:
 
 \[
 a \oplus b = b \oplus a \quad \text{for all } a, b \in A.
 \]
 
-This property makes abelian groups especially important in number theory and linear algebra.
+This property makes Abelian groups especially important theory and linear algebra.
 
 \subsection{Ring \texorpdfstring{\((R, \oplus, \odot)\)}{}}
 
 A \emph{ring} is a set with two operations:
 
 \begin{itemize}[label=\(-\)]
-  \item \((R, \oplus)\) is an abelian group.
+  \item \((R, \oplus)\) is an Abelian group.
   \item \((R, \odot)\) is a semigroup (associative multiplication).
   \item Multiplication distributes over addition:
   \[
@@ -114,7 +115,7 @@ This is the kind of ring most often encountered in basic algebra, such as the in
 A \emph{field} is a commutative ring where every nonzero element has a \emph{multiplicative inverse}:
 
 \[
-(K \setminus \{0\}, \odot) \text{ is an abelian group}.
+(K \setminus \{0\}, \odot) \text{ is an Abelian group}.
 \]
 
 Fields like \(\mathbb{Q}\), \(\mathbb{R}\), and \(\mathbb{C}\) allow division (except by zero), enabling the full range of arithmetic operations.
@@ -123,7 +124,7 @@ Fields like \(\mathbb{Q}\), \(\mathbb{R}\), and \(\mathbb{C}\) allow division (e
 
 A \emph{vector space} over a field \(K\) consists of:
 \begin{itemize}[label=\(-\)]
-  \item An abelian group \((V, \oplus)\) for vector addition.
+  \item An Abelian group \((V, \oplus)\) for vector addition.
   \item A scalar multiplication \(\cdot: K \times V \to V\) satisfying:
   \begin{itemize}
     \item Distributivity over vector addition: \(a \cdot (v_1 + v_2) = a \cdot v_1 + a \cdot v_2\)

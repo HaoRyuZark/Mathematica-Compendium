@@ -34,7 +34,7 @@ g & h & i
 The determinant of larger matrices can be computed using co-factor expansion along any row or column:
 
 \begin{equation*}
-\det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(A_{ij})
+\det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(A_{ij}),
 \end{equation*}
 
 where \(A_{ij}\) is the \((n-1) \times (n-1)\) sub-matrix obtained by deleting the \(i\)-th row and \(j\)-th column of \(A\).
@@ -92,7 +92,7 @@ Then, \( A = C_k \cdot \cdots \cdot C_1 \) for certain elementary matrices \( C_
 &= \det(A)\det(B).
 \end{align*}
 
-Therefore also if \( A \) is invertible, then
+Therefore, also if \( A \) is invertible, then
 \[
 \det(A^{-1}) = {(\det(A))}^{-1}.
 \]
@@ -142,7 +142,9 @@ By multilinearity, this becomes a sum over all \( n \)-tuples \( (i_1, i_2, \dot
 
 \textbf{Step 2: Eliminate repeated indices}
 
-If two indices \( i_j = i_k \) for \( j \neq k \), then the corresponding determinant is zero (because the determinant is alternating and thus zero for repeated columns). Therefore, only terms with pairwise distinct indices remain. These correspond to permutations of \( \{1, 2, \dots, n\} \).
+If two indices \( i_j = i_k \) for \( j \neq k \), then the corresponding 
+determinant is zero (because the determinant is alternating and thus, zero for repeated columns). 
+Therefore, only terms with pairwise distinct indices remain. These correspond to permutations of \( \{1, 2, \dots, n\} \).
 
 Let \( \sigma \in S_n \) be such a permutation. Then we can write:
 
@@ -196,9 +198,9 @@ Where:
 
 \textbf{Steps:}
 
-1.\textbf{Choose a Row or Column:} Select any row or column of the matrix.  It's often easiest to choose one with many zeros.
+1.\textbf{ Choose a Row or Column:} Select any row or column of the matrix.  It's often easiest to choose one with many zeros.
 
- 2.\textbf{For Each Element:} For each element, \(a_{ij}\), in the chosen row or column:
+ 2.\textbf{ For Each Element:} For each element, \(a_{ij}\), in the chosen row or column:
 
     \textbf{Find the Minor, \(M_{ij}\):} The minor \(M_{ij}\) is the determinant of the sub-matrix formed by deleting the 
     \indent \(i\)-th row and the \(j\)-th column of the original matrix.
@@ -218,7 +220,7 @@ Where:
         \end{pmatrix}
         \]
 
- 3.\textbf{Calculate the Determinant:} The determinant of the matrix, \(A\), is the sum of 
+ 3.\textbf{ Calculate the Determinant:} The determinant of the matrix, \(A\), is the sum of 
  the products of the elements in the chosen row or column and their corresponding co-factors.
 
     \textbf{Expansion along the \(i\)-th row:}
@@ -245,11 +247,11 @@ a_{31} & a_{32} & a_{33}
 
 Expanding along the first row:
 
-1.\(a_{11}\):  \(M_{11} = \det \begin{pmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{pmatrix}\),  \(C_{11} = +M_{11}\)
+1. \(a_{11}\):  \(M_{11} = \det \begin{pmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{pmatrix}\),  \(C_{11} = +M_{11}\)
 
-2.\(a_{12}\):  \(M_{12} = \det \begin{pmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{pmatrix}\),  \(C_{12} = -M_{12}\)
+2. \(a_{12}\):  \(M_{12} = \det \begin{pmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{pmatrix}\),  \(C_{12} = -M_{12}\)
 
-3.\(a_{13}\):  \(M_{13} = \det \begin{pmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{pmatrix}\),  \(C_{13} = +M_{13}\)
+3. \(a_{13}\):  \(M_{13} = \det \begin{pmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{pmatrix}\),  \(C_{13} = +M_{13}\)
 
 Therefore,
 \[
@@ -306,10 +308,10 @@ its determinant is given by the product of the main diagonal.
 
 \subsection{Gaussian Method for finding determinants}
 
-Another method for finding determinants is using the row operations we already known plus also column operations 
+Another method for finding determinants is using the row operations we already knew plus also column operations 
 but with the catch that for the column case we have to take into consideration how
 operating with columns affect the determinant, in contrast to the row operations, except for scaling
-a row by som \(\lambda\) in this case we would need to un-do the change by multiplying the determinant
+a row by some \(\lambda\) in this case we would need to undo the change by multiplying the determinant
 by \(\frac{1}{\lambda}\).
 \vspace{\baselineskip}
 

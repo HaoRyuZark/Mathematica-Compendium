@@ -8,7 +8,7 @@ by dividing it in to equally smaller section that are straight lines in this cas
 be prisms, squares, etc. Now if we look at the difference between two points in our 3D space, 
 for this Example
 we notice that there are three differences \(\Delta i\) \(\Delta j\) \(\Delta k\).j
-Now lets take the length of the vector \(\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}\)
+Now let us take the length of the vector \(\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}\)
 
 The total Arc-length is going to be the sum of all of this sectors
 \[
@@ -54,7 +54,8 @@ In the context of physics this integral measures the work done by the field \( \
 
 \subsection{Over Scalar field}
 
-Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \( C \), which is parameterized by a vector function
+Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \( C \), which 
+is parametrized by a vector function
 
 \[
 \vec{r}(t) = (x_1(t), x_2(t), \ldots, x_n(t)), \quad t \in [a, b]
@@ -94,7 +95,8 @@ Let \( f(x, y) = x^2 + y^2 \), and define a vector field based on its gradient:
 \vec{F}(x, y) = \nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = (2x, 2y)
 \]
 
-Let the curve \( C \) be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), parameterized by:
+Let the curve \( C \) be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), 
+parametrized by:
 
 \[
 \vec{r}(t) = (\cos t, \sin t), \quad t \in \left[0, \frac{\pi}{2}\right]
@@ -291,7 +293,7 @@ If we choose the other way then we have an area with a fix \(y\) in the inside t
 
 \subsection{Changing the order of integration to solve tricky integrals}
 
-Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dy dx\) which is very hard to integrate, lets change the order
+Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dy dx\) which is very hard to integrate, let us change the order
 to make it easier.
 
 \[\int_{0}^{2}\int_{0}^{y^3} \frac{1}{y^4 +1}dx dy\]
@@ -350,14 +352,17 @@ The steps are the same as in the previous Example.
 \end{center}
 
 Here the original bounds are: \(x\) goes from 0 to 8 and \(y\) goes from \(\sqrt[3]{x}\) to 2.
-As you can see in the diagram by slicing vertically the value of \(x\) is fixed and we move towards the upper-bound of \(y\) which is 2.
-Therefore the smallest \(x\) can get is 0 and the biggest is 2. While for \(y\) by slicing vertically we get that \(x\) goes from 0
-to \(\sqrt[3]{x}\) but we do not want to left that y so we solve for y and get \(y^3\). Now we caput all of this together and integrate.
+As you can see in the diagram by slicing vertically the value of \(x\) is fixed, and we move 
+towards the upper-bound of \(y\) which is 2.
+Therefore, the smallest \(x\) can get is 0 and the biggest is 2. While for \(y\) by slicing 
+vertically we get that \(x\) goes from 0 to \(\sqrt[3]{x}\), but 
+we do not want to leave \(x\), so we solve for \(y\) and get \(y^3\). 
+Now we can put all of this together and integrate.
 
 
 \subsection{The Jacobian}
 
-The Jacobian matrix is a fundamental concept in multi-variable calculus. The Jacobian is best
+The Jacobian matrix is a fundamental concept in multi-variable calculus. The Jacobian is the best
 approximation of a linear transformation for a point.
 
 For the intuition of why, we use partial derivatives, just think about
@@ -386,12 +391,13 @@ J_f(x) = \begin{bmatrix}
 \]
 
 \subsubsection{Local linearity}
-While performing non linear transformations on a space. We can see that in a tiny neighborhood
+
+While performing non-linear transformations on a space. We can see that in a tiny neighborhood
 around a point, the transformation appears to be linear. And the matrix that encodes that
 transformation is the \emph{Jacobian}.
 
 For intuition, just imagine that in the tiny neighborhood the transformation is composed
-of a small steps in the \(x_1, \dots, x_n\) directions which give of the partial derivatives that
+of small steps in the \(x_1, \dots, x_n\) directions which give of the partial derivatives that
 represent this small steps. 
 
 \subsubsection{Determinant}
@@ -512,7 +518,7 @@ and the whole circle would be \(2\pi\)
 \[\Delta A = \frac{\Delta \theta}{2 \pi} \left ( {\left[r_k + \frac{\Delta r}{2}\right]}^2 - {\left[r_k - \frac{\Delta r}{2}\right]}^2\right)\] 
 \[ = r_k \Delta r \Delta \theta\]
 
-Which multiplied by the function value and by taking the limit of this sections we get that the volume:
+Which multiplied by the function value and by taking the limit of these sections we get that the volume:
 
 \[
 V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r \Delta r \Delta \theta
@@ -561,7 +567,7 @@ S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\in
 S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-y^2}dy\right)
 \end{align*}
 
-Now lets translate to polar coordinates
+Now let us translate to polar coordinates
 
 \begin{align*}
 S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2} re^{-{(r\sin\theta)}^2}drd\theta\right)\\
@@ -582,14 +588,14 @@ The triple integral allows the computation of volume or mass in three-dimensiona
 Let \( V \subset \mathbb{R}^3 \) be a bounded region, then:
 
 \[
-\iiint_V f(x, y, z)\, dV = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k, z_k) \, \Delta V_k
+\iiint_V f(x, y, z)\, dV = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k, z_k) \, \Delta V_k,
 \]
 
 where \( \Delta V_k \) are small sub-volumes approximating \( V \).
 
 In practice, evaluate:
 \[
-\iiint_V f(x, y, z)\, dz\, dy\, dx
+\iiint_V f(x, y, z)\, dz\, dy\, dx,
 \]
 
 with limits determined by the geometry of the volume. The order of integration may be rearranged to simplify computation.
@@ -643,7 +649,7 @@ Given are the functions \(f_1(x,y) = x^2 + y^2\) and \(f_2(x,y) = 3 - x^2 - y^2\
 \end{tikzpicture}
 \end{center}
 
-Lets find the intersection
+Let us find the intersection
 
 \[
 x^2 + y^2 = 3 -x^2 - y^2 
@@ -654,7 +660,7 @@ x^2 + y^2 = \frac{3}{2}
 
 Now we have to find the limits of integration for 
 \[
-\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx
+\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx,
 \]
 
 using our constraint and our original functions.

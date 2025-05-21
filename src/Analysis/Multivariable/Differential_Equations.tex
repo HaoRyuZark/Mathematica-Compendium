@@ -21,7 +21,7 @@ is called \emph{Ordinary Explicit Differential Equations of order} \(n\)
 If \(y^n = 0\) then it is \emph{implicit}
 \vspace{\baselineskip}
 
-If the exponent of the dependent variable is 1 and it
+If the exponent of the dependent variable is 1, and it
 is build like a linear equation then it is categorized as \emph{Linear}
 
 \subsection{Initial Value Problems and Solutions}
@@ -102,17 +102,17 @@ Now we separate the variables and Integrate
 \[\int (y - 2)y' dx = \int 3x - 5 dx\]
 
 Note that \(y' = \frac{dy}{dx}\) and \( \frac{dy}{dx} dx = dy\) (only as a convenient fiction
-in reality we are changing the variables) thus
+in reality we are changing the variables) thus,
 
 \[\int (y - 2)dy = \int 3x - 5 dx\]
 \[\frac{y^2}{2} - 2y + c = \frac{3x^2}{2} - 5x + c\]
 
-The solution we get is a implicit solution. To make it look nice solve for \(y\)
+The solution we get is an implicit solution. To make it look nice solve for \(y\)
 if you can.
 
 \subsubsection{Understanding the fiction}
 
-The previous fiction we used can explained in the following manner.
+The previous fiction we used can explain in the following manner.
 \vspace{\baselineskip}
 
 Given \(y' = g(y)*f(x)\) separate the variables and let \(h(y) = \frac{1}{g(y)}\).
@@ -120,7 +120,7 @@ Given \(y' = g(y)*f(x)\) separate the variables and let \(h(y) = \frac{1}{g(y)}\
 \[h(y)y' = f(x)\]
 
 This looks kinda like the \emph{chain rule} we already know from \emph{differentiation} and
-also remember that \(y\) a function of the form \(y(x)\) thus
+also remember that \(y\) a function of the form \(y(x)\) thus,
 
 \[\int h(y(x)) y'(x)dx = \int f(x) dx\]
 
@@ -174,7 +174,7 @@ there is a unique solution on an interval \(\alpha < x_0 < \beta\) to the IVP
 \subsection{How to deal with initial conditions}
 
 After solving a differential equation we may have the problem that certain initial
-conditions were set at the start, thus making our general solution not specific.
+conditions were set at the start, thus, making our general solution not specific.
 \vspace{\baselineskip}
 
 Solving this problem is pretty easy, because we just have to solve for the constant terms
@@ -189,11 +189,11 @@ In some cases a complex function can be simplified via a substitution.
 
 \[y' = f(ax + by(x) + c)\]
 
-With a substitution like \(z(x) = ax + by(x) + c\) the right hand side will become \(f(z)\)
-and for the left hand side we get \(y(x) = \frac{z(x) - ax - c}{b}\).
+With a substitution like \(z(x) = ax + by(x) + c\) the right-hand side will become \(f(z)\)
+and for the left-hand side we get \(y(x) = \frac{z(x) - ax - c}{b}\).
 \vspace{\baselineskip}
 
-Now we can substitute in the original equation and we get
+Now we can substitute in the original equation, and we get
 
 \[y'(x) = \frac{1}{b} (z'(x) - a) = f(z)\]
 
@@ -246,7 +246,7 @@ Now we substitute in the differential equation using \(f(z) = z(x) + z'(x)x\)
 z'(x) = \frac{f(z) - z(x)}{x}
 \]
 
-Now we can integrate and then return to our original variables.\(y(x) = z(x)x \) where \(z(x)\) is our
+Now we can integrate and then return to our original variables. \(y(x) = z(x)x \), where \(z(x)\) is our
 result of the integration.
 \vspace{\baselineskip}
 
@@ -277,7 +277,7 @@ This in converted to \(y' = f(z) = z + 1\)
 \subsection{Linear Differential Equations}
 
 An ODE is called linear if all occurrences of the dependent variable and its
-derivatives have a exponent of at most 1.
+derivatives have an exponent of at most 1.
 
 \[a_n(x)y^n + a_{n - 1}y^{n -1} + \cdots + a_1(x)y' + a_0(x)y = b(x)\]
 
@@ -305,13 +305,13 @@ were to integrate it would take us to the expression in the right.
 
 When we evaluate this new expression we get that
 
-\[\frac{d}{dx} y r(x) = y'r(x) + r'(x)y\]
+\[\frac{d}{dx} y r(x) = y'r(x) + r'(x)y,\]
 
-which is not quite what we actually have but it is close. Now note that we can say
+which is not quite what we actually have, but it is close. Now note that we can say
 
 \[r'(x) = r(x)p(x)\]
 
-This is a differential equation of separable variables thus we can
+This is a differential equation of separable variables thus, we can
 
 \[\frac{r'(x)}{r(x)} = p(x)\]
 
@@ -323,7 +323,7 @@ after using \(e\)
 
 \[ r(x) = e^{\int p(x) dx}\]
 
-Now we have found a \(r(x)\) and now that we know that such a function exists we can return 
+Now we have found an \(r(x)\) and now that we know that such a function exists we can return 
 to our initial problem and say
 
 \[\frac{d}{dx}r(x)y = r(x)f(x)\]
@@ -346,20 +346,20 @@ Given are \(y' + 4y = e^{-x}\) and \(y(0) = \frac{4}{3}\)
 Here \(4 = p(x)\) and \(e^{-x} = f(x)\)
 \vspace{\baselineskip}
 
-Now lets use the formula for \(r(x) = e^{\int p (x)}\)
+Now let us use the formula for \(r(x) = e^{\int p (x)}\)
 \vspace{\baselineskip}
 
 this gives us \(r(x) = e^{\int 4dx} = e^{4x}\)
 \vspace{\baselineskip}
 
-Now recall the what we saw earlier
+Now recall what we saw earlier
 
 \[e^{4x}y' + e^{4x}4y = e^{4x}e^{-x} = e^{3x}\]
 
 Our left side is just \(\frac{d}{dx} e^{4x}y\)
 \vspace{\baselineskip}
 
-Now lets complete the exercise with our last formula by integrating both sides
+Now let us complete the exercise with our last formula by integrating both sides
 
 \[\frac{d}{dx} e^{4x}y = e^{3x}\]
 \[y = \frac{1}{e^4x}\int e^{3x}\]
@@ -369,16 +369,16 @@ Which is our general solution
 \vspace{\baselineskip}
 
 To find our specific solution we just plug 0 in to our general solution that gives us
-\(\frac{1}{3} + c = \frac{4}{3}\) thus \(c = 1\)
+\(\frac{1}{3} + c = \frac{4}{3}\) thus, \(c = 1\)
 
 \subsection{Homogeneous Differential Equations}
 
 A differential equation 
 
-\[M(x,y)dx + N(x,y)dy = 0\]
+\[M(x,y)dx + N(x,y)dy = 0,\]
 
 is considered \emph{Homogeneous} if and only if
-\(M(x)\) and \(N(x)\) are \emph{homogeneous} and they have the same degree.
+\(M(x)\) and \(N(x)\) are \emph{homogeneous}, and they have the same degree.
 \vspace{\baselineskip}
 
 The equation \(y' + f(x)y = 0\) is called \emph{homogeneous linear differential equation of first order}.
@@ -395,10 +395,10 @@ A function \(f(x,y)\) is called \emph{homogeneous} if and only if it can be writ
 \[f(tx, ty) = {(tx)}^3 + {(ty)}^3\]
 \[t^3 (x^3 + y^3) = t^3 f(x,y)\]
 
-It is important to note that the key is the each term have a total degree of \(n\).
+It is important to note that the key is that each term have a total degree of \(n\).
 For example: \(x^2y + x3y^2\)
 
-\subsubsection{Homogeneous Functions Theoreme}
+\subsubsection{Homogeneous Functions Theorem}
 
 If \(f(x,y)\) is homogeneous of degree \(0\) in \(x\) and \(y\) then 
 \(f\) is a function of \(\frac{y}{x}\)
@@ -411,8 +411,8 @@ Or \(f(x,y,y')\) is homogeneous if it can be written as \(y' = f(\frac{x}{y})\) 
     \item Write in the form \(M(x,y)dx + N(x,y)dy = 0\)
     \item Check if it is homogeneous
     \item Change the variables to \(y = ux\) or \(x = uy\) depending on the situation
-    \item Solve using the separable variables method
-    \item Rewrite the answer in term of the original variables again
+    \item Solve using the method of separable variables method
+    \item Rewrite the answer in terms of the original variables again
 \end{enumerate}
 
 \textbf{Example:}
@@ -432,7 +432,7 @@ Give is the function \((x -y)dx = - xdy\)
 depending on the \emph{differential!} 
 \vspace{\baselineskip}
 
-The simpler function is \(xdy\) thus we are to change \(y\)
+The simpler function is \(xdy\) thus, we are to change \(y\)
 
 \[y = ux\]
 \[dy = ux' + xu'\]
@@ -506,18 +506,18 @@ has exactly one solution.
 \textbf{Proof:}
 
 \begin{align*}
-y' = -f(x)y + g(x) \text{ therefore } |-f(x)y_1 + g(x) + -f(x)y_2 + g(x) | &= |f(x)||y_1 - y_2|\\
+y' = -f(x)y + g(x) \text{ therefore, } |-f(x)y_1 + g(x) + -f(x)y_2 + g(x) | &= |f(x)||y_1 - y_2|\\
                                                                         &\le M |y_1 - y_2|
 \end{align*}
 
-Therefore the function is Lipschitz continuous, thus a solution is possible.
+Therefore, the function is Lipschitz continuous, thus, a solution is possible.
 \QED
 
 
-\subsubsection{Variation of the constants}
+\subsubsection{Variation of the Constants}
 
 Recall that for the homogeneous case \(y' + f(x)y = 0\) case we use 
-\(y = c e^{\int -f(x) dx}\) but now we have \(y' + f(x)y = g(x)\), thus lets use the following
+\(y = c e^{\int -f(x) dx}\), but now we have \(y' + f(x)y = g(x)\), thus, let us use the following
 approach
 
 \[y = c(x) e^{\int -f(x) dx}\]
@@ -529,11 +529,11 @@ y' &= c'(x) e^{\int -f(x) dx} + c(x)e^{\int -f(x) dx}(-f(x))\\
    &= c'(x)e^{\int -f(x) dx} - f(x)y
 \end{align*}
 
-thus 
+thus, 
 
 \[y' + f(x)y = c'(x)e^{\int -f(x) dx}\]
 
-therefore \(g(x) = c'(x)e^{\int -f(x) dx}\)
+therefore, \(g(x) = c'(x)e^{\int -f(x) dx}\)
 \vspace{\baselineskip}
 
 Then we can get a solution for \(c(x)\) from
@@ -598,25 +598,39 @@ Given is \(y' -\cos(x)y = x e^{\sin(x)}\) with \(y(0) = 3\).
 \[3 = c\]
 
 
-\subsection{Existence and Uniqueness for Second Order Differential Equations}
+\subsection{Existence and Uniqueness Differential Equations}
 
 For the IVP
-\[y'' + p(x)y + q(x)y = f(x)\]
-\[y(a) = b_0, y'(a) = b_1\]
-If \(p,q,f\) are continuous on the interval \(I\) about \(a\), then there exists a unique
-solution on \(I\). In a generalization for \(n\) order differential equations there would be \(n\) 
-initial conditions. 
+
+\[y^{n} + p_{n - 1}y^{n - 1}+ \cdots + p_0 (x)y = f(x)\]
+
+\[y(a) = b_0, y'(a) = b_1, \dots, y^{n - 1}(a) = b_{n - 1} \]
+
+If all \(p_i\) and \(f\) are continuous on the interval \(I\) about \(a\), then
+there exists a unique solution on \(I\).
 
 \subsection{Constant Coefficients and the Superposition Theorem}
+
+\subsubsection{Theorem of Superposition and the General Solution}
+
+Suppose \(y_1, \dots, y_n\) solve 
+
+\[y^{n} + p_{n - 1}y^{n - 1}+ \cdots + p_0 (x)y = 0\]
+
+Then \(y = c_1 y_1 + \cdots + c_n y_n\) also solves the equation, and it is the 
+\emph{General Solution} if and only if the \emph{Wronskian} \(W(t) \ne 0\) for some \(t_0\).
+
+
+\subsection{Method of the Right Side}
 
 Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
 The homogeneous equation to this case will be \(y' + ay = 0\) with a solution \(y_h\) and some
 partial solution \(y_p\). Now remember from \emph{Linear Algebra} the \(general = particular + homogeneous\)
-more precisely \(y = y_p + y_h\) therefore adding a particular solution to a homogeneous does not change
+more precisely \(y = y_p + y_h\) therefore, adding a particular solution to a homogeneous does not change
 the general solution of our DE.
 \vspace{\baselineskip}
 
-Now lets substitute in our differential equation.
+Now let us substitute in our differential equation.
 
 \begin{align*}
 (y_h + y_p)' + a(y_h + y_p) &= y_h' + y_p' + ay_h + ay_p\\   
@@ -625,7 +639,7 @@ Now lets substitute in our differential equation.
 
 \subsubsection{Steps for solving Constant Coefficients problems}
 \begin{enumerate}
-    \item Find the \emph{homogeneous} solution for \(y' + ay = 0\).\(y_h\) is going
+    \item Find the \emph{homogeneous} solution for \(y' + ay = 0\). \(y_h\) is going
     to have a free parameter.
     \item Find a partial solution for \(y' + ay = g(x)\)
     \item Use \(y = y_h + y_p\)
@@ -645,9 +659,9 @@ We will use the method called based on guessing the type of the function on the 
 Given is the following IVP: \(y' + 2y = 2x + 13\) with \(y(0) = 8\)
 \vspace{\baselineskip}
 
-By looking carefully we see that on the right hand side we just have a normal polynomial,
-thus we can substitute \(y = bx + c\) and derivate \(y' = b\). In the case for when we have higher
-order derivative we would derivate for each of them. 
+By looking carefully we see that on the right-hand side we just have a normal polynomial,
+thus, we can substitute \(y = bx + c\) and derivate \(y' = b\). In the case for when we have higher
+order derivative we would differentiate for each of them. 
 \vspace{\baselineskip}
 
 Now substitute
@@ -661,13 +675,14 @@ b + 2(bx + c) = 2x + 13
 \]
 
 Now by comparing the Coefficients with the other side 
+
 \[2b = 2\]
 \[b + 2c = 13\]
 
-we get: \(b = 1\), \(c = 6\). And we have found a \emph{particular} solution for our DE 
+We get: \(b = 1\), \(c = 6\). And we have found a \emph{particular} solution for our DE 
 \(y_p = x + 6\)
 
-Now we have to find an \emph{homogeneous} solution with the formula we already know
+Now we have to find a \emph{homogeneous} solution with the formula we already know
 \(y_h = c e^{\int f(x)dx}\) in our case \(y_h = c e^{\int 2dx} = ce^{-2x}\)
 
 \[
@@ -722,7 +737,7 @@ Here the approach would be
 y_p = (A + Bt + Ct^2) + D(e^{-t}\cos(4t)) + E(e^{-t}\sin(4t))
 \]
 
-The best way is to tackle down each of the types og functions separately.
+The best way is to tackle down each of the types of functions separately.
 \vspace{\baselineskip}
 
 An alternative to way of using this method is to
@@ -746,13 +761,13 @@ We can not use the methods we already know for this equation because it is linea
 clever substitution we can turn it into a linear differential equation.
 \vspace{\baselineskip}
 
-Lets use a substitution 
+Let us use a substitution 
 
 \[u = y^{1 - n}\] 
 
 then 
 
-\[u' = (1 - n)y^{-n} y'\]. 
+\[u' = (1 - n)y^{-n} y'\] 
 
 Now this 
 looks kinda similar to the original equation multiply by \(y^{-n}\) that looks like
@@ -766,13 +781,13 @@ y^{-n}y' + P(x)y^{1 - n} = Q(x)
 \]
 
 
-Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\), thus after substitution
+Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\), thus, after substitution
 
 \[
 \frac{1}{1 - n}u' + P(x)u = Q(x)
 \]
 
-Now our equation is \emph{linear} and we can use the \emph{integrating factor} method.
+Now our equation is \emph{linear}, and we can use the \emph{integrating factor} method.
 \vspace{\baselineskip}
 
 \textbf{Example: }
@@ -809,13 +824,13 @@ Now we can use the \emph{Integrating Factor Method}. First bring to the standard
   u' + 10u = 5x 
 \]
 
-Remember that \(r(x) = e^{\int p(x)dx} = e^{\int 10 dx} = e^{10x}\) therefore we have
+Remember that \(r(x) = e^{\int p(x)dx} = e^{\int 10 dx} = e^{10x}\) therefore, we have
 
 \[
 e^{10x}u' + 10ue^{10x} = e^{10x}5x
 \]
 
-Now lets integrate
+Now let us integrate
 
 \[
 \frac{d}{dx} \left(e^{10x}u\right) = e^{10x}5x
@@ -841,7 +856,7 @@ Ce^{10x}u = \frac{xe^{10x}}{2} - \frac{5}{100} e^{10x} + c
 \subsection{Autonomous Equations}
 
 An \emph{Autonomous Differential Equation} only depends on the dependent
-variable \(y\).\textbf{Example: } \(\frac{dy}{dt} = (1 + y)(1 -y)\).
+variable \(y\).\textbf{ Example: } \(\frac{dy}{dt} = (1 + y)(1 -y)\).
 
 \subsubsection{Equilibrium Solutions}
 Values where \(f(y) = 0\) are \emph{Equilibrium Solutions}.
@@ -883,7 +898,7 @@ Thus, the solution can be decomposed into the general solution of the homogeneou
 
 \[y' = -\frac{y}{x} + 1\]
 
-The homogeneous DE is \(y' = -\frac{y}{x}\) which an be solved by separating the variables.
+The homogeneous DE is \(y' = -\frac{y}{x}\) which can be solved by separating the variables.
 \(y_h = \frac{c}{x}\)
 
 Now let use \(y_p = \frac{c(x)}{x}\).
@@ -892,7 +907,7 @@ Now let use \(y_p = \frac{c(x)}{x}\).
 y_{p}' = \frac{c'(x)x - c(x)}{x^2}
 \]
 
-Lets break down the fraction to find where to put our homogeneous solution we have already found
+Let us break down the fraction to find where to put our homogeneous solution we have already found
 
 \[
 \frac{c'(x)}{x} - \frac{c(x)}{x^2} = \frac{c'(x)}{x} + \frac{1}{x}\frac{c}{x} = \frac{c'(x)}{x} + \frac{1}{x}y
@@ -910,22 +925,22 @@ Here we compare with the inhomogeneous part of the original equation and get
 \frac{c'(x)}{x} = 1 \implies c'(x) = x
 \]
 
-then \(c(x)\) is equal to \(\frac{x^2}{2}\) and therefore \(y_p = \frac{x^2}{x}\frac{1}{x} = \frac{x}{2}\)
+then \(c(x)\) is equal to \(\frac{x^2}{2}\) and therefore, \(y_p = \frac{x^2}{x}\frac{1}{x} = \frac{x}{2}\)
 \vspace{\baselineskip}
 
 As our final result we get \(y = \frac{c}{x} + \frac{x}{2}\)
 
 \subsection{Power Series Approach}
 
-Another alternative for solving DE when other methods do not work is to use a \emph{power series} 
-to find the function given an initial conditions. This can be better understood with an example.
+Another method to solve a certain type  of differential equation
+is to find the function given an initial conditions. This can be better understood with an example.
 
 \[y' = y\]
 \[y(0) = 1\]
 
 We say \(y = \sum_{n = 0}^{\infty} a_n x^n\) and \(y(0) = a_0 = 1\).
 
-Now lets derivate you \(y\)
+Now let us derivate you \(y\)
 
 \[
 y = \sum_{n = 0}^{\infty} a_n x^n = a_0 x^0 + a_1 x^1 + \cdots = 1 + a_1 x^1 + a_2 x^2 + \cdots
@@ -934,13 +949,13 @@ y = \sum_{n = 0}^{\infty} a_n x^n = a_0 x^0 + a_1 x^1 + \cdots = 1 + a_1 x^1 + a
 y' = 0  + a_1 + 2 a_2 x + 3 a_3 x^2 + \cdots 
 \]
 
-Thus we can rewrite the sum as 
+Thus, we can rewrite the sum as 
 
 \[
 y' = \sum_{n = 1}^{\infty} a_n n x^{n - 1}
 \]
 
-starting from 1 because 0 does not contribute to the sum. After shifting the index we get
+Starting from 1 because 0 does not contribute to the sum. After shifting the index we get
 
 \[
 y' = \sum_{n = 0}^{\infty} a_{n + 1}(n + 1)x^{n}
@@ -973,9 +988,35 @@ a_{n + 1} = \frac{a_n}{n + 1} = \frac{\frac{a_{n - 1}}{(n - 1 +1)}}{n + 1} = \fr
 a_n = \frac{a_0}{(n + 1)!} = \frac{1}{(n + 1)!} = 1
 \]
 
-therefore \(a_n = \frac{1}{n!}\) which gives us the solution
+therefore, \(a_n = \frac{1}{n!}\) which gives us the solution
 
 \[\sum_{n = 0}^{\infty}\frac{1}{n!}x^n = e^x\]
+
+\subsubsection{Theorem for the Power Series of DE}
+
+For a differential equation of the form:
+
+\[
+A(x)y^{n} + \cdots + B(x)y' + C(x)y = 0
+\]
+
+more specific after dividing by \(A(X)\)
+
+\[
+y^{n} + \cdots + P(x)y' + Q(x)y = 0,
+\]
+
+with \(x = a\) as an \emph{Ordinary Point} if \(\dots, P(x)\) and \(Q(x)\) are 
+\emph{Analytic} at \(x = a\). Otherwise, a \emph{Singular Point}.
+\vspace{\baselineskip}
+
+Then this equation has \(n\) linearly independent solutions of the form
+
+\[
+y(x) = \sum_{n = 0}^{\infty} c_n {(x - a)}^n
+\]
+
+The radius of convergence is at least as large as distance to the nearest \emph{Singular Point}.
 
 \subsection{Exact Differential Equations}
 
@@ -998,10 +1039,10 @@ F_x + F_y y' = 0
 p(x,y)dx + q(x,y)y' = 0
 \]
 
-If this is a differential then \(p_x = q_y\) and we define a DE of the form:
+If this is a differential then \(p_x = q_y\), and we define a DE of the form:
 
 \[
-p(x,y)dx + q(x,y)y' = 0 \text{ with } p_x = q_y
+p(x,y)dx + q(x,y)y' = 0 \text{ with } p_x = q_y,
 \]
 
 as \emph{exact}. And the \(p_x = q_y\) as \emph{Integrability-Condition}.
@@ -1032,16 +1073,16 @@ F(x,y) &= \int (12xy + 3)dx = \int 6x^2 dy\\
        &= 6x^2 y + 3x + c(y) = 6yx^2 + c(x)
 \end{align*}
 
-Now we derivate both sides with respect to \(y\) and this gives us
+Now we differentiate both sides with respect to \(y\) and this gives us
 
 \begin{align*}
     6x^2y + 3x + c(y) &= 6yx^2 + c(x) \\
     6x^2 + c'(y) &= 6x^2 \\
            c'(y) &= 0 \\
-            c(y) &= y \text{ after integrating with respect to } dy
+            c(y) &= y \text{ after integrating with respect to } dy,
 \end{align*}
 
-and therefore \(F(x,y) = 6x^2y + 3x + \hat{c} = 0\).
+and therefore, \(F(x,y) = 6x^2y + 3x + \hat{c} = 0\).
 \vspace{\baselineskip}
 
 \textbf{Step 3: Solve for \(y\)}
@@ -1082,7 +1123,7 @@ r = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
 
 Suppose there are two linearly independent solution \(y_1\) and \(y_2\) to
 \[
-y'' + p(x)y' + q(x)y = 0
+y'' + p(x)y' + q(x)y = 0,
 \]
 
 then the general solution is \(y = c_1 y_1 + c_2 y_2\).
@@ -1135,7 +1176,7 @@ Now to get rid of the imaginary part we can do the following trick
 \[\frac{y_1 + y_2}{2} = e^{\alpha t}\cos\beta t\]
 \[\frac{y_1 - y_2}{2i} = e^{\alpha t}\sin\beta t\]
 
-This might feel wrong but this are in fact linear combinations of our original solution
+This might feel wrong, but these are in fact linear combinations of our original solution,
 and they are also linearly independent, because of that we can just use them for our general solution.
 
 \[y = c_1 e^{\alpha t}\cos\beta t + c_2  e^{\alpha t}\sin\beta t\]
@@ -1196,4 +1237,81 @@ is a particular solution of
 \[
 y'' + ay' + by = g_1(x) + g_2(x).
 \]  
+
+\subsection{Variation of Parameters}
+
+For a linear differential equation of the form
+
+\[
+y'' + p(x)y' + q(x)y = f(x)
+\]
+
+The homogeneous equation has a solution of the linearly independent \(y_1\) and \(y_2\)
+of the form \(y = u_1 y_1 + u_2 y_2\). We can guess the functions \(y_1\) and \(y_2\).
+\vspace{\baselineskip}
+
+So, for finding a solution of these types of equations we use the following formulas.
+
+\[
+u_1 = - \int \frac{y_2 g}{y_1 y_{2}' - y_2 y_{1}'} dx
+\]
+
+
+\[
+u_2 = - \int \frac{y_1 g}{y_1 y_{2}' - y_2 y_{1}'} dx
+\]
+
+These formulas come from:
+\vspace{\baselineskip}
+
+\textbf{Differentiating two times:}
+
+\[
+y = u_1 y_1 + u_2 y_2
+\]
+
+\[
+y' = u_1 y_{1}' + y_1 u_{1}' +  u_2 y_{2}' + y{2} u_{2}'
+\]
+
+Here we can add another constraint that \(y_1 u_{1}' + y{2} u_{2}' = 0\). This allows us to
+simplify the expression to:
+
+\[
+y' = u_1 y_{1}' +  u_2 y_{2}'
+\]
+
+Now we can derivate one more time:
+
+\[
+y'' =  u_1 y_{1}'' + y_{1}' u_{1}'  + u_2 y_{2}'' + y_{2}' u_{2}'
+\]
+
+
+\textbf{Substitute in the original equation}
+
+\[
+y'' + p(x)y' + q(x)y = f(x)
+\]
+
+\[
+ u_1 y_{1}'' + y_{1}' u_{1}'  + u_2 y_{2}'' + y_{2}' u_{2}' + p(x)(u_1 y_{1}' +  u_2 y_{2}') + q(x)(u_1 y_1 + u_2 y_2) = g(x)  
+\]
+
+\[
+ u_1 y_{1}'' + y_{1}' u_{1}'  + u_2 y_{2}'' + y_{2}' u_{2}' + p(x)(u_1 y_{1}') + p(x)(u_2 y_{2}') + q(x)(u_1 y_1) + q(x)(u_2 y_2) = g(x)  
+\]
+
+\[
+ u_1 y_{1}'' + y_{1}' u_{1}'  + u_2 y_{2}'' + y_{2}' u_{2}' + p(x)(u_1 y_{1}') + p(x)(u_2 y_{2}') + q(x)(u_1 y_1) + q(x)(u_2 y_2) = g(x)  
+\]
+
+With non-generic function a lot of the terms would cancel out. After that we add multiply by
+\(y_1\) one of the rows and \(y_2\) so that we can cancel them in a row operation. Which will left us
+with only two integrals to solve.
+
+
+
+
+
 

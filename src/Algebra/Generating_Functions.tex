@@ -43,13 +43,13 @@ Generating functions serve as a bridge between algebra and combinatorics, allowi
 
 \subsection{Closed form of the Fibonacci Sequence}
 
-Lets use generating function to find a closed form for the Fibonacci number. 
+Let us use generating function to find a closed form for the Fibonacci number. 
 \vspace{\baselineskip}
 
 We know that \(F_0 = 1\) and \(F_1 = 1\) and for \(n \ge 2\) \(F_n = F_{n-1} + F_{n-2}\)
 \vspace{\baselineskip}
 
-Now lets use the following function
+Now let us use the following function
 \[
     F(x) = \sum_{n = 0}^{\infty} F_n x^{n}
 \]
@@ -61,7 +61,7 @@ Which is going to have the Fibonacci numbers as the coefficients of the power se
 \]
 
 But before that we have to look at when our recursive formula is defined.
-In this case \(n = 2\). Thus we have to write our expression in the following way.
+In this case \(n = 2\). Thus, we have to write our expression in the following way.
 
 \begin{align*}
 F(x) &= 1 + x + \sum_{n = 2}^{\infty} F_n x^{n}\\

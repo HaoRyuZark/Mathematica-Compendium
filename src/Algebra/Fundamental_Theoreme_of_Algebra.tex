@@ -33,14 +33,14 @@ value than the sum of all the other terms. Thus, given some \(B > 0\), for any s
 Since \(|p(z)|\) is continuous on the interior and boundary of the circle with radius \(s\), it follows by the completeness axiom that \(|p(z)|\) achieves its minimum value at some point \(t\) in this circle. But since \(|p(0)| < \frac{1}{2} |p(z)|\) for all \(z\) on the circumference of the circle, it follows that \(|p(z)|\) achieves its minimum at some point \(t\) in the interior.
 \vspace{\baselineskip}
 
-Now rewrite the polynomial \(p(z)\) by translating the argument \(z\) by \(t\), thus producing a new polynomial
+Now rewrite the polynomial \(p(z)\) by translating the argument \(z\) by \(t\), thus, producing a new polynomial
 \[
 	q(z) = p(z + t) = q_0 + q_1 z + q_2 z^2 + \cdots + q_n z^n,
 \]
 and similarly translate the circle. Presumably the polynomial \(q(z)\), defined on some circle centered at the origin, has a minimum absolute value \(M > 0\) at \(z = 0\). Note that \(M = |q(0)| = |q_0|\).
 \vspace{\baselineskip}
 
-Our proof strategy is to construct some point \(x\), close to the origin, such that \(|q(x)| < |q(0)|\), thus contradicting the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
+Our proof strategy is to construct some point \(x\), close to the origin, such that \(|q(x)| < |q(0)|\), thus, contradicting the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
 \vspace{\baselineskip}
 
 \textbf{Construction of \(x\) such that \(|q(x)| < |q(0)|\)}
@@ -52,9 +52,10 @@ Let the first nonzero coefficient of \(q(z)\) following \(q_0\) be \(q_m\), so t
 \]
 We choose
 \[
-	x = r {\left(-\frac{q_0}{q_m}\right)}^{1/m}
+	x = r {\left(-\frac{q_0}{q_m}\right)}^{1/m},
 \]
-, where \(r\) is a small positive real value, and \({\left(-\frac{q_0}{q_m}\right)}^{1/m}\) denotes any \(m\)-th root of \(\left(-\frac{q_0}{q_m}\right)\).
+
+where \(r\) is a small positive real value, and \({\left(-\frac{q_0}{q_m}\right)}^{1/m}\) denotes any \(m\)-th root of \(\left(-\frac{q_0}{q_m}\right)\).
 \vspace{\baselineskip}
 
 Unlike the real numbers, in the complex number system the \(m\)-th roots of any complex number are guaranteed to exist. If \(z = z_1 + i z_2\), then the \(m\)-th roots of \(z\) are given by
@@ -76,7 +77,7 @@ where the extra terms \(E\) can be bounded as follows. Assume \(q_0 \leq q_m\), 
 \[
 	|E| \leq r^{m+1} \max_i |q_i| \left|\frac{q_0}{q_m}\right|^{(m+1)/m} (1 + s + s^2 + \cdots + s^{n - m - 1}) \leq \frac{r^{m+1} \max_i |q_i|}{1 - s} \left|\frac{q_0}{q_m}\right|^{(m+1)/m}.
 \]
-Thus \(|E|\) can be made arbitrarily small compared to \(|q_0 r^m| = |q_0| r^m\) by choosing \(r\) small enough. For example, select \(r\) so that \(|E| < \frac{|q_0| r^m}{2}\). Then:
+Thus, \(|E|\) can be made arbitrarily small compared to \(|q_0 r^m| = |q_0| r^m\) by choosing \(r\) small enough. For example, select \(r\) so that \(|E| < \frac{|q_0| r^m}{2}\). Then:
 \[
 	|q(x)| = |q_0 - q_0 r^m + E| < |q_0 - \frac{q_0 r^m}{2}| = |q_0| \left(1 - \frac{r^m}{2}\right) < |q_0| = |q(0)|,
 \]

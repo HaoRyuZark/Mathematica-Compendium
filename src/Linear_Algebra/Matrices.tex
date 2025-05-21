@@ -213,7 +213,9 @@ For a square matrix \(A \in \mathbb{R}^{n \times n}\), the following are equival
 These fundamental spaces associated with a matrix \(A \in \mathbb{R}^{m \times n}\) provide important insights into its structure.
 
 \subsubsection{Column Space}
+
 The column space of \(A\), denoted \(\text{Col}(A)\), is the span of the columns of \(A\):
+
 \begin{equation*}
 \text{Col}(A) = \{\vec{y} \in \mathbb{R}^m : \vec{y} = A\vec{x} \text{ for some } \vec{x} \in \mathbb{R}^n\}
 \end{equation*}
@@ -221,15 +223,21 @@ The column space of \(A\), denoted \(\text{Col}(A)\), is the span of the columns
 This is also called the range or image of the linear transformation represented by \(A\). The dimension of the column space equals the rank of \(A\).
 
 \subsubsection{Row Space}
-The row space of \(A\), denoted \(\text{Row}(A)\), is the span of the rows of \(A\):
+
+The \emph{row space} of \(A\), denoted \(\text{Row}(A)\), is the span of the rows of \(A\):
+ It is also perpendicular to the \emph{Null space}.
+
 \begin{equation*}
 \text{Row}(A) = \text{Col}(A^T)
 \end{equation*}
 
-The dimension of the row space also equals the rank of \(A\).
+The dimension of the \emph{row space} also equals the rank of \(A\).
 
 \subsubsection{Null Space}
-The null space (or kernel) of \(A\), denoted \(\text{Null}(A)\) or \(\text{Ker}(A)\), is the set of all vectors that \(A\) maps to zero:
+
+The null space (or kernel) of \(A\), denoted \(\text{Null}(A)\) or \(\text{Ker}(A)\), 
+is the set of all vectors that \(A\) maps to zero:
+
 \begin{equation*}
 \text{Null}(A) = \{\vec{x} \in \mathbb{R}^n : A\vec{x} = \vec{0}\}
 \end{equation*}
@@ -237,21 +245,25 @@ The null space (or kernel) of \(A\), denoted \(\text{Null}(A)\) or \(\text{Ker}(
 The dimension of the null space is called the nullity of \(A\), denoted \(\text{nullity}(A)\).
 
 \subsubsection{Left Null Space}
+
 The left null space of \(A\) is the null space of \(A^T\):
+
 \begin{equation*}
 \text{Null}(A^T) = \{\vec{y} \in \mathbb{R}^m : A^T\vec{y} = \vec{0}\} = \{\vec{y} \in \mathbb{R}^m : \vec{y}^T A = \vec{0}^T\}
 \end{equation*}
 
 The Rank-Nullity Theorem connects these spaces:
+
 \begin{equation*}
 \text{rank}(A) + \text{nullity}(A) = n
 \end{equation*}
 
 To find a basis for these spaces:
 \begin{itemize}[label=\(-\)]
-    \item Column space: Take the linearly independent columns of \(A\)
-    \item Row space: Take the non-zero rows from any row echelon form of \(A\)
-    \item Null space: Solve the homogeneous system \(A\vec{x} = \vec{0}\) and express the general solution in terms of free variables
+    \item \emph{Column space}: Take the linearly independent columns of \(A\).
+    \item \emph{Row space}: Take the non-zero rows from any row echelon form of \(A\).    
+    \item \emph{Null space}: Solve the homogeneous system \(A\vec{x} = \vec{0}\) and express the general 
+    solution in terms of free variables.
 \end{itemize}
 \subsection{Examples of Matrix Operations}
 
@@ -714,7 +726,7 @@ This obviously corresponds to \(f(x)\), so that by Theorem 4.36, the map \(f\) i
 which corresponds to the equation \(Ax = f(x) = 0\). Gaussian 
 elimination yields \(x_3 = \lambda'\); 
 \(x_2 = \frac{2}{3} \cdot \lambda'\); \(x_1 = -\frac{1}{3} \cdot \lambda'\), 
-thus with \(\lambda = \frac{1}{3} \lambda'\):
+thus, with \(\lambda = \frac{1}{3} \lambda'\):
 \[
 \ker(f) =
 \left\{
@@ -729,11 +741,13 @@ x = \lambda
 \]
 
 It follows that \(\dim(\ker(f)) = 1\) and because of \(\dim(V) = 3\) from the dimension 
-formula \(\dim(\text{Im}(f)) = 2\).\(\text{Im}(f)\) corresponds to the linear 
+formula \(\dim(\text{Im}(f)) = 2\). 
+
+\(\text{Im}(f)\) corresponds to the linear 
 span of the columns of the matrix. One chooses consequently \(\dim(\text{Im}(f))\) 
 column vectors, e.g., the first ones, and tests if they are linearly independent. 
 In the concrete case, this is obvious, because the second column is 
-not a multiple of the first. It follows therefore
+not a multiple of the first. It follows therefore,
 
 \[
 \text{Im}(f) =

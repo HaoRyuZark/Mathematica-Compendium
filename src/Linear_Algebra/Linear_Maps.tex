@@ -21,7 +21,8 @@ A linear map \( f: V \to W \) is a function that satisfies the following propert
 \end{itemize}
 
 \emph{Isomorphic} if there exists a bijective linear 
-map between them. In this case, we can say that the two vector spaces are \textbf{isomorphic} and we write \( V \cong W \).
+map between them. In this case, we can say that the two vector spaces are \textbf{isomorphic}, 
+and we write \( V \cong W \).
 
 \subsection{Properties of Linear Maps}
 \begin{itemize}[label=\(-\)]
@@ -92,7 +93,7 @@ f(v_1 - v_2) = f(v_1) - f(v_2) = \vec{0} - \vec{0} = \vec{0}
     \[\dim(\ker(f)) + \operatorname{rank}(f) = n.\]
     
     
-    Remember that \(\ker(f)\) forms a subspace of \(V\) and therefore \(\dim(\ker(f)) := r \leq n\). We extend an arbitrary basis \((v_1, \ldots, v_r)\) of \(\ker(f)\) to a basis \((v_1, \ldots, v_r, v_{r+1}, \ldots, v_n)\) of \(V\). Setting \(w_{r+i} = f(v_{r+i})\) for \(i = 1, \ldots, n - r\), we have \(\forall v \in V\):
+    Remember that \(\ker(f)\) forms a subspace of \(V\) and therefore, \(\dim(\ker(f)) := r \leq n\). We extend an arbitrary basis \((v_1, \ldots, v_r)\) of \(\ker(f)\) to a basis \((v_1, \ldots, v_r, v_{r+1}, \ldots, v_n)\) of \(V\). Setting \(w_{r+i} = f(v_{r+i})\) for \(i = 1, \ldots, n - r\), we have \(\forall v \in V\):
     \begin{align*}
     f(v) &= f(\lambda_1v_1 + \cdots + \lambda_r v_r + \lambda_{r+1}v_{r+1} + \cdots + \lambda_n v_n) \\
     &= \lambda_1 \underbrace{f(v_1)}_{=0} + \cdots + \lambda_r \underbrace{f(v_r)}_{=0} + \lambda_{r+1} f(v_{r+1}) + \cdots + \lambda_n f(v_n) \\
@@ -112,7 +113,7 @@ f(v_1 - v_2) = f(v_1) - f(v_2) = \vec{0} - \vec{0} = \vec{0}
     \[\lambda_{r+1}v_{r+1} + \cdots + \lambda_n v_n = \lambda_1v_1 + \cdots + \lambda_r v_r\]
     for some \(\lambda_1, \ldots, \lambda_r\). Since \(v_1, \ldots, v_n\) are linearly independent, we have \(\lambda_1 = \cdots = \lambda_n = 0\). Thus, the vectors \(w_{r+1}, \ldots, w_n\) are linearly independent.
     
-    It follows that \(\dim(\operatorname{Im}(f)) = \operatorname{rank}(f) = n - r\) and therefore
+    It follows that \(\dim(\operatorname{Im}(f)) = \operatorname{rank}(f) = n - r\) and therefore,
     \[\dim(\ker(f)) + \dim(\operatorname{Im}(f)) = \dim(\ker(f)) + \operatorname{rank}(f) = r + n - r = n.\]
   \(\mathfrak{QED}\)
   

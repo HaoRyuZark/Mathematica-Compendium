@@ -96,9 +96,11 @@ This is the open interval \((a - \varepsilon, a + \varepsilon)\).
 
 \subsection{Supremum, Infimum, Maximum and Minimum}
 
-The \emph{supremum} of a set \(A \subseteq \mathbb{R}\) is the least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
+The \emph{supremum} of a set \(A \subseteq \mathbb{R}\) is the 
+least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
 
-The \emph{infimum} of a set \(A\) is the greatest lower bound: the largest number \(t\) such that \(a \ge t\) for all \(a \in A\).The \emph{maximum} is the largest element in the set, if it exists.
+The \emph{infimum} of a set \(A\) is the greatest lower bound: 
+the largest number \(t\) such that \(a \ge t\) for all \(a \in A\). The \emph{maximum} is the largest element in the set, if it exists.
 
 The \emph{minimum} is the smallest element in the set, if it exists.
 \vspace{\baselineskip}
@@ -190,7 +192,7 @@ R = \frac{1}{\limsup\limits_{n \to \infty} \sqrt[n]{|a_n|}}
 
 \subsection{Point-wise Convergence}
 
-A sequence of functions \((f_n)\) converges \emph{poin-twise} to a function \(f\) on a set \(A\) if:
+A sequence of functions \((f_n)\) converges \emph{point-wise} to a function \(f\) on a set \(A\) if:
 \[
 \forall x \in A, \quad \lim_{n \to \infty} f_n(x) = f(x)
 \]
@@ -254,7 +256,7 @@ Every bounded monotonic sequence converges.
 \item If \((a_n)\) is non-increasing and bounded below, then \(\lim a_n = \inf \{a_n\}\).
 \end{itemize}
 
-To prove the converge of a sequence via this principle we follow the next steps
+To prove the convergence of a sequence via this principle we follow the next steps
 
 \begin{enumerate}
     \item Prove the Monotonicity by induction
@@ -265,7 +267,7 @@ To prove the converge of a sequence via this principle we follow the next steps
 
 \textbf{Example: } \(a_{n + 1} = \sqrt{2a_n - 3} + 1\)
 
-Lets assume that the series is decreasing or \(a_{n + 1} < a_{n}\)
+Let us assume that the series is decreasing or \(a_{n + 1} < a_{n}\)
 
 \begin{align*}
     a_{n + 2} &< a{n + 1} \\
@@ -276,12 +278,13 @@ Lets assume that the series is decreasing or \(a_{n + 1} < a_{n}\)
 \end{align*}
 \QED
 
-Now lets calculated the limit
+Now let us calculated the limit
 \[
 \lim_{n \rightarrow \infty} a_{n + 1} = \lim_{n \rightarrow \infty} \sqrt{2a_n - 3} + 1
 \]
 
-Because of the recursion we know that both \(a_{n + 1}\) and \(a_n\) have the same same value and we call it \(a\).
+Because of the recursion we know that both \(a_{n + 1}\) and \(a_n\) have the same value, 
+and we call it \(a\).
 \[
 a = \sqrt{2a -3} +1
 \]
@@ -291,7 +294,7 @@ a = 2
 
 We only have to prove the limitedness now:
 
-For \(n = 0\) we have \(a_1 = 4 > 2\) then lets assume that the \(a\) is never going bellow 2.
+For \(n = 0\) we have \(a_1 = 4 > 2\) then let us assume that the \(a\) is never going bellow 2.
 
 \[
 a_{n + 1} = \sqrt{2a_n - 3} + 1 \ge \sqrt{2(2) - 3} + 1 = 2

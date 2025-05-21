@@ -6,11 +6,13 @@ In this section, we discuss the solution formulas for polynomial equations of de
 \subsection{The PQ Formula}
 
 The PQ formula solves quadratic equations of the form:
+
 \[
 x^2 + px + q = 0
 \]
 
 \subsubsection{Derivation}
+
 To derive the PQ formula, we complete the square:
 
 \begin{align*}
@@ -23,6 +25,7 @@ x &= -\frac{p}{2} \pm \sqrt{{\left(\frac{p}{2}\right)}^2 - q}
 \end{align*}
 
 \subsubsection{PQ formula:}
+
 \[
 x = -\frac{p}{2} \pm \sqrt{{\left(\frac{p}{2}\right)}^2 - q}
 \]
@@ -30,12 +33,14 @@ x = -\frac{p}{2} \pm \sqrt{{\left(\frac{p}{2}\right)}^2 - q}
 \subsection{The Quadratic Formula}
 
 The general quadratic equation is:
+
 \[
 ax^2 + bx + c = 0
 \quad\text{with } a \ne 0
 \]
 
 \subsubsection{Derivation of the PQ-Formula}
+
 We normalize the equation by dividing through by \(a\) and complete the square:
 
 \begin{align*}
@@ -49,6 +54,7 @@ x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{align*}
 
 \subsubsection{ABC formula:}
+
 \[
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \]
@@ -56,8 +62,9 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \subsection{The Cubic Formula}
 
 To solve a general cubic equation:
+
 \[
-ax^3 + bx^2 + cx + d = 0
+ax^3 + bx^2 + cx + d = 0,
 \]
 
 we first reduce it to a depressed cubic using a substitution.
@@ -66,10 +73,13 @@ we first reduce it to a depressed cubic using a substitution.
 \textbf{Step 1: Depress the cubic}
 
 Let \(x = t - \frac{b}{3a}\), then the equation becomes:
+
 \[
 t^3 + pt + q = 0
 \]
+
 with:
+
 \[
 p = \frac{3ac - b^2}{3a^2}, \quad q = \frac{2b^3 - 9abc + 27a^2d}{27a^3}
 \]
@@ -77,44 +87,55 @@ p = \frac{3ac - b^2}{3a^2}, \quad q = \frac{2b^3 - 9abc + 27a^2d}{27a^3}
 \textbf{Step 2: Solve the depressed cubic using Cardano’s method}
 
 Assume a solution of the form:
+
 \[
 t = u + v
 \]
+
 Then substitute and simplify:
+
 \[
 {(u+v)}^3 + p(u+v) + q = 0
 \]
+
 Expanding and setting:
+
 \[
 u^3 + v^3 + (3uv + p)(u+v) + q = 0
 \]
 
 To eliminate the \((u+v)\) term, set:
+
 \[
 3uv + p = 0 \quad \Rightarrow \quad uv = -\frac{p}{3}
 \]
 
 Now:
+
 \[
 u^3 + v^3 = -q
 \]
 
 Let:
+
 \[
 u^3 = A, \quad v^3 = B \quad \Rightarrow \quad A + B = -q, \quad AB = -\frac{p^3}{27}
 \]
 
 These are the roots of the quadratic:
+
 \[
 z^2 + qz - \frac{p^3}{27} = 0
 \]
 
 Solve for \(A\) and \(B\), then take cube roots to get \(u\) and \(v\). The final solution is:
+
 \[
 x = u + v
 \]
 
 \subsubsection{Cardano’s Formula (for depressed cubic)}
+
 \[
 x = \sqrt[3]{-\frac{q}{2} + \sqrt{{\left(\frac{q}{2}\right)}^2 + {\left(\frac{p}{3}\right)}^3}} + \sqrt[3]{-\frac{q}{2} - \sqrt{{\left(\frac{q}{2}\right)}^2 + {\left(\frac{p}{3}\right)}^3}}
 \]

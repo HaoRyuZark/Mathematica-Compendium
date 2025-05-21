@@ -6,7 +6,7 @@ In this section, we will discuss the solution of linear systems of equations. A 
 a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n & = b_1  \\
 a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n & = b_2  \\
 & \vdots \\
-a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n & = b_m
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n & = b_m,
 \end{align*}
 
 where \( a_{ij} \) are the coefficients of the variables \( x_j \), and \( b_i \) are the constants on the right-hand side of the equations. The goal is to find the values of \( x_1, x_2, \ldots, x_n \) that satisfy all equations simultaneously.
@@ -186,7 +186,7 @@ The homogeneous system is obtained by setting the right-hand side of the equatio
 
 Any linear system's solution set has the form:
 \[
-	\left\{ \vec{p} + c_1\vec{\beta}_1 + \cdots + c_k\vec{\beta}_k \;\middle|\; c_1, \ldots, c_k \in \mathbb{R} \right\}
+	\left\{ \vec{p} + c_1\vec{\beta}_1 + \cdots + c_k\vec{\beta}_k \;\middle|\; c_1, \ldots, c_k \in \mathbb{R} \right\},
 \]
 
 where \(\vec{p}\) is a particular solution to the system, and the vectors \(\vec{\beta}_1, \ldots, \vec{\beta}_k\) form a basis of the solution space to the corresponding homogeneous system. The number \(k\) equals the number of \textbf{free variables} the system has after applying Gaussian elimination.
@@ -303,11 +303,11 @@ A linear system of three equation has the following properties:
 
 \begin{itemize}[label=\(-\)]
 	\item There is a unique solution if the determinant of the coefficient matrix is non-zero. 
-	\[\langle (a x b), c\rangle = \det(a,b,c) \ne 0\]
+	\[\langle (a \times b), c\rangle = \det(a,b,c) \ne 0\]
 	\item There are infinitely many solutions if the determinant of the coefficient matrix is zero.
-	\[\langle (a x b), c\rangle = \det(a,b,c) = 0\]
+	\[\langle (a \times b), c\rangle = \det(a,b,c) = 0\]
 	\item There is no solution if the determinant of the coefficient matrix is zero and the system is inconsistent.
-	\[\langle (a x b), c\rangle = 0\]
+	\[\langle (a \times b), c\rangle = 0\]
 \end{itemize}
 
 

@@ -9,7 +9,8 @@ A \emph{parameterized curve} is a mathematical object where each point on the cu
 where \( t \) ranges over some interval \( I \subseteq \mathbb{R} \), and each component function (e.g., \( x(t) \), \( y(t) \)) is real-valued.
 
 \subsection{Purpose}
-The purpose of parameterizing a curve is to provide a flexible and detailed way of describing geometric objects, particularly when they cannot be easily expressed as a simple function \( y = f(x) \). Parameterizations allow us to:
+The purpose of parameterizing a curve is to provide a flexible and detailed way of describing geometric objects, particularly when they cannot be easily expressed 
+as a simple function \( y = f(x) \). Parameterizations allow us to:
 \begin{itemize}[label=\(-\)]
     \item Describe curves that loop, cross themselves, or have vertical segments.
     \item Compute quantities like arc length, tangent vectors, and curvature.
@@ -46,7 +47,7 @@ As \( t \) varies from \( 0 \) to \( 2\pi \), the point \( (x(t), y(t)) \) trace
 Recall that the arclength of a curve in 3 dimensions is
 
 \[
-\int_{a}^{b} \sqrt{{f'(t9)}^2 + {g'(t)}^2 + {h'(t)}^2} dt
+\int_{a}^{b} \sqrt{{f'(t9)}^2 + {g'(t)}^2 + {h'(t)}^2} dt,
 \]
 
 which is norm of our tangent vector.
@@ -60,8 +61,17 @@ which is norm of our tangent vector.
 This is given by
 
 \[
-s(t) = \int_{a}^{t} \sqrt{|\vec{\tau}(t)|} dt
+s(t) = \int_{a}^{t} \sqrt{|\vec{\tau}(t)|} dt,
 \]
 
 where \(\tau\) is the length parameter.
+\vspace{\baselineskip}
+
+This parameter is intrinsic to the curve, and represents one choice because there only one valid
+interpretation of the length. The downside is that this is hard to compute.
+
+\subsubsection{The t Parameter}
+
+For the \(t\) parameter, we can say that this is intrinsic to the object along the curve,
+it can be interpreted in multiple ways therefore, many choices and is easy to compute. 
 
