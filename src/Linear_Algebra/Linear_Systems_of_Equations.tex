@@ -350,5 +350,150 @@ A linear system of three equation has the following properties:
 \end{tikzpicture}
 
 
+\subsection{Proof of the Gaussian Elimination}
 
+The row operations do not change the solution set. 
+\vspace{\baselineskip}
+
+\textbf{Proof:}
+
+A linear system of equations of the form \(Ax = b\), \(A \in K^{m \times n}\) with some solution
+\(x\) can be multiplied by some elementary matrix \(C_1, C_2, C_3\) which correspond to a row 
+operation \(CAx = Cb\).
+\vspace{\baselineskip}
+
+The Equality is kept and therefore, \(L(A,b) \subset L(CA, Cb)\). If \(x \in L(CA, Cb)\) then
+
+\[
+CAx = Cb \implies C^{-1}CAx = C^{-1}Cb \implies Ax = b
+\]
+
+Because of the invertibility of elementary matrices we can be sure that  \(L(CA, Cb) \subset L(A,b) \).
+\vspace{\baselineskip}
+
+Now for the case that \(L(A,b) = \emptyset\). If we assume that \(L(CA,CB) \ne \emptyset \), then 
+there would be some \(x \in L(CA,CB)\) with \(CAx = Cb\). By multiplying both side by \(C^{-1}\) we 
+get \(Ax = b\) and therefore, \(L(A, b) \ne \emptyset \),  which is a contradiction to our original
+assumption  \(L(A,b) = \emptyset\).
+
+\QED
+\vspace{\baselineskip}
+
+Now we only have to prove that each regular matrix can be transformed in the reduced echelon form or 
+even row reduced echelon form. This is the equivalent of saying that the row operations do not change
+the rank of the matrix.
+\vspace{\baselineskip}
+
+\textbf{Proof:}
+
+If \(C\) is an elementary matrix and \(A \in K^{m \times n}\) some matrix. The statement \(rg(CA) = rg(A)\) 
+is true because of the invertibility of the elementary matrices and the isomorphism in vector spaces.
+\vspace{\baselineskip}
+
+Given \(A = (a_1, a_2, \dots, a_n)\). The exchange of two columns preserves \(L := L(a_1, \dots, a_n)\), 
+and also the \(rg_s (A)\). Concerning the scaling of a column by some \(\lambda \) \(L := L(a_1, \dots, \lambda a_k, \dots, a_n)\) 
+also preserves \(dim(L) = rg_s(A)\). And finally, the addition \(L = L(a_1, \dots, a_i + \lambda a_k, \dots, a_n)\) also preserves 
+\(rg_s (A) = rg(A)\). Thus, \(rg(CA) = rg(A)\).
+
+\QED
+\vspace{\baselineskip}
+
+The only part left is to prove that if \(A\) has an inverse, then with use of the row operations we can 
+transform it in to a matrix with an upper triangular with also no zero element on the main diagonal.
+\vspace{\baselineskip}
+
+\textbf{Proof:}
+
+First we eliminate all the elements under the main diagonal for all columns until the column \(k - 1\).
+With this, we have created a new matrix \(A^(\ell) = C_{\ell} \dot \cdots \dot C_1 A \) which looks 
+like: 
+
+\[
+A^{(\ell)} =
+\begin{pmatrix}
+a^{(\ell)}_{11} & \cdots & a^{(\ell)}_{1,k-1} & a^{(\ell)}_{1k} & a^{(\ell)}_{1,k+1} & \cdots & a^{(\ell)}_{1n} \\
+\vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \cdots & a^{(\ell)}_{k-1,k-1} & a^{(\ell)}_{k-1,k} & a^{(\ell)}_{k-1,k+1} & \cdots & a^{(\ell)}_{k-1,n} \\
+0 & \cdots & 0 & a^{(\ell)}_{kk} & a^{(\ell)}_{k,k+1} & \cdots & a^{(\ell)}_{kn} \\
+0 & \cdots & 0 & \vdots & a^{(\ell)}_{k+1,k+1} & \cdots & a^{(\ell)}_{k+1,n} \\
+\vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \cdots & 0 & a^{(\ell)}_{nk} & \cdots & \cdots & a^{(\ell)}_{nn}
+\end{pmatrix}
+\]
+
+Because of \(rg(A) = rg(A^{(\ell)})\), \(a^{(\ell)}_{ii} \ne 0\) for \(1 \le i < k\). All of these 
+elements will not change for the rest of the Gaussian Elimination. Now we want to build another matrix 
+with row operations \(A^{(\mu)}\) where \(a^{(\mu)}_{kk} \ne 0\) and \(a^{(\mu)}_{ik} = 0\) for 
+\(i > k\). If \(a^{(\ell)}_{kk} \ne 0\) then \((i,k)\)-th element will become 0 by subtracting 
+\(\frac{a^{(\ell)}_{ik}}{a^{(\ell)}_{kk}}\) time the \(k\)-th row of the \(i\)-th row. So can the \(k\)-th 
+column be transformed with a series of row operations to the desired form. But if \(a^{(\ell)}_{kk} = 0\), 
+then you have to swap it with another row under it. This is the critical point of the algorithm: What 
+if there is no row, also \(a^{(\ell)}_{ik} = 0\) for \(i \ge k\)? Then \(A^{(\ell)}\) would be:
+
+\[
+A^{(\ell)} =
+\begin{pmatrix}
+a^{(\ell)}_{11} & \cdots & a^{(\ell)}_{1,k-1} & a^{(\ell)}_{1k} & a^{(\ell)}_{1,k+1} & \cdots & a^{(\ell)}_{1n} \\
+\vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \cdots & a^{(\ell)}_{k-1,k-1} & a^{(\ell)}_{k-1,k} & a^{(\ell)}_{k-1,k+1} & \cdots & a^{(\ell)}_{k-1,n} \\
+0 & \cdots & 0 & 0 & a^{(\ell)}_{k,k+1} & \cdots & a^{(\ell)}_{kn} \\
+0 & \cdots & 0 & \vdots & a^{(\ell)}_{k+1,k+1} & \cdots & a^{(\ell)}_{k+1,n} \\
+\vdots & \ddots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & \cdots & 0 & 0 & \cdots & \cdots & a^{(\ell)}_{nn}
+\end{pmatrix}
+\]
+
+But, that would imply that the \(k\)-th column is a linear combination of the other \(k - 1\) columns, 
+and then \(rg(A^{(\ell)}) \le n - 1\) which is a contradiction to the assumption  \(rg(A^{(\ell)}) = n\) 
+
+\QED
+
+\subsection{Alternative Method for finding the Rank of a matrix}
+
+For a matrix \(A \in K^{(m \times n)}\). The biggest submatrix of the size \(r \times r\) with a 
+non-zero determinant gives us the \emph{rank} of the matrix. \(rg(A) = r\).
+
+\subsection{Gramer´s Rule}
+
+For a square matrix \(A = (a_1, \dots, a_n)\) and \(x,b \in K^{n}\) with \(Ax = b\) with \(\det A \ne 0\) 
+then
+
+\[
+A_i = (a_1, \dots, a_{i - 1}, b, a_{i + 1}, \dots, a_n), i = 1,\dots,n.
+\]
+
+The solution \(i\) is then
+
+\[
+x_i = \frac{\det(A_i)}{\det(A)}
+\]
+
+\textbf{Proof:}
+
+Given a matrix \(X_i \in K^{n \times n}\) by
+
+\[
+\begin{pmatrix}
+	1  &  &\cdots     & x_1    & &\cdots \\
+\vdots &  &\ddots     & \vdots & & 0     \\
+	   &  &x_{i - 1}  &        & &       \\
+	   &0 & x_i 	  &		   & &       \\
+	   &  & x_{i + 1} &        & &       \\
+	   &  & \vdots    & \ddots & &       \\
+	   &  & x_n       &        & &    1   
+\end{pmatrix}
+\]
+
+\(X_i = (e_1, \dots, e_{i - 1}, e_i, e_{i + 1}, \dots, e_n)\). By using an \(n\)-times the 
+Laplace formula in the first row shows \(|X_i| = x_i\).
+
+\[A X_i = A (e_1, \dots, e_{i - 1}, e_i, e_{i + 1}, \dots, e_n)\]
+
+\[A X_i = A (a_1, \dots, a_{i - 1}, Ax, a_{i + 1}, \dots, a_n)\]
+
+\[A X_i = A (a_1, \dots, a_{i - 1}, b, a_{i + 1}, \dots, a_n) = A_i\]
+
+This implies \(|A_i| = |AX_i| = |A||X_i|\) therefore, \(x_i = \frac{|A_i|}{A}\).
+
+\QED
 

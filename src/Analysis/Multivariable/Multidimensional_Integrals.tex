@@ -4,13 +4,13 @@
 \subsection{Arc-length of a Curve}
 
 We will use the famous technique of approximating the length/area/volume of something
-by dividing it in to equally smaller section that are straight lines in this case. In other will
-be prisms, squares, etc. Now if we look at the difference between two points in our 3D space, 
+by dividing it in to equally smaller section that are straight lines in this case. In other cases 
+they will be prisms, squares, etc. Now if we look at the difference between two points in our 3D space, 
 for this Example
 we notice that there are three differences \(\Delta i\) \(\Delta j\) \(\Delta k\).j
 Now let us take the length of the vector \(\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}\)
 
-The total Arc-length is going to be the sum of all of this sectors
+The total Arc-length is going to be the sum of all of these sectors
 \[
 L =  \sum_{i = 1}^{n}\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}
 \]
@@ -51,40 +51,7 @@ along \( \gamma \) is:
 \]
 
 In the context of physics this integral measures the work done by the field \( \vec{F} \) along the path \( \gamma \), such as force over distance.
-
-\subsection{Over Scalar field}
-
-Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \( C \), which 
-is parametrized by a vector function
-
-\[
-\vec{r}(t) = (x_1(t), x_2(t), \ldots, x_n(t)), \quad t \in [a, b]
-\]
-
-Then, the line integral of \( f \) over \( C \) is given by:
-
-\[
-\int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \vec{r}'(t) \right\| \, dt
-\]
-
-
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{Line-integral.png}
-\end{center}
-
-\textbf{Example: Scalar Field}
 \vspace{\baselineskip}
-
-Compute the line integral of \(f(x,y) = x^2 + y^2\) over the straight line segment going
-from \((1,1)\) to \((3,3)\)
-\\
-This time or curve is \(y = x\) to the parametrized curve is \(\begin{pmatrix}
-    x(t) = t \\ y(t) = t
-\end{pmatrix}\) this left us with:
-
-\[
-\int_{1}^{3}  2t^2 \sqrt{2}dt = \frac{52\sqrt{2}}{3} 
-\]
 
 \textbf{Example: Line Integral over a Vector Field}
 \vspace{\baselineskip}
@@ -128,9 +95,49 @@ Therefore, the line integral is:
 
 The line integral of the gradient vector field \( \vec{F} = \nabla f \) over this curve is zero. 
 This is consistent with the fact that line integrals of gradient fields over 
-curves depend only on endpoints, and 
-\( f(1,0) = 1 \), \( f(0,1) = 1 \), so \( f(B) - f(A) = 0 \).
+curves depend only on endpoints, and  \(f(1,0) = 1 \), \(f(0,1) = 1 \), so \( f(B) - f(A) = 0 \).
 
+
+\subsubsection{Over Scalar field}
+
+Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \( C \), which 
+is parametrized by a vector function.
+
+\[
+\vec{r}(t) = (x_1(t), x_2(t), \ldots, x_n(t)), \quad t \in [a, b]
+\]
+
+Then, the line integral of \( f \) over \( C \) is given by:
+
+\[
+\int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \vec{r}'(t) \right\| \, dt
+\]
+
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{Line-integral.png}
+\end{center}
+
+This formula comes from approximating the area of the squares under the curve with height \(f(x_k, y_k)\) 
+and the arclength \(\varDelta s_k\), we will simplify to three dimensions for the sake
+of simplicity, but like seen before this works for \(n\) dimensions. 
+\(A_k = f(x_k, y_k) \varDelta s_k\), where 
+\(\varDelta s_k = \sqrt{(\varDelta s_k)^2 + (\varDelta y_k)^2} \). Now by using or formula for the arclength
+we already know, we get \(\|\vec{r}' (t)\| \, dt = ds\). 
+
+\textbf{Example: Scalar Field}
+\vspace{\baselineskip}
+
+Compute the line integral of \(f(x,y) = x^2 + y^2\) over the straight line segment going
+from \((1,1)\) to \((3,3)\)
+\\
+This time or curve is \(y = x\) to the parametrized curve is \(\begin{pmatrix}
+    x(t) = t \\ y(t) = t
+\end{pmatrix}\) this left us with:
+
+\[
+\int_{1}^{3}  2t^2 \sqrt{2}dt = \frac{52\sqrt{2}}{3} 
+\]
 
 \subsection{Potential Function}
 

@@ -1336,5 +1336,121 @@ with only two integrals to solve.
 
 Using the method for exact differential equations.
 
+\subsection{Linear Systems of Differential Equations}
+
+Let us start by looking at a system of first order homogeneous differential equations
+
+\[
+y_1 ' = ay_1 + by_2
+\]
+\[
+y_2 ' = cy_1 + dy_2
+\]
+
+This can be written as 
+
+\[
+\frac{d}{dt} 
+\begin{pmatrix} 
+y_1 \\ 
+y_2 
+\end{pmatrix} 
+= 
+\begin{pmatrix}
+a & b \\
+c & d \\
+\end{pmatrix} 
+\begin{pmatrix}
+y_1 \\ 
+y_2
+\end{pmatrix}
+\]
+
+\[
+Ax = \vec{y}'
+\]
+
+Then if we use the guess \(y(t) = \vec{v} e^{\lambda t}\) and differentiate with respect to \(t\) 
+we get 
+
+\[
+ \lambda \vec{v} e^{\lambda t} = A \vec{v} e^{\lambda t}
+\]
+
+\[
+ \lambda \vec{v} = A \vec{v},
+\]
+
+which is our \emph{Eigenvalue} problem. This can be solved via
+
+\[
+\det(A - \lambda I) = 0
+\]
+
+\[
+\lambda^{2} - (a + b)\lambda + ad - bc = 0
+\]
+
+And this solution can lead to the three cases we already know: distinct real roots, complex Conjugate 
+roots and repeated roots.
+\vspace{\baselineskip}
+
+We can also use substitution to solve for one of the \(y_i\), which are functions of \(x\) like
+
+\[
+y_1 ' = ay_1 + by_2
+\]
+
+\[
+y_2 ' = cy_1 + dy_2
+\]
+
+\[
+by_2 = y_1' - ay_1
+\]
+
+\[
+y_2 = \frac{y_1' - ay_1}{b}
+\]
+
+Then we can differentiate our first equation with respect to \(x\)
+
+\[
+by_2 = y_1' - ay_1
+\]
+
+\[
+by_2' = y_1'' - ay_1'
+\]
+
+\[
+= b (cy_2 + dy_1)
+\]
+
+\[
+= bcy_2 + bdy_1
+\]
+
+
+\[
+= c (y_1' -ay_1 ) + bdy_1
+\]
+
+\[
+y_1'' - (a + c)y' + (ac - bd)y_1 + bdy_1 = 0
+\]
+
+\textbf{Example:}
+
+
+
+
+
+
+
+
+
+
+
 
 
