@@ -1,6 +1,21 @@
 \newpage
 \section{Changing between Basis}
 
+To change from one basis to another of the same space, the question we are asking is How to write our basis vector 
+in terms of the other basis. Because after that any linear combination of our basis vector will be directly translated 
+to the other basis, just by writing them in terms of the other basis. So the matrix made of the new basis vectors 
+\(T\) times a vector of coefficient in our systems of coordinates gives us the same vector but described in the new basis.
+And to translate to our language we just have to multiply the vector in the other basis by \(T^{-1}\).
+\vspace{\baselineskip}
+
+Finally, imagine that you have a matrix that represents some linear transformation in our language, but we want to transform 
+a vector in another language. We need to first take that vector in the foreign basis, apply \(T^{-1}\), apply the transformation \(M\) 
+and finally multiply by \(T\) to return to the new basis.
+\vspace{\baselineskip}
+
+Now to formalize these ideas:
+\vspace{\baselineskip}
+
 Given a vector \(\vec{x} = \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n\) 
 with \(\vec{v}_1, \dots, \vec{v}_n\)
 being the basis vectors, we can write \(\vec{x}\) in terms of its components \({(a, b, c, \dots)}^T\).
@@ -106,16 +121,6 @@ P_{C}^{-1} P_B &= P_{C}^{-1}(\vec{b}_1, \dots, \vec{b}_n) \\
 
 Now it is clear that the inverse is just taking our basis vector and transforming
 them in to basis vector with respect to \(C\).
-\vspace{\baselineskip}
-
-\textbf{Summary}
-\vspace{\baselineskip}
-
-To summarize, take the coefficients of the vector in the new basis,
-take the basis vector of the new basis and write then in terms of our coordinates
-and Finally multiply that matrix by the coefficients. The other way works 
-just the same but this time you take the inverse take the inverse and multiply
-by the coefficients of vector in our basis.
 
 \subsection{Translation under transformation}
 

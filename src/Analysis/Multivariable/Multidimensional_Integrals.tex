@@ -43,11 +43,11 @@ For differentiable function on the interval \(t \in [a; b]\)
 
 \subsubsection{Over Vector Field}
 
-Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a vector field, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). The \emph{line integral} of \( F \) 
-along \( \gamma \) is:
+Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a vector field, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). 
+The \emph{line integral} of \( F \) along \( \gamma \) is:
 
 \[
-\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \vec{r}'(t) \rangle \, dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
+\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \vec{r}\,'(t) \rangle \, dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
 \]
 
 In the context of physics this integral measures the work done by the field \( \vec{F} \) along the path \( \gamma \), such as force over distance.
@@ -78,13 +78,13 @@ We compute the line integral of \( \vec{F} \) along \( C \):
 First, compute:
 
 \[
-\vec{F}(\vec{r}(t)) = (2\cos t, 2\sin t), \quad \vec{r}'(t) = (-\sin t, \cos t)
+\vec{F}(\vec{r}(t)) = (2\cos t, 2\sin t), \quad \vec{r}\,'(t) = (-\sin t, \cos t)
 \]
 
 Now compute the dot product:
 
 \[
-\langle\vec{F}(\vec{r}(t)), \vec{r}'(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
+\langle\vec{F}(\vec{r}(t)), \vec{r}\,'(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
 \]
 
 Therefore, the line integral is:
@@ -387,7 +387,9 @@ f_2(x_1, \ldots, x_n) \\
 f_m(x_1, \ldots, x_n)
 \end{bmatrix},
 \]
+
 the \emph{Jacobian matrix} of \(f\) is the \(m \times n\) matrix of all first-order partial derivatives:
+
 \[
 J_f(x) = \begin{bmatrix}
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
@@ -411,7 +413,7 @@ represent this small steps.
 When \(m = n\), i.e., the function maps from 
 \(\mathbb{R}^n\) to \(\mathbb{R}^n\), 
 the Jacobian matrix is square. In this case, 
-the \textit{Jacobian determinant} is defined as:
+the \emph{Jacobian determinant} is defined as:
 \[
 \det(J_{f}(x)),
 \]
@@ -697,6 +699,7 @@ Then the triple integral transforms as:
 \]
 
 where \( J \) is the \emph{Jacobian matrix} of the transformation:
+
 \[
 J = 
 \begin{pmatrix}
@@ -706,7 +709,9 @@ J =
 \end{pmatrix}
 \]
 
+\vspace{\baselineskip}
 \textbf{Example: Transformation to Cylindrical Coordinates}
+\vspace{\baselineskip}
 
 The standard cylindrical coordinate transformation is:
 \[

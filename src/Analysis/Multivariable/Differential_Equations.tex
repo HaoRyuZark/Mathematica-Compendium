@@ -621,7 +621,7 @@ Then \(y = c_1 y_1 + \cdots + c_n y_n\) also solves the equation, and it is the
 \emph{General Solution} if and only if the \emph{Wronskian} \(W(t) \ne 0\) for some \(t_0\).
 
 
-\subsection{Method of the Right Side}
+\subsection{Undetermined Coefficients}
 
 Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
 The homogeneous equation to this case will be \(y' + ay = 0\) with a solution \(y_h\) and some
@@ -852,7 +852,6 @@ Ce^{10x}u = \frac{xe^{10x}}{2} - \frac{5}{100} e^{10x} + c
     Ce^{10x} = \frac{x}{2} - \frac{1}{20} + \frac{c}{e^{10x}} = y^{-2}
 \]
 
-
 \subsection{Autonomous Equations}
 
 An \emph{Autonomous Differential Equation} only depends on the dependent
@@ -868,7 +867,6 @@ that start near \(a\) tend towards \(a\) as \(t \to \infty\).
 \subsubsection*{Asymptotically unstable}
 An equilibrium solution \(y = a\) is \emph{asymptotically unstable} if solutions
 that start near \(a\) leave as \(t \to \infty\)
-
 
 \subsection{Linear Inhomogeneous DEs with Non-Constant Coefficients}
 
@@ -1130,6 +1128,8 @@ then the general solution is \(y = c_1 y_1 + c_2 y_2\).
 \vspace{\baselineskip}
 
 We analyze the nature of the roots \( r \) based on the discriminant \( D = b^2 - 4ac \).
+Also, for dealing with initial conditions of the form \(y^n = a, \dots\) we only have to 
+plug the values into our solutions \(y_h, y_{h}', \dots \) to get the constants.
 
 \subsubsection{Case 1: Two Distinct Real Roots \texorpdfstring{\( (D > 0) \)}{}}
 
@@ -1199,6 +1199,11 @@ Now \(r_1 = 0 \quad r_2 = -i \quad r_3 = i\)
 \[y = c_1 e^{0t} + c_2 e^{-it} + c_3 e^{it}\]
 
 \[y = c_1 + c_2 \cos t + c_3 \sin t\]
+
+\subsubsection{Inhomogeneous Case}
+
+For the inhomogeneous case we would apply the method of the \emph{Undetermined Coefficients}. But 
+differentiating two times or more depending on the order of the differential equation.
 
 \subsection{The Wronskian}
 
@@ -1319,16 +1324,17 @@ with only two integrals to solve.
     \item Form \(y' = f(ax + by(x) + c)\) \(Rightarrow\) Substitution \(z = ax + by(x) + c\) and \(f(z)\).
     \item Form \(y' = \frac{y}{x}\) \(\Rightarrow\) Substitution \(z = \frac{y}{x}\)
     \item Linear \(\Rightarrow\) Integrating Factor or Variation of Constants.
-    \item Bernoulli \(\Rightarrow\) Bernoulli Substitution.
+    \item Bernoulli (Non-linear) \(\Rightarrow\) Bernoulli Substitution.
     \item Autonomous \(\Rightarrow\) Equilibrium Analysis.
+    \item Non-homogeneous \(\Rightarrow\) Undetermined Coefficients or integrating factor.
 \end{itemize}
 
 
 \subsubsection{Second Order and higher}
 
 \begin{itemize}[label=\(-\)]
-    \item Constant Coefficients \(\Rightarrow\) Guess \(e^{rt}\).
-    \item Non-homogeneous \(\Rightarrow\) Right Side Approach or Variation of Constants.
+    \item Constant Coefficients \(\Rightarrow\) Guess \(e^{rx}\).
+    \item Non-homogeneous \(\Rightarrow\) Undetermined Coefficients.
     \item Linear \(\Rightarrow\) Series Solutions.
 \end{itemize}
 
@@ -1440,7 +1446,6 @@ by_2' = y_1'' - ay_1'
 y_1'' - (a + c)y' + (ac - bd)y_1 + bdy_1 = 0
 \]
 
-\textbf{Example:}
 
 
 

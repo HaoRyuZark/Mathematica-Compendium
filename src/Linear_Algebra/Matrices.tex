@@ -33,36 +33,79 @@ Matrix addition and subtraction are defined for matrices of the same dimensions.
 \subsubsection*{Addition}
 
 For matrices \(A, B \in \mathbb{R}^{m \times n}\), their sum \(C = A + B\) is defined as:
-\begin{equation*}
+
+\[
 c_{ij} = a_{ij} + b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
-\end{equation*}
+\]
 
 \subsubsection*{Subtraction}
 
 Similarly, the difference \(C = A - B\) is defined as:
-\begin{equation*}
+
+\[
 c_{ij} = a_{ij} - b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
-\end{equation*}
+\]
 
 Matrix addition satisfies the following properties:
+
 \begin{align*}
 A + B &= B + A \quad \text{(Commutativity)} \\
 (A + B) + C &= A + (B + C) \quad \text{(Associativity)} \\
 A + O &= A \quad \text{(Identity element)} \\
 A + (-A) &= O \quad \text{(Inverse element)}
 \end{align*}
-where \(O\) is the zero matrix.
+
+Where \(O\) is the zero matrix.
 
 \subsection{Matrix Multiplication}
 
-Matrix multiplication is defined between matrices where the number of columns in the first matrix equals the number of rows in the second matrix.
+Matrix multiplication is defined between matrices where the number of columns in the first 
+matrix equals the number of rows in the second matrix.
 
 For \(A \in \mathbb{R}^{m \times p}\) and \(B \in \mathbb{R}^{p \times n}\), their product \(C = AB \in \mathbb{R}^{m \times n}\) is defined as:
-\begin{equation*}
+
+\[
 c_{ij} = \sum_{k=1}^{p} a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ip}b_{pj}
-\end{equation*}
+\]
+
+Matrix multiplication is defined this way to think as each operation as dot product of two vectors.
+\vspace{\baselineskip}
+
+An example of this is thinking about the dot product as the total price of a purchase in store. 
+The total price is the sum of the amounts which are given by the number of items per price. Now to extend this idea 
+for matrices we think about the number of items as a vector of size \(i\) and the prices of each item as 
+another vector \(p_1\) with dot product \(\langle i, p_1 \rangle\). If we want to by other items with different prices, but in the 
+same amounts given by the vector \(i\) we get a matrix \(A = (p_1, \dots, p_n)\). Now it makes sense that, if 
+we take three different arrays of products we get a vector of three components which represent each of the 
+total amounts to pay.
+\vspace{\baselineskip}
+
+Thus, each operation in matrix multiplication is taking the dot product of the \emph{transpose} 
+of the current row with the column vector of the other matrix.
+
+\[
+A \circ \vec{v} = 
+\begin{pmatrix}
+\langle a_{1}^T, v\rangle \\
+\langle a_{2}^T, v\rangle \\
+\vdots \\
+\langle a_{n}^T, v\rangle 
+\end{pmatrix}
+\]
+
+As for the case with multiple columns
+
+\[
+A \circ B = 
+\begin{pmatrix}
+\langle a_{1}^T, b_{j} \rangle & \dots  & \langle a_{1}^T, b_{n} \rangle \\
+\vdots                         & \cdots &              \vdots            \\
+\langle a_{n}^T, b_{j} \rangle & \dots  & \langle a_{n}^T, b_{n} \rangle 
+\end{pmatrix}
+\]
 
 Matrix multiplication satisfies the following properties:
+
 \begin{align*}
 A(BC) &= (AB)C \quad \text{(Associativity)} \\
 A(B+C) &= AB + AC \quad \text{(Left distributivity)} \\
@@ -87,11 +130,14 @@ Properties of the transpose include:
 {(\alpha A)}^T &= \alpha A^T \quad \text{for any scalar } \alpha
 \end{align*}
 
-Special matrices related to the transpose include:
-\begin{itemize}[label=\(-\)]
-    \item Symmetric matrix: \(A = A^T\)
-    \item Skew-symmetric matrix: \(A = -A^T\)
-\end{itemize}
+
+The transpose can also help us interpret the dot product of two vectors being 0 as a matrix multiplication.
+Here are given \(A = (a_1, \dots, a_n)\) with \(Ax\) as some vector and \(b\) some other vector and 
+\(a_k\) is some row of \(A\).
+
+\[
+\langle a_k, b - Ax \rangle = 0 \quad \forall k \iff A^{T} (b - Ax) = \vec{0}
+\]
 
 \subsection{The Equivalence of Matrices}
 

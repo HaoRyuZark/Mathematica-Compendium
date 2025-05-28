@@ -453,7 +453,7 @@ and then \(rg(A^{(\ell)}) \le n - 1\) which is a contradiction to the assumption
 For a matrix \(A \in K^{(m \times n)}\). The biggest submatrix of the size \(r \times r\) with a 
 non-zero determinant gives us the \emph{rank} of the matrix. \(rg(A) = r\).
 
-\subsection{Gramer´s Rule}
+\subsection{Cramer's Rule}
 
 For a square matrix \(A = (a_1, \dots, a_n)\) and \(x,b \in K^{n}\) with \(Ax = b\) with \(\det A \ne 0\) 
 then
@@ -497,3 +497,14 @@ This implies \(|A_i| = |AX_i| = |A||X_i|\) therefore, \(x_i = \frac{|A_i|}{A}\).
 
 \QED
 
+Another way of thinking about this in a more geometric way is to first think at the determinant as 
+the area/volume/etc. that is spanned by the basis vector and the stretching factor of the transformation 
+\(\det(A)\). Now visualize your matrix \(A\) as a linear transformation with 
+a non-zero determinant and think about \(\det(A_i)\) as the area/volume/etc. which is spanned by the 
+basis vector but with one of the vector substituted by \(b\).
+\vspace{\baselineskip}
+
+Now in two dimensions, think of the area spanned by the basis vectors \(A = xy\). 
+The signed area of the original parallelogram gets 
+stretched by \(\det(A)\) this gives us \(Area = \det(A)y \Rightarrow y = \frac{Area}{\det(A)}\). This 
+also works for \(x\).

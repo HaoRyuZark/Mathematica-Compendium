@@ -18,40 +18,56 @@ A\vec{v} = \lambda\vec{v}
 
 To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the eigenvalue equation:
 
- 1.\textbf{ Form the characteristic equation:}
-    Rewrite the equation \(A\mathbf{v} = \lambda\mathbf{v}\) as \((A - \lambda I)\mathbf{v} = \mathbf{0}\), where \(I\) is the identity matrix of the same size as \(A\). To have a non-trivial solution for \(\mathbf{v}\), the matrix \((A - \lambda I)\) must be singular, which means its determinant must be zero. Thus, we have the characteristic equation:
+\textbf{1. Form the characteristic equation:}
+    Rewrite the equation \(A\vec{v} = \lambda\vec{v}\) as 
+    \((A - \lambda I)\vec{v} = \vec{0}\), where \(\lambda I\) is the identity matrix times \(\lambda\) because 
+    this matrix encodes the multiplication by some scalar. 
+    
+    To have a non-trivial solution \(0\) for \(\vec{v}\), the matrix \((A - \lambda I)\) must be 
+    singular, which means its determinant must be zero because otherwise \(\vec{v}\) would be 0. Thus, we have the characteristic equation:
     \[
     \det(A - \lambda I) = 0
     \]
 
- 2.\textbf{ Solve for the eigenvalues:}
+\textbf{2. Solve for the eigenvalues:}
     Solve the characteristic equation for \(\lambda\). The solutions \(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of the matrix \(A\).
 
- 3.\textbf{ Find the eigenvectors:}
+\textbf{3. Find the eigenvectors:}
     For each eigenvalue \(\lambda_i\), substitute it back into the equation \((A - \lambda_i I)\mathbf{v} = \mathbf{0}\) and solve for the vector \(\mathbf{v}\). The non-zero solutions for \(\mathbf{v}\) are the eigenvectors corresponding to the eigenvalue \(\lambda_i\).
 
 \subsection{How to diagonalize a matrix}
 
-Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(P\) such that \(P^{-1}AP = D\), where \(D\) is a diagonal matrix.
-The process of diagonalization is as follows:
+Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. 
+A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(X\) made of eigenvectors of 
+\(A\) such that \(X^{-1}AX = D\), where \(D\) is a diagonal matrix made of eigenvalues.
 
-\begin{enumerate}
-    \item \textbf{Find the eigenvalues and eigenvectors of \(A\).}
+The order of the eigenvalue and eigenvectors matters if you choose \(\lambda_1, \lambda_2, \dots, \lambda_n\) then the 
+order of the eigenvectors \(v_1, v_2, \dots, v_n\) must also correspond.
+\vspace{\baselineskip}
+
+The process of diagonalization is as follows:
+\vspace{\baselineskip}
+
+\textbf{1. Find the eigenvalues and eigenvectors of \(A\).}
+\vspace{\baselineskip}
+
+\textbf{2. Form the matrix \(X\):}
+
+Create a matrix \(X\) whose columns are the linearly independent eigenvectors of \(A\).
     
-    \item \textbf{Form the matrix \(P\):} \\
-    Create a matrix \(P\) whose columns are the linearly independent eigenvectors of \(A\).
+\textbf{3. Form the diagonal matrix \(D\):} 
+
+Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
     
-    \item \textbf{Form the diagonal matrix \(D\):} \\
-    Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
+\textbf{4. Verify the diagonalization:}
     
-    \item \textbf{Verify the diagonalization:} \\
-    Check that \(P^{-1}AP = D\).
-\end{enumerate}
-  
+Check that \(X^{-1}AX = D\).
+\vspace{\baselineskip}
+
 A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independent eigenvectors, where \(n\) is the size of the matrix.
 \vspace{\baselineskip}
 
-\textbf{Example}
+\textbf{Example: }
 \vspace{\baselineskip}
 
 Consider the matrix
@@ -63,7 +79,8 @@ A = \begin{pmatrix}
 \]
 
 \textbf{Step 1: Find the eigenvalues:}
-    The characteristic equation is
+
+The characteristic equation is
     \[
     \det(A - \lambda I) = \det \begin{pmatrix}
     2 - \lambda & 1 \\
@@ -73,7 +90,8 @@ A = \begin{pmatrix}
     Solving for \(\lambda\), we get \(\lambda_1 = 1\) and \(\lambda_2 = 3\).
 
 \textbf{Step 2: Find the eigenvectors:}
-    For \(\lambda_1 = 1\):
+
+For \(\lambda_1 = 1\):
     \[
     (A - I)\mathbf{v} = \begin{pmatrix}
     1 & 1 \\
@@ -104,7 +122,8 @@ A = \begin{pmatrix}
     This gives \(-x + y = 0\), so an eigenvector is \(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\).
 
 \textbf{Step 3: Diagonalize the matrix:}
-    Let \(P = \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}\). Then \(P^{-1} = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}\).
+
+Let \(P = \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}\). Then \(P^{-1} = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}\).
     \[
     P^{-1}AP = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 3 \end{pmatrix} = D
     \]

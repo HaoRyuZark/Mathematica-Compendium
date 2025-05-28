@@ -3,7 +3,8 @@
 
 \subsection{Scalar Product}
 
-Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V \to K\) is called a scalar product (or inner product) if the following conditions are satisfied:
+Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V \to K\) 
+is called a scalar product (or inner product) if the following conditions are satisfied:
 \vspace{\baselineskip}
 
 \emph{Symmetry}
@@ -52,6 +53,21 @@ For all \(a \in V \setminus \{0\}\):
 and
 \[
 \langle 0, 0 \rangle = 0.
+\]
+
+It also can be interpreted as a linear transformation that takes a vector and maps it to a real number via matrix 
+vector multiplication. Also, a more practical way of thinking about the \emph{dot product} is the question: How 
+much are two vectors pointing in the same direction?
+
+\subsection{Trigonometric Definition}
+
+Think about the orthogonal projection as a triangle. Now, remember that to find the adjacent side \(x\) 
+you need to take \(x = \cos(\theta)h\), which is the value \(\alpha\) in our projection formula 
+\(p_a (b) = \frac{\langle a, b\rangle}{\langle a, a\rangle} \alpha a\). 
+Here we add \(\|a\|\|b\|\) to make this function linear.
+
+\[
+\langle a, b \rangle = \|a\| \|b\| \cos (\theta)
 \]
 
 \subsection{Standard Scalar Product for Complex Number}
