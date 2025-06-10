@@ -204,14 +204,17 @@ Therefore, \((v_1, \ldots, v_{i-1}, v_{i+1}, \ldots, v_n, w_j)\) must form a bas
 \QED
 
 \subsection{Dimension of a sum of subspaces}
+
 Let \(U\) and \(W\) be two subspaces of a vector space \(V\). Then the dimension of the sum of the two subspaces is given by:
 \[
     \dim(U + W) = \dim(U) + \dim(W) - \dim(U \cap W)    
 \]
 
 \subsection{Linear Independence of polynomials}
+
 Let \(P_n\) be the vector space of polynomials of degree at most \(n\). The set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is a basis for \(P_n\).
 The dimension of \(P_n\) is \(n + 1\).
+
 \begin{itemize}[label=\(-\)]
     \item The set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly independent.
     \item The set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) spans the vector space \(P_n\).
@@ -222,14 +225,14 @@ To prove that the set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly 
 we can use the following steps:
 
 \begin{enumerate}
-    \item Assume that there exists a linear combination of the polynomials that equals zero:
-    \[
-        a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n = 0
+	\item Assume that there exists a linear combination of the polynomials that equals zero:   
+	\[
+    a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n = 0,
     \]
     where \(a_0, a_1, \ldots, a_n\) are scalars.
-    \item Since the left-hand side is a polynomial of degree at most \(n\), it can only be equal to zero if all coefficients are zero.
+	\item Since the left-hand side is a polynomial of degree at most \(n\), it can only be equal to zero if all coefficients are zero.
     \item Therefore, we have \(a_0 = a_1 = \cdots = a_n = 0\), which 
-	proves that the set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly independent.
+		  proves that the set of polynomials \(\{1, x, x^2, \ldots, x^n\}\) is linearly independent.
 \end{enumerate}
 
 So you only have to prove that the set of coefficients vector is linearly independent.
@@ -321,5 +324,6 @@ Solving this system gives \(a = 1\), \(b = 1\), and \(c = -1\), so the interpola
 \[
 p_2(x) = x^2 + x - 1.
 \]
+
 
 

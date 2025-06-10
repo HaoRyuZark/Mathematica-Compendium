@@ -1,0 +1,315 @@
+\newpage
+\section{Geometry of Linear Maps}
+
+In this section we are going to take a look at some special type of linear maps that are called \emph{orthogonal} 
+and at the term \emph{isometry}. It will be useful to remember some concepts about the dot product such as 
+\(\langle x, x \rangle = x^T \cdot x = \|x\|^2\).
+
+\subsection{Isometry}
+
+Given two vector spaces \((V, \|\centerdot\|_V)\) and \((W, \|\centerdot\|_W)\). Then a map 
+\(f: V \to W\) is called \emph{Isometric} if and only if \(\|x - y\|_V = \|f(x) - f(y)\|_W \).
+\vspace{\baselineskip} 
+
+It also has the following traits:
+\begin{enumerate}
+	\item \emph{Length-Preserving}: \(\|x\|_V = \|y\|_W \quad \forall x \in V\).
+	\item \emph{Angle-Preserving}: \(\angle (x,y) = \angle (f(x),f(y)) \quad \forall x,y \in V\)
+	\item \emph{Linear}: If \(f(x + \lambda y) = f(x) + \lambda f(y)\)
+\end{enumerate}
+
+\subsection{The Rotation Matrix}
+
+This matrix is a common example of an isometric linear map, because of the way it transforms the space.
+\vspace{\baselineskip}
+
+For the \(2D\) we have 
+
+\[
+\begin{pmatrix}
+    \cos(\phi) & -\sin(\phi)\\
+    \sin(\phi) & \cos(\phi)
+\end{pmatrix}
+\]
+
+The derivation comes from the addition theorems for \(\sin(\phi) \) and \(\cos(\phi)\).
+\vspace{\baselineskip}
+
+Given two vectors \(\vec{v}\) and \(\vec{g}\) whose angles are \(\alpha\) and \(\theta = \alpha + \beta\). We 
+can rotate the vector \(\vec{v}\) by some \(\beta\) to transform into \(\vec{g}\).
+
+\begin{align*}
+    x &= r \cos(\alpha)\\
+    y &= r \sin(\alpha)
+\end{align*}
+
+Then 
+
+\begin{align*}
+    x' &= r' \cos(\alpha + \beta)\\
+    y' &= r' \sin(\alpha + \beta)
+\end{align*}
+
+And therefore
+
+\begin{align*}
+    x' &= r' \cos(\alpha)\cos(\beta) - r'\sin(\alpha)\sin(\beta)\\
+    y' &= r' \cos(\alpha)\sin(\beta) + r'\cos(\beta)\sin(\alpha)
+\end{align*}
+
+Because, a rotation does not change the magnitude we can say that \(r = r'\). Thus 
+
+\begin{align*}
+    x' &= r \cos(\alpha)\cos(\beta) - r\sin(\alpha)\sin(\beta)\\
+    y' &= r \cos(\alpha)\sin(\beta) + r\cos(\beta)\sin(\alpha)
+\end{align*}
+
+Now notice that we have our \(x\) and \(y\) inside the expression
+
+\begin{align*}
+    x' &= x\cos(\beta) - y\sin(\beta)\\
+    y' &= x\sin(\beta) + y\cos(\beta)
+\end{align*}
+
+which gives us 
+
+\[
+\begin{pmatrix}
+    \cos(\phi) & -\sin(\phi)\\
+    \sin(\phi) & \cos(\phi)
+\end{pmatrix}
+\begin{pmatrix}
+    x\\
+    y
+\end{pmatrix}
+\]
+
+\QED
+
+\subsubsection{Other rotation matrices}
+
+\[
+R_x (\phi) =
+\begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & \cos(\phi) & -\sin(\phi) \\
+    0 & \sin(\phi) & \cos(\phi)
+\end{pmatrix}
+\]
+
+\[
+R_y (\phi) =
+\begin{pmatrix}
+    1 & 0 & \sin(\phi) \\
+    0 & 1 & 0 \\
+    -\sin(\phi) & 0 & \cos(\phi)
+\end{pmatrix}
+\]
+
+\[
+R_z (\phi) =
+\begin{pmatrix}
+    \cos(\phi) & -\sin(\phi) & 0 \\
+    \sin(\phi) & \cos(\phi) & 0 \\
+    0 & 0 & 1
+\end{pmatrix}
+\]
+
+
+\subsection{Orthogonal Matrices}
+
+A matrix \(A \in \mathbb{R}^{n \times n}\) is \emph{orthogonal} if its columns vectors form an orthonormal 
+basis.
+\vspace{\baselineskip}
+
+The set of all \emph{orthogonal} matrices is \(O(n)\).
+
+\subsubsection{Properties of orthogonal matrices}
+
+\begin{enumerate}
+    \item \(A \in O(n)\)
+    \item If \(A\) has an inverse then \(A^{-1} = A^T\)
+    \item \(A^T \in O(n)\)
+\end{enumerate}
+
+\textbf{Proof 1-2:}
+
+\begin{align*}
+    A^T = A^{-1} &\iff A^T A = E\\
+                 &\iff (A^T A)_{ij} = \langle a_i, a_j\rangle = \delta_{ij} 1 \le i,j \le n\\
+                 &\iff a_i \bot a_j, i \ne j, \text{ and } \|a_i\| = 1, 1 \le i \le n\\
+                 &\iff A \in O(n)
+\end{align*}
+
+\textbf{Proof 1-3:}
+
+\begin{align*}
+    A \in O(n) &\iff \\
+               &\iff A^{-1} = A^T\\
+               &\iff (A^T)^{-1} = (A^T)^T \\
+               &\iff (A^{1})^{T} = A\\
+               &\iff A^T \in O(n)
+\end{align*}
+
+\textbf{Example of a proof}
+\vspace{\baselineskip}
+
+Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \mathbb{R}^n \backslash \{0\} \).
+
+\[
+H_n = I_n - 2 \frac{uu^T}{u^Tu}
+\]
+
+\(I_n\) is the identity matrix.
+\vspace{\baselineskip}
+
+\textbf{Proof:}
+
+\begin{align*}
+(H_n)^2 &= I \\
+&= \left(I_n - 2 \frac{uu^T}{u^Tu}\right)^2\\
+&= I_n^2 - 4\frac{uu^T}{u^Tu} + 4\left(\frac{uu^T}{u^Tu}\right)^2\\
+&= I_n -4\frac{uu^T}{u^Tu} +4\frac{uu^T uu^T}{(u^Tu)^2}\\ 
+&= I_n -4\frac{uu^T}{u^Tu} +4\frac{u(u^T u)u^T}{(u^Tu)^2}\\ 
+&= I_n -4\frac{uu^T}{u^Tu} +4\frac{uu^T}{u^Tu}\\ 
+&= I_n
+\end{align*}
+
+\QED
+
+\subsection{The Determinants of Orthogonal Matrices}
+
+The \emph{determinant} of this kind of matrices can only be either positioning 1 or negative 1.
+\vspace{\baselineskip}
+
+\textbf{Proof}:
+
+We know that \(\det(I) = I \), therefore
+
+\begin{align*}
+    \det(I) &= \det(A A^{-1}) \\
+            &= \det(A A^T) \\
+            &= \det(A) \det(A^T) \\
+            &= (\det(A))^2 \\
+            &= \|\det (A) \| = 1
+\end{align*}
+
+\QED
+
+\subsection{The Orthogonal Group}
+
+\(O(n)\) with the operation matrix multiplication forms the \emph{orthogonal group}.
+\vspace{\baselineskip}
+
+\subsection{Dot Product}
+
+Given \(f: \mathbb{R}^n \to \mathbb{R}^n\) then this two statements are equivalent.
+
+\[
+\langle f(x), f(y) \rangle = \langle x, y \rangle \quad \forall x,y \in \mathbb{R}^n
+\]
+
+and 
+\vspace{\baselineskip}
+
+\(f\) preserves the angles and length.
+\vspace{\baselineskip}
+
+\(f\) is also called \emph{orthogonal}.
+\vspace{\baselineskip}
+
+\textbf{Proof \(\Rightarrow\):}
+ 
+\[
+\|x\|^2 = \langle x, x \rangle = \langle f(x), f(x) \rangle = \|f(x)\|^2
+\]
+
+This implies the length preservation. The isometry gives us:
+
+\begin{align*}
+\|f(x) - f(y)\|^2 
+&= \langle f(x) - f(y), f(x) - f(y) \rangle \\
+&= \langle f(x), f(x) \rangle - 2\langle f(x), f(y) \rangle + \langle f(y), f(y) \rangle \\
+&= \langle x, x \rangle - 2\langle x, y \rangle + \langle y, y \rangle \\
+&= \langle x - y, x - y \rangle = \|x - y\|^2
+\end{align*}
+
+Then 
+\begin{align*}
+\angle(f(x), f(y)) 
+&= \arccos\left( \frac{\langle f(x), f(y) \rangle}{\|f(x)\| \cdot \|f(y)\|} \right) \\
+&= \arccos\left( \frac{\langle x, y \rangle}{\|x\| \cdot \|y\|} \right) 
+= \angle(x, y)
+\end{align*}
+
+\QED
+\vspace{\baselineskip}
+
+\textbf{Proof \(\Leftarrow\):} 
+
+With \(\alpha = \angle(x, y) = \angle(f(x), f(y))\) gilt:
+
+\[
+\langle f(x), f(y) \rangle = \cos(\alpha) \cdot \|f(x)\| \cdot \|f(y)\| = \cos(\alpha) \cdot \|x\| \cdot \|y\| = \langle x, y \rangle
+\]
+
+\QED
+
+\subsection{Theorem of the Matrix Representation}
+
+The mapping \( f : \mathbb{R}^n \to \mathbb{R}^n \) is orthogonal if and only if  
+the associated matrix representation \( Q \) (with respect to the standard basis) is an orthogonal matrix, i.e., \( Q \in O(n) \).
+\vspace{\baselineskip}
+
+\textbf{Proof \(\Rightarrow\):} 
+
+\( f \) is linear, and thus has a matrix representation \( Q \). It follows that
+
+\[
+\langle Qx, Qy \rangle = \langle Q^\top Qx, y \rangle = \langle x, y \rangle \quad \forall x, y \in \mathbb{R}^n,
+\]
+
+thus,
+
+\[
+\langle Q^\top Qx - x, y \rangle = 0 \quad \forall x, y.
+\]
+
+Choosing \( y = Q^\top Qx - x \), we get
+
+\[
+\langle Q^\top Qx - x, Q^\top Qx - x \rangle = 0 \quad \forall x,
+\]
+
+and hence \( (Q^\top Q - I)x = 0 \quad \forall x \).  
+It follows that \( Q^\top Q = I \), and by Theorem 7.3, \( Q \in O(n) \).
+
+\QED
+\vspace{\baselineskip}
+
+\textbf{Proof \(\Leftarrow\):} 
+
+Follows by the same calculation as above.
+
+\QED
+
+\subsection{Change of Basis}
+
+Let \( f \) be orthogonal. Then the matrix representation of \( f \)  
+with respect to any orthonormal basis is orthogonal.
+\vspace{\baselineskip}
+
+\textbf{Proof:} 
+
+Let \( E \) be the standard basis and \( B \) an orthonormal basis. Let  
+\( Q = M_E^E(f) \) and \( S = T_E^B \) be the change-of-basis matrix from \( B \) to \( E \).  
+Since the columns of \( S \) are the basis vectors of \( B \), we have \( S \in O(n) \).  
+
+\[
+M_B^B(f) = S^{-1} Q S \in O(n),
+\]
+
+due to the group property of \( O(n) \).
+
+\QED
+

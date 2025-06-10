@@ -18,22 +18,29 @@ A\vec{v} = \lambda\vec{v}
 
 To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the eigenvalue equation:
 
+\vspace{\baselineskip}
 \textbf{1. Form the characteristic equation:}
+
     Rewrite the equation \(A\vec{v} = \lambda\vec{v}\) as 
     \((A - \lambda I)\vec{v} = \vec{0}\), where \(\lambda I\) is the identity matrix times \(\lambda\) because 
     this matrix encodes the multiplication by some scalar. 
     
     To have a non-trivial solution \(0\) for \(\vec{v}\), the matrix \((A - \lambda I)\) must be 
-    singular, which means its determinant must be zero because otherwise \(\vec{v}\) would be 0. Thus, we have the characteristic equation:
+    singular, which means its determinant must be zero because otherwise \(\vec{v}\) would be 0. Thus, 
+    we have the characteristic equation:
     \[
     \det(A - \lambda I) = 0
     \]
 
 \textbf{2. Solve for the eigenvalues:}
-    Solve the characteristic equation for \(\lambda\). The solutions \(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of the matrix \(A\).
+
+Solve the characteristic equation for \(\lambda\). The solutions \(\lambda_1, \lambda_2, \dots, \lambda_n\) 
+are the eigenvalues of the matrix \(A\).
+\vspace{\baselineskip}
 
 \textbf{3. Find the eigenvectors:}
-    For each eigenvalue \(\lambda_i\), substitute it back into the equation \((A - \lambda_i I)\mathbf{v} = \mathbf{0}\) and solve for the vector \(\mathbf{v}\). The non-zero solutions for \(\mathbf{v}\) are the eigenvectors corresponding to the eigenvalue \(\lambda_i\).
+
+For each eigenvalue \(\lambda_i\), substitute it back into the equation \((A - \lambda_i I)\vec{v} = \vec{0}\) and solve for the vector \(\vec{v}\). The non-zero solutions for \(\mathbf{v}\) are the eigenvectors corresponding to the eigenvalue \(\lambda_i\).
 
 \subsection{How to diagonalize a matrix}
 
@@ -54,11 +61,13 @@ The process of diagonalization is as follows:
 \textbf{2. Form the matrix \(X\):}
 
 Create a matrix \(X\) whose columns are the linearly independent eigenvectors of \(A\).
-    
+\vspace{\baselineskip}
+
 \textbf{3. Form the diagonal matrix \(D\):} 
 
 Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
-    
+\vspace{\baselineskip}
+
 \textbf{4. Verify the diagonalization:}
     
 Check that \(X^{-1}AX = D\).
@@ -108,7 +117,7 @@ For \(\lambda_1 = 1\):
 
     For \(\lambda_2 = 3\):
     \[
-    (A - 3I)\mathbf{v} = \begin{pmatrix}
+    (A - 3I)\vec{v} = \begin{pmatrix}
     -1 & 1 \\
     1 & -1
     \end{pmatrix} \begin{pmatrix}

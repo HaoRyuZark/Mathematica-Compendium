@@ -115,23 +115,14 @@ if you can.
 The previous fiction we used can explain in the following manner.
 \vspace{\baselineskip}
 
-Given \(y' = g(y)*f(x)\) separate the variables and let \(h(y) = \frac{1}{g(y)}\).
+Given \( f(y) \frac{dy}{dx} dx = \int f(y) dy\). We want to prove that this equality holds via the 
+\emph{chain rule} \(\frac{du}{dx} = \frac{du}{dy} \frac{dy}{dx}\).
 
-\[h(y)y' = f(x)\]
-
-This looks kinda like the \emph{chain rule} we already know from \emph{differentiation} and
-also remember that \(y\) a function of the form \(y(x)\) thus,
-
-\[\int h(y(x)) y'(x)dx = \int f(x) dx\]
-
-Use \emph{U-Substitution}
-
-\[\int h(u) du = \int f(x) dx\]
-
-\[H(y(x)) = F(x) + c\]
-
-\[y(x) = H^{-1}(F(x) + c)\]
-
+\begin{align*}
+\frac{d}{dx} \left( \int f(y) dy \right) &= \frac{d}{dx} \left( \int f(y) dy \right) \frac{dy}{dx}\\
+                                         &= f(y) dy \frac{dy}{dx}\\
+                                         &\implies \int f(y) \frac{dy}{dx} = \int f(y) dy
+\end{align*}
 \QED
 
 \subsection{Geometry of ODE}
@@ -143,7 +134,6 @@ obeys a certain condition, this being the differential equation \(\frac{dy}{dx} 
 A point on this field is called an \emph{Initial Condition} and the curve that goes through
 that point in the slope field is called an \emph{Integral curve} which a solution to the differential
 equation with respect to that initial condition.
-
 
 \subsection{Existence and Uniqueness}
 
@@ -1394,7 +1384,7 @@ which is our \emph{Eigenvalue} problem. This can be solved via
 \]
 
 \[
-\lambda^{2} - (a + b)\lambda + ad - bc = 0
+\lambda^{2} - (a + c)\lambda + ad - bc = 0
 \]
 
 And this solution can lead to the three cases we already know: distinct real roots, complex Conjugate 
@@ -1443,10 +1433,66 @@ by_2' = y_1'' - ay_1'
 \]
 
 \[
-y_1'' - (a + c)y' + (ac - bd)y_1 + bdy_1 = 0
+y_1'' - (a + c)y_1' + (ac - bd)y_1 + bdy_1 = 0
 \]
 
 
+\textbf{Example:}
+\vspace{\baselineskip}
+
+We are given the system of differential equations:
+\[
+\begin{cases}
+y' = y + z \\
+z' = -2y + 3z
+\end{cases}
+\]
+
+We write this system in matrix form:
+\[
+u' = Au, \quad \text{where } u = \begin{bmatrix} y \\ z \end{bmatrix}, \quad A = \begin{bmatrix} 1 & 1 \\ -2 & 3 \end{bmatrix}
+\]
+
+To solve, we find the eigenvalues of \( A \) by solving the characteristic equation:
+\[
+\det(A - \lambda I) = 
+\begin{vmatrix}
+1 - \lambda & 1 \\
+-2 & 3 - \lambda
+\end{vmatrix}
+= (1 - \lambda)(3 - \lambda) + 2 = \lambda^2 - 4\lambda + 5 = 0
+\]
+
+Solving the quadratic equation:
+\[
+\lambda = \frac{4 \pm \sqrt{(-4)^2 - 4(1)(5)}}{2} = \frac{4 \pm \sqrt{-4}}{2} = \frac{4 \pm 2i}{2} = 2 \pm i
+\]
+
+Now we find an eigenvector corresponding to \( \lambda = 2 + i \) by solving:
+\[
+(A - (2 + i)I)v = 0
+\]
+
+\[
+A - (2 + i)I = \begin{bmatrix} 1 - (2 + i) & 1 \\ -2 & 3 - (2 + i) \end{bmatrix}
+= \begin{bmatrix} -1 - i & 1 \\ -2 & 1 - i \end{bmatrix}
+\]
+
+From the first row of the system:
+\[
+(-1 - i)v_1 + v_2 = 0 \Rightarrow v_2 = (1 + i)v_1
+\]
+
+So, an eigenvector corresponding to \( \lambda = 2 + i \) is:
+\[
+v = \begin{bmatrix} 1 \\ 1 + i \end{bmatrix}
+\]
+
+After repeating the previous computation for \(\lambda = 2 - i\) we get the complex solution to the system:
+\[
+u(t) = c_1 e^{(2 + i)t} \begin{bmatrix} 1 \\ 1 + i \end{bmatrix}
++ c_2 e^{(2 - i)t} \begin{bmatrix} 1 \\ 1 - i \end{bmatrix}
+\]
 
 
 

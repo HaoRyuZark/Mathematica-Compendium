@@ -1,7 +1,7 @@
 \newpage
 \section{Multidimensional Integrals}
 
-\subsection{Arc-length of a Curve}
+\subsection{Arclength of a Curve}
 
 We will use the famous technique of approximating the length/area/volume of something
 by dividing it in to equally smaller section that are straight lines in this case. In other cases 
@@ -10,7 +10,7 @@ for this Example
 we notice that there are three differences \(\Delta i\) \(\Delta j\) \(\Delta k\).j
 Now let us take the length of the vector \(\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}\)
 
-The total Arc-length is going to be the sum of all of these sectors
+The total Arclength is going to be the sum of all of these sectors
 \[
 L =  \sum_{i = 1}^{n}\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}
 \]
@@ -43,11 +43,11 @@ For differentiable function on the interval \(t \in [a; b]\)
 
 \subsubsection{Over Vector Field}
 
-Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a vector field, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). 
+Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a \emph{vector field}, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). 
 The \emph{line integral} of \( F \) along \( \gamma \) is:
 
 \[
-\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \vec{r}\,'(t) \rangle \, dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
+\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \frac{\vec{r}}{dt} \rangle dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
 \]
 
 In the context of physics this integral measures the work done by the field \( \vec{F} \) along the path \( \gamma \), such as force over distance.
@@ -137,6 +137,74 @@ This time or curve is \(y = x\) to the parametrized curve is \(\begin{pmatrix}
 
 \[
 \int_{1}^{3}  2t^2 \sqrt{2}dt = \frac{52\sqrt{2}}{3} 
+\]
+
+\subsection{Line Integrals with respect to a specific variable}
+
+We are going to take another look at line integrals but from the perspective of just one variable and how 
+this affects the formulas we know. For the next explanation we will use only functions of two variables to keep the 
+examples simple.
+
+\subsubsection{Over Scalar Field with respect to \emph{x} or \emph{y}}
+
+Imagining how this works in not specially difficult. Imagine taking a line integral where we do not move 
+along the \(y\)-axis and only care about the plane \(xz\). Here our line integral only changes in the fact that in 
+the norm of our curve the component that was responsible for \(y\) will be set 0 and the \(ds\) changes to 
+the variable we are integrating with respect to. In this case \(dx\).
+
+\[
+\int_{c} f(x,y)dx = \int_{c} f(g(t), h(t)) \sqrt{g'(t)^2}dt 
+\]
+
+\subsubsection{Over Vector Field with respect to \emph{x} or \emph{y}}
+
+In the case of a field the story is different in the fact that now our output vectors change depending on the 
+variable we are choosing to left out.
+\vspace{\baselineskip}
+
+Now, given a field \(\vec{F}(x,y) = M(x,y)\imath + N(x,y)\jmath\) and the curve \(\vec{r}(t) = g(t)\imath + h(t)\jmath\). 
+The line integral of \(\vec{F}\) along \(C\) is 
+
+\[
+\int_\gamma \langle \nabla \vec{F}, \frac{\vec{r}}{dt} \rangle dt
+\]
+
+\[
+\int_{a}^{b} M(x,y)g'(t)dt + \int_{a}^{b} N(x,y)h'(t)dt
+\]
+
+Here \(g'(t)dt = dx\) and \(h'(t)dt = dy\)
+
+\[
+\int_{a}^{b} Mdx + \int_{a}^{b} Ndy
+\]
+
+These two integrals give us both the integral with respect to \(x\) and \(y\).
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Curve \(C\) is a portion of the parabola \(y = x^2\)that goes through the points (1,1) to (2,4)
+\vspace{\baselineskip}
+
+Compute: \(\int_{a}^{b} \frac{x}{y} dy\)
+\vspace{\baselineskip}
+
+\textbf{Step 1: Parametrize \(C\)}
+
+\[
+\vec{r}(t) = t\imath + t^2 \jmath \text{ with } 1 \ge i \ge 2
+\]
+
+\textbf{Step 2: Substitute into the integral}
+
+\[
+h'(t)dt= 2t dt
+\]
+
+\[
+\int_{a}^{b} \frac{t}{t^2} 2tdt = \int_{1}^{2} \frac{1}{t} 2tdt = 2 
 \]
 
 \subsection{Potential Function}

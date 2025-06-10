@@ -14,21 +14,22 @@ exists. This derivative measures the rate of change of \( f \) in the direction 
 A function is \emph{(partially) differentiable} at \( \vec{X}_0 \) if all partial derivatives \( \frac{\partial f}{\partial x_i}(\vec{X}_0) \) exist.
 
 \subsection{Differentiability}
-We call a function \(f\) differentiable at \((x_0, y_0, \cdots)\) if and only if:
+We call a function \(f\) differentiable at \((x_1, x_2, \cdots, x_n)\) if and only if:
 
 \[
-f(x_0 + \Delta x, y_0 + \Delta y, \dots) - f(x_0, y_0, \dots) = 
+f(x_1 + \Delta x_1, x_2 + \Delta x_2, \dots, x_n + \Delta x_n) - f(x_1, x_2, \dots, x_n) = 
 \]
 
 \[
-\frac{\partial f(x_0, y_0, \dots)}{\partial x} \Delta x + \frac{\partial f(x_0, y_0, \dots)}{\partial y} \Delta y + \cdots + E_1(\Delta x) + E_2(\Delta y) + \cdots
+\frac{\partial f(x_1, y_2, \dots, x_n)}{\partial x_1} \Delta x_1 + \frac{\partial f(x_1, x_2, \dots, x_n)}{\partial x_2} \Delta x_2 + \cdots + E_1(\Delta x_1) + E_2(\Delta x_n) + \cdots + E_n(\Delta x_n)
 \]
 
-where \(\lim_{\Delta x \to 0}\frac{E_1(\Delta x)}{\Delta x} = \lim_{\Delta y \to 0}\frac{E_2(\Delta y)}{\Delta y} = \cdots = 0\)
+where \(\lim_{\Delta x_1 \to 0}\frac{E_1(\Delta x_1)}{\Delta x_1} = \lim_{\Delta x_2 \to 0}\frac{E_2(\Delta x_2)}{\Delta x_2} = \cdots = 0\)
 
 \subsection{The Gradient}
 
-Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \). The \emph{gradient} of \( f \) at \( \vec{X}_0 \) is:
+Let \( f : U \subseteq \mathbb{R}^n \to \mathbb{R} \) be differentiable at \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) \). 
+The \emph{gradient} of \( f \) at \( \vec{X}_0 \) is:
 
 \[
 \nabla f(\vec{X}_0) = \begin{pmatrix}
@@ -54,7 +55,7 @@ Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_
 \langle \left(\frac{\partial f}{\partial x_1}\hat{v_1} + \cdots + \frac{\partial f}{\partial x_n}\hat{v_n}\right) , \left( \frac{dx_1}{dt}\hat{v_1} + \cdots + \frac{dx_n}{dt}\hat{v_n}\right)\rangle = 0
 \]
 
-From the formula we see that: \(\nabla f\) is tre normal and \(\frac{d\vec{r}}{dt}\) the tangent of the curve
+From the formula we see that: \(\nabla f\) is the normal and \(\frac{d\vec{r}}{dt}\) the tangent vector of the curve
 
 \QED
 
@@ -65,10 +66,8 @@ From the formula we see that: \(\nabla f\) is tre normal and \(\frac{d\vec{r}}{d
 \item \( \nabla(fg) = f \nabla g + g \nabla f \)
 \end{itemize}
 
-The \(\frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) points in the direction of steepest increase of \( f \) and
+The \(\frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) points in the direction of the steepest increase of \( f \) and
  \(- \frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) in the lowest increase.
-
-
 
 \subsection{The Tangent Plane}
 
@@ -348,11 +347,30 @@ Each input measurement must be made with a maximum relative error of \( \boxed{0
 If a function \( F(x, y) = 0 \) defines \( y \) implicitly as a function of \( x \), and \( F \) is differentiable, then:
 
 \[
-\frac{dy}{dx} = -\frac{F_x}{F_y}
+\frac{dz}{dx} = -\frac{F_x}{F_z}
 \]
 
 This generalizes to higher dimensions using the total differential and the implicit function theorem.
+\vspace{\baselineskip}
 
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Given is \(x^2 + y^2 + z^2 = 1\) differentiate with respect to \(x\).
+See \(z\) or the target function as function in terms of the other variables. 
+In this case \(z(x,y)\).
+
+\[
+\frac{d}{dx} x^2 + y^2 + z^2  -1 = 0
+\]
+
+\[
+ 2x + 2z \frac{dz}{dx}  = 0
+\]
+
+\[
+\frac{dz}{dx} = - \frac{x}{z}
+\]
 
 \subsection{Divergence and Curl (Rotation)}
 
@@ -416,10 +434,37 @@ describes local invertibility and orientation.
 Let \( f : \mathbb{R}^n \to \mathbb{R} \) be \( k \)-times continuously differentiable at \( \vec{x}_0 \). Then the Taylor polynomial of degree 2 around \( \vec{x}_0 \) is:
 
 \[
-f(\vec{x}) \approx f(\vec{x}_0) + \langle \nabla f(\vec{x}_0), \vec{x} - \vec{x}_0 \rangle + \frac{1}{2} {(\vec{x} - \vec{x}_0)}^T H_f(\vec{x}_0)(\vec{x} - \vec{x}_0),
+f(\vec{x}) \approx f(\vec{x}_0) + \langle \nabla f(\vec{x}_0), \vec{x} - \vec{x}_0 \rangle + \frac{1}{2} {(\vec{x} - \vec{x}_0)}^T H_f(\vec{x}_0)(\vec{x} - \vec{x}_0) + \cdots,
 \]
 
 where \( H_f(\vec{x}_0) \) is the \emph{Hessian matrix} of second partial derivatives.
+\vspace{\baselineskip}
+
+\textbf{Example:} 
+\vspace{\baselineskip}
+
+Let \( f(x, y) = e^y \sin(x + 2y) \). We expand around the point \( (a, b) = (0, 0) \).
+\vspace{\baselineskip}
+
+First, compute the necessary derivatives at \( (0, 0) \):
+
+\begin{align*}
+f(0, 0) &= \sin(0) = 0 \\
+f_x &= e^y \cos(x + 2y) \quad \Rightarrow \quad f_x(0, 0) = 1 \\
+f_y &= 2y e^y \cos(x + 2y) + e^y \sin(x + 2y) \quad \Rightarrow \quad f_y(0, 0) = 0 + 2 = 2 \\
+f_{xx} &= -e^y \sin(x + 2y) \quad \Rightarrow \quad f_{xx}(0, 0) = 0 \\
+f_{xy} = f_{yx} &= 2e^y \sin(x + 2y) + e^y \cos(x +2y) \quad \Rightarrow \quad f_{xy}(0, 0) = 3 \\
+f_{yy} &= -3 e^y \sin(x + 2y) + 4e^y \cos(x + 2y) \quad \Rightarrow \quad f_{yy}(0, 0) = 0 + 4 = 4
+\end{align*}
+
+
+Now, the second order Taylor polynomial at \( (0, 0) \) is:
+
+\begin{align*}
+f(x, y) \approx\ & 0 + 1 \cdot x + 2 \cdot y \\
+&+ \frac{1}{2} \cdot 0 \cdot x^2 + 3 \cdot x y + \frac{1}{2} \cdot 4 \cdot y^2 \\
+=\, & x + 2y + 3xy + 2y^2
+\end{align*}
 
 
 \subsection{Relative Extrema}
@@ -466,6 +511,7 @@ H_f = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \Rightarrow \text{positive de
 To find local minima or maxima of a function \( f : \mathbb{R}^n \to \mathbb{R} \), we first identify 
 \emph{critical points}, which are the candidates for relative extrema. 
 These are the points where the gradient of \( f \) vanishes or does not exist.
+\vspace{\baselineskip}
 
 \textbf{Step 1: Compute the Gradient}
 
@@ -501,8 +547,9 @@ You use the following techniques to find the points:
 \end{itemize}
 
 There are more but which one to use depends on the kind problem.
+\vspace{\baselineskip}
 
-\emph{Step 3: Analyze the Nature of the Critical Points}
+\textbf{Step 3: Analyze the Nature of the Critical Points}
 
 Once all critical points \( \vec{x}_0 \) satisfying \( \nabla f(\vec{x}_0) = 0 \) are found, analyze each using
  the \emph{second derivative test} involving the Hessian matrix \( H_f \):
@@ -594,37 +641,50 @@ Or basically a Hessian of the Lagrangian starting with\(lambda_1\).
 \vspace{\baselineskip}
 
 We want to find the maximum of the function:
+
 \[
 f(x, y) = xy
 \]
+
 subject to the constraint:
+
 \[
 g(x, y) = 2x + 2y - 40 = 0
 \]
 
 The gradient of the constraint is:
+
 \[
 \nabla g = \begin{pmatrix} 2 \\ 2 \end{pmatrix}
 \]
+
 Since \( \nabla g \ne 0 \), the rank condition is fulfilled, and no further critical points need to be analyzed.
+\vspace{\baselineskip}
 
 \textbf{Step 1: Build the Lagrangian}
+
 \[
 \mathcal{L}(x, y, \lambda) = f(x, y) + \lambda g(x, y) = xy + \lambda (2x + 2y - 40)
 \]
 
 \textbf{Step 2: Compute the necessary conditions}
+
 \[
 \frac{\partial \mathcal{L}}{\partial x} = y + 2\lambda = 0 \quad \Rightarrow \quad \lambda = -\frac{y}{2}
 \]
+
 \[
 \frac{\partial \mathcal{L}}{\partial y} = x + 2\lambda = 0 \quad \Rightarrow \quad \lambda = -\frac{x}{2}
 \]
+
 Equating:
+
 \[
 -\frac{y}{2} = -\frac{x}{2} \Rightarrow x = y
 \]
+
 Using the constraint:
+
 \[
 2x + 2x = 40 \Rightarrow 4x = 40 \Rightarrow x = y = 10
 \]
@@ -688,7 +748,7 @@ T(t) = \begin{pmatrix}
 \end{pmatrix}
 \]
 
-\textbf{Derivation of the Tangent Vector Formula}
+\subsubsection{Derivation of the Tangent Vector Formula}
 
 Given a position vector function \(\vec{r}(t)\), the tangent vector to the curve described by \(\vec{r}(t)\) is 
 obtained by taking the derivative of \(\vec{r}(t)\) with respect to time. This derivative is defined as the following limit:

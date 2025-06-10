@@ -44,7 +44,7 @@ The sequence \( (\vec{x}_n) \) is called a \emph{Cauchy sequence} if for every \
 \|\vec{x}_n - \vec{x}_m\| < \varepsilon \quad \text{for all } n, m > n_0
 \]
 
-\textbf{Example: }
+\textbf{Example I:}
 
 \[
 \lim_{n \to \infty} \vec{X}_n = \lim_{n \to \infty} \begin{pmatrix} \frac{1}{n} \\
@@ -52,6 +52,54 @@ The sequence \( (\vec{x}_n) \) is called a \emph{Cauchy sequence} if for every \
     0 \\ 1 \\ 0
 \end{pmatrix}
 \]
+
+\textbf{Example II:}
+\vspace{\baselineskip}
+
+Given is
+
+\[
+\vec{X}_n = 
+\begin{pmatrix}
+5 - \frac{10}{n}\\
+\frac{1}{n}   
+\end{pmatrix}
+\]
+
+we want to find \(n_0\) for \(\varepsilon = 0,1\)
+
+\[
+\lim_{n \to \infty} \vec{X}_n = 
+\begin{pmatrix}
+5 \\
+0
+\end{pmatrix}
+= \vec{X}_0
+\]
+
+Now use the definition for convergence
+
+\[
+\|\vec{X}_n - \vec{X}_0\| < \varepsilon
+\]
+
+\[
+\left\| 
+\begin{pmatrix}
+    -\frac{10}{n}\\
+    \frac{1}{n}
+\end{pmatrix}
+\right\|
+\]
+
+\[
+\frac{\sqrt{101}}{n} < 0,1
+\]
+\[
+n > 0,1 \sqrt{101} = 100,5
+\]
+
+Therefore, \(n_0 = 101\).
 
 \subsection{Accumulation Point}
 
@@ -84,6 +132,11 @@ means that for every sequence \( (\vec{X}_n) \subset U \) converging to \( \vec{
 \]
 
 The convergence must hold along all possible paths to the point \( \vec{X}_0 \), making the multi-variable limit path-independent and unique (if it exists).
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
 
 
 \subsection{Partial Functions}
@@ -130,6 +183,26 @@ To check if a multi-variable function is continuous it is enough to prove that i
     &\iff \lim_{\vec{h} \to 0} g(\vec{h}) = 0
 \end{align*}
 
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Given is \(\frac{x^3 + 2yx^2 + y^2x + 2y^3}{x + 2y}\) for \((x,y) \ne (0,0)\) and \(0 for (0,0)\).
+
+\begin{align*}
+\frac{x^3 + 2yx^2 + y^2x + 2y^3}{x + 2y} &= (\frac{x^2(x + 2y) + y(x + 2y)}{x + 2y}\\
+&= \frac{(x + 2y)(x^2 + y^2)}{x + 2y}\\
+&= x^2 + y^2
+\end{align*}
+
+Now by taking the limit we see that
+
+\[
+\lim_{(x,y) \to (0,0)} x^2 + y^2 = 0
+\]
+
+Thus, the function is continuous.
+
+
 \subsubsection{Continuity in Polar Coordinates for 2D}
 
 Let \( \vec{X} = (x, y) \) be written in polar coordinates:
@@ -143,6 +216,63 @@ Then:
 \]
 
 This alternative approach helps evaluate limits and continuity at the origin using radial convergence.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Given is 
+
+\[
+f(xy) = 
+\begin{cases}   
+\frac{xy}{x^2 + y^2} \text{ for } (x,y) \ne (0,0) \\ 
+0 \text{ else }
+\end{cases}
+\]
+
+Let \(x = r\cos(\theta)\) and \(y = r\sin(\theta)\)
+
+\begin{align*}
+\lim_{r \to 0} \frac{r\cos(\theta)r\sin(\theta)}{r^2\cos^2(\theta) + r^2\sin^2(\theta)}\\
+= \lim_{r \to 0} \frac{r^2\cos(\theta)\sin(\theta)}{r^2(\cos^2(\theta) + \sin^2(\theta))}\\
+= \lim_{r \to 0} \frac{\cos(\theta)\sin(\theta)}{1}
+\end{align*}
+
+Because of the dependence on \(\theta\) which can give us for \(\theta = \frac{\pi}{4}\) \(\frac{1}{2}\) 
+this functions is not continuous.
+
+
+
+\subsubsection{Substitution}
+
+When dealing with multi-variable functions we can sometimes use \emph{substitution} 
+for converting our function into a single variable function to use \emph{L'Hospital's Rule}.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Given is \(\frac{e^{x^2 + y^2} - 1}{x^2 + y^2}\).
+\vspace{\baselineskip}
+
+See, that we have repeated terms we can substitute. \(p^2 = x^2 + y^2\).
+
+\[
+\frac{e^{p^2} - 1}{p^2}
+\]
+
+Now differentiate
+
+\[
+\frac{2p e^{p^2} }{2p} = e^{p^2}
+\]
+
+Now take the limit
+
+\[
+\lim_{p \to 0} e^{p^2} = 1
+\]
 
 \subsection{Uniform and Lipschitz Continuity}
 
@@ -165,8 +295,6 @@ A function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is \emph{Lipschitz 
 
 If \( L < 1 \), then \( f \) is called a \emph{contraction}.
 
-
-
 \subsection{Epsilon–Delta Criterion}
 
 Let \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \), and \( \vec{X}_0 \in D \). The function \( f \) is continuous at \( \vec{X}_0 \) if:
@@ -177,8 +305,6 @@ Let \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \), and \( \vec{X}_0 \in D \)
 
 This generalizes the familiar epsilon-delta criterion from single-variable calculus to multi-variable settings using norms.
 
-
-
 \subsection{Fixpoints}
   
 A point \( \vec{X}_0 \in D \subseteq \mathbb{R}^n \) is called a \emph{fix-point} of a function \( \vec{\varphi} : D \to \mathbb{R}^n \) if:
@@ -188,8 +314,6 @@ A point \( \vec{X}_0 \in D \subseteq \mathbb{R}^n \) is called a \emph{fix-point
 \]
 
 That is, applying the function does not change the point — it maps to itself.
-
-
 
 \subsection{Banach Fixed Point Theorem}
 
@@ -206,5 +330,21 @@ Then:
 \end{itemize}
 
 This result is fundamental in nonlinear analysis and iterative numerical methods.
+
+\subsection{Vector fields}
+
+A \emph{vector field} is a function \(\vec{f}: \mathbb{R}^n \to \mathbb{R}^n\). Also, just a 
+function with vectors as inputs and outputs.
+
+\[
+\vec{f}(x_1, x_2, \dots, x_n) = A_1(x_1, \dots, x_n)\vec{e}_1 + \cdots + A_n(x_1, \dots, x_n)\vec{e}_n
+\]
+
+We call a vector field \emph{continuous}/\emph{differentiable} if all functions 
+\(A_1, A_2, \dots, A_n\) are continuous/differentiable.
+\vspace{\baselineskip}
+
+As a side node, the \emph{gradient} of a multi-variable function is a vector field.
+
 
 
