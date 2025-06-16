@@ -313,3 +313,110 @@ due to the group property of \( O(n) \).
 
 \QED
 
+\subsection{QR-Decomposition}
+
+A use case of orthogonal matrices is the \emph{QR-Decomposition}. The goal is that given a system \( Ax = b\) 
+with a matrix \(A\in \mathbb{R}^{m \times n}\), \(m \ge n\) and \(rg(A) = n\) we can find two matrices \(Q \text{ and } R\) 
+such that \(A = QR \text{ with } R\in \mathbb{R}^{n \times n} \text{ and } Q \in \mathbb{R}^{m \times n}\).
+\(R\) is matrix with only an upper triangle and \(Q\) is orthogonal for the columns.
+\vspace{\baselineskip}
+
+We know that the best approximation by the method of the least squares is given by
+
+\[
+x_s = (A^T A)^{-1} A^T b
+\]
+
+Because of the orthogonality of the columns \(rg(Q) = rg(A)\) therefore it can be inverted. Therefore,
+we get:
+
+\begin{align*}
+    x_s &= (A^T A)^{-1} A^T b \\
+        &= ((QR)^T (QR))^{-1} (QR)^t b \\
+        &= (R^T Q^T QR)^{-1} (QR)^t b \\
+        &= (R^T R)^{-1} R^T Q^T b \\
+        &=  R^{-1} (R^T)^{-1} R^T Q^T b \\
+        &=  R^{-1} Q^T b \\
+    Rx_s&= Q^T b
+\end{align*}
+
+Thus, we can solve the linear system by finding \(Q\) which is matrix with an orthonormal basis of the 
+vector space which can be found via the Gram-Schmidt algorithm. The matrix \(R\) consists of the matrix of the 
+inner products our \(A\) matrix and \(Q\)
+
+\[
+R =
+\begin{pmatrix}
+    \langle q_1, a_1 \rangle & \langle q_1, a_2 \rangle & \cdots &\langle q_1, a_n\rangle \\ 
+    0 & \langle q_2, a_2 \rangle & \cdots & \langle q_2, a_n\rangle \\ 
+    \vdots & \vdots  & \ddots & \vdots \\
+    0 & 0  & \cdots & \langle q_n, a_n \rangle \\ 
+\end{pmatrix}
+\]
+Or even simpler \(R = Q^T A\).
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Find the \emph{QR-Decomposition} of the matrix \(A\) given by:
+
+\[
+    \begin{pmatrix}
+        1 & 3 \\
+        1 & -1 
+    \end{pmatrix}
+\]
+
+First, we find the orthonormal basis of the columns of our matrix \(A\) 
+
+\[ 
+    q_1 = \frac{a_1}{\|a_1\|} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\]
+
+\[ 
+    r_2 = a_2 - \langle a_2, q_1\rangle q_1 
+    = 
+    \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+    - 
+    \langle  
+    \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+    ,
+    \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+    \rangle    
+    \frac{1}{\sqrt{2}} 
+    \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+    = 
+    \begin{pmatrix}
+        2 \\ -2 
+    \end{pmatrix}
+\]
+
+\[
+    q_2 =
+    \frac{1}{\sqrt{8}}
+    \begin{pmatrix}
+        2 \\ -2 
+    \end{pmatrix}
+\]
+
+\[
+Q = 
+\begin{pmatrix}
+    \frac{1}{\sqrt{2}} & \frac{2}{\sqrt{8}} \\
+    \frac{1}{\sqrt{2}} & -\frac{2}{\sqrt{8}}
+\end{pmatrix}
+\]
+
+\[
+R =
+\begin{pmatrix}
+    \sqrt{2} & sqrt{2} \\
+     0    &    \sqrt{8}
+\end{pmatrix}
+\]
+
+
+
+
+

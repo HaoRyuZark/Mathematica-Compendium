@@ -8,17 +8,64 @@ An eigenvector of a square matrix \(A\) is a non-zero vector \(\vec{v}\) that, w
 \emph{Eigenvalue}
 
 The scalar multiple, denoted by \(\lambda\), is called the eigenvalue associated with the eigenvector \(\mathbf{v}\). It represents the factor by which the eigenvector is scaled when transformed by the matrix \(A\).
+\vspace{\baselineskip}
 
-Mathematically, the relationship between a square matrix \(A\), an eigenvector \(\vec{v}\), and its corresponding eigenvalue \(\lambda\) is expressed by the following equation:
+Mathematically, the relationship between a square matrix \(A\), an eigenvector \(\vec{v}\), and its corresponding eigenvalue \(\lambda\) is 
+expressed by the following equation:
+
 \[
 A\vec{v} = \lambda\vec{v}
 \]
 
+The way we find a method to find them is by manipulating the equation above
+
+\begin{align*}    
+A\vec{v} &= \lambda\vec{v}\\
+A\vec{v} - \lambda\vec{v} &= \vec{0}\\
+A\vec{v} - \lambda I \vec{v} &= \vec{0}\\
+(A\vec{v} - \lambda I) \vec{v} &= \vec{0}
+\end{align*}
+
+Here note that if \((A\vec{v} - \lambda I)\) were invertible then we could multiply both sides by its inverse 
+and then get \(\vec{v} = 0\). But we do not want that therefore, \((A\vec{v} - \lambda I)\) must be linear transformation 
+whose determinant is \(0\) which means that it can not ve invertible.
+
+\begin{align*}    
+(A\vec{v} - \lambda I) \vec{v} &= \vec{0}\\
+\det (A\vec{v} - \lambda I)  &= \vec{0}
+\end{align*}
+
+\subsection{Theorems of Eigenvalues and Eigenvectors}
+
+\subsubsection{Theorem I}
+
+Given an eigenvalue \(\lambda\) of \(f\) and \(v_1, \dots, v_n\) being the eigenvectors of \(f\) with \(\lambda\) 
+then \(v \in L(v_1, \dots, v_k) \backslash \{0\}\) is an eigenvector of \(f\) with \(\lambda\).
+\vspace{\baselineskip}
+
+\subsubsection{Theorem II}
+
+For \(\lambda \in \mathbb{C}\) is \(Eig(f;\lambda):= \{c \in V | f(v) = \lambda v\}\) the \emph{Eigenspace} of 
+\(f\) with \(\lambda\) and, it is a subspace of \(V\).
+
+\subsubsection{Theorem III}
+
+For \(\lambda \ne \gamma \quad Eig(f;\lambda) \cap Eig(f;\gamma) = \{0\}\).
+
+\subsubsection{Theorem IV}
+
+Eigenvectors with different eigenvalues are linearly independent.
+
+\subsection{Theorem V}
+
+\(Eig(f;\lambda) = ker(A - \lambda E)\)
+
+
 \subsection{How to find the Eigenvectors and Eigenvalues}
 
 To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the eigenvalue equation:
-
 \vspace{\baselineskip}
+
 \textbf{1. Form the characteristic equation:}
 
     Rewrite the equation \(A\vec{v} = \lambda\vec{v}\) as 
@@ -26,7 +73,7 @@ To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the 
     this matrix encodes the multiplication by some scalar. 
     
     To have a non-trivial solution \(0\) for \(\vec{v}\), the matrix \((A - \lambda I)\) must be 
-    singular, which means its determinant must be zero because otherwise \(\vec{v}\) would be 0. Thus, 
+    singular like said before, which means its determinant must be zero because otherwise \(\vec{v}\) would be 0. Thus, 
     we have the characteristic equation:
     \[
     \det(A - \lambda I) = 0
@@ -40,7 +87,69 @@ are the eigenvalues of the matrix \(A\).
 
 \textbf{3. Find the eigenvectors:}
 
-For each eigenvalue \(\lambda_i\), substitute it back into the equation \((A - \lambda_i I)\vec{v} = \vec{0}\) and solve for the vector \(\vec{v}\). The non-zero solutions for \(\mathbf{v}\) are the eigenvectors corresponding to the eigenvalue \(\lambda_i\).
+For each eigenvalue \(\lambda_i\), substitute it back into the equation \((A - \lambda_i I)\vec{v} = \vec{0}\) and solve 
+for the vector \(\vec{v}\). The non-zero solutions for \(\vec{v}\) are the eigenvectors corresponding to the 
+eigenvalue \(\lambda_i\). Note that we are going to get infinite solutions thus, we have to write our vector with dependence on the free 
+parameters.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Find the eigenvalues and vectors of 
+
+\[
+A = \begin{pmatrix}
+    1 & 1 \\
+    4 & 1 \\
+\end{pmatrix}
+\]
+
+Let us build the characteristic equation and solve it
+
+\[
+\det 
+\begin{pmatrix}
+    1 - \lambda & 1 \\
+    4 & 1 - \lambda \\
+\end{pmatrix}
+= 0
+\]
+
+\begin{align*}
+(1 - \lambda)^2 - 4 &= 0 \\
+1 - 2\lambda + \lambda^2 - 4 &= 0 \\
+\lambda^2 - 2\lambda - 3 &= 0 \\
+(\lambda - 3) (\lambda + 1) &= 0 
+\end{align*}
+
+We have got the eigenvalues \(\lambda_1 = 3\) and \(\lambda_2 = -1\). Now let us continue by 
+substituting our eigenvalues in the original equation.
+
+\begin{align*}
+    \begin{pmatrix} 1 - \lambda_2 & 1 \\ 4 & 1 - \lambda-2 \\ \end{pmatrix} &= \vec{0} \\
+    \begin{pmatrix} 1 - 2 & 1 \\ 4 & 1 - 2 \\ \end{pmatrix} &= \vec{0} \\
+    \begin{pmatrix} 2 & 1 \\ 4 & 2 \\ \end{pmatrix} &= \vec{0} 
+\end{align*}
+
+Using Gaussian elimination we get: 
+
+\[
+\begin{pmatrix} 
+    2 & 1 \\ 
+    0 & 0 \\ 
+\end{pmatrix} 
+\]
+
+Thus, let \(v_2 = -2\) and \(v_1 = \frac{2}{2} = 1\). This give us the first eigenvector and all of it 
+scalar versions.
+
+\[
+e_1 = \left\{ c \begin{pmatrix} 1 \\ -2 \end{pmatrix} | c \in \mathbb{R}\right\}
+\]
+
+The process for the other eigenvalue is exactly the same.
+
 
 \subsection{How to diagonalize a matrix}
 
@@ -49,7 +158,8 @@ A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(X
 \(A\) such that \(X^{-1}AX = D\), where \(D\) is a diagonal matrix made of eigenvalues.
 
 The order of the eigenvalue and eigenvectors matters if you choose \(\lambda_1, \lambda_2, \dots, \lambda_n\) then the 
-order of the eigenvectors \(v_1, v_2, \dots, v_n\) must also correspond.
+order of the eigenvectors \(v_1, v_2, \dots, v_n\) must also correspond. This process only works if \(A\) 
+has unique eigenvalues or if they are duplicates they have to be linearly independent.
 \vspace{\baselineskip}
 
 The process of diagonalization is as follows:
@@ -82,29 +192,36 @@ A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independen
 Consider the matrix
 \[
 A = \begin{pmatrix}
-2 & 1 \\
-1 & 2
+-3 & -4 \\
+5 & 6
 \end{pmatrix}
 \]
 
-\textbf{Step 1: Find the eigenvalues:}
 
 The characteristic equation is
-    \[
-    \det(A - \lambda I) = \det \begin{pmatrix}
-    2 - \lambda & 1 \\
-    1 & 2 - \lambda
-    \end{pmatrix} = (2 - \lambda)^2 - 1 = \lambda^2 - 4\lambda + 3 = 0
-    \]
-    Solving for \(\lambda\), we get \(\lambda_1 = 1\) and \(\lambda_2 = 3\).
 
-\textbf{Step 2: Find the eigenvectors:}
+\[
+\det(A - \lambda I) 
+= \det 
+\begin{pmatrix}
+        -3 - \lambda & -4 \\
+    5 & 6 - \lambda
+\end{pmatrix} 
+= (-3 - \lambda)(6 - \lambda) + 20 = \lambda^2 - 3\lambda + 2 = 0    
+\]
+\[
+(\lambda - 1)(\lambda - 2)
+\]
+
+Solving for \(\lambda\), we get \(\lambda_1 = 1\) and \(\lambda_2 = 2\).
+\vspace{\baselineskip}
 
 For \(\lambda_1 = 1\):
-    \[
-    (A - I)\mathbf{v} = \begin{pmatrix}
-    1 & 1 \\
-    1 & 1
+
+\[
+   (A - I)\vec{v} = \begin{pmatrix}
+    -4 & -4 \\
+    5 & 5
     \end{pmatrix} \begin{pmatrix}
     x \\
     y
@@ -112,28 +229,43 @@ For \(\lambda_1 = 1\):
     0 \\
     0
     \end{pmatrix}
-    \]
-    This gives \(x + y = 0\), so an eigenvector is \(\mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}\).
+\]
 
-    For \(\lambda_2 = 3\):
-    \[
-    (A - 3I)\vec{v} = \begin{pmatrix}
-    -1 & 1 \\
-    1 & -1
-    \end{pmatrix} \begin{pmatrix}
-    x \\
-    y
-    \end{pmatrix} = \begin{pmatrix}
-    0 \\
-    0
-    \end{pmatrix}
-    \]
-    This gives \(-x + y = 0\), so an eigenvector is \(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\).
+Note that this is telling us that \(x = -y\). Now choose \(x = -1\) and \(y = 1\), which gives us the vector 
 
-\textbf{Step 3: Diagonalize the matrix:}
+\[
+\vec{x} = \begin{pmatrix}
+    -1 // 1
+\end{pmatrix}
+\]
 
-Let \(P = \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}\). Then \(P^{-1} = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}\).
-    \[
-    P^{-1}AP = \frac{1}{2} \begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix} \begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 3 \end{pmatrix} = D
-    \]
-    Thus, \(A\) is diagonalized as \(P^{-1}AP = D\).
+For \(\lambda_2 = 2\) the process is similar, so we are going to skip it. We get the vector
+
+\[
+\vec{y} = \begin{pmatrix}
+    -\frac{4}{5} \\ 1
+\end{pmatrix}
+\]
+
+Now we will complete the process by writing \(D, X, \text{ and } X^{-1}\).
+
+\[
+D = \begin{pmatrix}
+    1 & 0 \\
+    0 & 2
+\end{pmatrix}
+X = \begin{pmatrix}
+    -1  & -\frac{4}{5} \\
+    1   &   1 
+\end{pmatrix}
+X^{1} = \begin{pmatrix}
+    -1  & \frac{4}{5} \\
+    -1   &   -1 
+\end{pmatrix}
+\]
+
+
+
+
+
+

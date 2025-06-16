@@ -32,7 +32,7 @@ p_b(a) = \frac{\langle a, b \rangle}{\langle b, b \rangle} b.
 Let \( U \) be a finitely generated subspace of \( V \) and \( a \in V \). A vector \( p_U(a) \in U \) is called the orthogonal projection of \( a \) onto \( U \) if
 
 \[
-a - p_U(a) \perp u \quad \forall u \in U \quad \text{(3.9)}.
+a - p_U(a) \perp u \quad \forall u \in U
 \]
 
 The question arises about well-definedness, i.e., whether such a vector \( p_U(a) \) always exists and if it is unique. The following concept helps in the discussion of uniqueness.
@@ -72,6 +72,7 @@ v \in U^\perp \quad \text{if and only if} \quad \langle v, u_i \rangle = 0 \quad
 \]
 
 \subsection{How to find the orthogonal complement}
+
 Let \( U \) be a finitely generated subspace of \( V \) with basis \( (u_1, \ldots, u_m) \). To find the orthogonal complement \( U^\perp \), we can solve the system of equations:
 \[
 \langle v, u_i \rangle = 0 \quad \forall 1 \leq i \leq m.
@@ -130,7 +131,6 @@ are orthogonal and normalized, but do not form a basis. Thus, they constitute an
 \textbf{Example:}
 \vspace{\baselineskip}
  
-
 The vectors
 \[
 a_1 =
@@ -168,7 +168,8 @@ Due to the orthogonality of the system, all terms vanish except \( \lambda_j \la
 \[
 \lambda_j \langle v_j, v_j \rangle = 0.
 \]
-Since \( v_j \neq 0 \) in any orthogonal system, we have \( \langle v_j, v_j \rangle = \|v_j\|^2 > 0 \), implying \( \lambda_j = 0 \) for all \( 1 \leq j \leq n \). \qed
+Since \( v_j \neq 0 \) in any orthogonal system, we have \( \langle v_j, v_j \rangle = \|v_j\|^2 > 0 \), implying \( \lambda_j = 0 \) for all \( 1 \leq j \leq n \).
+\QED
 
 \subsection{Representation with Respect to an Orthogonal Basis}
 
@@ -201,7 +202,7 @@ Let \( B = (v_1, \ldots, v_m) \) be an orthogonal system in \( V \), and let \( 
 
     \item If \( \dim(V) = n \), then:
     \[
-    \dim(U) + \dim(U^\perp) = n \quad \text{for every subspace} \, U.
+    \dim(U) + \dim(U^\perp) = n \quad \text{for every subspace } U.
     \]
 \end{itemize}
 
@@ -221,10 +222,33 @@ The Gram-Schmidt process is a method for orthonormalizing a set of vectors in an
 The Gram-Schmidt process can be applied to any finite set of linearly independent vectors in an inner product space, and it is particularly useful for constructing orthonormal bases in Euclidean spaces.
 \vspace{\baselineskip}
 
+\textbf{Proof:}
+
+Let \(W\) be a non-zero finite-dimensional subspace of an inner product space and let \((u_1, \dots, u_n)\) be 
+a basis for \(W\). We will show that an \emph{orthonormal basis} exists.
+\vspace{\baselineskip}
+
+Let \(v_1 = u_1\), then compute the vector \(u_2\) orthogonal to the space \(W_1\) spanned by \(v_1\)
+
+\[
+v_2 = u_2 - proj_{w_1} u_2 = u_2 - \frac{\langle u_2, v_1\rangle}{\|v_1\|} u_2
+\]
+
+Then normalize the vector.
+\vspace{\baselineskip}
+
+We can continue this approach to of projecting the vector of \(u_i\) orthogonal to the space \(W_i\) 
+spanned by all basis previously computed \(v_i\) basis vectors and then normalize it 
+until we get our orthonormal basis. Note, that because our previous vectors formed a basis we can be sure that 
+during this process no zero vector will be generated because then we will have some \(u_i\) that is a linear combination of 
+the other vectors. Thus, this would be a contradiction.
+
+\QED
+\vspace{\baselineskip}
+
 \textbf{Example:}
 \vspace{\baselineskip}
  
-
 Let \( v_1 = (1, 0, 0) \), \( v_2 = (1, 1, 0) \), and \( v_3 = (1, 1, 1) \). The Gram-Schmidt process yields:
 \[
 u_1 = \frac{v_1}{\|v_1\|} = (1, 0, 0), \quad
@@ -268,7 +292,7 @@ Thus, the orthonormal basis is \( (1, 0, 0), (0, 1, 0), (0, 0, 1) \).
     \draw[<->] (0,5) -- (0, -5);
     \draw[->]  (0,0) -- (2,2)node[below]{\(v1\)};
     \draw[->]  (0,0) -- (1, 3)node[above]{\(v2\)};
-    \draw[-, orange] (2,2) -- (1, 3)node[right]{\(v2 - \alpha v1\)};
+    \draw[-, orange] (2,2) -- (1, 3)node[right]{\(v2 - \alpha v1 = w2 \text{ after normalization}\)};
     \draw[->,red]  (0,0) -- (-1, 1)node[below]{\(w2\)};
     \draw[->,blue]  (0,0) -- (1,1)node[below]{\(w1\)};
 
@@ -289,4 +313,24 @@ A vector \(v* \in U\) is called Best Approximation in \(U\) on \(v\), if:
 \|v* - P_u(v)\| = \inf_{u \in U}\|u - v\|
 \]
 
+\textbf{Proof:}
+
+Let \(x \in V\), \(v\) be some point and \(v* = proj_{V} v\). Then 
+\[
+v - x = v - v* + v* - x
+\]
+
+where \(v - v* \in V^{\bot}\) and \(v* - x \in V\). By the Pythagorean Theorem
+
+\[
+\| x - v \|^2 = \|v* - v\|^2 + \|v* - x\|^2
+\]
+
+Therefore
+
+\[
+ \|v* - v\|^2 \le \|v* - x\|^2
+\]
+
+\QED
 
