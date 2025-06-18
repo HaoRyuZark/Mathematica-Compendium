@@ -1,101 +1,133 @@
 \newpage
 \section{Continuity}
 
-Continuity describes functions whose values change smoothly, without abrupt jumps or breaks. This concept is fundamental in calculus, analysis, and fixed point theory.
+Continuity describes functions whose values change smoothly, without abrupt jumps or breaks. 
+This concept is fundamental in calculus, analysis, and fixed point theory.
 
 \subsection{Definition of Continuity at a Point}
 
 A function \(f\) is \emph{continuous} at a point \(x_0\) if:
+
 \[
-\forall \varepsilon > 0, \exists \delta > 0 \text{ such that } |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \varepsilon
+    \forall \varepsilon > 0, \exists \delta > 0 \text{ such that } |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \varepsilon
 \]
 
 Equivalently,
+
 \[
-\lim_{x \to x_0} f(x) = f(x_0)
+    \lim_{x \to x_0} f(x) = f(x_0)
 \]
 
-\textbf{Example: \(\varepsilon \delta\) Exercise for \(f(x) = \frac{1}{x}\) at \(x_0 > 0\)}
+\textbf{Example:} 
+\vspace{\baselineskip}
+
+\(\varepsilon \delta\) Exercise for \(f(x) = \frac{1}{x}\) at \(x_0 > 0\)
+\vspace{\baselineskip}
 
 We want to find \(\delta\) such that:
+
 \[
-|x - x_0| < \delta \Rightarrow \left|\frac{1}{x} - \frac{1}{x_0}\right| < \varepsilon
+    |x - x_0| < \delta \Rightarrow \left|\frac{1}{x} - \frac{1}{x_0}\right| < \varepsilon
 \]
 
 Start by rewriting:
 \[
-\left|\frac{1}{x} - \frac{1}{x_0}\right| = \left|\frac{x_0 - x}{xx_0}\right| = \frac{|x - x_0|}{|x||x_0|}
+    \left|\frac{1}{x} - \frac{1}{x_0}\right| = \left|\frac{x_0 - x}{xx_0}\right| = \frac{|x - x_0|}{|x||x_0|}
 \]
 
 Assume:
+
 \[
-x \in \left[\frac{x_0}{2}, \frac{3x_0}{2}\right] \Rightarrow |x| \ge \frac{x_0}{2}
+    x \in \left[\frac{x_0}{2}, \frac{3x_0}{2}\right] \Rightarrow |x| \ge \frac{x_0}{2}
 \]
 
 Then:
+
 \[
-\left|\frac{1}{x} - \frac{1}{x_0}\right| \le \frac{|x - x_0|}{\frac{x_0}{2} \cdot x_0} = \frac{2}{x_0^2} |x - x_0|
+    \left|\frac{1}{x} - \frac{1}{x_0}\right| \le \frac{|x - x_0|}{\frac{x_0}{2} \cdot x_0} = \frac{2}{x_0^2} |x - x_0|
 \]
 
 Choose:
+
 \[
-\delta = \min\left\{\frac{x_0}{2}, \frac{x_0^2 \varepsilon}{2} \right\}
+    \delta = \min\left\{\frac{x_0}{2}, \frac{x_0^2 \varepsilon}{2} \right\}
 \]
 
 \subsection{Rules of Continuity}
 
 Let \(f\) and \(g\) be continuous at \(x_0\):
 
-\begin{itemize}[label=\(-\)]
-\item \(f + g\), \(f - g\), \(f \cdot g\) are continuous at \(x_0\)
-\item \(\frac{f}{g}\) is continuous at \(x_0\) if \(g(x_0) \ne 0\)
-\item Compositions: if \(g\) is continuous at \(x_0\), and \(f\) is continuous at \(g(x_0)\), then \(f \circ g\) is continuous at \(x_0\)
+\begin{itemize}
+    
+    \item \(f + g\), \(f - g\), \(f \cdot g\) are continuous at \(x_0\)
+    
+    \item \(\frac{f}{g}\) is continuous at \(x_0\) if \(g(x_0) \ne 0\)
+    
+    \item Compositions: if \(g\) is continuous at \(x_0\), and \(f\) is continuous at \(g(x_0)\), 
+    then \(f \circ g\) is continuous at \(x_0\)
+
 \end{itemize}
 
 \subsection{Lipschitz Continuity}
 
-A function \(f: D \subset \mathbb{R} \to \mathbb{R}\) is \emph{Lipschitz continuous} if:
+A function \(f: D \subset \Reals \to \Reals\) is \emph{Lipschitz continuous} if:
+
 \[
-\exists L > 0 \text{ such that } |f(x) - f(y)| \le L |x - y| \quad \forall x, y \in D
+    \exists L > 0 \text{ such that } |f(x) - f(y)| \le L |x - y| \quad \forall x, y \in D
 \]
 
-\begin{itemize}[label=\(-\)]
-\item Every Lipschitz continuous function is uniformly continuous.
-\item The smallest such \(L\) is called the \emph{Lipschitz constant}.
+\begin{itemize}
+
+    \item Every Lipschitz continuous function is uniformly continuous.
+
+    \item The smallest such \(L\) is called the \emph{Lipschitz constant}.
+
 \end{itemize}
 
 \subsection{Banach Fixed Point Theorem}
 
 Let \((X, d)\) be a complete metric space, and \(f: X \to X\) a \emph{contraction mapping}, i.e.,
+
 \[
-\exists L < 1 \text{ such that } d(f(x), f(y)) \le L \cdot d(x, y)
+    \exists L < 1 \text{ such that } d(f(x), f(y)) \le L \cdot d(x, y)
 \]
 
 Then:
-\begin{itemize}[label=\(-\)]
-\item \(f\) has a unique fixed point \(x^* \in X\), such that \(f(x^*) = x^*\)
-\item Iterating \(x_{n+1} = f(x_n)\) converges to \(x^*\)
+
+\begin{itemize}
+
+    \item \(f\) has a unique fixed point \(x^* \in X\), such that \(f(x^*) = x^*\)
+
+    \item Iterating \(x_{n+1} = f(x_n)\) converges to \(x^*\)
+
 \end{itemize}
 
 \emph{Interpretation and Meaning}
 
 The Banach Fixed Point Theorem ensures:
-\begin{itemize}[label=\(-\)]
-\item Existence and uniqueness of solutions (fixed points)
-\item Convergence of approximation by iteration
-\item Powerful tool in numerical methods and differential equations
+
+\begin{itemize}
+
+    \item Existence and uniqueness of solutions (fixed points)
+
+    \item Convergence of approximation by iteration
+
+    \item Powerful tool in numerical methods and differential equations
+
 \end{itemize}
 
 \subsubsection{A Priori and A Posteriori Approximations}
 
 \emph{A priori estimate:}
+
 \[
-|x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
+    |x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
 \]
 
 \emph{A posteriori estimate:}
+
 \[
-|x_n - x^*| \le \frac{L}{1 - L} |x_n - x_{n-1}|
+    |x_n - x^*| \le \frac{L}{1 - L} |x_n - x_{n-1}|
 \]
 
 \subsubsection{Steps for a Fixed Point Exercise}
@@ -103,29 +135,43 @@ The Banach Fixed Point Theorem ensures:
 Given \(f: [a, b] \to [a, b]\), to prove existence and convergence:
 
 \begin{enumerate}
+
     \item \textbf{Show monotonicity:} \(f\) is increasing or decreasing.
+
     \item \textbf{Check interval preservation:} \(f([a, b]) \subseteq [a, b]\)
+
     \item \textbf{Check Lipschitz continuity:} Find \(L < 1\)
+
     \item \textbf{Fixed point iteration:} Choose \(x_0\), compute \(x_{n+1} = f(x_n)\)
+
     \item \textbf{Apply a priori or a posteriori bound}
+
 \end{enumerate}
 
 \textbf{Example: \(f(x) = \frac{1}{x} + 3\) on \([2, 5]\)}
 
-\begin{itemize}[label=\(-\)]
-\item \emph{Domain check:} \(x \in [2, 5] \Rightarrow \frac{1}{x} \in [0.2, 0.5] \Rightarrow f(x) \in [3.2, 3.5] \subset [2, 5]\)
-\item \emph{Lipschitz constant:}
-\[
-f'(x) = -\frac{1}{x^2} \Rightarrow |f'(x)| \le \frac{1}{2^2} = \frac{1}{4} < 1
-\Rightarrow \text{Lipschitz with } L = \frac{1}{4}
-\]
-\item \emph{Contraction verified:} By derivative bound
-\item \emph{Fixed point iteration:}
-\[
-x_0 = 3, \quad x_1 = f(3) = \frac{1}{3} + 3 = \frac{10}{3}, \quad x_2 = f(x_1), \dots
-\]
-\item \emph{Use approximation bounds:}
-\[
-|x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
-\]
+\begin{itemize}
+
+    \item \emph{Domain check:} \(x \in [2, 5] \Rightarrow \frac{1}{x} \in [0.2, 0.5] \Rightarrow f(x) \in [3.2, 3.5] \subset [2, 5]\)
+
+    \item \emph{Lipschitz constant:}
+
+        \[
+            f'(x) = -\frac{1}{x^2} \Rightarrow |f'(x)| \le \frac{1}{2^2} = \frac{1}{4} < 1
+            \Rightarrow \text{Lipschitz with } L = \frac{1}{4}
+        \]
+
+    \item \emph{Contraction verified:} By derivative bound
+
+    \item \emph{Fixed point iteration:}
+
+        \[
+            x_0 = 3, \quad x_1 = f(3) = \frac{1}{3} + 3 = \frac{10}{3}, \quad x_2 = f(x_1), \dots
+        \]
+
+    \item \emph{Use approximation bounds:}
+
+        \[
+            |x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
+        \]
 \end{itemize}

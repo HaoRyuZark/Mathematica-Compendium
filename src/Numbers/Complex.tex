@@ -2,14 +2,18 @@
 \section{Complex Numbers}
 
 A complex number is a number of the form:
+
 \[
 	z = a + bi,
 \]
-where \( a, b \in \mathbb{R} \), and \( i \) is the imaginary unit defined by \( i^2 = -1 \). The set of all complex numbers is denoted by \( \mathbb{C} \).
+
+where \( a, b \in \Reals \), and \( i \) is the imaginary unit defined by \( i^2 = -1 \). 
+The set of all complex numbers is denoted by \( \Complex \).
 
 \subsection{The Complex Plane}
 
-Complex numbers can be represented graphically in the \emph{complex plane}, where the horizontal axis represents the real part and the vertical axis the imaginary part.
+Complex numbers can be represented graphically in the \emph{complex plane}, where the horizontal axis 
+represents the real part and the vertical axis the imaginary part.
 
 \begin{center}
 	\setlength{\unitlength}{0.8cm}
@@ -25,16 +29,21 @@ Complex numbers can be represented graphically in the \emph{complex plane}, wher
 	\end{picture}
 \end{center}
 
-The point \( 1+i \) is located at (1,1), showing 1 unit on the real axis and 1 unit on the imaginary axis.
+The point \( 1+i \) is located at (1,1), showing 1 unit on the real axis and 1 unit on the imaginary 
+axis.
 
 \subsection{Conjugate of a Complex Number}
 
-The \emph{conjugate} of a complex number \( z = a + bi \) is denoted \( \overline{z} \) and is defined as:
+The \emph{conjugate} of a complex number \( z = a + bi \) is denoted \( \overline{z} \) and is defined 
+as:
+
 \[
 	\overline{z} = a - bi
 \]
 
-Geometrically, it reflects the point \( z \) across the real axis in the complex plane. Conjugates are useful in division and in finding the modulus, since:
+Geometrically, it reflects the point \( z \) across the real axis in the complex plane. Conjugates are 
+useful in division and in finding the modulus, since:
+
 \[
 	z \cdot \overline{z} = a^2 + b^2 = |z|^2
 \]
@@ -42,39 +51,44 @@ Geometrically, it reflects the point \( z \) across the real axis in the complex
 \subsection{Operations in Cartesian Coordinates}
 
 Let \( z_1 = a + bi \) and \( z_2 = c + di \) be two complex numbers.
+\vspace{\baselineskip}
 
-\begin{itemize}[label=\(-\)]
-	\item \emph{Addition:}
-	      \[
-		      z_1 + z_2 = (a + c) + (b + d)i
-	      \]
+\emph{Addition:}
 
-	\item \emph{Multiplication:}
-	      \[
-		      z_1 \cdot z_2 = (ac - bd) + (ad + bc)i
-	      \]
+\[ 
+	z_1 + z_2 = (a + c) + (b + d)i
+\]
 
-	\item \emph{Quotient:}
-	      \[
-		      \frac{z_1}{z_2} = \frac{(a + bi)}{(c + di)} \frac{(c - di)}{(c - di)} = \frac{(a + bi)(c - di)}{c^2 + d^2} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}
-	      \]
-\end{itemize}
+\emph{Multiplication:}
+	      
+\[
+	z_1 \cdot z_2 = (ac - bd) + (ad + bc)i
+\]
+
+\emph{Quotient:}
+	      
+\[
+	\frac{z_1}{z_2} = \frac{(a + bi)}{(c + di)} \frac{(c - di)}{(c - di)} = \frac{(a + bi)(c - di)}{c^2 + d^2} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}
+\]
 
 \subsection{Polar Coordinates}
 
 A complex number can also be expressed in polar form as:
+
 \[
 	z = r(\cos \theta + i \sin \theta) = re^{i\theta},
 \]
+
 where:
+
 \begin{align*}
 	r      & = |z| = \sqrt{a^2 + b^2} \quad \text{(modulus)}                       \\
 	\theta & = \arg(z) = \tan^{-1}\left(\frac{b}{a}\right) \quad \text{(argument)}
 \end{align*}
 
-\textbf{Important:} The value of \( \theta \) depends on the quadrant where the complex number lies:
+The value of \( \theta \) depends on the quadrant where the complex number lies:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 	\item Quadrant I: \( a > 0, b > 0 \) - use \( \tan^{-1}(b/a) \)
 	\item Quadrant II: \( a < 0, b > 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
 	\item Quadrant III: \( a < 0, b < 0 \) — add \( \pi \) to \( \tan^{-1}(b/a) \)
@@ -84,21 +98,22 @@ where:
 \subsection{Multiplication and Division in Polar Coordinates}
 
 Given:
+
 \[
 	z_1 = r_1 e^{i\theta_1}, \quad z_2 = r_2 e^{i\theta_2},
 \]
 
-\begin{itemize}[label=\(-\)]
-	\item \emph{Multiplication:}
-	      \[
-		      z_1 \cdot z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
-	      \]
+\emph{Multiplication:}
 
-	\item \emph{Division:}
-	      \[
-		      \frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}
-	      \]
-\end{itemize}
+\[
+	z_1 \cdot z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
+\]
+
+\emph{Division:}
+	      
+\[
+	\frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}
+\]
 
 This polar form is especially useful in simplifying powers and roots of complex numbers using De Moivre’s Theorem.
 
@@ -108,7 +123,8 @@ Let \( z = r(\cos \theta + i \sin \theta) = re^{i\theta} \) be a complex number 
 
 \subsubsection{Exponentiation}
 
-To raise \( z \) to the power \( n \in \mathbb{N} \), we use De Moivre’s Theorem:
+To raise \( z \) to the power \( n \in \Naturals \), we use De Moivre’s Theorem:
+
 \[
 	z^n = r^n (\cos(n\theta) + i \sin(n\theta)) = r^n e^{in\theta}
 \]
@@ -116,18 +132,19 @@ To raise \( z \) to the power \( n \in \mathbb{N} \), we use De Moivre’s Theor
 \subsubsection{Roots of Complex Numbers}
 
 To find the \( n \)th roots of a complex number \( z = r e^{i\theta} \), we use the formula:
+
 \[
 	z^{1/n} = r^{1/n} \left( \cos\left( \frac{\theta + 2k\pi}{n} \right) + i \sin\left( \frac{\theta + 2k\pi}{n} \right) \right), \quad k = 0, 1, \ldots, n-1
 \]
 
-This yields \( n \) distinct roots, each separated by an angle of \( \frac{2\pi}{n} \) in the complex plane.
+This yields \( n \) distinct roots, each separated by an angle of \( \frac{2\pi}{n} \) in 
+the complex plane.
 
 \subsection{Example: Solve \texorpdfstring{\( z^4 = 1 + \sqrt{3}i \)}{}}
 
 \textbf{Step 1: Convert RHS to polar form.}
 
-Let \( w = 1 + \sqrt{3}i \).
-Real part: \( a = 1 \), Imaginary part: \( b = \sqrt{3} \)
+Let \( w = 1 + \sqrt{3}i \). Real part: \( a = 1 \), Imaginary part: \( b = \sqrt{3} \)
 
 \begin{align*}
 	r      & = |w| = \sqrt{1^2 + {(\sqrt{3})}^2} = \sqrt{1 + 3} = 2                    \\
@@ -135,6 +152,7 @@ Real part: \( a = 1 \), Imaginary part: \( b = \sqrt{3} \)
 \end{align*}
 
 So,
+
 \[
 	w = 2 \left( \cos\left( \frac{\pi}{3} \right) + i \sin\left( \frac{\pi}{3} \right) \right)
 \]
@@ -142,11 +160,13 @@ So,
 \textbf{Step 2: Solve \( z^4 = w \to z = w^{1/4} \)}
 
 Using the root formula:
+
 \[
 	z_k = 2^{1/4} \left( \cos\left( \frac{\pi + 2k\pi}{12} \right) + i \sin\left( \frac{\pi + 2k\pi}{12} \right) \right), \quad k = 0, 1, 2, 3
 \]
 
 So the four roots are:
+
 \begin{align*}
 	z_0 & = 2^{1/4} \left( \cos\left( \frac{\pi}{12} \right) + i \sin\left( \frac{\pi}{12} \right) \right)                                                                                                    \\
 	z_1 & = 2^{1/4} \left( \cos\left( \frac{5\pi}{12} \right) + i \sin\left( \frac{5\pi}{12} \right) \right)                                                                                                  \\
@@ -158,124 +178,119 @@ These represent the four complex 4th roots of \( 1 + \sqrt{3}i \), equally space
 
 \subsection{Solving Equations with Complex Numbers}
 
-Solving equations in \( \mathbb{C} \) can involve various forms. Here are the most common cases:
+Solving equations in \( \Complex \) can involve various forms. Here are the most common cases:
 
 \subsubsection{Linear Equations:}
 
-Solve for \( z \) in \( az + b = 0 \), where \( a, b \in \mathbb{C} \), \( a \neq 0 \):
-	      \[
-		      z = -\frac{b}{a}
-	      \]
+Solve for \( z \) in \( az + b = 0 \), where \( a, b \in \Complex \), \( a \neq 0 \):
+	
+\[
+	z = -\frac{b}{a}
+\]
 
 \subsubsection{Equations Involving the Conjugate:}
 
 Solve for \( z \) in equations like \( z + \overline{z} = 4 \).
-	      Let \( z = x + iy \), then \( \overline{z} = x - iy \). So:
-	      \[
-		      z + \overline{z} = 2x \quad \to \quad x = 2 \quad \Rightarrow \quad z = 2 + iy
-	      \]
-	      The imaginary part remains free unless further constraints are given.
+Let \( z = x + iy \), then \( \overline{z} = x - iy \). So:
+	      
+\[
+	z + \overline{z} = 2x \quad \to \quad x = 2 \quad \Rightarrow \quad z = 2 + iy
+\]
+	      
+The imaginary part remains free unless further constraints are given.
 
 \subsubsection{Modulus Equations:}
 
-Solve \( |z| = r \):
-	      Let \( z = x + iy \), then:
-	      \[
-		      \sqrt{x^2 + y^2} = r \to x^2 + y^2 = r^2
-	      \]
-	      This is a circle of radius \( r \) centered at the origin in the complex plane.
+Solve \( |z| = r \). Let \( z = x + iy \), then:
+	      
+\[
+	\sqrt{x^2 + y^2} = r \to x^2 + y^2 = r^2
+\]
+
+This is a circle of radius \( r \) centered at the origin in the complex plane.
 
 \subsubsection{Equations Involving \texorpdfstring{\( z \cdot \overline{z} \)}{}}
 
-Recall \( z \cdot \overline{z} = |z|^2 \).
-	      For example, solve:
-	      \[
-		      z \cdot \overline{z} = 9 \to |z| = 3
-	      \]
-	      Again, a circle in the complex plane of radius 3.
+Recall \( z \cdot \overline{z} = |z|^2 \). For example, solve:
+	      
+\[
+	z \cdot \overline{z} = 9 \to |z| = 3
+\]
+
+Again, a circle in the complex plane of radius 3.
 
 \subsubsection{Quadratic Equations:}
 
 Complex roots occur naturally. For example:
-	      \[
-		      z^2 + 1 = 0 \to z^2 = -1 \Rightarrow z = \pm i
-	      \]
+
+\[
+	z^2 + 1 = 0 \to z^2 = -1 \Rightarrow z = \pm i
+\]
 
 \subsubsection{General Polynomial Equations:}
 
  Use De Moivre’s Theorem or polar form. Example:
-	      \[
-		      z^n = w \to z_k = \sqrt[n]{|w|} \cdot e^{i\left( \frac{\arg(w) + 2k\pi}{n} \right)}, \quad k = 0, 1, \dots, n-1
-	      \]
+	      
+\[
+	z^n = w \to z_k = \sqrt[n]{|w|} \cdot e^{i\left( \frac{\arg(w) + 2k\pi}{n} \right)}, \quad k = 0, 1, \dots, n-1
+\]
 
 \textbf{Example 1:}
 \vspace{\baselineskip}
 
 Solve:
-\[
-	\left( \frac{2 + 3i}{1 + i} + \frac{4 + 5i}{2 - 2i}\right) \hat{z} = \frac{i + 2}{i}
-\]
-\[
-	\left( \frac{-3 -i}{4} \right) \hat{z} = \frac{i + 2}{i}
-\]
-\[
-	\hat{z} = \frac{i + 2}{i} : \frac{-3 -i}{4}
-\]
+
+\begin{align*}
+	\left( \frac{2 + 3i}{1 + i} + \frac{4 + 5i}{2 - 2i}\right) \hat{z} &= \frac{i + 2}{i}\\
+	\left( \frac{-3 -i}{4} \right) \hat{z} &= \frac{i + 2}{i}\\
+	\hat{z} &= \frac{i + 2}{i} : \frac{-3 -i}{4}
+\end{align*}
 
 \textbf{Example 2:}
 \vspace{\baselineskip}
 
 Solve:
+
 \[
 	z - 3i + (2 -i)\hat{z} + 2 = 0
 \]
 
 In this case we let \( z = x + iy \) and \( \hat{z} = x - iy \).
-\[
-	z = 3i - (2 - i)\hat{z} - 2
-\]
-\[
-	x + iy = 3i - (2 - i)(x - iy) - 2
-\]
-\[
-	x + iy = 3i - [2x - 2yi -xi +yi^2] - 2
-\]
-\[
-	x + yi = 3i - 2 + 2x + 2yi + xi + y
-\]
-\[
-	x + yi = (y - 2 -2x) + i(3 + 2y + x)
-\]
-\[
-	x = y - 2 -2x\ y = 3 + 2y + x
-\]
-\[
-	x = \frac{y - 2}{3}\ \ y = 3 + 2y + \frac{y-2}{3} = -7
-\]
-\[
-	x = \frac{-7 -2}{3} = -3
-\]
-\[
-	z = -3 -7i\ \ \hat{z} = -3 + 7i
-\]
+
+\begin{align*}
+	z &= 3i - (2 - i)\hat{z} - 2\\
+	x + iy &= 3i - (2 - i)(x - iy) - 2\\
+	x + iy &= 3i - [2x - 2yi -xi +yi^2] - 2\\
+	x + yi &= 3i - 2 + 2x + 2yi + xi + y\\
+	x + yi &= (y - 2 -2x) + i(3 + 2y + x)\\
+	x &= y - 2 -2x\ y = 3 + 2y + x\\
+	x &= \frac{y - 2}{3}\ \ y = 3 + 2y + \frac{y-2}{3} = -7\\
+	x &= \frac{-7 -2}{3} = -3\\
+	z &= -3 -7i\ \ \hat{z} = -3 + 7i\\
+\end{align*}
+
 \subsection{The Complex Logarithm}
 
 The logarithm of a complex number is multivalued due to the periodic nature of the complex exponential.
 
-Let \( z = re^{i\theta} \) with \( r > 0 \), \( \theta \in \mathbb{R} \). Then:
+Let \( z = re^{i\theta} \) with \( r > 0 \), \( \theta \in \Reals \). Then:
+
 \[
-	\log z = \ln r + i(\theta + 2\pi k), \quad k \in \mathbb{Z}
+	\log z = \ln r + i(\theta + 2\pi k), \quad k \in \Integers
 \]
 
 Here:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
 	\item \( \ln r \) is the natural (real) logarithm of the modulus.
 	\item \( \theta \) is the principal argument \( \arg(z) \in (-\pi, \pi] \).
-	\item The term \( 2\pi k \) accounts for the infinitely many branches of the logarithm in \( \mathbb{C} \).
+	\item The term \( 2\pi k \) accounts for the infinitely many branches of the logarithm in \( \Complex \).
 \end{itemize}
 
 \subsubsection*{Principal Value:}
+
 The principal value of the complex logarithm is often written:
+
 \[
 	\mathrm{Log}\,z = \ln |z| + i\,\mathrm{Arg}(z), \quad \text{where } \mathrm{Arg}(z) \in (-\pi, \pi]
 \]
@@ -284,9 +299,11 @@ The principal value of the complex logarithm is often written:
 \vspace{\baselineskip}
 
 Let \( z = -1 \). Then:
+
 \[
-	|z| = 1, \quad \arg(z) = \pi, \quad \to \log(-1) = i(\pi + 2\pi k), \quad k \in \mathbb{Z}
+	|z| = 1, \quad \arg(z) = \pi, \quad \to \log(-1) = i(\pi + 2\pi k), \quad k \in \Integers
 \]
+
 \[
 	\to \mathrm{Log}(-1) = i\pi
 \]
@@ -294,30 +311,37 @@ Let \( z = -1 \). Then:
 The multivalued nature of \( \log z \) is crucial in advanced complex analysis, especially in defining analytic continuations and branch cuts.
 
 \subsection{Complex Exponents}
+
 \(a^x \approx 1 {\left(a + \alpha \frac{x}{N} \right)}^N \to e^z := \lim_{N \rightarrow \inf} {\left( 1 + \frac{z}{N}\right)}^N \)
 The process above is called linearization of the exponential function by zooming  \(\alpha \approx \frac{dy}{d}\)
+\vspace{\baselineskip}
 
- For  \(e^{ci} = \cos{\theta} + i\sin{\theta}\) every exponentiation of a complex number is a rotation 
+For  \(e^{ci} = \cos{\theta} + i\sin{\theta}\) every exponentiation of a complex number is a rotation 
 in the complex plane.
 
 \[
 	e^{ic} = \lim_{N \to \inf} {\left( 1 + \frac{ic}{N}\right)}^N
 \]
 
- Now imagine that in a sector of a circumference you put triangles one above the other with base of length one and a height of \(\frac{C}{N}\) and 
- an angle of \(\delta\)
+Now imagine that in a sector of a circumference you put triangles one above the other with base of length one and a height of \(\frac{C}{N}\) and 
+an angle of \(\delta\)
+
 \[
 	\tan{\delta} \approx \delta \text{ for } \delta \ll 1
 \]
+
 \[
 	1 + \frac{ci}{N} = 1 \angle \frac{c}{N}, N \gg 1
 \]
+
 \[
 	e^{ic} = \lim_{N \to \inf} {\left( 1 + \frac{c}{N}\right)}^N \to e^{ci} = 1 \angle c = \cos{c} + i\sin{c}
 \]
 
 \subsection{Euler's Formula Proof}
+
 We know that
+
 \[
 	e^{i\pi} = -1 \text{ and } e^{i\theta} = |r|(\cos{\theta} + i\sin{\theta})
 \]

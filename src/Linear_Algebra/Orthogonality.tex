@@ -6,7 +6,7 @@
 Let \( a, b \in V \). The vectors \( a \) and \( b \) are orthogonal to each other if
 
 \[
-\langle a, b \rangle = 0.
+    \langle a, b \rangle = 0.
 \]
 
 This is written as \( a \perp b \).
@@ -15,36 +15,39 @@ This is written as \( a \perp b \).
 With the same proof as in Theorem 2.25, the Pythagorean Theorem holds
 
 \[
-\|a + b\|^2 = \|a\|^2 + \|b\|^2,
+    \|a + b\|^2 = \|a\|^2 + \|b\|^2,
 \]
 
 for \( a \perp b \) in all unitary vector spaces.
 \vspace{\baselineskip}
 
-For the orthogonal projection \( p_b(a) \) of a vector \( a \) onto \( b \), with \( b \neq 0 \), the formula in every unitary vector space is:
+For the orthogonal projection \( p_b(a) \) of a vector \( a \) onto \( b \), with \( b \neq 0 \), the 
+formula in every unitary vector space is:
 
 \[
-p_b(a) = \frac{\langle a, b \rangle}{\langle b, b \rangle} b.
+    p_b(a) = \frac{\langle a, b \rangle}{\langle b, b \rangle} b.
 \]
 
 \subsection{Orthogonal Projection and Orthogonal Complement}
 
-Let \( U \) be a finitely generated subspace of \( V \) and \( a \in V \). A vector \( p_U(a) \in U \) is called the orthogonal projection of \( a \) onto \( U \) if
+Let \( U \) be a finitely generated subspace of \( V \) and \( a \in V \). A vector 
+\( p_U(a) \in U \) is called the orthogonal projection of \( a \) onto \( U \) if
 
 \[
-a - p_U(a) \perp u \quad \forall u \in U
+    a - p_U(a) \perp u \quad \forall u \in U
 \]
 
-The question arises about well-definedness, i.e., whether such a vector \( p_U(a) \) always exists and if it is unique. The following concept helps in the discussion of uniqueness.
+The question arises about well-definedness, i.e., whether such a vector \( p_U(a) \) always exists and 
+if it is unique. The following concept helps in the discussion of uniqueness.
 \vspace{\baselineskip}
 
 For \( M \subseteq V \), the \emph{orthogonal complement} of \( M \) is defined as
 
 \[
-M^\perp = \{ v \in V \mid v \perp u \, \forall u \in M \}.
+    M^\perp = \{ v \in V \mid v \perp u \, \forall u \in M \}.
 \]
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \( M^\perp \) is a subspace of \( V \).
     \item Let \( U \) be a subspace of \( V \). Then, we have \( U \cap U^\perp = \{0\} \).
 \end{itemize}
@@ -52,55 +55,68 @@ M^\perp = \{ v \in V \mid v \perp u \, \forall u \in M \}.
 \textbf{Proof:}
 \vspace{\baselineskip}
 
-We need to check the closure property. For \( u \in M \), \( x, y \in M^\perp \), and \( \lambda \in \mathbb{R} \), we have:
+We need to check the closure property. For \( u \in M \), \( x, y \in M^\perp \), and 
+\( \lambda \in \Reals \), we have:
 
 \[
-\langle x + y, u \rangle = \langle x, u \rangle + \langle y, u \rangle = 0
+    \langle x + y, u \rangle = \langle x, u \rangle + \langle y, u \rangle = 0
 \]
 \[
-\langle \lambda x, u \rangle = \lambda \langle x, u \rangle = 0.
+    \langle \lambda x, u \rangle = \lambda \langle x, u \rangle = 0.
 \]
 
-Let \( a \in U \cap U^\perp \). Then, we have \( \langle a, u \rangle = 0 \) for all \( u \in U \), because \( a \in U^\perp \), and in particular, \( \langle a, a \rangle = 0 \) since \( a \in U \), which implies \( a = 0 \).
+Let \( a \in U \cap U^\perp \). Then, we have \( \langle a, u \rangle = 0 \) for all \( u \in U \), 
+because \( a \in U^\perp \), and in particular, \( \langle a, a \rangle = 0 \) since \( a \in U \), 
+which implies \( a = 0 \).
 
 \subsection{Orthogonality of the basis to the Complement}
 
-Let \( U \) be as before, and let \( (u_1, \ldots, u_m) \) be a basis of \( U \). For \( v \in V \), we have:
+Let \( U \) be as before, and let \( (u_1, \ldots, u_m) \) be a basis of \( U \). For \( v \in V \), we 
+have:
 
 \[
-v \in U^\perp \quad \text{if and only if} \quad \langle v, u_i \rangle = 0 \quad \forall 1 \leq i \leq m.
+    v \in U^\perp \quad \text{if and only if} \quad \langle v, u_i \rangle = 0 \quad \forall 1 \leq i \leq m.
 \]
 
 \subsection{How to find the orthogonal complement}
 
-Let \( U \) be a finitely generated subspace of \( V \) with basis \( (u_1, \ldots, u_m) \). To find the orthogonal complement \( U^\perp \), we can solve the system of equations:
+Let \( U \) be a finitely generated subspace of \( V \) with basis \( (u_1, \ldots, u_m) \). To find the 
+orthogonal complement \( U^\perp \), we can solve the system of equations:
+
 \[
 \langle v, u_i \rangle = 0 \quad \forall 1 \leq i \leq m.
 \]
-This system can be expressed in matrix form as \( A \cdot v = 0 \), where \( A \) is the matrix whose rows are the vectors \( u_i \) and \( v \) is the vector we want to find in \( U^\perp \).
+
+This system can be expressed in matrix form as \( A \cdot v = 0 \), where \( A \) is the matrix whose rows 
+are the vectors \( u_i \) and \( v \) is the vector we want to find in \( U^\perp \).
 
 \subsection{Orthogonal and Orthonormal Systems}
+
 Let \( B = (v_1, \ldots, v_m) \) be an \( m \)-tuple of vectors in \( V \setminus \{0\} \).
-\begin{itemize}[label=\(-\)]
-    \item \( B \) is called an orthogonal system in \( V \) if all the vectors \( v_i \) are pairwise orthogonal.
-    \item An orthogonal system is called an orthonormal system if, in addition, \( \|v_i\| = 1 \) for all \( i = 1, \ldots, m \).
+
+\begin{itemize}
+    \item \( B \) is called an orthogonal system in \( V \) if all the vectors \( v_i \) are pairwise 
+          orthogonal.
+    \item An orthogonal system is called an orthonormal system if, in addition, \( \|v_i\| = 1 \) for 
+          all \( i = 1, \ldots, m \).
     \item An orthogonal system that forms a basis of \( V \) is called an orthogonal basis of \( V \).
     \item An orthonormal system that forms a basis of \( V \) is called an orthonormal basis of \( V \).
 \end{itemize}
 
 \textbf{Notation:}
+
 \[
-\text{OG-System} \quad \text{OG-Basis} \quad \text{ON-System} \quad \text{ON-Basis}
+    \text{OG-System} \quad \text{OG-Basis} \quad \text{ON-System} \quad \text{ON-Basis}
 \]
 
 Using the Kronecker delta symbol \( \delta_{i,j} \):
 
 \[
-\delta_{i,j} =
-\begin{cases}
-1, & \text{if } i = j, \\
-0, & \text{if } i \neq j,
-\end{cases}
+    \delta_{i,j} =
+    \begin{cases}
+    1, & \text{if } i = j, \\
+    0, & \text{if } i \neq j,
+    \end{cases}
 \]
 
 we have \( \langle v_i, v_j \rangle = \delta_{i,j} \) for any orthonormal system.
@@ -112,126 +128,157 @@ we have \( \langle v_i, v_j \rangle = \delta_{i,j} \) for any orthonormal system
 
 The vectors
 \[
-a_1 =
-\begin{pmatrix}
-1 \\
-0 \\
-0
-\end{pmatrix}, \quad
-a_2 =
-\begin{pmatrix}
-0 \\
-1 \\
-0
-\end{pmatrix}
+    a_1 =
+    \begin{pmatrix}
+    1 \\
+    0 \\
+    0
+    \end{pmatrix}, \quad
+    a_2 =
+    \begin{pmatrix}
+    0 \\
+    1 \\
+    0
+    \end{pmatrix}
 \]
-are orthogonal and normalized, but do not form a basis. Thus, they constitute an \textbf{orthonormal system}.
+
+are orthogonal and normalized, but do not form a basis. Thus, they constitute an 
+\emph{orthonormal system}.
 \vspace{\baselineskip}
 
 \textbf{Example:}
 \vspace{\baselineskip}
  
 The vectors
+
 \[
-a_1 =
-\begin{pmatrix}
-\frac{1}{\sqrt{2}} \\
-\frac{1}{\sqrt{2}} \\
-0
-\end{pmatrix}, \quad
-a_2 =
-\begin{pmatrix}
--\frac{1}{\sqrt{2}} \\
-\frac{1}{\sqrt{2}} \\
-0
-\end{pmatrix}, \quad
-a_3 =
-\begin{pmatrix}
-0 \\
-0 \\
-1
-\end{pmatrix}
+    a_1 =
+    \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{1}{\sqrt{2}} \\
+    0
+    \end{pmatrix}, \quad
+    a_2 =
+    \begin{pmatrix}
+    -\frac{1}{\sqrt{2}} \\
+    \frac{1}{\sqrt{2}} \\
+    0
+    \end{pmatrix}, \quad
+    a_3 =
+    \begin{pmatrix}
+    0 \\
+    0 \\
+    1
+    \end{pmatrix}
 \]
 form a basis, are orthogonal and normalized. Therefore, they form an \emph{orthonormal basis}.
 
 \subsection{Linear Independence of Orthogonal Systems}
+
 An orthogonal system \( (v_1, \ldots, v_n) \) is linearly independent.
 \vspace{\baselineskip}
 
 \textbf{Proof:} 
 
 Let \( \sum_{i=1}^n \lambda_i v_i = 0 \). Then, for any \( v_j \), it follows that
+
 \[
-\left\langle \sum_{i=1}^n \lambda_i v_i, v_j \right\rangle = \sum_{i=1}^n \lambda_i \langle v_i, v_j \rangle = 0.
+    \left\langle \sum_{i=1}^n \lambda_i v_i, v_j \right\rangle = \sum_{i=1}^n \lambda_i \langle v_i, v_j 
+    \rangle = 0.
 \]
-Due to the orthogonality of the system, all terms vanish except \( \lambda_j \langle v_j, v_j \rangle \), so
+
+Due to the orthogonality of the system, all terms vanish except \( \lambda_j \langle v_j, v_j \rangle \), 
+so
+
 \[
-\lambda_j \langle v_j, v_j \rangle = 0.
+    \lambda_j \langle v_j, v_j \rangle = 0.
 \]
-Since \( v_j \neq 0 \) in any orthogonal system, we have \( \langle v_j, v_j \rangle = \|v_j\|^2 > 0 \), implying \( \lambda_j = 0 \) for all \( 1 \leq j \leq n \).
+
+Since \( v_j \neq 0 \) in any orthogonal system, we have \( \langle v_j, v_j \rangle = \|v_j\|^2 > 0 \), 
+implying \( \lambda_j = 0 \) for all \( 1 \leq j \leq n \).
+
 \QED
 
 \subsection{Representation with Respect to an Orthogonal Basis}
 
-Let \( B = (v_1, \ldots, v_n) \) be an orthogonal basis of a vector space \( V \). Then for every \( v \in V \), we have:
+Let \( B = (v_1, \ldots, v_n) \) be an orthogonal basis of a vector space \( V \). Then for every 
+\( v \in V \), we have:
+
 \[
-v = \sum_{k=1}^n \frac{\langle v, v_k \rangle}{\langle v_k, v_k \rangle} v_k,
+    v = \sum_{k=1}^n \frac{\langle v, v_k \rangle}{\langle v_k, v_k \rangle} v_k,
 \]
+
 that is, the coordinates of \( v \) with respect to the basis \( B \) are given by
+
 \[
-\left( \frac{\langle v, v_k \rangle}{\|v_k\|^2} \right)_{1 \leq k \leq n}^T.
+    \left( \frac{\langle v, v_k \rangle}{\|v_k\|^2} \right)_{1 \leq k \leq n}^T.
 \]
 
 
 \subsection{Orthogonal Projection and Direct Sum Decomposition}
 
-Let \( B = (v_1, \ldots, v_m) \) be an orthogonal system in \( V \), and let \( U = L(B) \) be the subspace of \( V \) spanned by \( B \).
+Let \( B = (v_1, \ldots, v_m) \) be an orthogonal system in \( V \), and let \( U = L(B) \) be the 
+subspace of \( V \) spanned by \( B \).
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item For every \( v \in V \), the orthogonal projection of \( v \) onto \( U \) is given by:
-    \[
-    p_U(v) = \sum_{i=1}^{m} \frac{\langle v, v_i \rangle}{\langle v_i, v_i \rangle} v_i.
-    \]
+        
+          \[
+               p_U(v) = \sum_{i=1}^{m} \frac{\langle v, v_i \rangle}{\langle v_i, v_i \rangle} v_i.
+          \]
 
-    \item Every vector \( v \in V \) can be uniquely written as the sum \( v = p_U(v) + w \), with \( w \in U^\perp \). In this case, we have:
-    \[
-    w = v - p_U(v).
-    \]
+    \item Every vector \( v \in V \) can be uniquely written as the sum \( v = p_U(v) + w \), with 
+          \( w \in U^\perp \). In this case, we have:
+          
+          \[
+               w = v - p_U(v).
+          \]
 
-    \item \( V = U \oplus U^\perp \), which means that every vector in \( V \) can be uniquely decomposed into a sum of a vector from \( U \) and a vector from \( U^\perp \).
+    \item \( V = U \oplus U^\perp \), which means that every vector in \( V \) can be uniquely 
+          decomposed into a sum of a vector from \( U \) and a vector from \( U^\perp \).
 
     \item If \( \dim(V) = n \), then:
-    \[
-    \dim(U) + \dim(U^\perp) = n \quad \text{for every subspace } U.
-    \]
+  
+          \[
+               \dim(U) + \dim(U^\perp) = n \quad \text{for every subspace } U.
+          \]
 \end{itemize}
 
 \subsection{The Gram-Schmidt Process}
 
-The Gram-Schmidt process is a method for orthonormalizing a set of vectors in an inner product space. Given a finite set of linearly independent vectors \( (v_1, \ldots, v_n) \), the process generates an orthonormal basis \( (u_1, \ldots, u_n) \) as follows:
+The Gram-Schmidt process is a method for orthonormalizing a set of vectors in an inner product space. 
+Given a finite set of linearly independent vectors \( (v_1, \ldots, v_n) \), the process generates an orthonormal basis \( (u_1, \ldots, u_n) \) as follows:
+
 \begin{enumerate}
+
     \item Set \( u_1 = \frac{v_1}{\|v_1\|} \).
+    
     \item For \( k = 2, \ldots, n \):
+
     \begin{enumerate}
         \item Set \( w_k = v_k - \sum_{j=1}^{k-1} \langle v_k, u_j \rangle u_j \).
         \item Set \( u_k = \frac{w_k}{\|w_k\|} \).
     \end{enumerate}
-    \item The resulting set \( (u_1, \ldots, u_n) \) is an orthonormal basis of the subspace spanned by \( (v_1, \ldots, v_n) \).
-\end{enumerate}
 
-The Gram-Schmidt process can be applied to any finite set of linearly independent vectors in an inner product space, and it is particularly useful for constructing orthonormal bases in Euclidean spaces.
+    \item The resulting set \( (u_1, \ldots, u_n) \) is an orthonormal basis of the subspace spanned 
+          by \( (v_1, \ldots, v_n) \).
+
+        \end{enumerate}
+
+The Gram-Schmidt process can be applied to any finite set of linearly independent vectors in an inner 
+product space, and it is particularly useful for constructing orthonormal bases in Euclidean spaces.
 \vspace{\baselineskip}
 
 \textbf{Proof:}
 
-Let \(W\) be a non-zero finite-dimensional subspace of an inner product space and let \((u_1, \dots, u_n)\) be 
-a basis for \(W\). We will show that an \emph{orthonormal basis} exists.
+Let \(W\) be a non-zero finite-dimensional subspace of an inner product space and let 
+\((u_1, \dots, u_n)\) be a basis for \(W\). We will show that an \emph{orthonormal basis} exists.
 \vspace{\baselineskip}
 
 Let \(v_1 = u_1\), then compute the vector \(u_2\) orthogonal to the space \(W_1\) spanned by \(v_1\)
 
 \[
-v_2 = u_2 - proj_{w_1} u_2 = u_2 - \frac{\langle u_2, v_1\rangle}{\|v_1\|} u_2
+    v_2 = u_2 - proj_{w_1} u_2 = u_2 - \frac{\langle u_2, v_1\rangle}{\|v_1\|} u_2
 \]
 
 Then normalize the vector.
@@ -239,9 +286,9 @@ Then normalize the vector.
 
 We can continue this approach to of projecting the vector of \(u_i\) orthogonal to the space \(W_i\) 
 spanned by all basis previously computed \(v_i\) basis vectors and then normalize it 
-until we get our orthonormal basis. Note, that because our previous vectors formed a basis we can be sure that 
-during this process no zero vector will be generated because then we will have some \(u_i\) that is a linear combination of 
-the other vectors. Thus, this would be a contradiction.
+until we get our orthonormal basis. Note, that because our previous vectors formed a basis we can be 
+sure that during this process no zero vector will be generated because then we will have 
+some \(u_i\) that is a linear combination of the other vectors. Thus, this would be a contradiction.
 
 \QED
 \vspace{\baselineskip}
@@ -249,37 +296,47 @@ the other vectors. Thus, this would be a contradiction.
 \textbf{Example:}
 \vspace{\baselineskip}
  
-Let \( v_1 = (1, 0, 0) \), \( v_2 = (1, 1, 0) \), and \( v_3 = (1, 1, 1) \). The Gram-Schmidt process yields:
+Let \( v_1 = (1, 0, 0) \), \( v_2 = (1, 1, 0) \), and \( v_3 = (1, 1, 1) \). The Gram-Schmidt process 
+yields:
+
 \[
-u_1 = \frac{v_1}{\|v_1\|} = (1, 0, 0), \quad
-u_2 = \frac{v_2 - \langle v_2, u_1 \rangle u_1}{\|v_2 - \langle v_2, u_1 \rangle u_1\|} = \left(0, 1, 0\right), \quad
+    u_1 = \frac{v_1}{\|v_1\|} = (1, 0, 0), \quad
+    u_2 = \frac{v_2 - \langle v_2, u_1 \rangle u_1}{\|v_2 - \langle v_2, u_1 \rangle u_1\|} = 
+    \left(0, 1, 0\right), \quad
 \]
 \[
-u_3 = \frac{v_3 - \langle v_3, u_1 \rangle u_1 - \langle v_3, u_2 \rangle u_2}{\|v_3 - \langle v_3, u_1 \rangle u_1 - \langle v_3, u_2 \rangle u_2\|} = \left(0, 0, 1\right).
+    u_3 = \frac{v_3 - \langle v_3, u_1 \rangle u_1 - \langle v_3, u_2 \rangle u_2}{\|v_3 - \langle v_3, u_1 \rangle u_1 - \langle v_3, u_2 \rangle u_2\|} = \left(0, 0, 1\right).
 \]
+
 Thus, the orthonormal basis is \( (1, 0, 0), (0, 1, 0), (0, 0, 1) \).
 
 \subsection{Existence of Orthonormal Bases and Orthogonal Projections}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 
     \item Every finitely generated unitary vector space has an orthonormal basis.
-
+    
     \item This is in general false for vector spaces that are not finitely generated.
-
+    
     \item We now provide the existence proof of the orthogonal projection.
+    
+    \item Let \( V \) be a unitary vector space and \( U \) a finitely generated subspace. 
+          Then for every \( v \in V \), the orthogonal projection \( p_U(v) \) of \( v \) onto \( U \) 
+          exists.
 
-    \item Let \( V \) be a unitary vector space and \( U \) a finitely generated subspace. Then for every \( v \in V \), the orthogonal projection \( p_U(v) \) of \( v \) onto \( U \) exists.
-    
     \item Let \( V \) be a finitely generated unitary vector space and \( U \) any subspace. Then we have \( V = U \oplus U^\perp \), and
-    \[
-    \dim(V) = \dim(U) + \dim(U^\perp).
-    \]
+      
+          \[
+                \dim(V) = \dim(U) + \dim(U^\perp).
+          \]
     
-    \item Every hyperplane in \( \mathbb{R}^n \) admits a normal form; the normal vector is unique up to scalar multiplication.
+    \item Every hyperplane in \( \Reals^n \) admits a normal form; the normal vector is 
+          unique up to scalar multiplication.
     
-    \item Let \( V \) be as above and let \( v_1, \ldots, v_m \in V \). If it is possible to construct orthonormal vectors \( w_1, \ldots, w_m \) from them using the Gram-Schmidt process, then \( (v_1, \ldots, v_m) \) are linearly independent.
-    
+    \item Let \( V \) be as above and let \( v_1, \ldots, v_m \in V \). If it is possible to 
+          construct orthonormal vectors \( w_1, \ldots, w_m \) from them using the Gram-Schmidt process, 
+          then \( (v_1, \ldots, v_m) \) are linearly independent.
+
 \end{itemize}
 
 
@@ -303,33 +360,35 @@ Thus, the orthonormal basis is \( (1, 0, 0), (0, 1, 0), (0, 0, 1) \).
 
 Let \(V\) be a unitary vector space and \(U\) a finitely generated subspace of \(V\).
 A vector \(v* \in U\) is called Best Approximation in \(U\) on \(v\), if:
+
 \[
-\|v* - v\| = \inf_{x \in U}\|x - v\|
+    \|v* - v\| = \inf_{x \in U}\|x - v\|
 \]
 
- also
+also
 
 \[
-\|v* - P_u(v)\| = \inf_{u \in U}\|u - v\|
+    \|v* - P_u(v)\| = \inf_{u \in U}\|u - v\|
 \]
 
 \textbf{Proof:}
 
 Let \(x \in V\), \(v\) be some point and \(v* = proj_{V} v\). Then 
+
 \[
-v - x = v - v* + v* - x
+    v - x = v - v* + v* - x
 \]
 
 where \(v - v* \in V^{\bot}\) and \(v* - x \in V\). By the Pythagorean Theorem
 
 \[
-\| x - v \|^2 = \|v* - v\|^2 + \|v* - x\|^2
+    \| x - v \|^2 = \|v* - v\|^2 + \|v* - x\|^2
 \]
 
 Therefore
 
 \[
- \|v* - v\|^2 \le \|v* - x\|^2
+    \|v* - v\|^2 \le \|v* - x\|^2
 \]
 
 \QED

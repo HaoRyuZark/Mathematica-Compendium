@@ -1,93 +1,108 @@
 \newpage
 \section{Real Numbers}
 
-Let \( K \) be an ordered field.
+Let \( K \) be an ordered field. On the set
+		
+\[
+	\operatorname{ch}(K) := \{ x : \Naturals \to K \mid x \text{ is a Cauchy sequence} \}
+\]
+		
+and on the set
+	
+\[
+	c(K) := \{ x : \Naturals \to K \mid x \text{ is a convergent sequence} \}
+\]
 
-On the set
-		\[
-			\operatorname{ch}(K) := \{ x : \mathbb{N} \to K \mid x \text{ is a Cauchy sequence} \}
-		\]
-		and on the set
-		\[
-			c(K) := \{ x : \mathbb{N} \to K \mid x \text{ is a convergent sequence} \},
-		\]
-		we can define an addition and a multiplication using 1.2.55 and 1.2.57 as follows:
+we can define an addition and a multiplication using 1.2.55 and 1.2.57 as follows:
 
-		If \( x = {(x_n)}_{n \in \mathbb{N}} \) and \( y = {(y_n)}_{n \in \mathbb{N}} \) are Cauchy sequences (respectively, convergent sequences), then their sum is defined as
-		\[
-			x + y := {(x_n)}_{n \in \mathbb{N}} + {(y_n)}_{n \in \mathbb{N}} := {(x_n + y_n)}_{n \in \mathbb{N}},
-		\]
-		and their product is defined as
-		\[
-			x \cdot y := {(x_n)}_{n \in \mathbb{N}} \cdot {(y_n)}_{n \in \mathbb{N}} := {(x_n \cdot y_n)}_{n \in \mathbb{N}}.
-		\]
+If \( x = {(x_n)}_{n \in \Naturals} \) and \( y = {(y_n)}_{n \in \Naturals} \) are Cauchy sequences (respectively, convergent sequences), then their sum is defined as
+	
+\[
+	x + y := {(x_n)}_{n \in \Naturals} + {(y_n)}_{n \in \Naturals} := {(x_n + y_n)}_{n \in \Naturals}
+\]
+	
+and their product is defined as
+
+\[
+	x \cdot y := {(x_n)}_{n \in \Naturals} \cdot {(y_n)}_{n \in \Naturals} := {(x_n \cdot y_n)}_{n \in \Naturals}
+\]
 
 The sum and product satisfy all field axioms except for the existence of the multiplicative inverse.
-The zero element is \( 0_{\mathbb{N}} = (0, 0, \ldots) \), the unit element is \( 1_{\mathbb{N}} = (1, 1, \ldots) \), and the additive inverse of \( x = {(x_n)}_{n \in \mathbb{N}} \) is \( -x = {(-x_n)}_{n \in \mathbb{N}} \).
+The zero element is \( 0_{\Naturals} = (0, 0, \ldots) \), the unit element is \( 1_{\Naturals} = (1, 1, \ldots) \), and the additive inverse of \( x = {(x_n)}_{n \in \Naturals} \) is \( -x = {(-x_n)}_{n \in \Naturals} \).
 We demonstrate the distributive law as an example:
 
-Let \( x = {(x_n)}_{n \in \mathbb{N}}, y = {(y_n)}_{n \in \mathbb{N}}, z = {(z_n)}_{n \in \mathbb{N}} \) be Cauchy sequences (convergent sequences). Then we have:
-\[
-	x(y + z) = {(x_n)}_{n \in \mathbb{N}} \cdot \left( {(y_n)}_{n \in \mathbb{N}} + {(z_n)}_{n \in \mathbb{N}} \right)
-	= {(x_n)}_{n \in \mathbb{N}} \cdot {(y_n + z_n)}_{n \in \mathbb{N}}
-	= {(x_n (y_n + z_n))}_{n \in \mathbb{N}}
-\]
-\[
-	= {(x_n y_n + x_n z_n)}_{n \in \mathbb{N}}
-	= {(x_n y_n)}_{n \in \mathbb{N}} + {(x_n z_n)}_{n \in \mathbb{N}}
-	= xy + xz.
-\]
+Let \( x = {(x_n)}_{n \in \Naturals}, y = {(y_n)}_{n \in \Naturals}, z = {(z_n)}_{n \in \Naturals} \) be Cauchy sequences (convergent sequences). Then we have:
 
-We now aim to construct the ordered field \( \mathbb{R} \) of the real numbers;
+\begin{align*}
+	x(y + z) &= {(x_n)}_{n \in \Naturals} \cdot \left( {(y_n)}_{n \in \Naturals} + {(z_n)}_{n \in \Naturals} \right)\\
+	&= {(x_n)}_{n \in \Naturals} \cdot {(y_n + z_n)}_{n \in \Naturals}\\ 
+	&= {(x_n (y_n + z_n))}_{n \in \Naturals}\\
+	&= {(x_n y_n + x_n z_n)}_{n \in \Naturals}\\
+	&= {(x_n y_n)}_{n \in \Naturals} + {(x_n z_n)}_{n \in \Naturals}\\
+	&= xy + xz.
+\end{align*}
+
+We now aim to construct the ordered field \( \Reals \) of the real numbers;
 it will have the following properties:
 
-\begin{itemize}[label=\(-\)]
-	\item There exists an injective mapping \( j : \mathbb{Q} \to \mathbb{R} \) which respects addition, multiplication, and order, such that the following holds:
-		For all \( z, w \in \mathbb{R} \) with \( z < w \), there exists an \( x \in \mathbb{Q} \) such that
+\begin{itemize}
+	
+	\item There exists an injective mapping \( j : \Rationals \to \Reals \) which respects addition, multiplication, and order, such that the following holds:
+		For all \( z, w \in \Reals \) with \( z < w \), there exists an \( x \in \Rationals \) such that
 		\[
-			z < j(x) < w.
+			z < j(x) < w
 		\]
 
-	\item Every Cauchy sequence in \( \mathbb{R} \) converges.
+	\item Every Cauchy sequence in \( \Reals \) converges.
 
 \end{itemize}
 
-Via \( j \), we identify \( \mathbb{Q} \) with \( j(\mathbb{Q}) \) and consider \( \mathbb{Q} \) as a subset of \( \mathbb{R} \). In \( \mathbb{R} \), the following will additionally hold:
+Via \( j \), we identify \( \Rationals \) with \( j(\Rationals) \) and consider \( \Rationals \) as a subset of \( \Reals \). In \( \Reals \), the following will additionally hold:
 
-\begin{itemize}[label=\(-\)]
-	\item For all \( y > 0 \) and \( n \in \mathbb{N} \), the equation \( x^n = y \) has a solution.
+\begin{itemize}
 
-	\item Every bounded above subset of \( \mathbb{R} \) has a supremum.
+	\item For all \( y > 0 \) and \( n \in \Naturals \), the equation \( x^n = y \) has a solution.
+
+	\item Every bounded above subset of \( \Reals \) has a supremum.
+
 \end{itemize}
 
-We define the following relation on the set \( \operatorname{ch}(\mathbb{Q}) \) of all Cauchy sequences in \( \mathbb{Q} \):
+We define the following relation on the set \( \operatorname{ch}(\Rationals) \) of all Cauchy sequences in \( \Rationals \):
 
 \[
-	x \sim y \quad \text{if and only if} \quad x - y \text{ is a null sequence}.
+	x \sim y \quad \text{if and only if} \quad x - y \text{ is a null sequence}
 \]
 
-That is, \( {(x_n)}_{n \in \mathbb{N}} \sim {(y_n)}_{n \in \mathbb{N}} \) if and only if
+That is, \( {(x_n)}_{n \in \Naturals} \sim {(y_n)}_{n \in \Naturals} \) if and only if
+
 \[
-	x_n - y_n \to 0 \quad (n \to \infty).
+	x_n - y_n \to 0 \quad (n \to \infty)
 \]
 
 \subsection{Definition}
+
 The set
+
 \[
-	\mathbb{R} := \{ {[x]}_{\sim} : x \in \operatorname{ch}(\mathbb{Q}) \}
+	\Reals := \{ {[x]}_{\sim} : x \in \operatorname{ch}(\Rationals) \}
 \]
+
 is called the set of real numbers.
 
 Analogous to the construction of the rational numbers, the real numbers consist of equivalence classes.
-Roughly speaking, an equivalence class consists of those Cauchy sequences in \( \mathbb{Q} \) that exhibit the same limit behavior.
+Roughly speaking, an equivalence class consists of those Cauchy sequences in \( \Rationals \) that exhibit the same limit behavior.
 
 Equipped with the addition
+
 \[
-	+ : \mathbb{R} \times \mathbb{R} \to \mathbb{R}, \quad [x], [y] \mapsto [x] + [y] := [x + y],
+	+ : \Reals \times \Reals \to \Reals, \quad [x], [y] \mapsto [x] + [y] := [x + y]
 \]
+
 and the multiplication
+
 \[
-	\cdot : \mathbb{R} \times \mathbb{R} \to \mathbb{R}, \quad [x], [y] \mapsto [x] \cdot [y] := [xy],
+	\cdot : \Reals \times \Reals \to \Reals, \quad [x], [y] \mapsto [x] \cdot [y] := [xy]
 \]
-\( \mathbb{R} \) is a field. The zero element is \( [0_{\mathbb{N}}] \), and the unit element is \( [1_{\mathbb{N}}] \).
+
+\( \Reals \) is a field. The zero element is \( [0_{\Naturals}] \), and the unit element is \( [1_{\Naturals}] \).
 

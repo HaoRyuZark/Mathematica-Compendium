@@ -7,18 +7,19 @@ In this section, we explore the fundamental concepts of matrices, their operatio
 
 A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns. Formally, an \(m \times n\) matrix \(A\) consists of \(mn\) elements \(a_{ij}\) where \(i = 1, 2, \ldots, m\) and \(j = 1, 2, \ldots, n\):
 
-\begin{equation*}
-A = 
-\begin{pmatrix}
-a_{11} & a_{12} & \cdots & a_{1n} \\
-a_{21} & a_{22} & \cdots & a_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn}
-\end{pmatrix}
-\end{equation*}
+\[
+    A = 
+    \begin{pmatrix}
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    a_{21} & a_{22} & \cdots & a_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m1} & a_{m2} & \cdots & a_{mn}
+    \end{pmatrix}
+\]
 
-The set of all \(m \times n\) matrices with real entries is denoted by \(\mathbb{R}^{m \times n}\). Special cases include:
-\begin{itemize}[label=\(-\)]
+The set of all \(m \times n\) matrices with real entries is denoted by \(\Reals^{m \times n}\). Special cases include:
+
+\begin{itemize}
     \item Square matrix: matrix with the same number of rows and columns (\(m = n\))
     \item Column vector: \(m \times 1\) matrix
     \item Row vector: \(1 \times n\) matrix
@@ -30,29 +31,17 @@ The set of all \(m \times n\) matrices with real entries is denoted by \(\mathbb
 
 Matrix addition and subtraction are defined for matrices of the same dimensions.
 
-\subsubsection*{Addition}
-
-For matrices \(A, B \in \mathbb{R}^{m \times n}\), their sum \(C = A + B\) is defined as:
-
 \[
-c_{ij} = a_{ij} + b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
+    c_{ij} = a_{ij} \pm b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
 \]
 
-\subsubsection*{Subtraction}
-
-Similarly, the difference \(C = A - B\) is defined as:
-
-\[
-c_{ij} = a_{ij} - b_{ij} \quad \text{for all } i = 1, 2, \ldots, m \text{ and } j = 1, 2, \ldots, n
-\]
-
-Matrix addition satisfies the following properties:
+Matrix addition/subtraction satisfies the following properties:
 
 \begin{align*}
-A + B &= B + A \quad \text{(Commutativity)} \\
-(A + B) + C &= A + (B + C) \quad \text{(Associativity)} \\
-A + O &= A \quad \text{(Identity element)} \\
-A + (-A) &= O \quad \text{(Inverse element)}
+    A \pm B &= B \pm A \quad \text{(Commutativity)} \\
+    (A \pm B) + C &= A \pm (B \pm C) \quad \text{(Associativity)} \\
+    A \pm O &= A \quad \text{(Identity element)} \\
+    A + (-A) &= O \quad \text{(Inverse element)}
 \end{align*}
 
 Where \(O\) is the zero matrix.
@@ -62,10 +51,10 @@ Where \(O\) is the zero matrix.
 Matrix multiplication is defined between matrices where the number of columns in the first 
 matrix equals the number of rows in the second matrix.
 
-For \(A \in \mathbb{R}^{m \times p}\) and \(B \in \mathbb{R}^{p \times n}\), their product \(C = AB \in \mathbb{R}^{m \times n}\) is defined as:
+For \(A \in \Reals^{m \times p}\) and \(B \in \Reals^{p \times n}\), their product \(C = AB \in \Reals^{m \times n}\) is defined as:
 
 \[
-c_{ij} = \sum_{k=1}^{p} a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ip}b_{pj}
+    c_{ij} = \sum_{k=1}^{p} a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{ip}b_{pj}
 \]
 
 Matrix multiplication is defined this way to think as each operation as dot product of two vectors.
@@ -84,50 +73,52 @@ Thus, each operation in matrix multiplication is taking the dot product of the \
 of the current row with the column vector of the other matrix.
 
 \[
-A \circ \vec{v} = 
-\begin{pmatrix}
-\langle a_{1}^T, v\rangle \\
-\langle a_{2}^T, v\rangle \\
-\vdots \\
-\langle a_{n}^T, v\rangle 
-\end{pmatrix}
+    A \circ \vec{v} = 
+    \begin{pmatrix}
+    \langle a_{1}^T, v\rangle \\
+    \langle a_{2}^T, v\rangle \\
+    \vdots \\
+    \langle a_{n}^T, v\rangle 
+    \end{pmatrix}
 \]
 
 As for the case with multiple columns
 
 \[
-A \circ B = 
-\begin{pmatrix}
-\langle a_{1}^T, b_{j} \rangle & \dots  & \langle a_{1}^T, b_{n} \rangle \\
-\vdots                         & \cdots &              \vdots            \\
-\langle a_{n}^T, b_{j} \rangle & \dots  & \langle a_{n}^T, b_{n} \rangle 
-\end{pmatrix}
+    A \circ B = 
+    \begin{pmatrix}
+    \langle a_{1}^T, b_{j} \rangle & \dots  & \langle a_{1}^T, b_{n} \rangle \\
+    \vdots                         & \cdots &              \vdots            \\
+    \langle a_{n}^T, b_{j} \rangle & \dots  & \langle a_{n}^T, b_{n} \rangle 
+    \end{pmatrix}
 \]
 
 Matrix multiplication satisfies the following properties:
 
 \begin{align*}
-A(BC) &= (AB)C \quad \text{(Associativity)} \\
-A(B+C) &= AB + AC \quad \text{(Left distributivity)} \\
-(A+B)C &= AC + BC \quad \text{(Right distributivity)} \\
-AI_n &= A \quad \text{and} \quad I_m A = A \quad \text{(Identity)}
+    A(BC) &= (AB)C \quad \text{(Associativity)} \\
+    A(B+C) &= AB + AC \quad \text{(Left distributivity)} \\
+    (A+B)C &= AC + BC \quad \text{(Right distributivity)} \\
+    AI_n &= A \quad \text{and} \quad I_m A = A \quad \text{(Identity)}
 \end{align*}
 
 Note that matrix multiplication is generally not commutative, i.e., \(AB \neq BA\) in most cases.
 
 \subsection{The Transpose of a Matrix}
 
-The transpose of a matrix \(A \in \mathbb{R}^{m \times n}\), denoted \(A^T \in \mathbb{R}^{n \times m}\), is obtained by interchanging rows and columns:
-\begin{equation*}
-{(A^T)}_{ij} = a_{ji} \quad \text{for all } i = 1, 2, \ldots, n \text{ and } j = 1, 2, \ldots, m
-\end{equation*}
+The transpose of a matrix \(A \in \Reals^{m \times n}\), denoted \(A^T \in \Reals^{n \times m}\), is obtained by interchanging rows and columns:
 
-Properties of the transpose include:
+\[
+    {(A^T)}_{ij} = a_{ji} \quad \text{for all } i = 1, 2, \ldots, n \text{ and } j = 1, 2, \ldots, m
+\]
+
+\subsubsection{Properties of the Transpose}
+
 \begin{align*}
-{(A^T)}^T &= A \\
-{(A + B)}^T &= A^T + B^T \\
-{(AB)}^T &= B^T A^T \\
-{(\alpha A)}^T &= \alpha A^T \quad \text{for any scalar } \alpha
+    {(A^T)}^T &= A \\
+    {(A + B)}^T &= A^T + B^T \\
+    {(AB)}^T &= B^T A^T \\
+    {(\alpha A)}^T &= \alpha A^T \quad \text{for any scalar } \alpha
 \end{align*}
 
 
@@ -136,7 +127,7 @@ Here are given \(A = (a_1, \dots, a_n)\) with \(Ax\) as some vector and \(b\) so
 \(a_k\) is some row of \(A\).
 
 \[
-\langle a_k, b - Ax \rangle = 0 \quad \forall k \iff A^{T} (b - Ax) = \vec{0}
+    \langle a_k, b - Ax \rangle = 0 \quad \forall k \iff A^{T} (b - Ax) = \vec{0}
 \]
 
 \subsection{The Equivalence of Matrices}
@@ -144,7 +135,8 @@ Here are given \(A = (a_1, \dots, a_n)\) with \(Ax\) as some vector and \(b\) so
 Two matrices \(A\) and \(B\) are said to be equivalent if one can be transformed into the other through a finite sequence of elementary row operations. We write \(A \sim B\) to denote this equivalence.
 
 The elementary row operations are:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item Interchanging two rows: \(R_i \leftrightarrow R_j\)
     \item Multiplying a row by a non-zero scalar: \(R_i \mapsto \alpha R_i\) where \(\alpha \neq 0\)
     \item Adding a multiple of one row to another: \(R_i \mapsto R_i + \alpha R_j\) where \(i \neq j\)
@@ -155,22 +147,26 @@ Matrix equivalence is an equivalence relation, satisfying reflexivity, symmetry,
 \subsubsection{Row Echelon Form (REF)}
 
 A matrix is in row echelon form if:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item All rows consisting entirely of zeros are at the bottom of the matrix.
     \item The leading entry (first non-zero element) of each non-zero row is to the right of the leading entry of the row above it.
     \item All entries in a column below a leading entry are zeros.
 \end{itemize}
 
 \subsubsection{Reduced Row Echelon Form (RREF)}
+
 A matrix is in reduced row echelon form if:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item It is in row echelon form.
     \item Each leading entry is 1.
     \item Each leading entry is the only non-zero entry in its column.
 \end{itemize}
 
 The Gauss-Jordan elimination algorithm proceeds as follows:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item Start with the leftmost non-zero column.
     \item Find the pivot (non-zero element) in this column. If necessary, swap rows to move a non-zero element to the pivot position.
     \item Divide the pivot row by the pivot value to make the pivot equal to 1.
@@ -181,17 +177,19 @@ The Gauss-Jordan elimination algorithm proceeds as follows:
 
 \subsection{The Inverse of a Matrix and Its Properties}
 
-For a square matrix \(A \in \mathbb{R}^{n \times n}\), the inverse matrix \(A^{-1}\) (if it exists) satisfies:
-\begin{equation*}
-A A^{-1} = A^{-1} A = I_n
-\end{equation*}
+For a square matrix \(A \in \Reals^{n \times n}\), the inverse matrix \(A^{-1}\) (if it exists) satisfies:
+
+\[
+    A A^{-1} = A^{-1} A = I_n
+\]
 
 \subsubsection{Properties of the Inverse}
+
 \begin{align*}
-{(A^{-1})}^{-1} &= A \\
-{(AB)}^{-1} &= B^{-1}A^{-1} \\
-{(A^T)}^{-1} &= {(A^{-1})}^T \\
-\det(A^{-1}) &= \frac{1}{\det(A)}
+    {(A^{-1})}^{-1} &= A \\
+    {(AB)}^{-1} &= B^{-1}A^{-1} \\
+    {(A^T)}^{-1} &= {(A^{-1})}^T \\
+    \det(A^{-1}) &= \frac{1}{\det(A)}
 \end{align*}
 
 \subsubsection{Finding the Inverse}
@@ -209,10 +207,12 @@ Form the augmented matrix \([A|I_n]\) and apply Gauss-Jordan elimination to tran
 \emph{Adjoint Method}
 
 For an \(n \times n\) matrix \(A\):
-\begin{equation*}
-A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
-\end{equation*}
-where \(\text{adj}(A)\) is the adjoint (or adjugate) of \(A\), defined as the transpose of the co-factor matrix.
+
+\[
+    A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
+\]
+
+Where \(\text{adj}(A)\) is the adjoint (or adjugate) of \(A\), defined as the transpose of the co-factor matrix.
 
 A matrix is invertible if and only if its determinant is non-zero. Such matrices are called non-singular or regular matrices.
 
@@ -221,12 +221,24 @@ A matrix is invertible if and only if its determinant is non-zero. Such matrices
 The rank of a matrix \(A\), denoted \(\text{rank}(A)\) or \(\text{rg}(A)\), is the dimension of the column space (or equivalently, the row space) of \(A\).
 
 Equivalent definitions of rank include:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item The maximum number of linearly independent columns of \(A\)
     \item The maximum number of linearly independent rows of \(A\)
     \item The order of the largest non-zero minor of \(A\)
     \item The number of non-zero rows in any row echelon form of \(A\)
 \end{itemize}
+
+\subsection{How to isolate Matrices}
+
+Like in other types of equations we can isolate a matrix by doing the proper operations.
+
+\begin{itemize}
+    \item \(A \pm B = C \implies A = C \mp B\) 
+    \item \(AB = C \implies ABB^{-1} = CB^{-1}  \implies A = CB^{-1}\)
+    \item \(AB = C \implies A^{-1}AB = A^{-1}C  \implies B = A^{-1}C\)
+\end{itemize}
+
 
 \subsubsection{Finding the Rank}
 
@@ -236,16 +248,18 @@ To find the rank of a matrix:
     \item Count the number of non-zero rows in the resulting matrix
 \end{enumerate}
 
-Properties of rank include:
+\subsubsection{Properties of Rank}
+
 \begin{align*}
-&\text{rank}(A) \leq \min(m,n) \text{ for } A \in \mathbb{R}^{m \times n} \\
-&\text{rank}(A^T) = \text{rank}(A) \\
-&\text{rank}(AB) \leq \min(\text{rank}(A), \text{rank}(B)) \\
-&\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)
+    &\text{rank}(A) \leq \min(m,n) \text{ for } A \in \Reals^{m \times n} \\
+    &\text{rank}(A^T) = \text{rank}(A) \\
+    &\text{rank}(AB) \leq \min(\text{rank}(A), \text{rank}(B)) \\
+    &\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)
 \end{align*}
 
-For a square matrix \(A \in \mathbb{R}^{n \times n}\), the following are equivalent:
-\begin{itemize}[label=\(-\)]
+For a square matrix \(A \in \Reals^{n \times n}\), the following are equivalent:
+
+\begin{itemize}
     \item \(A\) is invertible
     \item \(\text{rank}(A) = n\)
     \item \(\det(A) \neq 0\)
@@ -256,15 +270,15 @@ For a square matrix \(A \in \mathbb{R}^{n \times n}\), the following are equival
 
 \subsection{The Definitions of Column Space, Row Space, and Null Space}
 
-These fundamental spaces associated with a matrix \(A \in \mathbb{R}^{m \times n}\) provide important insights into its structure.
+These fundamental spaces associated with a matrix \(A \in \Reals^{m \times n}\) provide important insights into its structure.
 
 \subsubsection{Column Space}
 
 The column space of \(A\), denoted \(\text{Col}(A)\), is the span of the columns of \(A\):
 
-\begin{equation*}
-\text{Col}(A) = \{\vec{y} \in \mathbb{R}^m : \vec{y} = A\vec{x} \text{ for some } \vec{x} \in \mathbb{R}^n\}
-\end{equation*}
+\[
+    \text{Col}(A) = \{\vec{y} \in \Reals^m : \vec{y} = A\vec{x} \text{ for some } \vec{x} \in \Reals^n\}
+\]
 
 This is also called the range or image of the linear transformation represented by \(A\). The dimension of the column space equals the rank of \(A\).
 
@@ -273,9 +287,9 @@ This is also called the range or image of the linear transformation represented 
 The \emph{row space} of \(A\), denoted \(\text{Row}(A)\), is the span of the rows of \(A\):
  It is also perpendicular to the \emph{Null space}.
 
-\begin{equation*}
-\text{Row}(A) = \text{Col}(A^T)
-\end{equation*}
+\[
+    \text{Row}(A) = \text{Col}(A^T)
+\]
 
 The dimension of the \emph{row space} also equals the rank of \(A\).
 
@@ -284,9 +298,9 @@ The dimension of the \emph{row space} also equals the rank of \(A\).
 The null space (or kernel) of \(A\), denoted \(\text{Null}(A)\) or \(\text{Ker}(A)\), 
 is the set of all vectors that \(A\) maps to zero:
 
-\begin{equation*}
-\text{Null}(A) = \{\vec{x} \in \mathbb{R}^n : A\vec{x} = \vec{0}\}
-\end{equation*}
+\[
+    \text{Null}(A) = \{\vec{x} \in \Reals^n : A\vec{x} = \vec{0}\}
+\]
 
 The dimension of the null space is called the nullity of \(A\), denoted \(\text{nullity}(A)\).
 
@@ -294,23 +308,25 @@ The dimension of the null space is called the nullity of \(A\), denoted \(\text{
 
 The left null space of \(A\) is the null space of \(A^T\):
 
-\begin{equation*}
-\text{Null}(A^T) = \{\vec{y} \in \mathbb{R}^m : A^T\vec{y} = \vec{0}\} = \{\vec{y} \in \mathbb{R}^m : \vec{y}^T A = \vec{0}^T\}
-\end{equation*}
+\[
+    \text{Null}(A^T) = \{\vec{y} \in \Reals^m : A^T\vec{y} = \vec{0}\} = \{\vec{y} \in \Reals^m : \vec{y}^T A = \vec{0}^T\}
+\]
 
 The Rank-Nullity Theorem connects these spaces:
 
-\begin{equation*}
-\text{rank}(A) + \text{nullity}(A) = n
-\end{equation*}
+\[
+    \text{rank}(A) + \text{nullity}(A) = n
+\]
 
 To find a basis for these spaces:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item \emph{Column space}: Take the linearly independent columns of \(A\).
     \item \emph{Row space}: Take the non-zero rows from any row echelon form of \(A\).    
     \item \emph{Null space}: Solve the homogeneous system \(A\vec{x} = \vec{0}\) and express the general 
     solution in terms of free variables.
 \end{itemize}
+
 \subsection{Examples of Matrix Operations}
 
 In this subsection, we provide detailed examples of Gauss-Jordan elimination and matrix multiplication to illustrate these fundamental matrix operations.
@@ -319,61 +335,62 @@ In this subsection, we provide detailed examples of Gauss-Jordan elimination and
 
 Consider the matrices \(A\) and \(B\) given by:
 
-\begin{equation*}
-A = 
-\begin{pmatrix}
-2 & 3 & 1 \\
-1 & 0 & -2
-\end{pmatrix} \in \mathbb{R}^{2 \times 3}
-\quad \text{and} \quad
-B = 
-\begin{pmatrix}
-1 & 2 \\
--1 & 3 \\
-4 & 0
-\end{pmatrix} \in \mathbb{R}^{3 \times 2}
-\end{equation*}
+\[
+    A = 
+    \begin{pmatrix}
+    2 & 3 & 1 \\
+    1 & 0 & -2
+    \end{pmatrix} \in \Reals^{2 \times 3}
+    \quad \text{and} \quad
+    B = 
+    \begin{pmatrix}
+    1 & 2 \\
+    -1 & 3 \\
+    4 & 0
+    \end{pmatrix} \in \Reals^{3 \times 2}
+\]
 
-To compute the product \(C = AB \in \mathbb{R}^{2 \times 2}\), we calculate each entry \(c_{ij}\) using the formula:
+To compute the product \(C = AB \in \Reals^{2 \times 2}\), we calculate each entry \(c_{ij}\) using the formula:
 
-\begin{equation*}
-c_{ij} = \sum_{k=1}^{3} a_{ik} b_{kj}
-\end{equation*}
+\[
+    c_{ij} = \sum_{k=1}^{3} a_{ik} b_{kj}
+\]
 
 Let's calculate each entry of \(C\):
 
 \begin{align*}
-c_{11} &= a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} \\
-&= 2 \cdot 1 + 3 \cdot (-1) + 1 \cdot 4 \\
-&= 2 - 3 + 4 = 3
+    c_{11} &= a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} \\
+    &= 2 \cdot 1 + 3 \cdot (-1) + 1 \cdot 4 \\
+    &= 2 - 3 + 4 = 3
 \end{align*}
 
 \begin{align*}
-c_{12} &= a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32} \\
-&= 2 \cdot 2 + 3 \cdot 3 + 1 \cdot 0 \\
-&= 4 + 9 + 0 = 13
+    c_{12} &= a_{11}b_{12} + a_{12}b_{22} + a_{13}b_{32} \\
+    &= 2 \cdot 2 + 3 \cdot 3 + 1 \cdot 0 \\
+    &= 4 + 9 + 0 = 13
 \end{align*}
 
 \begin{align*}
-c_{21} &= a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31} \\
-&= 1 \cdot 1 + 0 \cdot (-1) + (-2) \cdot 4 \\
-&= 1 + 0 - 8 = -7
+    c_{21} &= a_{21}b_{11} + a_{22}b_{21} + a_{23}b_{31} \\
+    &= 1 \cdot 1 + 0 \cdot (-1) + (-2) \cdot 4 \\
+    &= 1 + 0 - 8 = -7
 \end{align*}
 
 \begin{align*}
-c_{22} &= a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32} \\
-&= 1 \cdot 2 + 0 \cdot 3 + (-2) \cdot 0 \\
-&= 2 + 0 + 0 = 2
+    c_{22} &= a_{21}b_{12} + a_{22}b_{22} + a_{23}b_{32} \\
+    &= 1 \cdot 2 + 0 \cdot 3 + (-2) \cdot 0 \\
+    &= 2 + 0 + 0 = 2
 \end{align*}
 
 Therefore, the product \(C = AB\) is:
-\begin{equation*}
-C = AB = 
-\begin{pmatrix}
-3 & 13 \\
--7 & 2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    C = AB = 
+    \begin{pmatrix}
+    3 & 13 \\
+    -7 & 2
+    \end{pmatrix}
+\]
 
 Let's verify that matrix multiplication is not generally commutative by attempting to compute \(BA\):
 \vspace{\baselineskip}
@@ -385,126 +402,138 @@ Since \(B\) is a \(3 \times 2\) matrix and \(A\) is a \(2 \times 3\) matrix, the
 \vspace{\baselineskip}
 
 We'll use Gauss-Jordan elimination to solve the linear system:
+
 \begin{align*}
-2x + y - z &= 8 \\
--3x - y + 2z &= -11 \\
-x + y + z &= 3
+    2x + y - z &= 8 \\
+    -3x - y + 2z &= -11 \\
+    x + y + z &= 3
 \end{align*}
 
 First, we set up the augmented matrix:
-\begin{equation*}
-\begin{pmatrix}
-2 & 1 & -1 & | & 8 \\
--3 & -1 & 2 & | & -11 \\
-1 & 1 & 1 & | & 3
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    2 & 1 & -1 & | & 8 \\
+    -3 & -1 & 2 & | & -11 \\
+    1 & 1 & 1 & | & 3
+    \end{pmatrix}
+\]
 
 Now we apply Gauss-Jordan elimination to transform this into reduced row echelon form:
 \vspace{\baselineskip}
 
 \textbf{Step 1:} We'll choose the first element in the first row as our pivot. Let's first swap row 1 and row 3 to get a simpler pivot:
 
-\begin{equation*}
-\begin{pmatrix}
-1 & 1 & 1 & | & 3 \\
--3 & -1 & 2 & | & -11 \\
-2 & 1 & -1 & | & 8
-\end{pmatrix}
-\end{equation*}
+\[
+    \begin{pmatrix}
+    1 & 1 & 1 & | & 3 \\
+    -3 & -1 & 2 & | & -11 \\
+    2 & 1 & -1 & | & 8
+    \end{pmatrix}
+\]
 
 \textbf{Step 2:} Eliminate the first elements in rows 2 and 3:
 
 Row 2 + 3 \(\times\) Row 1:
-\begin{equation*}
-\begin{pmatrix}
-1 & 1 & 1 & | & 3 \\
-0 & 2 & 5 & | & -2 \\
-2 & 1 & -1 & | & 8
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 1 & 1 & | & 3 \\
+    0 & 2 & 5 & | & -2 \\
+    2 & 1 & -1 & | & 8
+    \end{pmatrix}
+\]
 
 Row 3 - 2 \(\times\) Row 1:
-\begin{equation*}
-\begin{pmatrix}
-1 & 1 & 1 & | & 3 \\
-0 & 2 & 5 & | & -2 \\
-0 & -1 & -3 & | & 2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 1 & 1 & | & 3 \\
+    0 & 2 & 5 & | & -2 \\
+    0 & -1 & -3 & | & 2
+    \end{pmatrix}
+\]
 
 \textbf{Step 3:} Make the pivot in row 2 equal to 1 by dividing the entire row by 2:
-\begin{equation*}
-\begin{pmatrix}
-1 & 1 & 1 & | & 3 \\
-0 & 1 & \frac{5}{2} & | & -1 \\
-0 & -1 & -3 & | & 2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 1 & 1 & | & 3 \\
+    0 & 1 & \frac{5}{2} & | & -1 \\
+    0 & -1 & -3 & | & 2
+    \end{pmatrix}
+\]
 
 \textbf{Step 4:} Eliminate the second element in rows 1 and 3:
 
 Row 1 - Row 2:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & -\frac{3}{2} & | & 4 \\
-0 & 1 & \frac{5}{2} & | & -1 \\
-0 & -1 & -3 & | & 2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & -\frac{3}{2} & | & 4 \\
+    0 & 1 & \frac{5}{2} & | & -1 \\
+    0 & -1 & -3 & | & 2
+    \end{pmatrix}
+\]
 
 Row 3 + Row 2:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & -\frac{3}{2} & | & 4 \\
-0 & 1 & \frac{5}{2} & | & -1 \\
-0 & 0 & -\frac{1}{2} & | & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & -\frac{3}{2} & | & 4 \\
+    0 & 1 & \frac{5}{2} & | & -1 \\
+    0 & 0 & -\frac{1}{2} & | & 1
+    \end{pmatrix}
+\]
 
 \textbf{Step 5:} Make the pivot in row 3 equal to 1 by multiplying the entire row by -2:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & -\frac{3}{2} & | & 4 \\
-0 & 1 & \frac{5}{2} & | & -1 \\
-0 & 0 & 1 & | & -2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & -\frac{3}{2} & | & 4 \\
+    0 & 1 & \frac{5}{2} & | & -1 \\
+    0 & 0 & 1 & | & -2
+    \end{pmatrix}
+\]
 
 \textbf{Step 6:} Eliminate the third element in rows 1 and 2:
 
 Row 1 + \(\frac{3}{2} \times\) Row 3:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & 0 & | & 1 \\
-0 & 1 & \frac{5}{2} & | & -1 \\
-0 & 0 & 1 & | & -2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & 0 & | & 1 \\
+    0 & 1 & \frac{5}{2} & | & -1 \\
+    0 & 0 & 1 & | & -2
+    \end{pmatrix}
+\]
 
 Row 2 - \(\frac{5}{2} \times\) Row 3:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & 0 & | & 1 \\
-0 & 1 & 0 & | & -1 + 5 = 4 \\
-0 & 0 & 1 & | & -2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & 0 & | & 1 \\
+    0 & 1 & 0 & | & -1 + 5 = 4 \\
+    0 & 0 & 1 & | & -2
+    \end{pmatrix}
+\]
 
 The matrix is now in reduced row echelon form:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & 0 & | & 1 \\
-0 & 1 & 0 & | & 4 \\
-0 & 0 & 1 & | & -2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & 0 & | & 1 \\
+    0 & 1 & 0 & | & 4 \\
+    0 & 0 & 1 & | & -2
+    \end{pmatrix}
+\]
 
 This corresponds to the system:
+
 \begin{align*}
-x &= 1 \\
-y &= 4 \\
-z &= -2
+    x &= 1 \\
+    y &= 4 \\
+    z &= -2
 \end{align*}
 
 Therefore, the solution to the original system is \(x = 1\), \(y = 4\), and \(z = -2\).
@@ -514,137 +543,147 @@ Therefore, the solution to the original system is \(x = 1\), \(y = 4\), and \(z 
 \vspace{\baselineskip}
 
 Let's find the inverse of the matrix:
-\begin{equation*}
-A = 
-\begin{pmatrix}
-2 & 1 & 1 \\
-3 & 2 & 1 \\
-2 & 1 & 2
-\end{pmatrix}
-\end{equation*}
+
+\[
+    A = 
+    \begin{pmatrix}
+    2 & 1 & 1 \\
+    3 & 2 & 1 \\
+    2 & 1 & 2
+    \end{pmatrix}
+\]
 
 We form the augmented matrix \([A|I_3]\):
-\begin{equation*}
-\begin{pmatrix}
-2 & 1 & 1 & | & 1 & 0 & 0 \\
-3 & 2 & 1 & | & 0 & 1 & 0 \\
-2 & 1 & 2 & | & 0 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    2 & 1 & 1 & | & 1 & 0 & 0 \\
+    3 & 2 & 1 & | & 0 & 1 & 0 \\
+    2 & 1 & 2 & | & 0 & 0 & 1
+    \end{pmatrix}
+\]
 
 Now we apply Gauss-Jordan elimination:
 \vspace{\baselineskip}
 
 \textbf{Step 1:} Make the first pivot equal to 1 by dividing the first row by 2:
-\begin{equation*}
-\begin{pmatrix}
-1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
-3 & 2 & 1 & | & 0 & 1 & 0 \\
-2 & 1 & 2 & | & 0 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+    3 & 2 & 1 & | & 0 & 1 & 0 \\
+    2 & 1 & 2 & | & 0 & 0 & 1
+    \end{pmatrix}
+\]
 
 \textbf{Step 2:} Eliminate the first element in rows 2 and 3:
 
 Row 2 - 3 \(\times\) Row 1:
-\begin{equation*}
-\begin{pmatrix}
-1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
-0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
-2 & 1 & 2 & | & 0 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+    0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
+    2 & 1 & 2 & | & 0 & 0 & 1
+    \end{pmatrix}
+\]
 
 Row 3 - 2 \(\times\) Row 1:
-\begin{equation*}
-\begin{pmatrix}
-1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
-0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
-0 & 0 & 1 & | & -1 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+    0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
+    0 & 0 & 1 & | & -1 & 0 & 1
+    \end{pmatrix}
+\]
 
 \textbf{Step 3:} Make the second pivot equal to 1 by multiplying the second row by 2:
-\begin{equation*}
-\begin{pmatrix}
-1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
-0 & 1 & -1 & | & -3 & 2 & 0 \\
-0 & 0 & 1 & | & -1 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
+    0 & 1 & -1 & | & -3 & 2 & 0 \\
+    0 & 0 & 1 & | & -1 & 0 & 1
+    \end{pmatrix}
+\]
 
 \textbf{Step 4:} Eliminate the second element in row 1 and the third element in row 2:
 
 Row 1 - \(\frac{1}{2} \times\) Row 2:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & 1 & | & 2 & -1 & 0 \\
-0 & 1 & -1 & | & -3 & 2 & 0 \\
-0 & 0 & 1 & | & -1 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+\[
+    \begin{pmatrix}
+    1 & 0 & 1 & | & 2 & -1 & 0 \\
+    0 & 1 & -1 & | & -3 & 2 & 0 \\
+    0 & 0 & 1 & | & -1 & 0 & 1
+    \end{pmatrix}
+\]
 
 Row 2 + Row 3:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & 1 & | & 2 & -1 & 0 \\
-0 & 1 & 0 & | & -4 & 2 & 1 \\
-0 & 0 & 1 & | & -1 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & 1 & | & 2 & -1 & 0 \\
+    0 & 1 & 0 & | & -4 & 2 & 1 \\
+    0 & 0 & 1 & | & -1 & 0 & 1
+    \end{pmatrix}
+\]
 
 \textbf{Step 5:} Eliminate the third element in row 1:
 
 Row 1 - Row 3:
-\begin{equation*}
-\begin{pmatrix}
-1 & 0 & 0 & | & 3 & -1 & -1 \\
-0 & 1 & 0 & | & -4 & 2 & 1 \\
-0 & 0 & 1 & | & -1 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    \begin{pmatrix}
+    1 & 0 & 0 & | & 3 & -1 & -1 \\
+    0 & 1 & 0 & | & -4 & 2 & 1 \\
+    0 & 0 & 1 & | & -1 & 0 & 1
+    \end{pmatrix}
+\]
 
 The right side of the augmented matrix now gives us \(A^{-1}\):
-\begin{equation*}
-A^{-1} = 
-\begin{pmatrix}
-3 & -1 & -1 \\
--4 & 2 & 1 \\
--1 & 0 & 1
-\end{pmatrix}
-\end{equation*}
+
+\[
+    A^{-1} = 
+    \begin{pmatrix}
+    3 & -1 & -1 \\
+    -4 & 2 & 1 \\
+    -1 & 0 & 1
+    \end{pmatrix}
+\]
 
 To verify, we can check that \(AA^{-1} = I_3\):
+
 \begin{align*}
-AA^{-1} &= 
-\begin{pmatrix}
-2 & 1 & 1 \\
-3 & 2 & 1 \\
-2 & 1 & 2
-\end{pmatrix}
-\begin{pmatrix}
-3 & -1 & -1 \\
--4 & 2 & 1 \\
--1 & 0 & 1
-\end{pmatrix} \\
-&= 
-\begin{pmatrix}
-2 \cdot 3 + 1 \cdot (-4) + 1 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 1 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 1 \cdot 1 \\
-3 \cdot 3 + 2 \cdot (-4) + 1 \cdot (-1) & 3 \cdot (-1) + 2 \cdot 2 + 1 \cdot 0 & 3 \cdot (-1) + 2 \cdot 1 + 1 \cdot 1 \\
-2 \cdot 3 + 1 \cdot (-4) + 2 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 2 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 2 \cdot 1
-\end{pmatrix} \\
-&= 
-\begin{pmatrix}
-6 - 4 - 1 & -2 + 2 + 0 & -2 + 1 + 1 \\
-9 - 8 - 1 & -3 + 4 + 0 & -3 + 2 + 1 \\
-6 - 4 - 2 & -2 + 2 + 0 & -2 + 1 + 2
-\end{pmatrix} \\
-&= 
-\begin{pmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1
-\end{pmatrix} = I_3
+    AA^{-1} &= 
+    \begin{pmatrix}
+    2 & 1 & 1 \\
+    3 & 2 & 1 \\
+    2 & 1 & 2
+    \end{pmatrix}
+    \begin{pmatrix}
+    3 & -1 & -1 \\
+    -4 & 2 & 1 \\
+    -1 & 0 & 1
+    \end{pmatrix} \\
+    &= 
+    \begin{pmatrix}
+    2 \cdot 3 + 1 \cdot (-4) + 1 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 1 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 1 \cdot 1 \\
+    3 \cdot 3 + 2 \cdot (-4) + 1 \cdot (-1) & 3 \cdot (-1) + 2 \cdot 2 + 1 \cdot 0 & 3 \cdot (-1) + 2 \cdot 1 + 1 \cdot 1 \\
+    2 \cdot 3 + 1 \cdot (-4) + 2 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 2 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 2 \cdot 1
+    \end{pmatrix} \\
+    &= 
+    \begin{pmatrix}
+    6 - 4 - 1 & -2 + 2 + 0 & -2 + 1 + 1 \\
+    9 - 8 - 1 & -3 + 4 + 0 & -3 + 2 + 1 \\
+    6 - 4 - 2 & -2 + 2 + 0 & -2 + 1 + 2
+    \end{pmatrix} \\
+    &= 
+    \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+    \end{pmatrix} = I_3
 \end{align*}
 
 This confirms that we have correctly found the inverse of matrix \(A\).
@@ -663,8 +702,9 @@ forms a basis of \(V\), then there exists a unique \(f \in \text{Hom}(V, W)\) wi
 \(- f\) is injective \(\Leftrightarrow\) \(w_1, \dots, w_n\) are linearly independent.
 
 Let \(V\) and \(W\) be two \(K\)-vector spaces, \(B_V = (v_1, \dots, v_n)\) a basis of \(V\) and \(B_W = (w_1, \dots, w_m)\) a basis of \(W\), and let \(f : V \rightarrow W\) be linear. Then there exists a unique matrix \(M_{B_V}^{B_W}(f) = (a_{ij}) \in K^{m \times n}\) with
+
 \[
-f(v_j) = \sum_{i=1}^{m} a_{ij}w_i \quad \forall j = 1, \dots, n
+    f(v_j) = \sum_{i=1}^{m} a_{ij}w_i \quad \forall j = 1, \dots, n
 \]
 
 \subsection{Example of an exercise}
@@ -680,110 +720,119 @@ f(v_j) = \sum_{i=1}^{m} a_{ij}w_i \quad \forall j = 1, \dots, n
 \textbf{Example:}
 \vspace{\baselineskip}
  
-
 Given
+
 \[
-f\begin{pmatrix}
-x_1 \\
-x_2 \\
-x_3
-\end{pmatrix} =
-\begin{pmatrix}
-2x_1 + x_2 \\
-x_1 - x_2 + x_3 \\
-4x_1 - x_2 + 2x_3
-\end{pmatrix} .
+    f\begin{pmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+    \end{pmatrix} =
+    \begin{pmatrix}
+    2x_1 + x_2 \\
+    x_1 - x_2 + x_3 \\
+    4x_1 - x_2 + 2x_3
+    \end{pmatrix} .
 \]
 
 It should be shown that \(f\) is linear, and \(\ker(f)\), \(\text{Im}(f)\) and their dimensions should be determined.
 
 A direct proof of linearity is easily possible. Instead, we give the transformation matrix \(A\). The images of the (canonical) basis vectors are
+
 \[
-f\begin{pmatrix}
-1 \\
-0 \\
-0
-\end{pmatrix} =
-\begin{pmatrix}
-2 \\
-1 \\
-4
-\end{pmatrix} , \quad
-f\begin{pmatrix}
-0 \\
-1 \\
-0
-\end{pmatrix} =
-\begin{pmatrix}
-1 \\
--1 \\
--1
-\end{pmatrix} , \quad
-f\begin{pmatrix}
-0 \\
-0 \\
-1
-\end{pmatrix} =
-\begin{pmatrix}
-0 \\
-1 \\
-2
-\end{pmatrix} .
+    f\begin{pmatrix}
+    1 \\
+    0 \\
+    0
+    \end{pmatrix} =
+    \begin{pmatrix}
+    2 \\
+    1 \\
+    4
+    \end{pmatrix} , \quad
+    f\begin{pmatrix}
+    0 \\
+    1 \\
+    0
+    \end{pmatrix} =
+    \begin{pmatrix}
+    1 \\
+    -1 \\
+    -1
+    \end{pmatrix} , \quad
+    f\begin{pmatrix}
+    0 \\
+    0 \\
+    1
+    \end{pmatrix} =
+    \begin{pmatrix}
+    0 \\
+    1 \\
+    2
+    \end{pmatrix} .
 \]
+
 We obtain
+
 \[
-A =
-\begin{pmatrix}
-2 & 1 & 0 \\
-1 & -1 & 1 \\
-4 & -1 & 2
-\end{pmatrix} .
+    A =
+    \begin{pmatrix}
+    2 & 1 & 0 \\
+    1 & -1 & 1 \\
+    4 & -1 & 2
+    \end{pmatrix} .
 \]
-But now it must be shown that indeed \(f(x) = Ax \quad \forall x \in \mathbb{R}^3\) holds, by, 
+
+But now it must be shown that indeed \(f(x) = Ax \quad \forall x \in \Reals^3\) holds, by, 
 for example, calculating both \(Ax\) and \(f(x)\) for a 
 general \(x\) and showing equality: Here, with \(x = {(x_1, x_2, x_3)}^T\)
+
 \[
-A \cdot x =
-\begin{pmatrix}
-2 & 1 & 0 \\
-1 & -1 & 1 \\
-4 & -1 & 2
-\end{pmatrix}
-\cdot
-\begin{pmatrix}
-x_1 \\
-x_2 \\
-x_3
-\end{pmatrix} =
-\begin{pmatrix}
-2x_1 + x_2 \\
-x_1 - x_2 + x_3 \\
-4x_1 - x_2 + 2x_3
-\end{pmatrix} .
+    A \cdot x =
+    \begin{pmatrix}
+    2 & 1 & 0 \\
+    1 & -1 & 1 \\
+    4 & -1 & 2
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+    \end{pmatrix} =
+    \begin{pmatrix}
+    2x_1 + x_2 \\
+    x_1 - x_2 + x_3 \\
+    4x_1 - x_2 + 2x_3
+    \end{pmatrix} .
 \]
+
 This obviously corresponds to \(f(x)\), so that by Theorem 4.36, the map \(f\) is linear. To determine the kernel, one has to solve the system of linear equations
+
 \[
-\begin{array}{cccc}
-2 & 1 & 0 & 0 \\
-1 & -1 & 1 & 0 \\
-4 & -1 & 2 & 0
-\end{array}
+    \begin{array}{cccc}
+    2 & 1 & 0 & 0 \\
+    1 & -1 & 1 & 0 \\
+    4 & -1 & 2 & 0
+    \end{array}
 \]
-which corresponds to the equation \(Ax = f(x) = 0\). Gaussian 
+
+Which corresponds to the equation \(Ax = f(x) = 0\). Gaussian 
 elimination yields \(x_3 = \lambda'\); 
 \(x_2 = \frac{2}{3} \cdot \lambda'\); \(x_1 = -\frac{1}{3} \cdot \lambda'\), 
 thus, with \(\lambda = \frac{1}{3} \lambda'\):
+
 \[
-\ker(f) =
-\left\{
-x = \lambda
-\begin{pmatrix}
--1 \\
-2 \\
-3
-\end{pmatrix}
-\, \middle| \, \lambda \in \mathbb{R}
-\right\}
+    \ker(f) =
+    \left\{
+    x = \lambda
+    \begin{pmatrix}
+    -1 \\
+    2 \\
+    3
+    \end{pmatrix}
+    \, \middle| \, \lambda \in \Reals
+    \right\}
 \]
 
 It follows that \(\dim(\ker(f)) = 1\) and because of \(\dim(V) = 3\) from the dimension 
@@ -796,20 +845,20 @@ In the concrete case, this is obvious, because the second column is
 not a multiple of the first. It follows therefore,
 
 \[
-\text{Im}(f) =
-\left\{
-x \, \middle| \, x = \lambda
-\begin{pmatrix}
-2 \\
-1 \\
-4
-\end{pmatrix} + \mu
-\begin{pmatrix}
-1 \\
--1 \\
--1
-\end{pmatrix}
-, \quad \lambda, \mu \in \mathbb{R}
-\right\}
+    \text{Im}(f) =
+    \left\{
+    x \, \middle| \, x = \lambda
+    \begin{pmatrix}
+    2 \\
+    1 \\
+    4
+    \end{pmatrix} + \mu
+    \begin{pmatrix}
+    1 \\
+    -1 \\
+    -1
+    \end{pmatrix}
+    , \quad \lambda, \mu \in \Reals
+    \right\}
 \]
 

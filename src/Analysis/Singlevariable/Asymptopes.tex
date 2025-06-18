@@ -1,29 +1,36 @@
 \newpage
 \section{Asymptotes}
 
-An \emph{asymptote} of a curve is a line that the curve approaches but never touches as the input or output grows infinitely large in magnitude. There are three main types of asymptotes: vertical, horizontal, and oblique (slant). Each one describes a different long-term behavior of a function.
+An \emph{asymptote} of a curve is a line that the curve approaches but never touches as the input 
+or output grows infinitely large in magnitude. There are three main types of asymptotes: vertical, 
+horizontal, and oblique (slant). Each one describes a different long-term behavior of a function.
 
 \subsection{Vertical Asymptotes}
 
-A \emph{vertical asymptote} is a vertical line \(x = a\) where the function grows without bound as \(x\) approaches \(a\) from the left or right.
+A \emph{vertical asymptote} is a vertical line \(x = a\) where the function grows without bound 
+as \(x\) approaches \(a\) from the left or right.
 
 \[
-\lim_{x \to a^-} f(x) = \pm \infty \quad \text{or} \quad \lim_{x \to a^+} f(x) = \pm \infty
+    \lim_{x \to a^-} f(x) = \pm \infty \quad \text{or} \quad \lim_{x \to a^+} f(x) = \pm \infty
 \]
 
 \subsubsection{How to Find Vertical Asymptotes}
 
 \begin{enumerate}
+
     \item Find values of \(x\) that make the denominator of a rational function zero.
+
     \item Eliminate removable discontinuities (common factors).
+
     \item For each remaining zero in the denominator, check if the limit tends to infinity.
+
 \end{enumerate}
 
 \textbf{Example:}
 \vspace{\baselineskip}
 
 \[
-f(x) = \frac{1}{x - 2} \quad \Rightarrow \quad x = 2 \text{ is a vertical asymptote}
+    f(x) = \frac{1}{x - 2} \quad \Rightarrow \quad x = 2 \text{ is a vertical asymptote}
 \]
 
 \subsection{Horizontal Asymptotes}
@@ -31,64 +38,78 @@ f(x) = \frac{1}{x - 2} \quad \Rightarrow \quad x = 2 \text{ is a vertical asympt
 A \emph{horizontal asymptote} is a horizontal line \(y = L\) that the function approaches as \(x\) tends to infinity or negative infinity:
 
 \[
-\lim_{x \to \pm\infty} f(x) = L
+    \lim_{x \to \pm\infty} f(x) = L
 \]
 
 \subsubsection{How to Find Horizontal Asymptotes (Rational Functions)}
 
 \begin{enumerate}
+
     \item Compare the degrees of the numerator (\(n\)) and denominator (\(m\)):
-    \begin{itemize}[label=\(-\)]
+
+    \begin{itemize}
+
         \item If \(n < m\): Horizontal asymptote at \(y = 0\)
-        \item If \(n = m\): Horizontal asymptote at \(y = \frac{\text{leading coefficient of numerator}}{\text{leading coefficient of denominator}}\)
+
+        \item If \(n = m\): Horizontal asymptote at \(y = \frac{\text{leading coefficient of numerator}}
+        {\text{leading coefficient of denominator}}\)
+
         \item If \(n > m\): No horizontal asymptote (check for slant)
+
     \end{itemize}
+
 \end{enumerate}
 
 \textbf{Example:}
 \vspace{\baselineskip}
 
 \[
-f(x) = \frac{2x^2 + 3}{x^2 - 1} \quad \Rightarrow \quad y = \frac{2}{1} = 2 \text{ is the horizontal asymptote}
+    f(x) = \frac{2x^2 + 3}{x^2 - 1} \quad \Rightarrow \quad y = \frac{2}{1} = 2 
+    \text{ is the horizontal asymptote}
 \]
 
 \subsection{Oblique (Slant) Asymptotes}
 
-An \emph{oblique or slant asymptote} occurs when the degree of the numerator is exactly one more than the degree of the denominator.
+An \emph{oblique or slant asymptote} occurs when the degree of the numerator is exactly one more than 
+the degree of the denominator.
 
 \[
-\lim_{x \to \infty} [f(x) - (mx + b)] = 0
+    \lim_{x \to \infty} [f(x) - (mx + b)] = 0
 \]
 
 \subsubsection{How to Find Oblique Asymptotes}
 
 \begin{enumerate}
+    
     \item Perform polynomial long division (or synthetic division) on the rational function.
+    
     \item The quotient (ignoring the remainder) is the equation of the slant asymptote.
+
 \end{enumerate}
 
 \textbf{Example:}
 \vspace{\baselineskip}
 
 \[
-f(x) = \frac{x^2 + 1}{x - 1}
+    f(x) = \frac{x^2 + 1}{x - 1}
 \]
 Long division gives:
+
 \[
-\frac{x^2 + 1}{x - 1} = x + 1 + \frac{2}{x - 1}
-\Rightarrow \text{Slant asymptote: } y = x + 1
+    \frac{x^2 + 1}{x - 1} = x + 1 + \frac{2}{x - 1}
+    \Rightarrow \text{Slant asymptote: } y = x + 1
 \]
 
 \subsection{Summary Table}
 
 \begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Type} & \textbf{Equation} & \textbf{Occurs When} \\
-\hline
-Vertical      & \(x = a\)           & Denominator \(\to 0\) (non-removable) \\
-Horizontal    & \(y = L\)           & \(\lim_{x \to \pm \infty} f(x) = L\) \\
-Oblique       & \(y = mx + b\)      & Degree numerator = degree denominator + 1 \\
-\hline
-\end{tabular}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Type} & \textbf{Equation} & \textbf{Occurs When} \\
+    \hline
+    Vertical      & \(x = a\)           & Denominator \(\to 0\) (non-removable) \\
+    Horizontal    & \(y = L\)           & \(\lim_{x \to \pm \infty} f(x) = L\) \\
+    Oblique       & \(y = mx + b\)      & Degree numerator = degree denominator + 1 \\
+    \hline
+    \end{tabular}
 \end{center}

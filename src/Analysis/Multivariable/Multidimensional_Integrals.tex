@@ -11,30 +11,31 @@ we notice that there are three differences \(\Delta i\) \(\Delta j\) \(\Delta k\
 Now let us take the length of the vector \(\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}\)
 
 The total Arclength is going to be the sum of all of these sectors
+
 \[
-L =  \sum_{i = 1}^{n}\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}
+    L =  \sum_{i = 1}^{n}\sqrt{{(\Delta i)}^2 + {(\Delta j)}^2 + {(\Delta k)}^2}
 \]
 
 if we use a clever one we get
 
 \[
-L =  \sum_{i = 1}^{n}\sqrt{\frac{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}{\Delta t}}
+    L =  \sum_{i = 1}^{n}\sqrt{\frac{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}{\Delta t}}
 \]
 
 Now if we take the limit we get
 
 \[
-L =  \lim_{n\to \infty}\sum_{i = 1}^{n}\sqrt{\frac{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}{\Delta t}}
+    L =  \lim_{n\to \infty}\sum_{i = 1}^{n}\sqrt{\frac{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}{\Delta t}}
 \]
 
 which is 
 
 \[
-L =  \int_{a}^{b}\sqrt{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}\,dt
+    L =  \int_{a}^{b}\sqrt{{\left(\frac{\Delta i}{\Delta t}\right)}^2 + {\left(\frac{\Delta j}{\Delta t}\right)}^2 + {\left(\frac{\Delta k}{\Delta t}\right)}^2}\,dt
 \]
 
 \[
-L =  \int_{a}^{b}\sqrt{{(f'(t))}^2 + {(g'(t))}^2 + {(h'(t))}^2}\,dt
+    L =  \int_{a}^{b}\sqrt{{(f'(t))}^2 + {(g'(t))}^2 + {(h'(t))}^2}\,dt
 \]
 
 For differentiable function on the interval \(t \in [a; b]\)
@@ -43,11 +44,12 @@ For differentiable function on the interval \(t \in [a; b]\)
 
 \subsubsection{Over Vector Field}
 
-Let \( F : \mathbb{R}^n \to \mathbb{R}^n \) be a \emph{vector field}, and let \( \gamma \) be a smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). 
+Let \( F : \Reals^n \to \Reals^n \) be a \emph{vector field}, and let \( \gamma \) be a 
+smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). 
 The \emph{line integral} of \( F \) along \( \gamma \) is:
 
 \[
-\int_\gamma \langle \nabla \vec{F}, d\vec{r} \rangle = \int_a^b \langle \vec{F}(\vec{r}(t)), \frac{\vec{r}}{dt} \rangle dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
+    \int_\gamma \langle \vec{F}(\vec{r}(t)), \frac{d\vec{r}(t)}{dt} \rangle dt = \int_a^b \langle \vec{F}(\vec{r}(t)), \frac{\vec{dr}}{dt} \rangle dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
 \]
 
 In the context of physics this integral measures the work done by the field \( \vec{F} \) along the path \( \gamma \), such as force over distance.
@@ -59,38 +61,38 @@ In the context of physics this integral measures the work done by the field \( \
 Let \( f(x, y) = x^2 + y^2 \), and define a vector field based on its gradient:
 
 \[
-\vec{F}(x, y) = \nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = (2x, 2y)
+    \vec{F}(x, y) = \nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = (2x, 2y)
 \]
 
 Let the curve \( C \) be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), 
 parametrized by:
 
 \[
-\vec{r}(t) = (\cos t, \sin t), \quad t \in \left[0, \frac{\pi}{2}\right]
+    \vec{r}(t) = (\cos t, \sin t), \quad t \in \left[0, \frac{\pi}{2}\right]
 \]
 
 We compute the line integral of \( \vec{F} \) along \( C \):
 
 \[
-\int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} \langle\vec{F}(\vec{r}(t)) \vec{r}'(t) \rangle\, dt
+    \int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} \langle\vec{F}(\vec{r}(t)) \vec{r}'(t) \rangle\, dt
 \]
 
 First, compute:
 
 \[
-\vec{F}(\vec{r}(t)) = (2\cos t, 2\sin t), \quad \vec{r}\,'(t) = (-\sin t, \cos t)
+    \vec{F}(\vec{r}(t)) = (2\cos t, 2\sin t), \quad \vec{r}\,'(t) = (-\sin t, \cos t)
 \]
 
 Now compute the dot product:
 
 \[
-\langle\vec{F}(\vec{r}(t)), \vec{r}\,'(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
+    \langle\vec{F}(\vec{r}(t)), \vec{r}\,'(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
 \]
 
 Therefore, the line integral is:
 
 \[
-\int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} 0 \, dt = 0
+    \int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} 0 \, dt = 0
 \]
 
 The line integral of the gradient vector field \( \vec{F} = \nabla f \) over this curve is zero. 
@@ -104,13 +106,13 @@ Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \
 is parametrized by a vector function.
 
 \[
-\vec{r}(t) = (x_1(t), x_2(t), \ldots, x_n(t)), \quad t \in [a, b]
+    \vec{r}(t) = (x_1(t), x_2(t), \ldots, x_n(t)), \quad t \in [a, b]
 \]
 
 Then, the line integral of \( f \) over \( C \) is given by:
 
 \[
-\int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \vec{r}'(t) \right\| \, dt
+    \int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \vec{r}'(t) \right\| \, dt
 \]
 
 
@@ -130,13 +132,13 @@ we already know, we get \(\|\vec{r}' (t)\| \, dt = ds\).
 
 Compute the line integral of \(f(x,y) = x^2 + y^2\) over the straight line segment going
 from \((1,1)\) to \((3,3)\)
-\\
+
 This time or curve is \(y = x\) to the parametrized curve is \(\begin{pmatrix}
     x(t) = t \\ y(t) = t
 \end{pmatrix}\) this left us with:
 
 \[
-\int_{1}^{3}  2t^2 \sqrt{2}dt = \frac{52\sqrt{2}}{3} 
+    \int_{1}^{3}  2t^2 \sqrt{2}dt = \frac{52\sqrt{2}}{3} 
 \]
 
 \subsection{Line Integrals with respect to a specific variable}
@@ -153,7 +155,7 @@ the norm of our curve the component that was responsible for \(y\) will be set 0
 the variable we are integrating with respect to. In this case \(dx\).
 
 \[
-\int_{c} f(x,y)dx = \int_{c} f(g(t), h(t)) \sqrt{g'(t)^2}dt 
+    \int_{c} f(x,y)dx = \int_{c} f(g(t), h(t)) \sqrt{g'(t)^2}dt 
 \]
 
 \subsubsection{Over Vector Field with respect to \emph{x} or \emph{y}}
@@ -166,17 +168,17 @@ Now, given a field \(\vec{F}(x,y) = M(x,y)\imath + N(x,y)\jmath\) and the curve 
 The line integral of \(\vec{F}\) along \(C\) is 
 
 \[
-\int_\gamma \langle \nabla \vec{F}, \frac{\vec{r}}{dt} \rangle dt
+    \int_\gamma \langle \nabla \vec{F}, \frac{\vec{r}}{dt} \rangle dt
 \]
 
 \[
-\int_{a}^{b} M(x,y)g'(t)dt + \int_{a}^{b} N(x,y)h'(t)dt
+    \int_{a}^{b} M(x,y)g'(t)dt + \int_{a}^{b} N(x,y)h'(t)dt
 \]
 
 Here \(g'(t)dt = dx\) and \(h'(t)dt = dy\)
 
 \[
-\int_{a}^{b} Mdx + \int_{a}^{b} Ndy
+    \int_{a}^{b} Mdx + \int_{a}^{b} Ndy
 \]
 
 These two integrals give us both the integral with respect to \(x\) and \(y\).
@@ -194,126 +196,145 @@ Compute: \(\int_{a}^{b} \frac{x}{y} dy\)
 \textbf{Step 1: Parametrize \(C\)}
 
 \[
-\vec{r}(t) = t\imath + t^2 \jmath \text{ with } 1 \ge i \ge 2
+    \vec{r}(t) = t\imath + t^2 \jmath \text{ with } 1 \ge i \ge 2
 \]
 
 \textbf{Step 2: Substitute into the integral}
 
 \[
-h'(t)dt= 2t dt
+    h'(t)dt= 2t dt
 \]
 
 \[
-\int_{a}^{b} \frac{t}{t^2} 2tdt = \int_{1}^{2} \frac{1}{t} 2tdt = 2 
+    \int_{a}^{b} \frac{t}{t^2} 2tdt = \int_{1}^{2} \frac{1}{t} 2tdt = 2 
 \]
 
 \subsection{Potential Function}
 
-A vector field \( \vec{F} : \mathbb{R}^n \to \mathbb{R}^n \) is called \emph{conservative} if there exists a scalar function \( \phi : \mathbb{R}^n \to \mathbb{R} \) such that:
+A vector field \( \vec{F} : \Reals^n \to \Reals^n \) is called \emph{conservative} if there exists a scalar function \( \phi : \Reals^n \to \Reals \) such that:
 
 \[
-\vec{F} = \nabla \phi
+    \vec{F} = \nabla \phi
 \]
 
 The function \( \phi \) is then called a \emph{potential function} of \( \vec{F} \).
+\vspace{\baselineskip}
 
 \textbf{Properties:}
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
+
     \item The line integral of \( \vec{F} \) over any path depends only on the endpoints:
+
     \[
     \int_\gamma \langle \vec{F}, d\vec{r} \rangle = \phi(B) - \phi(A)
     \]
+
     \item The line integral over a closed path is zero:
     \[
     \oint_\gamma \langle \vec{F}, d\vec{r} \rangle = 0
     \]
-    \item \( \vec{F} \) is conservative \( \Leftrightarrow \) \( \vec{F} \) has zero curl in a simply connected region.
+
+    \item \( \vec{F} \) is conservative \( \Leftrightarrow \) \( \vec{F} \) has zero curl in a 
+    simply connected region.
+
 \end{itemize}
 
 \subsection{Finding the Potential Function of a Vector Field}
 
 To find the potential function \( \phi(x, y) \) of a vector field \( \vec{F}(x, y) = (P(x, y), Q(x, y)) \), we must check if the field is conservative and then integrate accordingly. A vector field is conservative if there exists a scalar potential function \( \phi \) such that:
+
 \[
-\vec{F} = \nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y} \right)
+    \vec{F} = \nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y} \right)
 \]
 
 \textbf{Given:}
+
 \[
-\vec{F}(x, y) = \left(2xy + e^x,\ x^2 + \frac{1}{2\sqrt{y}}\right)
+    \vec{F}(x, y) = \left(2xy + e^x,\ x^2 + \frac{1}{2\sqrt{y}}\right)
 \]
 
 Let \( P(x, y) = 2xy + e^x \), and \( Q(x, y) = x^2 + \frac{1}{2\sqrt{y}} \).
 
 First, check if the field is conservative by verifying:
+
 \[
-\frac{\partial P}{\partial y} = \frac{\partial}{\partial y}(2xy + e^x) = 2x
+    \frac{\partial P}{\partial y} = \frac{\partial}{\partial y}(2xy + e^x) = 2x
 \]
+
 \[
-\frac{\partial Q}{\partial x} = \frac{\partial}{\partial x}\left(x^2 + \frac{1}{2\sqrt{y}}\right) = 2x
+    \frac{\partial Q}{\partial x} = \frac{\partial}{\partial x}\left(x^2 + \frac{1}{2\sqrt{y}}\right) = 2x
 \]
 
 Since \( \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \), the field is conservative.
 \vspace{\baselineskip}
 
 \textbf{Step 1: Integrate \( P(x, y) \) with respect to \( x \):}
+
 \[
-\phi(x, y) = \int (2xy + e^x)\,dx = x^2y + e^x + h(y)
+    \phi(x, y) = \int (2xy + e^x)\,dx = x^2y + e^x + h(y)
 \]
+
 Here, \( h(y) \) is a function of \( y \) only.
 \vspace{\baselineskip}
 
 \textbf{Step 2: Differentiate \( \phi(x, y) \) with respect to \( y \):}
+
 \[
-\frac{\partial \phi}{\partial y} = x^2 + h'(y)
+    \frac{\partial \phi}{\partial y} = x^2 + h'(y)
 \]
 
 Set this equal to \( Q(x, y) = x^2 + \frac{1}{2\sqrt{y}} \), so:
+
 \[
-x^2 + h'(y) = x^2 + \frac{1}{2\sqrt{y}} \Rightarrow h'(y) = \frac{1}{2\sqrt{y}}
+    x^2 + h'(y) = x^2 + \frac{1}{2\sqrt{y}} \Rightarrow h'(y) = \frac{1}{2\sqrt{y}}
 \]
 
 \textbf{Step 3: Integrate to find \( h(y) \):}
+
 \[
-h(y) = \int \frac{1}{2\sqrt{y}}\,dy = \sqrt{y} + C
+    h(y) = \int \frac{1}{2\sqrt{y}}\,dy = \sqrt{y} + C
 \]
 
 \textbf{Final potential function:}
+
 \[
-\phi(x, y) = x^2y + e^x + \sqrt{y} + C
+    \phi(x, y) = x^2y + e^x + \sqrt{y} + C
 \]
 
 Therefore, the potential function is:
+
 \[
-\boxed{\phi(x, y) = x^2y + e^x + \sqrt{y} + C}
+\phi(x, y) = x^2y + e^x + \sqrt{y} + C
 \]
 
 
 \subsection{Double Integral over a Rectangular Region}
 
-Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \mathbb{R}^2 \). The double integral of a function \( f(x, y) \) over \( A \) is:
+Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \Reals^2 \). The double integral of a function \( f(x, y) \) over \( A \) is:
 
 \[
-\iint_A f(x, y)\, dA = \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx
+    \iint_A f(x, y)\, dA = \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx
 \]
 
 For rectangular domains, the order of integration does not affect the result:
 
 \[
-\int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx = \int_{y_0}^{y_1} \int_{x_0}^{x_1} f(x, y)\, dx\, dy
+    \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx = \int_{y_0}^{y_1} \int_{x_0}^{x_1} f(x, y)\, dx\, dy
 \]
-
 
 \subsection{Integration over Curvilinear Domains}
 
-If the region \( A \subset \mathbb{R}^2 \) is not rectangular, it is divided into subregions \( \Delta A_k \), and the integral is defined as the limit:
+If the region \( A \subset \Reals^2 \) is not rectangular, it is divided into subregions \( \Delta A_k \), and the integral is defined as the limit:
 
 \[
-\iint_A f(x, y)\, dA = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k) \, \Delta A_k
+    \iint_A f(x, y)\, dA = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k) \, \Delta A_k
 \]
 
 In practice, for regions bounded by curves, we integrate in the form:
+
 \[
-\int_a^b \int_{u(x)}^{o(x)} f(x, y)\, dy\, dx
+    \int_a^b \int_{u(x)}^{o(x)} f(x, y)\, dy\, dx
 \]
 
 Here, \( y \in [u(x), o(x)] \) describes the vertical bounds as functions of \( x \).
@@ -362,8 +383,9 @@ is the volume of an Area under a curve that is represented by going along the \(
 \end{align*}
 
 If we choose the other way then we have an area with a fix \(y\) in the inside that goes from \(y^2\) to \(1\) with respect to \(x\).
+
 \[
-\int_{0}^{1}\int_{y^2}^{1} 1 + x + y^2 dx dy
+    \int_{0}^{1}\int_{y^2}^{1} 1 + x + y^2 dx dy
 \]
 
 \subsection{Changing the order of integration to solve tricky integrals}
@@ -371,16 +393,24 @@ If we choose the other way then we have an area with a fix \(y\) in the inside t
 Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dy dx\) which is very hard to integrate, let us change the order
 to make it easier.
 
-\[\int_{0}^{2}\int_{0}^{y^3} \frac{1}{y^4 +1}dx dy\]
+\[
+    \int_{0}^{2}\int_{0}^{y^3} \frac{1}{y^4 +1}dx dy
+\]
 
 The steps are the same as in the previous Example.
 
 \begin{enumerate}
+
     \item Identify the area you want to integrate, what are the bounds respective to \(x\) and \(y\)
+
     \item Write the same expression without bounds and change the order of the differentials
+
+
     \item Imagine slicing the area underneath vertically for \(x\) and horizontally for \(y\) with their respective bounds corresponding
     to the perspective.
+
     \item Write the new integral with the opposite of order of integration
+
 \end{enumerate}
 
 \begin{center}
@@ -447,24 +477,24 @@ basis vectors.
 Given a vector-valued function
 
 \[
-\mathbf{f} : \mathbb{R}^n \rightarrow \mathbb{R}^m, \quad f(x_1, \ldots, x_n) = 
-\begin{bmatrix}
-f_1(x_1, \ldots, x_n) \\
-f_2(x_1, \ldots, x_n) \\
-\vdots \\
-f_m(x_1, \ldots, x_n)
-\end{bmatrix},
+    f : \Reals^n \rightarrow \Reals^m, \quad f(x_1, \ldots, x_n) = 
+    \begin{bmatrix}
+    f_1(x_1, \ldots, x_n) \\
+    f_2(x_1, \ldots, x_n) \\
+    \vdots \\
+    f_m(x_1, \ldots, x_n)
+    \end{bmatrix},
 \]
 
 the \emph{Jacobian matrix} of \(f\) is the \(m \times n\) matrix of all first-order partial derivatives:
 
 \[
-J_f(x) = \begin{bmatrix}
-\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
-\frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\
-\vdots & \vdots & \ddots & \vdots \\
-\frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & \cdots & \frac{\partial f_m}{\partial x_n}
-\end{bmatrix}.
+    J_f(x) = \begin{bmatrix}
+    \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
+    \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & \cdots & \frac{\partial f_m}{\partial x_n}
+    \end{bmatrix}.
 \]
 
 \subsubsection{Local linearity}
@@ -479,18 +509,24 @@ represent this small steps.
 
 \subsubsection{Determinant}
 When \(m = n\), i.e., the function maps from 
-\(\mathbb{R}^n\) to \(\mathbb{R}^n\), 
+\(\Reals^n\) to \(\Reals^n\), 
 the Jacobian matrix is square. In this case, 
 the \emph{Jacobian determinant} is defined as:
+
 \[
-\det(J_{f}(x)),
+    \det(J_{f}(x)),
 \]
+
 and provides important information about the local behavior of the function. For instance:
-\begin{itemize}[label=\(-\)]
-  \item If \(\det(J_{f}(x)) \neq 0\), the function is locally invertible at \(x\) by the inverse 
-  function theorem.
-  \item The sign and magnitude of the determinant 
-  inform about orientation and volume scaling of the transformation.
+
+\begin{itemize}
+
+    \item If \(\det(J_{f}(x)) \neq 0\), the function is locally invertible at \(x\) by the inverse 
+      function theorem.
+  
+      \item The sign and magnitude of the determinant 
+      gives us information about orientation and volume scaling of the transformation.
+
 \end{itemize}
 
 When we change our systems of coordinates it is important
@@ -504,18 +540,24 @@ result to make sense.
 \vspace{\baselineskip}
 
 The Jacobian matrix and its determinant appear in many areas, including:
-\begin{itemize}[label=\(-\)]
-  \item \textbf{Change of variables in integrals:} The absolute value of the Jacobian determinant is used to adjust the measure when changing coordinates in multiple integrals.
-  \item \textbf{Nonlinear optimization:} The Jacobian is crucial for computing gradients and performing techniques like Newton's method in multiple dimensions.
-  \item \textbf{Differential equations:} Stability analysis of dynamical systems often involves evaluating the Jacobian at equilibrium points.
+
+\begin{itemize}
+  
+    \item \textbf{Change of variables in integrals:} The absolute value of the Jacobian determinant is used to adjust the measure when changing coordinates in multiple integrals.
+  
+    \item \textbf{Nonlinear optimization:} The Jacobian is crucial for computing gradients and performing techniques like Newton's method in multiple dimensions.
+  
+    \item \textbf{Differential equations:} Stability analysis of dynamical systems often involves evaluating the Jacobian at equilibrium points.
+
 \end{itemize}
 
 \subsubsection{List of Common Jacobians}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 
     \item \emph{Cartesian Coordinates}:
-    \begin{itemize}[label=\(-\)]
+
+    \begin{itemize}
         \item Definition: The position of a point is given by \((x, y, z)\) in a 3D space along orthogonal axes.
         \item Jacobian: 
         \[
@@ -524,7 +566,8 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \end{itemize}
 
     \item \emph{Polar Coordinates (2D)}:
-    \begin{itemize}[label=\(-\)]
+
+    \begin{itemize}
         \item Definition: The position of a point in a plane is given by \((r, \theta)\), where \(r\) is the radial distance and \(\theta\) is the angle from the positive \(x\)-axis.
         \item Jacobian:
         \[
@@ -533,7 +576,8 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \end{itemize}
 
     \item \emph{Cylindrical Coordinates}:
-    \begin{itemize}[label=\(-\)]
+
+    \begin{itemize}
         \item Definition: The position of a point in 3D space is given by \((r, \theta, z)\), where \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \(z\) is the height along the \(z\)-axis.
         \item Jacobian:
         \[
@@ -542,9 +586,9 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \end{itemize}
 
     \item \emph{Spherical Coordinates}:
-    \begin{itemize}[label=\(-\)]
+    \begin{itemize}
         \item Definition: The position of a point in 3D space is given by \((\rho, \theta, \phi)\), where:
-        \begin{itemize}[label=\(-\)]
+        \begin{itemize}
             \item \(\rho\) is the distance from the origin,
             \item \(\theta\) is the azimuthal angle (in the \(xy\)-plane from the positive \(x\)-axis),
             \item \(\phi\) is the polar angle (from the positive \(z\)-axis).
@@ -562,23 +606,27 @@ The Jacobian matrix and its determinant appear in many areas, including:
 For radially symmetric regions or functions, switching to polar coordinates simplifies the computation.
 \vspace{\baselineskip}
 
-\textbf{Transformation:}
+\emph{Transformation:}
+
 \[
-x = r \cos \varphi, \quad y = r \sin \varphi
+    x = r \cos \varphi, \quad y = r \sin \varphi
 \]
 
 The Jacobian of the transformation gives the area element:
+
 \[
-dA = r\, dr\, d\varphi
+    dA = r\, dr\, d\varphi
 \]
 
 
 \emph{Integral:}
+
 \[
-\iint_D f(x, y)\, dA = \int_{\varphi_0}^{\varphi_1} \int_{0}^{R(\varphi)} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
+    \iint_D f(x, y)\, dA = \int_{\varphi_0}^{\varphi_1} \int_{0}^{R(\varphi)} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
 \]
 
 \subsubsection{Origin of the Area}
+
 When we divide our circle in the sections we get both a difference in then angle and the radius which generate another area.
 The difference \(\Delta A =\) Area of big wedge \(-\) Area of small wedge
 \vspace{\baselineskip}
@@ -592,13 +640,19 @@ and the whole circle would be \(2\pi\)
 
 \emph{Final Formula for the difference in the Area}
 
-\[\Delta A = \frac{\Delta \theta}{2 \pi} \left ( {\left[r_k + \frac{\Delta r}{2}\right]}^2 - {\left[r_k - \frac{\Delta r}{2}\right]}^2\right)\] 
-\[ = r_k \Delta r \Delta \theta\]
+\[
+    \Delta A = \frac{\Delta \theta}{2 \pi} \left ( {\left[r_k + \frac{\Delta r}{2}\right]}^2 - 
+    {\left[r_k - \frac{\Delta r}{2}\right]}^2\right)
+\] 
+
+\[ 
+    = r_k \Delta r \Delta \theta
+\]
 
 Which multiplied by the function value and by taking the limit of these sections we get that the volume:
 
 \[
-V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r \Delta r \Delta \theta
+    V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r \Delta r \Delta \theta
 \]
 
 \textbf{Example:}
@@ -609,27 +663,27 @@ V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r
 Then
 
 \[
-V = \int_{0}^{2\pi}\int_{0}^{1 - \sin \theta} r r dr d\theta
+    V = \int_{0}^{2\pi}\int_{0}^{1 - \sin \theta} r r dr d\theta
 \]
 
 \[
-= \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} \frac{{(1 - \sin\theta)}^3}{3} d\theta = \frac{5 \pi}{3}
+    = \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} \frac{{(1 - \sin\theta)}^3}{3} d\theta = \frac{5 \pi}{3}
 \]
 
 
 \subsection{Improper Integrals over Unbounded Regions}
 
-If the domain of integration is unbounded (e.g., the entire plane \( \mathbb{R}^2 \)), the double integral is defined via a limit process:
+If the domain of integration is unbounded (e.g., the entire plane \( \Reals^2 \)), the double integral is defined via a limit process:
 
 \[
-\iint_{\mathbb{R}^2} f(x, y)\, dx\, dy := \lim_{M_1, M_2 \to \infty} \lim_{N_1, N_2 \to \infty}
-\int_{M_1}^{M_2} \int_{N_1}^{N_2} f(x, y)\, dy\, dx
+    \iint_{\Reals^2} f(x, y)\, dx\, dy := \lim_{M_1, M_2 \to \infty} \lim_{N_1, N_2 \to \infty}
+    \int_{M_1}^{M_2} \int_{N_1}^{N_2} f(x, y)\, dy\, dx
 \]
 
 Often, using polar coordinates simplifies such cases, reducing multiple limits to one:
 
 \[
-\iint_{\mathbb{R}^2} f(x, y)\, dx\, dy = \int_0^{2\pi} \int_0^{\infty} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
+    \iint_{\Reals^2} f(x, y)\, dx\, dy = \int_0^{2\pi} \int_0^{\infty} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
 \]
 
 
@@ -639,21 +693,21 @@ We are going to find the integral of the \emph{unbounded integral}
 \(e^{-x^2}\)using a combination of techniques.
 
 \begin{align*}
-S &= \int_{-\infty}^{\infty} e^{-x^2}dx\\
-S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right)\\
-S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-y^2}dy\right)
+    S &= \int_{-\infty}^{\infty} e^{-x^2}dx\\
+    S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right)\\
+    S^2 &= \left(\int_{-\infty}^{\infty} e^{-x^2}dx\right) \left(\int_{-\infty}^{\infty} e^{-y^2}dy\right)
 \end{align*}
 
 Now let us translate to polar coordinates
 
 \begin{align*}
-S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2} re^{-{(r\sin\theta)}^2}drd\theta\right)\\
-S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2 + {(r\sin\theta)}^2}drd\theta\right)\\
-S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r^2)}drd\theta\right)\\
-S^2 &=  \left(\int_{0}^{2\pi} \int_{0}^{\infty}\frac{1}{2}e^{-(s)}dsd\theta\right)\\
-S^2 &= \left(\int_{0}^{2\pi}d\theta\right)\\
-S^2 &= \pi\\
-S   &= \sqrt{\pi}
+    S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2} re^{-{(r\sin\theta)}^2}drd\theta\right)\\
+    S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-{(r\cos\theta)}^2 + {(r\sin\theta)}^2}drd\theta\right)\\
+    S^2 &= \left(\int_{0}^{2\pi} \int_{0}^{\infty}re^{-(r^2)}drd\theta\right)\\
+    S^2 &=  \left(\int_{0}^{2\pi} \int_{0}^{\infty}\frac{1}{2}e^{-(s)}dsd\theta\right)\\
+    S^2 &= \left(\int_{0}^{2\pi}d\theta\right)\\
+    S^2 &= \pi\\
+    S   &= \sqrt{\pi}
 \end{align*}
 
 \QED
@@ -662,23 +716,24 @@ S   &= \sqrt{\pi}
 
 The triple integral allows the computation of volume or mass in three-dimensional space.
 
-Let \( V \subset \mathbb{R}^3 \) be a bounded region, then:
+Let \( V \subset \Reals^3 \) be a bounded region, then:
 
 \[
-\iiint_V f(x, y, z)\, dV = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k, z_k) \, \Delta V_k,
+    \iiint_V f(x, y, z)\, dV = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k, z_k) \, \Delta V_k,
 \]
 
 where \( \Delta V_k \) are small sub-volumes approximating \( V \).
 
 In practice, evaluate:
+
 \[
-\iiint_V f(x, y, z)\, dz\, dy\, dx,
+    \iiint_V f(x, y, z)\, dz\, dy\, dx,
 \]
 
 with limits determined by the geometry of the volume. The order of integration may be rearranged to simplify computation.
 
 \[
-\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx
+    \int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx
 \]
 
 \subsubsection{Triple Integrals in Cartesian Coordinates}
@@ -729,21 +784,22 @@ Given are the functions \(f_1(x,y) = x^2 + y^2\) and \(f_2(x,y) = 3 - x^2 - y^2\
 Let us find the intersection
 
 \[
-x^2 + y^2 = 3 -x^2 - y^2 
+    x^2 + y^2 = 3 -x^2 - y^2 
 \]
 \[
-x^2 + y^2 = \frac{3}{2}
+    x^2 + y^2 = \frac{3}{2}
 \]
 
 Now we have to find the limits of integration for 
+
 \[
-\int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx,
+    \int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx,
 \]
 
 using our constraint and our original functions.
 
 \[
-\int_{x=a}^{x=b}\int_{y=-\sqrt{\frac{3}{2} - x^2}}^{\sqrt{\frac{3}{2} -x^2}} \int_{x^2 + y^3}^{3-x^2-y^2} dz dy dx
+    \int_{x=a}^{x=b}\int_{y=-\sqrt{\frac{3}{2} - x^2}}^{\sqrt{\frac{3}{2} -x^2}} \int_{x^2 + y^3}^{3-x^2-y^2} dz dy dx
 \]
 
 Here \(z\) means the height which is just the output
@@ -757,49 +813,53 @@ And \(x\) only depends on the concrete limit of integration.
 \subsubsection{Coordinate Transformation and the Jacobian Determinant}
 
 Let a coordinate transformation be defined by:
+
 \[
-x = x(u, v, w), \quad y = y(u, v, w), \quad z = z(u, v, w)
+    x = x(u, v, w), \quad y = y(u, v, w), \quad z = z(u, v, w)
 \]
 
 Then the triple integral transforms as:
+
 \[
-\iiint_{(x, y, z)} f(x, y, z)\, dx\, dy\, dz = \iiint_{(u, v, w)} f(x(u, v, w), y(u, v, w), z(u, v, w)) \cdot \left| \det J \right|\, du\, dv\, dw
+    \iiint_{(x, y, z)} f(x, y, z)\, dx\, dy\, dz = \iiint_{(u, v, w)} f(x(u, v, w), y(u, v, w), z(u, v, w)) \cdot \left| \det J \right|\, du\, dv\, dw
 \]
 
 where \( J \) is the \emph{Jacobian matrix} of the transformation:
 
 \[
-J = 
-\begin{pmatrix}
-\frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w} \\
-\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w} \\
-\frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
-\end{pmatrix}
+    J = 
+    \begin{pmatrix}
+    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w} \\
+    \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w} \\
+    \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
+    \end{pmatrix}
 \]
 
-\vspace{\baselineskip}
 \textbf{Example: Transformation to Cylindrical Coordinates}
 \vspace{\baselineskip}
 
 The standard cylindrical coordinate transformation is:
+
 \[
-x = r \cos \varphi, \quad y = r \sin \varphi, \quad z = z
+    x = r \cos \varphi, \quad y = r \sin \varphi, \quad z = z
 \]
 
 The Jacobian determinant is:
+
 \[
-\left| \det J \right| =
-\begin{vmatrix}
-\cos \varphi & -r \sin \varphi & 0 \\
-\sin \varphi & r \cos \varphi & 0 \\
-0 & 0 & 1
-\end{vmatrix}
-= r
+    \left| \det J \right| =
+    \begin{vmatrix}
+    \cos \varphi & -r \sin \varphi & 0 \\
+    \sin \varphi & r \cos \varphi & 0 \\
+    0 & 0 & 1
+    \end{vmatrix}
+    = r
 \]
 
 Thus, the triple integral in cylindrical coordinates becomes:
+
 \[
-\iiint f(x, y, z)\, dx\, dy\, dz = \iiint f(r \cos \varphi, r \sin \varphi, z)\, r\, dr\, d\varphi\, dz
+    \iiint f(x, y, z)\, dx\, dy\, dz = \iiint f(r \cos \varphi, r \sin \varphi, z)\, r\, dr\, d\varphi\, dz
 \]
 
 \subsubsection{Calculating the center of mass with triple integrals}
@@ -807,8 +867,10 @@ Thus, the triple integral in cylindrical coordinates becomes:
 We can make use of triple integration to calculate the center of mass of a body with
 respect to \(x\), \(y\) or \(z\) with the following formulas:
 
-\[x_s = \iiint_V xp(x,z,y)dz\ dy \ dx\]
-\[y_s = \iiint_V yp(x,z,y)dz\ dy \ dx\]
-\[z_s = \iiint_V zp(x,z,y)dz\ dy \ dx\]
+\begin{align*}
+    x_s &= \iiint_V xp(x,z,y)dz\ dy \ dx\\
+    y_s &= \iiint_V yp(x,z,y)dz\ dy \ dx\\
+    z_s &= \iiint_V zp(x,z,y)dz\ dy \ dx
+\end{align*}
 
 Where \(p(x,y,z)\) is our mass function.

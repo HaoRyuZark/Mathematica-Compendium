@@ -5,20 +5,20 @@ In this short section we will cover the definition and Properties of the binomia
 without going to deep into the combinatorics meaning or Pascal's Triangle.
 
 \[
-\binom{n}{k} := \frac{n!}{k!(n-k)!}
+    \binom{n}{k} := \frac{n!}{k!(n-k)!}
 \]
 
 or as Product
 
 \[
-\prod_{j = 1}^{n} \frac{n-k+j}{j},
+    \prod_{j = 1}^{n} \frac{n-k+j}{j},
 \]
 
 with \(n\) and \(k\) as natural numbers (for the moment).
 
 \subsection{Properties}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \( \binom{n}{k} =  \binom{n}{n - k}\)
     \item \( \binom{n}{k - 1} = \binom{n}{k} \frac{n - k}{k + 1}\)
     \item \( \sum_{k = 0}^{n} \binom{n}{k} = 2^n\) 
@@ -29,6 +29,7 @@ with \(n\) and \(k\) as natural numbers (for the moment).
 \end{itemize}
 
 \subsection{The binomial Theorem}
+
 \[
     {(a + b)}^{n} =\sum_{k = 0}^{n}\binom{n}{k}a^k b^{n - k}
 \]

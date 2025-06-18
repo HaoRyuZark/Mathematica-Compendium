@@ -1,28 +1,32 @@
 \newpage
 \section{Algebraic Structures}
 
-\subsection{Introduction}
-
-Algebraic structures are mathematical systems consisting of a set equipped with one or more operations that satisfy certain axioms. They provide a unified language to study various objects in mathematics, from numbers and matrices to functions and vector spaces. Understanding these structures is fundamental in abstract algebra and has applications in computer science, cryptography, coding theory, and physics.
+Algebraic structures are mathematical systems consisting of a set equipped with one or more operations 
+that satisfy certain axioms. They provide a unified language to study various objects in mathematics, 
+from numbers and matrices to functions and vector spaces. Understanding these structures is fundamental 
+in abstract algebra and has applications in computer science, cryptography, coding theory, and physics.
 
 \subsection{Operations: Internal and External}
 
 An \emph{internal composition law} is a binary operation that takes two elements from a set and returns another element in the same set. Formally, for a set \(S\) and operation \(\circ\), we have:
+
 \[
-\circ: S \times S \rightarrow S
+  \circ: S \times S \rightarrow S
 \]
 
 An \emph{external composition law} involves a second set acting on the structure, such as scalar multiplication in vector spaces:
+
 \[
-\cdot: K \times V \rightarrow V
+  \cdot: K \times V \rightarrow V
 \]
+
 where \(K\) is a field and \(V\) is a vector space.
 
 \subsection{Properties of Operations}
 
 Let \(\ast\) be a binary operation on a set \(S\). The most important properties include:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \emph{Associativity:} \((a \ast b) \ast c = a \ast (b \ast c)\) for all \(a,b,c \in S\)
     \item \emph{Commutativity:} \(a \ast b = b \ast a\) for all \(a,b \in S\)
     \item \emph{Identity Element:} There exists \(e \in S\) such that \(a \ast e = e \ast a = a\) for all \(a \in S\)
@@ -33,64 +37,64 @@ Let \(\ast\) be a binary operation on a set \(S\). The most important properties
 \subsection{Homomorphisms and Isomorphisms}
 
 Let \((G, \oplus)\) and \((H, \oplus')\) be two algebraic structures.
+\vspace{\baselineskip}
 
-\begin{itemize}[label=\(-\)]
-    \item A \emph{homomorphism} is a function \(\varphi: G \rightarrow H\) such that:
-    \[
-    \varphi(a \oplus b) = \varphi(a) \oplus' \varphi(b), \quad \forall a,b \in G
-    \]
+A \emph{homomorphism} is a function \(\varphi: G \rightarrow H\) such that:
     
-    \item An \emph{isomorphism} is a bijective homomorphism. If such a map exists, we say the structures are \emph{isomorphic}, written as \(G \cong H\).
-\end{itemize}
+\[
+  \varphi(a \oplus b) = \varphi(a) \oplus' \varphi(b), \quad \forall a,b \in G
+\]
+    
+An \emph{isomorphism} is a bijective homomorphism. If such a map exists, we say the structures are \emph{isomorphic}, written as \(G \cong H\).
 
 \subsection{Common Algebraic Structures}
 
-\subsection{Semigroup \texorpdfstring{\((S, \oplus)\)}{}}
+\subsubsection{Semigroup \texorpdfstring{\((S, \oplus)\)}{}}
 
 A \emph{semigroup} is a set \(S\) equipped with a binary operation \(\oplus\) that is \emph{associative}. This means:
 
 \[
-(a \oplus b) \oplus c = a \oplus (b \oplus c) \quad \text{for all } a, b, c \in S.
+  (a \oplus b) \oplus c = a \oplus (b \oplus c) \quad \text{for all } a, b, c \in S.
 \]
 
 There is no requirement for an identity element or inverses. Semigroups 
 capture the essence of combining elements consistently (e.g., string concatenation).
 
-\subsection{Monoid \texorpdfstring{\((M, \oplus)\)}{}}
+\subsubsection{Monoid \texorpdfstring{\((M, \oplus)\)}{}}
 
 A \emph{monoid} builds on a semigroup by adding an \emph{identity element} \(e\) such that:
 
 \[
-a \oplus e = e \oplus a = a \quad \text{for all } a \in M.
+  a \oplus e = e \oplus a = a \quad \text{for all } a \in M.
 \]
 
 This structure is useful when an operation must have a “do nothing” element, like \(0\) for addition or \(1\) for multiplication.
 
-\subsection{Group \texorpdfstring{\((G, \oplus)\)}{}}
+\subsubsection{Group \texorpdfstring{\((G, \oplus)\)}{}}
 
 A \emph{group} is a monoid where every element has an \emph{inverse}:
 
 \[
-\text{For each } a \in G, \text{ there exists } a^{-1} \in G \text{ such that } a \oplus a^{-1} = a^{-1} \oplus a = e.
+  \text{For each } a \in G, \text{ there exists } a^{-1} \in G \text{ such that } a \oplus a^{-1} = a^{-1} \oplus a = e.
 \]
 
 Groups model reversible processes and are foundational in symmetry and abstract algebra.
 
-\subsection{Abelian Group \texorpdfstring{\((A, \oplus)\)}{}}
+\subsubsection{Abelian Group \texorpdfstring{\((A, \oplus)\)}{}}
 
 An \emph{Abelian group} (or commutative group) is a group where the operation is \emph{commutative}:
 
 \[
-a \oplus b = b \oplus a \quad \text{for all } a, b \in A.
+  a \oplus b = b \oplus a \quad \text{for all } a, b \in A.
 \]
 
 This property makes Abelian groups especially important theory and linear algebra.
 
-\subsection{Ring \texorpdfstring{\((R, \oplus, \odot)\)}{}}
+\subsubsection{Ring \texorpdfstring{\((R, \oplus, \odot)\)}{}}
 
 A \emph{ring} is a set with two operations:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
   \item \((R, \oplus)\) is an Abelian group.
   \item \((R, \odot)\) is a semigroup (associative multiplication).
   \item Multiplication distributes over addition:
@@ -101,29 +105,29 @@ A \emph{ring} is a set with two operations:
 
 Rings generalize arithmetic of integers, where addition and multiplication interact in a structured way.
 
-\subsection{Commutative Ring \texorpdfstring{\((R, \oplus, \odot)\)}{}}
+\subsubsection{Commutative Ring \texorpdfstring{\((R, \oplus, \odot)\)}{}}
 
 A \emph{commutative ring} is a ring where multiplication is also \emph{commutative}:
 
 \[
-a \odot b = b \odot a \quad \text{for all } a, b \in R.
+  a \odot b = b \odot a \quad \text{for all } a, b \in R.
 \]
 
-This is the kind of ring most often encountered in basic algebra, such as the integers \(\mathbb{Z}\).
+This is the kind of ring most often encountered in basic algebra, such as the integers \(\Integers\).
 
-\subsection{Field \texorpdfstring{\((K, \oplus, \odot)\)}{}}
+\subsubsection{Field \texorpdfstring{\((K, \oplus, \odot)\)}{}}
 A \emph{field} is a commutative ring where every nonzero element has a \emph{multiplicative inverse}:
 
 \[
-(K \setminus \{0\}, \odot) \text{ is an Abelian group}.
+  (K \setminus \{0\}, \odot) \text{ is an Abelian group}.
 \]
 
-Fields like \(\mathbb{Q}\), \(\mathbb{R}\), and \(\mathbb{C}\) allow division (except by zero), enabling the full range of arithmetic operations.
+Fields like \(\Rationals\), \(\Reals\), and \(\Complex\) allow division (except by zero), enabling the full range of arithmetic operations.
 
-\subsection{Vector Space \texorpdfstring{\((V, \oplus, \cdot)\)}{}}
+\subsubsection{Vector Space \texorpdfstring{\((V, \oplus, \cdot)\)}{}}
 
 A \emph{vector space} over a field \(K\) consists of:
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
   \item An Abelian group \((V, \oplus)\) for vector addition.
   \item A scalar multiplication \(\cdot: K \times V \to V\) satisfying:
   \begin{itemize}

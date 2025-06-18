@@ -14,6 +14,7 @@ A sequence defined recursively can often be rewritten in an explicit or closed f
 \emph{Closed form} expresses \( a_n \) directly in terms of \( n \), with no reference to previous terms.
 
 \subsubsection{General Method (when linear):}
+
 \begin{enumerate}
     \item Calculate some terms and watch the difference or quotient between them
     maybe the difference is clear, and you can build a geometric or arithmetic sequence directly.
@@ -27,14 +28,16 @@ A sequence defined recursively can often be rewritten in an explicit or closed f
 A linear recurrence has the form:
 
 \begin{align*}
-a_n & = \lambda a_{n -1} + c \\
-a_1 & = \lambda a_0 + c \implies a_2 = \lambda (\lambda a_0 + c) + c \\
-\implies a_n & = \lambda^n a_0 + (1 + \lambda + \lambda^2 + \cdots + \lambda^{n - 1})c
+    a_n & = \lambda a_{n -1} + c \\
+    a_1 & = \lambda a_0 + c \implies a_2 = \lambda (\lambda a_0 + c) + c \\
+    \implies a_n & = \lambda^n a_0 + (1 + \lambda + \lambda^2 + \cdots + \lambda^{n - 1})c
 \end{align*}
 
 Therefore,
 
-\[a_n = \lambda^n a_0 + \frac{\lambda^n - 1}{\lambda - 1}c\]
+\[
+    a_n = \lambda^n a_0 + \frac{\lambda^n - 1}{\lambda - 1}c
+\]
 
 \subsection{Recursive Inequalities}
 
@@ -47,11 +50,12 @@ A \emph{recursive inequality} bounds a sequence rather than defines it exactly.
 Suppose
 
 \[
-a_{n+1} \le \frac{1}{2} a_n + 3
+    a_{n+1} \le \frac{1}{2} a_n + 3
 \]
 
 To analyze:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
     \item Guess a bound (e.g., show \( a_n \le M \) for all \( n \))
     \item Use induction or iteration to justify convergence or boundedness
     \item Compare with a simpler sequence (e.g., geometric series)
@@ -62,21 +66,24 @@ These techniques are common in analysis, approximation, and numerical algorithms
 \subsection{Fibonacci Numbers and Closed Form}
 
 The Fibonacci sequence is defined recursively:
+
 \[
-F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}
+    F_0 = 0, \quad F_1 = 1, \quad F_n = F_{n-1} + F_{n-2}
 \]
 
 The characteristic equation is:
+
 \[
-x^2 - x - 1 = 0 \Rightarrow x = \varphi = \frac{1 + \sqrt{5}}{2}, \quad \psi = \frac{1 - \sqrt{5}}{2}
+    x^2 - x - 1 = 0 \Rightarrow x = \varphi = \frac{1 + \sqrt{5}}{2}, \quad \psi = \frac{1 - \sqrt{5}}{2}
 \]
 
 The closed form (Binet’s Formula) is:
+
 \[
-F_n = \frac{1}{\sqrt{5}} \left( \varphi^n - \psi^n \right)
+    F_n = \frac{1}{\sqrt{5}} \left( \varphi^n - \psi^n \right)
 \]
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \( \varphi \approx 1.618 \) is the golden ratio
     \item This formula demonstrates exponential growth of \( F_n \)
 \end{itemize}

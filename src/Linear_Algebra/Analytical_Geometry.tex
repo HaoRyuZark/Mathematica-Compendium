@@ -1,14 +1,15 @@
 \newpage
 \section{Analytical Geometry}
 
-In this section, we will cover the topics for the geometry of \(\mathbb{R}^2\) and \(\mathbb{R}^3\).
+In this section, we will cover the topics for the geometry of \(\Reals^2\) and \(\Reals^3\).
 And maybe also in higher dimensions.
 
 \subsection{Vectors and Points}
+
 In analytical geometry, points and vectors are the basic elements.
 \vspace{\baselineskip}
 
-A point in \(\mathbb{R}^3\) is represented as \(\vec{P} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}\).
+A point in \(\Reals^3\) is represented as \(\vec{P} = \begin{pmatrix} x \\ y \\ z \end{pmatrix}\).
 Or as \((x_1, x_2, \dots , x_n)\).
 \vspace{\baselineskip}
 
@@ -18,12 +19,15 @@ A vector is an object with direction and magnitude (in this case), also represen
 Or as \({(x_1, x_2, \dots , x_n)}^{T}\).
 
 \subsection{Vector Addition and Scalar Multiplication}
+
 Given two vectors \(\vec{a}\) and \(\vec{b}\):
+
 \[
 	\vec{a} \pm  \vec{b} = \begin{pmatrix} a_x \\ a_y \end{pmatrix} \pm \begin{pmatrix} b_x \\ b_y \end{pmatrix} = \begin{pmatrix} a_x \pm b_x \\ a_y \pm b_y \end{pmatrix}
 \]
 
 For a scalar \(\lambda\) and vector \(\vec{a}\):
+
 \[
 	\lambda \vec{a} = \lambda \begin{pmatrix} a_x \\ a_y \end{pmatrix} = \begin{pmatrix} \lambda a_x \\ \lambda a_y \end{pmatrix}
 \]
@@ -39,29 +43,37 @@ For a scalar \(\lambda\) and vector \(\vec{a}\):
 \end{figure}
 
 \subsection{Equation of a Line}
+
 A line is defined by a point \(\vec{P}\) and a direction vector \(\vec{v}\):
+
 \[
-	\vec{r}(t) = \vec{P} + t\vec{v}, \quad t \in \mathbb{R}
+	\vec{r}(t) = \vec{P} + t\vec{v}, \quad t \in \Reals
 \]
 
 \subsection{Equation of a Plane}
+
 A plane is defined by a point \(\vec{P}\) and a normal vector \(\vec{n}\):
+
 \[
 	P: \vec{x} = \vec{s} + \lambda_1 \vec{v_1} + \lambda_2 \vec{v_2}
 \]
+
 \subsection{Scalar (Dot) Product}
+
 The inner product of vectors \(\vec{a}\) and \(\vec{b}\) is a function \(\langle x, y\rangle :=V \times V \rightarrow \mathbb{K}\)
 with the following properties:
 
 \(\forall \vec{a}, \vec{b} \in V\):
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
 	\item \(\langle\vec{a}, \vec{b}\rangle = \langle\vec{b}, \vec{a}\rangle \)
 	\item \(\langle\vec{a}, \vec{b} + \vec{c}\rangle = \langle\vec{a}, \vec{b}\rangle + \langle\vec{a}, \vec{c}\rangle\)
 	\item \(\langle\vec{a}, \lambda \vec{b}\rangle = \lambda \langle\vec{a}, \vec{b}\rangle\)
 	\item \(\langle\vec{a}, \vec{b}\rangle = 0 \Leftrightarrow \vec{a} = \vec{0} \vee \vec{b} = \vec{0}\)
 \end{itemize}
 
- Formula:
+Formula:
+
 \[
 	\langle\vec{a}, \vec{b}\rangle = a_1 b_1 + a_2 b_2 + \cdots + a_n b_n = \sum_{i = 1}^{n} a_i b_i
 \]
@@ -69,6 +81,7 @@ with the following properties:
 \textbf{Proof:}
 
 Let us look at the following Triangle:
+
 \begin{center}
 	\begin{tikzpicture}
 		\draw [<->](0, 3) -- (0, -3);
@@ -86,12 +99,13 @@ We can use the Cosine law: \(\|v - u\|^{2} = \|v\|^2 + \|u\|^2  - 2 \|u\| \|v\| 
 Now we expand:
 
 \[
-\|u\|^2 = u_{1}^2 + u_{2}^2\ \text{ and } \|v\|^2 = v_{1}^2 + v_{2}^2
+	\|u\|^2 = u_{1}^2 + u_{2}^2\ \text{ and } \|v\|^2 = v_{1}^2 + v_{2}^2
 \]
 
 Then: \(\|v - u\|^2 = {(v_1 - u_1)}^2 + {(v_2 - u_2)}^2\) and by re-grouping after expansion we get
 
-\[\langle v, u\rangle = v_1u_1 + v_2u_2 = \|v\|\|u\|\cos \theta \\ 
+\[
+	\langle v, u\rangle = v_1u_1 + v_2u_2 = \|v\|\|u\|\cos \theta \\ 
 \]
 
 \QED
@@ -99,17 +113,20 @@ Then: \(\|v - u\|^2 = {(v_1 - u_1)}^2 + {(v_2 - u_2)}^2\) and by re-grouping aft
 And if we manipulates this expression we can also prove the angle formulas.
 And with that information we can prove that
 
-\[\cos \frac{\pi}{2}\ = \frac{\langle v, u\rangle}{\|v\|\|u\|} = 0\]
+\[
+	\cos \frac{\pi}{2}\ = \frac{\langle v, u\rangle}{\|v\|\|u\|} = 0
+\]
 
 Only if the Dot Product is equal to zero so, like that we have also proved that
 only orthogonal vector have a dot product of zero.
 
 \subsection{Length (Norm) of a Vector}
+
 The norm of a vector \(\vec{a}\) is described by different norms:
 
 It also has the following properties:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 	\item \(\|\vec{a}\| \geq 0\) and \(\|\vec{a}\| = 0 \Leftrightarrow \vec{a} = \vec{0}\)
 	\item \(\|\lambda \vec{a}\| = |\lambda| \|\vec{a}\|\)
 	\item \(\|\vec{a} + \vec{b}\| \leq \|\vec{a}\| + \|\vec{b}\|\) (Triangle inequality)
@@ -118,7 +135,7 @@ It also has the following properties:
 
 These are the most common norms, although we will be using primarily the euclidean norm:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 	\item \emph{Euclidean norm}:
 	      \[
 		      \|\vec{a}\| = \sqrt{\langle\vec{a}, \vec{a}\rangle} = \sqrt{a_1^2 + a_2^2 + \cdots + a_n^2}
@@ -134,7 +151,9 @@ These are the most common norms, although we will be using primarily the euclide
 \end{itemize}
 
 \subsection{Angle Relations}
+
 The angle \(\theta\) between two vectors is:
+
 \[
 	\cos\theta = \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{a}\|\|\vec{b}\|}, \quad \theta = \arccos\left( \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{a}\|\|\vec{b}\|} \right)
 \]
@@ -142,6 +161,7 @@ The angle \(\theta\) between two vectors is:
 \subsubsection{Line-Line Angle}
 
 Use direction vectors \(\vec{v}_1\) and \(\vec{v}_2\):
+
 \[
 	\theta = \arccos\left( \frac{\langle\vec{v}_1, \vec{v}_2\rangle}{\|\vec{v}_1\|\|\vec{v}_2\|} \right)
 \]
@@ -149,6 +169,7 @@ Use direction vectors \(\vec{v}_1\) and \(\vec{v}_2\):
 \subsubsection{Line-Plane Angle}
 
 Let \(\vec{v}\) be the line's direction and \(\vec{n}\) the plane's normal:
+
 \[
 	\theta = \arcsin\left( \frac{\langle\vec{v}, \vec{n}\rangle}{\|\vec{v}\|\|\vec{n}\|} \right)
 \]
@@ -156,14 +177,16 @@ Let \(\vec{v}\) be the line's direction and \(\vec{n}\) the plane's normal:
 \subsubsection{Plane-Plane Angle}
 
 Angle between planes is angle between their normals:
+
 \[
 	\theta = \arccos\left( \frac{\langle\vec{n}_1, \vec{n}_2\rangle}{\|\vec{n}_1\|\|\vec{n}_2\|} \right)
 \]
 
 \subsection{Line Relations}
+
 Two lines can be:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 	\item \emph{Identical}: same direction vector and point
 	\item \emph{Parallel}: direction vectors are proportional
 	\item \emph{Intersecting}: one solution for \(t_1\), \(t_2\) such that \(\vec{r}_1(t_1) = \vec{r}_2(t_2)\)
@@ -171,6 +194,7 @@ Two lines can be:
 \end{itemize}
 
 To find the relation:
+
 \begin{enumerate}
 	\item Check if direction vectors are scalar multiples \(\Rightarrow\) parallel
 	\item Solve \(\vec{P}_1 + t\vec{v}_1 = \vec{P}_2 + s\vec{v}_2\) for \(t\) and \(s\):
@@ -182,31 +206,35 @@ To find the relation:
 \end{enumerate}
 
 \subsection{Normalization of a vector}
+
 To normalize a vector \(\vec{a}\), we divide it by its length:
+
 \[
 	\hat{\vec{a}} = \frac{\vec{a}}{\|\vec{a}\|} = \frac{\begin{pmatrix} a_x \\ a_y \\ a_z \end{pmatrix}}{\sqrt{a_x^2 + a_y^2 + a_z^2}} = \begin{pmatrix} \frac{a_x}{\|\vec{a}\|} \\ \frac{a_y}{\|\vec{a}\|} \\ \frac{a_z}{\|\vec{a}\|} \end{pmatrix}
 \]
 
 \subsection{Orthogonal Vectors and the Orthogonal Projection}
+
 Two vectors \(\vec{a}\) and \(\vec{b}\) are orthogonal if:
+
 \[
 	\langle\vec{a}, \vec{b}\rangle = 0
 \]
+
 The orthogonal projection of vector \(\vec{a}\) onto vector \(\vec{b}\) is given by:
+
 \[
 	\text{p}_{\vec{b}}(\vec{a}) = \frac{\langle\vec{a}, \vec{b}\rangle}{\|\vec{b}\|^2} \cdot \vec{b}
 \]
 
 \textbf{Proof of the projection formula}
-\[
-	p \| q \implies \alpha q = p\ \forall \alpha \in \mathbb{K}\ \text{and}\ \forall\ p, q \in V
-\]
-\[
-	\langle a - p, q\rangle = 0 \implies \langle a - \alpha q, q\rangle = 0 \implies \langle a, q\rangle - \alpha \langle q, q\rangle = 0
-\]
-\[
-	\alpha = \frac{\langle a, q\rangle}{\langle q, q\rangle}
-\]
+
+\begin{align*}
+	p \| q \implies \alpha q &= p\ \forall \alpha \in \mathbb{K}\ \text{and}\ \forall\ p, q \in V\\
+	\langle a - p, q\rangle &= 0 \implies \langle a - \alpha q, q\rangle = 0 \implies \langle a, q\rangle - \alpha \langle q, q\rangle = 0\\
+	\alpha &= \frac{\langle a, q\rangle}{\langle q, q\rangle}
+\end{align*}
+
 
 Therefore, the orthogonal projection of vector \(\vec{a}\) on \(\vec{b}\) is given by
 multiplying \(\vec{b}\) by the scalar \(\alpha\).
@@ -244,7 +272,8 @@ multiplying \(\vec{b}\) by the scalar \(\alpha\).
 
 \subsection{The Cross Product}
 
-The cross product of two vectors \(\vec{a}\) and \(\vec{b}\) in \(\mathbb{R}^3\) is defined as:
+The cross product of two vectors \(\vec{a}\) and \(\vec{b}\) in \(\Reals^3\) is defined as:
+
 \[
 	\vec{a} \times \vec{b} = \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} \times \begin{pmatrix} b_1 \\ b_2 \\ b_3 \end{pmatrix} = \begin{pmatrix} a_2 b_3 - a_3 b_2 \\ a_3 b_1 - a_1 b_3 \\ a_1 b_2 - a_2 b_1 \end{pmatrix}
 \]
@@ -252,65 +281,78 @@ The cross product of two vectors \(\vec{a}\) and \(\vec{b}\) in \(\mathbb{R}^3\)
 or 
 
 \[
-\det\left( \begin{bmatrix}
-	\imath & v_1 & w_1 \\
-	\jmath & v_2 & w_2 \\
-	\hat{k} & v_3 & w_3
-\end{bmatrix} \right)
-= \imath (v_2 w_3 - v_3 w_2) - \jmath (v_1 w_3 - v_3 w_1) + \hat{k}(v_1 w_2 - v_2 w_1)
+	\det\left( \begin{bmatrix}
+		\imath & v_1 & w_1 \\
+		\jmath & v_2 & w_2 \\
+		\hat{k} & v_3 & w_3
+	\end{bmatrix} \right)
+	= \imath (v_2 w_3 - v_3 w_2) - \jmath (v_1 w_3 - v_3 w_1) + \hat{k}(v_1 w_2 - v_2 w_1)
 \]
 
 
- The cross product has the following properties:
-\begin{itemize}[label=\(-\)]
+The cross product has the following properties:
+
+\begin{itemize}
 	\item \(\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})\)
 	\item \(\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}\)
 	\item \((\lambda_1\vec{a}) \times (\lambda_2\vec{b}) = \lambda_1\lambda_2(\vec{a} \times \vec{b})\)
 	\item \(\|\vec{a} \times \vec{b}\| = \|\vec{a}\|\|\vec{b}\| \sin(\theta)\)
 	\item \(\langle\vec{a}, (\vec{b} \times \vec{c})\rangle = 0\) (scalar triple product)
-	\item \(\vec{a} \times \vec{b} = \vec{0} \Leftrightarrow \vec{a} = \lambda\vec{b}\) for some \(\lambda \in \mathbb{R}\) (parallel vectors)
+	\item \(\vec{a} \times \vec{b} = \vec{0} \Leftrightarrow \vec{a} = \lambda\vec{b}\) for some \(\lambda \in \Reals\) (parallel vectors)
 	\item \(\vec{a} \times \vec{b} = \vec{0} \Leftrightarrow \vec{a} = \vec{0} \vee \vec{b} = \vec{0}\) (zero vector)
 \end{itemize}
- The cross product is not defined in \(\mathbb{R}^2\).
- The cross product is not commutative, but it is associative:
+
+The cross product is not defined in \(\Reals^2\).
+The cross product is not commutative, but it is associative:
+
 \[
 	(\vec{a} \times \vec{b}) \times \vec{c} = \vec{a} \times (\vec{b} \times \vec{c})
 \]
- The cross product is distributive over vector addition:
+
+The cross product is distributive over vector addition:
+
 \[
 	\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}
 \]
- The cross product is anti-commutative:
+
+The cross product is anti-commutative:
+
 \[
 	\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})
 \]
- The cross product is not associative:
+
+The cross product is not associative:
+
 \[
 	(\vec{a} \times \vec{b}) \times \vec{c} \neq \vec{a} \times (\vec{b} \times \vec{c})
 \]
- The cross product is not distributive over scalar multiplication:
+
+The cross product is not distributive over scalar multiplication:
+
 \[
 	\lambda(\vec{a} \times \vec{b}) \neq (\lambda\vec{a}) \times \vec{b}
 \]
 
- The length of the cross product in \(\mathbb{R}^3\) is the area of the parallelogram spanned by the two vectors:
+The length of the cross product in \(\Reals^3\) is the area of the parallelogram spanned by the two vectors:
 
-\subsection{Orthogonal vectors in \texorpdfstring{\(\mathbb{R}^2\ \mathbb{R}^3\)}{}}
+\subsection{Orthogonal vectors in \texorpdfstring{\(\Reals^2\ \Reals^3\)}{}}
 
-\subsubsection{Orthogonal vectors in \texorpdfstring{\(\mathbb{R}^2\)}{}}
+\subsubsection{Orthogonal vectors in \texorpdfstring{\(\Reals^2\)}{}}
 
 \begin{enumerate}
 	\item Interchange the components
 	\item Change the sign of one component
 \end{enumerate}
 
-\subsubsection{Orthogonal vectors in \texorpdfstring{\(\mathbb{R}^3\)}{}}
+\subsubsection{Orthogonal vectors in \texorpdfstring{\(\Reals^3\)}{}}
 \begin{enumerate}
 	\item Interchange two components
 	\item the one that was not changed, set to zero
 	\item Change the sign of first component
 \end{enumerate}
- Example:
+
+\textbf{Example:}
+
 \[
 	\vec{a} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix}, \quad \vec{b} = \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix}
 \]
@@ -322,15 +364,18 @@ The Hessian normal form is a way of expressing the equation of a plane in three-
 \subsubsection{Geometric Interpretation}
 
 The Hessian normal form represents a plane by specifying:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
 	\item a unit normal vector \(\vec{n} = (a, b, c)\) to the plane,
 	\item and the shortest distance \(d\) from the origin to the plane.
 \end{itemize}
 
 This form is derived by normalizing the general plane equation. A plane in 3D can be written as:
+
 \[
 	ax + by + cz + d = 0,
 \]
+
 where \((a, b, c)\) is a normal vector to the plane and \(d\) is the dot product of the normal vector with a point \(p\).
 If we divide all terms by \(\sqrt{a^2 + b^2 + c^2}\), we normalize the normal vector:
 
@@ -339,22 +384,27 @@ If we divide all terms by \(\sqrt{a^2 + b^2 + c^2}\), we normalize the normal ve
 \]
 
 Let:
+
 \[
 	\vec{n} = \left(\frac{a}{\sqrt{a^2 + b^2 + c^2}}, \frac{b}{\sqrt{a^2 + b^2 + c^2}}, \frac{c}{\sqrt{a^2 + b^2 + c^2}}\right), \quad d' = \frac{d}{\sqrt{a^2 + b^2 + c^2}},
 \]
 
 then the equation becomes:
+
 \[
 	\vec{n} \cdot \vec{r} + d' = 0,
 \]
+
 which is the Hessian normal form. Here, \(\vec{r} = (x, y, z)\) is any point on the plane, and \(\vec{n}\) is the unit normal.
 
 \subsubsection{Signed Distance to the Plane}
 
 This form allows easy calculation of the signed distance from any point \(\vec{p}\) to the plane:
+
 \[
 	\text{distance} = \vec{n} \cdot \vec{p} + d',
 \]
+
 which is positive if \(\vec{p}\) lies on the same side of the plane as the normal vector.
 
 \subsubsection{Derivation Illustration}
@@ -368,6 +418,7 @@ To visualize the derivation, imagine a plane with unit normal vector \(\vec{n}\)
 This gives the signed distance formula and thus, motivates the Hessian form.
 
 \subsection{Converting from the parametric form to the Hessian normal form}
+
 Steps:
 
 \begin{enumerate}
@@ -378,7 +429,9 @@ Steps:
 \end{enumerate}
 
 \subsection{Converting from the Hessian normal form to the parametric form}
+
 Steps:
+
 \begin{enumerate}
 	\item Find a point on the plane
 	\item Find two direction vectors in the plane
@@ -386,7 +439,8 @@ Steps:
 \end{enumerate}
 
 \subsection{Properties of lines and planes}
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
 	\item Two planes are parallel if their normal vectors are scalar multiples of each other.
 	\item A line and a plane are parallel if the direction vector of the line is orthogonal to the normal vector of the plane.
 	\item A line intersects a plane if there exists a point on the line that satisfies the equation of the plane.
@@ -400,7 +454,9 @@ Steps:
 \end{itemize}
 
 \subsection{Convert Normal Vector in Two Direction Vectors}
+
 Steps:
+
 \begin{enumerate}
 	\item Given the normal vector \(\vec{n} = (a, b, c)\), interchange \(a\) and \(b\) and multiply \(b\) by -1
 	\item Set the other component to 0. This gives you the first direction vector \(\vec{v} = (-b, a, 0)\)
@@ -409,7 +465,9 @@ Steps:
 \end{enumerate}
 
 \subsection{Intersection between Line and Plane}
+
 To find the intersection between a line and a plane, we can use the following steps:
+
 \begin{enumerate}
 	\item Write the parametric form of the line: \(\vec{r}(t) = \vec{P} + t\vec{v}\), where \(\vec{P}\) is a point on the line and \(\vec{v}\) is the direction vector.
 	\item Write the equation of the plane in Hessian normal form: \(\langle \vec{n}, \vec{x} - \vec{P} \rangle = 0\), where \(\vec{n}\) is the normal vector and \(\vec{P}\) is a point on the plane.
@@ -417,23 +475,30 @@ To find the intersection between a line and a plane, we can use the following st
 	\item Solve for \(t\) to find the intersection point.
 	\item Substitute \(t\) back into the parametric form of the line to find the intersection point.
 \end{enumerate}
+
 \textbf{Example:}
 \vspace{\baselineskip}
 
 Given the line:
+
 \[
 	g(t) = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
 \]
+
 and the plane:
+
 \[
 	E(u, m) = \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} + u \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + m \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix},
 \]
+
 we want to find the intersection point.
 
 \textbf{Step 1:} Determine the normal vector of the plane using the cross product of the two direction vectors:
+
 \[
 	\vec{v}_1 = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, \quad \vec{v}_2 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}
 \]
+
 \[
 	\vec{n} = \vec{v}_1 \times \vec{v}_2 =
 	\begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} \times \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} =
@@ -441,11 +506,13 @@ we want to find the intersection point.
 \]
 
 \textbf{Step 2:} Use the normal vector and a point on the plane to write the plane equation:
+
 \[
 	\langle \vec{n}, \vec{x} - \vec{Q} \rangle = 0, \quad \vec{Q} = \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix}
 \]
 
 \textbf{Step 3:} Plug the line into the plane equation:
+
 \[
 	\vec{x}(t) = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
 	\Rightarrow
@@ -454,6 +521,7 @@ we want to find the intersection point.
 \]
 
 Now compute the dot product:
+
 \[
 	\langle \vec{n}, \vec{x}(t) - \vec{Q} \rangle =
 	\begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} \cdot \begin{pmatrix} t \\ t - 1 \\ t - 1 \end{pmatrix}
@@ -461,17 +529,20 @@ Now compute the dot product:
 \]
 
 \textbf{Step 4:} Solve for \( t \):
+
 \[
 	t - 2 = 0 \Rightarrow t = 2
 \]
 
 \textbf{Step 5:} Substitute \( t = 2 \) into the line:
+
 \[
 	\vec{x}(2) = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} =
 	\begin{pmatrix} 2 \\ 2 \\ 3 \end{pmatrix}
 \]
 
 \textbf{Result:} The line intersects the plane at the point
+
 \[
 	\boxed{\begin{pmatrix} 2 \\ 2 \\ 3 \end{pmatrix}}
 \]
@@ -502,7 +573,7 @@ Now compute the dot product:
 
 \subsubsection{Distance between two points}
 
-The distance between two points \(\vec{P_1}\) and \(\vec{P_2}\) in \(\mathbb{R}^n\) is given by:
+The distance between two points \(\vec{P_1}\) and \(\vec{P_2}\) in \(\Reals^n\) is given by:
 \[
 	d(\vec{P_1}, \vec{P_2}) = \|\vec{P_1} - \vec{P_2}\| = \sqrt{{(x_1 - x_2)}^2 + {(y_1 - y_2)}^2 + \cdots + {(z_1 - z_2)}^2}
 \]
@@ -511,69 +582,82 @@ where \(\vec{P_1} = (x_1, y_1, \dots,z_1)\) and \(\vec{P_2} = (x_2, y_2, \dots,z
 \subsubsection{Distance between a point and a hyperplane}
 
 The distance between a point \(\vec{P}\) and a hyperplane defined by the equation \(\langle \vec{n}, \vec{x} - \vec{P_0} \rangle = 0\) is given by:
+
 \[
 	d(\vec{P}, \text{hyperplane}) = \frac{|\langle \vec{n}, \vec{P} - \vec{P_0} \rangle|}{\|\vec{n}\|}
 \]
+
 where \(\vec{P_0}\) is a point on the hyperplane and \(\vec{n}\) is the normal vector of the hyperplane.
 
 \subsubsection{Distance between two lines}
 
-The distance between two lines in \(\mathbb{R}^3\) can be calculated using the formula:
+The distance between two lines in \(\Reals^3\) can be calculated using the formula:
+
 \[
 	d = \frac{|\langle \vec{v_1} \times \vec{v_2}, \vec{P_2} - \vec{P_1} \rangle|}{\|\vec{v_1} \times \vec{v_2}\|}
 \]
+
 where \(\vec{P_1}\) and \(\vec{P_2}\) are points on the two lines, and \(\vec{v_1}\) and \(\vec{v_2}\) are the direction vectors of the lines.
 
 \subsubsection{Distance between a point and a line}
 
 The distance between a point \(\vec{P}\) and a line defined by the parametric equation \(\vec{r}(t) = \vec{P_0} + t\vec{v}\) is given by:
+
 \[
 	d(\vec{P}, \text{line}) = \frac{\|\vec{v} \times (\vec{P} - \vec{P_0})\|}{\|\vec{v}\|}
 \]
+
 where \(\vec{P_0}\) is a point on the line and \(\vec{v}\) is the direction vector of the line.
 
 \subsubsection{Distance between two planes}
 
 The distance between two parallel planes defined by the equations \(\langle \vec{n}, \vec{x} - \vec{P_1} \rangle = 0\) and \(\langle \vec{n}, \vec{x} - \vec{P_2} \rangle = 0\) is given by:
+
 \[
 	d = \frac{|\langle \vec{n}, \vec{P_2} - \vec{P_1} \rangle|}{\|\vec{n}\|}
 \]
+
 where \(\vec{P_1}\) and \(\vec{P_2}\) are points on the two planes, and \(\vec{n}\) is the normal vector of the planes.
 
 \subsubsection{Distance between a point and a plane}
 
 The distance between a point \(\vec{P}\) and a plane defined by the equation \(\langle \vec{n}, \vec{x} - \vec{P_0} \rangle = 0\) is given by:
+
 \[
 	d(\vec{P}, \text{plane}) = \frac{|\langle \vec{n}, \vec{P} - \vec{P_0} \rangle|}{\|\vec{n}\|}
 \]
+
 where \(\vec{P_0}\) is a point on the plane and \(\vec{n}\) is the normal vector of the plane.
 \vspace{\baselineskip}
 
 \textbf{Example:}
 \vspace{\baselineskip}
  
-
 Distance Between Two Skew Lines
 
 To find the shortest distance between two skew lines, we use the formula:
+
 \[
 	\text{distance} = \frac{|\langle(\vec{P}_2 - \vec{P}_1), (\vec{v}_1 \times \vec{v}_2)\rangle|}{\|\vec{v}_1 \times \vec{v}_2\|}
 \]
 
 Where:
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
 	\item \(\vec{P}_1\) and \(\vec{P}_2\) are points on each line,
 	\item \(\vec{v}_1\) and \(\vec{v}_2\) are the direction vectors,
 	\item \(\vec{v}_1 \times \vec{v}_2\) is the cross product of the direction vectors.
 \end{itemize}
 
 \textbf{Given:}
+
 \[
 	g_1: \vec{r}_1(a) = \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix} + a \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}, \quad
 	g_2: \vec{r}_2(b) = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} + b \begin{pmatrix} 3 \\ 2 \\ 1 \end{pmatrix}
 \]
 
 \textbf{Step 1:} Set
+
 \[
 	\vec{P}_1 = \begin{pmatrix} 2 \\ 2 \\ 2 \end{pmatrix}, \quad \vec{v}_1 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}
 \]
@@ -582,11 +666,13 @@ Where:
 \]
 
 \textbf{Step 2:} Compute the vector between base points:
+
 \[
 	\vec{P}_2 - \vec{P}_1 = \begin{pmatrix} 1 - 2 \\ 2 - 2 \\ 3 - 2 \end{pmatrix} = \begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix}
 \]
 
 \textbf{Step 3:} Compute the cross product:
+
 \[
 	\vec{v}_1 \times \vec{v}_2 =
 	\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} \times \begin{pmatrix} 3 \\ 2 \\ 1 \end{pmatrix}
@@ -601,6 +687,7 @@ Where:
 \]
 
 \textbf{Step 4:} Compute scalar triple product:
+
 \[
 	\langle(\vec{P}_2 - \vec{P}_1), (\vec{v}_1 \times \vec{v}_2)\rangle =
 	\langle\begin{pmatrix} -1 \\ 0 \\ 1 \end{pmatrix}, \begin{pmatrix} -1 \\ 3 \\ -3 \end{pmatrix}\rangle
@@ -609,11 +696,13 @@ Where:
 \]
 
 \textbf{Step 5:} Magnitude of the cross product:
+
 \[
 	\|\vec{v}_1  \vec{v}_2\|= \sqrt{(-1)^2 + 3^2 + (-3)^2} = \sqrt{1 + 9 + 9} = \sqrt{19}
 \]
 
 \textbf{Final Answer:}
+
 \[
 	\text{distance} = \frac{2}{\sqrt{19}} \approx 0.458
 \]
@@ -632,14 +721,19 @@ The \emph{foot of the perpendicular} from a point \(\vec{P}\) to a line (or plan
 \textbf{Line case:}
 
 Given a line in parametric form:
+
 \[
 	g: \vec{r}(t) = \vec{A} + t\vec{v}
 \]
+
 and a point \(\vec{P}\) not on the line, the foot of the perpendicular \(\vec{F}\) satisfies:
+
 \[
 	(\vec{P} - \vec{F}) \perp \vec{v} \quad \Rightarrow \quad (\vec{P} - (\vec{A} + t\vec{v})) \cdot \vec{v} = 0
 \]
+
 Solve this inner product for \(t\), then compute:
+
 \[
 	\vec{F} = \vec{A} + t\vec{v}
 \]
@@ -647,10 +741,13 @@ Solve this inner product for \(t\), then compute:
 \textbf{Plane case:}
 
 Given a plane in normal form:
+
 \[
 	\langle \vec{n}, \vec{x} - \vec{Q} \rangle = 0
 \]
+
 then the foot of the perpendicular from point \(\vec{P}\) to the plane is:
+
 \[
 	\vec{F} = \vec{P} - ((\vec{P} - \vec{Q}) \cdot \vec{n}) \cdot \vec{n}
 \]
@@ -660,7 +757,9 @@ then the foot of the perpendicular from point \(\vec{P}\) to the plane is:
 The \emph{mirror point} (or reflected point) of \(\vec{P}\) across a line or plane is the point \(\vec{P}'\) such that the midpoint between \(\vec{P}\) and \(\vec{P}'\) is the foot of the perpendicular.
 
 \textbf{Formula:}
+
 \[
 	\vec{P}' = 2\vec{F} - \vec{P}
 \]
+
 Where \(\vec{F}\) is the foot of the perpendicular from \(\vec{P}\) to the line or plane.

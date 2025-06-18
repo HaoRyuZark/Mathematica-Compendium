@@ -1,3 +1,7 @@
-# Mathematica-Compendium
+# Mathematica Compendium
 
-My Notes in latex
+## Format
+
+- Bold text for: Steps, examples, proofs.
+- Roman Number for axioms.
+- Lists for collections laws.

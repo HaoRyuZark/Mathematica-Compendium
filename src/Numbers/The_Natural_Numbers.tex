@@ -1,36 +1,39 @@
 \newpage
 \section{The Natural Numbers}
 
-In this section we will take a look at the natural numbers, which are the numbers we use for counting. The natural numbers are defined as follows:
-This is not going to be a deep dive just a look at the axioms and the basic construction of the natural numbers. The natural numbers are defined as follows:
+In this section we will take a look at the natural numbers, which are the numbers we use for counting. 
+The natural numbers are defined as follows:
 \vspace{\baselineskip}
 
-We will now define the set of natural numbers, \( \mathbb{N} \), via the following 9 axioms. These axioms are known as the \textbf{Peano Axioms}. The first 4 axioms define equality on the set \( \mathbb{N} \).
+We will now define the set of natural numbers, \( \Naturals \), via the following 9 axioms. 
+These axioms are known as the \emph{Peano Axioms}. The first 4 axioms define equality on 
+the set \( \Naturals \).
 
 \begin{enumerate}[label=\Roman*.]
-	\item For every \( x \in \mathbb{N} \), we have \( x = x \).\hfill (Reflexivity)
-	\item For every \( x, y \in \mathbb{N} \), if \( x = y \) then \( y = x \).\hfill (Symmetry)
-	\item For every \( x, y, z \in \mathbb{N} \), if \( x = y \) and \( y = z \) then \( x = z \).\hfill (Transitivity)
-	\item For all \( x, y \), if \( x \in \mathbb{N} \) and \( x = y \), then \( y \in \mathbb{N} \).\hfill (Closure of Equality)
+	\item For every \( x \in \Naturals \), we have \( x = x \).\hfill (Reflexivity)
+	\item For every \( x, y \in \Naturals \), if \( x = y \) then \( y = x \).\hfill (Symmetry)
+	\item For every \( x, y, z \in \Naturals \), if \( x = y \) and \( y = z \) then \( x = z \).\hfill (Transitivity)
+	\item For all \( x, y \), if \( x \in \Naturals \) and \( x = y \), then \( y \in \Naturals \).\hfill (Closure of Equality)
 \end{enumerate}
 
-The remaining 5 axioms define the structure of \( \mathbb{N} \):
+The remaining 5 axioms define the structure of \( \Naturals \):
 
 \begin{enumerate}[label=\Roman*.]
 	\setcounter{enumi}{4}
-	\item \( 1 \in \mathbb{N} \)
-	\item If \( x \in \mathbb{N} \), then the successor \( S(x) \in \mathbb{N} \).
-	\item There is no \( x \in \mathbb{N} \) such that \( S(x) = 1 \).
-	\item For all \( x, y \in \mathbb{N} \), if \( S(x) = S(y) \), then \( x = y \).
+	\item \( 1 \in \Naturals \)
+	\item If \( x \in \Naturals \), then the successor \( S(x) \in \Naturals \).
+	\item There is no \( x \in \Naturals \) such that \( S(x) = 1 \).
+	\item For all \( x, y \in \Naturals \), if \( S(x) = S(y) \), then \( x = y \).
 	\item Let \( P(x) \) be a statement about the natural number \( x \). If:
 		\begin{itemize}
 			\item \( P(1) \) is true, and
-			\item for all \( n \in \mathbb{N} \), if \( P(n) \) is true, then \( P(S(n)) \) is also true,
+			\item for all \( n \in \Naturals \), if \( P(n) \) is true, then \( P(S(n)) \) is also true,
 		\end{itemize}
-		then \( P(x) \) is true for all \( x \in \mathbb{N} \).\hfill (Mathematical Induction)
+		then \( P(x) \) is true for all \( x \in \Naturals \).\hfill (Mathematical Induction)
 \end{enumerate}
 
 As shorthand, we denote:
+
 \[
 	S(1) = 2, \quad S(S(1)) = 3, \quad S(S(S(1))) = 4, \quad \text{and so on.}
 \]
@@ -60,7 +63,7 @@ These properties ensure that arithmetic operations respect the order structure.
 
 \subsubsection{Consequences of the Order Axioms}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \( a < b \Rightarrow -b < -a \)
     \item \( a < b \land c < 0 \Rightarrow ac > bc \)
     \item Squares are always non-negative: \( a^2 \ge 0 \)
@@ -69,12 +72,11 @@ These properties ensure that arithmetic operations respect the order structure.
 
 \subsubsection{Examples of Ordered Fields}
 
-\begin{itemize}[label=\(-\)]
-    \item \( \mathbb{Q} \): Rational numbers with the usual order
-    \item \( \mathbb{R} \): Real numbers with the usual order
-    \item \( \mathbb{C} \): Complex numbers are \textbf{not} an ordered field, since \( i^2 = -1 < 0 \) would violate positivity of squares
+\begin{itemize}
+    \item \( \Rationals \): Rational numbers with the usual order
+    \item \( \Reals \): Real numbers with the usual order
+    \item \( \Complex \): Complex numbers are \textbf{not} an ordered field, since \( i^2 = -1 < 0 \) would violate positivity of squares
 \end{itemize}
-
 
 \subsection{Propositions and Proofs}
 
@@ -85,31 +87,37 @@ These properties ensure that arithmetic operations respect the order structure.
 We will prove this by contradiction. Assume \( n \ne m \) and \( S(n) = S(m) \). By Axiom 8, we have \( n = m \), 
 which is a contradiction. Therefore, \( S(n) \ne S(m) \).
 
-\subsubsection{Proposition 2: \texorpdfstring{\text{For any} \(n \in \mathbb{N},\ n \ne S(n)\)}{ For any n in N, n!= S (n)}}
+\subsubsection{Proposition 2: \texorpdfstring{\text{For any} \(n \in \Naturals,\ n \ne S(n)\)}{ For any n in N, n!= S (n)}}
 
 \textbf{Proof:} 
 
-\(M = \{n \in \mathbb{N} \| n \ne S(n) \}\ \)
-By \(1 \ne S(n)\ \) for any \(n \in \mathbb{N}\), this implies that 1 is part of the set \(M\). This implies that \(S(n) \ne S(S(n)) \implies S(n) \in M\ \) By Axiom 9 \(M = \mathbb{N}\)
+\(M = \{n \in \Naturals \| n \ne S(n) \}\ \)
+By \(1 \ne S(n)\ \) for any \(n \in \Naturals\), this implies that 1 is part of the set \(M\). This implies that \(S(n) \ne S(S(n)) \implies S(n) \in M\ \) By Axiom 9 \(M = \Naturals\)
 
-\subsubsection{Proposition 3: \texorpdfstring{\(n \ne 1\ \exists m \in \mathbb{N} \mid n = S(m)\)}{n!= 1, exists m in N | n = S (m)}}
+\subsubsection{Proposition 3: \texorpdfstring{\(n \ne 1\ \exists m \in \Naturals \mid n = S(m)\)}{n!= 1, exists m in N | n = S (m)}}
 
 \textbf{Proof:}
+
 \[
-	M = \{1\} \cup\{n \in \mathbb{N} | \text{Proposition 3 is true}\}
+	M = \{1\} \cup\{n \in \Naturals | \text{Proposition 3 is true}\}
 \]
+
 We know that 1 ins in the set \(M\). And by proposition 1 we know that
+
 \[
 	S(n) = S(S(m)) \implies S(n) \in M
 \]
-And by Axiom 9 we know that \(M = \mathbb{N}\)
 
-\subsection{Definition of Addition in \texorpdfstring{\(\mathbb{N}\)}{}}
+And by Axiom 9 we know that \(M = \Naturals\)
 
-For any pair n, m \(\in \mathbb{N}\) there is a unique way to define
+\subsection{Definition of Addition in \texorpdfstring{\(\Naturals\)}{}}
+
+For any pair n, m \(\in \Naturals\) there is a unique way to define
+
 \[
 	Add(n , m) = n + m
 \]
+
 \begin{enumerate}
 	\item \textbf{Base Case:} \(n + 1 = S(n)\)
 	\item \textbf{Inductive Step:} \(n + S(m) = S(n + m) \iff S(n + m)\)
@@ -118,26 +126,30 @@ For any pair n, m \(\in \mathbb{N}\) there is a unique way to define
 \textbf{Uniqueness:} 
 \vspace{\baselineskip}
 
-Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \mathbb{N} | A(n,m) = B(n, m)\}\). Then
+Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \Naturals | A(n,m) = B(n, m)\}\). Then
+
 \[
 	A(n,1) = S(n) = B(n,1) \implies 1 \in M
 \]
+
 \[
 	m \in M \implies A(n, m) = B(n, m) \implies A(n, S(m)) = S(A(n, m)) = S(B(n, m)) = B(n, S(m))
 \]
+
 \[
 	\implies A(n , S(m)) = B(n, S(m))
 \]
 
- by Axiom 9 we know that \(M = \mathbb{N}\) and A = B
+by Axiom 9 we know that \(M = \Naturals\) and A = B
 
 \textbf{Construction:} For \(n = 1\) Define \(A(n, m) = S(m)\)
+
 \begin{enumerate}
 	\item \(A(n, 1) = S(n) = S(1)\)
 	\item \(A(n, S(m)) = S(A(n, m)) = S(S(m))\)
 \end{enumerate}
 
- Define: \(A(S(n), S(m)) = S(A(n, m))\)
+Define: \(A(S(n), S(m)) = S(A(n, m))\)
 
 \begin{enumerate}
 	\item \(A(S(n), 1) = S(A(n, 1)) = S(S(n))\)
@@ -147,17 +159,21 @@ Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M
 \textbf{Commutativity of Addition:}
 \vspace{\baselineskip}
 
-The proposition says \(n + m = m + n\) for any \(n, m \in \mathbb{N}\). We will prove this by induction on \(m\).
- Fix n and consider \(M = \{ n \in \mathbb{N} | A(n, m) = A(n, m)\}\)
+The proposition says \(n + m = m + n\) for any \(n, m \in \Naturals\). We will prove this by induction on \(m\).
+Fix n and consider \(M = \{ n \in \Naturals | A(n, m) = A(n, m)\}\)
 
- Now recall that \(A(n, 1) = S(n)\)\\
+Now recall that \(A(n, 1) = S(n)\)
+\vspace{\baselineskip}
+
 For \(n = 1\):
+
 \[
-	A(n, 1) = S(1) = A(1, n) \implies 1 \in \mathbb{N}
+	A(n, 1) = S(1) = A(1, n) \implies 1 \in \Naturals
 \]
-also \(A(n , k) = 1 + k \implies 1 + m = S(m) \implies 1 + m = m + 1 \implies 1 \in \mathbb{N}\)
 
- Suppose: \(n \in \mathbb{N} \implies n + m = m + n\) or \(A(n, m) = A(m, n)\)
+also \(A(n , k) = 1 + k \implies 1 + m = S(m) \implies 1 + m = m + 1 \implies 1 \in \Naturals\)
 
- By construction \(A(S(n), m) = S(A(n, m))\) and by definition
-\(A(S(n), m) = S(A(n, m)) = A(m, S(n)) = S(n) + m =  m + S(n) \implies S(n) \in M \implies \text{by induction } M = \mathbb{N}\).
+Suppose: \(n \in \Naturals \implies n + m = m + n\) or \(A(n, m) = A(m, n)\)
+
+By construction \(A(S(n), m) = S(A(n, m))\) and by definition
+\(A(S(n), m) = S(A(n, m)) = A(m, S(n)) = S(n) + m =  m + S(n) \implies S(n) \in M \implies \text{by induction } M = \Naturals\).

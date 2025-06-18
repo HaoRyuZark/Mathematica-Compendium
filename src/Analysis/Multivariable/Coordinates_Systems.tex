@@ -1,31 +1,34 @@
 \newpage
 \section{Coordinate Systems}
 
-Coordinate systems provide different ways of describing points in space, adapted to the geometry of the problem. Below are the most 
-common systems used in multi-variable calculus.
+Coordinate systems provide different ways of describing points in space, adapted to the geometry of the 
+problem. Below are the most common systems used in multi-variable calculus.
 
 \subsection{Cartesian Coordinates}
 
-The \emph{Cartesian coordinate system} uses mutually orthogonal axes. A point in \( \mathbb{R}^2 \) is given by:
+The \emph{Cartesian coordinate system} uses mutually orthogonal axes. A point in \( \Reals^2 \) 
+is given by:
+
 \[
-(x, y)
-\quad \text{and in } \mathbb{R}^3: \quad (x, y, z)
+    (x, y) \quad \text{and in } \Reals^3: \quad (x, y, z)
 \]
 
-This is the most natural system for rectangular domains and is the basis for most definitions in vector calculus. The coordinate axes are orthogonal and equidistant.
+This is the most natural system for rectangular domains and is the basis for most definitions in vector 
+calculus. The coordinate axes are orthogonal and equidistant.
 
 
 \subsection{Polar Coordinates}
 
-In polar coordinates, a point \( (x, y) \in \mathbb{R}^2 \) is described by:
+In polar coordinates, a point \( (x, y) \in \Reals^2 \) is described by:
 
 \[
-r \ge 0 \text{ (radius from origin)}, \quad \varphi \in [0, 2\pi) \text{ (angle from x-axis)}
+    r \ge 0 \text{ (radius from origin)}, \quad \varphi \in [0, 2\pi) \text{ (angle from x-axis)}
 \]
 
 \textbf{Transformations:}
+
 \[
-x = r \cos \varphi, \quad y = r \sin \varphi
+    x = r \cos \varphi, \quad y = r \sin \varphi
 \]
 
 This comes from our right triangle with \(r = 1\) where
@@ -35,64 +38,76 @@ This comes from our right triangle with \(r = 1\) where
 \]
 
 \textbf{Inverse:}
+
 \[
-r = \sqrt{x^2 + y^2}, \quad \varphi = \arctan\left(\frac{y}{x}\right)
+    r = \sqrt{x^2 + y^2}, \quad \varphi = \arctan\left(\frac{y}{x}\right)
 \]
 
 This system is useful for circular or radial symmetry. The Jacobian determinant is:
+
 \[
-|J| = r
+    |J| = r
 \]
 
 \subsection{Cylindrical Coordinates}
 
 Cylindrical coordinates extend polar coordinates by adding a height \( z \) component:
+
 \[
-(r, \varphi, z) \quad \text{where } r \ge 0, \ \varphi \in [0, 2\pi), \ z \in \mathbb{R}
+    (r, \varphi, z) \quad \text{where } r \ge 0, \ \varphi \in [0, 2\pi), \ z \in \Reals
 \]
 
 \textbf{Transformations:}
+
 \[
-x = r \cos \varphi, \quad y = r \sin \varphi, \quad z = z
+    x = r \cos \varphi, \quad y = r \sin \varphi, \quad z = z
 \]
 
 \textbf{Inverse:}
+
 \[
-r = \sqrt{x^2 + y^2}, \quad \varphi = \arctan\left(\frac{y}{x}\right), \quad z = z
+    r = \sqrt{x^2 + y^2}, \quad \varphi = \arctan\left(\frac{y}{x}\right), \quad z = z
 \]
 
-This coordinate system is ideal for objects with rotational symmetry about the \( z \)-axis. The Jacobian determinant is:
+This coordinate system is ideal for objects with rotational symmetry about the \( z \)-axis. 
+The Jacobian determinant is:
+
 \[
-|J| = r
+    |J| = r
 \]
 
 
 \subsection{Spherical Coordinates}
 
-In spherical coordinates, a point \( (x, y, z) \in \mathbb{R}^3 \) is represented using:
+In spherical coordinates, a point \( (x, y, z) \in \Reals^3 \) is represented using:
+
 \[
-\rho \ge 0 \text{ (radial distance)}, \quad \theta \in [0, \pi] \text{ (inclination)}, \quad \varphi \in [0, 2\pi) \text{ (azimuth)}
+    \rho \ge 0 \text{ (radial distance)}, \quad \theta \in [0, \pi] \text{ (inclination)}, \quad 
+    \varphi \in [0, 2\pi) \text{ (azimuth)}
 \]
 
 \textbf{Transformations:}
+
 \[
-x = \rho \sin \theta \cos \varphi, \quad y = \rho \sin \theta \sin \varphi, \quad z = \rho \cos \theta
+    x = \rho \sin \theta \cos \varphi, \quad y = \rho \sin \theta \sin \varphi, \quad z = \rho \cos \theta
 \]
 
 \textbf{Inverse:}
-\[
-\rho = \sqrt{x^2 + y^2 + z^2}, \quad \theta = \arccos\left(\frac{z}{\rho}\right), \quad \varphi = \arctan\left(\frac{y}{x}\right)
-\]
-
-Spherical coordinates are useful for spherical symmetry (e.g., in gravitational or electric fields). The Jacobian determinant is:
 
 \[
-|J| = \rho^2 \sin \theta
+    \rho = \sqrt{x^2 + y^2 + z^2}, \quad \theta = \arccos\left(\frac{z}{\rho}\right), \quad 
+    \varphi = \arctan\left(\frac{y}{x}\right)
+\]
+
+Spherical coordinates are useful for spherical symmetry (e.g., in gravitational or electric fields). 
+The Jacobian determinant is:
+
+\[
+    |J| = \rho^2 \sin \theta
 \]
 
 
-Each coordinate system is tailored to specific geometries and greatly 
-simplifies integrals when used appropriately. 
-Coordinate transformations require careful application of the Jacobian 
+Each coordinate system is tailored to specific geometries and greatly simplifies integrals when used 
+appropriately. Coordinate transformations require careful application of the Jacobian 
 determinant to account for stretching or distortion of space.
 

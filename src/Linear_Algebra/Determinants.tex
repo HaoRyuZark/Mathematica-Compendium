@@ -1,7 +1,7 @@
 \newpage
 \section{The Determinant of a Matrix}
 
-The determinant of a square matrix \(A \in \mathbb{R}^{n \times n}\), denoted \(\det(A)\) or \(|A|\), is a 
+The determinant of a square matrix \(A \in \Reals^{n \times n}\), denoted \(\det(A)\) or \(|A|\), is a 
 scalar value that provides important information about the matrix, including whether it is 
 invertible and the volume scaling factor of the linear transformation represented by \(A\).
 The determinant can be computed using various methods, including the Laplace 
@@ -41,7 +41,7 @@ where \(A_{ij}\) is the \((n-1) \times (n-1)\) sub-matrix obtained by deleting t
 
 \subsection{Properties of the determinant}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \(\det(A) = 0\) if and only if \(A\) is singular (not invertible).
     \item \(\det(AB) = \det(A) \cdot \det(B)\) for any square matrices \(A\) and \(B\) of the same size.
     \item \(\det(A^T) = \det(A)\).
@@ -190,7 +190,7 @@ This method expands the determinant along a specific row or column.
 
 Where:
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \( a_{ij} \) is the element in the \( i \)-th row and \( j \)-th column of matrix \( A \).
     \item \( M_{ij} \) is the \textbf{minor} of \( a_{ij} \), i.e., the determinant of the submatrix formed by removing the \( i \)-th row and \( j \)-th column from \( A \).
     \item \( {(-1)}^{i+j} \) is the \textbf{sign factor}, determining the sign of each co-factor term.

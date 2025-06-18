@@ -7,19 +7,22 @@
 
 \(E\) is the event we are studying and \(\Omega\) the total. Example \(\frac{1}{2}\)
 
-\[P(E) = \frac{E}{\Omega}\]
+\[
+    P(E) = \frac{E}{\Omega}
+\]
 
 \subsubsection{Expected Result}
 
-Here \(p\) represents the probability of 
-something and \(x\) the expected reward
+Here \(p\) represents the probability of something and \(x\) the expected reward
 
-\[E(x) = p_1 x_1 + \cdots + p_n x_n\]
+\[
+    E(x) = p_1 x_1 + \cdots + p_n x_n
+\]
 
 \subsection{Standard Deviation}
 
 \[
-\sigma = \sqrt{ \frac{ {(\overline{x} - x_1)}^2 + \cdots + {(\overline{x} - x_n)}^2 }{ n } }
+    \sigma = \sqrt{ \frac{ {(\overline{x} - x_1)}^2 + \cdots + {(\overline{x} - x_n)}^2 }{ n } }
 \]
 
 
@@ -27,7 +30,7 @@ something and \(x\) the expected reward
 
 \textbf{Formulas:}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \emph{Probability: } \(P(X = k) = \binom{n}{k} p^k {(1 - p)}^{n - k}\)
     \item \emph{Expected Result: } \(E(X) = n * p\)
     \item \emph{Standard Deviation: } \(\sqrt{E(X)(1-p)}\)
@@ -37,7 +40,7 @@ something and \(x\) the expected reward
 \subsubsection{Continuous Probability}
 
 \[
-\sum_{i = P(X=k)}^{P(X=n) (P(X=i))}
+    \sum_{i = P(X=k)}^{P(X=n) (P(X=i))}
 \]
 
 \textbf{Formulas: }
@@ -61,7 +64,7 @@ something and \(x\) the expected reward
 
 \subsection{Normal Distribution}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
     \item \emph{Probability: } \(\frac{1}{\sqrt{2\pi \sigma^2} e^{\frac{1}{2} {\left(\frac{x - u}{\sigma}\right)}^2}}\)
     \item \emph{Expected Result: } \(E(x) = np = \mu\)
     \item \emph{Variance: } \(Var(x) = E(X) (1-p)\)
@@ -72,30 +75,40 @@ something and \(x\) the expected reward
 
 Probability of \(a\) under the condition \(b\).
 
-\[P_b (a) = \frac{P(b \cap a)}{P(b)}\]
+\[
+    P_b (a) = \frac{P(b \cap a)}{P(b)}
+\]
 
 \subsubsection{Formula for the Total Probability}
 
-\[P(a) = P_b (a) P(b) + P_{\neg b}(a) P(\neg b)\]
+\[
+    P(a) = P_b (a) P(b) + P_{\neg b}(a) P(\neg b)
+\]
 
 \subsection{Bayes Theorem}
 
-\[P(a | b) = \frac{P(b | a) P(a)}{P(b)}\]
+\[
+    P(a | b) = \frac{P(b | a) P(a)}{P(b)}
+\]
 
 \subsection{Hyper-geometric Distribution}
 
-\[P(X = k) = \frac{\binom{M}{K} \binom{N - M}{n - K}}{\binom{N}{n}}\]
+\[
+    P(X = k) = \frac{\binom{M}{K} \binom{N - M}{n - K}}{\binom{N}{n}}
+\]
 
-\textbf{Nomenclature}
-\begin{itemize}[label=\(-\)]
+\textbf{Nomenclature:}
+
+\begin{itemize}
     \item \(N\): Total number of elements
     \item \(M\): Elements with the trait \(A\)
     \item \(N - M\): Elements without the trait \(A\)
     \item \(n = k\): Number to elements to take
 \end{itemize}
 
-\textbf{Formulas }
-\begin{itemize}[label=\(-\)]
+\textbf{Formulas:}
+
+\begin{itemize}
     \item \emph{Expected Results: } \(E(x) = n \frac{M}{N}\)
     \item \emph{Variance: } \(Var(X) = E(x)\left(1 - \frac{M}{N}\right) \left(\frac{N - n}{N - 1}\right)\)
 \end{itemize}
@@ -106,7 +119,7 @@ This is a small question that says: What is the probability of at least two peop
 their birthday on the same day in a group of \(x\) persons.
 
 \[
-P(x) = 1 - \prod_{n = 0}^{x} \frac{365 - n}{365}
+    P(x) = 1 - \prod_{n = 0}^{x} \frac{365 - n}{365}
 \]
 
 This formula gives us the probability of total minus all persons having it on different days. Which

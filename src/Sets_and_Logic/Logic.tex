@@ -57,7 +57,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & \(B\) & \(A => B\) \\
+		\(A\) & \(B\) & \(A \implies B\) \\
 		\midrule
 		0   & 0   & 1        \\
 		0   & 1   & 1        \\
@@ -139,86 +139,86 @@ logic, and we can use any symbol for a representing a proposition, such
 
 \subsection{Logical Equivalences}
 
-\textbf{Commutative Laws}
+\emph{Commutative Laws}
 \[
-	p \land q \Leftrightarrow q \land p \qquad p \lor q \Leftrightarrow q \lor p
+	p \land q \iff q \land p \qquad p \lor q \iff q \lor p
 \]
 
-\textbf{Associative Laws}
+\emph{Associative Laws}
 \[
-	(p \land q) \land r \Leftrightarrow p \land (q \land r) \qquad (p \lor q) \lor r \Leftrightarrow p \lor (q \lor r)
+	(p \land q) \land r \iff p \land (q \land r) \qquad (p \lor q) \lor r \iff p \lor (q \lor r)
 \]
 
-\textbf{Distributive Laws}
+\emph{Distributive Laws}
 \[
-	p \land (q \lor r) \Leftrightarrow (p \land q) \lor (p \land r) \qquad
-	p \lor (q \land r) \Leftrightarrow (p \lor q) \land (p \lor r)
+	p \land (q \lor r) \iff (p \land q) \lor (p \land r) \qquad
+	p \lor (q \land r) \iff (p \lor q) \land (p \lor r)
 \]
 
-\textbf{Identity Laws}
+\emph{Identity Laws}
 \[
-	p \land \text{T} \Leftrightarrow p \qquad p \lor \text{F} \Leftrightarrow p
+	p \land \text{T} \iff p \qquad p \lor \text{F} \iff p
 \]
 
-\textbf{Negation Laws}
+\emph{Negation Laws}
 \[
-	p \lor \sim p \Leftrightarrow \text{T} \qquad p \land \sim p \Leftrightarrow \text{F}
+	p \lor \sim p \iff \text{T} \qquad p \land \sim p \iff \text{F}
 \]
 
-\textbf{Double Negation Law}
+\emph{Double Negation Law}
 \[
-	\sim(\sim p) \Leftrightarrow p
+	\sim(\sim p) \iff p
 \]
 
-\textbf{Idempotent Laws}
+\emph{Idempotent Laws}
 \[
-	p \land p \Leftrightarrow p \qquad p \lor p \Leftrightarrow p
+	p \land p \iff p \qquad p \lor p \iff p
 \]
 
-\textbf{Universal Bound Laws}
+\emph{Universal Bound Laws}
 \[
-	p \lor \text{T} \Leftrightarrow \text{T} \qquad p \land \text{F} \Leftrightarrow \text{F}
+	p \lor \text{T} \iff \text{T} \qquad p \land \text{F} \iff \text{F}
 \]
 
-\textbf{De Morgan’s Laws}
+\emph{De Morgan’s Laws}
 \[
-	\sim (p \land q) \Leftrightarrow (\sim p) \lor (\sim q) \qquad
-	\sim (p \lor q) \Leftrightarrow (\sim p) \land (\sim q)
+	\sim (p \land q) \iff (\sim p) \lor (\sim q) \qquad
+	\sim (p \lor q) \iff (\sim p) \land (\sim q)
 \]
 
-\textbf{Absorption Laws}
+\emph{Absorption Laws}
 \[
-	p \lor (p \land q) \Leftrightarrow p \qquad p \land (p \lor q) \Leftrightarrow p
+	p \lor (p \land q) \iff p \qquad p \land (p \lor q) \iff p
 \]
 
-\textbf{Conditional Laws}
+\emph{Conditional Laws}
 \[
-	(p \Rightarrow q) \Leftrightarrow (\sim p \lor q) \qquad \sim(p \Rightarrow q) \Leftrightarrow (p \land \sim q)
+	(p \implies q) \iff (\sim p \lor q) \qquad \sim(p \implies q) \iff (p \land \sim q)
 \]
 
-\textbf{Complement Law}
+\emph{Complement Law}
 \[
-	p \lor \neg p \Leftrightarrow \text{T} \qquad p \land \neg p \Leftrightarrow \text{F}
+	p \lor \neg p \iff \text{T} \qquad p \land \neg p \iff \text{F}
 \]
 
-\textbf{Biconditional}
+\emph{Biconditional}
 \[
-	p \Leftrightarrow q \Leftrightarrow (p \Rightarrow q) \land (q \Rightarrow p)
+	p \iff q \iff (p \implies q) \land (q \implies p)
 \]
 
-\textbf{Transitivity}
+\emph{Transitivity}
 \[
-	(p \Rightarrow q) \land (q \Rightarrow r) \Rightarrow (p \Rightarrow r)
+	(p \implies q) \land (q \implies r) \implies (p \Rightarrow r)
 \]
 
-\textbf{Indirect Proof (Contrapositive)}
+\emph{Indirect Proof (Contrapositive)}
 \[
-	(p \Rightarrow q) \Leftrightarrow (\neg q \Rightarrow \neg p)
+	(p \implies q) \iff (\neg q \implies \neg p)
 \]
 
-\textbf{Disjunctive Syllogism (Disjunctive Exclusion)}
+\emph{Disjunctive Syllogism (Disjunctive Exclusion)}
 \[
-	p \nabla q \equiv (p \lor q) \land \neg p \Rightarrow q
+	p \nabla q \equiv (p \lor q) \land \neg p \implies q
 \]
 \[
 	p \nabla q \equiv(p \land q) \lor \neg  (p \land q)
@@ -226,7 +226,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 \subsection{Truth Tables}
 
-Truth tables are a fundamental tool in logic that systematically show the truth value
+\emph{Truth tables} are a fundamental tool in logic that systematically show the truth value
 (true or false) of a compound statement for every possible combination of the truth values of 
 its individual component statements.
 \vspace{\baselineskip}
@@ -243,7 +243,7 @@ under which a complex statement is true or false.
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
-		\(p\) & \(q\) & \(\neg p\) & \(\neg q\) & \(\neg p \Rightarrow q\) & \((\neg p \Rightarrow q) \land \neg p\) & \(\left[(\neg p \Rightarrow q) \land \neg p\right] \Rightarrow q\) \\
+		\(p\) & \(q\) & \(\neg p\) & \(\neg q\) & \(\neg p \implies q\) & \((\neg p \implies q) \land \neg p\) & \(\left[(\neg p \implies q) \land \neg p\right] \Rightarrow q\) \\
 		\hline
 		T   & T   & F        & F        & T                      & F                                     & T                                                                \\
 		T   & F   & F        & T        & T                      & F                                     & T                                                                \\
@@ -261,7 +261,7 @@ To fill a truth table for a logical expression with truth values (True or False)
 	\item \textbf{List all possible combinations of truth values for the input variables}: If you have \(n\) variables, the number of rows in the truth table will be \(2^n\). Each variable can be either True (T) or False (F).
 
 	\item \textbf{Order of the input variables}:
-	      \begin{itemize}[label=\(-\)]
+	      \begin{itemize}
 		      \item Start by filling in the truth values for the first variable. It alternates between True and False every \(2^{n-1}\) rows.
 		      \item Then for the second variable, it alternates every \(2^{n-2}\) rows, and so on.
 		      \item In short: the first variable alternates every other row, the second variable every two rows, the third every four rows, and so on.
@@ -269,6 +269,7 @@ To fill a truth table for a logical expression with truth values (True or False)
 \end{enumerate}
 
 \textbf{Example: } 
+\vspace{\baselineskip}
 
 For 3 variables, there are \(2^3 = 8\) possible combinations of truth values. The truth values are filled in the following order:
 
@@ -277,20 +278,21 @@ For 3 variables, there are \(2^3 = 8\) possible combinations of truth values. Th
 		\hline
 		A & B & C & \text{Expression Result} \\
 		\hline
-		T & T & T &                          \\
-		T & T & F &                          \\
-		T & F & T &                          \\
-		T & F & F &                          \\
-		F & T & T &                          \\
-		F & T & F &                          \\
-		F & F & T &                          \\
-		F & F & F &                          \\
+		T & T & T &       -                  \\
+		T & T & F &       -                  \\
+		T & F & T &       -                  \\
+		T & F & F &       -                  \\
+		F & T & T &       -                  \\
+		F & T & F &       -                  \\
+		F & F & T &       -                  \\
+		F & F & F &       -                  \\
 		\hline
 	\end{array}
 \]
 
 The pattern for filling the input truth values
-\begin{itemize}[label=\(-\)]
+
+\begin{itemize}
 	\item The first column (A) alternates every 4 rows: `T, T, F, F, T, T, F, F`.
 	\item The second column (B) alternates every 2 rows: `T, T, F, F, T, T, F, F`.
 	\item The third column (C) alternates every row: `T, F, T, F, T, F, T, F`.
@@ -319,8 +321,8 @@ This ensures that all combinations of \(A\), \(B\), and \(C\) are covered, and y
 
 \subsection{Disjunctive Normal Form (DNF)}
 
-Disjunctive Normal Form (DNF) is a standard way of writing a logical expression as a disjunction
-(OR) of conjunctions (ANDs). A DNF expression consists of a series of
+\emph{Disjunctive Normal Form (DNF)} is a standard way of writing a logical expression as a \emph{disjunction
+(OR)} of \emph{conjunctions (ANDs)}. A DNF expression consists of a series of
 conjunctions of literals, where each conjunction is connected by disjunctions.
 \vspace{\baselineskip}
 
@@ -333,15 +335,17 @@ Repeat it with each of true rows and connect all parenthesis with OR's
 \vspace{\baselineskip}
 
 Consider the logical expression:
+
 \[
 	(A \land B) \lor (\neg A \land C) \lor (B \land \neg C)
 \]
+
 This is in DNF because it is a disjunction (OR) of conjunctions (ANDs) of literals.
 
 \subsection{Conjunctive Normal Form (CNF)}
 
-Conjunctive Normal Form (CNF) is a standard way of writing a logical expression as a conjunction (AND)
-of disjunctions (ORs). A CNF expression consists of a series of disjunctions of
+\emph{Conjunctive Normal Form (CNF)} is a standard way of writing a logical expression as a \emph{conjunction (AND)}
+of \emph{disjunctions (ORs)}. A CNF expression consists of a series of disjunctions of
 literals, where each disjunction is connected by conjunctions.
 \vspace{\baselineskip}
 
@@ -354,14 +358,17 @@ Also add a negation before each parenthesis.
 \vspace{\baselineskip}
 
 Consider the logical expression:
+
 \[
 	\neg (A \lor B) \land \neg (\neg A \lor C) \land \neg (B \lor \neg C)
 \]
+
 This is in CNF because it is a conjunction (AND) of disjunctions (ORs) of literals.
 
 \subsection{Karnaugh Maps}
 
-Karnaugh Maps (K-Maps) are a graphical method used to simplify Boolean expressions. The main goal of a K-map is to group adjacent cells that contain 1's in order to simplify the expression. A K-map helps identify common terms, allowing the Boolean expression to be reduced to its simplest form.
+\emph{Karnaugh Maps (K-Maps)} are a graphical method used to simplify Boolean expressions. 
+The main goal of a K-map is to group adjacent cells that contain 1's in order to simplify the expression. A K-map helps identify common terms, allowing the Boolean expression to be reduced to its simplest form.
 
 \subsubsection{Karnaugh Map for Two Variables}
 
@@ -396,6 +403,7 @@ The corresponding K-map is:
 \]
 
 Here, we group the ones together to simplify the Boolean expression. The simplified expression is:
+
 \[
 	A \lor B
 \]
@@ -442,18 +450,19 @@ The corresponding K-map for three variables \( A \), \( B \), and \( C \) is:
 \]
 
 We see that the ones are grouped in a column, leading to the simplified Boolean expression:
+
 \[
 	\neg C
 \]
 
-\subsubsection{Solving a Karnaugh Map (K-Map)}
+\subsubsection{Solving a Karnaugh Map}
 
-To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these steps:
+To solve a Karnaugh Map and simplify a Boolean expression, follow these steps:
 
 \begin{enumerate}
 	\item \textbf{Determine the Number of Variables:} \\
 	      Decide how many variables are in the Boolean function. This determines the size of the K-Map:
-	      \begin{itemize}[label=\(-\)]
+	      \begin{itemize}
 		      \item 2 variables: \(2 \times 2\)
 		      \item 3 variables: \(2 \times 4\)
 		      \item 4 variables: \(4 \times 4\)
@@ -465,7 +474,7 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 
 	\item \textbf{Group the 1's:} \\
 	      Form groups (called \emph{implicants}) of 1's. The groups must follow these rules:
-	      \begin{itemize}[label=\(-\)]
+	      \begin{itemize}
 		      \item Each group must contain \(1, 2, 4, 8, \ldots\) (powers of 2) 1's.
 		      \item Groups must be rectangular (e.g., \(1 \times 2\), \(2 \times 2\)).
 		      \item Groups can wrap around the edges of the K-Map.
@@ -475,72 +484,78 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 
 	\item \textbf{Write the Simplified Expression:} \\
 	      For each group:
-	      \begin{itemize}[label=\(-\)]
+	      \begin{itemize}
 		      \item Identify the variables that are constant (either always 0 or always 1) across the group.
 		      \item Write a product term (AND) using only the constant variables.
 		      \item Combine all product terms with OR operations to get the final simplified SOP (Sum of Products) expression.
 	      \end{itemize}
 \end{enumerate}
 
-\subsection{Mathematical Quantifiers with Negations and Examples}
+\subsection{Mathematical Quantifiers}
 
-\begin{itemize}[label=\(-\)]
+\subsubsection{Universal Quantifier \texorpdfstring{\(\forall\)}{}}  
 
-	\item\textbf{Universal Quantifier:}  \(\forall\)
-		Means \textbf{``for all''} or \textbf{``for every''}.
-
-		\begin{itemize}
-			\item \textbf{Example:}
+Means \textbf{``for all''} or \textbf{``for every''}.
 \vspace{\baselineskip}
-  \(\forall x \in \mathbb{R},\ x^2 \geq 0\) \\
-			      (For all real numbers, the square is greater than or equal to zero.)
-
-			\item \textbf{Negation:}  \(\neg (\forall x)\,P(x) \equiv (\exists x)\, \neg P(x)\) \\
-			      (``Not all'' is the same as ``There exists one that does not''.)
-
-			\item \textbf{Negated Example:}  \(\exists x \in \mathbb{R},\ x^2 < 0\) \\
-			      (There exists a real number whose square is less than zero — this is false.)
-		\end{itemize}
-
-	\item\textbf{Existential Quantifier:}  \(\exists\)
-		Means \textbf{``there exists at least one''}.
-
-		\begin{itemize}
-			\item \textbf{Example:}
+		
+\emph{}{Negation:} \(\neg (\forall x)\,P(x) \equiv (\exists x)\, \neg P(x)\) ``Not all'' is the same as ``There exists one that does not''.
 \vspace{\baselineskip}
-  \(\exists x \in \mathbb{N},\ x > 10\) \\
-			      (There exists a natural number greater than 10.)
 
-			\item \textbf{Negation:}  \(\neg (\exists x)\,P(x) \equiv (\forall x)\, \neg P(x)\) \\
-			      (``There does not exist'' is the same as ``For all, not''.)
-
-			\item \textbf{Negated Example:}  \(\forall x \in \mathbb{N},\ x \leq 10\) \\
-			      (All natural numbers are less than or equal to 10 — this is false.)
-		\end{itemize}
-
-	\item\textbf{Unique Existential Quantifier:}  \(\exists\)!
-		Means \textbf{``there exists exactly one''}.
-
-		\begin{itemize}
-			\item \textbf{Example:}
+\textbf{Example:} 
 \vspace{\baselineskip}
-  \(\exists! x \in \mathbb{R},\ x + 5 = 0\) \\
-			      (There exists exactly one real number such that \( x + 5 = 0 \).)
 
-			\item \textbf{Negation:}  ``Not exactly one'' means:
-			      \(
-				      \neg (\exists! x)\, P(x) \equiv (\forall x)\, \neg P(x)\ \lor\ (\exists x_1 \neq x_2)\, P(x_1) \land P(x_2)
-			      \)
-			      (Either no such \( x \) exists, or more than one does.)
+\(\forall x \in \Reals,\ x^2 \geq 0\) For all real numbers, the square is greater than or equal to zero.
+\vspace{\baselineskip}
+	
+\textbf{Negated Example:} 
+\vspace{\baselineskip}
 
-			\item \textbf{Negated Example:}  \(\exists x_1 \neq x_2 \in \mathbb{R},\ x_1^2 = 4 \land x_2^2 = 4\) \\
-			      (There are multiple solutions to \( x^2 = 4 \).)
-		\end{itemize}
+\(\exists x \in \Reals,\ x^2 < 0\) There exists a real number whose square is less than zero — this is false.
+		
 
-\end{itemize}
+\subsubsection{Existential Quantifier \texorpdfstring{\(\exists\)}{}}  
+	
+Means \textbf{``there exists at least one''}.
+ \vspace{\baselineskip}
+			
+\emph{Negation:}  \(\neg (\exists x)\,P(x) \equiv (\forall x)\, \neg P(x)\) ``There does not exist'' is the same as ``For all, not''.
+\vspace{\baselineskip}
+
+ \textbf{Example:} 
+\vspace{\baselineskip}
+
+\(\exists x \in \Naturals,\ x > 10\) There exists a natural number greater than 10.
+\vspace{\baselineskip}
+			
+\textbf{Negated Example:}  
+\vspace{\baselineskip}
+
+\(\forall x \in \Naturals,\ x \leq 10\) All natural numbers are less than or equal to 10 — this is false.
+
+\subsubsection{Unique Existential Quantifier \texorpdfstring{\(\exists ! \)}{}} 
+	
+Means \textbf{``there exists exactly one''}.
+\vspace{\baselineskip}
+		
+\emph{Negation:} ``Not exactly one'' means:
+\(\neg (\exists! x)\, P(x) \equiv (\forall x)\, \neg P(x)\ \lor\ (\exists x_1 \neq x_2)\, P(x_1) \land P(x_2)\) 
+Either no such \( x \) exists, or more than one does.
+\vspace{\baselineskip}
+
+\textbf{Example:} 
+\vspace{\baselineskip}
+
+\(\exists! x \in \Reals,\ x + 5 = 0\) There exists exactly one real number such that \( x + 5 = 0 \).
+\vspace{\baselineskip}
+
+\textbf{Negated Example:}  
+\vspace{\baselineskip}
+
+\(\exists x_1 \neq x_2 \in \Reals,\ x_1^2 = 4 \land x_2^2 = 4\) There are multiple solutions to \( x^2 = 4 \).
+
 \subsection{Common Symbols Used in Mathematical Expressions}
 
-\begin{itemize}[label=\(-\)]
+\begin{itemize}
 	\item \(>\)  (greater than)
 
 	\item \(<\)  (less than)
@@ -569,7 +584,9 @@ To solve a Karnaugh Map (K-Map) and simplify a Boolean expression, follow these 
 
 	\item \(\lor\)  (logical OR)
 
-	\item \(\Rightarrow\)  (implies)
+	\item \(\implies\)  (implies)
 
-	\item \(\Leftrightarrow\)  (if and only if)
+	\item \(\iff\)  (if and only if)
 \end{itemize}
+
+

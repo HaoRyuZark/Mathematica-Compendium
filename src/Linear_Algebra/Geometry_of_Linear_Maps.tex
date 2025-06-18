@@ -12,6 +12,7 @@ Given two vector spaces \((V, \|\centerdot\|_V)\) and \((W, \|\centerdot\|_W)\).
 \vspace{\baselineskip} 
 
 It also has the following traits:
+
 \begin{enumerate}
 	\item \emph{Length-Preserving}: \(\|x\|_V = \|y\|_W \quad \forall x \in V\).
 	\item \emph{Angle-Preserving}: \(\angle (x,y) = \angle (f(x),f(y)) \quad \forall x,y \in V\)
@@ -26,17 +27,17 @@ This matrix is a common example of an isometric linear map, because of the way i
 For the \(2D\) we have 
 
 \[
-\begin{pmatrix}
-    \cos(\phi) & -\sin(\phi)\\
-    \sin(\phi) & \cos(\phi)
-\end{pmatrix}
+    \begin{pmatrix}
+        \cos(\phi) & -\sin(\phi)\\
+        \sin(\phi) & \cos(\phi)
+    \end{pmatrix}
 \]
 
 The derivation comes from the addition theorems for \(\sin(\phi) \) and \(\cos(\phi)\).
 \vspace{\baselineskip}
 
-Given two vectors \(\vec{v}\) and \(\vec{g}\) whose angles are \(\alpha\) and \(\theta = \alpha + \beta\). We 
-can rotate the vector \(\vec{v}\) by some \(\beta\) to transform into \(\vec{g}\).
+Given two vectors \(\vec{v}\) and \(\vec{g}\) whose angles are \(\alpha\) and \(\theta = \alpha + \beta\). 
+We can rotate the vector \(\vec{v}\) by some \(\beta\) to transform into \(\vec{g}\).
 
 \begin{align*}
     x &= r \cos(\alpha)\\
@@ -74,14 +75,14 @@ Now notice that we have our \(x\) and \(y\) inside the expression
 which gives us 
 
 \[
-\begin{pmatrix}
-    \cos(\phi) & -\sin(\phi)\\
-    \sin(\phi) & \cos(\phi)
-\end{pmatrix}
-\begin{pmatrix}
-    x\\
-    y
-\end{pmatrix}
+    \begin{pmatrix}
+        \cos(\phi) & -\sin(\phi)\\
+        \sin(\phi) & \cos(\phi)
+    \end{pmatrix}
+    \begin{pmatrix}
+        x\\
+        y
+    \end{pmatrix}
 \]
 
 \QED
@@ -89,36 +90,36 @@ which gives us
 \subsubsection{Other rotation matrices}
 
 \[
-R_x (\phi) =
-\begin{pmatrix}
-    1 & 0 & 0 \\
-    0 & \cos(\phi) & -\sin(\phi) \\
-    0 & \sin(\phi) & \cos(\phi)
-\end{pmatrix}
+    R_x (\phi) =
+    \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & \cos(\phi) & -\sin(\phi) \\
+        0 & \sin(\phi) & \cos(\phi)
+    \end{pmatrix}
 \]
 
 \[
-R_y (\phi) =
-\begin{pmatrix}
-    1 & 0 & \sin(\phi) \\
-    0 & 1 & 0 \\
-    -\sin(\phi) & 0 & \cos(\phi)
-\end{pmatrix}
+    R_y (\phi) =
+    \begin{pmatrix}
+        1 & 0 & \sin(\phi) \\
+        0 & 1 & 0 \\
+        -\sin(\phi) & 0 & \cos(\phi)
+    \end{pmatrix}
 \]
 
 \[
-R_z (\phi) =
-\begin{pmatrix}
-    \cos(\phi) & -\sin(\phi) & 0 \\
-    \sin(\phi) & \cos(\phi) & 0 \\
-    0 & 0 & 1
-\end{pmatrix}
+    R_z (\phi) =
+    \begin{pmatrix}
+        \cos(\phi) & -\sin(\phi) & 0 \\
+        \sin(\phi) & \cos(\phi) & 0 \\
+        0 & 0 & 1
+    \end{pmatrix}
 \]
 
 
 \subsection{Orthogonal Matrices}
 
-A matrix \(A \in \mathbb{R}^{n \times n}\) is \emph{orthogonal} if its columns vectors form an orthonormal 
+A matrix \(A \in \Reals^{n \times n}\) is \emph{orthogonal} if its columns vectors form an orthonormal 
 basis.
 \vspace{\baselineskip}
 
@@ -154,10 +155,10 @@ The set of all \emph{orthogonal} matrices is \(O(n)\).
 \textbf{Example of a proof}
 \vspace{\baselineskip}
 
-Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \mathbb{R}^n \backslash \{0\} \).
+Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \Reals^n \backslash \{0\} \).
 
 \[
-H_n = I_n - 2 \frac{uu^T}{u^Tu}
+    H_n = I_n - 2 \frac{uu^T}{u^Tu}
 \]
 
 \(I_n\) is the identity matrix.
@@ -166,13 +167,13 @@ H_n = I_n - 2 \frac{uu^T}{u^Tu}
 \textbf{Proof:}
 
 \begin{align*}
-(H_n)^2 &= I \\
-&= \left(I_n - 2 \frac{uu^T}{u^Tu}\right)^2\\
-&= I_n^2 - 4\frac{uu^T}{u^Tu} + 4\left(\frac{uu^T}{u^Tu}\right)^2\\
-&= I_n -4\frac{uu^T}{u^Tu} +4\frac{uu^T uu^T}{(u^Tu)^2}\\ 
-&= I_n -4\frac{uu^T}{u^Tu} +4\frac{u(u^T u)u^T}{(u^Tu)^2}\\ 
-&= I_n -4\frac{uu^T}{u^Tu} +4\frac{uu^T}{u^Tu}\\ 
-&= I_n
+    (H_n)^2 &= I \\
+    &= \left(I_n - 2 \frac{uu^T}{u^Tu}\right)^2\\
+    &= I_n^2 - 4\frac{uu^T}{u^Tu} + 4\left(\frac{uu^T}{u^Tu}\right)^2\\
+    &= I_n -4\frac{uu^T}{u^Tu} +4\frac{uu^T uu^T}{(u^Tu)^2}\\ 
+    &= I_n -4\frac{uu^T}{u^Tu} +4\frac{u(u^T u)u^T}{(u^Tu)^2}\\ 
+    &= I_n -4\frac{uu^T}{u^Tu} +4\frac{uu^T}{u^Tu}\\ 
+    &= I_n
 \end{align*}
 
 \QED
@@ -203,10 +204,10 @@ We know that \(\det(I) = I \), therefore
 
 \subsection{Dot Product}
 
-Given \(f: \mathbb{R}^n \to \mathbb{R}^n\) then this two statements are equivalent.
+Given \(f: \Reals^n \to \Reals^n\) then this two statements are equivalent.
 
 \[
-\langle f(x), f(y) \rangle = \langle x, y \rangle \quad \forall x,y \in \mathbb{R}^n
+    \langle f(x), f(y) \rangle = \langle x, y \rangle \quad \forall x,y \in \Reals^n
 \]
 
 and 
@@ -221,25 +222,26 @@ and
 \textbf{Proof \(\Rightarrow\):}
  
 \[
-\|x\|^2 = \langle x, x \rangle = \langle f(x), f(x) \rangle = \|f(x)\|^2
+    \|x\|^2 = \langle x, x \rangle = \langle f(x), f(x) \rangle = \|f(x)\|^2
 \]
 
 This implies the length preservation. The isometry gives us:
 
 \begin{align*}
-\|f(x) - f(y)\|^2 
-&= \langle f(x) - f(y), f(x) - f(y) \rangle \\
-&= \langle f(x), f(x) \rangle - 2\langle f(x), f(y) \rangle + \langle f(y), f(y) \rangle \\
-&= \langle x, x \rangle - 2\langle x, y \rangle + \langle y, y \rangle \\
-&= \langle x - y, x - y \rangle = \|x - y\|^2
+    \|f(x) - f(y)\|^2 
+    &= \langle f(x) - f(y), f(x) - f(y) \rangle \\
+    &= \langle f(x), f(x) \rangle - 2\langle f(x), f(y) \rangle + \langle f(y), f(y) \rangle \\
+    &= \langle x, x \rangle - 2\langle x, y \rangle + \langle y, y \rangle \\
+    &= \langle x - y, x - y \rangle = \|x - y\|^2
 \end{align*}
 
-Then 
+Then
+
 \begin{align*}
-\angle(f(x), f(y)) 
-&= \arccos\left( \frac{\langle f(x), f(y) \rangle}{\|f(x)\| \cdot \|f(y)\|} \right) \\
-&= \arccos\left( \frac{\langle x, y \rangle}{\|x\| \cdot \|y\|} \right) 
-= \angle(x, y)
+    \angle(f(x), f(y)) 
+    &= \arccos\left( \frac{\langle f(x), f(y) \rangle}{\|f(x)\| \cdot \|f(y)\|} \right) \\
+    &= \arccos\left( \frac{\langle x, y \rangle}{\|x\| \cdot \|y\|} \right) \\
+    &= \angle(x, y)
 \end{align*}
 
 \QED
@@ -250,14 +252,15 @@ Then
 With \(\alpha = \angle(x, y) = \angle(f(x), f(y))\) gilt:
 
 \[
-\langle f(x), f(y) \rangle = \cos(\alpha) \cdot \|f(x)\| \cdot \|f(y)\| = \cos(\alpha) \cdot \|x\| \cdot \|y\| = \langle x, y \rangle
+    \langle f(x), f(y) \rangle = \cos(\alpha) \cdot \|f(x)\| \cdot \|f(y)\| = \cos(\alpha) 
+    \cdot \|x\| \cdot \|y\| = \langle x, y \rangle
 \]
 
 \QED
 
 \subsection{Theorem of the Matrix Representation}
 
-The mapping \( f : \mathbb{R}^n \to \mathbb{R}^n \) is orthogonal if and only if  
+The mapping \( f : \Reals^n \to \Reals^n \) is orthogonal if and only if  
 the associated matrix representation \( Q \) (with respect to the standard basis) is an orthogonal matrix, i.e., \( Q \in O(n) \).
 \vspace{\baselineskip}
 
@@ -266,19 +269,20 @@ the associated matrix representation \( Q \) (with respect to the standard basis
 \( f \) is linear, and thus has a matrix representation \( Q \). It follows that
 
 \[
-\langle Qx, Qy \rangle = \langle Q^\top Qx, y \rangle = \langle x, y \rangle \quad \forall x, y \in \mathbb{R}^n,
+    \langle Qx, Qy \rangle = \langle Q^\top Qx, y \rangle = \langle x, y \rangle \quad \forall x, y 
+    \in \Reals^n,
 \]
 
 thus,
 
 \[
-\langle Q^\top Qx - x, y \rangle = 0 \quad \forall x, y.
+    \langle Q^\top Qx - x, y \rangle = 0 \quad \forall x, y.
 \]
 
 Choosing \( y = Q^\top Qx - x \), we get
 
 \[
-\langle Q^\top Qx - x, Q^\top Qx - x \rangle = 0 \quad \forall x,
+    \langle Q^\top Qx - x, Q^\top Qx - x \rangle = 0 \quad \forall x,
 \]
 
 and hence \( (Q^\top Q - I)x = 0 \quad \forall x \).  
@@ -306,7 +310,7 @@ Let \( E \) be the standard basis and \( B \) an orthonormal basis. Let
 Since the columns of \( S \) are the basis vectors of \( B \), we have \( S \in O(n) \).  
 
 \[
-M_B^B(f) = S^{-1} Q S \in O(n),
+    M_B^B(f) = S^{-1} Q S \in O(n),
 \]
 
 due to the group property of \( O(n) \).
@@ -315,16 +319,17 @@ due to the group property of \( O(n) \).
 
 \subsection{QR-Decomposition}
 
-A use case of orthogonal matrices is the \emph{QR-Decomposition}. The goal is that given a system \( Ax = b\) 
-with a matrix \(A\in \mathbb{R}^{m \times n}\), \(m \ge n\) and \(rg(A) = n\) we can find two matrices \(Q \text{ and } R\) 
-such that \(A = QR \text{ with } R\in \mathbb{R}^{n \times n} \text{ and } Q \in \mathbb{R}^{m \times n}\).
-\(R\) is matrix with only an upper triangle and \(Q\) is orthogonal for the columns.
+A use case of orthogonal matrices is the \emph{QR-Decomposition}. The goal is that given a system 
+\( Ax = b\) with a matrix \(A\in \Reals^{m \times n}\), \(m \ge n\) and \(rg(A) = n\) we can find 
+two matrices \(Q \text{ and } R\) such that \(A = QR \text{ with } R\in \Reals^{n \times n} 
+\text{ and } Q \in \Reals^{m \times n}\). \(R\) is matrix with only an upper triangle and 
+\(Q\) is orthogonal for the columns.
 \vspace{\baselineskip}
 
 We know that the best approximation by the method of the least squares is given by
 
 \[
-x_s = (A^T A)^{-1} A^T b
+    x_s = (A^T A)^{-1} A^T b
 \]
 
 Because of the orthogonality of the columns \(rg(Q) = rg(A)\) therefore it can be inverted. Therefore,
@@ -345,14 +350,15 @@ vector space which can be found via the Gram-Schmidt algorithm. The matrix \(R\)
 inner products our \(A\) matrix and \(Q\)
 
 \[
-R =
-\begin{pmatrix}
-    \langle q_1, a_1 \rangle & \langle q_1, a_2 \rangle & \cdots &\langle q_1, a_n\rangle \\ 
-    0 & \langle q_2, a_2 \rangle & \cdots & \langle q_2, a_n\rangle \\ 
-    \vdots & \vdots  & \ddots & \vdots \\
-    0 & 0  & \cdots & \langle q_n, a_n \rangle \\ 
-\end{pmatrix}
+    R =
+    \begin{pmatrix}
+        \langle q_1, a_1 \rangle & \langle q_1, a_2 \rangle & \cdots &\langle q_1, a_n\rangle \\ 
+        0 & \langle q_2, a_2 \rangle & \cdots & \langle q_2, a_n\rangle \\ 
+        \vdots & \vdots  & \ddots & \vdots \\
+        0 & 0  & \cdots & \langle q_n, a_n \rangle \\ 
+    \end{pmatrix}
 \]
+
 Or even simpler \(R = Q^T A\).
 \vspace{\baselineskip}
 
@@ -401,19 +407,19 @@ First, we find the orthonormal basis of the columns of our matrix \(A\)
 \]
 
 \[
-Q = 
-\begin{pmatrix}
-    \frac{1}{\sqrt{2}} & \frac{2}{\sqrt{8}} \\
-    \frac{1}{\sqrt{2}} & -\frac{2}{\sqrt{8}}
-\end{pmatrix}
+    Q = 
+    \begin{pmatrix}
+        \frac{1}{\sqrt{2}} & \frac{2}{\sqrt{8}} \\
+        \frac{1}{\sqrt{2}} & -\frac{2}{\sqrt{8}}
+    \end{pmatrix}
 \]
 
 \[
-R =
-\begin{pmatrix}
-    \sqrt{2} & sqrt{2} \\
-     0    &    \sqrt{8}
-\end{pmatrix}
+    R =
+    \begin{pmatrix}
+        \sqrt{2} & sqrt{2} \\
+        0    &    \sqrt{8}
+    \end{pmatrix}
 \]
 
 

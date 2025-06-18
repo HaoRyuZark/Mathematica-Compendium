@@ -28,23 +28,28 @@ vector is described in terms of other basis. More precisely what are its coordin
 
 So our vector \(\vec{x}\) is described:
 
-\[\lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n,\]
+\[
+    \lambda_1 \vec{v}_1 + \cdots + \lambda_n \vec{v}_n = \mu_1 \vec{b}_1 + \cdots + \mu_n \vec{b}_n,
+\]
 
 in the corresponding bases.
 \vspace{\baselineskip}
 
 Now let us write then a matrix vector multiplication
+
 \[
-(\vec{v}_1, \dots, \vec{v}_ n) 
-\begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix}
- =
-(\vec{b}_1, \dots, \vec{b}_ n) 
-\begin{pmatrix} \mu_1 \\ \vdots \\ \mu_n \end{pmatrix}
+    (\vec{v}_1, \dots, \vec{v}_ n) 
+    \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix}
+    =
+    (\vec{b}_1, \dots, \vec{b}_ n) 
+    \begin{pmatrix} \mu_1 \\ \vdots \\ \mu_n \end{pmatrix}
 \]
 
 Now let us use the following notation for the Basis and the coefficient vectors.
 
-\[P_B {(\vec{x})}_B = P_C {(\vec{x})}_C\]
+\[
+    P_B {(\vec{x})}_B = P_C {(\vec{x})}_C
+\]
 
 Here \(P_{X}\) is the matrix of the basis \(X\) vectors and \({(\vec{x})}_X\) the coefficients of the
 vector \(\vec{x}\) described by that basis.
@@ -60,7 +65,9 @@ by the inverse of the corresponding basis matrix.
 
 Let us find \(\vec{x}\) in terms of that basis \(C\)
 
-\[P_{C}^{-1} P_B {(\vec{x})}_B = {(\vec{x})}_C\]
+\[
+    P_{C}^{-1} P_B {(\vec{x})}_B = {(\vec{x})}_C
+\]
 
 \textbf{Example II:}
 \vspace{\baselineskip}
@@ -72,31 +79,44 @@ vector in the canonical basis has the coordinates (2, 1).
 
 We set them equal
 
-\[\lambda_1 \vec{u}_1 + \lambda_2 \vec{u}_2 = \mu_1 \imath + \mu_2 \jmath \]
+\[
+    \lambda_1 \vec{u}_1 + \lambda_2 \vec{u}_2 = \mu_1 \imath + \mu_2 \jmath 
+\]
 
 Let us write \(\vec{u}_1\) and \(\vec{u}_2\) in terms of the canonical basis.
-\[\vec{u}_1 = \imath + 2 \jmath\]
-\[\vec{u}_2 = 3 \imath + 3 \jmath\]
+
+\[
+    \vec{u}_1 = \imath + 2 \jmath
+\]
+\[
+    \vec{u}_2 = 3 \imath + 3 \jmath
+\]
 
 Now we can substitute this values in the original expression
 
-\[\lambda_1 (\imath + 2 \jmath) + \lambda_2 (3 \imath + 3 \jmath) = \mu_1 \imath + \mu_2 \jmath \]
+\[
+    \lambda_1 (\imath + 2 \jmath) + \lambda_2 (3 \imath + 3 \jmath) = \mu_1 \imath + \mu_2 \jmath 
+\]
 
-\[\lambda_1 \imath + \lambda_1 2 \jmath + \lambda_2 3 \imath + \lambda_2 3 \jmath = \mu_1 \imath + \mu_2 \jmath \]
+\[
+    \lambda_1 \imath + \lambda_1 2 \jmath + \lambda_2 3 \imath + \lambda_2 3 \jmath = \mu_1 \imath + \mu_2 \jmath 
+\]
 
-\[(\lambda_1  +  \lambda_2 3)\imath + (\lambda_1 2  + \lambda_2 3) \jmath = \mu_1 \imath + \mu_2 \jmath \]
+\[
+    (\lambda_1  +  \lambda_2 3)\imath + (\lambda_1 2  + \lambda_2 3) \jmath = \mu_1 \imath + \mu_2 \jmath 
+\]
 
 Now we can write this in matrix form
 
 \[
-\begin{bmatrix}
-    1 & 3 \\
-    2 & 3 \\
-\end{bmatrix} \begin{pmatrix}
-    \lambda_1 \\ \lambda2
-\end{pmatrix} = \begin{pmatrix}
-    \mu_1 \\ \mu_2
-\end{pmatrix}
+    \begin{bmatrix}
+        1 & 3 \\
+        2 & 3 \\
+    \end{bmatrix} \begin{pmatrix}
+        \lambda_1 \\ \lambda2
+    \end{pmatrix} = \begin{pmatrix}
+        \mu_1 \\ \mu_2
+    \end{pmatrix}
 \]
 
 This equation relates the coefficient in the standard basis to the new basis
@@ -114,9 +134,9 @@ relative to the new basis \(C\)
 Now let us understand what really is happening in the step where we multiply by the inverse matrix.
 
 \begin{align*}
-P_{C}^{-1} P_B &= P_{C}^{-1}(\vec{b}_1, \dots, \vec{b}_n) \\
-&= (P_{C}^{-1}\vec{b}_1, \dots, P_{C}^{-1}\vec{b}_n)\\
-&= ({(\vec{b}_1)}_C, \dots, {(\vec{b}_n)}_C)
+    P_{C}^{-1} P_B &= P_{C}^{-1}(\vec{b}_1, \dots, \vec{b}_n) \\
+    &= (P_{C}^{-1}\vec{b}_1, \dots, P_{C}^{-1}\vec{b}_n)\\
+    &= ({(\vec{b}_1)}_C, \dots, {(\vec{b}_n)}_C)
 \end{align*}
 
 Now it is clear that the inverse is just taking our basis vector and transforming
@@ -126,9 +146,11 @@ them in to basis vector with respect to \(C\).
 
 For linear transformation we use the formula.
 
-\[A^{-1} M A \vec{v},\]
+\[
+    A^{-1} M A \vec{v}
+\]
 
-where \(\vec{v}\) is a vector in the other basis, \(A\) the
+Where \(\vec{v}\) is a vector in the other basis, \(A\) the
 other basis,\(M\) the linear transformation and \(A^{-1}\) the inverse of
 the basis vector of \(A\).
 \vspace{\baselineskip}
@@ -148,65 +170,71 @@ respect to \(X\).
 
 \subsubsection{Theorem I} 
 
-Let \( V \) be a \( K \)-vector space with a 
-basis \( B = (v_1, \ldots, v_n) \).  
+Let \( V \) be a \( K \)-vector space with a basis \( B = (v_1, \ldots, v_n) \).  
 Then there exists exactly one isomorphism 
+
 \[
-\varphi_B : K^n \to V
+    \varphi_B : K^n \to V
 \]
+
 such that
+
 \[
-\varphi_B(e_i) = v_i, \quad \text{for } 1 \leq i \leq n.
+    \varphi_B(e_i) = v_i, \quad \text{for } 1 \leq i \leq n.
 \]
 
 \subsubsection{Theorem II} 
 
-The isomorphism \( \varphi_B \) from the previous 
-Theorem is called the \emph{coordinate mapping},  
+The isomorphism \( \varphi_B \) from the previous theorem is called the \emph{coordinate mapping},  
 and for \( v \in V \), we define
+
 \[
-K_B (\vec{v}) := \varphi_B^{-1} (v) \in K^n
+    K_B (\vec{v}) := \varphi_B^{-1} (v) \in K^n
 \]
+
 as the \emph{coordinates of \( v \) with respect to \( B \)}.
 
 \subsubsection{Theorem III} 
 
-We define the \emph{Translation} of a vector to another
-basis as:
+We define the \emph{Translation} of a vector to another basis as:
 
 \[
-T_{B}^{A} = \varphi_{B}^{-1} \circ \varphi_A
+    T_{B}^{A} = \varphi_{B}^{-1} \circ \varphi_A
 \]
 
 \[
-\begin{tikzcd}
-& V & \\
-K^n \arrow[ur, "\varphi_A"] \arrow[rr, "T_{B}^{A} = \varphi_B^{-1} \circ \varphi_A"'] & & K^n \arrow[ul, "\varphi_B"']
-\end{tikzcd}
+    \begin{tikzcd}
+    & V & \\
+    K^n \arrow[ur, "\varphi_A"] \arrow[rr, "T_{B}^{A} = \varphi_B^{-1} \circ \varphi_A"'] & & K^n \arrow[ul, "\varphi_B"']
+    \end{tikzcd}
 \]
 
 \subsubsection{Theorem IV} 
 
-Let \( v \in V \) be arbitrary, 
-with \( K_A(v) = {(x_1, \dots, x_n)}^T \) 
-and \( K_B(v) = {(y_1, \dots, y_n)}^T \).  
-Then the following holds:
+Let \( v \in V \) be arbitrary, with \( K_A(v) = {(x_1, \dots, x_n)}^T \) 
+and \( K_B(v) = {(y_1, \dots, y_n)}^T \).  Then the following holds:
+
 \[
-\begin{pmatrix}
-y_1 \\
-\vdots \\
-y_n
-\end{pmatrix}
-=
-T_B^A
-\begin{pmatrix}
-x_1 \\
-\vdots \\
-x_n
-\end{pmatrix}
+    \begin{pmatrix}
+    y_1 \\
+    \vdots \\
+    y_n
+    \end{pmatrix}
+    =
+    T_B^A
+    \begin{pmatrix}
+    x_1 \\
+    \vdots \\
+    x_n
+    \end{pmatrix}
 \]
+
 If the coordinates of \( v \) with respect to \( A \) are known, then the matrix \( T_B^A \) can be used to compute the coordinates of \( v \) with respect to \( B \).
-\[ T_B^A = B^{-1}A. \]
+
+\[ 
+    T_B^A = B^{-1}A. 
+\]
+
 \[
     \begin{tikzcd}
         K^n \arrow[rrrr, "M_{B}^{A}"] \arrow[rd, "\varphi_A"] &                   &  &   & K^m \arrow[ld, "\varphi_B"'] \\
@@ -216,22 +244,24 @@ If the coordinates of \( v \) with respect to \( A \) are known, then the matrix
 
 \subsubsection{Theorem V}
  
-Let \( V \) and \( W \) be finitely 
-generated \( K \)-vector spaces with 
+Let \( V \) and \( W \) be finitely generated \( K \)-vector spaces with 
 bases \( A \) and \( B \), respectively, and let \( f \in \mathrm{Hom}(V, W) \).
 Then we have
+
 \[
-M_B^A(f) = \varphi_B^{-1} \circ f \circ \varphi_A
+    M_B^A(f) = \varphi_B^{-1} \circ f \circ \varphi_A
 \]
 
 Thus, \( M_B^A(f) \) tells you how the coordinates change through \( f \).
 
 \subsubsection{Theorem VI} 
 
-Let \( V \) and \( W \) be finitely generated vector spaces with bases \( A \) and \( A' \) for \( V \), and \( B \) and \( B' \) for \( W \), respectively.  
-Furthermore, let \( f: V \to W \) be a linear map. Then the following holds:
+Let \( V \) and \( W \) be finitely generated vector spaces with bases \( A \) and \( A' \) 
+for \( V \), and \( B \) and \( B' \) for \( W \), respectively.  Furthermore, let \( f: V \to W \) be 
+a linear map. Then the following holds:
+
 \[
-M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot {\left( T_{A'}^{A} \right)}^{-1}.
+    M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot {\left( T_{A'}^{A} \right)}^{-1}.
 \]
 
 \[
@@ -241,8 +271,10 @@ M_{B'}^{A'}(f) = T_{B'}^{B} \cdot M_{B}^{A}(f) \cdot {\left( T_{A'}^{A} \right)}
         K^n \arrow[rrrr, "M_{B'}^{A'}"] \arrow[ru, "\varphi_{A}'"']                    &                   &  &   & K^m \arrow[lu, "\varphi_{B'}"]                       
     \end{tikzcd}
 \]
+
 The formula says that to interpret a linear transformation in terms of the
 new coordinates we have to:
+
 \begin{enumerate}
     \item Take a vector of the new coordinates
     \item Multiply it the matrix of its basis vectors. (Translate to our basis)

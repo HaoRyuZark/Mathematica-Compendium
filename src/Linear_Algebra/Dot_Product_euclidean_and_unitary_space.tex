@@ -14,8 +14,8 @@ For all \(a, b \in V\):
 \[
 \langle a, b \rangle = 
 \begin{cases}
-\langle b, a \rangle & \text{if } K = \mathbb{R}, \\
-\overline{\langle b, a \rangle} & \text{if } K = \mathbb{C}.
+\langle b, a \rangle & \text{if } K = \Reals, \\
+\overline{\langle b, a \rangle} & \text{if } K = \Complex.
 \end{cases}
 \]
 
@@ -38,8 +38,8 @@ For all \(\alpha \in K\), we have:
 \[
 \langle \alpha a, b \rangle = \alpha \langle a, b \rangle = 
 \begin{cases}
-\langle a, \alpha b \rangle & \text{if } K = \mathbb{R}, \\
-\langle a, \alpha b \rangle & \text{if } K = \mathbb{C}.
+\langle a, \alpha b \rangle & \text{if } K = \Reals, \\
+\langle a, \alpha b \rangle & \text{if } K = \Complex.
 \end{cases}
 \]
 
@@ -72,7 +72,7 @@ Here we add \(\|a\|\|b\|\) to make this function linear.
 
 \subsection{Standard Scalar Product for Complex Number}
 
-Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \mathbb{C}^n \). The standard inner product is defined by
+Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \Complex^n \). The standard inner product is defined by
 
 \[
 \langle a, b \rangle := \sum_{i=1}^n a_i b_i.
@@ -92,10 +92,10 @@ A real vector space equipped with a inner product is called a \textit{Euclidean 
 
 \subsection{Norms in Vector Spaces}
 
-Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cdot \| : V \to \mathbb{R} \) is called a norm if and only if the following conditions hold:
+Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cdot \| : V \to \Reals \) is called a norm if and only if the following conditions hold:
 
-\begin{itemize}[label=\(-\)]
-    \item \( \|a\| \in \mathbb{R} \),
+\begin{itemize}
+    \item \( \|a\| \in \Reals \),
     \item \( \|a\| \geq 0 \),
     \item \( \|a\| = 0 \iff a = 0 \),
     \item \( \forall \lambda \in K, \ \| \lambda a \| = |\lambda| \| a \| \),
@@ -104,7 +104,7 @@ Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cd
 
 \subsubsection{Induced Norm by a Scalar Product}
 
-As in the special case \( V = \mathbb{R}^n \), a inner product induces a norm.
+As in the special case \( V = \Reals^n \), a inner product induces a norm.
 In a unitary (or Euclidean) space, the inner product induces a (standard) norm defined by
 
 \[

@@ -6,58 +6,67 @@ In mathematics, the sum and product notations are compact ways to represent repe
 \subsection{Sum Notation \texorpdfstring{\(\sum\)}{∑}}
 
 The summation symbol \(\sum\) represents the addition of a sequence of terms:
-\[
-\sum_{i = m}^{n} a_i = a_m + a_{m+1} + \cdots + a_n
-\]
-where \(i\) is the index of summation, \(m\) is the lower bound, and \(n\) is the upper bound.
 
-\begin{itemize}[label=\(-\)]
-    \item \emph{Linearity:}
-    \[
+\[
+    \sum_{i = m}^{n} a_i = a_m + a_{m+1} + \cdots + a_n
+\]
+
+Where \(i\) is the index of summation, \(m\) is the lower bound, and \(n\) is the upper bound.
+\vspace{\baselineskip}
+
+\emph{Linearity:}
+
+\[
     \sum_{i = m}^{n} (a_i + b_i) = \sum_{i = m}^{n} a_i + \sum_{i = m}^{n} b_i
-    \]
-    \[
+\]
+    
+\[
     \sum_{i = m}^{n} c \cdot a_i = c \cdot \sum_{i = m}^{n} a_i
-    \]
-    \item \emph{Splitting:}
-    \[
+\]
+
+\emph{Splitting:}
+    
+\[
     \sum_{i = m}^{n} a_i = \sum_{i = m}^{k} a_i + \sum_{i = k+1}^{n} a_i \quad (m \le k < n)
-    \]
-\end{itemize}
+\]
 
 \subsubsection{Change of Index}
 
 Let \(j = i + k\), then:
+
 \[
-\sum_{i = m}^{n} a_i = \sum_{j = m + k}^{n + k} a_{j - k}
+    \sum_{i = m}^{n} a_i = \sum_{j = m + k}^{n + k} a_{j - k}
 \]
 
 \textbf{Example:}
 \vspace{\baselineskip}
 
 \[
-\sum_{i = 1}^{4} a_i = \sum_{j = 2}^{5} a_{j - 1}
+    \sum_{i = 1}^{4} a_i = \sum_{j = 2}^{5} a_{j - 1}
 \]
 
 \subsubsection{Power Sums and Their Formulas}
 
 \begin{align*}
-\sum_{i = 1}^{n} i &= \frac{n(n+1)}{2} \\
-\sum_{i = 1}^{n} i^2 &= \frac{n(n+1)(2n+1)}{6} \\
-\sum_{i = 1}^{n} i^3 &= {\left[\frac{n(n+1)}{2}\right]}^2 \\
-\sum_{i = 1}^{n} i^k &= \text{(Higher-order polynomial in \(n\))}
+    \sum_{i = 1}^{n} i &= \frac{n(n+1)}{2} \\
+    \sum_{i = 1}^{n} i^2 &= \frac{n(n+1)(2n+1)}{6} \\
+    \sum_{i = 1}^{n} i^3 &= {\left[\frac{n(n+1)}{2}\right]}^2 \\
+    \sum_{i = 1}^{n} i^k &= \text{(Higher-order polynomial in \(n\))}
 \end{align*}
 
 \subsubsection{Derivation of \texorpdfstring{\(\sum_{i=1}^{n} i^2\)}{∑i²}}
 
 We use the method of finite differences or induction. Assume a quadratic form:
+
 \[
-\sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn
+    \sum_{i=1}^{n} i^2 = An^3 + Bn^2 + Cn
 \]
+
 Plug in small values of \(n\) (e.g., 1, 2, 3), solve the system of equations to find:
+
 \[
-A = \frac{1}{3}, \quad B = \frac{1}{2}, \quad C = \frac{1}{6}
-\Rightarrow \sum_{i = 1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
+    A = \frac{1}{3}, \quad B = \frac{1}{2}, \quad C = \frac{1}{6}
+    \Rightarrow \sum_{i = 1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
 \]
 
 \subsubsection{Telescoping Sum}
@@ -68,9 +77,9 @@ A telescoping sum is a sum where intermediate terms cancel out, leaving only the
 \textbf{Example:}
 
 \[
-\sum_{i=1}^{n} \left( \frac{1}{i} - \frac{1}{i+1} \right)
-= 1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \cdots + \frac{1}{n} - \frac{1}{n+1}
-= 1 - \frac{1}{n+1}
+    \sum_{i=1}^{n} \left( \frac{1}{i} - \frac{1}{i+1} \right)
+    = 1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \cdots + \frac{1}{n} - \frac{1}{n+1}
+    = 1 - \frac{1}{n+1}
 \]
 
 \subsection{Geometric Series}
@@ -80,7 +89,7 @@ A telescoping sum is a sum where intermediate terms cancel out, leaving only the
 For a geometric sequence \(a, ar, ar^2, \dots, ar^{n-1}\):
 
 \[
-\sum_{i = 0}^{n - 1} ar^i = a \cdot \frac{1 - r^n}{1 - r}, \quad r \ne 1
+    \sum_{i = 0}^{n - 1} ar^i = a \cdot \frac{1 - r^n}{1 - r}, \quad r \ne 1
 \]
 
 \subsubsection{Infinite Geometric Series:}
@@ -88,7 +97,7 @@ For a geometric sequence \(a, ar, ar^2, \dots, ar^{n-1}\):
 If \(|r| < 1\), then:
 
 \[
-\sum_{i = 0}^{\infty} ar^i = \frac{a}{1 - r}
+    \sum_{i = 0}^{\infty} ar^i = \frac{a}{1 - r}
 \]
 
 \subsection{Product Notation \texorpdfstring{\(\prod\)}{∏}}
@@ -96,32 +105,33 @@ If \(|r| < 1\), then:
 The product notation \(\prod\) represents repeated multiplication:
 
 \[
-\prod_{i = m}^{n} a_i = a_m \cdot a_{m+1} \cdot \cdots \cdot a_n
+    \prod_{i = m}^{n} a_i = a_m \cdot a_{m+1} \cdot \cdots \cdot a_n
 \]
 
-\begin{itemize}[label=\(-\)]
-    \item \emph{Multiplication:}
-    \[
+\emph{Multiplication:}
+    
+\[
     \prod_{i = m}^{n} (a_i \cdot b_i) = \left( \prod_{i = m}^{n} a_i \right) \cdot \left( \prod_{i = m}^{n} b_i \right)
-    \]
-    \item \emph{Power Rule:}
-    \[
+\]
+
+\emph{Power Rule:}
+    
+\[
     \prod_{i = m}^{n} a^k = a^{k(n - m + 1)}
-    \]
-\end{itemize}
+\]
 
 \subsubsection{Change of Index}
 
 Let \(j = i + k\), then:
 
 \[
-\prod_{i = m}^{n} a_i = \prod_{j = m + k}^{n + k} a_{j - k}
+    \prod_{i = m}^{n} a_i = \prod_{j = m + k}^{n + k} a_{j - k}
 \]
 
 \textbf{Example:}
 
 \[
-\prod_{i = 1}^{3} a_i = \prod_{j = 2}^{4} a_{j - 1}
+    \prod_{i = 1}^{3} a_i = \prod_{j = 2}^{4} a_{j - 1}
 \]
 
 \subsubsection{Telescoping Product}
@@ -132,7 +142,7 @@ A telescoping product occurs when consecutive terms simplify or cancel.
 \textbf{Example:}
 
 \[
-\prod_{i = 1}^{n} \frac{i}{i+1} = \frac{1}{2} \cdot \frac{2}{3} \cdot \frac{3}{4} \cdots \frac{n}{n+1} = \frac{1}{n+1}
+    \prod_{i = 1}^{n} \frac{i}{i+1} = \frac{1}{2} \cdot \frac{2}{3} \cdot \frac{3}{4} \cdots \frac{n}{n+1} = \frac{1}{n+1}
 \]
 
 \subsection{Proof of the geometric Series}
@@ -143,12 +153,13 @@ Let \(S_n = \sum_{k = 0}^{n}aq^k\) with \(|q| < 1\).
 Then \(S_n q = a(\sum_{k = 0}^{n + 1})q^k = a\left( \sum_{k= 0}^{n} q^k + q^{n + 1}\right)\)
 
 \[
-a + S_n q = \sum_{k = 0}^{n}aq^k + aq^{n + 1}  = S_n + aq^{n + 1}
+    a + S_n q = \sum_{k = 0}^{n}aq^k + aq^{n + 1}  = S_n + aq^{n + 1}
 \]
 
 Finally, we subtract \(S_n\) and \(a\) and after that divide by \(q - 1\)
 
 \[
-S_n = \frac{a - aq^{n + 1}}{q - 1}
+    S_n = \frac{a - aq^{n + 1}}{q - 1}
 \]
+
 \QED
