@@ -3,7 +3,7 @@
 
 \subsection{Permutation}
 
-Number of ways of ordering \(n\) distinct elements.
+Number of ways of ordering \emph{n} distinct elements.
 
 \[
     n!
@@ -11,7 +11,7 @@ Number of ways of ordering \(n\) distinct elements.
 
 \subsection{Permutation with repetition}
 
-Number of ways of ordering \(n\) non-distinct elements. Here \(m_1, \dots, m_n\)
+Number of ways of ordering \emph{n} non-distinct elements. Here \(m_1, \dots, m_n\)
 is the number a specific item is repeated in the original set.
 
 \[
@@ -20,7 +20,7 @@ is the number a specific item is repeated in the original set.
 
 \subsection{Variation}
 
-Ways of put \(n\) objects in \(k\) slots with repetition.
+Ways of put \emph{n} objects in \(k\) slots with repetition.
 
 \[
     n^k
@@ -28,7 +28,7 @@ Ways of put \(n\) objects in \(k\) slots with repetition.
 
 \subsection{Variation without repetition}
 
-Ways of put \(n\) objects in \(k\) slots without repetition.
+Ways of put \emph{n} objects in \(k\) slots without repetition.
 
 \[
     \frac{n!}{(n -k)!}
@@ -36,13 +36,13 @@ Ways of put \(n\) objects in \(k\) slots without repetition.
 
 \subsection{Combination I}
 
-Ways of choose \(k\) objects of \(n\) elements.
+Ways of choose \(k\) objects of \emph{n} elements.
 
 \[
     \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \]
 
-Here \(n\)! is the number of permutations of the original set.
+Here \emph{n}! is the number of permutations of the original set.
 \((n-k)\)! has the function of eliminating the permutations of elements we are not interested in, and
 \(k\)! is to eliminate the duplicates because for a combination the order does not matter, contrary to
 the permutations.
@@ -50,7 +50,7 @@ the permutations.
 \subsection{Combination II}
 
 This focuses not on the slots but in the separations between the slots.
-More specific the number of ways to distribute \(k\) identical objects into \(n\) identical boxes. 
+More specific the number of ways to distribute \(k\) identical objects into \emph{n} identical boxes. 
 
 \[
     \binom{n + k - 1}{k} = \frac{(n + k - 1)!}{k!(n - 1)!}
@@ -67,7 +67,7 @@ Number of permutation in which no object ends in the same initial spot. Also, kn
 
 \subsection{Bell Numbers}
 
-Number of ways of grouping \(n\) objects in an arbitrary number of slots.
+Number of ways of grouping \emph{n} objects in an arbitrary number of slots.
 
 \[
     B(N) = \sum_{k = 0}^{N-1}\binom{N}{K}B(K)
@@ -95,7 +95,7 @@ Ways of permuting \(N\) items with \(K\) exchanges.
 
 \subsection{Stirling Numbers II}
 
-Ways of grouping \(n\) items in \(k\) slots.
+Ways of grouping \emph{n} items in \(k\) slots.
 
 \[
     \genfrac{\{}{\}}{0pt}{}{N}{K} = \frac{1}{K!} \sum_{j=0}^{K} (-1)^{K - j} \binom{K}{j} j^N
@@ -163,7 +163,7 @@ Here is the triangle but with the Binomial Coefficients
     \end{tabular}
 \end{center}
 
-It can be used with the Binomial Theorem to get the Coefficients of a polynomial of degree \(n\).
+It can be used with the Binomial Theorem to get the Coefficients of a polynomial of degree \emph{n}.
 \vspace{\baselineskip}
 
 \textbf{Example:}
