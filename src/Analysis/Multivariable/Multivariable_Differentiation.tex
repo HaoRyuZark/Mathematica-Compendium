@@ -4,7 +4,7 @@
 \subsection{Partial Derivatives}
 
 Let \( f : U \subseteq \Reals^n \to \Reals \) and \( \vec{X}_0 = (x_1^{(0)}, \dots, x_n^{(0)}) 
-\in U \). Then \( f \) is \emph{partially differentiable with respect to \( x_i \)} at 
+\in U \). Then \emph{f} is \emph{partially differentiable with respect to \( x_i \)} at 
 \( \vec{X}_0 \) if the limit:
 
 \[
@@ -12,7 +12,7 @@ Let \( f : U \subseteq \Reals^n \to \Reals \) and \( \vec{X}_0 = (x_1^{(0)}, \do
      \dots, x_n^{(0)}) - f(\vec{X}_0)}{h}
 \]
 
-exists. This derivative measures the rate of change of \( f \) in the direction of the \( x_i \)-axis 
+exists. This derivative measures the rate of change of \emph{f} in the direction of the \( x_i \)-axis 
 while keeping all other variables fixed.
 
 A function is \emph{(partially) differentiable} at \( \vec{X}_0 \) if all partial derivatives 
@@ -20,7 +20,7 @@ A function is \emph{(partially) differentiable} at \( \vec{X}_0 \) if all partia
 
 \subsection{Differentiability}
 
-We call a function \(f\) differentiable at \((x_1, x_2, \cdots, x_n)\) if and only if:
+We call a function \emph{f} differentiable at \((x_1, x_2, \cdots, x_n)\) if and only if:
 
 \[
     f(x_1 + \Delta x_1, x_2 + \Delta x_2, \dots, x_n + \Delta x_n) - f(x_1, x_2, \dots, x_n) = 
@@ -38,7 +38,7 @@ where \(\lim_{\Delta x_1 \to 0}\frac{E_1(\Delta x_1)}{\Delta x_1} = \lim_{\Delta
 \subsection{The Gradient}
 
 Let \( f : U \subseteq \Reals^n \to \Reals \) be differentiable at \( \vec{X}_0 = (x_1^{(0)}, 
-\dots, x_n^{(0)}) \). The \emph{gradient} of \( f \) at \( \vec{X}_0 \) is:
+\dots, x_n^{(0)}) \). The \emph{gradient} of \emph{f} at \( \vec{X}_0 \) is:
 
 \[
     \nabla f(\vec{X}_0) = \begin{pmatrix}
@@ -85,20 +85,20 @@ of the curve
 \end{itemize}
 
 The \(\frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) points in the direction of the 
-steepest increase of \( f \) and \(- \frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) in 
+steepest increase of \emph{f} and \(- \frac{\operatorname{grad}f}{\|\operatorname{grad}f\|}\) in 
 the lowest increase.
 
 \subsection{The Tangent Plane}
 
 The tangent plane to a differentiable surface \( z = f(x, y) \) at the point \( (x_0, y_0) \) is the 
-plane that best approximates the surface near that point. It is given by the linearization of \( f \):
+plane that best approximates the surface near that point. It is given by the linearization of \emph{f}:
 
 \[
     T(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)
 \]
 
 This plane touches the graph of the function at a single point\\
-and shares its slope in both \( x \)- and \( y \)-directions.
+and shares its slope in both \emph{x}- and \emph{y}-directions.
 
 It can also be written in the parameterized form:
 
@@ -145,7 +145,7 @@ Thus, the tangent plane is:
 
 Let \( f : \Reals^n \to \Reals \) be differentiable at \( \vec{x}_0 \), 
 and let \( \vec{v} \in \Reals^n \) be a direction vector with \( \|\vec{v}\| = 1 \). The 
-\emph{directional derivative} of \( f \) at \( \vec{x}_0 \) in the direction \( \vec{v} \) is defined as:
+\emph{directional derivative} of \emph{f} at \( \vec{x}_0 \) in the direction \( \vec{v} \) is defined as:
 
 \[
     D_{\vec{v}}f(\vec{x}_0) := \lim_{h \to 0} \frac{f(\vec{x}_0 + h\vec{v}) - f(\vec{x}_0)}{h}
@@ -192,7 +192,7 @@ We begin by considering the tangent plane to the surface \( z = f(x, y) \) at th
     \end{pmatrix}
 \]
 
-These correspond to directional derivatives along the \( x \)- and \( y \)-axes, respectively.
+These correspond to directional derivatives along the \emph{x}- and \emph{y}-axes, respectively.
 
 Now consider the direction vector \( \vec{v} = (e_1, e_2) \). Lift it into 3D space (onto the tangent 
 plane) as:
@@ -242,13 +242,13 @@ Solving for \( D_{\vec{v}}f \), we obtain:
     D_{\vec{v}}f = \langle \nabla f(x_0, y_0), \vec{v} \rangle
 \]
 
-This is the desired result: the directional derivative equals the dot product of the gradient of \( f \) 
+This is the desired result: the directional derivative equals the dot product of the gradient of \emph{f} 
 and the direction vector \( \vec{v} \).
 
 \subsection{The Total Differential}
 
 If \( f : \Reals^n \to \Reals \) is differentiable at \( \vec{x}_0 \), then the 
-\emph{total differential} of \( f \) at \( \vec{x}_0 \) is the linear approximation:
+\emph{total differential} of \emph{f} at \( \vec{x}_0 \) is the linear approximation:
 
 \[
     df = \sum_{i=1}^n \frac{\partial f}{\partial x_i}(\vec{x}_0) \, dx_i = \langle \nabla f(\vec{x}_0), 
@@ -260,7 +260,7 @@ This expresses how small changes in the input variables propagate into changes i
 
 \subsection{Absolute and Relative Error}
 
-Given an approximate value \( \tilde{x} \) for the exact value \( x \):
+Given an approximate value \( \tilde{x} \) for the exact value \emph{x}:
 
 \begin{itemize}
 
@@ -291,11 +291,11 @@ with the measured values:
     x = 4 \, \text{cm}, \quad y = 3 \, \text{cm}
 \]
 
-Both \( x \) and \( y \) are measured with a precision of \( \Delta x = \Delta y = 0{,}1 \, \text{cm} \). 
+Both \emph{x} and \emph{y} are measured with a precision of \( \Delta x = \Delta y = 0{,}1 \, \text{cm} \). 
 The side length calculated is \( z = 5 \, \text{cm} \). We now determine the maximum possible absolute 
-error in \( z \).
+error in \emph{z}.
 
-\textbf{Step 1: Partial derivatives of \( z \):}
+\textbf{Step 1: Partial derivatives of \emph{z}:}
 
 \[
     \frac{\partial z}{\partial x} = \frac{x}{\sqrt{x^2 + y^2}}, \quad
@@ -322,7 +322,7 @@ error in \( z \).
 
 \textbf{Conclusion:}  
 
-The result for \( z \) is accurate to within \( \boxed{0{,}14 \, \text{cm}} \).
+The result for \emph{z} is accurate to within \( \boxed{0{,}14 \, \text{cm}} \).
 
 
 \subsection{The Chain Rule}
@@ -336,7 +336,7 @@ is a differentiable path. Then:
 
 This is the chain rule in vector form.
 
-Or to be more explicit, the small change in \(t\) makes a change in \(x_1, x_2, \cdots\) and the addition 
+Or to be more explicit, the small change in \emph{t} makes a change in \(x_1, x_2, \cdots\) and the addition 
 of all this changes sum up to the total change in the original function.
 
 \[
@@ -352,7 +352,7 @@ The relative error of a function \( z = f(x_1, \dots, x_n) \) is defined by:
     \varepsilon = \frac{\Delta z_{\max}}{z}
 \]
 
-Assuming \( z \) depends on variables with known relative measurement errors, and the function is 
+Assuming \emph{z} depends on variables with known relative measurement errors, and the function is 
 differentiable, we estimate:
 
 \[
@@ -397,7 +397,7 @@ Applying the relative error formula:
 
 \textbf{Target accuracy:}  
 
-If the final result \( z \) must be accurate within \( \varepsilon_z = 0{,}01 \) (i.e., 1), then we must 
+If the final result \emph{z} must be accurate within \( \varepsilon_z = 0{,}01 \) (i.e., 1), then we must 
 satisfy:
 
 \[
@@ -413,7 +413,7 @@ the output \( z = abc \) is accurate to within 1 percent.
 
 \subsubsection{Implicit Differentiation}
 
-If a function \( F(x, y) = 0 \) defines \( y \) implicitly as a function of \( x \), and \( F \) is 
+If a function \( F(x, y) = 0 \) defines \emph{y} implicitly as a function of \emph{x}, and \emph{F} is 
 differentiable, then:
 
 \[
@@ -426,8 +426,8 @@ This generalizes to higher dimensions using the total differential and the impli
 \textbf{Example:}
 \vspace{\baselineskip}
 
-Given is \(x^2 + y^2 + z^2 = 1\) differentiate with respect to \(x\).
-See \(z\) or the target function as function in terms of the other variables. 
+Given is \(x^2 + y^2 + z^2 = 1\) differentiate with respect to \emph{x}.
+See \emph{z} or the target function as function in terms of the other variables. 
 In this case \(z(x,y)\).
 
 \[
@@ -507,7 +507,7 @@ describes local invertibility and orientation.
 
 \subsection{Taylor's Theorem}
 
-Let \( f : \Reals^n \to \Reals \) be \( k \)-times continuously differentiable at \( \vec{x}_0 \). Then 
+Let \( f : \Reals^n \to \Reals \) be \emph{k}-times continuously differentiable at \( \vec{x}_0 \). Then 
 the Taylor polynomial of degree 2 around \( \vec{x}_0 \) is:
 
 \[
@@ -600,12 +600,12 @@ To determine local extrema for \( f : \Reals^n \to \Reals \), follow this proced
 
 To find local minima or maxima of a function \( f : \Reals^n \to \Reals \), we first identify 
 \emph{critical points}, which are the candidates for relative extrema. 
-These are the points where the gradient of \( f \) vanishes or does not exist.
+These are the points where the gradient of \emph{f} vanishes or does not exist.
 \vspace{\baselineskip}
 
 \textbf{Step 1: Compute the Gradient}
 
-The gradient of \( f \), denoted \( \nabla f \), collects all the first partial derivatives:
+The gradient of \emph{f}, denoted \( \nabla f \), collects all the first partial derivatives:
 
 \[
     \nabla f(x_1, \dots, x_n) =
@@ -624,7 +624,7 @@ Find all points \( \vec{x}_0 \in \Reals^n \) such that:
     \nabla f(\vec{x}_0) = \vec{0}
 \]
 
-This is a nonlinear system of \( n \) equations in \( n \) variables. The solutions \( \vec{x}_0 \) 
+This is a nonlinear system of \emph{n} equations in \emph{n} variables. The solutions \( \vec{x}_0 \) 
 are the \emph{candidate points for extrema}, and also referred to as the 
 \textbf{stationary points} or \emph{critical points} of the function.
 \vspace{\baselineskip}
@@ -657,10 +657,10 @@ Evaluate \( H_f \) at each critical point and use the eigenvalues or definitenes
 
 \begin{itemize}
 
-    \item If \( f_{xx}(x_0, y_0) > 0 \) and \( D > 0 \), then \( f \) has a \emph{local minimum} at 
+    \item If \( f_{xx}(x_0, y_0) > 0 \) and \( D > 0 \), then \emph{f} has a \emph{local minimum} at 
           \( (x_0, y_0) \).
 
-    \item If \( f_{xx}(x_0, y_0) < 0 \) and \( D > 0 \), then \( f \) has a \emph{local maximum} at 
+    \item If \( f_{xx}(x_0, y_0) < 0 \) and \( D > 0 \), then \emph{f} has a \emph{local maximum} at 
           \( (x_0, y_0) \).
 
     \item If \( D < 0 \), then \( (x_0, y_0) \) is a \emph{saddle point}.
@@ -672,7 +672,7 @@ Evaluate \( H_f \) at each critical point and use the eigenvalues or definitenes
 
 \subsubsection{Note: Non-differentiable Points}
 
-If the function \( f \) is not differentiable at some point \( \vec{x}_0 \), but defined there, this 
+If the function \emph{f} is not differentiable at some point \( \vec{x}_0 \), but defined there, this 
 point may also be a candidate for extremum and should be examined separately using limit-based analysis 
 or directional behavior.
 
@@ -684,7 +684,7 @@ Let \( f : \Reals^n \to \Reals \) be the function to optimize, subject to the co
 
 If we look at the constraint intersection with the original function we are going to notice that along 
 the intersection there are maxima and minima with their respective tangent lines and gradients that are 
-normal to them. We also are going to see that both the gradient of \(f\) and the gradient of \(g\) are just scalar version of each other so: 
+normal to them. We also are going to see that both the gradient of \emph{f} and the gradient of \emph{g} are just scalar version of each other so: 
 \vspace{\baselineskip}
 
 This leads to the \emph{Lagrange system}:
@@ -750,7 +750,7 @@ Where:
     \item \( \nabla  g(x_1, \dots, x_n) \) is the \( m \times n \) Jacobian matrix of the constraints.
 
     \item \( \nabla^2 \mathcal{L}(x, \dots, x_n, \lambda_1, \dots, \lambda_n) \) is the \( n \times n \) 
-          Hessian of the Lagrangian with respect to \( x \).
+          Hessian of the Lagrangian with respect to \emph{x}.
 
 \end{itemize}
 
@@ -825,7 +825,7 @@ with a top-bottom approach:
 \]
 
 Solving for \(\lambda\) is also an option but in these kinds of systems of equations where 
-both the partial with respect to \(x\) and \(y\) are very similar it is a good idea to solve for them 
+both the partial with respect to \emph{x} and \emph{y} are very similar it is a good idea to solve for them 
 because they tend to have a similar form when solving for them.
 
 \begin{align*}
@@ -957,5 +957,5 @@ Dividing by \(\Delta t\) and taking the limit:
 \end{align*}
 
 This vector \(\frac{d\vec{r}}{dt}\) points in the direction of motion and is tangent to the curve at 
-each point \(t\).
+each point \emph{t}.
 

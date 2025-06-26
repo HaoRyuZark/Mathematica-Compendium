@@ -5,8 +5,8 @@ A \emph{relation} in mathematics is a connection or relationship between element
 formally defined as a subset of the Cartesian product of the sets.
 \vspace{\baselineskip}
 
-For example, if we have sets \(A\) and \(B\), a relation \(R\) from \(A\) to \(B\) consists
-of ordered pairs \((a,b)\) where \(a \in A\) and \(b \in B\), such that \(a\) is related to \(b\) 
+For example, if we have sets \emph{A} and \emph{B}, a relation \emph{R} from \emph{A} to \emph{B} consists
+of ordered pairs \((a,b)\) where \(a \in A\) and \(b \in B\), such that \emph{a} is related to \emph{b} 
 according to some rule or property.
 \vspace{\baselineskip}
 
@@ -28,7 +28,7 @@ discrete mathematics.
 
 \subsection{Types of relations}
 
-Let \(A\) be a set and \(X\) be a relation on \(A\).
+Let \emph{A} be a set and \emph{X} be a relation on \emph{A}.
 
 \begin{itemize}
 
@@ -74,9 +74,9 @@ An \emph{equivalence relation} is a relation that is symmetric, transitive and r
 
 \subsection{Image}
 
-The \emph{image (or range)} of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements 
-in \(B\) that are related to at least one element in \(A\). Formally, if \(R \subseteq A \times B\) is a 
-relation, then the image of \(R\) is defined as:
+The \emph{image (or range)} of a relation \emph{R} from set \emph{A} to set \emph{B} is the set 
+of all elements in \emph{B} that are related to at least one element in \emph{A}. Formally, if 
+\(R \subseteq A \times B\) is a relation, then the image of \emph{R} is defined as:
 
 \[
 	\text{Im}(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}
@@ -87,9 +87,9 @@ relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\text{I
 
 \subsection{Domain}
 
-The \emph{domain} of a relation \(R\) from set \(A\) to set \(B\) is the set of all elements in \(A\) that 
-are related to at least one element in \(B\). Formally, if \(R \subseteq A \times B\) is a relation, 
-then the domain of \(R\) is defined as:
+The \emph{domain} of a relation \emph{R} from set \emph{A} to set \emph{B} is the set of all elements in 
+\emph{A} that are related to at least one element in \emph{B}. Formally, if \(R \subseteq A \times B\) 
+is a relation, then the domain of \emph{R} is defined as:
 
 \[
 	\text{Dom}(R) = \{a \in A \mid \exists b \in B \text{ such that } (a,b) \in R\}
@@ -100,38 +100,38 @@ relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\text{D
 
 \subsection{Equivalence Class}
 
-Let \(\sim\) be an equivalence relation on a set \(A\). For an element \(x \in A\), the 
-\emph{equivalence class} of \(x\), denoted by \([x]\), is the set of all elements in \(A\) that are 
-equivalent to \(x\). Formally, it is defined as:
+Let \(\sim\) be an equivalence relation on a set \emph{A}. For an element \(x \in A\), the 
+\emph{equivalence class} of \emph{x}, denoted by \([x]\), is the set of all elements in \emph{A} that are 
+equivalent to \emph{x}. Formally, it is defined as:
 
 \[
 	[x] := \{y \in A \mid x \sim y\} \subseteq A
 \]
 
-In other words, the equivalence class of \(x\) contains all elements \(y\) in \(A\) such that \(x\) is 
-related to \(y\) under the equivalence relation \(\sim\).
+In other words, the equivalence class of \emph{x} contains all elements \emph{y} in \emph{A} such that 
+\emph{x} is related to \emph{y} under the equivalence relation \(\sim\).
 
 \subsection{Quotient Space}
 
-Let \(\sim\) be an equivalence relation on a set \(A\). The \emph{quotient space} of \(A\) by \(\sim\), 
-denoted by \(A/\sim\) (or sometimes \(A/R\)), is the set of all distinct equivalence classes of elements 
-in \(A\). Formally, it is defined as:
+Let \(\sim\) be an equivalence relation on a set \emph{A}. The \emph{quotient space} of \emph{A} by 
+\(\sim\), denoted by \(A/\sim\) (or sometimes \(A/R\)), is the set of all distinct equivalence classes of 
+elements in \emph{A}. Formally, it is defined as:
 
 \[
 	A/\sim := \{[x] \mid x \in A\}
 \]
 
-The quotient space \(A/\sim\) is a partition of the original set \(A\) into disjoint equivalence classes. 
-Each element of the quotient space is an equivalence class \([x]\), which itself is a subset of \(A\).
+The quotient space \(A/\sim\) is a partition of the original set \emph{A} into disjoint equivalence classes. 
+Each element of the quotient space is an equivalence class \([x]\), which itself is a subset of \emph{A}.
 
 \subsection{Definition of a Map}
 
-A map (or function) from a set \(A\) to a set \(B\), denoted as \(f: A \to B\), is a relation that 
-associates each element of the set \(A\) with exactly one element of the set \(B\).
+A map (or function) from a set \emph{A} to a set \emph{B}, denoted as \(f: A \to B\), is a relation that 
+associates each element of the set \emph{A} with exactly one element of the set \emph{B}.
 
 Formally, a function \(f: A \to B\) is a subset of \(A \times B\) such that for every \(a \in A\), there 
 exists exactly one \(b \in B\) where \((a,b) \in f\). We typically write \(f(a) = b\) to indicate that 
-\(f\) maps the element \(a\) to the element \(b\).
+\emph{f} maps the element \emph{a} to the element \emph{b}.
 \vspace{\baselineskip}
 
 \textbf{Example:}
@@ -148,16 +148,16 @@ This function can also be represented as the set of ordered pairs \(\{(1,x), (2,
 \subsection{Composition of Maps}
 
 The composition of two functions is the operation of applying one function to the result of another 
-function. If we have functions \(f: A \to B\) and \(g: B \rightarrow C\), then the composition of \(g\) 
-and \(f\), denoted as \(g \circ f\) (read as g composed with f), is a function from \(A\) to \(C\) defined 
+function. If we have functions \(f: A \to B\) and \(g: B \rightarrow C\), then the composition of \emph{g} 
+and \emph{f}, denoted as \(g \circ f\) (read as g composed with f), is a function from \emph{A} to \emph{C} defined 
 by:
 
 \[
 	(g \circ f)(a) = g(f(a)) \quad \text{for all } a \in A
 \]
 
-The composition applies \(f\) first, then applies \(g\) to the result. 
-Note that the co-domain of \(f\) must match the domain of \(g\) for the composition to be defined.
+The composition applies \emph{f} first, then applies \emph{g} to the result. 
+Note that the co-domain of \emph{f} must match the domain of \emph{g} for the composition to be defined.
 \vspace{\baselineskip}
 
 \textbf{Example:}
@@ -288,7 +288,7 @@ Let \( f : X \to Y \) be a function.
 
 \begin{itemize}
 
-	\item Let \( \mathcal{F} \) be a collection of subsets of \( X \). Then:
+	\item Let \( \mathcal{F} \) be a collection of subsets of \emph{X}. Then:
 
    	      \[
 		      f\left( \bigcup_{A \in \mathcal{F}} A \right) = \bigcup_{A \in \mathcal{F}} f(A)
@@ -296,7 +296,7 @@ Let \( f : X \to Y \) be a function.
 		      f\left( \bigcap_{A \in \mathcal{F}} A \right) \subseteq \bigcap_{A \in \mathcal{F}} f(A)
 	      \]
 
-	\item Let \( \mathcal{G} \) be a collection of subsets of \( Y \). Then:
+	\item Let \( \mathcal{G} \) be a collection of subsets of \emph{Y}. Then:
 
 	      \[
 		      f^{-1}\left( \bigcup_{B \in \mathcal{G}} B \right) = \bigcup_{B \in \mathcal{G}} f^{-1}(B)
@@ -337,11 +337,11 @@ It follows that:
 \subsection{Inverse of a Function}
 
 The \emph{inverse} of a function \(f: A \to B\) is a function \(f^{-1}: B \to A\) that 
-reverses the operation of \(f\). That is, if \(f\) maps an element \(a \in A\) to an 
-element \(b \in B\), then the inverse function \(f^{-1}\) maps \(b\) back to \(a\).
+reverses the operation of \emph{f}. That is, if \emph{f} maps an element \(a \in A\) to an 
+element \(b \in B\), then the inverse function \(f^{-1}\) maps \emph{b} back to \emph{a}.
 
 Formally, a function \(f: A \to B\) has an inverse \(f^{-1}: B \to A\)  
-if and only if \(f\) is bijective (both injective and surjective). The inverse function satisfies the 
+if and only if \emph{f} is bijective (both injective and surjective). The inverse function satisfies the 
 following properties:
 
 \[
@@ -358,7 +358,7 @@ In other words, composing a function with its inverse yields the identity functi
 	f^{-1} \circ f = id_A \quad \text{and} \quad f \circ f^{-1} = id_B
 \]
 
-Where \(id_A\) and \(id_B\) are the identity functions on sets \(A\) and \(B\), respectively.
+Where \(id_A\) and \(id_B\) are the identity functions on sets \emph{A} and \emph{B}, respectively.
 
 \subsubsection{Steps to Find the Inverse of a Function}
 
@@ -366,11 +366,11 @@ To find the inverse of a function \(f (x)\), follow these steps:
 
 \begin{enumerate}
 	
-	\item Replace \(f (x)\) with \(y\): \(y = f (x)\)
+	\item Replace \(f (x)\) with \emph{y}: \(y = f (x)\)
 	
-	\item Interchange the variables \(x\) and \(y\): \(x = f (y)\)
+	\item Interchange the variables \emph{x} and \emph{y}: \(x = f (y)\)
 	
-	\item Solve for \(y\) in terms of \(x\): \(y = f^{-1} (x)\)
+	\item Solve for \emph{y} in terms of \emph{x}: \(y = f^{-1} (x)\)
 	
 	\item Verify that the resulting function is indeed the inverse by checking that \(f^{-1}(f(x)) = x\) 
 		  and \(f (f^{-1} (x)) = x\)
@@ -383,19 +383,19 @@ To find the inverse of a function \(f (x)\), follow these steps:
 Let's apply the steps above to find the inverse of \(f (x) = 2x + 3\).
 \vspace{\baselineskip}
 
-\textbf{Step 1: Replace \(f (x)\) with \(y\)}
+\textbf{Step 1: Replace \(f(x)\) with \emph{y}}
 
 \[
 	y = 2x + 3
 \]
 
-\textbf{Step 2: Interchange the variables \(x\) and \(y\)}
+\textbf{Step 2: Interchange the variables \emph{x} and \emph{y}}
 
 \[
 	x = 2y + 3
 \]
 
-\textbf{Step 3: Solve for \(y\) in terms of \(x\)}
+\textbf{Step 3: Solve for \emph{y} in terms of \emph{x}}
 
 \begin{align*}
 	x               & = 2y + 3 \\
@@ -449,7 +449,7 @@ Let \(f:X\to Y\) be a function.
 		      \hat{f} : X_f \to f(X), \quad [x] \mapsto f(x)
 	      \]
 	  
-		  is a bijection, and the original map \( f \) can be written as the composition
+		  is a bijection, and the original map \emph{f} can be written as the composition
 	 
 		  \[
 		      f = \iota_f \circ \hat{f} \circ q_f.
@@ -479,7 +479,7 @@ Here, we examine how different algebraic changes to a function \( f(x) \) affect
 	
 	\item Shifts the graph \emph{upward} if \( a > 0 \), and \emph{downward} if \( a < 0 \).
 	
-	\item Each point on the graph moves vertically by \( a \) units.
+	\item Each point on the graph moves vertically by \emph{a} units.
 
 \end{itemize}
 
@@ -489,7 +489,7 @@ Here, we examine how different algebraic changes to a function \( f(x) \) affect
 
 	\item Shifts the graph \emph{left} if \( a > 0 \), and \emph{right} if \( a < 0 \).
 
-	\item This is opposite of what might be expected: adding to \( x \) shifts the graph in the negative 
+	\item This is opposite of what might be expected: adding to \emph{x} shifts the graph in the negative 
 	      direction.
 
 \end{itemize}

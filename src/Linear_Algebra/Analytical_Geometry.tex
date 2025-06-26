@@ -197,7 +197,7 @@ To find the relation:
 
 \begin{enumerate}
 	\item Check if direction vectors are scalar multiples \(\Rightarrow\) parallel
-	\item Solve \(\vec{P}_1 + t\vec{v}_1 = \vec{P}_2 + s\vec{v}_2\) for \(t\) and \(s\):
+	\item Solve \(\vec{P}_1 + t\vec{v}_1 = \vec{P}_2 + s\vec{v}_2\) for \emph{t} and \emph{s}:
 	      \begin{itemize}
 		      \item Solution exists \(\Rightarrow\) intersect
 		      \item No solution \(\Rightarrow\) skew
@@ -246,8 +246,8 @@ multiplying \(\vec{b}\) by the scalar \(\alpha\).
 	\begin{tikzpicture}[scale=2, >=Stealth]
 
 		% Axes
-		\draw[->, thick] (-0.5, 0) -- (2.2, 0) node[right] {\(x\)};
-		\draw[->, thick] (0, -0.5) -- (0, 2) node[above] {\(y\)};
+		\draw[->, thick] (-0.5, 0) -- (2.2, 0) node[right] {\emph{x}};
+		\draw[->, thick] (0, -0.5) -- (0, 2) node[above] {\emph{y}};
 
 		% Coordinates
 		\coordinate (O) at (0,0);
@@ -367,7 +367,7 @@ The Hessian normal form represents a plane by specifying:
 
 \begin{itemize}
 	\item a unit normal vector \(\vec{n} = (a, b, c)\) to the plane,
-	\item and the shortest distance \(d\) from the origin to the plane.
+	\item and the shortest distance \emph{d} from the origin to the plane.
 \end{itemize}
 
 This form is derived by normalizing the general plane equation. A plane in 3D can be written as:
@@ -376,7 +376,7 @@ This form is derived by normalizing the general plane equation. A plane in 3D ca
 	ax + by + cz + d = 0,
 \]
 
-where \((a, b, c)\) is a normal vector to the plane and \(d\) is the dot product of the normal vector with a point \(p\).
+where \((a, b, c)\) is a normal vector to the plane and \emph{d} is the dot product of the normal vector with a point \(p\).
 If we divide all terms by \(\sqrt{a^2 + b^2 + c^2}\), we normalize the normal vector:
 
 \[
@@ -424,7 +424,7 @@ Steps:
 \begin{enumerate}
 	\item Find the normal vector \(\vec{n}\) of the plane
 	\item Normalize the normal vector
-	\item Find the distance \(d\) from the origin to the plane
+	\item Find the distance \emph{d} from the origin to the plane
 	\item Write the Hessian normal form
 \end{enumerate}
 
@@ -458,9 +458,9 @@ Steps:
 Steps:
 
 \begin{enumerate}
-	\item Given the normal vector \(\vec{n} = (a, b, c)\), interchange \(a\) and \(b\) and multiply \(b\) by -1
+	\item Given the normal vector \(\vec{n} = (a, b, c)\), interchange \emph{a} and \emph{b} and multiply \emph{b} by -1
 	\item Set the other component to 0. This gives you the first direction vector \(\vec{v} = (-b, a, 0)\)
-	\item Take the original normal vector \(\vec{n}\) and interchange \(a\) and \(c\) and multiply \(c\) by -1
+	\item Take the original normal vector \(\vec{n}\) and interchange \emph{a} and \(c\) and multiply \(c\) by -1
 	\item Set the other component to 0. This gives you the second direction vector \(\vec{w} = (-c, 0, a)\)
 \end{enumerate}
 
@@ -472,8 +472,8 @@ To find the intersection between a line and a plane, we can use the following st
 	\item Write the parametric form of the line: \(\vec{r}(t) = \vec{P} + t\vec{v}\), where \(\vec{P}\) is a point on the line and \(\vec{v}\) is the direction vector.
 	\item Write the equation of the plane in Hessian normal form: \(\langle \vec{n}, \vec{x} - \vec{P} \rangle = 0\), where \(\vec{n}\) is the normal vector and \(\vec{P}\) is a point on the plane.
 	\item Substitute the parametric form of the line into the equation of the plane.
-	\item Solve for \(t\) to find the intersection point.
-	\item Substitute \(t\) back into the parametric form of the line to find the intersection point.
+	\item Solve for \emph{t} to find the intersection point.
+	\item Substitute \emph{t} back into the parametric form of the line to find the intersection point.
 \end{enumerate}
 
 \textbf{Example:}
@@ -528,7 +528,7 @@ Now compute the dot product:
 	= -t + (t - 1) + (t - 1) = t - 2
 \]
 
-\textbf{Step 4:} Solve for \( t \):
+\textbf{Step 4:} Solve for \emph{t}:
 
 \[
 	t - 2 = 0 \Rightarrow t = 2
@@ -732,7 +732,7 @@ and a point \(\vec{P}\) not on the line, the foot of the perpendicular \(\vec{F}
 	(\vec{P} - \vec{F}) \perp \vec{v} \quad \Rightarrow \quad (\vec{P} - (\vec{A} + t\vec{v})) \cdot \vec{v} = 0
 \]
 
-Solve this inner product for \(t\), then compute:
+Solve this inner product for \emph{t}, then compute:
 
 \[
 	\vec{F} = \vec{A} + t\vec{v}

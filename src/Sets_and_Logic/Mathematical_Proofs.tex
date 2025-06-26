@@ -5,13 +5,13 @@ In this section I will provide with some examples of different types of proofs.
 
 \subsection{Proof by Direct Argument}
 
-For any integer \( n \), if \( n \) is even, then \( n^2 \) is even.
+For any integer \emph{n}, if \emph{n} is even, then \( n^2 \) is even.
 \vspace{\baselineskip}
 
 We will prove this theorem by direct argument.
 \vspace{\baselineskip}
 
-Assume \( n \) is an even integer. Then we can write \( n = 2k \) for some integer \( k \).
+Assume \emph{n} is an even integer. Then we can write \( n = 2k \) for some integer \emph{k}.
 \vspace{\baselineskip}
 
 Now, we compute \( n^2 \):
@@ -21,17 +21,17 @@ Now, we compute \( n^2 \):
 \]
 	
 This shows that \( n^2 \) is even, as it can be expressed as \( 2m \) where \( m = 2k^2 \) is an integer.
-Therefore, we conclude that if \( n \) is even, then \( n^2 \) is even.
+Therefore, we conclude that if \emph{n} is even, then \( n^2 \) is even.
 
 \QED
 
 \subsection{Proof by Contradiction}
 
-If \( n \) is an integer such that \( n^2 \) is even, then \( n \) is even.
+If \emph{n} is an integer such that \( n^2 \) is even, then \emph{n} is even.
 \vspace{\baselineskip}
 
-We will prove this theorem by contradiction. Assume that \( n \) is an integer such that \( n^2 \) is 
-even, but \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \).
+We will prove this theorem by contradiction. Assume that \emph{n} is an integer such that \( n^2 \) is 
+even, but \emph{n} is odd. Then we can write \( n = 2k + 1 \) for some integer \emph{k}.
 \vspace{\baselineskip}
 
 Now, we compute \( n^2 \):
@@ -41,19 +41,19 @@ Now, we compute \( n^2 \):
 \]
 	
 This shows that \( n^2 \) is odd, which contradicts our assumption that \( n^2 \) is even. Therefore, our 
-assumption that \( n \) is odd must be false, and thus, \( n \) must be even.
+assumption that \emph{n} is odd must be false, and thus, \emph{n} must be even.
 
 \QED
 
 \subsection{Proof by Induction}
 
-For all \( n \in \Naturals \), the sum of the first \( n \) positive integers is given by:
+For all \( n \in \Naturals \), the sum of the first \emph{n} positive integers is given by:
 
 \[
 	S(n) = 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
 \]
 
-We will prove this theorem by induction on \( n \).
+We will prove this theorem by induction on \emph{n}.
 \vspace{\baselineskip}
 
 \textbf{Base Case:} For \( n = 1 \):
@@ -96,10 +96,11 @@ By the principle of mathematical induction, the statement holds for all \( n \in
 The only integer solutions to the equation \( x^2 + y^2 = 1 \) are \( (0, 1), (1, 0), (0, -1), (-1, 0) \).
 \vspace{\baselineskip}
 
-We will prove this theorem by exhaustion. We will check all possible integer values of \( x \) and \( y \) such that \( x^2 + y^2 = 1 \).
+We will prove this theorem by exhaustion. We will check all possible integer values of \emph{x} and 
+\emph{y} such that \( x^2 + y^2 = 1 \).
 \vspace{\baselineskip}
 
-The possible integer values for \( x \) and \( y \) are \( -1, 0, 1 \). We will check each case:
+The possible integer values for \emph{x} and \emph{y} are \( -1, 0, 1 \). We will check each case:
 \vspace{\baselineskip}
 
 If \( x = 0 \):
@@ -139,13 +140,13 @@ Thus, the only integer solutions to the equation are:
 
 \subsection{Proof by Cases}
 
-For any integer \( n \), \( n^2 \) is even if and only if \( n \) is even.
+For any integer \emph{n}, \( n^2 \) is even if and only if \emph{n} is even.
 \vspace{\baselineskip}
 
 We will prove this theorem by cases.
 \vspace{\baselineskip}
 
-\textbf{Case 1:} Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \).
+\textbf{Case 1:} Assume \emph{n} is even. Then we can write \( n = 2k \) for some integer \emph{k}.
 \vspace{\baselineskip}
 
 Now, we compute \( n^2 \):
@@ -157,7 +158,7 @@ Now, we compute \( n^2 \):
 This shows that \( n^2 \) is even.
 \vspace{\baselineskip}
 
-\textbf{Case 2:} Assume \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \).
+\textbf{Case 2:} Assume \emph{n} is odd. Then we can write \( n = 2k + 1 \) for some integer \emph{k}.
 \vspace{\baselineskip}
 
 Now, we compute \( n^2 \):
@@ -169,16 +170,16 @@ Now, we compute \( n^2 \):
 This shows that \( n^2 \) is odd.
 \vspace{\baselineskip}
 
-Since both cases have been considered, we conclude that \( n^2 \) is even if and only if \( n \) is even.
+Since both cases have been considered, we conclude that \( n^2 \) is even if and only if \emph{n} is even.
 
 \QED
 
 \subsection{Proof by Construction}
 
-There exists an irrational number \( x \) such that \( x^2 \) is rational.
+There exists an irrational number \emph{x} such that \( x^2 \) is rational.
 \vspace{\baselineskip}
 
-We will construct an irrational number \( x \) such that \( x^2 \) is rational.
+We will construct an irrational number \emph{x} such that \( x^2 \) is rational.
 \vspace{\baselineskip}
 
 Let \( x = \sqrt{2} \). We know that \( \sqrt{2} \) is irrational. Now, we compute \( x^2 \):
@@ -187,9 +188,8 @@ Let \( x = \sqrt{2} \). We know that \( \sqrt{2} \) is irrational. Now, we compu
 	x^2 = (\sqrt{2})^2 = 2
 \]
 	
-Since \( 2 \) is a rational number, we have constructed an irrational number \( x = \sqrt{2} \) such 
-that \( x^2 = 2 \) is rational.
-Therefore, the theorem is proved.
+Since 2 is a rational number, we have constructed an irrational number \( x = \sqrt{2} \) such 
+that \( x^2 = 2 \) is rational. Therefore, the theorem is proved.
 
 \QED
 
@@ -201,7 +201,7 @@ The statement all prime numbers are odd is false.
 To prove this theorem, we will provide a counterexample.
 \vspace{\baselineskip}
 
-The number \( 2 \) is a prime number, as its only divisors are \( 1 \) and \( 2 \). However, \( 2 \) is 
+The number 2 is a prime number, as its only divisors are 1 and 2. However, 2 is 
 even, which contradicts the statement that all prime numbers are odd.
 \vspace{\baselineskip}
 
@@ -210,14 +210,14 @@ Therefore, the statement All prime numbers are odd is false.
 
 \subsection{Proof by Contrapositive}
 
-If \( n \) is an integer such that \( n^2 \) is odd, then \( n \) is odd.
+If \emph{n} is an integer such that \( n^2 \) is odd, then \emph{n} is odd.
 \vspace{\baselineskip}
 
-We will prove this theorem by contrapositive. The contrapositive of the statement is: If \( n \) is an 
-integer such that \( n \) is even, then \( n^2 \) is even.
+We will prove this theorem by contrapositive. The contrapositive of the statement is: If \emph{n} is an 
+integer such that \emph{n} is even, then \( n^2 \) is even.
 \vspace{\baselineskip}
 
-Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \).
+Assume \emph{n} is even. Then we can write \( n = 2k \) for some integer \emph{k}.
 \vspace{\baselineskip}
 
 Now, we compute \( n^2 \):
@@ -229,14 +229,14 @@ Now, we compute \( n^2 \):
 This shows that \( n^2 \) is even.
 \vspace{\baselineskip}
 
-Since the contrapositive statement is true, the original statement If \( n^2 \) is odd, then \( n \) is 
+Since the contrapositive statement is true, the original statement If \( n^2 \) is odd, then \emph{n} is 
 odd is also true.
 
 \QED
 
 \subsection{Proof by Reduction to Absurdity}
 
-The square root of \( 2 \) is irrational.
+The square root of 2 is irrational.
 \vspace{\baselineskip}
 
 We will prove this theorem by reduction to absurdity. Assume that \( \sqrt{2} \) is rational. Then we can 
@@ -246,7 +246,8 @@ write:
 	\sqrt{2} = \frac{p}{q}
 \]
 
-Where \( p \) and \( q \) are integers with no common factors (i.e., the fraction is in the simplest form).
+Where \emph{p} and \emph{q} are integers with no common factors (i.e., the fraction is in the simplest 
+form).
 \vspace{\baselineskip}
 
 Squaring both sides gives:
@@ -261,8 +262,8 @@ Rearranging gives:
 	p^2 = 2q^2
 \]
 	
-This implies that \( p^2 \) is even, and therefore, \( p \) must be even (since the square of an 
-odd number is odd). Let \( p = 2k \) for some integer \( k \). Substituting this back into the 
+This implies that \( p^2 \) is even, and therefore, \emph{p} must be even (since the square of an 
+odd number is odd). Let \( p = 2k \) for some integer \emph{k}. Substituting this back into the 
 equation gives:
 
 \begin{align*}
@@ -271,9 +272,9 @@ equation gives:
 2k^2 &= q^2
 \end{align*}
 
-This implies that \( q^2 \) is even, and therefore, \( q \) must also be even.
-Since both \( p \) and \( q \) are even, they have a common factor of \( 2 \), which contradicts our 
-assumption that \( p \) and \( q \) have no common factors. Therefore, our assumption that 
+This implies that \( q^2 \) is even, and therefore, \emph{q} must also be even.
+Since both \emph{p} and \emph{q} are even, they have a common factor of 2, which contradicts our 
+assumption that \emph{p} and \emph{q} have no common factors. Therefore, our assumption that 
 \( \sqrt{2} \) is rational must be false, and thus, \( \sqrt{2} \) is irrational.
 
 \QED
@@ -287,8 +288,8 @@ We will prove this theorem by analogy.
 	
 Consider the set of rational numbers \( \Rationals \) and the set of real numbers \( \Reals \). 
 The density of \( \Rationals \) in \( \Reals \) means that between any two real numbers, there exists a 
-rational number. For example, between the real numbers \( 1 \) and \( 2 \), we can find the rational 
-number \( \frac{3}{2} = 1.5 \). Similarly, between any two real numbers \( a \) and \( b \) (where 
+rational number. For example, between the real numbers 1 and 2, we can find the rational 
+number \( \frac{3}{2} = 1.5 \). Similarly, between any two real numbers \emph{a} and \emph{b} (where 
 \( a < b \)), we can find a rational number \( r = \frac{a + b}{2} \).
 \vspace{\baselineskip}
 

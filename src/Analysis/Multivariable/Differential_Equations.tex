@@ -140,7 +140,7 @@ in reality we are changing the variables) thus,
     \frac{y^2}{2} - 2y + c = \frac{3x^2}{2} - 5x + c
 \]
 
-The solution we get is an implicit solution. To make it look nice solve for \(y\)
+The solution we get is an implicit solution. To make it look nice solve for \emph{y}
 if you can.
 
 \subsubsection{Understanding the fiction}
@@ -180,7 +180,7 @@ equation
 has at least one solution. A unique solution is only guaranteed under additional conditions.
 
 A function \( f : \Reals^2 \to \Reals \) is called 
-\emph{Lipschitz continuous with respect to \( y \)} if there exists a constant \( L > 0 \) such that
+\emph{Lipschitz continuous with respect to \emph{y}} if there exists a constant \( L > 0 \) such that
 
 \[
     |f(x, y_1) - f(x, y_2)| \leq L |y_1 - y_2|
@@ -188,7 +188,7 @@ A function \( f : \Reals^2 \to \Reals \) is called
 \]
 
 Let \( x_0 \in [a, b] \), and let \( f : [a, b] \times \Reals \to \Reals \) be continuous 
-and bounded, and Lipschitz continuous in \( y \). Then the initial value problem
+and bounded, and Lipschitz continuous in \emph{y}. Then the initial value problem
 
 \[
     y' = f(x, y), \quad y(x_0) = y_0
@@ -197,7 +197,7 @@ and bounded, and Lipschitz continuous in \( y \). Then the initial value problem
 has a unique solution on \( [a, b] \).
 \vspace{\baselineskip}
 
-Or in easier words: If \(f\) and \(\frac{\partial f}{\partial y}\) are continuous near \((x_0, y_0)\) 
+Or in easier words: If \emph{f} and \(\frac{\partial f}{\partial y}\) are continuous near \((x_0, y_0)\) 
 then there is a unique solution on an interval \(\alpha < x_0 < \beta\) to the IVP
 
 \[
@@ -212,7 +212,7 @@ conditions were set at the start, thus, making our general solution not specific
 
 Solving this problem is pretty easy, because we just have to solve for the constant terms
 in our general solution with respect to our initial conditions. Like for example \(y(0) = 1\)
-we would plug 0 for all \(x\)'s in our general solution the whole equation will be set equal to 1.
+we would plug 0 for all \emph{x}'s in our general solution the whole equation will be set equal to 1.
 
 \subsection{Solving DE with Substitution}
 
@@ -417,7 +417,7 @@ This is a differential equation of separable variables thus, we can
     \ln(r(x)) = \int p(x) dx
 \]
 
-after using \(e\)
+after using \emph{e}
 
 \[ 
     r(x) = e^{\int p(x) dx}
@@ -522,8 +522,8 @@ For example: \(x^2y + x3y^2\)
 
 \subsubsection{Homogeneous Functions Theorem}
 
-If \(f(x,y)\) is homogeneous of degree \(0\) in \(x\) and \(y\) then 
-\(f\) is a function of \(\frac{y}{x}\)
+If \(f(x,y)\) is homogeneous of degree \(0\) in \emph{x} and \emph{y} then 
+\emph{f} is a function of \(\frac{y}{x}\)
 
 Or \(f(x,y,y')\) is homogeneous if it can be written as \(y' = f(\frac{x}{y})\) or \(y' = f(\frac{y}{x})\)
 
@@ -554,7 +554,7 @@ Give is the function \((x -y)dx = - xdy\)
 depending on the \emph{differential!} 
 \vspace{\baselineskip}
 
-The simpler function is \(xdy\) thus, we are to change \(y\)
+The simpler function is \(xdy\) thus, we are to change \emph{y}
 
 \[
     y = ux
@@ -768,8 +768,8 @@ For the IVP
     y(a) = b_0, y'(a) = b_1, \dots, y^{n - 1}(a) = b_{n - 1}
 \]
 
-If all \(p_i\) and \(f\) are continuous on the interval \(I\) about \(a\), then
-there exists a unique solution on \(I\).
+If all \(p_i\) and \emph{f} are continuous on the interval \emph{I} about \emph{a}, then
+there exists a unique solution on \emph{I}.
 
 \subsection{Constant Coefficients and the Superposition Theorem}
 
@@ -787,7 +787,7 @@ Then \(y = c_1 y_1 + \cdots + c_n y_n\) also solves the equation, and it is the
 
 \subsection{Undetermined Coefficients}
 
-Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
+Given an equation \(y' + ay = g(x)\) notice that \emph{a} does not depend on \emph{x}.
 The homogeneous equation to this case will be \(y' + ay = 0\) with a solution \(y_h\) and some
 partial solution \(y_p\). Now remember from \emph{Linear Algebra} the 
 \(general = particular + homogeneous\) more precisely \(y = y_p + y_h\) therefore, adding a 
@@ -1040,7 +1040,7 @@ Now let us integrate
 \subsection{Autonomous Equations}
 
 An \emph{Autonomous Differential Equation} only depends on the dependent
-variable \(y\).\textbf{ Example: } \(\frac{dy}{dt} = (1 + y)(1 -y)\).
+variable \emph{y}.\textbf{ Example: } \(\frac{dy}{dt} = (1 + y)(1 -y)\).
 
 \subsubsection{Equilibrium Solutions}
 
@@ -1049,12 +1049,12 @@ Values where \(f(y) = 0\) are \emph{Equilibrium Solutions}.
 \subsubsection*{Asymptotically stable}
 
 An equilibrium solution \(y = a\) is \emph{asymptotically stable} if solutions
-that start near \(a\) tend towards \(a\) as \(t \to \infty\).
+that start near \emph{a} tend towards \emph{a} as \(t \to \infty\).
 
 \subsubsection*{Asymptotically unstable}
 
 An equilibrium solution \(y = a\) is \emph{asymptotically unstable} if solutions
-that start near \(a\) leave as \(t \to \infty\)
+that start near \emph{a} leave as \(t \to \infty\)
 
 \subsection{Linear Inhomogeneous DEs with Non-Constant Coefficients}
 
@@ -1138,7 +1138,7 @@ is to find the function given an initial conditions. This can be better understo
 
 We say \(y = \sum_{n = 0}^{\infty} a_n x^n\) and \(y(0) = a_0 = 1\).
 
-Now let us derivate you \(y\)
+Now let us derivate you \emph{y}
 
 \[
     y = \sum_{n = 0}^{\infty} a_n x^n = a_0 x^0 + a_1 x^1 + \cdots = 1 + a_1 x^1 + a_2 x^2 + \cdots
@@ -1159,7 +1159,7 @@ Starting from 1 because 0 does not contribute to the sum. After shifting the ind
     y' = \sum_{n = 0}^{\infty} a_{n + 1}(n + 1)x^{n}
 \]
 
-Now we build our original DE with our new definitions for \(y'\) and \(y\)
+Now we build our original DE with our new definitions for \(y'\) and \emph{y}
 
 \[
     \sum_{n = 0}^{\infty} a_{n + 1}(n + 1)x^{n} = \sum_{n = 0}^{\infty} a_n x^n
@@ -1282,7 +1282,7 @@ By finding the \emph{potential} we can solve this kind of differential equations
         &= 6x^2 y + 3x + c(y) = 6yx^2 + c(x)
 \end{align*}
 
-Now we differentiate both sides with respect to \(y\) and this gives us
+Now we differentiate both sides with respect to \emph{y} and this gives us
 
 \begin{align*}
     6x^2y + 3x + c(y) &= 6yx^2 + c(x) \\
@@ -1294,7 +1294,7 @@ Now we differentiate both sides with respect to \(y\) and this gives us
 and therefore, \(F(x,y) = 6x^2y + 3x + \hat{c} = 0\).
 \vspace{\baselineskip}
 
-\textbf{Step 3: Solve for \(y\)}
+\textbf{Step 3: Solve for \emph{y}}
 
 \[
     y = \frac{\hat{c} - 3x}{6x^2} 
@@ -1323,7 +1323,7 @@ The steps for solving this kind of problems are
     
     \item Choose either \(\mu(x)\) or \(\mu(y)\) and multiply the whole equation by it.
     
-    \item Find the new partial derivatives of \(P\) and \(Q\).
+    \item Find the new partial derivatives of \(P\) and \emph{Q}.
     
     \item Set both partial equals and solve for \(\mu\) in the newly created differential equation 
           using the necessary method. Also make sure that the solution has no zeroes. This is necessary 
@@ -1332,7 +1332,7 @@ The steps for solving this kind of problems are
     \item Substitute \(\mu\) with the solution. And if now both partials are equal then you can now 
           solve the exact differential equation. If not try with another \(mu\) using the other variable.
           And if this also does not work then the differential equation can not be solved. More specific, 
-          if \(\mu(x)\) depends on \(y\) and \(\mu(y)\) on \(x\) then there is no way to make the 
+          if \(\mu(x)\) depends on \emph{y} and \(\mu(y)\) on \emph{x} then there is no way to make the 
           differential equation exact.
 
 \end{enumerate}
@@ -1451,7 +1451,7 @@ For this case we need to use a trick.
 \]
 
 Note that this could be contra intuitive but \(te^{rt}\) is a solution and is linearly independent.
-For more repeated roots you can use higher powers of \(t\) \(t, t^2, t^3, \dots\).
+For more repeated roots you can use higher powers of \emph{t} \(t, t^2, t^3, \dots\).
 
 \subsubsection{Case 3: Complex Conjugate Roots \texorpdfstring{\( (D < 0) \)}{}}
 
@@ -1528,7 +1528,7 @@ differentiating two times or more depending on the order of the differential equ
 
 \subsection{The Wronskian}
 
-Let \( y_1, y_2, \ldots, y_n \) be \( n \) functions that are at least 
+Let \( y_1, y_2, \ldots, y_n \) be \emph{n} functions that are at least 
 \( (n-1) \)-times differentiable on some interval. The \emph{Wronskian} of these 
 functions is defined as:
 
@@ -1719,7 +1719,7 @@ This can be written as
     Ax = \vec{y}'
 \]
 
-Then if we use the guess \(y(t) = \vec{v} e^{\lambda t}\) and differentiate with respect to \(t\) 
+Then if we use the guess \(y(t) = \vec{v} e^{\lambda t}\) and differentiate with respect to \emph{t} 
 we get 
 
 \[
@@ -1744,7 +1744,7 @@ And this solution can lead to the three cases we already know: distinct real roo
 roots and repeated roots.
 \vspace{\baselineskip}
 
-We can also use substitution to solve for one of the \(y_i\), which are functions of \(x\) like
+We can also use substitution to solve for one of the \(y_i\), which are functions of \emph{x} like
 
 \begin{align*}
     y_1 ' &= ay_1 + by_2\\
@@ -1754,7 +1754,7 @@ We can also use substitution to solve for one of the \(y_i\), which are function
 \end{align*}
 
 
-Then we can differentiate our first equation with respect to \(x\)
+Then we can differentiate our first equation with respect to \emph{x}
 
 
 \begin{align*}
@@ -1787,7 +1787,7 @@ We write this system in matrix form:
         1 \\ -2 & 3 \end{bmatrix}
 \]
 
-To solve, we find the eigenvalues of \( A \) by solving the characteristic equation:
+To solve, we find the eigenvalues of \emph{A} by solving the characteristic equation:
 
 \[
     \det(A - \lambda I) = 

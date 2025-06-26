@@ -20,9 +20,9 @@ all different and \(N(x)\) is a polynomial of degree at most \(d - 1\).
 
 \subsubsection{Lemma 1}
 
-Let \(N(x)\) and \(D(x)\) be polynomials of degree \(n\) and \(d\), respectively, with \(n \leq d\). 
-Suppose that \(a\) is not a root of \(D(x)\). Then there exists a polynomial \(P(x)\) of degree \(< d\) 
-and a number \(A\) such that:
+Let \(N(x)\) and \(D(x)\) be polynomials of degree \(n\) and \emph{d}, respectively, with \(n \leq d\). 
+Suppose that \emph{a} is not a root of \(D(x)\). Then there exists a polynomial \(P(x)\) of degree \(< d\) 
+and a number \emph{A} such that:
 
 \[
     \frac{N(x)}{D(x)(x - a)} = \frac{P(x)}{D(x)} + \frac{A}{x - a}
@@ -50,7 +50,7 @@ We equate:
 \]
 
 Choosing \(A = \frac{\tilde{N}(0)}{\tilde{D}(0)}\), the constant terms match. The remainder has no 
-constant term and is divisible by \(z\), so:
+constant term and is divisible by \emph{z}, so:
 
 \[
     \tilde{P}(z)z = \tilde{N}(z) - A\tilde{D}(z)
@@ -86,8 +86,8 @@ Continue until:
 
 \subsection{Lemma 2}
 
-Let \(N(x)\) and \(D(x)\) be polynomials of degree \(n\) and \(d\) respectively, with \(n < d + m\).
-Suppose that \(a\) is NOT a zero of \(D(x)\). Then there is a polynomial \(P(x)\) of degree \(p < d\) and
+Let \(N(x)\) and \(D(x)\) be polynomials of degree \(n\) and \emph{d} respectively, with \(n < d + m\).
+Suppose that \emph{a} is NOT a zero of \(D(x)\). Then there is a polynomial \(P(x)\) of degree \(p < d\) and
 numbers \(A_1, \dots, A_m\) such that
 
 \[
@@ -98,7 +98,7 @@ numbers \(A_1, \dots, A_m\) such that
 \textbf{Proof:} 
 
 To save writing, let \(z = x - a\). Then \(\tilde{N}(z) = N(z + a)\) and \(\tilde{D}(z) = D(z + a)\)
-are polynomials of degree \(n\) and \(d\) respectively, \(\tilde{D}(0) = D(a) \neq 0\) and we have to find a
+are polynomials of degree \(n\) and \emph{d} respectively, \(\tilde{D}(0) = D(a) \neq 0\) and we have to find a
 polynomial \(\tilde{P}(z)\) of degree \(p < d\) and numbers \(A_1, \dots, A_m\) such that
 
 \begin{align*}
@@ -114,7 +114,7 @@ or equivalently, such that
 \]
 
 Now look at the polynomial on the left-hand side. Every single term on the left-hand side,
-except for the very last one, \(A_m \tilde{D}(z)\), has at least one power of \(z\). So the constant 
+except for the very last one, \(A_m \tilde{D}(z)\), has at least one power of \emph{z}. So the constant 
 term on the left-hand side is exactly the constant term in \(A_m \tilde{D}(z)\), which is 
 \(A_m \tilde{D}(0)\). The constant term on the right-hand side is \(\tilde{N}(0)\). So the constant terms 
 on the left and right-hand sides are the same if we choose \(A_m = \frac{\tilde{N}(0)}{\tilde{D}(0)}\). 
@@ -128,7 +128,7 @@ Recall that \(\tilde{D}(0) \neq 0\). Now move \(A_m \tilde{D}(z)\) to the right-
 The constant terms in \(\tilde{N}(z)\) and \(A_m \tilde{D}(z)\) are the same, so the right-hand side 
 contains no constant term and the right-hand side is of the form \(\tilde{N}_1(z)z\) with \(\tilde{N}_1\) 
 a polynomial of degree at most \(d + m - 2\). (Recall that \(\tilde{N}\) is of degree at most 
-\(d + m - 1\) and \(\tilde{D}\) is of degree at most \(d\).) Divide the whole equation by \(z\).
+\(d + m - 1\) and \(\tilde{D}\) is of degree at most \emph{d}.) Divide the whole equation by \emph{z}.
 
 \[
     \tilde{P}(z)z^{m-1} + A_1 z^{m-2} \tilde{D}(z) + A_2 z^{m-3} \tilde{D}(z) + \cdots + A_{m-1} 
@@ -145,7 +145,7 @@ is exactly \(A_{m-1} \tilde{D}(0)\) matches the constant term on the right-hand 
     \tilde{D}(z) = \tilde{N}_1(z) - A_{m-1} \tilde{D}(z) = \tilde{N}_2(z)z
 \]
 
-With \(\tilde{N}_2\) a polynomial of degree at most \(d + m - 3\). Divide by \(z\) and continue. 
+With \(\tilde{N}_2\) a polynomial of degree at most \(d + m - 3\). Divide by \emph{z} and continue. 
 After \(m\) steps like this, we end up with
 
 \[

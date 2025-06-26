@@ -5,7 +5,7 @@ In this section, we explore the fundamental concepts of matrices, their operatio
 
 \subsection{Definition of a Matrix}
 
-A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns. Formally, an \(m \times n\) matrix \(A\) consists of \(mn\) elements \(a_{ij}\) where \(i = 1, 2, \ldots, m\) and \(j = 1, 2, \ldots, n\):
+A matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns. Formally, an \(m \times n\) matrix \emph{A} consists of \(mn\) elements \(a_{ij}\) where \(i = 1, 2, \ldots, m\) and \(j = 1, 2, \ldots, n\):
 
 \[
     A = 
@@ -62,9 +62,9 @@ Matrix multiplication is defined this way to think as each operation as dot prod
 
 An example of this is thinking about the dot product as the total price of a purchase in store. 
 The total price is the sum of the amounts which are given by the number of items per price. Now to extend this idea 
-for matrices we think about the number of items as a vector of size \(i\) and the prices of each item as 
+for matrices we think about the number of items as a vector of size \emph{i} and the prices of each item as 
 another vector \(p_1\) with dot product \(\langle i, p_1 \rangle\). If we want to by other items with different prices, but in the 
-same amounts given by the vector \(i\) we get a matrix \(A = (p_1, \dots, p_n)\). Now it makes sense that, if 
+same amounts given by the vector \emph{i} we get a matrix \(A = (p_1, \dots, p_n)\). Now it makes sense that, if 
 we take three different arrays of products we get a vector of three components which represent each of the 
 total amounts to pay.
 \vspace{\baselineskip}
@@ -123,8 +123,8 @@ The transpose of a matrix \(A \in \Reals^{m \times n}\), denoted \(A^T \in \Real
 
 
 The transpose can also help us interpret the dot product of two vectors being 0 as a matrix multiplication.
-Here are given \(A = (a_1, \dots, a_n)\) with \(Ax\) as some vector and \(b\) some other vector and 
-\(a_k\) is some row of \(A\).
+Here are given \(A = (a_1, \dots, a_n)\) with \(Ax\) as some vector and \emph{b} some other vector and 
+\(a_k\) is some row of \emph{A}.
 
 \[
     \langle a_k, b - Ax \rangle = 0 \quad \forall k \iff A^{T} (b - Ax) = \vec{0}
@@ -132,7 +132,7 @@ Here are given \(A = (a_1, \dots, a_n)\) with \(Ax\) as some vector and \(b\) so
 
 \subsection{The Equivalence of Matrices}
 
-Two matrices \(A\) and \(B\) are said to be equivalent if one can be transformed into the other through a finite sequence of elementary row operations. We write \(A \sim B\) to denote this equivalence.
+Two matrices \emph{A} and \emph{B} are said to be equivalent if one can be transformed into the other through a finite sequence of elementary row operations. We write \(A \sim B\) to denote this equivalence.
 
 The elementary row operations are:
 
@@ -206,27 +206,27 @@ Form the augmented matrix \([A|I_n]\) and apply Gauss-Jordan elimination to tran
 
 \emph{Adjoint Method}
 
-For an \(n \times n\) matrix \(A\):
+For an \(n \times n\) matrix \emph{A}:
 
 \[
     A^{-1} = \frac{1}{\det(A)} \text{adj}(A)
 \]
 
-Where \(\text{adj}(A)\) is the adjoint (or adjugate) of \(A\), defined as the transpose of the co-factor matrix.
+Where \(\text{adj}(A)\) is the adjoint (or adjugate) of \emph{A}, defined as the transpose of the co-factor matrix.
 
 A matrix is invertible if and only if its determinant is non-zero. Such matrices are called non-singular or regular matrices.
 
 \subsection{The Rank of a Matrix and How to Find It}
 
-The rank of a matrix \(A\), denoted \(\text{rank}(A)\) or \(\text{rg}(A)\), is the dimension of the column space (or equivalently, the row space) of \(A\).
+The rank of a matrix \emph{A}, denoted \(\text{rank}(A)\) or \(\text{rg}(A)\), is the dimension of the column space (or equivalently, the row space) of \emph{A}.
 
 Equivalent definitions of rank include:
 
 \begin{itemize}
-    \item The maximum number of linearly independent columns of \(A\)
-    \item The maximum number of linearly independent rows of \(A\)
-    \item The order of the largest non-zero minor of \(A\)
-    \item The number of non-zero rows in any row echelon form of \(A\)
+    \item The maximum number of linearly independent columns of \emph{A}
+    \item The maximum number of linearly independent rows of \emph{A}
+    \item The order of the largest non-zero minor of \emph{A}
+    \item The number of non-zero rows in any row echelon form of \emph{A}
 \end{itemize}
 
 \subsection{How to isolate Matrices}
@@ -260,11 +260,11 @@ To find the rank of a matrix:
 For a square matrix \(A \in \Reals^{n \times n}\), the following are equivalent:
 
 \begin{itemize}
-    \item \(A\) is invertible
+    \item \emph{A} is invertible
     \item \(\text{rank}(A) = n\)
     \item \(\det(A) \neq 0\)
-    \item The columns of \(A\) are linearly independent
-    \item The rows of \(A\) are linearly independent
+    \item The columns of \emph{A} are linearly independent
+    \item The rows of \emph{A} are linearly independent
     \item \(Ax = 0\) has only the trivial solution \(x = 0\)
 \end{itemize}
 
@@ -274,39 +274,39 @@ These fundamental spaces associated with a matrix \(A \in \Reals^{m \times n}\) 
 
 \subsubsection{Column Space}
 
-The column space of \(A\), denoted \(\text{Col}(A)\), is the span of the columns of \(A\):
+The column space of \emph{A}, denoted \(\text{Col}(A)\), is the span of the columns of \emph{A}:
 
 \[
     \text{Col}(A) = \{\vec{y} \in \Reals^m : \vec{y} = A\vec{x} \text{ for some } \vec{x} \in \Reals^n\}
 \]
 
-This is also called the range or image of the linear transformation represented by \(A\). The dimension of the column space equals the rank of \(A\).
+This is also called the range or image of the linear transformation represented by \emph{A}. The dimension of the column space equals the rank of \emph{A}.
 
 \subsubsection{Row Space}
 
-The \emph{row space} of \(A\), denoted \(\text{Row}(A)\), is the span of the rows of \(A\):
+The \emph{row space} of \emph{A}, denoted \(\text{Row}(A)\), is the span of the rows of \emph{A}:
  It is also perpendicular to the \emph{Null space}.
 
 \[
     \text{Row}(A) = \text{Col}(A^T)
 \]
 
-The dimension of the \emph{row space} also equals the rank of \(A\).
+The dimension of the \emph{row space} also equals the rank of \emph{A}.
 
 \subsubsection{Null Space}
 
-The null space (or kernel) of \(A\), denoted \(\text{Null}(A)\) or \(\text{Ker}(A)\), 
-is the set of all vectors that \(A\) maps to zero:
+The null space (or kernel) of \emph{A}, denoted \(\text{Null}(A)\) or \(\text{Ker}(A)\), 
+is the set of all vectors that \emph{A} maps to zero:
 
 \[
     \text{Null}(A) = \{\vec{x} \in \Reals^n : A\vec{x} = \vec{0}\}
 \]
 
-The dimension of the null space is called the nullity of \(A\), denoted \(\text{nullity}(A)\).
+The dimension of the null space is called the nullity of \emph{A}, denoted \(\text{nullity}(A)\).
 
 \subsubsection{Left Null Space}
 
-The left null space of \(A\) is the null space of \(A^T\):
+The left null space of \emph{A} is the null space of \(A^T\):
 
 \[
     \text{Null}(A^T) = \{\vec{y} \in \Reals^m : A^T\vec{y} = \vec{0}\} = \{\vec{y} \in \Reals^m : \vec{y}^T A = \vec{0}^T\}
@@ -321,8 +321,8 @@ The Rank-Nullity Theorem connects these spaces:
 To find a basis for these spaces:
 
 \begin{itemize}
-    \item \emph{Column space}: Take the linearly independent columns of \(A\).
-    \item \emph{Row space}: Take the non-zero rows from any row echelon form of \(A\).    
+    \item \emph{Column space}: Take the linearly independent columns of \emph{A}.
+    \item \emph{Row space}: Take the non-zero rows from any row echelon form of \emph{A}.    
     \item \emph{Null space}: Solve the homogeneous system \(A\vec{x} = \vec{0}\) and express the general 
     solution in terms of free variables.
 \end{itemize}
@@ -333,7 +333,7 @@ In this subsection, we provide detailed examples of Gauss-Jordan elimination and
 
 \subsubsection{Example of Matrix Multiplication}
 
-Consider the matrices \(A\) and \(B\) given by:
+Consider the matrices \emph{A} and \emph{B} given by:
 
 \[
     A = 
@@ -356,7 +356,7 @@ To compute the product \(C = AB \in \Reals^{2 \times 2}\), we calculate each ent
     c_{ij} = \sum_{k=1}^{3} a_{ik} b_{kj}
 \]
 
-Let's calculate each entry of \(C\):
+Let's calculate each entry of \emph{C}:
 
 \begin{align*}
     c_{11} &= a_{11}b_{11} + a_{12}b_{21} + a_{13}b_{31} \\
@@ -395,7 +395,7 @@ Therefore, the product \(C = AB\) is:
 Let's verify that matrix multiplication is not generally commutative by attempting to compute \(BA\):
 \vspace{\baselineskip}
 
-Since \(B\) is a \(3 \times 2\) matrix and \(A\) is a \(2 \times 3\) matrix, the product \(BA\) would be a \(3 \times 3\) matrix. However, this calculation cannot be performed since the number of columns in \(B\) (which is 2) does not equal the number of rows in \(A\) (which is 2). Thus, \(BA\) is undefined, demonstrating that matrix multiplication is not always commutative.
+Since \emph{B} is a \(3 \times 2\) matrix and \emph{A} is a \(2 \times 3\) matrix, the product \(BA\) would be a \(3 \times 3\) matrix. However, this calculation cannot be performed since the number of columns in \emph{B} (which is 2) does not equal the number of rows in \emph{A} (which is 2). Thus, \(BA\) is undefined, demonstrating that matrix multiplication is not always commutative.
 \vspace{\baselineskip}
 
 \textbf{Example of Gauss-Jordan Elimination}
@@ -686,7 +686,7 @@ To verify, we can check that \(AA^{-1} = I_3\):
     \end{pmatrix} = I_3
 \end{align*}
 
-This confirms that we have correctly found the inverse of matrix \(A\).
+This confirms that we have correctly found the inverse of matrix \emph{A}.
 
 \subsection{Linear Maps as matrices and Their Properties}
 
@@ -695,7 +695,7 @@ Let \(V\) and \(W\) be vector spaces over the field \(K\).
 
 Let \(v_1, \dots, v_n \in V\) and \(w_1, \dots, w_n \in W\). If \((v_1, \dots, v_n)\) 
 forms a basis of \(V\), then there exists a unique \(f \in \text{Hom}(V, W)\) with 
-\(f(v_i) = w_i\), \(1 \leq i \leq n\). The map \(f\) has the following properties:
+\(f(v_i) = w_i\), \(1 \leq i \leq n\). The map \emph{f} has the following properties:
 
 \(- \text{Im}(f) = \text{span}(f(v_1), \dots, f(v_n))\).
 
@@ -735,9 +735,9 @@ Given
     \end{pmatrix} .
 \]
 
-It should be shown that \(f\) is linear, and \(\ker(f)\), \(\text{Im}(f)\) and their dimensions should be determined.
+It should be shown that \emph{f} is linear, and \(\ker(f)\), \(\text{Im}(f)\) and their dimensions should be determined.
 
-A direct proof of linearity is easily possible. Instead, we give the transformation matrix \(A\). The images of the (canonical) basis vectors are
+A direct proof of linearity is easily possible. Instead, we give the transformation matrix \emph{A}. The images of the (canonical) basis vectors are
 
 \[
     f\begin{pmatrix}
@@ -785,7 +785,7 @@ We obtain
 
 But now it must be shown that indeed \(f(x) = Ax \quad \forall x \in \Reals^3\) holds, by, 
 for example, calculating both \(Ax\) and \(f(x)\) for a 
-general \(x\) and showing equality: Here, with \(x = {(x_1, x_2, x_3)}^T\)
+general \emph{x} and showing equality: Here, with \(x = {(x_1, x_2, x_3)}^T\)
 
 \[
     A \cdot x =
@@ -807,7 +807,7 @@ general \(x\) and showing equality: Here, with \(x = {(x_1, x_2, x_3)}^T\)
     \end{pmatrix} .
 \]
 
-This obviously corresponds to \(f(x)\), so that by Theorem 4.36, the map \(f\) is linear. To determine the kernel, one has to solve the system of linear equations
+This obviously corresponds to \(f(x)\), so that by Theorem 4.36, the map \emph{f} is linear. To determine the kernel, one has to solve the system of linear equations
 
 \[
     \begin{array}{cccc}

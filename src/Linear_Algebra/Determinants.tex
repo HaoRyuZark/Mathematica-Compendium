@@ -3,7 +3,7 @@
 
 The determinant of a square matrix \(A \in \Reals^{n \times n}\), denoted \(\det(A)\) or \(|A|\), is a 
 scalar value that provides important information about the matrix, including whether it is 
-invertible and the volume scaling factor of the linear transformation represented by \(A\).
+invertible and the volume scaling factor of the linear transformation represented by \emph{A}.
 The determinant can be computed using various methods, including the Laplace 
 expansion, row reduction, or the Leibniz formula.
 \vspace{\baselineskip}
@@ -37,19 +37,19 @@ The determinant of larger matrices can be computed using co-factor expansion alo
 \det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(A_{ij}),
 \end{equation*}
 
-where \(A_{ij}\) is the \((n-1) \times (n-1)\) sub-matrix obtained by deleting the \(i\)-th row and \(j\)-th column of \(A\).
+where \(A_{ij}\) is the \((n-1) \times (n-1)\) sub-matrix obtained by deleting the \emph{i}-th row and \emph{j}-th column of \emph{A}.
 
 \subsection{Properties of the determinant}
 
 \begin{itemize}
-    \item \(\det(A) = 0\) if and only if \(A\) is singular (not invertible).
-    \item \(\det(AB) = \det(A) \cdot \det(B)\) for any square matrices \(A\) and \(B\) of the same size.
+    \item \(\det(A) = 0\) if and only if \emph{A} is singular (not invertible).
+    \item \(\det(AB) = \det(A) \cdot \det(B)\) for any square matrices \emph{A} and \emph{B} of the same size.
     \item \(\det(A^T) = \det(A)\).
-    \item If a row (or column) of \(A\) is multiplied by a scalar \(\alpha\), 
+    \item If a row (or column) of \emph{A} is multiplied by a scalar \(\alpha\), 
     then \(\det(A)\) is multiplied by \(\alpha\).
-    \item If two rows (or columns) of \(A\) are swapped, then \(\det(A)\) changes sign.
+    \item If two rows (or columns) of \emph{A} are swapped, then \(\det(A)\) changes sign.
     \[\det(a,b,c) = - \det(b,a,c)\]
-    \item If a row (or column) of \(A\) is added to another row (or column), then \(\det(A)\) remains unchanged.
+    \item If a row (or column) of \emph{A} is added to another row (or column), then \(\det(A)\) remains unchanged.
     \item If one of the columns is a linear combination of the others, then \(\det(A) = 0\).
     \item The determinant of the identity matrix \(I_n\) is 1.
     \item The determinant of can split into the sum of more determinants:
@@ -74,7 +74,7 @@ then \( \text{rank}(L_A) < n \) or \( \text{rank}(L_B) < n \). \\
 Thus, \( \text{rank}(L_{AB}) < n \), 
 and the statement is trivial.
 
-So let us assume that \( A \) and \( B \) are 
+So let us assume that \emph{A} and \emph{B} are 
 invertible, i.e., \( \text{rank}(A) = \text{rank}(B) = n \). \\
 We now assume that in such a case, a matrix can 
 always be transformed into reduced row 
@@ -92,7 +92,7 @@ Then, \( A = C_k \cdot \cdots \cdot C_1 \) for certain elementary matrices \( C_
 &= \det(A)\det(B).
 \end{align*}
 
-Therefore, also if \( A \) is invertible, then
+Therefore, also if \emph{A} is invertible, then
 \[
 \det(A^{-1}) = {(\det(A))}^{-1}.
 \]
@@ -106,7 +106,7 @@ It holds that
 
 \subsection{The Leibniz Formula}
 
-Let \( A = (a_{ij}) \in K^{n \times n} \) be a square matrix over a field \( K \). The determinant of \( A \) is defined via the \textbf{Leibniz formula} as:
+Let \( A = (a_{ij}) \in K^{n \times n} \) be a square matrix over a field \( K \). The determinant of \emph{A} is defined via the \textbf{Leibniz formula} as:
 
 \[
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)},
@@ -122,7 +122,7 @@ where:
 
 \textbf{Step 1: Expansion using multilinearity}
 
-Each column vector \( a_j \) of the matrix \( A \) can be written as a linear combination of the standard basis vectors \( e_1, \dots, e_n \):
+Each column vector \( a_j \) of the matrix \emph{A} can be written as a linear combination of the standard basis vectors \( e_1, \dots, e_n \):
 
 \[
 a_j = \sum_{i=1}^n a_{ij} e_i.
@@ -134,7 +134,7 @@ Using the multilinearity of the determinant function (i.e., linearity in each co
 \det(a_1, a_2, \dots, a_n) = \det\left( \sum_{i_1} a_{i_1 1} e_{i_1}, \sum_{i_2} a_{i_2 2} e_{i_2}, \dots, \sum_{i_n} a_{i_n n} e_{i_n} \right).
 \]
 
-By multilinearity, this becomes a sum over all \( n \)-tuples \( (i_1, i_2, \dots, i_n) \):
+By multilinearity, this becomes a sum over all \emph{n}-tuples \( (i_1, i_2, \dots, i_n) \):
 
 \[
 = \sum_{i_1, i_2, \dots, i_n = 1}^n a_{i_1 1} a_{i_2 2} \cdots a_{i_n n} \cdot \det(e_{i_1}, e_{i_2}, \dots, e_{i_n}).
@@ -176,13 +176,13 @@ The determinant of an \( n \times n \) matrix \( A = [a_{ij}] \) can be
 computed using the \textbf{Laplace expansion}, also known as co-factor expansion. 
 This method expands the determinant along a specific row or column.
 
-\subsubsection*{Expansion Along Row \( i \):}
+\subsubsection*{Expansion Along Row \emph{i}:}
 
 \[
 \det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(M_{ij})
 \]
 
-\subsubsection*{Expansion Along Column \( j \):}
+\subsubsection*{Expansion Along Column \emph{j}:}
 
 \[
 \det(A) = \sum_{i=1}^{n} {(-1)}^{i+j} a_{ij} \det(M_{ij})
@@ -191,8 +191,8 @@ This method expands the determinant along a specific row or column.
 Where:
 
 \begin{itemize}
-    \item \( a_{ij} \) is the element in the \( i \)-th row and \( j \)-th column of matrix \( A \).
-    \item \( M_{ij} \) is the \textbf{minor} of \( a_{ij} \), i.e., the determinant of the submatrix formed by removing the \( i \)-th row and \( j \)-th column from \( A \).
+    \item \( a_{ij} \) is the element in the \emph{i}-th row and \emph{j}-th column of matrix \emph{A}.
+    \item \( M_{ij} \) is the \textbf{minor} of \( a_{ij} \), i.e., the determinant of the submatrix formed by removing the \emph{i}-th row and \emph{j}-th column from \emph{A}.
     \item \( {(-1)}^{i+j} \) is the \textbf{sign factor}, determining the sign of each co-factor term.
 \end{itemize}
 
@@ -203,7 +203,7 @@ Where:
  2.\textbf{ For Each Element:} For each element, \(a_{ij}\), in the chosen row or column:
 
     \textbf{Find the Minor, \(M_{ij}\):} The minor \(M_{ij}\) is the determinant of the sub-matrix formed by deleting the 
-    \indent \(i\)-th row and the \(j\)-th column of the original matrix.
+    \indent \emph{i}-th row and the \emph{j}-th column of the original matrix.
 
     \textbf{Find the Co-factor, \(C_{ij}\):} The co-factor \(C_{ij}\) is the minor multiplied by a sign factor:
         \[
@@ -220,15 +220,15 @@ Where:
         \end{pmatrix}
         \]
 
- 3.\textbf{ Calculate the Determinant:} The determinant of the matrix, \(A\), is the sum of 
+ 3.\textbf{ Calculate the Determinant:} The determinant of the matrix, \emph{A}, is the sum of 
  the products of the elements in the chosen row or column and their corresponding co-factors.
 
-    \textbf{Expansion along the \(i\)-th row:}
+    \textbf{Expansion along the \emph{i}-th row:}
         \[
         \det(A) = \sum_{j=1}^{n} a_{ij} C_{ij} = a_{i1}C_{i1} + a_{i2}C_{i2} + \cdots + a_{in}C_{in}
         \]
 
-    \textbf{Expansion along the \(j\)-th column:}
+    \textbf{Expansion along the \emph{j}-th column:}
         \[
         \det(A) = \sum_{i=1}^{n} a_{ij} C_{ij} = a_{1j}C_{1j} + a_{2j}C_{2j} + \cdots + a_{nj}C_{nj}
         \]
@@ -276,7 +276,7 @@ Using the rule of Sarrus for \(3 \times 3\) matrices:
 &= 0 + 6 + 3 - (0 + 4 + 2) \\
 &= 9 - 6 = 3
 \end{align*}
- Thus, the determinant of matrix \(A\) is \(\det(A) = 3\).
+ Thus, the determinant of matrix \emph{A} is \(\det(A) = 3\).
 
  Now consider the following \(4 \times 4\) matrix:
 
@@ -303,7 +303,7 @@ For a \(4 \times 4\) matrix, we can use Laplace Method along the first row:
 
 \subsection{Determinant of the reduced echelon form}
 
-The determinant has another trait that states that if your matrix \(A\) is REF then
+The determinant has another trait that states that if your matrix \emph{A} is REF then
 its determinant is given by the product of the main diagonal. 
 
 \subsection{Gaussian Method for finding determinants}

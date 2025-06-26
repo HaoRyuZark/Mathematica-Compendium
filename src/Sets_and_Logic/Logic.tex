@@ -14,7 +14,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{cc}
 		\toprule
-		\(A\) & \(\neg A\) \\
+		\emph{A} & \(\neg A\) \\
 		\midrule
 		0   & 1        \\
 		1   & 0        \\
@@ -27,7 +27,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & \(B\) & \(A \land B\) \\
+		\emph{A} & \emph{B} & \(A \land B\) \\
 		\midrule
 		0   & 0   & 0           \\
 		0   & 1   & 0           \\
@@ -42,7 +42,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(\)A\(\) & \(B\) & \(A \lor B\) \\
+		\(\)A\(\) & \emph{B} & \(A \lor B\) \\
 		\midrule
 		0   & 0   & 0          \\
 		0   & 1   & 1          \\
@@ -57,7 +57,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & \(B\) & \(A \implies B\) \\
+		\emph{A} & \emph{B} & \(A \implies B\) \\
 		\midrule
 		0   & 0   & 1        \\
 		0   & 1   & 1        \\
@@ -72,7 +72,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & \(B\) & \(A <=> B\) \\
+		\emph{A} & \emph{B} & \(A <=> B\) \\
 		\midrule
 		0   & 0   & 1         \\
 		0   & 1   & 0         \\
@@ -87,7 +87,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & $B$ & $A \oplus B$ \\
+		\emph{A} & $B$ & $A \oplus B$ \\
 		\midrule
 		0   & 0   & 0            \\
 		0   & 1   & 1            \\
@@ -102,7 +102,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & \(B\) & \(A \downarrow B\) \\
+		\emph{A} & \emph{B} & \(A \downarrow B\) \\
 		\midrule
 		0   & 0   & 1                \\
 		0   & 1   & 0                \\
@@ -117,7 +117,7 @@ logic, and we can use any symbol for a representing a proposition, such
 
 	\begin{tabular}{ccc}
 		\toprule
-		\(A\) & \(B\) & \(A \uparrow B\) \\
+		\emph{A} & \emph{B} & \(A \uparrow B\) \\
 		\midrule
 		0   & 0   & 1              \\
 		0   & 1   & 1              \\
@@ -131,9 +131,9 @@ logic, and we can use any symbol for a representing a proposition, such
 
 \subsection{Tautology and Contradiction}
 
-\emph{- Tautology}: A logical formula that is always true.
+\emph{Tautology}: A logical formula that is always true.
 
-\emph{- Contradiction}: A formula that is always false.
+\emph{Contradiction}: A formula that is always false.
 
 \newpage
 
@@ -256,7 +256,6 @@ under which a complex statement is true or false.
 \textbf{Example:}
 \vspace{\baselineskip}
 
-
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
@@ -334,8 +333,8 @@ The pattern for filling the input truth values
 
 \end{itemize}
 
-This ensures that all combinations of \(A\), \(B\), and \(C\) are covered, and you can then evaluate the 
-logical expression for each combination.
+This ensures that all combinations of \emph{A}, \emph{B}, and \emph{C} are covered, and you 
+can then evaluate the logical expression for each combination.
 
 \subsubsection{Truth Table for the Expression \texorpdfstring{\( (A \land B) \lor C \)}{}}
 
@@ -413,7 +412,7 @@ A K-map helps identify common terms, allowing the Boolean expression to be reduc
 Consider the Boolean expression \( (A \lor (B \land \neg A \land \neg B)) \).
 \vspace{\baselineskip}
 
-We first construct a K-map for two variables, \( A \) and \( B \). The truth table for this expression 
+We first construct a K-map for two variables, \emph{A} and \emph{B}. The truth table for this expression 
 gives the following values:
 
 \[
@@ -451,7 +450,7 @@ Here, we group the ones together to simplify the Boolean expression. The simplif
 
 Now, let's consider the expression \( \neg C \). This expression only 
 depends on one variable, but for illustration, we will use a 
-3-variable K-map with variables \( A \), \( B \), and \( C \).
+3-variable K-map with variables \emph{A}, \emph{B}, and \emph{C}.
 \vspace{\baselineskip}
 
 The truth table for \( \neg C \) is as follows:
@@ -473,7 +472,7 @@ The truth table for \( \neg C \) is as follows:
 	\end{array}
 \]
 
-The corresponding K-map for three variables \( A \), \( B \), and \( C \) is:
+The corresponding K-map for three variables \emph{A}, \emph{B}, and \emph{C} is:
 
 \[
 	\begin{array}{|c|c|c|c|}
@@ -500,8 +499,8 @@ To solve a Karnaugh Map and simplify a Boolean expression, follow these steps:
 
 \begin{enumerate}
 	
-	\item \textbf{Determine the Number of Variables:} \\
-	      Decide how many variables are in the Boolean function. This determines the size of the K-Map:
+	\item \textbf{Determine the Number of Variables:} Decide how many variables are in the 
+		   Boolean function. This determines the size of the K-Map:
 	      
 		\begin{itemize}
 		 
@@ -515,12 +514,12 @@ To solve a Karnaugh Map and simplify a Boolean expression, follow these steps:
 	  
 		\end{itemize}
 
-	\item \textbf{Fill in the K-Map:} \\
-	      Place 1's in the cells that correspond to the min-terms (where the function outputs 1). You 
-		  may also include do not care conditions (usually denoted as \(\)X\(\)).
+	\item \textbf{Fill in the K-Map:} Place 1's in the cells that correspond to the min-terms 
+		  (where the function outputs 1). You may also include do not care conditions 
+		  (usually denoted as \emph{X}).
 
-	\item \textbf{Group the 1's:} \\
-	      Form groups (called \emph{implicants}) of 1's. The groups must follow these rules:
+	\item \textbf{Group the 1's:} Form groups (called \emph{implicants}) of 1's. 
+		   The groups must follow these rules:
 	      
 		\begin{itemize}
 		 
@@ -603,7 +602,7 @@ Means \textbf{``there exists exactly one''}.
 		
 \emph{Negation:} ``Not exactly one'' means:
 \(\neg (\exists! x)\, P(x) \equiv (\forall x)\, \neg P(x)\ \lor\ (\exists x_1 \neq x_2)\, P(x_1) \land 
-P(x_2)\) Either no such \( x \) exists, or more than one does.
+P(x_2)\) Either no such \emph{x} exists, or more than one does.
 \vspace{\baselineskip}
 
 \textbf{Example:} 

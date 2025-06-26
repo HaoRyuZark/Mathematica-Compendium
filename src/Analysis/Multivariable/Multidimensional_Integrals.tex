@@ -46,7 +46,7 @@ For differentiable function on the interval \(t \in [a; b]\)
 
 Let \( F : \Reals^n \to \Reals^n \) be a \emph{vector field}, and let \( \gamma \) be a 
 smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \). 
-The \emph{line integral} of \( F \) along \( \gamma \) is:
+The \emph{line integral} of \emph{F} along \( \gamma \) is:
 
 \[
     \int_\gamma \langle \vec{F}(\vec{r}(t)), \frac{d\vec{r}(t)}{dt} \rangle dt = 
@@ -64,7 +64,7 @@ along the path \( \gamma \), such as force over distance.
 Let \( f(x, y) = 2x + 2y \) be our vector field. 
 \vspace{\baselineskip}
 
-Let the curve \( C \) be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), 
+Let the curve \emph{c} be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), 
 parametrized by:
 
 \[
@@ -79,7 +79,7 @@ parametrized by:
     \quad t \in \left[0, \frac{\pi}{2}\right]
 \]
 
-We compute the line integral of \( \vec{F} \) along \( C \):
+We compute the line integral of \( \vec{F} \) along \emph{c}:
 
 \[
     \int_C \langle \vec{F}(\vec{r}(t)), \frac{d \vec{r}(t)}{dt}\rangle dt = 
@@ -125,14 +125,14 @@ The line integral of the gradient vector field \(f(x,y) = 2x + 2y \) over this c
 
 \subsubsection{Over Scalar field}
 
-Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \( C \), which 
+Let \( f(x_1, x_2, \ldots, x_n) \) be a scalar field defined on a smooth curve \emph{c}, which 
 is parametrized by a vector function.
 
 \[
     \vec{r}(t) = (x_1(t), x_2(t), \ldots, x_n(t)), \quad t \in [a, b]
 \]
 
-Then, the line integral of \( f \) over \( C \) is given by:
+Then, the line integral of \emph{f} over \emph{c} is given by:
 
 \[
     \int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \vec{r}'(t) \right\| \, dt
@@ -173,8 +173,8 @@ to keep the examples simple.
 \subsubsection{Over Scalar Field with respect to \emph{x} or \emph{y}}
 
 Imagining how this works in not specially difficult. Imagine taking a line integral where we do not move 
-along the \(y\)-axis and only care about the plane \(xz\). Here our line integral only changes in the 
-fact that in the norm of our curve the component that was responsible for \(y\) will be set 0 and the 
+along the \emph{y}-axis and only care about the plane \(xz\). Here our line integral only changes in the 
+fact that in the norm of our curve the component that was responsible for \emph{y} will be set 0 and the 
 \(ds\) changes to the variable we are integrating with respect to. In this case \(dx\).
 
 \[
@@ -188,7 +188,7 @@ on the variable we are choosing to left out.
 \vspace{\baselineskip}
 
 Now, given a field \(\vec{F}(x,y) = M(x,y)\imath + N(x,y)\jmath\) and the curve
- \(\vec{r}(t) = g(t)\imath + h(t)\jmath\). The line integral of \(\vec{F}\) along \(C\) is 
+ \(\vec{r}(t) = g(t)\imath + h(t)\jmath\). The line integral of \(\vec{F}\) along \emph{C} is 
 
 \[
     \int_\gamma \langle \nabla \vec{F}, \frac{\vec{r}}{dt} \rangle dt
@@ -204,19 +204,19 @@ Here \(g'(t)dt = dx\) and \(h'(t)dt = dy\)
     \int_{a}^{b} Mdx + \int_{a}^{b} Ndy
 \]
 
-These two integrals give us both the integral with respect to \(x\) and \(y\).
+These two integrals give us both the integral with respect to \emph{x} and \emph{y}.
 \vspace{\baselineskip}
 
 \textbf{Example:}
 \vspace{\baselineskip}
 
-Curve \(C\) is a portion of the parabola \(y = x^2\)that goes through the points (1,1) to (2,4)
+Curve \emph{C} is a portion of the parabola \(y = x^2\)that goes through the points (1,1) to (2,4)
 \vspace{\baselineskip}
 
 Compute: \(\int_{a}^{b} \frac{x}{y} dy\)
 \vspace{\baselineskip}
 
-\textbf{Step 1: Parametrize \(C\)}
+\textbf{Step 1: Parametrize \emph{C}}
 
 \[
     \vec{r}(t) = t\imath + t^2 \jmath \text{ with } 1 \ge i \ge 2
@@ -298,16 +298,16 @@ First, check if the field is conservative by verifying:
 Since \( \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \), the field is conservative.
 \vspace{\baselineskip}
 
-\textbf{Step 1: Integrate \( P(x, y) \) with respect to \( x \):}
+\textbf{Step 1: Integrate \( P(x, y) \) with respect to \emph{x}:}
 
 \[
     \phi(x, y) = \int (2xy + e^x)\,dx = x^2y + e^x + h(y)
 \]
 
-Here, \( h(y) \) is a function of \( y \) only.
+Here, \( h(y) \) is a function of \emph{y} only.
 \vspace{\baselineskip}
 
-\textbf{Step 2: Differentiate \( \phi(x, y) \) with respect to \( y \):}
+\textbf{Step 2: Differentiate \( \phi(x, y) \) with respect to \emph{y}:}
 
 \[
     \frac{\partial \phi}{\partial y} = x^2 + h'(y)
@@ -341,7 +341,7 @@ Therefore, the potential function is:
 \subsection{Double Integral over a Rectangular Region}
 
 Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \Reals^2 \). The double 
-integral of a function \( f(x, y) \) over \( A \) is:
+integral of a function \( f(x, y) \) over \emph{A} is:
 
 \[
     \iint_A f(x, y)\, dA = \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx
@@ -369,13 +369,13 @@ In practice, for regions bounded by curves, we integrate in the form:
     \int_a^b \int_{u(x)}^{o(x)} f(x, y)\, dy\, dx
 \]
 
-Here, \( y \in [u(x), o(x)] \) describes the vertical bounds as functions of \( x \).
+Here, \( y \in [u(x), o(x)] \) describes the vertical bounds as functions of \emph{x}.
 \vspace{\baselineskip}
 
 \textbf{Example:}
 \vspace{\baselineskip}
 
-Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1\) and \(y\)-axis 
+Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \emph{x}-axis, \(x = 1\) and \emph{y}-axis 
 \(y = \sqrt{x}\)
 
 \begin{center}
@@ -405,9 +405,9 @@ Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1
     \end{tikzpicture}
 \end{center}
 
-First we are going to imagine slicing the area under this sector vertically along the \(x\)-axis from 
+First we are going to imagine slicing the area under this sector vertically along the \emph{x}-axis from 
 \(0\) up to \(1\) which is the volume of an Area under a curve that is represented by going along the 
-\(y\)-axis.
+\emph{y}-axis.
 
 \begin{align*}
     \int_{0}^{1}\int_{0}^{\sqrt{x}} 1 + x + y^2 dy dx \\
@@ -416,8 +416,8 @@ First we are going to imagine slicing the area under this sector vertically alon
     = \left| \frac{2}{3} x^{\frac{3}{2}} + \frac{4}{3} \frac{2}{5} x^{\frac{5}{2}} \right|_{0}^{1} = \frac{6}{5}
 \end{align*}
 
-If we choose the other way then we have an area with a fix \(y\) in the inside that goes from \(y^2\) to 
-\(1\) with respect to \(x\).
+If we choose the other way then we have an area with a fix \emph{y} in the inside that goes from \(y^2\) to 
+\(1\) with respect to \emph{x}.
 
 \[
     \int_{0}^{1}\int_{y^2}^{1} 1 + x + y^2 dx dy
@@ -436,12 +436,12 @@ The steps are the same as in the previous Example.
 
 \begin{enumerate}
 
-    \item Identify the area you want to integrate, what are the bounds respective to \(x\) and \(y\)
+    \item Identify the area you want to integrate, what are the bounds respective to \emph{x} and \emph{y}
 
     \item Write the same expression without bounds and change the order of the differentials
 
 
-    \item Imagine slicing the area underneath vertically for \(x\) and horizontally for \(y\) with their 
+    \item Imagine slicing the area underneath vertically for \emph{x} and horizontally for \emph{y} with their 
           respective bounds corresponding to the perspective.
 
     \item Write the new integral with the opposite of order of integration
@@ -491,12 +491,12 @@ The steps are the same as in the previous Example.
     \end{tikzpicture}
 \end{center}
 
-Here the original bounds are: \(x\) goes from 0 to 8 and \(y\) goes from \(\sqrt[3]{x}\) to 2.
-As you can see in the diagram by slicing vertically the value of \(x\) is fixed, and we move 
-towards the upper-bound of \(y\) which is 2.
-Therefore, the smallest \(x\) can get is 0 and the biggest is 2. While for \(y\) by slicing 
-vertically we get that \(x\) goes from 0 to \(\sqrt[3]{x}\), but 
-we do not want to leave \(x\), so we solve for \(y\) and get \(y^3\). 
+Here the original bounds are: \emph{x} goes from 0 to 8 and \emph{y} goes from \(\sqrt[3]{x}\) to 2.
+As you can see in the diagram by slicing vertically the value of \emph{x} is fixed, and we move 
+towards the upper-bound of \emph{y} which is 2.
+Therefore, the smallest \emph{x} can get is 0 and the biggest is 2. While for \emph{y} by slicing 
+vertically we get that \emph{x} goes from 0 to \(\sqrt[3]{x}\), but 
+we do not want to leave \emph{x}, so we solve for \emph{y} and get \(y^3\). 
 Now we can put all of this together and integrate.
 
 
@@ -521,7 +521,7 @@ Given a vector-valued function
     \end{bmatrix},
 \]
 
-the \emph{Jacobian matrix} of \(f\) is the \(m \times n\) matrix of all first-order partial derivatives:
+the \emph{Jacobian matrix} of \emph{f} is the \(m \times n\) matrix of all first-order partial derivatives:
 
 \[
     J_f(x) = 
@@ -557,7 +557,7 @@ and provides important information about the local behavior of the function. For
 
 \begin{itemize}
 
-    \item If \(\det(J_{f}(x)) \neq 0\), the function is locally invertible at \(x\) by the inverse 
+    \item If \(\det(J_{f}(x)) \neq 0\), the function is locally invertible at \emph{x} by the inverse 
       function theorem.
   
       \item The sign and magnitude of the determinant 
@@ -612,7 +612,7 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \begin{itemize}
 
         \item Definition: The position of a point in a plane is given by \((r, \theta)\), where \(r\) 
-              is the radial distance and \(\theta\) is the angle from the positive \(x\)-axis.
+              is the radial distance and \(\theta\) is the angle from the positive \emph{x}-axis.
         
               \item Jacobian:
         
@@ -627,8 +627,8 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \begin{itemize}
         
         \item Definition: The position of a point in 3D space is given by \((r, \theta, z)\), where 
-              \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \(z\) is the height along 
-              the \(z\)-axis.
+              \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \emph{z} is the height along 
+              the \emph{z}-axis.
         
         \item Jacobian:
         
@@ -648,9 +648,9 @@ The Jacobian matrix and its determinant appear in many areas, including:
             
             \item \(\rho\) is the distance from the origin,
             
-            \item \(\theta\) is the azimuthal angle (in the \(xy\)-plane from the positive \(x\)-axis),
+            \item \(\theta\) is the azimuthal angle (in the \(xy\)-plane from the positive \emph{x}-axis),
             
-            \item \(\phi\) is the polar angle (from the positive \(z\)-axis).
+            \item \(\phi\) is the polar angle (from the positive \emph{z}-axis).
         
         \end{itemize}
         
@@ -873,12 +873,12 @@ using our constraint and our original functions.
     \int_{x^2 + y^3}^{3-x^2-y^2} dz dy dx
 \]
 
-Here \(z\) means the height which is just the output
+Here \emph{z} means the height which is just the output
 of the original functions.
 
-The bounds of \(y\) just by looking at out constraint and solving for it.
+The bounds of \emph{y} just by looking at out constraint and solving for it.
 
-And \(x\) only depends on the concrete limit of integration.
+And \emph{x} only depends on the concrete limit of integration.
 
 
 \subsubsection{Coordinate Transformation and the Jacobian Determinant}
@@ -938,7 +938,7 @@ Thus, the triple integral in cylindrical coordinates becomes:
 \subsubsection{Calculating the center of mass with triple integrals}
 
 We can make use of triple integration to calculate the center of mass of a body with
-respect to \(x\), \(y\) or \(z\) with the following formulas:
+respect to \emph{x}, \emph{y} or \emph{z} with the following formulas:
 
 \begin{align*}
     x_s &= \iiint_V xp(x,z,y)dz\ dy \ dx\\

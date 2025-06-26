@@ -4,15 +4,18 @@
 \emph{Set theory} is a foundational branch of mathematics that studies \emph{sets}, which are simply 
 collections of objects. At its core, it deals with the fundamental concepts of membership 
 (whether an object belongs to a set), equality (when two sets are the same), and relationships 
-between sets (like subsets, intersections, and unions).\\
+between sets (like subsets, intersections, and unions).
+
 It might seem simple, but set theory provides the basic language and tools to define 
 and reason about almost all mathematical objects, from numbers and functions to 
 more complex structures. It helps us understand the concept of infinity, organize mathematical 
-ideas logically, and resolve paradoxes that arise from dealing with collections.\\
+ideas logically, and resolve paradoxes that arise from dealing with collections.
+
 In essence, set theory provides the building blocks upon which much of modern mathematics is constructed.
 
 \subsection{Basics}
-To be concise, a set is a collection of mathematical objects that can also be other sets.\\
+
+To be concise, a set is a collection of mathematical objects that can also be other sets.
 Here is a list of common symbols for set theory.
 
 \begin{itemize}
@@ -20,24 +23,24 @@ Here is a list of common symbols for set theory.
 	\item \emph{Empty set (\(\emptyset\))}: The set that contains no elements. It is the unique set with 
 	      zero elements.
 
-	\item \(A \subseteq B\): Set \(A\) is a subset of \(B\). This means every element of \(A\) is also 
-	      in \(B\).
+	\item \(A \subseteq B\): Set \emph{A} is a subset of \emph{B}. This means every element of 
+		  \emph{A} is also in \emph{B}.
 
-	\item \(A \subseteq B\) or \(A = B\): This notation already includes the possibility that \(A\) equals 
-		  \(B\) since a set is always a subset of itself.
+	\item \(A \subseteq B\) or \(A = B\): This notation already includes the possibility that \emph{A} 
+		  equals \emph{B} since a set is always a subset of itself.
 
-	\item \(A \cup B\): The union of sets \(A\) and \(B\). It includes all elements that are in \(A\), in 
-	      \(B\), or in both.
+	\item \(A \cup B\): The union of sets \emph{A} and \emph{B}. It includes all elements 
+	      that are in \emph{A}, in \emph{B}, or in both.
 
-	\item \(A \cap B\): The intersection of sets \(A\) and \(B\). It includes only the elements that are in 
-	      both sets.
+	\item \(A \cap B\): The intersection of sets \emph{A} and \emph{B}. It includes only the elements 
+	      that are in both sets.
 
-	\item \(A \setminus B\): The difference of sets. Elements in \(A\) that are not in \(B\).
+	\item \(A \setminus B\): The difference of sets. Elements in \emph{A} that are not in \emph{B}.
 
-	\item \(A^c\) or \(\overline{A}\): The complement of set \(A\). All elements not in \(A\), relative to 
-	      a universal set.
+	\item \(A^c\) or \(\overline{A}\): The complement of set \emph{A}. All elements not in \emph{A}, 
+		  relative to  a universal set.
 
-	\item \(|A|\): The cardinality of set \(A\), which is the number of elements in the set.
+	\item \(|A|\): The cardinality of set \emph{A}, which is the number of elements in the set.
 
 \end{itemize}
 \smallskip
@@ -191,8 +194,8 @@ These are Zermelo Fraenkel axioms of set theory including \emph{The Axiom of Cho
 
 \subsection{The Cartesian Product}
 
-The Cartesian product of two sets \(A\) and \(B\), written \(A \times B\), is the set of all ordered pairs 
-in which the first element belongs to \(A\) and the second belongs to \(B\):
+The Cartesian product of two sets \emph{A} and \emph{B}, written \(A \times B\), is the set of 
+all ordered pairs in which the first element belongs to \emph{A} and the second belongs to \emph{B}:
 
 \[
 	A \times B = \{ (a, b) : a \in A, \land\ b \in B\}
@@ -232,7 +235,7 @@ The general Cartesian product of \emph{n} sets can be written as:
 
 \subsection{Laws of Set Algebra}
 
-Let \(X\) be the universal set and \(A, B, C \subseteq X\).
+Let \emph{X} be the universal set and \(A, B, C \subseteq X\).
 
 \begin{itemize}
 	
@@ -316,7 +319,7 @@ To show:
 
 \subsection{Indexed Sets}
 
-Let \( X \) be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \( J \) is the 
+Let \emph{X} be a set, and \( A_i \subseteq X \) for all \( i \in J \), where \emph{J} is the 
 \emph{index set}.
 \vspace{\baselineskip}
 
@@ -344,13 +347,14 @@ If \( J \) is any set:
 	\bigcap_{i \in J} A_i := \{ x \mid \forall i \in J \ (x \in A_i) \}
 \]
 
-If \( J \) is any set, then \( {(A_i)}_{i \in J} \) are pairwise disjoint if and only if:
+If \emph{J} is any set, then \( {(A_i)}_{i \in J} \) are pairwise disjoint if and only if:
 
 \[
 	\forall i_1, i_2 \in J, \ i_1 \neq i_2 \implies A_{i_1} \cap A_{i_2} = \emptyset
 \]
 
-If \( J \) is any set, then \( {(A_i)}_{i \in J} \) forms a (disjoint) decomposition of \( X \) if and only if:
+If \emph{J} is any set, then \( {(A_i)}_{i \in J} \) forms a (disjoint) decomposition of \emph{X} if 
+and only if:
 
 \[
 	{(A_i)}_{i \in J} \text{ are pairwise disjoint and } \bigcup_{i \in J} A_i = X
@@ -392,16 +396,19 @@ Here, \( I = \{ 1, 2, 3, \dots, n \} \) and \( J = \{ 1, 2, 3, \dots, m \} \). T
 \subsection{Cardinality}
 
 The cardinality of a set is the number of elements in that set.
-\\
-Let \( A \) and \( B \) be finite sets with \( |A| = n \), \( |B| = m \), and let \( X \) be the finite 
+\vspace{\baselineskip}
+
+Let \emph{A} and \emph{B} be finite sets with \( |A| = n \), \( |B| = m \), and let \emph{X} be the finite 
 universal set. Then the following holds:
 
 \subsubsection{Cardinality of a Set}
+
 \[
 	A = (A \cap B) \cup (A \setminus B), \quad |A| = |A \cap B| + |A \setminus B|
 \]
 
 \subsubsection{Cardinality of the complements}
+
 \[
 	|A| = |X \setminus A| = |X| - |A|
 \]
@@ -432,17 +439,11 @@ Let \( |A \cap B| = k \), then:
 
 \subsubsection{Inclusion-Exclusion Formula for Three Non-Disjoint Sets}
 
-\[
-	|A \cup B \cup C| = |(A \cup B) \cup C| = |A \cup B| + |C| - |(A \cup B) \cap C|
-\]
-
-\[
-	= |A| + |B| - |A \cap B| + |C| - |(A \cap C) \cup (B \cap C)|
-\]
-
-\[
-	= |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|
-\]
+\begin{align*}
+	|A \cup B \cup C| &= |(A \cup B) \cup C| \\ 
+	&= |A \cup B| + |C| - |(A \cup B) \cap C| \\
+ 	&= |A| + |B| - |A \cap B| + |C| - |(A \cap C) \cup (B \cap C)|  |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|
+\end{align*}
 
 \subsubsection{General Formula for the cardinality of the union of sets}
 
@@ -463,11 +464,13 @@ Its cardinality is \(2^n\) with \emph{n} being the number of elements in the ori
 
 \subsection{Family of Subsets}
 
-Let \emph{X} be a non-empty set. A subset \(\mathscr{F}\) of the power set of \emph{X} is called a set system of \emph{X}
+Let \emph{X} be a non-empty set. A subset \(\mathscr{F}\) of the power set of \emph{X} is called a 
+set system of \emph{X}
 
 \subsection{Partition}
 
-Let \emph{X} be a non-empty set. A subset \(\mathscr{F}\) of the power set of \emph{X} is called a partition if:
+Let \emph{X} be a non-empty set. A subset \(\mathscr{F}\) of the power set of \emph{X} is called a 
+partition if:
 
 \begin{enumerate}
 	
@@ -491,20 +494,20 @@ Let \emph{X} be a non-empty set. A subset \(\mathscr{F}\) of the power set of \e
 
 	      where \( J(R) := X / R \) is a bijection.
 
-	\item If \( F \) is a partition of \( X \), then we can define an equivalence relation \( R_F \) by:
+	\item If \emph{F} is a partition of \emph{X}, then we can define an equivalence relation \( R_F \) by:
 	      
 		  \[
 		      R_F := \{ (x, y) \in X \times X : \exists M \in F\ \text{such that } x, y \in M \}
 	      \]
 	      
-		  Then \( R_F \) is an equivalence relation on \( X \).
+		  Then \( R_F \) is an equivalence relation on \emph{X}.
 
 \end{itemize}
 
 
 \subsection{Family of Subsets Operations}
 
-Let \(\mathscr{F}\) be a system of sets (a family of subsets) on the set \( X \). We define:
+Let \(\mathscr{F}\) be a system of sets (a family of subsets) on the set \emph{X}. We define:
 
 \[
 	\bigcup_{M \in F} M := \bigcup F := \{ x \in X : \text{there exists } M \in F \text{ such that } x 
