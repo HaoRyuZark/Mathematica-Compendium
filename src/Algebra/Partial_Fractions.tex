@@ -15,12 +15,14 @@ into a sum of the form:
     \frac{A_1}{x - a_1} + \cdots + \frac{A_d}{x - a_d}
 \]
 
-We now show that this decomposition can always be achieved, under the assumption that the \(a_i\) are all different and \(N(x)\) is a polynomial of degree at most \(d - 1\).
+We now show that this decomposition can always be achieved, under the assumption that the \(a_i\) are 
+all different and \(N(x)\) is a polynomial of degree at most \(d - 1\).
 
 \subsubsection{Lemma 1}
 
 Let \(N(x)\) and \(D(x)\) be polynomials of degree \(n\) and \(d\), respectively, with \(n \leq d\). 
-Suppose that \(a\) is not a root of \(D(x)\). Then there exists a polynomial \(P(x)\) of degree \(< d\) and a number \(A\) such that:
+Suppose that \(a\) is not a root of \(D(x)\). Then there exists a polynomial \(P(x)\) of degree \(< d\) 
+and a number \(A\) such that:
 
 \[
     \frac{N(x)}{D(x)(x - a)} = \frac{P(x)}{D(x)} + \frac{A}{x - a}
@@ -47,7 +49,8 @@ We equate:
     \tilde{P}(z)z + A\tilde{D}(z) = \tilde{N}(z)
 \]
 
-Choosing \(A = \frac{\tilde{N}(0)}{\tilde{D}(0)}\), the constant terms match. The remainder has no constant term and is divisible by \(z\), so:
+Choosing \(A = \frac{\tilde{N}(0)}{\tilde{D}(0)}\), the constant terms match. The remainder has no 
+constant term and is divisible by \(z\), so:
 
 \[
     \tilde{P}(z)z = \tilde{N}(z) - A\tilde{D}(z)
@@ -88,7 +91,8 @@ Suppose that \(a\) is NOT a zero of \(D(x)\). Then there is a polynomial \(P(x)\
 numbers \(A_1, \dots, A_m\) such that
 
 \[
-    \frac{N(x)}{D(x) {(x-a)}^m} = \frac{P(x)}{D(x)} + \frac{A_1}{x-a} + \frac{A_2}{{(x-a)}^2} + \cdots + \frac{A_m}{{(x-a)}^m}
+    \frac{N(x)}{D(x) {(x-a)}^m} = \frac{P(x)}{D(x)} + \frac{A_1}{x-a} + \frac{A_2}{{(x-a)}^2} + \cdots + 
+    \frac{A_m}{{(x-a)}^m}
 \]
 
 \textbf{Proof:} 
@@ -105,47 +109,53 @@ polynomial \(\tilde{P}(z)\) of degree \(p < d\) and numbers \(A_1, \dots, A_m\) 
 or equivalently, such that
 
 \[
-    \tilde{P}(z)z^m + A_1 z^{m-1} \tilde{D}(z) + A_2 z^{m-2} \tilde{D}(z) + \cdots + A_{m-1} z \tilde{D}(z) + A_m \tilde{D}(z) = \tilde{N}(z)
+    \tilde{P}(z)z^m + A_1 z^{m-1} \tilde{D}(z) + A_2 z^{m-2} \tilde{D}(z) + \cdots + A_{m-1} z 
+    \tilde{D}(z) + A_m \tilde{D}(z) = \tilde{N}(z)
 \]
 
 Now look at the polynomial on the left-hand side. Every single term on the left-hand side,
-except for the very last one, \(A_m \tilde{D}(z)\), has at least one power of \(z\). So the constant term on
-the left-hand side is exactly the constant term in \(A_m \tilde{D}(z)\), which is \(A_m \tilde{D}(0)\). The constant
-term on the right-hand side is \(\tilde{N}(0)\). So the constant terms on the left and right-hand sides
-are the same if we choose \(A_m = \frac{\tilde{N}(0)}{\tilde{D}(0)}\). Recall that \(\tilde{D}(0) \neq 0\). 
-Now move \(A_m \tilde{D}(z)\) to the right-hand side.
+except for the very last one, \(A_m \tilde{D}(z)\), has at least one power of \(z\). So the constant 
+term on the left-hand side is exactly the constant term in \(A_m \tilde{D}(z)\), which is 
+\(A_m \tilde{D}(0)\). The constant term on the right-hand side is \(\tilde{N}(0)\). So the constant terms 
+on the left and right-hand sides are the same if we choose \(A_m = \frac{\tilde{N}(0)}{\tilde{D}(0)}\). 
+Recall that \(\tilde{D}(0) \neq 0\). Now move \(A_m \tilde{D}(z)\) to the right-hand side.
 
 \[
-    \tilde{P}(z)z^m + A_1 z^{m-1} \tilde{D}(z) + A_2 z^{m-2} \tilde{D}(z) + \cdots + A_{m-1} z \tilde{D}(z) = \tilde{N}(z) - A_m \tilde{D}(z)
+    \tilde{P}(z)z^m + A_1 z^{m-1} \tilde{D}(z) + A_2 z^{m-2} \tilde{D}(z) + \cdots + A_{m-1} z 
+    \tilde{D}(z) = \tilde{N}(z) - A_m \tilde{D}(z)
 \]
 
-The constant terms in \(\tilde{N}(z)\) and \(A_m \tilde{D}(z)\) are the same, so the right-hand side contains no
-constant term and the right-hand side is of the form \(\tilde{N}_1(z)z\) with \(\tilde{N}_1\) a polynomial of degree
-at most \(d + m - 2\). (Recall that \(\tilde{N}\) is of degree at most \(d + m - 1\) and \(\tilde{D}\) is of degree at most
-\(d\).) Divide the whole equation by \(z\).
+The constant terms in \(\tilde{N}(z)\) and \(A_m \tilde{D}(z)\) are the same, so the right-hand side 
+contains no constant term and the right-hand side is of the form \(\tilde{N}_1(z)z\) with \(\tilde{N}_1\) 
+a polynomial of degree at most \(d + m - 2\). (Recall that \(\tilde{N}\) is of degree at most 
+\(d + m - 1\) and \(\tilde{D}\) is of degree at most \(d\).) Divide the whole equation by \(z\).
 
 \[
-    \tilde{P}(z)z^{m-1} + A_1 z^{m-2} \tilde{D}(z) + A_2 z^{m-3} \tilde{D}(z) + \cdots + A_{m-1} \tilde{D}(z) = \tilde{N}_1(z)
+    \tilde{P}(z)z^{m-1} + A_1 z^{m-2} \tilde{D}(z) + A_2 z^{m-3} \tilde{D}(z) + \cdots + A_{m-1} 
+    \tilde{D}(z) = \tilde{N}_1(z)
 \]
 
 Now, we can repeat the previous argument. The constant term on the left-hand side, which
-is exactly \(A_{m-1} \tilde{D}(0)\) matches the constant term on the right-hand side, which is \(\tilde{N}_1(0)\) if we
-choose \(A_{m-1} = \frac{\tilde{N}_1(0)}{\tilde{D}(0)}\). With this choice of \(A_{m-1}\)
+is exactly \(A_{m-1} \tilde{D}(0)\) matches the constant term on the right-hand side, which is 
+\(\tilde{N}_1(0)\) if we choose \(A_{m-1} = \frac{\tilde{N}_1(0)}{\tilde{D}(0)}\). With this choice of 
+\(A_{m-1}\)
 
 \[
-    \tilde{P}(z)z^{m-1} + A_1 z^{m-2} \tilde{D}(z) + A_2 z^{m-3} \tilde{D}(z) + \cdots + A_{m-2} z \tilde{D}(z) = \tilde{N}_1(z) - A_{m-1} \tilde{D}(z) = \tilde{N}_2(z)z
+    \tilde{P}(z)z^{m-1} + A_1 z^{m-2} \tilde{D}(z) + A_2 z^{m-3} \tilde{D}(z) + \cdots + A_{m-2} z 
+    \tilde{D}(z) = \tilde{N}_1(z) - A_{m-1} \tilde{D}(z) = \tilde{N}_2(z)z
 \]
 
-With \(\tilde{N}_2\) a polynomial of degree at most \(d + m - 3\). Divide by \(z\) and continue. After \(m\) steps
-like this, we end up with
+With \(\tilde{N}_2\) a polynomial of degree at most \(d + m - 3\). Divide by \(z\) and continue. 
+After \(m\) steps like this, we end up with
 
 \[
     \tilde{P}(z)z = \tilde{N}_{m-1}(z) - A_1 \tilde{D}(z)
 \]
 
-After having chosen \(A_1 = \frac{\tilde{N}_{m-1}(0)}{\tilde{D}(0)}\). There is no constant term on the right side so that
-\(\tilde{N}_{m-1}(z) - A_1 \tilde{D}(z)\) is of the form \(\tilde{N}_m(z)z\) with \(\tilde{N}_m\) a polynomial of degree \(d - 1\). Choosing
-\(\tilde{P}(z) = \tilde{N}_m(z)\) completes the proof.
+After having chosen \(A_1 = \frac{\tilde{N}_{m-1}(0)}{\tilde{D}(0)}\). There is no constant term on the 
+right side so that \(\tilde{N}_{m-1}(z) - A_1 \tilde{D}(z)\) is of the form \(\tilde{N}_m(z)z\) with 
+\(\tilde{N}_m\) a polynomial of degree \(d - 1\). Choosing \(\tilde{P}(z) = \tilde{N}_m(z)\) completes 
+the proof.
 
 Now back to
 
@@ -153,15 +163,20 @@ Now back to
     \frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}}
 \]
 
-Apply Lemma 2, with \(D(x) = {(x - a_2)}^{n_2} \times \cdots \times {(x - a_d)}^{n_d}\), \(m = n_1\) and \(a = a_1\). It says
+Apply Lemma 2, with \(D(x) = {(x - a_2)}^{n_2} \times \cdots \times {(x - a_d)}^{n_d}\), \(m = n_1\) and 
+\(a = a_1\). It says
 
 \[
-    \frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}} = \frac{P(x)}{{(x-a_2)}^{n_2} \times \cdots \times {(x-a_d)}^{n_d}} + \frac{A_{1,1}}{x-a_1} + \frac{A_{1,2}}{{(x-a_1)}^2} + \cdots + \frac{A_{1,n_1}}{{(x-a_1)}^{n_1}}
+    \frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}} = \frac{P(x)}{{(x-a_2)}^{n_2} 
+    \times \cdots \times {(x-a_d)}^{n_d}} + \frac{A_{1,1}}{x-a_1} + \frac{A_{1,2}}{{(x-a_1)}^2} + \cdots + 
+    \frac{A_{1,n_1}}{{(x-a_1)}^{n_1}}
 \]
 
-Apply Lemma 2 a second time, with \(D(x) = {(x - a_3)}^{n_3} \times \cdots \times {(x - a_d)}^{n_d}\), \(N(x) = P(x)\),
-\(m = n_2\) and \(a = a_2\). And so on. Eventually, we end up with
+Apply Lemma 2 a second time, with \(D(x) = {(x - a_3)}^{n_3} \times \cdots \times {(x - a_d)}^{n_d}\), 
+\(N(x) = P(x)\), \(m = n_2\) and \(a = a_2\). And so on. Eventually, we end up with
 
 \[
-    \frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}} = \left[ \frac{A_{1,1}}{x-a_1} + \cdots + \frac{A_{1,n_1}}{{(x-a_1)}^{n_1}} \right] + \cdots + \left[ \frac{A_{d,1}}{x-a_d} + \cdots + \frac{A_{d,n_d}}{{(x-a_d)}^{n_d}} \right]
+    \frac{N(x)}{{(x-a_1)}^{n_1} \times \cdots \times {(x-a_d)}^{n_d}} = \left[ \frac{A_{1,1}}{x-a_1} + 
+    \cdots + \frac{A_{1,n_1}}{{(x-a_1)}^{n_1}} \right] + \cdots + \left[ \frac{A_{d,1}}{x-a_d} + \cdots + 
+    \frac{A_{d,n_d}}{{(x-a_d)}^{n_d}} \right]
 \]

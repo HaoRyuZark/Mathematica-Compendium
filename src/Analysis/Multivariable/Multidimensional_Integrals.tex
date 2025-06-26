@@ -49,56 +49,79 @@ smooth curve parametrized by \( \vec{r}(t) \), \( t \in [a, b] \).
 The \emph{line integral} of \( F \) along \( \gamma \) is:
 
 \[
-    \int_\gamma \langle \vec{F}(\vec{r}(t)), \frac{d\vec{r}(t)}{dt} \rangle dt = \int_a^b \langle \vec{F}(\vec{r}(t)), \frac{\vec{dr}}{dt} \rangle dt = \vec{F}(\vec{r}(b)) - \vec{F}(\vec{r}(a))
+    \int_\gamma \langle \vec{F}(\vec{r}(t)), \frac{d\vec{r}(t)}{dt} \rangle dt = 
+    \int_a^b \langle \vec{F}(\vec{r}(t)), \frac{\vec{dr}}{dt} \rangle dt = \vec{F}(\vec{r}(b)) 
+    - \vec{F}(\vec{r}(a))
 \]
 
-In the context of physics this integral measures the work done by the field \( \vec{F} \) along the path \( \gamma \), such as force over distance.
+In the context of physics this integral measures the work done by the field \( \vec{F} \) 
+along the path \( \gamma \), such as force over distance.
 \vspace{\baselineskip}
 
 \textbf{Example: Line Integral over a Vector Field}
 \vspace{\baselineskip}
 
-Let \( f(x, y) = x^2 + y^2 \), and define a vector field based on its gradient:
-
-\[
-    \vec{F}(x, y) = \nabla f(x, y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = (2x, 2y)
-\]
+Let \( f(x, y) = 2x + 2y \) be our vector field. 
+\vspace{\baselineskip}
 
 Let the curve \( C \) be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), 
 parametrized by:
 
 \[
-    \vec{r}(t) = (\cos t, \sin t), \quad t \in \left[0, \frac{\pi}{2}\right]
+    \vec{r}(t) = 
+    \begin{pmatrix}
+        x(t) \\ y(t)
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    \cos(t) \\ \sin(t)
+    \end{pmatrix}  
+    \quad t \in \left[0, \frac{\pi}{2}\right]
 \]
 
 We compute the line integral of \( \vec{F} \) along \( C \):
 
 \[
-    \int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} \langle\vec{F}(\vec{r}(t)) \vec{r}'(t) \rangle\, dt
+    \int_C \langle \vec{F}(\vec{r}(t)), \frac{d \vec{r}(t)}{dt}\rangle dt = 
+    \int_0^{\frac{\pi}{2}} \langle\vec{F}(\vec{r}(t)), \frac{d \vec{r}(t)}{dt} \rangle dt
 \]
 
-First, compute:
+First, compute \(\vec{F}(\vec{r}(t))\):
 
 \[
-    \vec{F}(\vec{r}(t)) = (2\cos t, 2\sin t), \quad \vec{r}\,'(t) = (-\sin t, \cos t)
+    \vec{F}(\vec{r}(t)) = 
+    \begin{pmatrix}
+        2\cos(t) \\ 
+        2\sin(t)
+    \end{pmatrix}
 \]
 
-Now compute the dot product:
+Then the tangent vector of \(\vec{r}(t)\):
 
 \[
-    \langle\vec{F}(\vec{r}(t)), \vec{r}\,'(t)\rangle = 2\cos t \cdot (-\sin t) + 2\sin t \cdot \cos t = -2\cos t \sin t + 2\cos t \sin t = 0
+    \frac{d \vec{r}(t)}{dt} = 
+    \begin{pmatrix}
+    -\sin(t) \\ 
+    \cos(t)
+    \end{pmatrix}
+\]
+
+Now compute the inner product:
+
+\[
+    \langle\vec{F}(\vec{r}(t)), \frac{d \vec{r}(t)}{dt}\rangle =
+    -2\cos(t)\sin(t) + \cos(t)2\sin(t) = 0
 \]
 
 Therefore, the line integral is:
 
-\[
-    \int_C \langle \vec{F}, d\vec{r}\rangle = \int_0^{\frac{\pi}{2}} 0 \, dt = 0
-\]
+\begin{align*}
+    &\int_C \langle \vec{F}, \frac{d\vec{r}}{dt}\rangle dt \\ 
+    &= \int_0^{\frac{\pi}{2}}  0 dt \\
+    &= 0
+\end{align*}
 
-The line integral of the gradient vector field \( \vec{F} = \nabla f \) over this curve is zero. 
-This is consistent with the fact that line integrals of gradient fields over 
-curves depend only on endpoints, and  \(f(1,0) = 1 \), \(f(0,1) = 1 \), so \( f(B) - f(A) = 0 \).
-
+The line integral of the gradient vector field \(f(x,y) = 2x + 2y \) over this curve is zero. 
 
 \subsubsection{Over Scalar field}
 
@@ -124,8 +147,8 @@ This formula comes from approximating the area of the squares under the curve wi
 and the arclength \(\varDelta s_k\), we will simplify to three dimensions for the sake
 of simplicity, but like seen before this works for \(n\) dimensions. 
 \(A_k = f(x_k, y_k) \varDelta s_k\), where 
-\(\varDelta s_k = \sqrt{(\varDelta s_k)^2 + (\varDelta y_k)^2} \). Now by using or formula for the arclength
-we already know, we get \(\|\vec{r}' (t)\| \, dt = ds\). 
+\(\varDelta s_k = \sqrt{(\varDelta s_k)^2 + (\varDelta y_k)^2} \). Now by using or formula 
+for the arclength we already know, we get \(\|\vec{r}' (t)\| dt = ds\). 
 
 \textbf{Example: Scalar Field}
 \vspace{\baselineskip}
@@ -144,15 +167,15 @@ This time or curve is \(y = x\) to the parametrized curve is \(\begin{pmatrix}
 \subsection{Line Integrals with respect to a specific variable}
 
 We are going to take another look at line integrals but from the perspective of just one variable and how 
-this affects the formulas we know. For the next explanation we will use only functions of two variables to keep the 
-examples simple.
+this affects the formulas we know. For the next explanation we will use only functions of two variables 
+to keep the examples simple.
 
 \subsubsection{Over Scalar Field with respect to \emph{x} or \emph{y}}
 
 Imagining how this works in not specially difficult. Imagine taking a line integral where we do not move 
-along the \(y\)-axis and only care about the plane \(xz\). Here our line integral only changes in the fact that in 
-the norm of our curve the component that was responsible for \(y\) will be set 0 and the \(ds\) changes to 
-the variable we are integrating with respect to. In this case \(dx\).
+along the \(y\)-axis and only care about the plane \(xz\). Here our line integral only changes in the 
+fact that in the norm of our curve the component that was responsible for \(y\) will be set 0 and the 
+\(ds\) changes to the variable we are integrating with respect to. In this case \(dx\).
 
 \[
     \int_{c} f(x,y)dx = \int_{c} f(g(t), h(t)) \sqrt{g'(t)^2}dt 
@@ -160,12 +183,12 @@ the variable we are integrating with respect to. In this case \(dx\).
 
 \subsubsection{Over Vector Field with respect to \emph{x} or \emph{y}}
 
-In the case of a field the story is different in the fact that now our output vectors change depending on the 
-variable we are choosing to left out.
+In the case of a field the story is different in the fact that now our output vectors change depending 
+on the variable we are choosing to left out.
 \vspace{\baselineskip}
 
-Now, given a field \(\vec{F}(x,y) = M(x,y)\imath + N(x,y)\jmath\) and the curve \(\vec{r}(t) = g(t)\imath + h(t)\jmath\). 
-The line integral of \(\vec{F}\) along \(C\) is 
+Now, given a field \(\vec{F}(x,y) = M(x,y)\imath + N(x,y)\jmath\) and the curve
+ \(\vec{r}(t) = g(t)\imath + h(t)\jmath\). The line integral of \(\vec{F}\) along \(C\) is 
 
 \[
     \int_\gamma \langle \nabla \vec{F}, \frac{\vec{r}}{dt} \rangle dt
@@ -211,7 +234,8 @@ Compute: \(\int_{a}^{b} \frac{x}{y} dy\)
 
 \subsection{Potential Function}
 
-A vector field \( \vec{F} : \Reals^n \to \Reals^n \) is called \emph{conservative} if there exists a scalar function \( \phi : \Reals^n \to \Reals \) such that:
+A vector field \( \vec{F} : \Reals^n \to \Reals^n \) is called \emph{conservative} if there exists a 
+scalar function \( \phi : \Reals^n \to \Reals \) such that:
 
 \[
     \vec{F} = \nabla \phi
@@ -226,14 +250,15 @@ The function \( \phi \) is then called a \emph{potential function} of \( \vec{F}
 
     \item The line integral of \( \vec{F} \) over any path depends only on the endpoints:
 
-    \[
-    \int_\gamma \langle \vec{F}, d\vec{r} \rangle = \phi(B) - \phi(A)
-    \]
+        \[
+            \int_\gamma \langle \vec{F}, d\vec{r} \rangle = \phi(B) - \phi(A)
+        \]
 
     \item The line integral over a closed path is zero:
-    \[
-    \oint_\gamma \langle \vec{F}, d\vec{r} \rangle = 0
-    \]
+
+        \[
+            \oint_\gamma \langle \vec{F}, d\vec{r} \rangle = 0
+        \]
 
     \item \( \vec{F} \) is conservative \( \Leftrightarrow \) \( \vec{F} \) has zero curl in a 
     simply connected region.
@@ -242,10 +267,13 @@ The function \( \phi \) is then called a \emph{potential function} of \( \vec{F}
 
 \subsection{Finding the Potential Function of a Vector Field}
 
-To find the potential function \( \phi(x, y) \) of a vector field \( \vec{F}(x, y) = (P(x, y), Q(x, y)) \), we must check if the field is conservative and then integrate accordingly. A vector field is conservative if there exists a scalar potential function \( \phi \) such that:
+To find the potential function \( \phi(x, y) \) of a vector field \( \vec{F}(x, y) = (P(x, y), Q(x, y)) \), 
+we must check if the field is conservative and then integrate accordingly. A vector field is conservative 
+if there exists a scalar potential function \( \phi \) such that:
 
 \[
-    \vec{F} = \nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y} \right)
+    \vec{F} = \nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y} 
+    \right)
 \]
 
 \textbf{Given:}
@@ -263,7 +291,8 @@ First, check if the field is conservative by verifying:
 \]
 
 \[
-    \frac{\partial Q}{\partial x} = \frac{\partial}{\partial x}\left(x^2 + \frac{1}{2\sqrt{y}}\right) = 2x
+    \frac{\partial Q}{\partial x} = \frac{\partial}{\partial x}\left(x^2 + \frac{1}{2\sqrt{y}}\right) 
+    = 2x
 \]
 
 Since \( \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \), the field is conservative.
@@ -305,13 +334,14 @@ Set this equal to \( Q(x, y) = x^2 + \frac{1}{2\sqrt{y}} \), so:
 Therefore, the potential function is:
 
 \[
-\phi(x, y) = x^2y + e^x + \sqrt{y} + C
+    \phi(x, y) = x^2y + e^x + \sqrt{y} + C
 \]
 
 
 \subsection{Double Integral over a Rectangular Region}
 
-Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \Reals^2 \). The double integral of a function \( f(x, y) \) over \( A \) is:
+Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \Reals^2 \). The double 
+integral of a function \( f(x, y) \) over \( A \) is:
 
 \[
     \iint_A f(x, y)\, dA = \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx
@@ -320,12 +350,14 @@ Let \( A = [x_0, x_1] \times [y_0, y_1] \) be a rectangular region in \( \Reals^
 For rectangular domains, the order of integration does not affect the result:
 
 \[
-    \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx = \int_{y_0}^{y_1} \int_{x_0}^{x_1} f(x, y)\, dx\, dy
+    \int_{x_0}^{x_1} \int_{y_0}^{y_1} f(x, y)\, dy\, dx = \int_{y_0}^{y_1} \int_{x_0}^{x_1} 
+    f(x, y)\, dx\, dy
 \]
 
 \subsection{Integration over Curvilinear Domains}
 
-If the region \( A \subset \Reals^2 \) is not rectangular, it is divided into subregions \( \Delta A_k \), and the integral is defined as the limit:
+If the region \( A \subset \Reals^2 \) is not rectangular, it is divided into subregions 
+\( \Delta A_k \), and the integral is defined as the limit:
 
 \[
     \iint_A f(x, y)\, dA = \lim_{n \to \infty} \sum_{k=1}^n f(x_k, y_k) \, \Delta A_k
@@ -343,7 +375,8 @@ Here, \( y \in [u(x), o(x)] \) describes the vertical bounds as functions of \( 
 \textbf{Example:}
 \vspace{\baselineskip}
 
-Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1\) and \(y\)-axis \(y = \sqrt{x}\)
+Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1\) and \(y\)-axis 
+\(y = \sqrt{x}\)
 
 \begin{center}
     \begin{tikzpicture}
@@ -372,8 +405,9 @@ Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1
     \end{tikzpicture}
 \end{center}
 
-First we are going to imagine slicing the area under this sector vertically along the \(x\)-axis from \(0\) up to \(1\) which
-is the volume of an Area under a curve that is represented by going along the \(y\)-axis.
+First we are going to imagine slicing the area under this sector vertically along the \(x\)-axis from 
+\(0\) up to \(1\) which is the volume of an Area under a curve that is represented by going along the 
+\(y\)-axis.
 
 \begin{align*}
     \int_{0}^{1}\int_{0}^{\sqrt{x}} 1 + x + y^2 dy dx \\
@@ -382,7 +416,8 @@ is the volume of an Area under a curve that is represented by going along the \(
     = \left| \frac{2}{3} x^{\frac{3}{2}} + \frac{4}{3} \frac{2}{5} x^{\frac{5}{2}} \right|_{0}^{1} = \frac{6}{5}
 \end{align*}
 
-If we choose the other way then we have an area with a fix \(y\) in the inside that goes from \(y^2\) to \(1\) with respect to \(x\).
+If we choose the other way then we have an area with a fix \(y\) in the inside that goes from \(y^2\) to 
+\(1\) with respect to \(x\).
 
 \[
     \int_{0}^{1}\int_{y^2}^{1} 1 + x + y^2 dx dy
@@ -390,8 +425,8 @@ If we choose the other way then we have an area with a fix \(y\) in the inside t
 
 \subsection{Changing the order of integration to solve tricky integrals}
 
-Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dy dx\) which is very hard to integrate, let us change the order
-to make it easier.
+Given \(\int_{0}^{8}\int_{\sqrt[3]{x}}^{2} \frac{1}{y^4 +1}dy dx\) which is very hard to integrate, 
+let us change the order to make it easier.
 
 \[
     \int_{0}^{2}\int_{0}^{y^3} \frac{1}{y^4 +1}dx dy
@@ -406,8 +441,8 @@ The steps are the same as in the previous Example.
     \item Write the same expression without bounds and change the order of the differentials
 
 
-    \item Imagine slicing the area underneath vertically for \(x\) and horizontally for \(y\) with their respective bounds corresponding
-    to the perspective.
+    \item Imagine slicing the area underneath vertically for \(x\) and horizontally for \(y\) with their 
+          respective bounds corresponding to the perspective.
 
     \item Write the new integral with the opposite of order of integration
 
@@ -447,7 +482,7 @@ The steps are the same as in the previous Example.
                 fill opacity=0.3
             ] fill between[of=A and B];
 
-            % Plot both functions
+            
             \addplot[color=black, domain=0:8, samples=200]{pow(x, 1/3)};
 
             \addplot[color=blue, dashed, domain=0:8, samples=200]{2};
@@ -489,7 +524,8 @@ Given a vector-valued function
 the \emph{Jacobian matrix} of \(f\) is the \(m \times n\) matrix of all first-order partial derivatives:
 
 \[
-    J_f(x) = \begin{bmatrix}
+    J_f(x) = 
+    \begin{bmatrix}
     \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\
     \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\
     \vdots & \vdots & \ddots & \vdots \\
@@ -529,25 +565,26 @@ and provides important information about the local behavior of the function. For
 
 \end{itemize}
 
-When we change our systems of coordinates it is important
-that our differential make sense in the original system we were.
-Because of that, we take the determinant with respect to the new
-coordinates to tell us the scaling factor that we have to use for our
-result to make sense.
+When we change our systems of coordinates it is important that our differential make sense in the original 
+system we were. Because of that, we take the determinant with respect to the new coordinates to tell us 
+the scaling factor that we have to use for our result to make sense.
 \vspace{\baselineskip}
 
-\textbf{Use Cases}
+\textbf{Use Cases:}
 \vspace{\baselineskip}
 
 The Jacobian matrix and its determinant appear in many areas, including:
 
 \begin{itemize}
   
-    \item \textbf{Change of variables in integrals:} The absolute value of the Jacobian determinant is used to adjust the measure when changing coordinates in multiple integrals.
+    \item \textbf{Change of variables in integrals:} The absolute value of the Jacobian determinant is 
+          used to adjust the measure when changing coordinates in multiple integrals.
   
-    \item \textbf{Nonlinear optimization:} The Jacobian is crucial for computing gradients and performing techniques like Newton's method in multiple dimensions.
+    \item \textbf{Nonlinear optimization:} The Jacobian is crucial for computing gradients and 
+          performing techniques like Newton's method in multiple dimensions.
   
-    \item \textbf{Differential equations:} Stability analysis of dynamical systems often involves evaluating the Jacobian at equilibrium points.
+    \item \textbf{Differential equations:} Stability analysis of dynamical systems often involves 
+          evaluating the Jacobian at equilibrium points.
 
 \end{itemize}
 
@@ -558,45 +595,71 @@ The Jacobian matrix and its determinant appear in many areas, including:
     \item \emph{Cartesian Coordinates}:
 
     \begin{itemize}
-        \item Definition: The position of a point is given by \((x, y, z)\) in a 3D space along orthogonal axes.
+        
+        \item Definition: The position of a point is given by \((x, y, z)\) in a 3D space along 
+              orthogonal axes.
+        
         \item Jacobian: 
-        \[
-        J_{\text{Cartesian}} = 1dx
-        \]
+        
+            \[
+                J_{\text{Cartesian}} = 1dx
+            \]
+    
     \end{itemize}
 
     \item \emph{Polar Coordinates (2D)}:
 
     \begin{itemize}
-        \item Definition: The position of a point in a plane is given by \((r, \theta)\), where \(r\) is the radial distance and \(\theta\) is the angle from the positive \(x\)-axis.
-        \item Jacobian:
+
+        \item Definition: The position of a point in a plane is given by \((r, \theta)\), where \(r\) 
+              is the radial distance and \(\theta\) is the angle from the positive \(x\)-axis.
+        
+              \item Jacobian:
+        
         \[
-        J_{\text{Polar}} = rd rd\theta
+            J_{\text{Polar}} = rd rd\theta
         \]
+
     \end{itemize}
 
     \item \emph{Cylindrical Coordinates}:
 
     \begin{itemize}
-        \item Definition: The position of a point in 3D space is given by \((r, \theta, z)\), where \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \(z\) is the height along the \(z\)-axis.
+        
+        \item Definition: The position of a point in 3D space is given by \((r, \theta, z)\), where 
+              \((r, \theta)\) are the polar coordinates in the \(xy\)-plane and \(z\) is the height along 
+              the \(z\)-axis.
+        
         \item Jacobian:
-        \[
-        J_{\text{Cylindrical}} = r\ dr d\theta dz
-        \]
+        
+            \[
+                J_{\text{Cylindrical}} = r\ dr d\theta dz
+            \]
+
     \end{itemize}
 
     \item \emph{Spherical Coordinates}:
+    
     \begin{itemize}
+        
         \item Definition: The position of a point in 3D space is given by \((\rho, \theta, \phi)\), where:
+        
         \begin{itemize}
+            
             \item \(\rho\) is the distance from the origin,
+            
             \item \(\theta\) is the azimuthal angle (in the \(xy\)-plane from the positive \(x\)-axis),
+            
             \item \(\phi\) is the polar angle (from the positive \(z\)-axis).
+        
         \end{itemize}
+        
         \item Jacobian:
-        \[
-        J_{\text{Spherical}} = \rho^2 \sin (\phi) d\rho d\theta d\phi
-        \]
+               
+              \[
+                    J_{\text{Spherical}} = \rho^2 \sin (\phi) d\rho d\theta d\phi
+              \]
+            
     \end{itemize}
 
 \end{itemize}
@@ -622,20 +685,22 @@ The Jacobian of the transformation gives the area element:
 \emph{Integral:}
 
 \[
-    \iint_D f(x, y)\, dA = \int_{\varphi_0}^{\varphi_1} \int_{0}^{R(\varphi)} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
+    \iint_D f(x, y)\, dA = \int_{\varphi_0}^{\varphi_1} \int_{0}^{R(\varphi)} f(r \cos \varphi, r 
+    \sin \varphi)\, r\, dr\, d\varphi
 \]
 
 \subsubsection{Origin of the Area}
 
-When we divide our circle in the sections we get both a difference in then angle and the radius which generate another area.
-The difference \(\Delta A =\) Area of big wedge \(-\) Area of small wedge
+When we divide our circle in the sections we get both a difference in then angle and the radius which 
+generate another area. The difference \(\Delta A =\) Area of big wedge \(-\) Area of small wedge
 \vspace{\baselineskip}
 
-\emph{Radius: }\(r_k + \frac{\Delta r}{2}\) for the big wedge and \(r_k - \frac{\Delta r}{2}\) for the small wedge
+\emph{Radius: }\(r_k + \frac{\Delta r}{2}\) for the big wedge and \(r_k - \frac{\Delta r}{2}\) for the 
+small wedge
 \vspace{\baselineskip}
 
-\emph{Angle: }\(\frac{\Delta \theta}{2 \pi}\) which is the angle of the fraction of the circle because the formula for the area is \(r^2 \pi\)
-and the whole circle would be \(2\pi\)
+\emph{Angle: }\(\frac{\Delta \theta}{2 \pi}\) which is the angle of the fraction of the circle 
+because the formula for the area is \(r^2 \pi\) and the whole circle would be \(2\pi\)
 \vspace{\baselineskip}
 
 \emph{Final Formula for the difference in the Area}
@@ -652,7 +717,8 @@ and the whole circle would be \(2\pi\)
 Which multiplied by the function value and by taking the limit of these sections we get that the volume:
 
 \[
-    V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r \Delta r \Delta \theta
+    V = \int_{\theta_1}^{\theta_2} \int_{r_1 (\theta)}^{r_2 (\theta)} f(r, \theta) r \Delta r \Delta 
+    \theta
 \]
 
 \textbf{Example:}
@@ -667,13 +733,15 @@ Then
 \]
 
 \[
-    = \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} \frac{{(1 - \sin\theta)}^3}{3} d\theta = \frac{5 \pi}{3}
+    = \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} 
+    \frac{{(1 - \sin\theta)}^3}{3} d\theta = \frac{5 \pi}{3}
 \]
 
 
 \subsection{Improper Integrals over Unbounded Regions}
 
-If the domain of integration is unbounded (e.g., the entire plane \( \Reals^2 \)), the double integral is defined via a limit process:
+If the domain of integration is unbounded (e.g., the entire plane \( \Reals^2 \)), the double integral is 
+defined via a limit process:
 
 \[
     \iint_{\Reals^2} f(x, y)\, dx\, dy := \lim_{M_1, M_2 \to \infty} \lim_{N_1, N_2 \to \infty}
@@ -683,7 +751,8 @@ If the domain of integration is unbounded (e.g., the entire plane \( \Reals^2 \)
 Often, using polar coordinates simplifies such cases, reducing multiple limits to one:
 
 \[
-    \iint_{\Reals^2} f(x, y)\, dx\, dy = \int_0^{2\pi} \int_0^{\infty} f(r \cos \varphi, r \sin \varphi)\, r\, dr\, d\varphi
+    \iint_{\Reals^2} f(x, y)\, dx\, dy = \int_0^{2\pi} \int_0^{\infty} f(r \cos \varphi, r \sin \varphi)\, 
+    r\, dr\, d\varphi
 \]
 
 
@@ -730,7 +799,8 @@ In practice, evaluate:
     \iiint_V f(x, y, z)\, dz\, dy\, dx,
 \]
 
-with limits determined by the geometry of the volume. The order of integration may be rearranged to simplify computation.
+with limits determined by the geometry of the volume. The order of integration may be rearranged to 
+simplify computation.
 
 \[
     \int_{x=a}^{x=b}\int_{y=g_1(x)}^{y=g_2(x)} \int_{f_1(x,y)}^{f_2(x,y)} dz dy dx
@@ -799,7 +869,8 @@ Now we have to find the limits of integration for
 using our constraint and our original functions.
 
 \[
-    \int_{x=a}^{x=b}\int_{y=-\sqrt{\frac{3}{2} - x^2}}^{\sqrt{\frac{3}{2} -x^2}} \int_{x^2 + y^3}^{3-x^2-y^2} dz dy dx
+    \int_{x=a}^{x=b}\int_{y=-\sqrt{\frac{3}{2} - x^2}}^{\sqrt{\frac{3}{2} -x^2}} 
+    \int_{x^2 + y^3}^{3-x^2-y^2} dz dy dx
 \]
 
 Here \(z\) means the height which is just the output
@@ -821,7 +892,8 @@ Let a coordinate transformation be defined by:
 Then the triple integral transforms as:
 
 \[
-    \iiint_{(x, y, z)} f(x, y, z)\, dx\, dy\, dz = \iiint_{(u, v, w)} f(x(u, v, w), y(u, v, w), z(u, v, w)) \cdot \left| \det J \right|\, du\, dv\, dw
+    \iiint_{(x, y, z)} f(x, y, z)\, dx\, dy\, dz = \iiint_{(u, v, w)} f(x(u, v, w), y(u, v, w), 
+    z(u, v, w)) \cdot \left| \det J \right|\, du\, dv\, dw
 \]
 
 where \( J \) is the \emph{Jacobian matrix} of the transformation:
@@ -859,7 +931,8 @@ The Jacobian determinant is:
 Thus, the triple integral in cylindrical coordinates becomes:
 
 \[
-    \iiint f(x, y, z)\, dx\, dy\, dz = \iiint f(r \cos \varphi, r \sin \varphi, z)\, r\, dr\, d\varphi\, dz
+    \iiint f(x, y, z)\, dx\, dy\, dz = \iiint f(r \cos \varphi, r \sin \varphi, z)\, r\, dr\, d\varphi\, 
+    dz
 \]
 
 \subsubsection{Calculating the center of mass with triple integrals}

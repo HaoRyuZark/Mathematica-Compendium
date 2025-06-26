@@ -10,25 +10,42 @@ These axioms are known as the \emph{Peano Axioms}. The first 4 axioms define equ
 the set \( \Naturals \).
 
 \begin{enumerate}[label=\Roman*.]
+
 	\item For every \( x \in \Naturals \), we have \( x = x \).\hfill (Reflexivity)
+	
 	\item For every \( x, y \in \Naturals \), if \( x = y \) then \( y = x \).\hfill (Symmetry)
-	\item For every \( x, y, z \in \Naturals \), if \( x = y \) and \( y = z \) then \( x = z \).\hfill (Transitivity)
-	\item For all \( x, y \), if \( x \in \Naturals \) and \( x = y \), then \( y \in \Naturals \).\hfill (Closure of Equality)
+	
+	\item For every \( x, y, z \in \Naturals \), if \( x = y \) and \( y = z \) then \( x = z \).\hfill 
+	      (Transitivity)
+	
+	\item For all \( x, y \), if \( x \in \Naturals \) and \( x = y \), then \( y \in \Naturals \).\hfill 
+	      (Closure of Equality)
+
 \end{enumerate}
 
 The remaining 5 axioms define the structure of \( \Naturals \):
 
 \begin{enumerate}[label=\Roman*.]
 	\setcounter{enumi}{4}
+
 	\item \( 1 \in \Naturals \)
+	
 	\item If \( x \in \Naturals \), then the successor \( S(x) \in \Naturals \).
+	
 	\item There is no \( x \in \Naturals \) such that \( S(x) = 1 \).
+	
 	\item For all \( x, y \in \Naturals \), if \( S(x) = S(y) \), then \( x = y \).
+	
 	\item Let \( P(x) \) be a statement about the natural number \( x \). If:
+	
 		\begin{itemize}
+	
 			\item \( P(1) \) is true, and
+	
 			\item for all \( n \in \Naturals \), if \( P(n) \) is true, then \( P(S(n)) \) is also true,
+	
 		\end{itemize}
+	
 		then \( P(x) \) is true for all \( x \in \Naturals \).\hfill (Mathematical Induction)
 \end{enumerate}
 
@@ -40,23 +57,29 @@ As shorthand, we denote:
 
 \subsection{Order in Fields}
 
-An \emph{ordered field} is a field \( F \) equipped with a total order \( < \) that is compatible with the field operations \( + \) and \( \cdot \). That is, the order satisfies both algebraic and ordering properties.
+An \emph{ordered field} is a field \( F \) equipped with a total order \( < \) that is compatible with 
+the field operations \( + \) and \( \cdot \). That is, the order satisfies both algebraic and ordering 
+properties.
 
 \subsubsection{Order Axioms for Fields}
 
-A field \( F \) is called an \emph{ordered field} if it satisfies the following properties for all \( a, b, c \in F \):
+A field \( F \) is called an \emph{ordered field} if it satisfies the following properties for all 
+\( a, b, c \in F \):
 
 \begin{enumerate}[label=\Roman*.]
-    \item \emph{Trichotomy:} Exactly one of the following holds:
-    \[
-    a < b, \quad a = b, \quad a > b
-    \]
+    
+	\item \emph{Trichotomy:} Exactly one of the following holds:
+ 
+		  \[
+ 	   			a < b, \quad a = b, \quad a > b
+    	   \]
 
     \item \emph{Transitivity:} If \( a < b \) and \( b < c \), then \( a < c \).
 
     \item \emph{Additive Compatibility:} If \( a < b \), then \( a + c < b + c \).
 
     \item \emph{Multiplicative Compatibility:} If \( 0 < a \) and \( 0 < b \), then \( 0 < ab \).
+
 \end{enumerate}
 
 These properties ensure that arithmetic operations respect the order structure.
@@ -64,18 +87,28 @@ These properties ensure that arithmetic operations respect the order structure.
 \subsubsection{Consequences of the Order Axioms}
 
 \begin{itemize}
-    \item \( a < b \Rightarrow -b < -a \)
-    \item \( a < b \land c < 0 \Rightarrow ac > bc \)
-    \item Squares are always non-negative: \( a^2 \ge 0 \)
-    \item The order is total: any two elements are comparable
+
+	\item \( a < b \Rightarrow -b < -a \)
+
+	\item \( a < b \land c < 0 \Rightarrow ac > bc \)
+
+	\item Squares are always non-negative: \( a^2 \ge 0 \)
+
+	\item The order is total: any two elements are comparable
+
 \end{itemize}
 
 \subsubsection{Examples of Ordered Fields}
 
 \begin{itemize}
-    \item \( \Rationals \): Rational numbers with the usual order
-    \item \( \Reals \): Real numbers with the usual order
-    \item \( \Complex \): Complex numbers are \textbf{not} an ordered field, since \( i^2 = -1 < 0 \) would violate positivity of squares
+
+	\item \( \Rationals \): Rational numbers with the usual order
+
+	\item \( \Reals \): Real numbers with the usual order
+
+	\item \( \Complex \): Complex numbers are \textbf{not} an ordered field, since \( i^2 = -1 < 0 \) 
+	      would violate positivity of squares
+
 \end{itemize}
 
 \subsection{Propositions and Proofs}
@@ -84,15 +117,17 @@ These properties ensure that arithmetic operations respect the order structure.
 
 \textbf{Proof:} 
 
-We will prove this by contradiction. Assume \( n \ne m \) and \( S(n) = S(m) \). By Axiom 8, we have \( n = m \), 
-which is a contradiction. Therefore, \( S(n) \ne S(m) \).
+We will prove this by contradiction. Assume \( n \ne m \) and \( S(n) = S(m) \). 
+By Axiom 8, we have \( n = m \), which is a contradiction. Therefore, \( S(n) \ne S(m) \).
 
 \subsubsection{Proposition 2: \texorpdfstring{\text{For any} \(n \in \Naturals,\ n \ne S(n)\)}{ For any n in N, n!= S (n)}}
 
 \textbf{Proof:} 
 
 \(M = \{n \in \Naturals \| n \ne S(n) \}\ \)
-By \(1 \ne S(n)\ \) for any \(n \in \Naturals\), this implies that 1 is part of the set \(M\). This implies that \(S(n) \ne S(S(n)) \implies S(n) \in M\ \) By Axiom 9 \(M = \Naturals\)
+
+By \(1 \ne S(n)\ \) for any \(n \in \Naturals\), this implies that 1 is part of the set \(M\). 
+This implies that \(S(n) \ne S(S(n)) \implies S(n) \in M\ \) By Axiom 9 \(M = \Naturals\)
 
 \subsubsection{Proposition 3: \texorpdfstring{\(n \ne 1\ \exists m \in \Naturals \mid n = S(m)\)}{n!= 1, exists m in N | n = S (m)}}
 
@@ -119,14 +154,18 @@ For any pair n, m \(\in \Naturals\) there is a unique way to define
 \]
 
 \begin{enumerate}
+	
 	\item \textbf{Base Case:} \(n + 1 = S(n)\)
+
 	\item \textbf{Inductive Step:} \(n + S(m) = S(n + m) \iff S(n + m)\)
+
 \end{enumerate}
 
 \textbf{Uniqueness:} 
 \vspace{\baselineskip}
 
-Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \Naturals | A(n,m) = B(n, m)\}\). Then
+Suppose: \textit{A} \& \textit{B} satisfy our conditions. Fix n and then let \(M = \{ m \in \Naturals | 
+A(n,m) = B(n, m)\}\). Then
 
 \[
 	A(n,1) = S(n) = B(n,1) \implies 1 \in M
@@ -145,22 +184,28 @@ by Axiom 9 we know that \(M = \Naturals\) and A = B
 \textbf{Construction:} For \(n = 1\) Define \(A(n, m) = S(m)\)
 
 \begin{enumerate}
+	
 	\item \(A(n, 1) = S(n) = S(1)\)
+	
 	\item \(A(n, S(m)) = S(A(n, m)) = S(S(m))\)
+
 \end{enumerate}
 
 Define: \(A(S(n), S(m)) = S(A(n, m))\)
 
 \begin{enumerate}
+
 	\item \(A(S(n), 1) = S(A(n, 1)) = S(S(n))\)
+
 	\item \(A(S(n), S(m)) = S(A(n, m)) = S(S(m))\)
+
 \end{enumerate}
 
 \textbf{Commutativity of Addition:}
 \vspace{\baselineskip}
 
-The proposition says \(n + m = m + n\) for any \(n, m \in \Naturals\). We will prove this by induction on \(m\).
-Fix n and consider \(M = \{ n \in \Naturals | A(n, m) = A(n, m)\}\)
+The proposition says \(n + m = m + n\) for any \(n, m \in \Naturals\). We will prove this by 
+induction on \(m\). Fix n and consider \(M = \{ n \in \Naturals | A(n, m) = A(n, m)\}\)
 
 Now recall that \(A(n, 1) = S(n)\)
 \vspace{\baselineskip}
@@ -176,4 +221,5 @@ also \(A(n , k) = 1 + k \implies 1 + m = S(m) \implies 1 + m = m + 1 \implies 1 
 Suppose: \(n \in \Naturals \implies n + m = m + n\) or \(A(n, m) = A(m, n)\)
 
 By construction \(A(S(n), m) = S(A(n, m))\) and by definition
-\(A(S(n), m) = S(A(n, m)) = A(m, S(n)) = S(n) + m =  m + S(n) \implies S(n) \in M \implies \text{by induction } M = \Naturals\).
+\(A(S(n), m) = S(A(n, m)) = A(m, S(n)) = S(n) + m =  m + S(n) \implies S(n) \in M \implies 
+\text{by induction } M = \Naturals\).

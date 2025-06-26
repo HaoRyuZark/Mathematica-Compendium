@@ -2,9 +2,16 @@
 \section{Fundamental Theorem of Arithmetic}
 
 \begin{itemize}
-	\item The Fundamental Theorem of Arithmetic says that every integer greater than 1 can be factored uniquely into a product of primes.
-	\item Euclid’s lemma says that if a prime divides a product of two numbers, it must divide at least one of the numbers.
-	\item The least common multiple \([a, b]\) of nonzero integers \(a\) and \(b\) is the smallest positive integer divisible by both \(a\) and \(b\).
+
+	\item The Fundamental Theorem of Arithmetic says that every integer greater than 1 can be factored 
+		 uniquely into a product of primes.
+	
+	\item Euclid’s lemma says that if a prime divides a product of two numbers, it must divide at least 
+		  one of the numbers.
+	
+	\item The least common multiple \([a, b]\) of nonzero integers \(a\) and \(b\) is the smallest positive 
+	      integer divisible by both \(a\) and \(b\).
+
 \end{itemize}
 
 \subsection{Fundamental Theorem of Arithmetic}
@@ -15,13 +22,15 @@ Every integer greater than 1 can be written in the form
 	p_1^{n_1}p_2^{n_2} \cdots p_k^{n_k}
 \]
 
-Where \(n_i \geq 0\) and the \(p_i\) are distinct primes. The factorization is unique, except possibly for the order of the factors.
+Where \(n_i \geq 0\) and the \(p_i\) are distinct primes. The factorization is unique, except possibly for 
+the order of the factors.
 \vspace{\baselineskip}
 
 \textbf{Example.}
 
 \[
-	4312 = 2 \cdot 2156 = 2 \cdot 2 \cdot 1078 = 2 \cdot 2 \cdot 2 \cdot 539 = 2 \cdot 2 \cdot 2 \cdot 7 \cdot 77 = 2 \cdot 2 \cdot 2 \cdot 7 \cdot 7 \cdot 11
+	4312 = 2 \cdot 2156 = 2 \cdot 2 \cdot 1078 = 2 \cdot 2 \cdot 2 \cdot 539 = 2 \cdot 2 \cdot 2 \cdot 7 
+	\cdot 77 = 2 \cdot 2 \cdot 2 \cdot 7 \cdot 7 \cdot 11
 \]
 
 That is,
@@ -64,7 +73,8 @@ For general \(n > 2\): Assume the result is true for \(n-1\). Suppose \(p \mid a
 Group as \((a_1a_2 \cdots a_{n-1})a_n\).
 \vspace{\baselineskip}
 
-By the \(n=2\) case, either \(p \mid a_n\) or \(p \mid a_1a_2 \cdots a_{n-1}\), and by induction, \(p \mid a_i\) for some \(i\).
+By the \(n=2\) case, either \(p \mid a_n\) or \(p \mid a_1a_2 \cdots a_{n-1}\), and by induction, 
+\(p \mid a_i\) for some \(i\).
 
 \QED
 
@@ -90,8 +100,8 @@ Suppose:
 With all \(p_i\) and \(q_i\) distinct primes.
 \vspace{\baselineskip}
 
-Since \(p_1\) divides the LHS, it divides the RHS. So \(p_1 \mid q_i^{n_i}\) for some \(i\), hence \(p_1 = q_i\).
-Reorder so \(p_1 = q_1\). Then:
+Since \(p_1\) divides the LHS, it divides the RHS. So \(p_1 \mid q_i^{n_i}\) for some \(i\), hence 
+\(p_1 = q_i\).Re-order so \(p_1 = q_1\). Then:
 
 If \(m_1 > n_1\), divide both sides by \(q_1^{n_1}\):
 
@@ -102,13 +112,15 @@ If \(m_1 > n_1\), divide both sides by \(q_1^{n_1}\):
 But then \(p_1\) divides LHS but not RHS, contradiction. So \(m_1 = n_1\). Cancel and repeat.
 \vspace{\baselineskip}
 
-Eventually, all \(p_i\) match with some \(q_i\), and the exponents are equal. So the factorizations are the same up to order.
+Eventually, all \(p_i\) match with some \(q_i\), and the exponents are equal. So the factorizations 
+are the same up to order.
 
 \QED
 
 \subsection{Least Common Multiple}
 
-The least common multiple of \(a\) and \(b\), denoted \([a, b]\), is the smallest positive integer divisible by both.
+The least common multiple of \(a\) and \(b\), denoted \([a, b]\), is the smallest positive integer 
+divisible by both.
 \vspace{\baselineskip}
 
 \textbf{Example:}

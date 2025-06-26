@@ -2,45 +2,63 @@
 \section{Logarithms}
 
 The \emph{Logarithm} of a number \(x\) 
-with base \(b\) is the exponent to which the base must be raised to produce that number. It is denoted as:
+with base \(b\) is the exponent to which the base must be raised to produce that number. It is 
+denoted as:
 
 \[
     \log_b(x) = y \iff b^y = x
 \]
 
-where \(b > 0\), \(b \neq 1\), and \(x > 0\).
+Where \(b > 0\), \(b \neq 1\), and \(x > 0\).
 
 \[
     \log_2(8) = 3 \quad \text{because} \quad 2^3 = 8
 \]
 
-We can also approximate a logarithm by dividing our target \(x\) by the basis \(b\) repeatedly until we get \(1\) or less.
+We can also approximate a logarithm by dividing our target \(x\) by the basis \(b\) repeatedly until 
+we get \(1\) or less.
 
 \subsection{Properties of Logarithms}
+
 \begin{itemize}
-  \item \(\log_b(xy) = \log_b(x) + \log_b(y)\)
-  \item \(\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)\)
-  \item \(\log_b(x^k) = k \cdot \log_b(x)\)
-  \item \(\log_b(b) = 1\)
-  \item \(\log_b(1) = 0\)
-  \item \(\log_{b^k}(x^w) = \frac{1}{k} \cdot \log_b(x)\)
-  \item \(\log_b\left(\frac{1}{x}\right) = -\log_b(x)\)
-  \item \(\log_b(b^x) = x\)
-  \item \(\log_b(x) = \frac{\log_k(x)}{\log_k(b)}\) for any positive \(k \neq 1\)
-  \item \(e^{\ln(x)} = x\)
-  \item If \(0 < a < 1\) then \(\ln(a)\) is a negative number. 
+
+    \item \(\log_b(xy) = \log_b(x) + \log_b(y)\)
+
+    \item \(\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)\)
+
+    \item \(\log_b(x^k) = k \cdot \log_b(x)\)
+
+    \item \(\log_b(b) = 1\)
+
+    \item \(\log_b(1) = 0\)
+
+    \item \(\log_{b^k}(x^w) = \frac{1}{k} \cdot \log_b(x)\)
+
+    \item \(\log_b\left(\frac{1}{x}\right) = -\log_b(x)\)
+
+    \item \(\log_b(b^x) = x\)
+
+    \item \(\log_b(x) = \frac{\log_k(x)}{\log_k(b)}\) for any positive \(k \neq 1\)
+
+    \item \(e^{\ln(x)} = x\)
+
+    \item If \(0 < a < 1\) then \(\ln(a)\) is a negative number. 
+
 \end{itemize}
 
 \subsection{Fundamental Identity of Logarithms}
+
 \[
-a^{\log_a(x)} = x
+    a^{\log_a(x)} = x
 \]
 
 \subsection{Change of Basis Formula}
+
 \[
-\log_b(x) = \frac{\log_k(x)}{\log_k(b)}
+    \log_b(x) = \frac{\log_k(x)}{\log_k(b)}
 \]
-where \(k\) is any positive number different from 1.
+
+Where \(k\) is any positive number different from 1.
 
 \subsection{The Chain Rule}
 \[
@@ -50,31 +68,33 @@ where \(k\) is any positive number different from 1.
 \subsection{The derivative of the Natural Logarithm}
 
 \[
-f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
 \]
 
 Let \(f(x) = \ln(x)\), then
 
 \begin{align*}
-&f'(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}\\
-&= f'(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}\\
-&= f'(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}\\
-&= f'(x) = \lim_{h \to 0} \ln{\left(1 + \frac{h}{x}\right)}^{\frac{1}{h}}
+    &f'(x) = \lim_{h \to 0} \frac{\ln(x + h) - \ln(x)}{h}\\
+    &= f'(x) = \lim_{h \to 0} \frac{\ln\left(\frac{x + h}{x}\right)}{h}\\
+    &= f'(x) = \lim_{h \to 0} \frac{\ln\left(1 + \frac{h}{x}\right)}{h}\\
+    &= f'(x) = \lim_{h \to 0} \ln{\left(1 + \frac{h}{x}\right)}^{\frac{1}{h}}
 \end{align*}
  
 Now let \(n = \frac{h}{x}\)
 
 \begin{align*}
-f'(x) &= \lim_{n \to 0} \ln{\left(1 + n\right)}^{\frac{x}{h} \frac{1}{x}}\\
-f'(x) &= \lim_{n \to 0} \frac{1}{x} \ln{\left(1 + n\right)}^{\frac{1}{n}}\\
-f'(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} {(1 + n)}^{\frac{1}{n}}\right)\\
-f'(x) &= \frac{1}{x}
+    f'(x) &= \lim_{n \to 0} \ln{\left(1 + n\right)}^{\frac{x}{h} \frac{1}{x}}\\
+    f'(x) &= \lim_{n \to 0} \frac{1}{x} \ln{\left(1 + n\right)}^{\frac{1}{n}}\\
+    f'(x) &= \frac{1}{x} \ln \left(\lim_{n \to 0} {(1 + n)}^{\frac{1}{n}}\right)\\
+    f'(x) &= \frac{1}{x}
 \end{align*}
 
 Therefore, the derivative of the natural logarithm is:
+
 \[
-\frac{d}{dx} \ln(x) = \frac{1}{x}
+    \frac{d}{dx} \ln(x) = \frac{1}{x}
 \]
+
 \QED
 
 \subsection{Demonstration of the Properties}
@@ -84,10 +104,11 @@ Therefore, the derivative of the natural logarithm is:
 Let \(a^n a^m = a^{n + m}\) and \(a^n = x\) and \(a^m = y\) then
 
 \[
-\log_a x = n \text{ and } \log_a y = m \rightarrow \log_a (xy) = n + m
+    \log_a x = n \text{ and } \log_a y = m \rightarrow \log_a (xy) = n + m
 \]
+
 \[
-\log_a xy = \log_a x + \log_a y
+    \log_a xy = \log_a x + \log_a y
 \]
 
 \QED
@@ -95,17 +116,21 @@ Let \(a^n a^m = a^{n + m}\) and \(a^n = x\) and \(a^m = y\) then
 \subsubsection{Quotient}
 
 Let \(\frac{a^n}{a^m} = a^{n - m}\) and \(a^n = x\) and \(a^m = y\) then like in the previous proof
+
 \[
-\log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y
+    \log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y
 \]
+
 \QED 
 
 \subsubsection{Power}
 
 Let \({(a^n)}^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
+
 \[
-\log_x y = m \text{ and } \log_a x = n \text{ thus, } \log_a y = (\log_a x )m
+    \log_x y = m \text{ and } \log_a x = n \text{ thus, } \log_a y = (\log_a x )m
 \]
+
 \QED
 
 \subsubsection{Power Rule General Case:}
@@ -113,9 +138,9 @@ Let \({(a^n)}^m = a^{nm}\) and \(a^n = x\) and \(a^{nm} = y\)
 Let \({(a^n)}^m = b^x\) then \(\log_{a^n} b^x = m\) now let us manipulate the original expression
 
 \begin{align*}
-\log_a {(a^n)}^m &= \log_a b^x\\
-nm \log_a a &= x \log_a b\\
-m = \frac{x}{n} \log_a b &=  \log_{a^n} b^x 
+    \log_a {(a^n)}^m &= \log_a b^x\\
+    nm \log_a a &= x \log_a b\\
+    m = \frac{x}{n} \log_a b &=  \log_{a^n} b^x 
 \end{align*}
 
 \QED

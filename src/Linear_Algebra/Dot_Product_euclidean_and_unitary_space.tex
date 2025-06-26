@@ -3,8 +3,8 @@
 
 \subsection{Scalar Product}
 
-Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V \to K\) 
-is called a inner product (or inner product) if the following conditions are satisfied:
+Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V 
+\to K\) is called an inner product (or inner product) if the following conditions are satisfied:
 \vspace{\baselineskip}
 
 \emph{Symmetry}
@@ -12,11 +12,11 @@ is called a inner product (or inner product) if the following conditions are sat
 For all \(a, b \in V\):
 
 \[
-\langle a, b \rangle = 
-\begin{cases}
-\langle b, a \rangle & \text{if } K = \Reals, \\
-\overline{\langle b, a \rangle} & \text{if } K = \Complex.
-\end{cases}
+    \langle a, b \rangle = 
+    \begin{cases}
+    \langle b, a \rangle & \text{if } K = \Reals, \\
+    \overline{\langle b, a \rangle} & \text{if } K = \Complex.
+    \end{cases}
 \]
 
 \emph{Linearity in the First Argument}
@@ -24,11 +24,13 @@ For all \(a, b \in V\):
 For all \(a, b, c \in V\):
 
 \[
-\langle a, b + c \rangle = \langle a, b \rangle + \langle a, c \rangle
+    \langle a, b + c \rangle = \langle a, b \rangle + \langle a, c \rangle
 \]
+
 and
+
 \[
-\langle a + b, c \rangle = \langle a, c \rangle + \langle b, c \rangle.
+    \langle a + b, c \rangle = \langle a, c \rangle + \langle b, c \rangle.
 \]
 
 \emph{Homogeneity in the First Argument}
@@ -36,11 +38,11 @@ and
 For all \(\alpha \in K\), we have:
 
 \[
-\langle \alpha a, b \rangle = \alpha \langle a, b \rangle = 
-\begin{cases}
-\langle a, \alpha b \rangle & \text{if } K = \Reals, \\
-\langle a, \alpha b \rangle & \text{if } K = \Complex.
-\end{cases}
+    \langle \alpha a, b \rangle = \alpha \langle a, b \rangle = 
+    \begin{cases}
+    \langle a, \alpha b \rangle & \text{if } K = \Reals, \\
+    \langle a, \alpha b \rangle & \text{if } K = \Complex.
+    \end{cases}
 \]
 
 \emph{Positive Definiteness}
@@ -48,16 +50,18 @@ For all \(\alpha \in K\), we have:
 For all \(a \in V \setminus \{0\}\):
 
 \[
-\langle a, a \rangle > 0,
-\]
-and
-\[
-\langle 0, 0 \rangle = 0.
+    \langle a, a \rangle > 0,
 \]
 
-It also can be interpreted as a linear transformation that takes a vector and maps it to a real number via matrix 
-vector multiplication. Also, a more practical way of thinking about the \emph{dot product} is the question: How 
-much are two vectors pointing in the same direction?
+and
+
+\[
+    \langle 0, 0 \rangle = 0.
+\]
+
+It also can be interpreted as a linear transformation that takes a vector and maps it to a real number
+ via matrix vector multiplication. Also, a more practical way of thinking about the 
+ \emph{dot product} is the question: How much are two vectors pointing in the same direction?
 
 \subsection{Trigonometric Definition}
 
@@ -67,15 +71,16 @@ you need to take \(x = \cos(\theta)h\), which is the value \(\alpha\) in our pro
 Here we add \(\|a\|\|b\|\) to make this function linear.
 
 \[
-\langle a, b \rangle = \|a\| \|b\| \cos (\theta)
+    \langle a, b \rangle = \|a\| \|b\| \cos (\theta)
 \]
 
 \subsection{Standard Scalar Product for Complex Number}
 
-Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \Complex^n \). The standard inner product is defined by
+Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \Complex^n \). The standard 
+inner product is defined by
 
 \[
-\langle a, b \rangle := \sum_{i=1}^n a_i b_i.
+    \langle a, b \rangle := \sum_{i=1}^n a_i b_i.
 \]
 
 \subsection{Scalar Product on \texorpdfstring{\( C[a, b] \)}{}}
@@ -83,32 +88,40 @@ Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \Co
 Let \( f, g \in C[a, b] \). The inner product on \( C[a, b] \) is defined by
 
 \[
-\langle f, g \rangle := \int_a^b f(x) \cdot g(x) \, dx.
+    \langle f, g \rangle := \int_a^b f(x) \cdot g(x) \, dx.
 \]
 
 \subsection{Euclidean and Unitary Vector Spaces}
 
-A real vector space equipped with a inner product is called a \textit{Euclidean vector space}, while a complex vector space with a inner product is called a \textit{unitary vector space}.
+A real vector space equipped with an inner product is called a \emph{Euclidean vector space}, while a 
+complex vector space with an inner product is called a \emph{unitary vector space}.
 
 \subsection{Norms in Vector Spaces}
 
-Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cdot \| : V \to \Reals \) is called a norm if and only if the following conditions hold:
+Let \( V \) be a \( K \)-vector space and \( a, b \in V \). A function \( \| \cdot \| : V \to \Reals \) 
+is called a norm if and only if the following conditions hold:
 
 \begin{itemize}
+
     \item \( \|a\| \in \Reals \),
+
     \item \( \|a\| \geq 0 \),
+
     \item \( \|a\| = 0 \iff a = 0 \),
+
     \item \( \forall \lambda \in K, \ \| \lambda a \| = |\lambda| \| a \| \),
+
     \item \( \| a + b \| \leq \| a \| + \| b \| \).
+
 \end{itemize}
 
 \subsubsection{Induced Norm by a Scalar Product}
 
-As in the special case \( V = \Reals^n \), a inner product induces a norm.
+As in the special case \( V = \Reals^n \), an inner product induces a norm.
 In a unitary (or Euclidean) space, the inner product induces a (standard) norm defined by
 
 \[
-\| \cdot \| = \sqrt{\langle \cdot, \cdot \rangle}.
+    \| \cdot \| = \sqrt{\langle \cdot, \cdot \rangle}.
 \]
 
 \subsection{Cauchy-Schwarz Inequality in Unitary Vector Spaces}
@@ -116,54 +129,288 @@ In a unitary (or Euclidean) space, the inner product induces a (standard) norm d
 In all unitary vector spaces \( V \), the Cauchy-Schwarz inequality holds:
 
 \[
-| \langle a, b \rangle | \leq \| a \| \| b \| \quad \forall a, b \in V.
+    | \langle a, b \rangle | \leq \| a \| \| b \| \quad \forall a, b \in V.
 \]
 
 \subsubsection{Proof of the Triangle Inequality}
 
 Both sides of the triangle inequality are real and, in particular, non-negative. 
-Therefore, it is sufficient to prove that the squares of both sides satisfy the desired inequality, i.e., we need to show:
+Therefore, it is sufficient to prove that the squares of both sides satisfy the 
+desired inequality, i.e., we need to show:
 
 \[
-\langle a + b, a + b \rangle \leq {(\|a\| + \|b\|)}^2.
+    \langle a + b, a + b \rangle \leq {(\|a\| + \|b\|)}^2.
 \]
 
 First, we expand the left-hand side:
 
 \[
-\langle a + b, a + b \rangle = \langle a, a \rangle + \langle a, b \rangle + \langle b, a \rangle + \langle b, b \rangle.
+    \langle a + b, a + b \rangle = \langle a, a \rangle + \langle a, b \rangle + \langle b, a \rangle + 
+    \langle b, b \rangle.
 \]
 
 Since \( \langle b, a \rangle = \langle a, b \rangle \), we have:
 
 \[
-\langle a, b \rangle + \langle b, a \rangle = 2 \, \text{Re} \langle a, b \rangle.
+    \langle a, b \rangle + \langle b, a \rangle = 2 \, \text{Re} \langle a, b \rangle.
 \]
 
-Now, we know that the absolute value of a complex number is always greater than or equal to its real part, so:
+Now, we know that the absolute value of a complex number is always greater than or equal to its 
+real part, so:
 
 \[
-2 \, \text{Re} \langle a, b \rangle \leq 2 |\langle a, b \rangle|.
+    2 \, \text{Re} \langle a, b \rangle \leq 2 |\langle a, b \rangle|.
 \]
 
 Using the Cauchy-Schwarz inequality, we can further bound this by:
 
 \[
-2 \, \text{Re} \langle a, b \rangle \leq 2 \|a\| \|b\|.
+    2 \, \text{Re} \langle a, b \rangle \leq 2 \|a\| \|b\|.
 \]
 
 Thus, we have:
 
 \[
-\langle a + b, a + b \rangle \leq \langle a, a \rangle + 2 \|a\| \|b\| + \langle b, b \rangle.
+    \langle a + b, a + b \rangle \leq \langle a, a \rangle + 2 \|a\| \|b\| + \langle b, b \rangle.
 \]
 
-Using the definition of the norm, \( \|a\|^2 = \langle a, a \rangle \) and \( \|b\|^2 = \langle b, b \rangle \), we obtain:
+Using the definition of the norm, \( \|a\|^2 = \langle a, a \rangle \) and \( \|b\|^2 = \langle b, b 
+\rangle \), we obtain:
 
 \[
-\langle a + b, a + b \rangle \leq \|a\|^2 + 2 \|a\| \|b\| + \|b\|^2.
+    \langle a + b, a + b \rangle \leq \|a\|^2 + 2 \|a\| \|b\| + \|b\|^2.
 \]
 
 This is exactly the expansion of \( {(\|a\| + \|b\|)}^2 \), which completes the proof.
+
 \QED
+
+\subsection{Definiteness of Inner Products}
+
+The concept of the \emph{inner product} plays a major rule in linear algebra, and there are various 
+manifestations of this element. We are going to see how inner products are constructed based on the 
+properties we are interested in. Those being linearity for the columns, symmetry and positive definiteness.
+\vspace{\baselineskip}
+
+Let us start with a matrix \(A \in \Reals^{n \times n}\) and a map 
+\((\centerdot , \centerdot)_A \Reals^n \times \Reals^n : \to \Reals \) more specific 
+\((x,y)_A := \langle x, Ay\rangle\) using the standard Euclidean inner product.
+\vspace{\baselineskip}
+
+For our first property, the linearity; it is granted for every matrix \(A = (a_1, a_2, \dots, a_n)\) 
+because of the rules of matrix-vector multiplication. For example for the basis vectors \(e_i, e_j\) 
+we get 
+
+\[
+    (e_i, e_j)_A = \langle e_i, Ae_j\rangle = e_{i}^{T} A e_j = e_{i}^{T} a_j = a_{ij} 
+\]
+
+Therefore, \((e_i, e_j)_A = (e_j, e_i)_A \iff a_{ij} = a_{ji}\). This means that \(A\) has to be symmetric.
+As a side note, the choice for the Euclidean inner product for the structure of our map is optional. Any
+kind of inner product would also do the job. This implies that each inner product can be described via a 
+matrix.
+
+\subsection{Definiteness and Quadratic Forms}
+
+Given a symmetric \(A \in \Reals^{n \times n}\) then:
+
+\begin{enumerate}
+    
+    \item The map \(x \to \langle x, Ax\rangle\) is called the \emph{Quadratic Form}
+    
+    \item \(A\) is \emph{positive definite} if \(\langle x, Ax \rangle > 0 \forall x \in \Reals^n 
+          \backslash \{0\}\)
+
+    \item \(A\) is \emph{negative definite} if \(\langle x, Ax \rangle < 0 \forall x \in \Reals^n 
+          \backslash \{0\}\)
+    
+    \item \(A\) is \emph{positive semidefinite} if \(\langle x, Ax \rangle \ge 0 \forall x \in \Reals^n 
+          \backslash \{0\}\)
+
+    \item \(A\) is \emph{negative semidefinite} if \(\langle x, Ax \rangle \le 0 \forall x \in \Reals^n 
+          \backslash \{0\}\)
+
+    \item \(A\) is \emph{indefinite} if \(\exists x,y \in \Reals^n  \backslash \{0\}: \langle x, Ax\rangle 
+          < 0 \land \langle y, Ay \rangle > 0 \)
+    
+\end{enumerate}
+
+\((\centerdot , \centerdot)_A\) is only an inner product if \(A\) is symmetric and positive definite.
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Given is the term \(x_{1}^{2} - x_{3}^{2} + x_1 x_4\), show that it is a quadratic form.
+\vspace{\baselineskip}
+
+First write the formula for the quadratic form \(\langle x, Ax\rangle\) where \(A\) is real symmetric 
+matrix
+
+\[
+    \left\langle 
+    \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{pmatrix}
+    ,
+    \begin{pmatrix}
+        a & b & c & d \\
+        e & f & g & h \\
+        i & j & k & l \\
+        m & n & o & q  
+    \end{pmatrix}
+    \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{pmatrix}
+    \right\rangle
+\]
+
+\[
+    \left\langle 
+    \begin{pmatrix}
+        x_1 \\ x_2 \\ x_3 \\ x_4
+    \end{pmatrix}
+    ,
+    \begin{pmatrix}
+        ax_1  + bx_2 + cx_3 + dx_4\\ 
+        ex_1  + fx_2 + gx_3 + hx_4\\ 
+        ix_1  + jx_2 + kx_3 + lx_4\\ 
+        mx_1  + nx_2 + ox_3 + px_4 
+    \end{pmatrix}
+    \right\rangle
+\]
+
+
+\[
+    x_1(ax_1  + bx_2 + cx_3 + dx_4) + 
+    x_2(ex_1  + fx_2 + gx_3 + hx_4) + 
+    x_3(ix_1  + jx_2 + kx_3 + lx_4) +  
+    x_4(mx_1  + nx_2 + ox_3 + px_4) 
+\]
+
+Now we have to compare the coefficients with the original expression 
+\(x_{1}^{2} + (0)x_{2}^{2}  - x_{3}^{2} + x_1 x_4\).
+
+\[
+    ax_{1}^{2}  + bx_1x_2 + cx_1x_3 + dx_4x_4 + 
+    ex_2x_1  + fx_{2}^2 + gx_2x_3 + hx_2x_4 + 
+    ix_3x_1  + jx_3x_2 + kx_{3}^{2} + lx_3x_4) +
+    mx_4x_1  + nx_4x_2 + ox_4x_3 + px_{4}^{2} 
+\]
+
+Note that the only quadratic terms present in the expression are \(x_{1}^{2}\) and \(-x_{3}^{2}\) while the 
+others are zero. This means that they have to disappear in the main diagonal. Also, the only term 
+that \(x_1\) is also multiplying is \(x_4\) therefore all the others have to be zero like all 
+other non-quadratic terms which are not present. Thus 
+
+\[
+    \begin{pmatrix}
+        1 & 0 & 0 & d \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        m & 0 & 0 & 0  
+    \end{pmatrix}
+\]
+
+Now the question is what are \(d\) and \(m\) because \(A\) has to be symmetric, but they can not be 1 
+because then we would have \(2x_1 x_4\). Because of that, we will take the only available option 
+\(\frac{1}{2}\).
+
+\[
+    \begin{pmatrix}
+        1 & 0 & 0 & \frac{1}{2} \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        \frac{1}{2} & 0 & 0 & 0  
+    \end{pmatrix}
+\]
+
+And now we are done.
+
+\subsection{Minors}
+
+For a matrix \(A \in \Reals^{n \times n}\) the starting from the left \(k \times k\)-submatrices 
+\(A_k = (a_{ij})_{i,j=1}^{k}\) of \(A\). The \(D_k  = \det(A_k)\) is called a \emph{main minor} or 
+\emph{minor} of \(A\).
+
+\subsubsection{Minors and Definiteness}
+
+Let \(A\) be real, square symmetric matrix, then
+
+\begin{itemize}
+    
+    \item \(A\) is positive definite if all main minors are positive.
+
+    \item \(A\) is negative definite if all main minors are negative.
+
+    \item \(A\) is positive semidefinite if all main minors are greater or equal to zero but not all zero. 
+
+    \item \(A\) is negative semidefinite if all main minors are less or equal to zero but not all zero.
+
+    \item \(A\) is indefinite if all main minors are equal to zero.
+
+\end{itemize}
+
+\subsection{Connection to Symmetric Matrices}
+
+For a real symmetric matrix \(A\) the following statements are equivalent.
+
+\begin{itemize}
+    
+    \item \(A\) is positive definite.
+
+    \item All eigenvalues of \(A\) are positive.
+
+    \item All main minors of \(A\) are positive.
+
+\end{itemize}
+
+Continuing, \(A\) is positive semidefinite, if all eigenvalues of \(A\) are not negative and the 
+main minors are all not positive.
+
+\subsection{Sign of the \texorpdfstring{\(D_k\)}{}}
+
+For the main minors \(D_k\) of a negative definite matrix it applies that 
+
+\[
+    (-1)^k D_k = (-1)^k \det(A_k) = \det(-A_k) > 0,
+\]
+
+because \(-A\) is positive definite.
+
+\subsection{Negative Quadratic Form}
+
+If \(A\) is negative definite then 
+
+\[
+    -\langle x, Ax \rangle = \langle x -Ax \rangle > 0
+\]
+
+\subsection{Theorems for Non-squares matrices}
+
+\subsubsection{Theorem I}
+
+Given \(m \ge n\) and \(A \in \Reals^{m \times n}\) with \(rg(A) = n\). Then \(A^T A\) is positive 
+definite. For \(rg(A) < n\) is \(A^T A\) positive semidefinite.
+\vspace{\baselineskip}
+
+\textbf{Proof:}
+
+Because of \((A^T A)^T = A^T A\) is \(A^T A\) symmetric. Therefore, it applies that 
+
+\[
+    \langle x, A^T A x \rangle = x^T A^T A x  = (Ax)^T Ax = \langle Ax, Ax \rangle = \|Ax\|^2 \ge 0 
+\]
+
+Also, \(A^T A\) is positive semidefinite, and it is also invertible for \(rg(A) = n\). If there were an 
+\(x \ne 0\) such that \(\|Ax\| = 0\) this would imply that \(Ax = 0\), also \(A^T (Ax) = 0\) therefore 
+\(x \in ker(A^T A)\). And \(A^T A\) would not be invertible. Finally, 
+\(\langle x, A^T Ax \rangle > 0 \forall x \ne 0\),  and \(A^T A\) is symmetric and positive definite.
+
+\subsection{Theorem II}
+
+Given \(m \le n\) and \(A \in \Reals^{m \times n}\). Then \(A^T A\) is positive semidefinite and even 
+positive definite if \(rg(A) = m\).
+
+
 

@@ -89,18 +89,27 @@ An equation \(F(x,y,y',\dots) = 0\) is a called an equation of \emph{separable v
 be written in one of the following forms:
 
 \begin{itemize}
+    
     \item \(\frac{dy}{dx} = f(x) g(y)\)
+    
     \item \(\frac{dy}{dx} = \frac{f(x)}{g(y)}\)
+    
     \item \(\frac{dy}{dx} = \frac{g(y)}{f(x)}\)
+
 \end{itemize}
 
 \subsubsection{Steps to solve a ODE of separable variables}
 
 \begin{enumerate}
+
     \item Solve for the derivative
+
     \item Check that it is indeed an ODE of separable variables
+
     \item Separate the variables
+
     \item Integrate with respect to the independent variable
+
 \end{enumerate}
 
 \textbf{Example:}
@@ -794,12 +803,18 @@ Now let us substitute in our differential equation.
 \end{align*}
 
 \subsubsection{Steps for solving Constant Coefficients problems}
+
 \begin{enumerate}
+
     \item Find the \emph{homogeneous} solution for \(y' + ay = 0\). \(y_h\) is going
-    to have a free parameter.
+          to have a free parameter.
+    
     \item Find a partial solution for \(y' + ay = g(x)\)
+    
     \item Use \(y = y_h + y_p\)
+    
     \item If you have an IVP solve for the free parameter in \(y_h\)
+
 \end{enumerate}
 
 Now we have to find a way to solve for \(y_p\) and \(y_h\)
@@ -902,10 +917,15 @@ The best way is to tackle down each of the types of functions separately.
 \vspace{\baselineskip}
 
 An alternative to way of using this method is to
+
 \begin{enumerate}
+
     \item Find the homogeneous solution.
+
     \item Multiply both sides of the equation by it.
+
     \item Integrate
+
 \end{enumerate}
 
 This will give you the exact same result and is faster.
@@ -1280,6 +1300,90 @@ and therefore, \(F(x,y) = 6x^2y + 3x + \hat{c} = 0\).
     y = \frac{\hat{c} - 3x}{6x^2} 
 \]
 
+\subsubsection{Euler Multipliers}
+
+Sometimes a seemingly \emph{exact} differential equations is not possible to solve do the partial 
+derivatives of \(P(x,y)\) and \(Q(x,y)\) not being equal. An approach to this problem are the so-called 
+\emph{Euler Multipliers}, which are some factor \(\mu(x) \text{ or } \mu(y)\) that when found. Can 
+help solve the differential equation.
+
+\[
+    P(x,y)\mu(x) + Q(x,y)y'\mu(x) = 0
+\]
+
+or 
+
+\[
+    P(x,y)\mu(y) + Q(x,y)y'\mu(y) = 0
+\]
+
+The steps for solving this kind of problems are
+
+\begin{enumerate}
+    
+    \item Choose either \(\mu(x)\) or \(\mu(y)\) and multiply the whole equation by it.
+    
+    \item Find the new partial derivatives of \(P\) and \(Q\).
+    
+    \item Set both partial equals and solve for \(\mu\) in the newly created differential equation 
+          using the necessary method. Also make sure that the solution has no zeroes. This is necessary 
+          because otherwise, we would have multiplied our original equation times zero.
+    
+    \item Substitute \(\mu\) with the solution. And if now both partials are equal then you can now 
+          solve the exact differential equation. If not try with another \(mu\) using the other variable.
+          And if this also does not work then the differential equation can not be solved. More specific, 
+          if \(\mu(x)\) depends on \(y\) and \(\mu(y)\) on \(x\) then there is no way to make the 
+          differential equation exact.
+
+\end{enumerate}
+
+\textbf{Example:}
+
+\[
+    3y^2 + 2xy y' = 0, x > 0 
+\]
+
+Here we have \(P(x,y) = 3y^2\) and \(Q(x,y) = 2xy\), whose partial derivatives are different
+
+\[
+    \frac{\partial P}{\partial y} = 6y \ne 2y = \frac{\partial Q}{\partial x}
+\]
+
+Now we try to use a multiplier \(\mu(x)\).
+
+\[
+    P_2 (x,y) = 3y^2 \mu(x) \text{ and } Q_2 (x,y)  = 2xy\mu(x)
+\]
+
+Now by taking the partials again
+
+\begin{align*}
+    \frac{\partial P_2}{\partial y} &= 6y\mu(x)\\  
+    \frac{\partial Q_2}{\partial x} &= 2y(\mu(x) + x\mu'(x))  
+\end{align*}
+
+Now by setting them equal \(6y\mu(x) = 2y(\mu(x) + x\mu'(x))\) we can solve a new differential equation 
+to find \(\mu(x)\) and \(\mu'(x)\).  
+
+\begin{align*}
+    6y\mu(x) &= 2y(\mu(x) + x\mu'(x)) \\
+    3\mu(x) &= \mu(x) + x\mu'(x) \\
+    2\mu(x) &= x\mu'(x)\\
+    2\mu &= x \frac{d\mu}{dx} \\
+    \int \frac{2}{x}dx &= \int \frac{d\mu}{\mu} \\
+    2\ln(x) &= \ln(\mu) \\
+    \mu &= x^2
+\end{align*}
+
+Now finally we check if now the partials are equal, which in this case is true.
+
+\begin{align*}
+    \frac{\partial P_2}{\partial y} &= 6yx^2\\  
+    \frac{\partial Q_2}{\partial x} &= 6yx^2  
+\end{align*}
+
+Now the equation can be solved like normal.
+
 \subsection{Constant Coefficients ODE}
 
 Consider the second-order linear differential equation with constant coefficients:
@@ -1547,22 +1651,34 @@ with only two integrals to solve.
 \subsubsection{First Order}
 
 \begin{itemize}
+
     \item Separable \(\Rightarrow\) Separation of Variables.
+
     \item Form \(y' = f(ax + by(x) + c)\) \(Rightarrow\) Substitution \(z = ax + by(x) + c\) and \(f(z)\).
+
     \item Form \(y' = \frac{y}{x}\) \(\Rightarrow\) Substitution \(z = \frac{y}{x}\)
+
     \item Linear \(\Rightarrow\) Integrating Factor or Variation of Constants.
+
     \item Bernoulli (Non-linear) \(\Rightarrow\) Bernoulli Substitution.
+
     \item Autonomous \(\Rightarrow\) Equilibrium Analysis.
+
     \item Non-homogeneous \(\Rightarrow\) Undetermined Coefficients or integrating factor.
+
 \end{itemize}
 
 
 \subsubsection{Second Order and higher}
 
 \begin{itemize}
+
     \item Constant Coefficients \(\Rightarrow\) Guess \(e^{rx}\).
+
     \item Non-homogeneous \(\Rightarrow\) Undetermined Coefficients.
+
     \item Linear \(\Rightarrow\) Series Solutions.
+
 \end{itemize}
 
 \subsubsection{Exact}
@@ -1631,10 +1747,10 @@ roots and repeated roots.
 We can also use substitution to solve for one of the \(y_i\), which are functions of \(x\) like
 
 \begin{align*}
-y_1 ' &= ay_1 + by_2\\
-y_2 ' &= cy_1 + dy_2\\
-by_2 &= y_1' - ay_1\\
-y_2 & \frac{y_1' - ay_1}{b}
+    y_1 ' &= ay_1 + by_2\\
+    y_2 ' &= cy_1 + dy_2\\
+    by_2 &= y_1' - ay_1\\
+    y_2 & \frac{y_1' - ay_1}{b}
 \end{align*}
 
 

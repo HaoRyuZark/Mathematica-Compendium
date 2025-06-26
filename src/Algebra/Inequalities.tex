@@ -1,0 +1,113 @@
+\newpage
+\section{Inequalities with and without Absolute Value}
+
+\emph{Inequalities} are like normal \emph{equalities} but with ranges of solutions 
+instead of one particular solution. The inequalities without absolute value are straightforward 
+to solve, just like equations with the particularity of when dividing both sides by a negative number 
+the relation \(<, > \ge, \le\) has to be converted to its opposite.
+\vspace{\baselineskip}
+
+The with absolute value is similar but here we have to account for different cases depending on the 
+expression inside the \(\| \circ \|\).
+\vspace{\baselineskip}
+
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Solve \(\|x + 1 \| \le 10 + \|2x - 6\|\)
+\vspace{\baselineskip}
+
+\textbf{Main cases:}
+
+\[
+    F_1: x + 1 \ge 0 \implies x \ge 1
+\]
+
+\[
+    F_2: x + 1 < 0 \implies x < -1
+\]
+
+\textbf{Subcases:}
+
+\[
+    F_{1,1}: 2x - 6 \ge 0  \implies x \ge 3
+\]
+
+\begin{align*}
+    x + 1 &\ge 10 + 2x - 6 \\
+    x &\ge -3 \\
+    \mathcal{L} &= [3; \infty )
+\end{align*}
+
+
+\[
+    F_{1,2}: 2x - 6 < 0  \implies x < 3
+\]
+
+\begin{align*}
+    x + 1 &\ge 10 - (2x - 6) \\
+    x &\ge 5 \\
+    \mathcal{L} &= (-\infty; 3]
+\end{align*}
+
+\[
+    F_{2,1}: 2x - 6 \ge 0 \implies x \ge 3
+\]
+
+\begin{align*}
+   -(x + 1 ) &\ge 10 + 2x - 6 \\
+    x &\ge \frac{-5}{3} \\
+    \mathcal{L} &= \emptyset
+\end{align*}
+
+\[
+    F_{2,2}: 2x - 6 < 0 \implies x < 3
+\]
+
+\begin{align*}
+   -(x + 1 ) &\ge 10 - (2x - 6) \\
+    x &\le 17 \\
+    \mathcal{L} &= (- \infty, 3)
+\end{align*}
+
+\textbf{Union of the solutions:}
+
+\[
+    \mathcal{L} = 
+    (-\infty; 3] \cup 
+    [3; \infty ) \cup 
+    \emptyset    \cup
+    (- \infty, 3) = (- \infty, \infty)
+\]
+
+\subsection{Reciprocal Inequality}
+
+\[
+    a < b < c \implies \frac{1}{a} > \frac{1}{b} > \frac{1}{c}
+\]
+
+\subsection{Bernoulli Inequality}
+
+Given \(x \in \Reals, x > -1, x \ne 0\). Then for \(n \in \Naturals, n \ge 2\)
+
+\[
+    (1 + x)^n > 1 + nx
+\]
+
+\textbf{Proof:}
+
+For \(n = 2\)
+
+\[
+    (1 + x)^2 > 1 + 2x
+\]
+
+Then for \(n + 1\) with \(n > 2\)
+
+\begin{align*}
+    (1 + x)^{n + 1} &> 1 + (n + 1)x \\
+    (1 + x)^n &> 1 + (n + 1)x
+\end{align*}
+
+\QED
+

@@ -53,6 +53,15 @@ the characteristic polynomial of \(A\).
     \mathcal{X}_A = \det (A\vec{v} - \lambda I) = 0
 \]
 
+\subsubsection{Eigenspace}
+
+The \emph{Eigenspace} of an eigenvalue are the solution of the homogeneous system \(A - \lambda I\).
+
+\[
+    Eig(f;\lambda) = ker(A - \lambda I)
+\]
+
+
 \subsection{Theorems of Eigenvalues and Eigenvectors}
 
 \subsubsection{Theorem I}
@@ -76,10 +85,6 @@ For \(\lambda \ne \gamma \quad Eig(f;\lambda) \cap Eig(f;\gamma) = \{0\}\).
 Eigenvectors with different eigenvalues are linearly independent.
 
 \subsubsection{Theorem V}
-
-\(Eig(f;\lambda) = ker(A - \lambda E)\)
-
-\subsubsection{Theorem VI}
 
 Given the following eigenvalues\(\lambda_1, \dots, \lambda_n\), then the 
 determinant of the matrix \(A\) is given by 
@@ -115,7 +120,7 @@ Or by using the definition of the diagonal matrix:
 
 \QED
 
-\subsubsection{Theorem VII}
+\subsubsection{Theorem VI}
 
 For all linear isometric map \(f\) with some eigenvalue \(\lambda\) it applies that
 
@@ -129,7 +134,7 @@ Also, \(\lambda = 1\).
 An example for this are rotation matrices which map to the same space and preserve the length and 
 whose eigenvalue are complex with a modulus of length of one.
 
-\subsubsection{Theorem VIII}
+\subsubsection{Theorem VII}
 
 For some eigenvector \(x\) with an eigenvalue \(\lambda\) of \(A\). It applies that
 
@@ -344,28 +349,61 @@ into a diagonal matrix.
 
 A matrix is diagonalizable if and only if the eigenvectors of it are linear independent.
 
-\subsubsection{Theorem I}
+\subsubsection{Complex Diagonalization}
 
 Given a matrix \(A \in \Complex^{n \times n}\) with \(n\) distinct eigenvalues then is \(A\)
 diagonalizable. But this does not guaranty the diagonalizibility for \(\Reals\).
 
-\subsubsection{Theorem II}
+\subsubsection{Geometric and Algebraic Multiplicity}
 
 Given a matrix \(A \in \Complex^{n \times n}\) with \(\lambda\) as eigenvalue. The multiple occurrences 
 of the zero \(\lambda\) of \(\mathcal{X}_A\) is called \emph{algebraic multiplicity} \(a(\lambda)\). 
 Continuing, \(g(\lambda):= dim(Eig(A;\lambda))\) is the \emph{geometrical multiplicity} of \(\lambda\).
 \vspace{\baselineskip}
 
-Also, for an eigenvalue \(\lambda\) with \(a(\lambda) > g(\lambda)\) then is \(A\) not diagonalizable.
+Also, \(A\) is diagonalizable if and only if the \emph{geometric multiplicity} of every eigenvalue is equal 
+to its \emph{algebraic multiplicity}.
 
-\subsubsection{Theorem III}
+\subsubsection{Eigenvalues of Real Symmetric Matrices}
 
 Eigenvalues of real symmetric matrices are real and also they respective eigenvectors.
+\vspace{\baselineskip}
 
-\subsubsection{Theorem IV}
+\textbf{Proof:}
 
-Given a symmetric matrix \(A \in \Reals^{n \times n}\) with \(\lambda \ne \mu \) as two eigenvalues of \(A\) 
-with eigenvectors \(v\) and \(w\). Then \(v\) and \(w\) are \emph{orthogonal} to each other.
+By definition, we have that \(Ax = \lambda x\). The let us multiply both sides by \( \bar{x}^T\). Note 
+that because \(x\) is a real vector then the conjugate does not change anything.
+
+\begin{align*}
+    Ax &= \lambda x \\
+    \bar{x}^T A x &= \bar{x}^T \lambda x \\
+    \bar{x}^T A x &= \lambda \bar{x}^T x \\
+    \bar{x}^T A x &= \lambda \langle \bar{x} x \rangle\\
+    \bar{x}^T A x &= \lambda \|x\|^2\\
+    \frac{\bar{x}^T A x}{\|x\|^2} &= \lambda
+\end{align*}
+
+With this we know that the denominator is a real number thus, if we prove that the numerator is also real 
+we are done. For this we will use the properties of the conjugate.
+
+\begin{align*}
+    &\bar{x}^T A x\\
+    &=\bar{\bar{x}^T A x} \\
+    &=\bar{\bar{x}^T} \bar{Ax} \\
+    &=x^T \bar{Ax} &= \\
+    &=(\bar{A}\bar{x})^T x \\
+    &=\bar{x}^T A  x 
+\end{align*}
+
+Notice that we ended just were we started. Therefore, the conjugate had no effect on whole term, thus 
+it is real-valued.
+
+\QED
+
+\subsubsection{Orthogonality of Eigenvectors}
+
+Given a symmetric matrix \(A \in \Reals^{n \times n}\) with \(\lambda \ne \mu \) as two eigenvalues of 
+\(A\) with eigenvectors \(v\) and \(w\). Then \(v\) and \(w\) are \emph{orthogonal} to each other.
 \vspace{\baselineskip}
 
 \textbf{Proof:}
@@ -375,10 +413,21 @@ with eigenvectors \(v\) and \(w\). Then \(v\) and \(w\) are \emph{orthogonal} to
 \]
 
 Therefore, \(\lambda \langle v, w \rangle = \langle Av, w \rangle = \langle v, Aw\rangle 
-= \mu \langle v, w \rangle\). Because \(\mu \ne \lambda\) and \(\lambda - \mu \langle v, w\rangle = 0\).
-The vectors must be orthogonal.
+= \mu \langle v, w \rangle\). Because \(\mu \ne \lambda\) and \(\lambda - \mu \langle v, w\rangle = 0\)
+the vectors must be orthogonal.
 
 \QED
+
+\subsubsection{Eigenvalue Decomposition of Symmetric Matrices}
+
+Given a symmetric matrix \(A \in \Reals^{n \times n}\) with eigenvalues 
+\(\lambda_1, \lambda_2, \dots, \lambda_n\). Then because of the orthogonality of its eigenvectors and 
+the fact that they can be normalized write the matrix \(Q\) as an orthogonal matrix, and therefore
+
+\[
+    A = Q D Q^T
+\]
+
 
 \subsubsection{Matrix Diagonalization}
 
@@ -500,8 +549,29 @@ Now we will complete the process by writing \(D, X, \text{ and } X^{-1}\).
     \end{pmatrix}
 \]
 
+\subsubsection{Normal Matrices}
 
+A matrix \(A \in \Complex^{n \times n}\) is considered \emph{normal} if and only if 
 
+\[
+    A \overline{A}^{T} = \overline{A}^T A
+\]  
 
+Also, then there exist with the euclidean inner product in \(\Complex^n\) an orthonormal basis 
+of eigenvector and therefore, \(A\) is diagonalizable.
+\vspace{\baselineskip}
+
+This implies that
+
+\begin{enumerate}
+    
+    \item All real symmetric matrices are diagonalizable, and their eigenvalues are real.
+    
+    \item All real antisymmetric matrices \(A^T = -A\) are diagonalizable, and their eigenvalues are 
+          purely imaginary or 0. 
+
+    \item All orthogonal matrices are diagonalizable.
+
+\end{enumerate}
 
 

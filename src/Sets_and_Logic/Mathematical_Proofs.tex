@@ -30,7 +30,8 @@ Therefore, we conclude that if \( n \) is even, then \( n^2 \) is even.
 If \( n \) is an integer such that \( n^2 \) is even, then \( n \) is even.
 \vspace{\baselineskip}
 
-We will prove this theorem by contradiction. Assume that \( n \) is an integer such that \( n^2 \) is even, but \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \).
+We will prove this theorem by contradiction. Assume that \( n \) is an integer such that \( n^2 \) is 
+even, but \( n \) is odd. Then we can write \( n = 2k + 1 \) for some integer \( k \).
 \vspace{\baselineskip}
 
 Now, we compute \( n^2 \):
@@ -39,16 +40,19 @@ Now, we compute \( n^2 \):
 	n^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1
 \]
 	
-This shows that \( n^2 \) is odd, which contradicts our assumption that \( n^2 \) is even. Therefore, our assumption that \( n \) is odd must be false, and thus, \( n \) must be even.
+This shows that \( n^2 \) is odd, which contradicts our assumption that \( n^2 \) is even. Therefore, our 
+assumption that \( n \) is odd must be false, and thus, \( n \) must be even.
 
 \QED
 
 \subsection{Proof by Induction}
 
 For all \( n \in \Naturals \), the sum of the first \( n \) positive integers is given by:
+
 \[
 	S(n) = 1 + 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
 \]
+
 We will prove this theorem by induction on \( n \).
 \vspace{\baselineskip}
 
@@ -183,7 +187,8 @@ Let \( x = \sqrt{2} \). We know that \( \sqrt{2} \) is irrational. Now, we compu
 	x^2 = (\sqrt{2})^2 = 2
 \]
 	
-Since \( 2 \) is a rational number, we have constructed an irrational number \( x = \sqrt{2} \) such that \( x^2 = 2 \) is rational.
+Since \( 2 \) is a rational number, we have constructed an irrational number \( x = \sqrt{2} \) such 
+that \( x^2 = 2 \) is rational.
 Therefore, the theorem is proved.
 
 \QED
@@ -196,7 +201,8 @@ The statement all prime numbers are odd is false.
 To prove this theorem, we will provide a counterexample.
 \vspace{\baselineskip}
 
-The number \( 2 \) is a prime number, as its only divisors are \( 1 \) and \( 2 \). However, \( 2 \) is even, which contradicts the statement that all prime numbers are odd.
+The number \( 2 \) is a prime number, as its only divisors are \( 1 \) and \( 2 \). However, \( 2 \) is 
+even, which contradicts the statement that all prime numbers are odd.
 \vspace{\baselineskip}
 
 Therefore, the statement All prime numbers are odd is false.
@@ -207,7 +213,8 @@ Therefore, the statement All prime numbers are odd is false.
 If \( n \) is an integer such that \( n^2 \) is odd, then \( n \) is odd.
 \vspace{\baselineskip}
 
-We will prove this theorem by contrapositive. The contrapositive of the statement is: If \( n \) is an integer such that \( n \) is even, then \( n^2 \) is even.
+We will prove this theorem by contrapositive. The contrapositive of the statement is: If \( n \) is an 
+integer such that \( n \) is even, then \( n^2 \) is even.
 \vspace{\baselineskip}
 
 Assume \( n \) is even. Then we can write \( n = 2k \) for some integer \( k \).
@@ -222,7 +229,8 @@ Now, we compute \( n^2 \):
 This shows that \( n^2 \) is even.
 \vspace{\baselineskip}
 
-Since the contrapositive statement is true, the original statement If \( n^2 \) is odd, then \( n \) is odd is also true.
+Since the contrapositive statement is true, the original statement If \( n^2 \) is odd, then \( n \) is 
+odd is also true.
 
 \QED
 
@@ -231,7 +239,8 @@ Since the contrapositive statement is true, the original statement If \( n^2 \) 
 The square root of \( 2 \) is irrational.
 \vspace{\baselineskip}
 
-We will prove this theorem by reduction to absurdity. Assume that \( \sqrt{2} \) is rational. Then we can write:
+We will prove this theorem by reduction to absurdity. Assume that \( \sqrt{2} \) is rational. Then we can 
+write:
 
 \[
 	\sqrt{2} = \frac{p}{q}
@@ -252,8 +261,9 @@ Rearranging gives:
 	p^2 = 2q^2
 \]
 	
-This implies that \( p^2 \) is even, and therefore, \( p \) must be even (since the square of an odd number is odd).
-Let \( p = 2k \) for some integer \( k \). Substituting this back into the equation gives:
+This implies that \( p^2 \) is even, and therefore, \( p \) must be even (since the square of an 
+odd number is odd). Let \( p = 2k \) for some integer \( k \). Substituting this back into the 
+equation gives:
 
 \begin{align*}
 {(2k)}^2 &= 2q^2\\	
@@ -262,8 +272,9 @@ Let \( p = 2k \) for some integer \( k \). Substituting this back into the equat
 \end{align*}
 
 This implies that \( q^2 \) is even, and therefore, \( q \) must also be even.
-Since both \( p \) and \( q \) are even, they have a common factor of \( 2 \), which contradicts our assumption that \( p \) and \( q \) have no common factors.
-Therefore, our assumption that \( \sqrt{2} \) is rational must be false, and thus, \( \sqrt{2} \) is irrational.
+Since both \( p \) and \( q \) are even, they have a common factor of \( 2 \), which contradicts our 
+assumption that \( p \) and \( q \) have no common factors. Therefore, our assumption that 
+\( \sqrt{2} \) is rational must be false, and thus, \( \sqrt{2} \) is irrational.
 
 \QED
 
@@ -274,8 +285,11 @@ The set of rational numbers is dense in the set of real numbers.
 We will prove this theorem by analogy.
 \vspace{\baselineskip}
 	
-Consider the set of rational numbers \( \Rationals \) and the set of real numbers \( \Reals \). The density of \( \Rationals \) in \( \Reals \) means that between any two real numbers, there exists a rational number.
-For example, between the real numbers \( 1 \) and \( 2 \), we can find the rational number \( \frac{3}{2} = 1.5 \). Similarly, between any two real numbers \( a \) and \( b \) (where \( a < b \)), we can find a rational number \( r = \frac{a + b}{2} \).
+Consider the set of rational numbers \( \Rationals \) and the set of real numbers \( \Reals \). 
+The density of \( \Rationals \) in \( \Reals \) means that between any two real numbers, there exists a 
+rational number. For example, between the real numbers \( 1 \) and \( 2 \), we can find the rational 
+number \( \frac{3}{2} = 1.5 \). Similarly, between any two real numbers \( a \) and \( b \) (where 
+\( a < b \)), we can find a rational number \( r = \frac{a + b}{2} \).
 \vspace{\baselineskip}
 
 This shows that the set of rational numbers is dense in the set of real numbers.
