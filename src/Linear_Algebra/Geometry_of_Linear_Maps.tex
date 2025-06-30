@@ -65,7 +65,7 @@ Because, a rotation does not change the magnitude we can say that \(r = r'\). Th
     y' &= r \cos(\alpha)\sin(\beta) + r\cos(\beta)\sin(\alpha)
 \end{align*}
 
-Now notice that we have our \emph{x} and \emph{y} inside the expression
+Now notice that we have our \(x\) and \(y\) inside the expression
 
 \begin{align*}
     x' &= x\cos(\beta) - y\sin(\beta)\\
@@ -129,7 +129,7 @@ The set of all \emph{orthogonal} matrices is \(O(n)\).
 
 \begin{enumerate}
     \item \(A \in O(n)\)
-    \item If \emph{A} has an inverse then \(A^{-1} = A^T\)
+    \item If \(A\) has an inverse then \(A^{-1} = A^T\)
     \item \(A^T \in O(n)\)
 \end{enumerate}
 
@@ -213,10 +213,10 @@ Given \(f: \Reals^n \to \Reals^n\) then this two statements are equivalent.
 and 
 \vspace{\baselineskip}
 
-\emph{f} preserves the angles and length.
+\(f\) preserves the angles and length.
 \vspace{\baselineskip}
 
-\emph{f} is also called \emph{orthogonal}.
+\(f\) is also called \emph{orthogonal}.
 \vspace{\baselineskip}
 
 \textbf{Proof \(\Rightarrow\):}
@@ -266,7 +266,7 @@ the associated matrix representation \( Q \) (with respect to the standard basis
 
 \textbf{Proof \(\Rightarrow\):} 
 
-\emph{f} is linear, and thus has a matrix representation \( Q \). It follows that
+\(f\) is linear, and thus has a matrix representation \( Q \). It follows that
 
 \[
     \langle Qx, Qy \rangle = \langle Q^\top Qx, y \rangle = \langle x, y \rangle \quad \forall x, y 
@@ -299,15 +299,15 @@ Follows by the same calculation as above.
 
 \subsection{Change of Basis}
 
-Let \emph{f} be orthogonal. Then the matrix representation of \emph{f}  
+Let \(f\) be orthogonal. Then the matrix representation of \(f\)  
 with respect to any orthonormal basis is orthogonal.
 \vspace{\baselineskip}
 
 \textbf{Proof:} 
 
-Let \( E \) be the standard basis and \emph{B} an orthonormal basis. Let  
-\( Q = M_E^E(f) \) and \( S = T_E^B \) be the change-of-basis matrix from \emph{B} to \( E \).  
-Since the columns of \emph{S} are the basis vectors of \emph{B}, we have \( S \in O(n) \).  
+Let \( E \) be the standard basis and \(B\) an orthonormal basis. Let  
+\( Q = M_E^E(f) \) and \( S = T_E^B \) be the change-of-basis matrix from \(B\) to \( E \).  
+Since the columns of \emph{S} are the basis vectors of \(B\), we have \( S \in O(n) \).  
 
 \[
     M_B^B(f) = S^{-1} Q S \in O(n),
@@ -347,7 +347,7 @@ we get:
 
 Thus, we can solve the linear system by finding \emph{Q} which is matrix with an orthonormal basis of the 
 vector space which can be found via the Gram-Schmidt algorithm. The matrix \emph{R} consists of the matrix of the 
-inner products our \emph{A} matrix and \emph{Q}
+inner products our \(A\) matrix and \emph{Q}
 
 \[
     R =
@@ -365,7 +365,7 @@ Or even simpler \(R = Q^T A\).
 \textbf{Example:}
 \vspace{\baselineskip}
 
-Find the \emph{QR-Decomposition} of the matrix \emph{A} given by:
+Find the \emph{QR-Decomposition} of the matrix \(A\) given by:
 
 \[
     \begin{pmatrix}
@@ -374,7 +374,7 @@ Find the \emph{QR-Decomposition} of the matrix \emph{A} given by:
     \end{pmatrix}
 \]
 
-First, we find the orthonormal basis of the columns of our matrix \emph{A} 
+First, we find the orthonormal basis of the columns of our matrix \(A\) 
 
 \[ 
     q_1 = \frac{a_1}{\|a_1\|} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}

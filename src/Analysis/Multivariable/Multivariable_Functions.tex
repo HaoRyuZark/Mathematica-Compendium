@@ -176,7 +176,7 @@ The limit towards infinity is then
 \subsection{Partial Functions}
 
 For a function \( f: U \subseteq \Reals^n \to \Reals \), a \emph{partial function} is a 
-restriction of \emph{f} to a variable by fixing all others.
+restriction of \(f\) to a variable by fixing all others.
 \vspace{\baselineskip}
 
 \textbf{Examples in \( \Reals^3 \):}
@@ -202,7 +202,7 @@ allowing analysis along coordinate axes.
 \subsection{Continuity}
 
 Let \( f : U \subseteq \Reals^n \to \Reals \), and \( \vec{X}_0 \in U \). The function 
-\emph{f} is said to be \emph{continuous at \( \vec{X}_0 \)} if:
+\(f\) is said to be \emph{continuous at \( \vec{X}_0 \)} if:
 
 \[
     \lim_{\vec{X} \to \vec{X}_0} f(\vec{X}) = f(\vec{X}_0)
@@ -224,6 +224,22 @@ the origin
     &\iff \lim_{\vec{h} \to 0} g(\vec{h}) = 0
 \end{align*}
 
+If we are checking if a function is continuous and get an \emph{indeterminate form} there are three main 
+approaches.
+
+\begin{enumerate}
+    
+    \item \emph{Factorizing}: Either normal factorization, adding a clever zero or multiplying by a clever 
+          one.
+    
+    \item \emph{Change of Coordinates}: Sometimes changing the coordinate system allows us to simplify the 
+          expression.
+    
+    \item \emph{Different Paths}: Trying different paths can be pretty straightforward. If wet two 
+          different values for the same point across different paths then the function is not continuous.
+
+\end{enumerate}
+
 \textbf{Example:}
 \vspace{\baselineskip}
 
@@ -242,7 +258,27 @@ Now by taking the limit we see that
 \]
 
 Thus, the function is continuous.
+\vspace{\baselineskip}
 
+\textbf{Example:}
+\vspace{\baselineskip}
+
+Check for continuity towards the origin of \(f(x,y) =\frac{xy^2}{x^2 + y^4}\).
+\vspace{\baselineskip}
+
+For the path \(x = y\) and \(y = 0\)
+
+\[
+    f(x,0) = \frac{x0}{x^2 + 0} = 0
+\]
+
+For the path \(x = y^2\)
+
+\[
+    f(y^2, y) = \frac{y^4}{2y^4} = \frac{1}{2}
+\]
+
+Because we got two different values the function is not continuous.
 
 \subsubsection{Continuity in Polar Coordinates for 2D}
 
@@ -328,7 +364,7 @@ A function \( f : D \subseteq \Reals^n \to \Reals \) is called \emph{uniformly c
 
 The key feature is that \( \delta \) depends only on \( \varepsilon \), not on the points 
 \( \vec{X}, \vec{X}_0 \) themselves.  
-If \emph{f} is continuous on a compact set (closed and bounded), then \emph{f} is uniformly continuous.
+If \(f\) is continuous on a compact set (closed and bounded), then \(f\) is uniformly continuous.
 
 \subsubsection{Lipschitz Continuity:}  
 
@@ -339,12 +375,12 @@ exists a constant \( L > 0 \) such that:
     |f(\vec{X}) - f(\vec{Y})| \le L \|\vec{X} - \vec{Y}\| \quad \text{for all } \vec{X}, \vec{Y} \in D
 \]
 
-If \( L < 1 \), then \emph{f} is called a \emph{contraction}.
+If \( L < 1 \), then \(f\) is called a \emph{contraction}.
 
 \subsection{Epsilon–Delta Criterion}
 
 Let \( f : D \subseteq \Reals^n \to \Reals \), and \( \vec{X}_0 \in D \). The function 
-\emph{f} is continuous at \( \vec{X}_0 \) if:
+\(f\) is continuous at \( \vec{X}_0 \) if:
 
 \[
     \forall \varepsilon > 0 \ \exists \delta > 0 \text{ such that } \|\vec{X} - \vec{X}_0\| 

@@ -3,7 +3,7 @@
 
 \subsection{Orthogonality and Projection}
 
-Let \( a, b \in V \). The vectors \emph{a} and \emph{b} are orthogonal to each other if
+Let \( a, b \in V \). The vectors \(a\) and \(b\) are orthogonal to each other if
 
 \[
     \langle a, b \rangle = 0.
@@ -21,7 +21,7 @@ With the same proof as in Theorem 2.25, the Pythagorean Theorem holds
 for \( a \perp b \) in all unitary vector spaces.
 \vspace{\baselineskip}
 
-For the orthogonal projection \( p_b(a) \) of a vector \emph{a} onto \emph{b}, with \( b \neq 0 \), the 
+For the orthogonal projection \( p_b(a) \) of a vector \(a\) onto \(b\), with \( b \neq 0 \), the 
 formula in every unitary vector space is:
 
 \[
@@ -31,7 +31,7 @@ formula in every unitary vector space is:
 \subsection{Orthogonal Projection and Orthogonal Complement}
 
 Let \( U \) be a finitely generated subspace of \( V \) and \( a \in V \). A vector 
-\( p_U(a) \in U \) is called the orthogonal projection of \emph{a} onto \( U \) if
+\( p_U(a) \in U \) is called the orthogonal projection of \(a\) onto \( U \) if
 
 \[
     a - p_U(a) \perp u \quad \forall u \in U
@@ -87,7 +87,7 @@ orthogonal complement \( U^\perp \), we can solve the system of equations:
 \langle v, u_i \rangle = 0 \quad \forall 1 \leq i \leq m.
 \]
 
-This system can be expressed in matrix form as \( A \cdot v = 0 \), where \emph{A} is the matrix whose rows 
+This system can be expressed in matrix form as \( A \cdot v = 0 \), where \(A\) is the matrix whose rows 
 are the vectors \( u_i \) and \( v \) is the vector we want to find in \( U^\perp \).
 
 \subsection{Orthogonal and Orthonormal Systems}
@@ -95,7 +95,7 @@ are the vectors \( u_i \) and \( v \) is the vector we want to find in \( U^\per
 Let \( B = (v_1, \ldots, v_m) \) be an \( m \)-tuple of vectors in \( V \setminus \{0\} \).
 
 \begin{itemize}
-    \item \emph{B} is called an orthogonal system in \( V \) if all the vectors \( v_i \) are pairwise 
+    \item \(B\) is called an orthogonal system in \( V \) if all the vectors \( v_i \) are pairwise 
           orthogonal.
     \item An orthogonal system is called an orthonormal system if, in addition, \( \|v_i\| = 1 \) for 
           all \( i = 1, \ldots, m \).
@@ -208,7 +208,7 @@ Let \( B = (v_1, \ldots, v_n) \) be an orthogonal basis of a vector space \( V \
     v = \sum_{k=1}^n \frac{\langle v, v_k \rangle}{\langle v_k, v_k \rangle} v_k,
 \]
 
-that is, the coordinates of \( v \) with respect to the basis \emph{B} are given by
+that is, the coordinates of \( v \) with respect to the basis \(B\) are given by
 
 \[
     \left( \frac{\langle v, v_k \rangle}{\|v_k\|^2} \right)_{1 \leq k \leq n}^T.
@@ -218,7 +218,7 @@ that is, the coordinates of \( v \) with respect to the basis \emph{B} are given
 \subsection{Orthogonal Projection and Direct Sum Decomposition}
 
 Let \( B = (v_1, \ldots, v_m) \) be an orthogonal system in \( V \), and let \( U = L(B) \) be the 
-subspace of \( V \) spanned by \emph{B}.
+subspace of \( V \) spanned by \(B\).
 
 \begin{itemize}
     \item For every \( v \in V \), the orthogonal projection of \( v \) onto \( U \) is given by:
@@ -242,6 +242,7 @@ subspace of \( V \) spanned by \emph{B}.
           \[
                \dim(U) + \dim(U^\perp) = n \quad \text{for every subspace } U.
           \]
+
 \end{itemize}
 
 \subsection{The Gram-Schmidt Process}
@@ -256,8 +257,11 @@ Given a finite set of linearly independent vectors \( (v_1, \ldots, v_n) \), the
     \item For \( k = 2, \ldots, n \):
 
     \begin{enumerate}
+        
         \item Set \( w_k = v_k - \sum_{j=1}^{k-1} \langle v_k, u_j \rangle u_j \).
+        
         \item Set \( u_k = \frac{w_k}{\|w_k\|} \).
+    
     \end{enumerate}
 
     \item The resulting set \( (u_1, \ldots, u_n) \) is an orthonormal basis of the subspace spanned 
@@ -359,7 +363,7 @@ Thus, the orthonormal basis is \( (1, 0, 0), (0, 1, 0), (0, 0, 1) \).
 \subsection{Best Approximation}
 
 Let \(V\) be a unitary vector space and \(U\) a finitely generated subspace of \(V\).
-A vector \(v* \in U\) is called Best Approximation in \(U\) on \emph{v}, if:
+A vector \(v* \in U\) is called Best Approximation in \(U\) on \(v\), if:
 
 \[
     \|v* - v\| = \inf_{x \in U}\|x - v\|
@@ -373,7 +377,7 @@ also
 
 \textbf{Proof:}
 
-Let \(x \in V\), \emph{v} be some point and \(v* = proj_{V} v\). Then 
+Let \(x \in V\), \(v\) be some point and \(v* = proj_{V} v\). Then 
 
 \[
     v - x = v - v* + v* - x

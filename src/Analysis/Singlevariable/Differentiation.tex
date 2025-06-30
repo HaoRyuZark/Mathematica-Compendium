@@ -6,7 +6,7 @@ and provides tools for analyzing and modeling change in real-world phenomena.
 
 \subsection{Definition of the Derivative}
 
-The derivative of a function \emph{f} at a point \emph{x} is defined as the limit:
+The derivative of a function \(f\) at a point \(x\) is defined as the limit:
 
 \[
     f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
@@ -21,7 +21,7 @@ or
 provided this limit exists.
 \vspace{\baselineskip}
 
-Geometrically, \(f'(a)\) is the slope of the tangent line to the graph of \emph{f} at \(x = a\).
+Geometrically, \(f'(a)\) is the slope of the tangent line to the graph of \(f\) at \(x = a\).
 
 \subsection{Derivative Rules}
 
@@ -69,7 +69,7 @@ Geometrically, \(f'(a)\) is the slope of the tangent line to the graph of \emph{
 
 \subsection{Extrema and Critical Points Test}
 
-A function \emph{f} has a critical point at \(x = c\) if:
+A function \(f\) has a critical point at \(x = c\) if:
 
 \[
     f'(c) = 0 \quad \text{or} \quad f'(c) \text{ does not exist}
@@ -86,6 +86,10 @@ To determine the nature of the critical point:
         f''(c) > 0 \Rightarrow \text{local minimum} \\
         f''(c) < 0 \Rightarrow \text{local maximum}
     \]
+
+    This works, because the second derivative is telling us about the concavity of the function. If it is 
+    positive then we will have function which is concave up a minimum; and if negative concave down a maximum. 
+
 \end{itemize}
 
 \subsection{Trigonometric Derivatives}
@@ -118,7 +122,7 @@ The differential \(dy\) of a function \(y = f(x)\) is defined as:
     dy = f'(x) \, dx
 \]
 
-This linear approximation estimates the change in \emph{y} for a small change in \emph{x}.
+This linear approximation estimates the change in \(y\) for a small change in \(x\).
 
 \subsection{The Secant Equation and Graphical Meaning}
 
@@ -202,4 +206,4 @@ Differentiate both sides implicitly:
     \Rightarrow \frac{dy}{dx} = -\frac{18x}{8y} = -\frac{9x}{4y}
 \]
 
-This method is used when \emph{y} is not isolated and is defined implicitly.
+This method is used when \(y\) is not isolated and is defined implicitly.

@@ -21,7 +21,7 @@ the minimum absolute value is not a root.
 
 \subsection{Definitions and Axioms}
 
-In the following, \(p(z)\) will denote the \emph{n}-th degree polynomial
+In the following, \(p(z)\) will denote the \(n\)-th degree polynomial
 
 \[
 	p(z) = p_0 + p_1 z + p_2 z^2 + \cdots + p_n z^n,
@@ -42,19 +42,19 @@ Every polynomial with real or complex coefficients has at least one complex root
 
 \textbf{Proof:}
 
-Suppose that \(p(z)\) has no roots in the complex plane. First note that for large \emph{z}, say 
+Suppose that \(p(z)\) has no roots in the complex plane. First note that for large \(z\), say 
 \(|z| > 2 \max_i |p_i/p_n|\), the \(z^n\) term of \(p(z)\) is greater in absolute 
-value than the sum of all the other terms. Thus, given some \(B > 0\), for any sufficiently large \emph{s}, 
-we have \(|p(z)| > B\) for all \emph{z} with \(|z| \geq s\). We will take \(B = 2|p(0)| = 2|p_0|\).
+value than the sum of all the other terms. Thus, given some \(B > 0\), for any sufficiently large \(s\), 
+we have \(|p(z)| > B\) for all \(z\) with \(|z| \geq s\). We will take \(B = 2|p(0)| = 2|p_0|\).
 \vspace{\baselineskip}
 
-Since \(|p(z)|\) is continuous on the interior and boundary of the circle with radius \emph{s}, it follows 
-by the completeness axiom that \(|p(z)|\) achieves its minimum value at some point \emph{t} in this circle. 
-But since \(|p(0)| < \frac{1}{2} |p(z)|\) for all \emph{z} on the circumference of the circle, it follows 
-that \(|p(z)|\) achieves its minimum at some point \emph{t} in the interior.
+Since \(|p(z)|\) is continuous on the interior and boundary of the circle with radius \(s\), it follows 
+by the completeness axiom that \(|p(z)|\) achieves its minimum value at some point \(t\) in this circle. 
+But since \(|p(0)| < \frac{1}{2} |p(z)|\) for all \(z\) on the circumference of the circle, it follows 
+that \(|p(z)|\) achieves its minimum at some point \(t\) in the interior.
 \vspace{\baselineskip}
 
-Now rewrite the polynomial \(p(z)\) by translating the argument \emph{z} by \emph{t}, thus, producing a 
+Now rewrite the polynomial \(p(z)\) by translating the argument \(z\) by \(t\), thus, producing a 
 new polynomial
 
 \[
@@ -65,11 +65,11 @@ and similarly translate the circle. Presumably the polynomial \(q(z)\), defined 
 at the origin, has a minimum absolute value \(M > 0\) at \(z = 0\). Note that \(M = |q(0)| = |q_0|\).
 \vspace{\baselineskip}
 
-Our proof strategy is to construct some point \emph{x}, close to the origin, such that \(|q(x)| < |q(0)|\), 
+Our proof strategy is to construct some point \(x\), close to the origin, such that \(|q(x)| < |q(0)|\), 
 thus, contradicting the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
 \vspace{\baselineskip}
 
-\textbf{Construction of \emph{x} such that \(|q(x)| < |q(0)|\)}
+\textbf{Construction of \(x\) such that \(|q(x)| < |q(0)|\)}
 \vspace{\baselineskip}
 
 Let the first nonzero coefficient of \(q(z)\) following \(q_0\) be \(q_m\), so that
@@ -89,7 +89,7 @@ where \(r\) is a small positive real value, and \({\left(-\frac{q_0}{q_m}\right)
 \vspace{\baselineskip}
 
 Unlike the real numbers, in the complex number system the \(m\)-th roots of any complex number are 
-guaranteed to exist. If \(z = z_1 + i z_2\), then the \(m\)-th roots of \emph{z} are given by
+guaranteed to exist. If \(z = z_1 + i z_2\), then the \(m\)-th roots of \(z\) are given by
 
 \[
 	\left\{ R^{1/m} \cos\left(\frac{\theta + 2k\pi}{m}\right) + i R^{1/m} \sin\left(\frac{\theta + 
@@ -103,7 +103,7 @@ where \(R = \sqrt{z_1^2 + z_2^2}\) and \(\theta = \arctan(z_2 / z_1)\).
 
 \[|q(x)| < |q(0)|\]
 
-With the definition of \emph{x}, we can write
+With the definition of \(x\), we can write
 
 \[
 	q(x) = q_0 - q_0 r^m + q_{m+1} r^{m+1} {\left(-\frac{q_0}{q_m}\right)}^{(m+1)/m} + \cdots + q_n r^n 
@@ -131,13 +131,13 @@ which contradicts the assumption that \(|q(z)|\) has a minimum nonzero value at 
 
 \subsection{Theorem 2}
 
-Every polynomial of degree \emph{n} with real or complex coefficients has exactly \emph{n} complex roots, 
+Every polynomial of degree \(n\) with real or complex coefficients has exactly \(n\) complex roots, 
 when counting multiplicities.
 \vspace{\baselineskip}
 
 \textbf{Proof:}
 
-If \(\alpha\) is a root of the polynomial \(p(z)\) of degree \emph{n}, then by dividing 
+If \(\alpha\) is a root of the polynomial \(p(z)\) of degree \(n\), then by dividing 
 \(p(z)\) by \((z - \alpha)\), we get:
 
 \[
@@ -150,7 +150,7 @@ where \(q(z)\) has degree \(n - 1\) and \(r\) is a constant. But since \(p(\alph
 	p(z) = (z - \alpha) q(z).
 \]
 
-Continuing by induction, we conclude that the original polynomial \(p(z)\) has exactly \emph{n} 
+Continuing by induction, we conclude that the original polynomial \(p(z)\) has exactly \(n\) 
 complex roots, counted with multiplicities.
 
 \QED

@@ -16,7 +16,7 @@ An \emph{arithmetic sequence} is a sequence where the difference between consecu
 
     \item \(a_1\) is the first term
 
-    \item \emph{d} is the common difference \(d = a_{n + 1} - a_{n}\)
+    \item \(d\) is the common difference \(d = a_{n + 1} - a_{n}\)
 
 \end{itemize}
 
@@ -113,10 +113,10 @@ This is the open interval \((a - \varepsilon, a + \varepsilon)\).
 \subsection{Supremum, Infimum, Maximum and Minimum}
 
 The \emph{supremum} of a set \(A \subseteq \Reals\) is the 
-least upper bound: the smallest real number \emph{s} such that \(a \le s\) for all \(a \in A\).
+least upper bound: the smallest real number \(s\) such that \(a \le s\) for all \(a \in A\).
 
-The \emph{infimum} of a set \emph{A} is the greatest lower bound: 
-the largest number \emph{t} such that \(a \ge t\) for all \(a \in A\). The \emph{maximum} is the largest 
+The \emph{infimum} of a set \(A\) is the greatest lower bound: 
+the largest number \(t\) such that \(a \ge t\) for all \(a \in A\). The \emph{maximum} is the largest 
 element in the set, if it exists.
 
 The \emph{minimum} is the smallest element in the set, if it exists.
@@ -129,9 +129,9 @@ For \(A = (0,1)\):
 
 \begin{itemize}
 
-    \item \(\sup A = 1\) (not in \emph{A})
+    \item \(\sup A = 1\) (not in \(A\))
 
-    \item \(\inf A = 0\) (not in \emph{A})
+    \item \(\inf A = 0\) (not in \(A\))
 
     \item \(\max A\) and \(\min A\) do not exist
 
@@ -144,8 +144,8 @@ For \(A = (0,1)\):
     \item A \emph{limit} of a sequence \((a_n)\) is the value the terms get arbitrarily close to as 
     \(n \to \infty\).
 
-    \item An \emph{accumulation point} (or limit point) of a set \emph{A} is a point \emph{x} such that every 
-    neighborhood of \emph{x} contains infinitely many points of \emph{A}.
+    \item An \emph{accumulation point} (or limit point) of a set \(A\) is a point \(x\) such that every 
+    neighborhood of \(x\) contains infinitely many points of \(A\).
 
 \end{itemize}
 
@@ -161,7 +161,7 @@ The sequence \(a_n = {(-1)}^n + \frac{1}{n}\) has two accumulation points: \(1\)
 
 \begin{itemize}
 
-    \item If \(a_{n+1} - a_n \ge 0\) for all \emph{n}, then the sequence is non-decreasing.
+    \item If \(a_{n+1} - a_n \ge 0\) for all \(n\), then the sequence is non-decreasing.
 
 
     \item If \(a_{n+1} - a_n \le 0\), it is non-increasing.
@@ -246,7 +246,7 @@ Where \(x_0\) is the center of the expansion. Power series converge within a rad
 
 \subsection{Point-wise Convergence}
 
-A sequence of functions \((f_n)\) converges \emph{point-wise} to a function \emph{f} on a set \emph{A} if:
+A sequence of functions \((f_n)\) converges \emph{point-wise} to a function \(f\) on a set \(A\) if:
 
 \[
     \forall x \in A, \quad \lim_{n \to \infty} f_n(x) = f(x)
@@ -256,7 +256,7 @@ Point-wise convergence does not preserve properties like continuity or different
 
 \subsection{Uniform Convergence}
 
-A sequence of functions \((f_n)\) converges \emph{uniformly} to \emph{f} on \emph{A} if:
+A sequence of functions \((f_n)\) converges \emph{uniformly} to \(f\) on \(A\) if:
 
 \[
     \forall \varepsilon > 0, \exists n_0 \in \Naturals \text{ such that } \forall n \ge n_0, \forall x \in A, \quad |f_n(x) - f(x)| < \varepsilon
@@ -366,7 +366,7 @@ Now let us calculated the limit
 \]
 
 Because of the recursion we know that both \(a_{n + 1}\) and \(a_n\) have the same value, 
-and we call it \emph{a}.
+and we call it \(a\).
 
 \[
     a = \sqrt{2a -3} +1
@@ -377,7 +377,7 @@ and we call it \emph{a}.
 
 We only have to prove the limitedness now:
 
-For \(n = 0\) we have \(a_1 = 4 > 2\) then let us assume that the \emph{a} is never going bellow 2.
+For \(n = 0\) we have \(a_1 = 4 > 2\) then let us assume that the \(a\) is never going bellow 2.
 
 \[
     a_{n + 1} = \sqrt{2a_n - 3} + 1 \ge \sqrt{2(2) - 3} + 1 = 2
@@ -469,5 +469,5 @@ asymptotically equal, denoted by \(a_n \sim b_n\), if
     \lim_{n \to \infty} \frac{a_n}{b_n} = 1,
 \]
 
-provided that \(b_n \neq 0\) for all sufficiently large \emph{n}. Asymptotic equality implies that the sequences behave similarly as \emph{n} approaches infinity.
+provided that \(b_n \neq 0\) for all sufficiently large \(n\). Asymptotic equality implies that the sequences behave similarly as \(n\) approaches infinity.
 

@@ -70,7 +70,7 @@
 
 	\item \textbf{Cone}
 	      \begin{itemize}
-		      \item Surface Area: \(A = \pi r(r + l)\) with \emph{l} = slant height
+		      \item Surface Area: \(A = \pi r(r + l)\) with \(l\) = slant height
 		      \item Volume: \(V = \frac{1}{3}\pi r^2 h\)
 	      \end{itemize}
 
@@ -101,7 +101,7 @@
 \subsection{Thales' Theorem}
 
 Thales' Theorem states:
-If \emph{A}, \emph{B}, and \emph{c} are points on a circle where the line \( AC \) is the diameter, 
+If \(A\), \(B\), and \(c\) are points on a circle where the line \( AC \) is the diameter, 
 then the angle \( \angle ABC \) is a right angle.
 
 \begin{align*}
@@ -127,16 +127,16 @@ To convert between radians and degrees, use the following formulas:
 		\draw[thick] (0,0) rectangle (2,2);
 		\node at (1,-0.3) {Square};
 		\draw[<->] (0,-0.5) -- (2,-0.5);
-		\node at (1,-0.8) {\emph{a}};
+		\node at (1,-0.8) {\(a\)};
 		\node at (1,2.5) {\(A = a^2 \quad P = 4a\)};
 
 		% Rectangle
 		\draw[thick] (4,0) rectangle (7,2);
 		\node at (5.5,-0.3) {Rectangle};
 		\draw[<->] (4,-0.5) -- (7,-0.5);
-		\node at (5.5,-0.8) {\emph{l}};
+		\node at (5.5,-0.8) {\(l\)};
 		\draw[<->] (3.7,0) -- (3.7,2);
-		\node at (3.4,1) {\emph{w}};
+		\node at (3.4,1) {\(w\)};
 		\node at (5.5,2.5) {\(A = l \cdot w \quad P = 2(l+w)\)};
 	\end{tikzpicture}
 \end{center}
@@ -429,11 +429,11 @@ A triangle is uniquely determined if all three sides are known.
 \begin{center}
 	\begin{tikzpicture}[scale=1]
 	\draw[thick] (0,0) -- (5,0) node[midway, below] {\(c\)};
-	\draw[thick] (0,0) -- (2,3.5) node[midway, left] {\emph{b}};
-	\draw[thick] (5,0) -- (2,3.5) node[midway, right] {\emph{a}};
-	\node[below left] at (0,0) {\emph{A}};
-	\node[below right] at (5,0) {\emph{B}};
-	\node[above] at (2,3.5) {\emph{C}};
+	\draw[thick] (0,0) -- (2,3.5) node[midway, left] {\(b\)};
+	\draw[thick] (5,0) -- (2,3.5) node[midway, right] {\(a\)};
+	\node[below left] at (0,0) {\(A\)};
+	\node[below right] at (5,0) {\(B\)};
+	\node[above] at (2,3.5) {\(C\)};
 	\end{tikzpicture}
 \end{center}
 
@@ -447,12 +447,12 @@ A triangle is uniquely determined if two sides and the included angle are known.
 	\coordinate (B) at (5,0);
 	\coordinate (C) at (1.8,3);
 	\draw[thick] (A) -- (B) node[midway, below] {\(c\)};
-	\draw[thick] (A) -- (C) node[midway, left] {\emph{b}};
-	\draw[thick] (B) -- (C) node[midway, right] {\emph{a}};
+	\draw[thick] (A) -- (C) node[midway, left] {\(b\)};
+	\draw[thick] (B) -- (C) node[midway, right] {\(a\)};
 	\pic["\(\theta\)", draw=black, angle radius=1cm, angle eccentricity=1.3] {angle=B--A--C};
-	\node[below left] at (A) {\emph{A}};
-	\node[below right] at (B) {\emph{B}};
-	\node[above] at (C) {\emph{C}};
+	\node[below left] at (A) {\(A\)};
+	\node[below right] at (B) {\(B\)};
+	\node[above] at (C) {\(C\)};
 	\end{tikzpicture}
 \end{center}
 
@@ -470,9 +470,9 @@ A triangle is uniquely determined if two angles and the included side are known.
 	\draw[thick] (B) -- (C);
 	\pic["\(\alpha\)", draw=black, angle radius=1cm, angle eccentricity=1.4] {angle=B--A--C};
 	\pic["\(\beta\)", draw=black, angle radius=1cm, angle eccentricity=1.4] {angle=C--B--A};
-	\node[below left] at (A) {\emph{A}};
-	\node[below right] at (B) {\emph{B}};
-	\node[above] at (C) {\emph{C}};
+	\node[below left] at (A) {\(A\)};
+	\node[below right] at (B) {\(B\)};
+	\node[above] at (C) {\(C\)};
 	\end{tikzpicture}
 \end{center}
 
@@ -485,14 +485,14 @@ A triangle is uniquely determined if two angles and a non-included side are know
 	\coordinate (A) at (0,0);
 	\coordinate (C) at (4,0);
 	\coordinate (B) at (2,3);
-	\draw[thick] (A) -- (C) node[midway, below] {\emph{b}};
+	\draw[thick] (A) -- (C) node[midway, below] {\(b\)};
 	\draw[thick] (A) -- (B);
 	\draw[thick] (B) -- (C);
 	\pic["\(\alpha\)", draw=black, angle radius=1cm, angle eccentricity=1.4] {angle=C--A--B};
 	\pic["\(\beta\)", draw=black, angle radius=1cm, angle eccentricity=1.4] {angle=A--C--B};
-	\node[below left] at (A) {\emph{A}};
-	\node[below right] at (C) {\emph{C}};
-	\node[above] at (B) {\emph{B}};
+	\node[below left] at (A) {\(A\)};
+	\node[below right] at (C) {\(C\)};
+	\node[above] at (B) {\(B\)};
 	\end{tikzpicture}
 \end{center}
 
@@ -518,13 +518,13 @@ ambiguous and can result in:
 	\coordinate (B1) at (2,3); % triangle 1
 	\coordinate (B2) at (2,-2); % triangle 2
 	\draw[thick] (A) -- (C) node[midway, below] {\(c\)};
-	\draw[thick] (A) -- (B1) node[midway, left] {\emph{b}};
-	\draw[thick] (A) -- (B2) node[midway, left] {\emph{b}};
+	\draw[thick] (A) -- (B1) node[midway, left] {\(b\)};
+	\draw[thick] (A) -- (B2) node[midway, left] {\(b\)};
 	\draw[thick, dashed] (B2) -- (C);
 	\draw[thick] (B1) -- (C);
 	\pic["\(\alpha\)", draw=black, angle radius=1cm, angle eccentricity=1.4] {angle=C--A--B1};
-	\node[below left] at (A) {\emph{A}};
-	\node[below right] at (C) {\emph{C}};
+	\node[below left] at (A) {\(A\)};
+	\node[below right] at (C) {\(C\)};
 	\node[above] at (B1) {\(B_1\)};
 	\node[below] at (B2) {\(B_2\)};
 	\end{tikzpicture}
@@ -602,7 +602,7 @@ If two rays start from a common point and are intersected by two parallel lines,
 	\frac{a}{a'} = \frac{b}{b'},
 \]
 
-where \emph{a} and \emph{b} are segments on one ray, and \(a'\), \(b'\) are the corresponding segments on the 
+where \(a\) and \(b\) are segments on one ray, and \(a'\), \(b'\) are the corresponding segments on the 
 other ray.
 
 \begin{center}
@@ -617,8 +617,8 @@ other ray.
 
 		% Points
 		\node at (-0.2,0) {\(S\)};
-		\node[above] at (1,0.4) {\emph{A}};
-		\node[below] at (1,-0.5) {\emph{B}};
+		\node[above] at (1,0.4) {\(A\)};
+		\node[below] at (1,-0.5) {\(B\)};
 		\node[above] at (3.5,1.4) {\(A'\)};
 		\node[below] at (3.5,-1) {\(B'\)};
 
@@ -628,12 +628,12 @@ other ray.
 
 		% Length labels
 		\draw[<->] (0.3,0.15) -- (0.95,0.37);
-		\node[above] at (0.6,0.25) {\emph{a}};
+		\node[above] at (0.6,0.25) {\(a\)};
 		\draw[<->] (1.05,0.42) -- (3.3,1.3);
 		\node[above] at (2.2,1) {\(a'\)};
 
 		\draw[<->] (0.3,-0.1) -- (0.95,-0.4);
-		\node[below] at (0.6,-0.3) {\emph{b}};
+		\node[below] at (0.6,-0.3) {\(b\)};
 		\draw[<->] (1.05,-0.47) -- (3.3,-0.95);
 		\node[below] at (2.2,-0.8) {\(b'\)};
 	\end{tikzpicture}
@@ -660,8 +660,8 @@ ratio as the segments along the parallels:
 
 		% Points
 		\node at (-0.2,0) {\(S\)};
-		\node[above left] at (1,0.5) {\emph{A}};
-		\node[below left] at (1,-0.5) {\emph{B}};
+		\node[above left] at (1,0.5) {\(A\)};
+		\node[below left] at (1,-0.5) {\(B\)};
 		\node[above right] at (3.5,1.6) {\(A'\)};
 		\node[below right] at (3.5,-1.4) {\(B'\)};
 

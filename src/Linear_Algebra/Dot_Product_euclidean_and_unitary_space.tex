@@ -65,7 +65,7 @@ It also can be interpreted as a linear transformation that takes a vector and ma
 
 \subsection{Trigonometric Definition}
 
-Think about the orthogonal projection as a triangle. Now, remember that to find the adjacent side \emph{x} 
+Think about the orthogonal projection as a triangle. Now, remember that to find the adjacent side \(x\) 
 you need to take \(x = \cos(\theta)h\), which is the value \(\alpha\) in our projection formula 
 \(p_a (b) = \frac{\langle a, b\rangle}{\langle a, a\rangle} \alpha a\). 
 Here we add \(\|a\|\|b\|\) to make this function linear.
@@ -205,7 +205,7 @@ we get
     (e_i, e_j)_A = \langle e_i, Ae_j\rangle = e_{i}^{T} A e_j = e_{i}^{T} a_j = a_{ij} 
 \]
 
-Therefore, \((e_i, e_j)_A = (e_j, e_i)_A \iff a_{ij} = a_{ji}\). This means that \emph{A} has to be symmetric.
+Therefore, \((e_i, e_j)_A = (e_j, e_i)_A \iff a_{ij} = a_{ji}\). This means that \(A\) has to be symmetric.
 As a side note, the choice for the Euclidean inner product for the structure of our map is optional. Any
 kind of inner product would also do the job. This implies that each inner product can be described via a 
 matrix.
@@ -218,24 +218,24 @@ Given a symmetric \(A \in \Reals^{n \times n}\) then:
     
     \item The map \(x \to \langle x, Ax\rangle\) is called the \emph{Quadratic Form}
     
-    \item \emph{A} is \emph{positive definite} if \(\langle x, Ax \rangle > 0 \forall x \in \Reals^n 
+    \item \(A\) is \emph{positive definite} if \(\langle x, Ax \rangle > 0 \forall x \in \Reals^n 
           \backslash \{0\}\)
 
-    \item \emph{A} is \emph{negative definite} if \(\langle x, Ax \rangle < 0 \forall x \in \Reals^n 
+    \item \(A\) is \emph{negative definite} if \(\langle x, Ax \rangle < 0 \forall x \in \Reals^n 
           \backslash \{0\}\)
     
-    \item \emph{A} is \emph{positive semidefinite} if \(\langle x, Ax \rangle \ge 0 \forall x \in \Reals^n 
+    \item \(A\) is \emph{positive semidefinite} if \(\langle x, Ax \rangle \ge 0 \forall x \in \Reals^n 
           \backslash \{0\}\)
 
-    \item \emph{A} is \emph{negative semidefinite} if \(\langle x, Ax \rangle \le 0 \forall x \in \Reals^n 
+    \item \(A\) is \emph{negative semidefinite} if \(\langle x, Ax \rangle \le 0 \forall x \in \Reals^n 
           \backslash \{0\}\)
 
-    \item \emph{A} is \emph{indefinite} if \(\exists x,y \in \Reals^n  \backslash \{0\}: \langle x, Ax\rangle 
+    \item \(A\) is \emph{indefinite} if \(\exists x,y \in \Reals^n  \backslash \{0\}: \langle x, Ax\rangle 
           < 0 \land \langle y, Ay \rangle > 0 \)
     
 \end{enumerate}
 
-\((\centerdot , \centerdot)_A\) is only an inner product if \emph{A} is symmetric and positive definite.
+\((\centerdot , \centerdot)_A\) is only an inner product if \(A\) is symmetric and positive definite.
 \vspace{\baselineskip}
 
 \textbf{Example:}
@@ -244,7 +244,7 @@ Given a symmetric \(A \in \Reals^{n \times n}\) then:
 Given is the term \(x_{1}^{2} - x_{3}^{2} + x_1 x_4\), show that it is a quadratic form.
 \vspace{\baselineskip}
 
-First write the formula for the quadratic form \(\langle x, Ax\rangle\) where \emph{A} is real symmetric 
+First write the formula for the quadratic form \(\langle x, Ax\rangle\) where \(A\) is real symmetric 
 matrix
 
 \[
@@ -312,7 +312,7 @@ other non-quadratic terms which are not present. Thus
     \end{pmatrix}
 \]
 
-Now the question is what are \emph{d} and \(m\) because \emph{A} has to be symmetric, but they can not be 1 
+Now the question is what are \(d\) and \(m\) because \(A\) has to be symmetric, but they can not be 1 
 because then we would have \(2x_1 x_4\). Because of that, we will take the only available option 
 \(\frac{1}{2}\).
 
@@ -330,42 +330,42 @@ And now we are done.
 \subsection{Minors}
 
 For a matrix \(A \in \Reals^{n \times n}\) the starting from the left \(k \times k\)-submatrices 
-\(A_k = (a_{ij})_{i,j=1}^{k}\) of \emph{A}. The \(D_k  = \det(A_k)\) is called a \emph{main minor} or 
-\emph{minor} of \emph{A}.
+\(A_k = (a_{ij})_{i,j=1}^{k}\) of \(A\). The \(D_k  = \det(A_k)\) is called a \emph{main minor} or 
+\emph{minor} of \(A\).
 
 \subsubsection{Minors and Definiteness}
 
-Let \emph{A} be real, square symmetric matrix, then
+Let \(A\) be real, square symmetric matrix, then
 
 \begin{itemize}
     
-    \item \emph{A} is positive definite if all main minors are positive.
+    \item \(A\) is positive definite if all main minors are positive.
 
-    \item \emph{A} is negative definite if all main minors are negative.
+    \item \(A\) is negative definite if all main minors are negative.
 
-    \item \emph{A} is positive semidefinite if all main minors are greater or equal to zero but not all zero. 
+    \item \(A\) is positive semidefinite if all main minors are greater or equal to zero but not all zero. 
 
-    \item \emph{A} is negative semidefinite if all main minors are less or equal to zero but not all zero.
+    \item \(A\) is negative semidefinite if all main minors are less or equal to zero but not all zero.
 
-    \item \emph{A} is indefinite if all main minors are equal to zero.
+    \item \(A\) is indefinite if all main minors are equal to zero.
 
 \end{itemize}
 
 \subsection{Connection to Symmetric Matrices}
 
-For a real symmetric matrix \emph{A} the following statements are equivalent.
+For a real symmetric matrix \(A\) the following statements are equivalent.
 
 \begin{itemize}
     
-    \item \emph{A} is positive definite.
+    \item \(A\) is positive definite.
 
-    \item All eigenvalues of \emph{A} are positive.
+    \item All eigenvalues of \(A\) are positive.
 
-    \item All main minors of \emph{A} are positive.
+    \item All main minors of \(A\) are positive.
 
 \end{itemize}
 
-Continuing, \emph{A} is positive semidefinite, if all eigenvalues of \emph{A} are not negative and the 
+Continuing, \(A\) is positive semidefinite, if all eigenvalues of \(A\) are not negative and the 
 main minors are all not positive.
 
 \subsection{Sign of the \texorpdfstring{\(D_k\)}{}}
@@ -380,7 +380,7 @@ because \(-A\) is positive definite.
 
 \subsection{Negative Quadratic Form}
 
-If \emph{A} is negative definite then 
+If \(A\) is negative definite then 
 
 \[
     -\langle x, Ax \rangle = \langle x -Ax \rangle > 0

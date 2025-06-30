@@ -3,20 +3,20 @@
 
 \emph{Eigenvector:}
 
-An eigenvector of a square matrix \emph{A} is a non-zero vector \(\vec{v}\) that, when multiplied by 
-\emph{A}, results in a vector that is a scalar multiple of itself. In other words, the direction of the 
+An eigenvector of a square matrix \(A\) is a non-zero vector \(\vec{v}\) that, when multiplied by 
+\(A\), results in a vector that is a scalar multiple of itself. In other words, the direction of the 
 vector \(\mathbf{v}\) remains unchanged (up to scaling) when the linear transformation represented by 
-\emph{A} is applied to it.
+\(A\) is applied to it.
 \vspace{\baselineskip}
 
 \emph{Eigenvalue:}
 
 The scalar multiple, denoted by \(\lambda\), is called the eigenvalue associated with the eigenvector 
 \(\mathbf{v}\). It represents the factor by which the eigenvector is scaled when transformed by 
-the matrix \emph{A}.
+the matrix \(A\).
 \vspace{\baselineskip}
 
-Mathematically, the relationship between a square matrix \emph{A}, an eigenvector \(\vec{v}\), 
+Mathematically, the relationship between a square matrix \(A\), an eigenvector \(\vec{v}\), 
 and its corresponding eigenvalue \(\lambda\) is expressed by the following equation:
 
 \[
@@ -47,7 +47,7 @@ must be linear transformation whose determinant is \(0\) which means that it can
 \subsection{Characteristic Polynomial}
 
 The polynomial which we get from the determinant \(\det (A\vec{v} - \lambda I)  = 0\) is called 
-the characteristic polynomial of \emph{A}.
+the characteristic polynomial of \(A\).
 
 \[
     \mathcal{X}_A = \det (A\vec{v} - \lambda I) = 0
@@ -66,15 +66,15 @@ The \emph{Eigenspace} of an eigenvalue are the solution of the homogeneous syste
 
 \subsubsection{Theorem I}
 
-Given an eigenvalue \(\lambda\) of \emph{f} and \(v_1, \dots, v_n\) being the eigenvectors of \emph{f} 
+Given an eigenvalue \(\lambda\) of \(f\) and \(v_1, \dots, v_n\) being the eigenvectors of \(f\) 
 with \(\lambda\) then \(v \in L(v_1, \dots, v_k) \backslash \{0\}\) is an eigenvector of 
-\emph{f} with \(\lambda\).
+\(f\) with \(\lambda\).
 \vspace{\baselineskip}
 
 \subsubsection{Theorem II}
 
 For \(\lambda \in \Complex\) is \(Eig(f;\lambda):= \{c \in V | f(v) = \lambda v\}\) the \emph{Eigenspace} of 
-\emph{f} with \(\lambda\) and, it is a subspace of \(V\).
+\(f\) with \(\lambda\) and, it is a subspace of \(V\).
 
 \subsubsection{Theorem III}
 
@@ -87,7 +87,7 @@ Eigenvectors with different eigenvalues are linearly independent.
 \subsubsection{Theorem V}
 
 Given the following eigenvalues\(\lambda_1, \dots, \lambda_n\), then the 
-determinant of the matrix \emph{A} is given by 
+determinant of the matrix \(A\) is given by 
 
 \[
     \det(A) = \prod_{i = 1}^{n} \lambda_i
@@ -122,7 +122,7 @@ Or by using the definition of the diagonal matrix:
 
 \subsubsection{Theorem VI}
 
-For all linear isometric map \emph{f} with some eigenvalue \(\lambda\) it applies that
+For all linear isometric map \(f\) with some eigenvalue \(\lambda\) it applies that
 
 \[
     \|x\| = \|f(x)\| = \|\lambda x\| = \|\lambda\|\|x\|
@@ -136,7 +136,7 @@ whose eigenvalue are complex with a modulus of length of one.
 
 \subsubsection{Theorem VII}
 
-For some eigenvector \emph{x} with an eigenvalue \(\lambda\) of \emph{A}. It applies that
+For some eigenvector \(x\) with an eigenvalue \(\lambda\) of \(A\). It applies that
 
 \[
     A^{k}x = \lambda^{k}x
@@ -145,7 +145,7 @@ For some eigenvector \emph{x} with an eigenvalue \(\lambda\) of \emph{A}. It app
 
 \subsection{How to find the Eigenvectors and Eigenvalues}
 
-To find the eigenvalues and eigenvectors of a square matrix \emph{A}, we solve the eigenvalue equation:
+To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the eigenvalue equation:
 \vspace{\baselineskip}
 
 \textbf{1. Form the characteristic equation:}
@@ -165,7 +165,7 @@ would be 0. Thus, we have the characteristic equation:
 \textbf{2. Solve for the eigenvalues:}
 
 Solve the characteristic equation for \(\lambda\). The solutions 
-\(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of the matrix \emph{A}.
+\(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of the matrix \(A\).
 \vspace{\baselineskip}
 
 \textbf{3. Find the eigenvectors:}
@@ -321,7 +321,7 @@ Therefore, the second eigenvector is
 
 \subsection{Similar Matrices}
 
-\(A \sim B\) if there is some \emph{X} such that 
+\(A \sim B\) if there is some \(X\) such that 
 
 \[
     A = XDX^{-1} \iff X^{-1}AX = D
@@ -351,7 +351,7 @@ A matrix is diagonalizable if and only if the eigenvectors of it are linear inde
 
 \subsubsection{Complex Diagonalization}
 
-Given a matrix \(A \in \Complex^{n \times n}\) with \emph{n} distinct eigenvalues then is \emph{A}
+Given a matrix \(A \in \Complex^{n \times n}\) with \(n\) distinct eigenvalues then is \(A\)
 diagonalizable. But this does not guaranty the diagonalizibility for \(\Reals\).
 
 \subsubsection{Geometric and Algebraic Multiplicity}
@@ -361,7 +361,7 @@ of the zero \(\lambda\) of \(\mathcal{X}_A\) is called \emph{algebraic multiplic
 Continuing, \(g(\lambda):= dim(Eig(A;\lambda))\) is the \emph{geometrical multiplicity} of \(\lambda\).
 \vspace{\baselineskip}
 
-Also, \emph{A} is diagonalizable if and only if the \emph{geometric multiplicity} of every eigenvalue is equal 
+Also, \(A\) is diagonalizable if and only if the \emph{geometric multiplicity} of every eigenvalue is equal 
 to its \emph{algebraic multiplicity}.
 
 \subsubsection{Eigenvalues of Real Symmetric Matrices}
@@ -372,7 +372,7 @@ Eigenvalues of real symmetric matrices are real and also they respective eigenve
 \textbf{Proof:}
 
 By definition, we have that \(Ax = \lambda x\). The let us multiply both sides by \( \bar{x}^T\). Note 
-that because \emph{x} is a real vector then the conjugate does not change anything.
+that because \(x\) is a real vector then the conjugate does not change anything.
 
 \begin{align*}
     Ax &= \lambda x \\
@@ -403,7 +403,7 @@ it is real-valued.
 \subsubsection{Orthogonality of Eigenvectors}
 
 Given a symmetric matrix \(A \in \Reals^{n \times n}\) with \(\lambda \ne \mu \) as two eigenvalues of 
-\emph{A} with eigenvectors \emph{v} and \emph{w}. Then \emph{v} and \emph{w} are \emph{orthogonal} to each other.
+\(A\) with eigenvectors \(v\) and \(w\). Then \(v\) and \(w\) are \emph{orthogonal} to each other.
 \vspace{\baselineskip}
 
 \textbf{Proof:}
@@ -432,32 +432,32 @@ the fact that they can be normalized write the matrix \emph{Q} as an orthogonal 
 \subsubsection{Matrix Diagonalization}
 
 Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. 
-A square matrix \emph{A} is diagonalizable if there exists an invertible matrix \emph{X} made of eigenvectors of 
-\emph{A} such that \(X^{-1}AX = D\), where \(D\) is a diagonal matrix made of eigenvalues.
+A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(X\) made of eigenvectors of 
+\(A\) such that \(X^{-1}AX = D\), where \(D\) is a diagonal matrix made of eigenvalues.
 \vspace{\baselineskip}
 
 The order of the eigenvalue and eigenvectors matters if you choose 
 \(\lambda_1, \lambda_2, \dots, \lambda_n\) then the order of the eigenvectors 
-\(v_1, v_2, \dots, v_n\) must also correspond. This process only works if \emph{A} 
+\(v_1, v_2, \dots, v_n\) must also correspond. This process only works if \(A\) 
 has unique eigenvalues or if they are duplicates they have to be linearly independent.
 \vspace{\baselineskip}
 
 The process of diagonalization is as follows:
 \vspace{\baselineskip}
 
-\textbf{1. Find the eigenvalues and eigenvectors of \emph{A}.}
+\textbf{1. Find the eigenvalues and eigenvectors of \(A\).}
 \vspace{\baselineskip}
 
-\textbf{2. Form the matrix \emph{X}:}
+\textbf{2. Form the matrix \(X\):}
 
-Create a matrix \emph{X} whose columns are the linearly independent eigenvectors of \emph{A}.
+Create a matrix \(X\) whose columns are the linearly independent eigenvectors of \(A\).
 \vspace{\baselineskip}
 
 \textbf{3. Form the diagonal matrix \(D\):} 
 
-Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \emph{A}, corresponding to 
-the order of the eigenvectors in \(P\). That is, if the \emph{i}-th column of \(P\) is the eigenvector 
-corresponding to the eigenvalue \(\lambda_i\), then the \emph{i}-th diagonal entry of \(D\) is \(\lambda_i\).
+Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to 
+the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector 
+corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
 \vspace{\baselineskip}
 
 \textbf{4. Verify the diagonalization:}
@@ -465,8 +465,8 @@ corresponding to the eigenvalue \(\lambda_i\), then the \emph{i}-th diagonal ent
 Check that \(X^{-1}AX = D\).
 \vspace{\baselineskip}
 
-A matrix \emph{A} is diagonalizable if and only if it has \emph{n} linearly independent eigenvectors, where 
-\emph{n} is the size of the matrix.
+A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independent eigenvectors, where 
+\(n\) is the size of the matrix.
 \vspace{\baselineskip}
 
 \textbf{Example: }
@@ -558,7 +558,7 @@ A matrix \(A \in \Complex^{n \times n}\) is considered \emph{normal} if and only
 \]  
 
 Also, then there exist with the euclidean inner product in \(\Complex^n\) an orthonormal basis 
-of eigenvector and therefore, \emph{A} is diagonalizable.
+of eigenvector and therefore, \(A\) is diagonalizable.
 \vspace{\baselineskip}
 
 This implies that

@@ -23,10 +23,10 @@ A linear system can be represented in matrix form as:
 	A x = b
 \]
 
-Where \emph{A} is the coefficient matrix, \emph{x} is the vector of variables, and \emph{b} is the vector 
-of constants. The coefficient matrix \emph{A} is an \( m \times n \) matrix, where \( m \) is the number 
-of equations and \emph{n} is the number of variables. The vector \emph{x} is an \( n \times 1 \) column 
-vector, and the vector \emph{b} is an \( m \times 1 \) column vector. 
+Where \(A\) is the coefficient matrix, \(x\) is the vector of variables, and \(b\) is the vector 
+of constants. The coefficient matrix \(A\) is an \( m \times n \) matrix, where \( m \) is the number 
+of equations and \(n\) is the number of variables. The vector \(x\) is an \( n \times 1 \) column 
+vector, and the vector \(b\) is an \( m \times 1 \) column vector. 
 
 
 \subsection{Solution Set of a Linear System}
@@ -86,7 +86,7 @@ We have
 	Ax = (a_1, \ldots, a_n)x = x_1 a_1 + \cdots + x_n a_n = b.
 \]
 
-Therefore, a solution vector \emph{x} exists if and only if
+Therefore, a solution vector \(x\) exists if and only if
 
 \[
 	b \in L(a_1, \ldots, a_n) \quad \Leftrightarrow \quad \operatorname{rg}(A) = \operatorname{rg}(A, b),
@@ -149,7 +149,7 @@ below the leading entry are zeros. The steps involved in Gauss-Jordan eliminatio
 
 The Gauss-Jordan elimination method is particularly useful for finding the inverse of a matrix, as it 7
 can be applied to the augmented matrix \([A | I]\), where \emph{I} is the identity matrix. If the left side 
-of the augmented matrix becomes \emph{I}, then the right side will be the inverse of \emph{A}.
+of the augmented matrix becomes \emph{I}, then the right side will be the inverse of \(A\).
 \vspace{\baselineskip}
 
 \textbf{Example:}
@@ -183,7 +183,7 @@ Performing row operations to eliminate the variables, we can transform the matri
 	\end{pmatrix}
 \]
 
-Now, we can perform back substitution to find the values of \emph{x}, \emph{y}, and \emph{z}:
+Now, we can perform back substitution to find the values of \(x\), \(y\), and \(z\):
 
 \begin{align*}
 	z           & = 1                           \\
@@ -223,7 +223,7 @@ remaining variables. For example, in the system
 	4x - y  & = 1
 \end{align*}
 
-we can substitute \(x = 1\) into the first equation to find \emph{y}:
+we can substitute \(x = 1\) into the first equation to find \(y\):
 
 \begin{align*}
 	2(1) + 3y & = 5 \\
@@ -232,7 +232,7 @@ we can substitute \(x = 1\) into the first equation to find \emph{y}:
 \end{align*}
 
 Thus, \((x, y) = (1, 1)\) is a particular solution to the system. However, this is not the only solution; 
-other values of \emph{x} may yield different values of \emph{y}.
+other values of \(x\) may yield different values of \(y\).
 
 \subsection{General = Particular + Homogeneous}
 
@@ -436,7 +436,7 @@ The row operations do not change the solution set.
 \textbf{Proof:}
 
 A linear system of equations of the form \(Ax = b\), \(A \in K^{m \times n}\) with some solution
-\emph{x} can be multiplied by some elementary matrix \(C_1, C_2, C_3\) which correspond to a row 
+\(x\) can be multiplied by some elementary matrix \(C_1, C_2, C_3\) which correspond to a row 
 operation \(CAx = Cb\).
 \vspace{\baselineskip}
 
@@ -464,7 +464,7 @@ the rank of the matrix.
 
 \textbf{Proof:}
 
-If \emph{C} is an elementary matrix and \(A \in K^{m \times n}\) some matrix. The statement \(rg(CA) = rg(A)\) 
+If \(C\) is an elementary matrix and \(A \in K^{m \times n}\) some matrix. The statement \(rg(CA) = rg(A)\) 
 is true because of the invertibility of the elementary matrices and the isomorphism in vector spaces.
 \vspace{\baselineskip}
 
@@ -476,7 +476,7 @@ also preserves \(dim(L) = rg_s(A)\). And finally, the addition \(L = L(a_1, \dot
 \QED
 \vspace{\baselineskip}
 
-The only part left is to prove that if \emph{A} has an inverse, then with use of the row operations we can 
+The only part left is to prove that if \(A\) has an inverse, then with use of the row operations we can 
 transform it in to a matrix with an upper triangular with also no zero element on the main diagonal.
 \vspace{\baselineskip}
 
@@ -503,7 +503,7 @@ Because of \(rg(A) = rg(A^{(\ell)})\), \(a^{(\ell)}_{ii} \ne 0\) for \(1 \le i <
 elements will not change for the rest of the Gaussian Elimination. Now we want to build another matrix 
 with row operations \(A^{(\mu)}\) where \(a^{(\mu)}_{kk} \ne 0\) and \(a^{(\mu)}_{ik} = 0\) for 
 \(i > k\). If \(a^{(\ell)}_{kk} \ne 0\) then \((i,k)\)-th element will become 0 by subtracting 
-\(\frac{a^{(\ell)}_{ik}}{a^{(\ell)}_{kk}}\) time the \(k\)-th row of the \emph{i}-th row. So can the \(k\)-th 
+\(\frac{a^{(\ell)}_{ik}}{a^{(\ell)}_{kk}}\) time the \(k\)-th row of the \(i\)-th row. So can the \(k\)-th 
 column be transformed with a series of row operations to the desired form. But if \(a^{(\ell)}_{kk} = 0\), 
 then you have to swap it with another row under it. This is the critical point of the algorithm: What 
 if there is no row, also \(a^{(\ell)}_{ik} = 0\) for \(i \ge k\)? Then \(A^{(\ell)}\) would be:
@@ -540,7 +540,7 @@ then
 	A_i = (a_1, \dots, a_{i - 1}, b, a_{i + 1}, \dots, a_n), i = 1,\dots,n.
 \]
 
-The solution \emph{i} is then
+The solution \(i\) is then
 
 \[
 	x_i = \frac{\det(A_i)}{\det(A)}
@@ -562,7 +562,7 @@ Given a matrix \(X_i \in K^{n \times n}\) by
 	\end{pmatrix}
 \]
 
-\(X_i = (e_1, \dots, e_{i - 1}, e_i, e_{i + 1}, \dots, e_n)\). By using an \emph{n}-times the 
+\(X_i = (e_1, \dots, e_{i - 1}, e_i, e_{i + 1}, \dots, e_n)\). By using an \(n\)-times the 
 Laplace formula in the first row shows \(|X_i| = x_i\).
 
 \begin{align*}
@@ -577,12 +577,12 @@ This implies \(|A_i| = |AX_i| = |A||X_i|\) therefore, \(x_i = \frac{|A_i|}{A}\).
 
 Another way of thinking about this in a more geometric way is to first think at the determinant as 
 the area/volume/etc. that is spanned by the basis vector and the stretching factor of the transformation 
-\(\det(A)\). Now visualize your matrix \emph{A} as a linear transformation with 
+\(\det(A)\). Now visualize your matrix \(A\) as a linear transformation with 
 a non-zero determinant and think about \(\det(A_i)\) as the area/volume/etc. which is spanned by the 
-basis vector but with one of the vector substituted by \emph{b}.
+basis vector but with one of the vector substituted by \(b\).
 \vspace{\baselineskip}
 
 Now in two dimensions, think of the area spanned by the basis vectors \(A = xy\). 
 The signed area of the original parallelogram gets 
 stretched by \(\det(A)\) this gives us \(Area = \det(A)y \Rightarrow y = \frac{Area}{\det(A)}\). This 
-also works for \emph{x}.
+also works for \(x\).

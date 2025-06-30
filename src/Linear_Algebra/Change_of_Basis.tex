@@ -51,7 +51,7 @@ Now let us use the following notation for the Basis and the coefficient vectors.
     P_B {(\vec{x})}_B = P_C {(\vec{x})}_C
 \]
 
-Here \(P_{X}\) is the matrix of the basis \emph{X} vectors and \({(\vec{x})}_X\) the coefficients of the
+Here \(P_{X}\) is the matrix of the basis \(X\) vectors and \({(\vec{x})}_X\) the coefficients of the
 vector \(\vec{x}\) described by that basis.
 \vspace{\baselineskip}
 
@@ -63,7 +63,7 @@ by the inverse of the corresponding basis matrix.
 \textbf{Example I:}
 \vspace{\baselineskip}
 
-Let us find \(\vec{x}\) in terms of that basis \emph{C}
+Let us find \(\vec{x}\) in terms of that basis \(C\)
 
 \[
     P_{C}^{-1} P_B {(\vec{x})}_B = {(\vec{x})}_C
@@ -123,12 +123,12 @@ This equation relates the coefficient in the standard basis to the new basis
 coefficients
 \vspace{\baselineskip}
 
-What we are really doing here is taking the basis vectors of \emph{B} and writing then as a linear combination
-of the basis vectors of \emph{C}. This will give us \emph{n} matrices that we can solve.
+What we are really doing here is taking the basis vectors of \(B\) and writing then as a linear combination
+of the basis vectors of \(C\). This will give us \(n\) matrices that we can solve.
 \vspace{\baselineskip}
 
-To go the other way around we take the inverse of the matrix whose columns are the basis vectors of \emph{B}
-relative to the new basis \emph{C}
+To go the other way around we take the inverse of the matrix whose columns are the basis vectors of \(B\)
+relative to the new basis \(C\)
 \vspace{\baselineskip}
 
 Now let us understand what really is happening in the step where we multiply by the inverse matrix.
@@ -140,7 +140,7 @@ Now let us understand what really is happening in the step where we multiply by 
 \end{align*}
 
 Now it is clear that the inverse is just taking our basis vector and transforming
-them in to basis vector with respect to \emph{C}.
+them in to basis vector with respect to \(C\).
 
 \subsection{Translation under transformation}
 
@@ -150,9 +150,9 @@ For linear transformation we use the formula.
     A^{-1} M A \vec{v}
 \]
 
-Where \(\vec{v}\) is a vector in the other basis, \emph{A} the
+Where \(\vec{v}\) is a vector in the other basis, \(A\) the
 other basis,\emph{M} the linear transformation and \(A^{-1}\) the inverse of
-the basis vector of \emph{A}.
+the basis vector of \(A\).
 \vspace{\baselineskip}
 
 We interpret this as taking a vector of the new basis, translating it to our language,
@@ -166,7 +166,7 @@ For the sake of completeness here some important theorems and definitions:
 In this section we will use a slightly different notation. Here \(K_X\) is 
 the \emph{coefficient} vector with respect to a basis also called the coordinates
 of the vector. And \(\varphi_X\) is the \(P_X\) that is the matrix of the basis vectors with
-respect to \emph{X}.
+respect to \(X\).
 
 \subsubsection{Theorem I} 
 
@@ -192,7 +192,7 @@ and for \( v \in V \), we define
     K_B (\vec{v}) := \varphi_B^{-1} (v) \in K^n
 \]
 
-as the \emph{coordinates of \( v \) with respect to \emph{B}}.
+as the \emph{coordinates of \( v \) with respect to \(B\)}.
 
 \subsubsection{Theorem III} 
 
@@ -229,7 +229,7 @@ and \( K_B(v) = {(y_1, \dots, y_n)}^T \).  Then the following holds:
     \end{pmatrix}
 \]
 
-If the coordinates of \( v \) with respect to \emph{A} are known, then the matrix \( T_B^A \) can be used to compute the coordinates of \( v \) with respect to \emph{B}.
+If the coordinates of \( v \) with respect to \(A\) are known, then the matrix \( T_B^A \) can be used to compute the coordinates of \( v \) with respect to \(B\).
 
 \[ 
     T_B^A = B^{-1}A. 
@@ -245,19 +245,19 @@ If the coordinates of \( v \) with respect to \emph{A} are known, then the matri
 \subsubsection{Theorem V}
  
 Let \( V \) and \( W \) be finitely generated \( K \)-vector spaces with 
-bases \emph{A} and \emph{B}, respectively, and let \( f \in \mathrm{Hom}(V, W) \).
+bases \(A\) and \(B\), respectively, and let \( f \in \mathrm{Hom}(V, W) \).
 Then we have
 
 \[
     M_B^A(f) = \varphi_B^{-1} \circ f \circ \varphi_A
 \]
 
-Thus, \( M_B^A(f) \) tells you how the coordinates change through \emph{f}.
+Thus, \( M_B^A(f) \) tells you how the coordinates change through \(f\).
 
 \subsubsection{Theorem VI} 
 
-Let \( V \) and \( W \) be finitely generated vector spaces with bases \emph{A} and \( A' \) 
-for \( V \), and \emph{B} and \( B' \) for \( W \), respectively.  Furthermore, let \( f: V \to W \) be 
+Let \( V \) and \( W \) be finitely generated vector spaces with bases \(A\) and \( A' \) 
+for \( V \), and \(B\) and \( B' \) for \( W \), respectively.  Furthermore, let \( f: V \to W \) be 
 a linear map. Then the following holds:
 
 \[

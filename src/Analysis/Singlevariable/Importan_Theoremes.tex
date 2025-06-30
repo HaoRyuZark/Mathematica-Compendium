@@ -3,7 +3,7 @@
 
 \subsection{Intermediate Value Theorem}
 
-Let \emph{f} be a continuous function on the closed interval \([a, b]\). If \( f(a) \ne f(b) \) 
+Let \(f\) be a continuous function on the closed interval \([a, b]\). If \( f(a) \ne f(b) \) 
 and \emph{N} is any number between \( f(a) \) and \( f(b) \), then there exists \( c \in (a, b) \) 
 such that \( f(c) = N \).
 \vspace{\baselineskip}
@@ -17,9 +17,9 @@ Define:
     S = \{ x \in [a, b] \mid f(x) \le N \}
 \]
 
-Since \( a \in S \), \emph{S} is non-empty and bounded above by \emph{b}. Let \( c = \sup S \).
+Since \( a \in S \), \emph{S} is non-empty and bounded above by \(b\). Let \( c = \sup S \).
 
-By the continuity of \emph{f}, we have:
+By the continuity of \(f\), we have:
 
 \[
     \lim_{x \to c^-} f(x) = f(c) = \lim_{x \to c^+} f(x)
@@ -36,15 +36,15 @@ there exists \( x > c \) with \( f(x) > N \), then by the definition of supremum
 
 \begin{center}
 \begin{tikzpicture}[scale=1]
-\draw[->] (-0.5,0) -- (5.5,0) node[right] {\emph{x}};
+\draw[->] (-0.5,0) -- (5.5,0) node[right] {\(x\)};
 \draw[->] (0,-1) -- (0,4.5) node[above] {\(f(x)\)};
 \draw[scale=1,domain=0.5:5,smooth,variable=\x,blue,thick] plot ({\x},{0.5*(\x-3)^2+1});
 \draw[dashed] (1.2,0) -- (1.2,2.6);
 \draw[dashed] (4.2,0) -- (4.2,1.82);
 \draw[dashed] (0,1.82) -- (5.5,1.82);
 \node at (5.3,1.65) {\(N\)};
-\node at (1.2,-0.3) {\emph{a}};
-\node at (4.2,-0.3) {\emph{b}};
+\node at (1.2,-0.3) {\(a\)};
+\node at (4.2,-0.3) {\(b\)};
 \node at (3,-0.3) {\(c\)};
 \filldraw (3,0.99) circle (1.5pt);
 \end{tikzpicture}
@@ -52,7 +52,7 @@ there exists \( x > c \) with \( f(x) > N \), then by the definition of supremum
 
 \subsection{Extreme Value Theorem}
 
-If \emph{f} is continuous on the closed interval \([a, b] \), then \emph{f} attains a maximum and a 
+If \(f\) is continuous on the closed interval \([a, b] \), then \(f\) attains a maximum and a 
 minimum value on \([a, b]\). That is, there exist \( c, d \in [a, b] \) such that:
 
 \[
@@ -61,7 +61,7 @@ minimum value on \([a, b]\). That is, there exist \( c, d \in [a, b] \) such tha
 
 \textbf{Proof:}  
 
-Since \emph{f} is continuous on the compact interval \([a, b]\), the image \( f([a, b]) \subset \Reals \) 
+Since \(f\) is continuous on the compact interval \([a, b]\), the image \( f([a, b]) \subset \Reals \) 
 is also compact. A compact subset of \( \Reals \) is closed and bounded, and hence 
 attains its supremum and infimum.
 
@@ -75,27 +75,27 @@ Therefore, there exist \( c, d \in [a, b] \) such that:
 \QED
 
 \subsection{Rolle’s Theorem}
-Let \emph{f} be continuous on \([a, b] \), differentiable on \((a, b) \), and suppose \( f(a) = f(b) \).  
+Let \(f\) be continuous on \([a, b] \), differentiable on \((a, b) \), and suppose \( f(a) = f(b) \).  
 Then, there exists \( c \in (a, b) \) such that \( f'(c) = 0 \).
 \vspace{\baselineskip}
 
 \textbf{Proof:}  
 
-By the Extreme Value Theorem, \emph{f} attains a maximum or minimum at some point \( c \in [a, b] \).
+By the Extreme Value Theorem, \(f\) attains a maximum or minimum at some point \( c \in [a, b] \).
 
 If \( c \in (a, b) \), then by Fermat’s theorem, \( f'(c) = 0 \).  
-If the maximum or minimum occurs at \emph{a} or \emph{b}, since \( f(a) = f(b) \), \emph{f} must be 
+If the maximum or minimum occurs at \(a\) or \(b\), since \( f(a) = f(b) \), \(f\) must be 
 constant, so \( f'(x) = 0 \) everywhere on \((a, b)\), and in particular for some \( c \in (a, b) \).
 
 \QED
 
 \begin{center}
 \begin{tikzpicture}[scale=1]
-\draw[->] (-0.5,0) -- (5.5,0) node[right] {\emph{x}};
+\draw[->] (-0.5,0) -- (5.5,0) node[right] {\(x\)};
 \draw[->] (0,-1) -- (0,4) node[above] {\(f(x)\)};
 \draw[scale=1,domain=0.5:5,smooth,variable=\x,blue,thick] plot ({\x},{-0.5*(\x-3)^2+3});
-\node at (0.5,-0.3) {\emph{a}};
-\node at (5,-0.3) {\emph{b}};
+\node at (0.5,-0.3) {\(a\)};
+\node at (5,-0.3) {\(b\)};
 \node at (2.8,-0.3) {\(c\)};
 \filldraw (2.8,3) circle (1.5pt);
 \draw[dashed] (2.8,0) -- (2.8,3);
@@ -106,7 +106,7 @@ constant, so \( f'(x) = 0 \) everywhere on \((a, b)\), and in particular for som
 
 \subsection{Mean Value Theorem}
 
-Let \emph{f} be continuous on \([a, b] \) and differentiable on \((a, b) \).  
+Let \(f\) be continuous on \([a, b] \) and differentiable on \((a, b) \).  
 Then there exists \( c \in (a, b) \) such that:
 
 \[

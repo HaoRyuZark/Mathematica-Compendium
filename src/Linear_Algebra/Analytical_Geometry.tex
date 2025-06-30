@@ -127,10 +127,15 @@ The norm of a vector \(\vec{a}\) is described by different norms:
 It also has the following properties:
 
 \begin{itemize}
+
 	\item \(\|\vec{a}\| \geq 0\) and \(\|\vec{a}\| = 0 \Leftrightarrow \vec{a} = \vec{0}\)
+
 	\item \(\|\lambda \vec{a}\| = |\lambda| \|\vec{a}\|\)
+
 	\item \(\|\vec{a} + \vec{b}\| \leq \|\vec{a}\| + \|\vec{b}\|\) (Triangle inequality)
+
 	\item \(\|\vec{a} + \vec{b}\|^2 = \|\vec{a}\|^2 + \|\vec{b}\|^2 + 2\langle\vec{a}, \vec{b}\rangle\) (Pythagorean theorem)
+
 \end{itemize}
 
 These are the most common norms, although we will be using primarily the euclidean norm:
@@ -187,22 +192,35 @@ Angle between planes is angle between their normals:
 Two lines can be:
 
 \begin{itemize}
+
 	\item \emph{Identical}: same direction vector and point
+
 	\item \emph{Parallel}: direction vectors are proportional
+
 	\item \emph{Intersecting}: one solution for \(t_1\), \(t_2\) such that \(\vec{r}_1(t_1) = \vec{r}_2(t_2)\)
+
 	\item \emph{Skew}: not parallel, do not intersect
+
 \end{itemize}
 
 To find the relation:
 
 \begin{enumerate}
+
 	\item Check if direction vectors are scalar multiples \(\Rightarrow\) parallel
-	\item Solve \(\vec{P}_1 + t\vec{v}_1 = \vec{P}_2 + s\vec{v}_2\) for \emph{t} and \emph{s}:
-	      \begin{itemize}
-		      \item Solution exists \(\Rightarrow\) intersect
-		      \item No solution \(\Rightarrow\) skew
-	      \end{itemize}
+
+	\item Solve \(\vec{P}_1 + t\vec{v}_1 = \vec{P}_2 + s\vec{v}_2\) for \(t\) and \(s\):
+
+	\begin{itemize}
+
+		\item Solution exists \(\Rightarrow\) intersect
+
+		\item No solution \(\Rightarrow\) skew
+
+	\end{itemize}
+
 	\item If same point and direction vector \(\Rightarrow\) identical
+
 \end{enumerate}
 
 \subsection{Normalization of a vector}
@@ -246,8 +264,8 @@ multiplying \(\vec{b}\) by the scalar \(\alpha\).
 	\begin{tikzpicture}[scale=2, >=Stealth]
 
 		% Axes
-		\draw[->, thick] (-0.5, 0) -- (2.2, 0) node[right] {\emph{x}};
-		\draw[->, thick] (0, -0.5) -- (0, 2) node[above] {\emph{y}};
+		\draw[->, thick] (-0.5, 0) -- (2.2, 0) node[right] {\(x\)};
+		\draw[->, thick] (0, -0.5) -- (0, 2) node[above] {\(y\)};
 
 		% Coordinates
 		\coordinate (O) at (0,0);
@@ -293,13 +311,21 @@ or
 The cross product has the following properties:
 
 \begin{itemize}
+
 	\item \(\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})\)
+
 	\item \(\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}\)
+
 	\item \((\lambda_1\vec{a}) \times (\lambda_2\vec{b}) = \lambda_1\lambda_2(\vec{a} \times \vec{b})\)
+
 	\item \(\|\vec{a} \times \vec{b}\| = \|\vec{a}\|\|\vec{b}\| \sin(\theta)\)
+
 	\item \(\langle\vec{a}, (\vec{b} \times \vec{c})\rangle = 0\) (scalar triple product)
+
 	\item \(\vec{a} \times \vec{b} = \vec{0} \Leftrightarrow \vec{a} = \lambda\vec{b}\) for some \(\lambda \in \Reals\) (parallel vectors)
+
 	\item \(\vec{a} \times \vec{b} = \vec{0} \Leftrightarrow \vec{a} = \vec{0} \vee \vec{b} = \vec{0}\) (zero vector)
+
 \end{itemize}
 
 The cross product is not defined in \(\Reals^2\).
@@ -366,8 +392,11 @@ The Hessian normal form is a way of expressing the equation of a plane in three-
 The Hessian normal form represents a plane by specifying:
 
 \begin{itemize}
+	
 	\item A unit normal vector \(\vec{n} = (a, b, c)\) to the plane,
-	\item and the shortest distance \emph{d} from the origin to the plane.
+
+	\item and the shortest distance \(d\) from the origin to the plane.
+
 \end{itemize}
 
 This form is derived by normalizing the general plane equation. A plane in 3D can be written as:
@@ -376,7 +405,7 @@ This form is derived by normalizing the general plane equation. A plane in 3D ca
 	ax + by + cz + d = 0,
 \]
 
-where \((a, b, c)\) is a normal vector to the plane and \emph{d} is the dot product of the normal vector with a point \(p\).
+where \((a, b, c)\) is a normal vector to the plane and \(d\) is the dot product of the normal vector with a point \(p\).
 If we divide all terms by \(\sqrt{a^2 + b^2 + c^2}\), we normalize the normal vector:
 
 \[
@@ -422,10 +451,15 @@ This gives the signed distance formula and thus, motivates the Hessian form.
 Steps:
 
 \begin{enumerate}
+
 	\item Find the normal vector \(\vec{n}\) of the plane
+	
 	\item Normalize the normal vector
-	\item Find the distance \emph{d} from the origin to the plane
+	
+	\item Find the distance \(d\) from the origin to the plane
+	
 	\item Write the Hessian normal form
+
 \end{enumerate}
 
 \subsection{Converting from the Hessian normal form to the parametric form}
@@ -433,24 +467,37 @@ Steps:
 Steps:
 
 \begin{enumerate}
+
 	\item Find a point on the plane
+
 	\item Find two direction vectors in the plane
+
 	\item Write the parametric form
+
 \end{enumerate}
 
 \subsection{Properties of lines and planes}
 
 \begin{itemize}
+
 	\item Two planes are parallel if their normal vectors are scalar multiples of each other.
+
 	\item A line and a plane are parallel if the direction vector of the line is orthogonal to the normal vector of the plane.
+
 	\item A line intersects a plane if there exists a point on the line that satisfies the equation of the plane.
+
 	\item Two planes intersect in a line if their normal vectors are not parallel.
+
 	\item Three planes can intersect in a point, a line, or not at all.
+
 	\item If we have a line \(G\) and a point on the line, for every vector \(\vec{n}\) that is orthogonal to the
-	      direction vector of the line: \(x \in G \iff \langle x, n \rangle\)
+ 	      direction vector of the line: \(x \in G \iff \langle x, n \rangle\)
+
 	\item If \(p\) and \(q\) are two points in the line \(G\) with a normal vector then \(\langle p, n\rangle = \langle q, n\rangle\)
+
 	\item Let \(E\) be a plane with the origin \(p\) and the direction vector \(\vec{v}\) and \(\vec{w}\), then there exist a normal vector and
 	      \(x \in E \iff \langle x, n\rangle = \langle p, n \rangle\)
+
 \end{itemize}
 
 \subsection{Convert Normal Vector in Two Direction Vectors}
@@ -458,10 +505,15 @@ Steps:
 Steps:
 
 \begin{enumerate}
-	\item Given the normal vector \(\vec{n} = (a, b, c)\), interchange \emph{a} and \emph{b} and multiply \emph{b} by -1
+	
+	\item Given the normal vector \(\vec{n} = (a, b, c)\), interchange \(a\) and \(b\) and multiply \(b\) by -1
+	
 	\item Set the other component to 0. This gives you the first direction vector \(\vec{v} = (-b, a, 0)\)
-	\item Take the original normal vector \(\vec{n}\) and interchange \emph{a} and \(c\) and multiply \(c\) by -1
+	
+	\item Take the original normal vector \(\vec{n}\) and interchange \(a\) and \(c\) and multiply \(c\) by -1
+	
 	\item Set the other component to 0. This gives you the second direction vector \(\vec{w} = (-c, 0, a)\)
+
 \end{enumerate}
 
 \subsection{Intersection between Line and Plane}
@@ -469,11 +521,17 @@ Steps:
 To find the intersection between a line and a plane, we can use the following steps:
 
 \begin{enumerate}
+
 	\item Write the parametric form of the line: \(\vec{r}(t) = \vec{P} + t\vec{v}\), where \(\vec{P}\) is a point on the line and \(\vec{v}\) is the direction vector.
+
 	\item Write the equation of the plane in Hessian normal form: \(\langle \vec{n}, \vec{x} - \vec{P} \rangle = 0\), where \(\vec{n}\) is the normal vector and \(\vec{P}\) is a point on the plane.
+
 	\item Substitute the parametric form of the line into the equation of the plane.
-	\item Solve for \emph{t} to find the intersection point.
-	\item Substitute \emph{t} back into the parametric form of the line to find the intersection point.
+
+	\item Solve for \(t\) to find the intersection point.
+
+	\item Substitute \(t\) back into the parametric form of the line to find the intersection point.
+
 \end{enumerate}
 
 \textbf{Example:}
@@ -528,7 +586,7 @@ Now compute the dot product:
 	= -t + (t - 1) + (t - 1) = t - 2
 \]
 
-\textbf{Step 4:} Solve for \emph{t}:
+\textbf{Step 4:} Solve for \(t\):
 
 \[
 	t - 2 = 0 \Rightarrow t = 2
@@ -644,9 +702,13 @@ To find the shortest distance between two skew lines, we use the formula:
 Where:
 
 \begin{itemize}
+
 	\item \(\vec{P}_1\) and \(\vec{P}_2\) are points on each line,
+
 	\item \(\vec{v}_1\) and \(\vec{v}_2\) are the direction vectors,
+
 	\item \(\vec{v}_1 \times \vec{v}_2\) is the cross product of the direction vectors.
+
 \end{itemize}
 
 \textbf{Given:}
@@ -732,7 +794,7 @@ and a point \(\vec{P}\) not on the line, the foot of the perpendicular \(\vec{F}
 	(\vec{P} - \vec{F}) \perp \vec{v} \quad \Rightarrow \quad (\vec{P} - (\vec{A} + t\vec{v})) \cdot \vec{v} = 0
 \]
 
-Solve this inner product for \emph{t}, then compute:
+Solve this inner product for \(t\), then compute:
 
 \[
 	\vec{F} = \vec{A} + t\vec{v}
