@@ -21,7 +21,6 @@ An \emph{arithmetic sequence} is a sequence where the difference between consecu
 \end{itemize}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \[
     a_n = 3 + (n - 1) \cdot 2 = 2n + 1 \quad \text{(Odd numbers)}
@@ -45,7 +44,6 @@ by a fixed non-zero constant.
 \end{itemize}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \[
     a_n = 2 \cdot 3^{n-1} = 2, 6, 18, 54, \dots
@@ -85,10 +83,8 @@ integer \(n_0\) such that for all \(n, m \ge n_0\):
 
 Every convergent sequence is a Cauchy sequence. In complete metric spaces (like \(\Reals\)), the 
 converse also holds.
-\vspace{\baselineskip}
 
 \textbf{Example: Convergence Exercise}
-\vspace{\baselineskip}
 
 Let \(a_i = \frac{1}{i}\) and \(\varepsilon = 0.01\). We want to find \(i_0\) such that:
 
@@ -120,10 +116,8 @@ the largest number \(t\) such that \(a \ge t\) for all \(a \in A\). The \emph{ma
 element in the set, if it exists.
 
 The \emph{minimum} is the smallest element in the set, if it exists.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 For \(A = (0,1)\):
 
@@ -149,10 +143,8 @@ For \(A = (0,1)\):
 
 \end{itemize}
 
-
 \textbf{Example:}
-\vspace{\baselineskip}
- 
+
 The sequence \(a_n = {(-1)}^n + \frac{1}{n}\) has two accumulation points: \(1\) and \(-1\).
 
 \subsection{Monotonicity by Difference and Quotient}
@@ -163,7 +155,6 @@ The sequence \(a_n = {(-1)}^n + \frac{1}{n}\) has two accumulation points: \(1\)
 
     \item If \(a_{n+1} - a_n \ge 0\) for all \(n\), then the sequence is non-decreasing.
 
-
     \item If \(a_{n+1} - a_n \le 0\), it is non-increasing.
 
 \end{itemize}
@@ -173,7 +164,6 @@ The sequence \(a_n = {(-1)}^n + \frac{1}{n}\) has two accumulation points: \(1\)
 \begin{itemize}
 
     \item If \(\frac{a_{n+1}}{a_n} \ge 1\), then the sequence is non-decreasing.
-
 
     \item If \(\frac{a_{n+1}}{a_n} \le 1\), it is non-increasing.
 
@@ -196,7 +186,7 @@ A sequence \emph{diverges} if it does not converge. That is, there is no real nu
 \end{itemize}
 
 \textbf{Example:}
-\vspace{\baselineskip}
+
 The sequence \(a_n = {(-1)}^n\) diverges since it oscillates between \(1\) and \(-1\).
 
 \subsection{Subsequences and Their Properties}
@@ -341,16 +331,14 @@ To prove the convergence of a sequence via this principle we follow the next ste
 
 \end{enumerate}
 
-\textbf{Example: } 
-\vspace{\baselineskip}
+\textbf{Example:} 
 
 \(a_{n + 1} = \sqrt{2a_n - 3} + 1\)
-\vspace{\baselineskip}
 
 Let us assume that the series is decreasing or \(a_{n + 1} < a_{n}\)
 
 \begin{align*}
-    a_{n + 2} &< a{n + 1} \\
+    a_{n + 2} &< a_{n + 1} \\
     \sqrt{2a_{n + 1} -3} + 1 &< \sqrt{2a_{n} - 3} + 1 \\
     \sqrt{2a_{n + 1} -3} &< \sqrt{2a_{n} - 3} \\
     2a_{n + 1} - 3 &< 2a_{n} - 3 \\
@@ -454,7 +442,7 @@ For a sequence of complex numbers \((a_n)\) where \(a_n = x_n + i y_n\), the lim
 \((x_n)\) and the imaginary part sequence \((y_n)\) exist individually:
 
 \[
-    \lim_{n \to \infty} a_n = A \iff \left( \lim_{n \to \infty} \text{Re}(a_n) = \text{Re}(A) = X \quad \text{and} \quad \lim_{n \to \infty} \text{Im}(a_n) = \text{Im}(A) = Y \right).
+    \lim_{n \to \infty} a_n = A \iff \left( \lim_{n \to \infty} \text{Re}(a_n) = \text{Re}(A) = X \quad \text{and} \quad \lim_{n \to \infty} \img(a_n) = \img(A) = Y \right).
 \]
 
 This means we can analyze the convergence of a complex sequence by examining the convergence of its real 

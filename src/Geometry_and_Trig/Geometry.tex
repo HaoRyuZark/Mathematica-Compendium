@@ -52,7 +52,6 @@
 	      \end{itemize}
 \end{itemize}
 
-
 \subsection{Formulas for Area and Volume of 3D Geometric Figures}
 
 \begin{itemize}
@@ -101,12 +100,47 @@
 \subsection{Thales' Theorem}
 
 Thales' Theorem states:
-If \(A\), \(B\), and \(c\) are points on a circle where the line \( AC \) is the diameter, 
-then the angle \( \angle ABC \) is a right angle.
+If \(A\), \(B\), and \(c\) are points on a circle where the line \( AB \) is the diameter, 
+then the angle \( \angle  \alpha + \beta\) is a right angle.
 
 \begin{align*}
-	\angle ABC = 90^\circ \quad \text{if } AC \text{ is a diameter of the circle}
+	\angle \alpha + \beta = 90^\circ \quad \text{if } AB \text{ is a diameter of the circle}
 \end{align*}
+
+\begin{center}
+\begin{tikzpicture}[rotate=36.9,scale=2]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(4,0){C}
+  \tkzDefTriangle[egyptian](A,C) \tkzGetPoint{B}
+  \tkzDrawPolygon(A,B,C)
+  \tkzDefMidPoint(A,B) \tkzGetPoint{O}
+  \tkzDrawSemiCircle(O,B)
+  \tkzDrawSegment(O,C)
+  \tkzLabelPoints(O,A,B)
+  \tkzLabelPoints[above](C)
+  \tkzMarkRightAngle[fill=teal!20,opacity=.4](B,C,A)
+  \tkzLabelAngles[pos=.75](B,A,C A,C,O){$\alpha$}
+  \tkzLabelAngles[pos=.75](C,B,O O,C,B){$\beta$}
+   \tkzMarkAngles[mark=|](B,A,C A,C,O)
+   \tkzMarkAngles[mark=||](C,B,O O,C,B)
+ \end{tikzpicture}
+\end{center}
+
+\textbf{Proof:}
+
+Note that we have two Isosceles triangles where the sides \(AO\), \(AC\) and \(OC\) have all the same 
+length, being this the radius of the circle.
+
+Because they are Isosceles then two of their angles have to be equal and the sum of the angles 
+of this two triangle has to add up to the be \(180^\circ\). Therefore, 
+
+\begin{align*}
+	\alpha + \alpha + \beta + \beta &= 180 \\
+	2 \alpha + 2\beta &= 180 \\
+	\alpha + \beta = 90
+\end{align*}
+
+\QED
 
 \subsection{Conversion Between Radians and Degrees}
 
@@ -117,7 +151,7 @@ To convert between radians and degrees, use the following formulas:
 	\text{Radians} & = \text{Degrees} \times \left( \frac{\pi}{180^\circ} \right)
 \end{align*}
 
-\subsection*{Geometric Figures with Formulas (2D)}
+\subsection{Geometric Figures with Formulas (2D)}
 
 \subsection*{Square and Rectangle}
 
@@ -687,14 +721,11 @@ ratio as the segments along the parallels:
 \subsection{Proof of the Pythagorean Theorem}
 
 We want to prove that \(c^2 = a^2 + b^2\) is a true statement.
-\vspace{\baselineskip}
 
 Let us a build a Square with area \(c^2\) and take our original triangle and put it on the sides
 on the square.
-\vspace{\baselineskip}
 
 This will create a square of sides \((a+b)^2\) which is bigger than the inner square \(c^2\).
-\vspace{\baselineskip}
 
 Now let us find the area \(c^2\) using what we know about this shape.
 
@@ -706,5 +737,4 @@ Now let us find the area \(c^2\) using what we know about this shape.
 \end{align*}
 
 \QED
-
 

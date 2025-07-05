@@ -3,12 +3,10 @@
 
 A \emph{relation} in mathematics is a connection or relationship between elements of two sets. It's 
 formally defined as a subset of the Cartesian product of the sets.
-\vspace{\baselineskip}
 
 For example, if we have sets \(A\) and \(B\), a relation \emph{R} from \(A\) to \(B\) consists
 of ordered pairs \((a,b)\) where \(a \in A\) and \(b \in B\), such that \(a\) is related to \(b\) 
 according to some rule or property.
-\vspace{\baselineskip}
 
 Common types of relations include:
 
@@ -51,10 +49,8 @@ Let \(A\) be a set and \(X\) be a relation on \(A\).
 \subsection{Equivalence relation}
 
 An \emph{equivalence relation} is a relation that is symmetric, transitive and reflexive.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \[
 	R:= \{ (a,b) \in \Naturals \times \Naturals: a = b\}
@@ -79,11 +75,11 @@ of all elements in \(B\) that are related to at least one element in \(A\). Form
 \(R \subseteq A \times B\) is a relation, then the image of \emph{R} is defined as:
 
 \[
-	\text{Im}(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}
+	\img(R) = \{b \in B \mid \exists a \in A \text{ such that } (a,b) \in R\}
 \]
 
 In other words, the image consists of all the output values that appear in the ordered pairs of the 
-relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\text{Im}(R) = \{4, 5, 6\}\).
+relation. For example, if \(R = \{(1,4), (2,5), (3,4), (2,6)\}\), then \(\img(R) = \{4, 5, 6\}\).
 
 \subsection{Domain}
 
@@ -132,10 +128,8 @@ associates each element of the set \(A\) with exactly one element of the set \(B
 Formally, a function \(f: A \to B\) is a subset of \(A \times B\) such that for every \(a \in A\), there 
 exists exactly one \(b \in B\) where \((a,b) \in f\). We typically write \(f(a) = b\) to indicate that 
 \(f\) maps the element \(a\) to the element \(b\).
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Let \(A = \{1, 2, 3\}\) and \(B = \{x, y, z\}\). A possible function \(f: A \to B\) could be defined as:
 
@@ -158,10 +152,8 @@ by:
 
 The composition applies \(f\) first, then applies \(g\) to the result. 
 Note that the co-domain of \(f\) must match the domain of \(g\) for the composition to be defined.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Let \(f: \Reals \to \Reals\) be defined by \(f(x) = x^2\) and \(g: \Reals \rightarrow \Reals\) be defined 
 by \(g(x) = x+3\). Then:
@@ -255,7 +247,6 @@ Let \( f : X \to Y \) be a function.
 \textbf{Proof:}
 
 We prove the second part of 1 and the first part of 2.
-\vspace{\baselineskip}
 
 Let \( y \in f(A_1 \cap A_2) \). Then there exists \( x \in A_1 \cap A_2 \) such that 
 \( f(x) = y \). Since \( x \in A_1 \) and \( x \in A_2 \), it follows that \( y \in f(A_1) \) 
@@ -378,10 +369,8 @@ To find the inverse of a function \(f (x)\), follow these steps:
 		\end{enumerate}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Let's apply the steps above to find the inverse of \(f (x) = 2x + 3\).
-\vspace{\baselineskip}
 
 \textbf{Step 1: Replace \(f(x)\) with \(y\)}
 
@@ -471,7 +460,6 @@ Let \(f:X\to Y\) be a function.
 
 Transformations modify the appearance of a function's graph without altering its basic shape.
 Here, we examine how different algebraic changes to a function \( f(x) \) affect its graph:
-\vspace{\baselineskip}
 
 \emph{Vertical Translation:} \( f(x) + a \)
 	    
@@ -537,5 +525,4 @@ Here, we examine how different algebraic changes to a function \( f(x) \) affect
 	\item Each point \( (x, y) \) becomes \( (-x, y) \).
 
 \end{itemize}
-
 

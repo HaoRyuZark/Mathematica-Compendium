@@ -3,7 +3,6 @@
 
 A Differential Equation is an equation that relates a function (the dependent variable)
 with a variable or multiple variables (the independent variables) and its derivative.
-\vspace{\baselineskip}
 
 They can be categorized in \emph{Ordinary} and \emph{Partial} Differential Equations.
 
@@ -16,10 +15,8 @@ An equation of the form
 \]
 
 is called \emph{Ordinary Explicit Differential Equations of order} \(n\)
-\vspace{\baselineskip}
 
 If \(y^n = 0\) then it is \emph{implicit}
-\vspace{\baselineskip}
 
 If the exponent of the dependent variable is 1, and it
 is build like a linear equation then it is categorized as \emph{Linear}
@@ -113,7 +110,6 @@ be written in one of the following forms:
 \end{enumerate}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is \((y - 2)y' = 3x - 5\)
 
@@ -146,7 +142,6 @@ if you can.
 \subsubsection{Understanding the fiction}
 
 The previous fiction we used can explain in the following manner.
-\vspace{\baselineskip}
 
 Given \( f(y) \frac{dy}{dx} dx = \int f(y) dy\). We want to prove that this equality holds via the 
 \emph{chain rule} \(\frac{du}{dx} = \frac{du}{dy} \frac{dy}{dx}\).
@@ -162,7 +157,6 @@ Given \( f(y) \frac{dy}{dx} dx = \int f(y) dy\). We want to prove that this equa
 
 You can imagine the plot of an ODE as a \emph{Slope field} where the slope (derivative) of a function
 obeys a certain condition, this being the differential equation \(\frac{dy}{dx} = expr\).
-\vspace{\baselineskip}
 
 A point on this field is called an \emph{Initial Condition} and the curve that goes through
 that point in the slope field is called an \emph{Integral curve} which a solution to the differential
@@ -195,7 +189,6 @@ and bounded, and Lipschitz continuous in \(y\). Then the initial value problem
 \]
 
 has a unique solution on \( [a, b] \).
-\vspace{\baselineskip}
 
 Or in easier words: If \(f\) and \(\frac{\partial f}{\partial y}\) are continuous near \((x_0, y_0)\) 
 then there is a unique solution on an interval \(\alpha < x_0 < \beta\) to the IVP
@@ -208,7 +201,6 @@ then there is a unique solution on an interval \(\alpha < x_0 < \beta\) to the I
 
 After solving a differential equation we may have the problem that certain initial
 conditions were set at the start, thus, making our general solution not specific.
-\vspace{\baselineskip}
 
 Solving this problem is pretty easy, because we just have to solve for the constant terms
 in our general solution with respect to our initial conditions. Like for example \(y(0) = 1\)
@@ -226,7 +218,6 @@ In some cases a complex function can be simplified via a substitution.
 
 With a substitution like \(z(x) = ax + by(x) + c\) the right-hand side will become \(f(z)\)
 and for the left-hand side we get \(y(x) = \frac{z(x) - ax - c}{b}\).
-\vspace{\baselineskip}
 
 Now we can substitute in the original equation, and we get
 
@@ -239,7 +230,6 @@ Now we can substitute in the original equation, and we get
 \]
 
 Now we can integrate and find the solution and then return to our original variables.
-\vspace{\baselineskip}
 
 \textbf{Example:}
 
@@ -248,7 +238,6 @@ Now we can integrate and find the solution and then return to our original varia
 \]
 
 Here \(a = 1\), \(b = 1\), \(c = 0\) and \(f(z) = z^2\)
-\vspace{\baselineskip}
 
 \textbf{1. Substitute}
 
@@ -306,7 +295,6 @@ Here \(a = 1\), \(b = 1\), \(c = 0\) and \(f(z) = z^2\)
 
 For this to be valid \(z(x) = \frac{y}{x}\) our \(y(x)\) needs to look like \(y(x) = z(x)x\) 
 and so \(y' = z(x) + z'(x)x\).
-\vspace{\baselineskip}
 
 Now we substitute in the differential equation using \(f(z) = z(x) + z'(x)x\)
 
@@ -316,17 +304,14 @@ Now we substitute in the differential equation using \(f(z) = z(x) + z'(x)x\)
 
 Now we can integrate and then return to our original variables. \(y(x) = z(x)x \), where \(z(x)\) is our
 result of the integration.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \[
     y' = \frac{y(x)}{x} + 1
 \]
 
 This in converted to \(y' = f(z) = z + 1\)
-\vspace{\baselineskip}
 
 \textbf{1. Substitute}
 
@@ -371,11 +356,9 @@ If such an Equation has also the property \(b(x) = 0\) it is called \emph{Homoge
 
 \subsubsection{How to solve a Linear Differential Equation}
 
-In this case we will focus on first Order ODE\@.
-\vspace{\baselineskip}
+In this case we will focus on first Order ODE.
 
 Write it in the standard form \(y' + p(x)y = f(x)\)
-\vspace{\baselineskip}
 
 Now use \emph{Integrating Factor Method}
 
@@ -389,7 +372,6 @@ We are going to multiply our expression by function \(r(x)\)
 
 Now we would like to write the left side as \(\frac{d}{dx} y r(x)\) because now if we
 were to integrate it would take us to the expression in the right.
-\vspace{\baselineskip}
 
 When we evaluate this new expression we get that
 
@@ -441,20 +423,13 @@ and
 \]
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
+Given are \(y' + 4y = e^{-x}\) and \(y(0) = \frac{4}{3}\).
 
-Given are \(y' + 4y = e^{-x}\) and \(y(0) = \frac{4}{3}\)
-\vspace{\baselineskip}
+Here \(4 = p(x)\) and \(e^{-x} = f(x)\).
 
-Here \(4 = p(x)\) and \(e^{-x} = f(x)\)
-\vspace{\baselineskip}
-
-Now let us use the formula for \(r(x) = e^{\int p (x)}\)
-\vspace{\baselineskip}
-
-this gives us \(r(x) = e^{\int 4dx} = e^{4x}\)
-\vspace{\baselineskip}
+Now let us use the formula for \(r(x) = e^{\int p (x)}\). This gives us 
+\(r(x) = e^{\int 4dx} = e^{4x}\).
 
 Now recall what we saw earlier
 
@@ -463,7 +438,6 @@ Now recall what we saw earlier
 \]
 
 Our left side is just \(\frac{d}{dx} e^{4x}y\)
-\vspace{\baselineskip}
 
 Now let us complete the exercise with our last formula by integrating both sides
 
@@ -478,7 +452,6 @@ Now let us complete the exercise with our last formula by integrating both sides
 \]
 
 Which is our general solution
-\vspace{\baselineskip}
 
 To find our specific solution we just plug 0 in to our general solution that gives us
 \(\frac{1}{3} + c = \frac{4}{3}\) thus, \(c = 1\)
@@ -493,7 +466,6 @@ A differential equation
 
 is considered \emph{Homogeneous} if and only if
 \(M(x)\) and \(N(x)\) are \emph{homogeneous}, and they have the same degree.
-\vspace{\baselineskip}
 
 The equation \(y' + f(x)y = 0\) is called \emph{homogeneous linear differential equation of first order}.
 
@@ -538,21 +510,15 @@ Or \(f(x,y,y')\) is homogeneous if it can be written as \(y' = f(\frac{x}{y})\) 
 \end{enumerate}
 
 \textbf{Example:}
-\vspace{\baselineskip}
-
 
 Give is the function \((x -y)dx = - xdy\)
-\vspace{\baselineskip}
 
 \textbf{Step 1.} We write it in the desired form \((x - y)dx + xdy = 0\)
-\vspace{\baselineskip}
 
 \textbf{Step 2.} We notice that both are of degree \(1\). This time we skip the rigorous check.
-\vspace{\baselineskip}
 
 \textbf{Step 3.} We are going to choose the simpler function to do the change of variable 
 depending on the \emph{differential!} 
-\vspace{\baselineskip}
 
 The simpler function is \(xdy\) thus, we are to change \(y\)
 
@@ -601,7 +567,6 @@ Now substitute
 \subsection{Solving Homogeneous DE I}
 
 Another method for solving this kind of equations \(y' + f(x)y = 0\)is to follow the next steps.
-\vspace{\baselineskip}
 
 \textbf{Step 1: Separate the variables}
 
@@ -639,7 +604,6 @@ of first order} \(g(x)\) is called the \emph{distortion function}. The correspon
 
 Every linear IVP with continuous functions \(f(x)\) and \(g(x)\) plus a bounded \(f(x)\) 
 has exactly one solution.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -675,7 +639,6 @@ thus,
 \]
 
 therefore, \(g(x) = c'(x)e^{\int -f(x) dx}\)
-\vspace{\baselineskip}
 
 Then we can get a solution for \(c(x)\) from
 
@@ -693,10 +656,8 @@ Then we can get a solution for \(c(x)\) from
 \]
 
 \textbf{Example: }
-\vspace{\baselineskip}
 
 Given is \(y' -\cos(x)y = x e^{\sin(x)}\) with \(y(0) = 3\).
-\vspace{\baselineskip}
 
 \textbf{1. Solve as if it were homogeneous}
 
@@ -768,12 +729,10 @@ For the IVP
     y(a) = b_0, y'(a) = b_1, \dots, y^{n - 1}(a) = b_{n - 1}
 \]
 
-If all \(p_i\) and \(f\) are continuous on the interval \emph{I} about \(a\), then
-there exists a unique solution on \emph{I}.
+If all \(p_i\) and \(f\) are continuous on the interval \(I\) about \(a\), then
+there exists a unique solution on \(I\).
 
-\subsection{Constant Coefficients and the Superposition Theorem}
-
-\subsubsection{Theorem of Superposition and the General Solution}
+\subsection{Theorem of Superposition and the General Solution}
 
 Suppose \(y_1, \dots, y_n\) solve 
 
@@ -784,7 +743,6 @@ Suppose \(y_1, \dots, y_n\) solve
 Then \(y = c_1 y_1 + \cdots + c_n y_n\) also solves the equation, and it is the 
 \emph{General Solution} if and only if the \emph{Wronskian} \(W(t) \ne 0\) for some \(t_0\).
 
-
 \subsection{Undetermined Coefficients}
 
 Given an equation \(y' + ay = g(x)\) notice that \(a\) does not depend on \(x\).
@@ -793,7 +751,6 @@ partial solution \(y_p\). Now remember from \emph{Linear Algebra} the
 \(general = particular + homogeneous\) more precisely \(y = y_p + y_h\) therefore, adding a 
 particular solution to a homogeneous does not change
 the general solution of our DE.
-\vspace{\baselineskip}
 
 Now let us substitute in our differential equation.
 
@@ -822,18 +779,14 @@ Now we have to find a way to solve for \(y_p\) and \(y_h\)
 \subsubsection{Find the partial solution}
 
 We will use the method called based on guessing the type of the function on the right side.
-\vspace{\baselineskip}
 
 \textbf{Example: }
-\vspace{\baselineskip}
 
 Given is the following IVP: \(y' + 2y = 2x + 13\) with \(y(0) = 8\)
-\vspace{\baselineskip}
 
 By looking carefully we see that on the right-hand side we just have a normal polynomial,
 thus, we can substitute \(y = bx + c\) and derivate \(y' = b\). In the case for when we have higher
 order derivative we would differentiate for each of them. 
-\vspace{\baselineskip}
 
 Now substitute
 
@@ -895,11 +848,9 @@ and we obtain the particular solution:
     Trigonometric & \( k \sin(bx) + l \cos(bx) \) & \( c_0 \sin(bx) + c_1 \cos(bx) \) \\
     \hline
 \end{tabular}
-\vspace{\baselineskip}
 
 It is important to point out that sometimes it is necessary to combine different types
 of functions to get the solution.
-\vspace{\baselineskip}
 
 \textbf{Example:}
 
@@ -914,7 +865,6 @@ Here the approach would be
 \]
 
 The best way is to tackle down each of the types of functions separately.
-\vspace{\baselineskip}
 
 An alternative to way of using this method is to
 
@@ -940,7 +890,6 @@ This is used for equations of the form
 
 We can not use the methods we already know for this equation because it is linear but with a
 clever substitution we can turn it into a linear differential equation.
-\vspace{\baselineskip}
 
 Let us use a substitution 
 
@@ -965,7 +914,6 @@ looks kinda similar to the original equation multiply by \(y^{-n}\) that looks l
     y^{-n}y' + P(x)y^{1 - n} = Q(x)
 \]
 
-
 Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\), thus, after substitution
 
 \[
@@ -973,10 +921,8 @@ Notice that \(y^{-n} = \frac{u'}{(1-n)y'}\), thus, after substitution
 \]
 
 Now our equation is \emph{linear}, and we can use the \emph{integrating factor} method.
-\vspace{\baselineskip}
 
 \textbf{Example: }
-\vspace{\baselineskip}
 
 Given is \(y' -5y = \frac{-5}{2}xy^3\).
 
@@ -1061,7 +1007,6 @@ that start near \(a\) leave as \(t \to \infty\)
 The method of \emph{variation of constants} is often used alongside the \emph{superposition principle}. 
 In this method, the integration constant in the function \( c(x) \) is omitted as it is part of the 
 particular solution.
-\vspace{\baselineskip}
 
 The superposition principle also holds for linear inhomogeneous differential equations with 
 non-constant coefficients:
@@ -1082,7 +1027,6 @@ For the total solution \( y = y_h + y_p \), we get:
 
 Thus, the solution can be decomposed into the general solution of the homogeneous DE and a 
 particular solution based on the form of the right-hand side.
-\vspace{\baselineskip}
 
 \textbf{Example: }
 
@@ -1120,7 +1064,6 @@ Here we compare with the inhomogeneous part of the original equation and get
 
 then \(c(x)\) is equal to \(\frac{x^2}{2}\) and therefore, \(y_p = \frac{x^2}{x}\frac{1}{x} = 
 \frac{x}{2}\)
-\vspace{\baselineskip}
 
 As our final result we get \(y = \frac{c}{x} + \frac{x}{2}\)
 
@@ -1175,7 +1118,6 @@ If we compare the coefficients we get
     \frac{a_n}{(n + 1)} = a_{n+1}
 \]
 
-
 after iterating backwards we get
 
 \[
@@ -1208,7 +1150,6 @@ more specific after dividing by \(A(X)\)
 
 with \(x = a\) as an \emph{Ordinary Point} if \(\dots, P(x)\) and \(Q(x)\) are 
 \emph{Analytic} at \(x = a\). Otherwise, a \emph{Singular Point}.
-\vspace{\baselineskip}
 
 Then this equation has \(n\) linearly independent solutions of the form
 
@@ -1246,13 +1187,10 @@ If this is a differential then \(p_x = q_y\), and we define a DE of the form:
 \]
 
 as \emph{exact}. And the \(p_x = q_y\) as \emph{Integrability-Condition}.
-\vspace{\baselineskip}
 
 By finding the \emph{potential} we can solve this kind of differential equations.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \textbf{Step 1: Solve for \(y'\)}
 
@@ -1292,7 +1230,6 @@ Now we differentiate both sides with respect to \(y\) and this gives us
 \end{align*}
 
 and therefore, \(F(x,y) = 6x^2y + 3x + \hat{c} = 0\).
-\vspace{\baselineskip}
 
 \textbf{Step 3: Solve for \(y\)}
 
@@ -1330,7 +1267,7 @@ The steps for solving this kind of problems are
           because otherwise, we would have multiplied our original equation times zero.
     
     \item Substitute \(\mu\) with the solution. And if now both partials are equal then you can now 
-          solve the exact differential equation. If not try with another \(mu\) using the other variable.
+          solve the exact differential equation. If not try with another \(\mu\) using the other variable.
           And if this also does not work then the differential equation can not be solved. More specific, 
           if \(\mu(x)\) depends on \(y\) and \(\mu(y)\) on \(x\) then there is no way to make the 
           differential equation exact.
@@ -1402,7 +1339,6 @@ We look for solutions of the form \( y = e^{rt} \). Substituting into the equati
     y'' &=  r^2 e^{rt}
 \end{align*}
 
-
 Substituting into the original equation:
 
 \[
@@ -1428,7 +1364,6 @@ Suppose there are two linearly independent solution \(y_1\) and \(y_2\) to
 \]
 
 then the general solution is \(y = c_1 y_1 + c_2 y_2\).
-\vspace{\baselineskip}
 
 We analyze the nature of the roots \( r \) based on the discriminant \( D = b^2 - 4ac \).
 Also, for dealing with initial conditions of the form \(y^n = a, \dots\) we only have to 
@@ -1497,7 +1432,6 @@ and they are also linearly independent, because of that we can just use them for
 \[y = c_1 e^{\alpha t}\cos\beta t + c_2  e^{\alpha t}\sin\beta t\]
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is \(y''\,' + y' = 0\).
 
@@ -1524,7 +1458,54 @@ Now \(r_1 = 0 \quad r_2 = -i \quad r_3 = i\)
 \subsubsection{Inhomogeneous Case}
 
 For the inhomogeneous case we would apply the method of the \emph{Undetermined Coefficients}. But 
-differentiating two times or more depending on the order of the differential equation.
+differentiating two times or more depending on the order of the differential equation and add the 
+homogeneous solution to the solution we get from that.
+
+\textbf{Example:}
+
+Solve the differential equation:
+
+\[
+    y' + \frac{1}{x} y = \sin(x)
+\]
+
+The integrating factor is:
+
+\[
+    \mu(x) = e^{\int \frac{1}{x} dx} = e^{\ln|x|} = |x|
+\]
+
+Assuming \( x > 0 \), we take \( \mu(x) = x \). Multiply through by the integrating factor:
+
+\[
+    x y' + y = x \sin(x)
+\]
+
+The left-hand side is the derivative of \( x y \):
+
+\[
+    \frac{d}{dx}(x y) = x \sin(x)
+\]
+
+\[
+    \int \frac{d}{dx}(x y) \, dx = \int x \sin(x)\, dx
+\]
+
+Use integration by parts on the right:
+
+\[
+    \int x \sin(x) dx = -x \cos(x) + \int \cos(x) \, dx = -x \cos(x) + \sin(x)
+\]
+
+So:
+
+\[
+    x y = -x \cos(x) + \sin(x) + C
+\]
+
+\[
+    y = -\cos(x) + \frac{\sin(x)}{x} + \frac{C}{x}
+\]
 
 \subsection{The Wronskian}
 
@@ -1543,7 +1524,6 @@ functions is defined as:
 \]
 
 If \(W(A) \ne 0\) then they are linearly independent.
-
 
 \subsection{Linearity Property}
 
@@ -1581,7 +1561,6 @@ For a linear differential equation of the form
 
 The homogeneous equation has a solution of the linearly independent \(y_1\) and \(y_2\)
 of the form \(y = u_1 y_1 + u_2 y_2\). We can guess the functions \(y_1\) and \(y_2\).
-\vspace{\baselineskip}
 
 So, for finding a solution of these types of equations we use the following formulas.
 
@@ -1589,13 +1568,11 @@ So, for finding a solution of these types of equations we use the following form
     u_1 = - \int \frac{y_2 g}{y_1 y_{2}' - y_2 y_{1}'} dx
 \]
 
-
 \[
     u_2 = - \int \frac{y_1 g}{y_1 y_{2}' - y_2 y_{1}'} dx
 \]
 
 These formulas come from:
-\vspace{\baselineskip}
 
 \textbf{Differentiating two times:}
 
@@ -1619,7 +1596,6 @@ Now we can derivate one more time:
 \[
     y'' =  u_1 y_{1}'' + y_{1}' u_{1}'  + u_2 y_{2}'' + y_{2}' u_{2}'
 \]
-
 
 \textbf{Substitute in the original equation}
 
@@ -1654,7 +1630,7 @@ with only two integrals to solve.
 
     \item Separable \(\Rightarrow\) Separation of Variables.
 
-    \item Form \(y' = f(ax + by(x) + c)\) \(Rightarrow\) Substitution \(z = ax + by(x) + c\) and \(f(z)\).
+    \item Form \(y' = f(ax + by(x) + c)\) \(\Rightarrow\) Substitution \(z = ax + by(x) + c\) and \(f(z)\).
 
     \item Form \(y' = \frac{y}{x}\) \(\Rightarrow\) Substitution \(z = \frac{y}{x}\)
 
@@ -1667,7 +1643,6 @@ with only two integrals to solve.
     \item Non-homogeneous \(\Rightarrow\) Undetermined Coefficients or integrating factor.
 
 \end{itemize}
-
 
 \subsubsection{Second Order and higher}
 
@@ -1742,7 +1717,6 @@ which is our \emph{Eigenvalue} problem. This can be solved via
 
 And this solution can lead to the three cases we already know: distinct real roots, complex Conjugate 
 roots and repeated roots.
-\vspace{\baselineskip}
 
 We can also use substitution to solve for one of the \(y_i\), which are functions of \(x\) like
 
@@ -1753,9 +1727,7 @@ We can also use substitution to solve for one of the \(y_i\), which are function
     y_2 & \frac{y_1' - ay_1}{b}
 \end{align*}
 
-
 Then we can differentiate our first equation with respect to \(x\)
-
 
 \begin{align*}
     by_2 &= y_1' - ay_1\\
@@ -1766,10 +1738,7 @@ Then we can differentiate our first equation with respect to \(x\)
     y_1'' - (a + c)y_1' + (ac - bd)y_1 + bdy_1 &= 0
 \end{align*}
 
-
-
 \textbf{Example:}
-\vspace{\baselineskip}
 
 We are given the system of differential equations:
 
@@ -1808,7 +1777,7 @@ Solving the quadratic equation:
 Now we find an eigenvector corresponding to \( \lambda = 2 + i \) by solving:
 
 \[
-(A - (2 + i)I)v = 0
+    (A - (2 + i)I)v = 0
 \]
 
 \[
@@ -1835,15 +1804,4 @@ system:
     u(t) = c_1 e^{(2 + i)t} \begin{bmatrix} 1 \\ 1 + i \end{bmatrix}
     + c_2 e^{(2 - i)t} \begin{bmatrix} 1 \\ 1 - i \end{bmatrix}
 \]
-
-
-
-
-
-
-
-
-
-
-
 

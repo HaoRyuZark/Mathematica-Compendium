@@ -6,7 +6,6 @@ scalar value that provides important information about the matrix, including whe
 invertible and the volume scaling factor of the linear transformation represented by \(A\).
 The determinant can be computed using various methods, including the Laplace 
 expansion, row reduction, or the Leibniz formula.
-\vspace{\baselineskip}
 
 The determinant of a \(2 \times 2\) matrix is given by:
 
@@ -70,12 +69,12 @@ For \( A, B \in K^{n \times n} \), it holds that
 \textbf{Proof:}
 
 If \( \det(A) = 0 \) or \( \det(B) = 0 \), 
-then \( \text{rank}(L_A) < n \) or \( \text{rank}(L_B) < n \). \\
-Thus, \( \text{rank}(L_{AB}) < n \), 
+then \( \rank(L_A) < n \) or \( \rank(L_B) < n \). \\
+Thus, \( \rank(L_{AB}) < n \), 
 and the statement is trivial.
 
 So let us assume that \(A\) and \(B\) are 
-invertible, i.e., \( \text{rank}(A) = \text{rank}(B) = n \). \\
+invertible, i.e., \( \rank(A) = \rank(B) = n \). \\
 We now assume that in such a case, a matrix can 
 always be transformed into reduced row 
 echelon form using the row operations 
@@ -166,9 +165,7 @@ Equivalently, by re-indexing:
 \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot \prod_{i=1}^n a_{i \sigma(i)}.
 \]
 
-
 This formula expresses the determinant as a sum over all permutations of the indices \( \{1, \dots, n\} \), where each term is a product of matrix entries taken from different rows and columns, weighted by the sign of the corresponding permutation.
-
 
 \subsection{Laplace's Method (Co-factor Expansion)}
 
@@ -258,7 +255,6 @@ Therefore,
 \det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}
 \]
 
-
 \textbf{Example of Determinant Calculation}
 
 Let's calculate the determinant of the matrix:
@@ -313,10 +309,8 @@ but with the catch that for the column case we have to take into consideration h
 operating with columns affect the determinant, in contrast to the row operations, except for scaling
 a row by some \(\lambda\) in this case we would need to undo the change by multiplying the determinant
 by \(\frac{1}{\lambda}\).
-\vspace{\baselineskip}
 
 \textbf{Example: }
-\vspace{\baselineskip}
 
 We are given the matrix:
 

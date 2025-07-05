@@ -35,7 +35,6 @@ such that:
 \end{enumerate}
 
 The set \(F\) is a field, and the elements of \(V\) are called \emph{vectors}.
-\vspace{\baselineskip}
 
 \textbf{Examples:}
 
@@ -70,7 +69,6 @@ A subset \(W\) of a vector space \(V\) is a \emph{subspace} of \(V\) if:
 \end{enumerate}
 
 If \(W\) is a subspace of \(V\), we write \(W \subseteq V\).
-\vspace{\baselineskip}
 
 The intersection of two subspaces is also a subspace.
 
@@ -88,7 +86,6 @@ The set of all linear combinations of a set of vectors \(\{\vec{v}_1, \vec{v}_2,
 is called the \textbf{span} of those vectors, 
 denoted by \(\text{span}(\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n)\). The span of a set of vectors is a 
 subspace of the vector space \(V\).
-\vspace{\baselineskip}
 
 The span of a set of vectors is the smallest subspace containing those vectors.
 
@@ -212,7 +209,6 @@ To find the base of a set of vectors, we can use the following steps:
 
 The number of non-zero rows in the echelon form matrix is equal to the dimension of the vector space 
 spanned by the original set of vectors.
-\vspace{\baselineskip}
 
 The base of a vector space is not unique. Different bases can span the same vector space.
 
@@ -232,7 +228,6 @@ Suppose that \((v_1, \ldots, v_r)\) is a linearly independent tuple and that
 
 Then it is possible to extend \((v_1, \ldots, v_r)\) to a basis of \(V\) by possibly adding suitable 
 vectors from the set \(\{w_1, \ldots, w_s\}\).
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -268,7 +263,6 @@ process terminates after finitely many steps, since
 \]
 
 \QED
-\vspace{\baselineskip}
 
 Every finitely generated vector space \(V\) has a basis.
 
@@ -277,7 +271,6 @@ Every finitely generated vector space \(V\) has a basis.
 Let \((v_1, \ldots, v_n)\) and \((w_1, \ldots, w_m)\) be bases of a vector space \(V\). Then, for every 
 \(v_i\), there exists a \(w_j\) such that if we replace \(v_i\) by \(w_j\) in the tuple 
 \((v_1, \ldots, v_n)\), it still forms a basis of \(V\).
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -363,17 +356,14 @@ So you only have to prove that the set of coefficients vector is linearly indepe
 Given the \(n+1\) points \((x_k, y_k)\), with \(0 \leq k \leq n\) and all \(x_k\) distinct, 
 there exists exactly one polynomial \(p_n \in P_n\) such that \(y_k = p_n(x_k)\) for all 
 \(0 \leq k \leq n\). This polynomial is called the interpolation polynomial.
-\vspace{\baselineskip}
 
 \textbf{Proof}
 
 The uniqueness follows immediately. We prove the existence by induction on 
 \(n\). For \(n = 0\), choose \(p_0(x) = y_0\). 
-\vspace{\baselineskip}
 
 Now assume the statement is true for \(n-1\). Let the polynomial \(p_{n-1}\)
 interpolate the points \((x_0, y_0), \ldots, (x_{n-1}, y_{n-1})\). 
-\vspace{\baselineskip}
 
 Define
 
@@ -400,10 +390,8 @@ the numerator always vanishes at \(x_k\). Therefore, \(p_n(x_k) = y_k\) for
 so that \(p_n(x_n) = y_n\). 
 
 \QED
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Consider the three points \((-2, 1)\), \((-1, -1)\), and \((1, 1)\). 
 These points uniquely define an interpolating parabola \(p_2\). This parabola can be 
@@ -452,6 +440,4 @@ Solving this system gives \(a = 1\), \(b = 1\), and \(c = -1\), so the interpola
 \[
 	p_2(x) = x^2 + x - 1.
 \]
-
-
 

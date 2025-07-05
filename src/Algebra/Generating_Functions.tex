@@ -48,11 +48,9 @@ generating function for the set \( \{1, x\} \):
 
 This expansion encodes all subsets of an \(n\)-element set, where each term \( x^k \) corresponds to 
 selecting a subset of size \(k\). The coefficient \( \binom{n}{k} \) gives the number of such subsets.
-\vspace{\baselineskip}
 
 In this way, generating functions can be viewed as a powerful algebraic analogue of subset selection and 
 counting, with the exponents representing sizes or weights, and the coefficients representing counts.
-\vspace{\baselineskip}
 
 Generating functions serve as a bridge between algebra and combinatorics, allowing abstract operations to 
 yield concrete combinatorial results.
@@ -60,10 +58,8 @@ yield concrete combinatorial results.
 \subsection{Closed form of the Fibonacci Sequence}
 
 Let us use generating function to find a closed form for the Fibonacci number. 
-\vspace{\baselineskip}
 
 We know that \(F_0 = 1\) and \(F_1 = 1\) and for \(n \ge 2\) \(F_n = F_{n-1} + F_{n-2}\)
-\vspace{\baselineskip}
 
 Now let us use the following function
 \[
@@ -114,7 +110,6 @@ If you start with \(F_0 = 0\) then the result  is
     F(x) = \frac{x}{1 - x - x^2}
 \]
 
-
 Now we can use partial fraction decomposition to make this expression even more explicit
 by using the following expression where \(\alpha\) and \(\beta\) are zeroes of the polynomial in the
 denominator.
@@ -128,7 +123,6 @@ The zeros of the polynomial are:
 \[
     x_1 = \frac{1 + \sqrt{5}}{2} \text{ and }  x_2 = \frac{1 - \sqrt{5}}{2}    
 \]
-
 
 Now we can write our expression like:
 \[
@@ -144,5 +138,4 @@ Which after performing the partial fraction decomposition left us with:
 \]
 
 \QED
-
 

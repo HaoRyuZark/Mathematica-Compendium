@@ -14,7 +14,6 @@ point \( \vec{x}_0 \in \Reals^n \) is defined as:
 A point \( \vec{x}_0 \in D \subseteq \Reals^n \) is called an \emph{interior point} of \( D \) 
 if there exists \( \varepsilon > 0 \) such that \( U_\varepsilon(\vec{x}_0) \subseteq D \).  
 A set \( D \) is called \emph{open} if all its points are interior points.
-\vspace{\baselineskip}
 
 Although \( \varepsilon \)-neighborhoods depend on the chosen norm, due to the equivalence of norms 
 in \( \Reals^n \), openness is norm-independent.
@@ -67,8 +66,53 @@ there exists \( n_0 \in \Naturals \) such that:
     \end{pmatrix}
 \]
 
+\subsection{Different Norms}
+
+From linear algebra it is known what a \emph{Norm} is and its properties:
+
+\subsection{Different Norms}
+
+From linear algebra it is known what a \emph{Norm} is and its properties:
+
+Let \( V \) be a vector space over \( \Reals \) or \( \Complex \). A function 
+\( \|\cdot\|: V \to \Reals \) is called a norm if for all \( x, y \in V \) and all scalars 
+\( \alpha \), the following properties hold:
+
+\begin{enumerate}
+    
+    \item \emph{Non-negativity:} \( \|x\| \geq 0 \), and \( \|x\| = 0 \) if and only if \( x = 0 \).
+    
+    \item \emph{Absolute homogeneity:} \( \|\alpha x\| = |\alpha| \cdot \|x\| \).
+    
+    \item \emph{Triangle inequality:} \( \|x + y\| \leq \|x\| + \|y\| \).
+
+\end{enumerate}
+
+Commonly used norms in \( \Reals^n \) (or \( \Complex^n \)) include:
+
+\begin{itemize}
+    
+    \item \emph{Sum Norm} (also known as the \( \ell_1 \) norm): 
+    
+    \[
+        \|x\|_1 = \sum_{i=1}^n |x_i|
+    \]
+    
+    \item \emph{Max Norm} (also known as the \( \ell_\infty \) norm): 
+    
+    \[
+        \|x\|_\infty = \max_{1 \leq i \leq n} |x_i|
+    \]
+    
+    \item \emph{Euclidean Norm} (also known as the \( \ell_2 \) norm): 
+    
+    \[
+        \|x\|_2 = \left( \sum_{i=1}^n |x_i|^2 \right)^{1/2}
+    \]
+
+\end{itemize}
+
 \textbf{Example II:}
-\vspace{\baselineskip}
 
 Given is
 
@@ -91,7 +135,7 @@ we want to find \(n_0\) for \(\varepsilon = 0,1\)
     = \vec{X}_0
 \]
 
-Now use the definition for convergence
+Now use the definition for convergence and \emph{Euclidean Norm}
 
 \[
     \|\vec{X}_n - \vec{X}_0\| < \varepsilon
@@ -114,6 +158,31 @@ Now use the definition for convergence
 \]
 
 Therefore, \(n_0 = 101\).
+
+
+
+\subsubsection{Equivalence of Norms}
+
+In finite-dimensional vector spaces, all norms are equivalent. That is, if \( \|\cdot\|_a \) and 
+\( \|\cdot\|_b \) are two norms on a finite-dimensional vector space \( V \), then there exist constants 
+\( c, C > 0 \) such that for all \( x \in V \),
+
+\[
+    c \|x\|_a \leq \|x\|_b \leq C \|x\|_a
+\]
+
+This implies that while different norms may measure length differently, they all 
+induce the same topology and convergence behavior in finite-dimensional spaces.
+
+\subsubsection{Equivalence in the Reals}
+
+In the \(\Reals^n\) all norms are equivalent and 
+
+\begin{align*}
+     \|\vec{x}\|_\infty &\le \|\vec{x}\|_2 \le \sqrt{n}\|\vec{x}\|_infty \\
+     \|\vec{x}\|_\infty &\le \|\vec{x}\|_1 \le n\|\vec{x}\|_infty \\
+     \|\vec{x}\|_2 &\le \|\vec{x}\|_1 \le n\|\vec{x}\|_2
+\end{align*}
 
 \subsection{Accumulation Point}
 
@@ -156,13 +225,10 @@ means that for every sequence \( (\vec{X}_n) \subset U \) converging to \( \vec{
 
 The convergence must hold along all possible paths to the point \( \vec{X}_0 \), making the 
 multi-variable limit path-independent and unique (if it exists).
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \(\vec{X}_n = \begin{pmatrix} \frac{1}{n} \\ 1 + \frac{1}{n^2} \\ \frac{\sin(n)}{n} \end{pmatrix}\)
-\vspace{\baselineskip}
 
 The limit towards infinity is then 
 
@@ -177,7 +243,6 @@ The limit towards infinity is then
 
 For a function \( f: U \subseteq \Reals^n \to \Reals \), a \emph{partial function} is a 
 restriction of \(f\) to a variable by fixing all others.
-\vspace{\baselineskip}
 
 \textbf{Examples in \( \Reals^3 \):}
 
@@ -197,7 +262,6 @@ Fixing values:
 
 Each \( f_i \) reduces the multi-variable function to a single-variable slice (cross-section), 
 allowing analysis along coordinate axes.
-
 
 \subsection{Continuity}
 
@@ -241,7 +305,6 @@ approaches.
 \end{enumerate}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is \(\frac{x^3 + 2yx^2 + y^2x + 2y^3}{x + 2y}\) for \((x,y) \ne (0,0)\) and \(0 for (0,0)\).
 
@@ -258,13 +321,10 @@ Now by taking the limit we see that
 \]
 
 Thus, the function is continuous.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Check for continuity towards the origin of \(f(x,y) =\frac{xy^2}{x^2 + y^4}\).
-\vspace{\baselineskip}
 
 For the path \(x = y\) and \(y = 0\)
 
@@ -295,10 +355,8 @@ Then:
 \]
 
 This alternative approach helps evaluate limits and continuity at the origin using radial convergence.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is 
 
@@ -325,13 +383,10 @@ this functions is not continuous.
 
 When dealing with multi-variable functions we can sometimes use \emph{substitution} 
 for converting our function into a single variable function to use \emph{L'Hospital's Rule}.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is \(\frac{e^{x^2 + y^2} - 1}{x^2 + y^2}\).
-\vspace{\baselineskip}
 
 See, that we have repeated terms we can substitute. \(p^2 = x^2 + y^2\).
 
@@ -438,9 +493,6 @@ We call a vector field \emph{continuous}/\emph{differentiable} if all functions
 \] 
 
 are continuous/differentiable.
-\vspace{\baselineskip}
 
 As a side node, the \emph{gradient} of a multi-variable function is a vector field.
-
-
 

@@ -26,13 +26,15 @@
 \usepackage{etoolbox}
 \usepackage{fncychap}
 \usepackage{setspace}
-\usepackage{listing}
-\usetikzlibrary{calc,intersections,decorations.pathreplacing, patterns, angles, quotes, cd, shapes, arrows, positioning}
+\usepackage{listings}
+\usepackage{tkz-euclide}
+\usepackage{parskip}
+\usetikzlibrary{calc,intersections,decorations.pathreplacing, patterns, angles, quotes, cd, shapes, arrows, positioning, automata}
 \usepgfplotslibrary{fillbetween}
 \geometry{margin=1in}
 \graphicspath{{./resources/images}}
 \pgfplotsset{compat=newest}
-\setlength\parindent{0pt}
+\setlength\parindent{0pt} 
 
 \input{utilities/macros.tex}
 
@@ -40,17 +42,13 @@
 \author{Miguel Antonio Méndez Hernández}
 \date{\today}
 
-
 \begin{document}
 
 \maketitle
 
-
 \newpage
 \tableofcontents
-
 \newpage
-
 \newpage
 
 \input{src/Introction_and_others/Introduction.tex}
@@ -119,8 +117,15 @@
 \input{src/Analysis/Multivariable/Multidimensional_Integrals.tex}
 \input{src/Analysis/Multivariable/Differential_Equations.tex}
 
-
 \input{src/Probability/Probability.tex}
 \input{src/Probability/Combinatorics.tex}
+
+\input{src/Computer_Science/RAM_Machine.tex}
+\input{src/Computer_Science/Complexity_Theory.tex}
+\input{src/Computer_Science/State_Machines_and_Languages.tex}
+\input{src/Computer_Science/Regex.tex}
+\input{src/Computer_Science/Graph_Theory.tex}
+\input{src/Computer_Science/Hashing.tex}
+\input{src/Computer_Science/Data_Structures.tex}
 
 \end{document}

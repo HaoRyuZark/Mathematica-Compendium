@@ -9,7 +9,6 @@ and at the term \emph{isometry}. It will be useful to remember some concepts abo
 
 Given two vector spaces \((V, \|\centerdot\|_V)\) and \((W, \|\centerdot\|_W)\). Then a map 
 \(f: V \to W\) is called \emph{Isometric} if and only if \(\|x - y\|_V = \|f(x) - f(y)\|_W \).
-\vspace{\baselineskip} 
 
 It also has the following traits:
 
@@ -22,7 +21,6 @@ It also has the following traits:
 \subsection{The Rotation Matrix}
 
 This matrix is a common example of an isometric linear map, because of the way it transforms the space.
-\vspace{\baselineskip}
 
 For the \(2D\) we have 
 
@@ -34,7 +32,6 @@ For the \(2D\) we have
 \]
 
 The derivation comes from the addition theorems for \(\sin(\phi) \) and \(\cos(\phi)\).
-\vspace{\baselineskip}
 
 Given two vectors \(\vec{v}\) and \(\vec{g}\) whose angles are \(\alpha\) and \(\theta = \alpha + \beta\). 
 We can rotate the vector \(\vec{v}\) by some \(\beta\) to transform into \(\vec{g}\).
@@ -116,12 +113,10 @@ which gives us
     \end{pmatrix}
 \]
 
-
 \subsection{Orthogonal Matrices}
 
 A matrix \(A \in \Reals^{n \times n}\) is \emph{orthogonal} if its columns vectors form an orthonormal 
 basis.
-\vspace{\baselineskip}
 
 The set of all \emph{orthogonal} matrices is \(O(n)\).
 
@@ -153,7 +148,6 @@ The set of all \emph{orthogonal} matrices is \(O(n)\).
 \end{align*}
 
 \textbf{Example of a proof}
-\vspace{\baselineskip}
 
 Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \Reals^n \backslash \{0\} \).
 
@@ -162,7 +156,6 @@ Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \Reals^n \backslash
 \]
 
 \(I_n\) is the identity matrix.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -181,7 +174,6 @@ Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \Reals^n \backslash
 \subsection{The Determinants of Orthogonal Matrices}
 
 The \emph{determinant} of this kind of matrices can only be either positioning 1 or negative 1.
-\vspace{\baselineskip}
 
 \textbf{Proof}:
 
@@ -200,7 +192,6 @@ We know that \(\det(I) = I \), therefore
 \subsection{The Orthogonal Group}
 
 \(O(n)\) with the operation matrix multiplication forms the \emph{orthogonal group}.
-\vspace{\baselineskip}
 
 \subsection{Dot Product}
 
@@ -211,13 +202,10 @@ Given \(f: \Reals^n \to \Reals^n\) then this two statements are equivalent.
 \]
 
 and 
-\vspace{\baselineskip}
 
 \(f\) preserves the angles and length.
-\vspace{\baselineskip}
 
 \(f\) is also called \emph{orthogonal}.
-\vspace{\baselineskip}
 
 \textbf{Proof \(\Rightarrow\):}
  
@@ -245,7 +233,6 @@ Then
 \end{align*}
 
 \QED
-\vspace{\baselineskip}
 
 \textbf{Proof \(\Leftarrow\):} 
 
@@ -262,7 +249,6 @@ With \(\alpha = \angle(x, y) = \angle(f(x), f(y))\) gilt:
 
 The mapping \( f : \Reals^n \to \Reals^n \) is orthogonal if and only if  
 the associated matrix representation \( Q \) (with respect to the standard basis) is an orthogonal matrix, i.e., \( Q \in O(n) \).
-\vspace{\baselineskip}
 
 \textbf{Proof \(\Rightarrow\):} 
 
@@ -289,7 +275,6 @@ and hence \( (Q^\top Q - I)x = 0 \quad \forall x \).
 It follows that \( Q^\top Q = I \), and by Theorem 7.3, \( Q \in O(n) \).
 
 \QED
-\vspace{\baselineskip}
 
 \textbf{Proof \(\Leftarrow\):} 
 
@@ -301,7 +286,6 @@ Follows by the same calculation as above.
 
 Let \(f\) be orthogonal. Then the matrix representation of \(f\)  
 with respect to any orthonormal basis is orthogonal.
-\vspace{\baselineskip}
 
 \textbf{Proof:} 
 
@@ -324,7 +308,6 @@ A use case of orthogonal matrices is the \emph{QR-Decomposition}. The goal is th
 two matrices \(Q \text{ and } R\) such that \(A = QR \text{ with } R\in \Reals^{n \times n} 
 \text{ and } Q \in \Reals^{m \times n}\). \emph{R} is matrix with only an upper triangle and 
 \emph{Q} is orthogonal for the columns.
-\vspace{\baselineskip}
 
 We know that the best approximation by the method of the least squares is given by
 
@@ -360,10 +343,8 @@ inner products our \(A\) matrix and \emph{Q}
 \]
 
 Or even simpler \(R = Q^T A\).
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Find the \emph{QR-Decomposition} of the matrix \(A\) given by:
 
@@ -421,8 +402,4 @@ First, we find the orthonormal basis of the columns of our matrix \(A\)
         0    &    \sqrt{8}
     \end{pmatrix}
 \]
-
-
-
-
 

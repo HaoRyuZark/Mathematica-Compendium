@@ -7,14 +7,12 @@ An eigenvector of a square matrix \(A\) is a non-zero vector \(\vec{v}\) that, w
 \(A\), results in a vector that is a scalar multiple of itself. In other words, the direction of the 
 vector \(\mathbf{v}\) remains unchanged (up to scaling) when the linear transformation represented by 
 \(A\) is applied to it.
-\vspace{\baselineskip}
 
 \emph{Eigenvalue:}
 
 The scalar multiple, denoted by \(\lambda\), is called the eigenvalue associated with the eigenvector 
 \(\mathbf{v}\). It represents the factor by which the eigenvector is scaled when transformed by 
 the matrix \(A\).
-\vspace{\baselineskip}
 
 Mathematically, the relationship between a square matrix \(A\), an eigenvector \(\vec{v}\), 
 and its corresponding eigenvalue \(\lambda\) is expressed by the following equation:
@@ -24,7 +22,6 @@ and its corresponding eigenvalue \(\lambda\) is expressed by the following equat
 \]
 
 Where \(A = f: V \to V\) is an \emph{endomorphism}, \(\vec{v} \ne \vec{0}\) and  \(\lambda \in \Complex\).
-\vspace{\baselineskip}
 
 The way we find a method to find them is by manipulating the equation above
 
@@ -61,7 +58,6 @@ The \emph{Eigenspace} of an eigenvalue are the solution of the homogeneous syste
     Eig(f;\lambda) = ker(A - \lambda I)
 \]
 
-
 \subsection{Theorems of Eigenvalues and Eigenvectors}
 
 \subsubsection{Theorem I}
@@ -69,7 +65,6 @@ The \emph{Eigenspace} of an eigenvalue are the solution of the homogeneous syste
 Given an eigenvalue \(\lambda\) of \(f\) and \(v_1, \dots, v_n\) being the eigenvectors of \(f\) 
 with \(\lambda\) then \(v \in L(v_1, \dots, v_k) \backslash \{0\}\) is an eigenvector of 
 \(f\) with \(\lambda\).
-\vspace{\baselineskip}
 
 \subsubsection{Theorem II}
 
@@ -129,7 +124,6 @@ For all linear isometric map \(f\) with some eigenvalue \(\lambda\) it applies t
 \]
 
 Also, \(\lambda = 1\).
-\vspace{\baselineskip}
 
 An example for this are rotation matrices which map to the same space and preserve the length and 
 whose eigenvalue are complex with a modulus of length of one.
@@ -142,11 +136,9 @@ For some eigenvector \(x\) with an eigenvalue \(\lambda\) of \(A\). It applies t
     A^{k}x = \lambda^{k}x
 \]
 
-
 \subsection{How to find the Eigenvectors and Eigenvalues}
 
 To find the eigenvalues and eigenvectors of a square matrix \(A\), we solve the eigenvalue equation:
-\vspace{\baselineskip}
 
 \textbf{1. Form the characteristic equation:}
 
@@ -166,7 +158,6 @@ would be 0. Thus, we have the characteristic equation:
 
 Solve the characteristic equation for \(\lambda\). The solutions 
 \(\lambda_1, \lambda_2, \dots, \lambda_n\) are the eigenvalues of the matrix \(A\).
-\vspace{\baselineskip}
 
 \textbf{3. Find the eigenvectors:}
 
@@ -176,10 +167,8 @@ solutions for \(\vec{v}\) are the eigenvectors corresponding to the eigenvalue
 \(\lambda_i\). Note that we are going to get infinite solutions thus, we have to write 
 our vector with dependence on the free 
 parameters.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Find the eigenvalues and vectors of 
 
@@ -238,7 +227,6 @@ The process for the other eigenvalue is exactly the same.
 \subsubsection{Complex Eigenvalues}
 
 This is a special case of \emph{eigenvalues} which are not as easy to visualize.
-\vspace{\baselineskip}
 
 \textbf{Example:}
 
@@ -269,7 +257,6 @@ Find the eigenvalues and vectors of
 \]
 
 Now the corresponding eigenvectors.
-\vspace{\baselineskip}
 
 For \(\lambda = i\)
 
@@ -345,7 +332,6 @@ A \emph{diagonal matrix} is matrix of dimensions \(n \times n\) where only the e
 are not zero. This kind of matrices make a lot of the computations in linear algebra trivial. Therefore, 
 if our matrix is not diagonal we are interested in finding a way of transforming the original matrix 
 into a diagonal matrix.
-\vspace{\baselineskip} 
 
 A matrix is diagonalizable if and only if the eigenvectors of it are linear independent.
 
@@ -359,7 +345,6 @@ diagonalizable. But this does not guaranty the diagonalizibility for \(\Reals\).
 Given a matrix \(A \in \Complex^{n \times n}\) with \(\lambda\) as eigenvalue. The multiple occurrences 
 of the zero \(\lambda\) of \(\mathcal{X}_A\) is called \emph{algebraic multiplicity} \(a(\lambda)\). 
 Continuing, \(g(\lambda):= dim(Eig(A;\lambda))\) is the \emph{geometrical multiplicity} of \(\lambda\).
-\vspace{\baselineskip}
 
 Also, \(A\) is diagonalizable if and only if the \emph{geometric multiplicity} of every eigenvalue is equal 
 to its \emph{algebraic multiplicity}.
@@ -367,7 +352,6 @@ to its \emph{algebraic multiplicity}.
 \subsubsection{Eigenvalues of Real Symmetric Matrices}
 
 Eigenvalues of real symmetric matrices are real and also they respective eigenvectors.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -404,7 +388,6 @@ it is real-valued.
 
 Given a symmetric matrix \(A \in \Reals^{n \times n}\) with \(\lambda \ne \mu \) as two eigenvalues of 
 \(A\) with eigenvectors \(v\) and \(w\). Then \(v\) and \(w\) are \emph{orthogonal} to each other.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -428,49 +411,39 @@ the fact that they can be normalized write the matrix \emph{Q} as an orthogonal 
     A = Q D Q^T
 \]
 
-
 \subsubsection{Matrix Diagonalization}
 
 Diagonalizing a matrix involves finding a diagonal matrix that is similar to the given matrix. 
 A square matrix \(A\) is diagonalizable if there exists an invertible matrix \(X\) made of eigenvectors of 
 \(A\) such that \(X^{-1}AX = D\), where \(D\) is a diagonal matrix made of eigenvalues.
-\vspace{\baselineskip}
 
 The order of the eigenvalue and eigenvectors matters if you choose 
 \(\lambda_1, \lambda_2, \dots, \lambda_n\) then the order of the eigenvectors 
 \(v_1, v_2, \dots, v_n\) must also correspond. This process only works if \(A\) 
 has unique eigenvalues or if they are duplicates they have to be linearly independent.
-\vspace{\baselineskip}
 
 The process of diagonalization is as follows:
-\vspace{\baselineskip}
 
 \textbf{1. Find the eigenvalues and eigenvectors of \(A\).}
-\vspace{\baselineskip}
 
 \textbf{2. Form the matrix \(X\):}
 
 Create a matrix \(X\) whose columns are the linearly independent eigenvectors of \(A\).
-\vspace{\baselineskip}
 
 \textbf{3. Form the diagonal matrix \(D\):} 
 
 Create a diagonal matrix \(D\) whose diagonal entries are the eigenvalues of \(A\), corresponding to 
 the order of the eigenvectors in \(P\). That is, if the \(i\)-th column of \(P\) is the eigenvector 
 corresponding to the eigenvalue \(\lambda_i\), then the \(i\)-th diagonal entry of \(D\) is \(\lambda_i\).
-\vspace{\baselineskip}
 
 \textbf{4. Verify the diagonalization:}
     
 Check that \(X^{-1}AX = D\).
-\vspace{\baselineskip}
 
 A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independent eigenvectors, where 
 \(n\) is the size of the matrix.
-\vspace{\baselineskip}
 
 \textbf{Example: }
-\vspace{\baselineskip}
 
 Consider the matrix
 
@@ -480,7 +453,6 @@ Consider the matrix
     5 & 6
     \end{pmatrix}
 \]
-
 
 The characteristic equation is
 
@@ -498,7 +470,6 @@ The characteristic equation is
 \]
 
 Solving for \(\lambda\), we get \(\lambda_1 = 1\) and \(\lambda_2 = 2\).
-\vspace{\baselineskip}
 
 For \(\lambda_1 = 1\):
 
@@ -559,7 +530,6 @@ A matrix \(A \in \Complex^{n \times n}\) is considered \emph{normal} if and only
 
 Also, then there exist with the euclidean inner product in \(\Complex^n\) an orthonormal basis 
 of eigenvector and therefore, \(A\) is diagonalizable.
-\vspace{\baselineskip}
 
 This implies that
 
@@ -573,5 +543,4 @@ This implies that
     \item All orthogonal matrices are diagonalizable.
 
 \end{enumerate}
-
 

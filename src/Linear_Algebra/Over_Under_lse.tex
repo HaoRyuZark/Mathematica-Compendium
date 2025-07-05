@@ -7,7 +7,6 @@ not work because it will be impossible to connect all the points, but you could 
 which is the line \(\alpha x_1 + \beta x_2 + \dots\) that is the closest to all the points in your data 
 set. Thus, we will find an approximation 
 \(b\) that is close to the image of \(A\) (\(Im(A)\)).
-\vspace{\baselineskip}
 
 For this purpose will use a theorem that says that the best approximation is the orthogonal projection of 
 \(p_A (b)\). This projection can be found if there exist an orthonormal basis of the subspace we want to 
@@ -33,7 +32,6 @@ Also, because of the orthogonal property then
 \end{align*}
 
 This equation \(A^{T}b = Ax\) is called the \emph{normal equation}.
-\vspace{\baselineskip}
 
 A \emph{normal equation} of a matrix \(A \in \Reals^{(m \times n)}\) has a solution. 
 If \(rg(A) = n\) then 
@@ -44,7 +42,6 @@ If \(rg(A) = n\) then
 
 is a unique solution to the system. The term \({(A^T A)}^{-1}A^T\) is called the 
 \emph{Generalized Inverse} of \(A\).
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -69,13 +66,11 @@ and
 \]
 
 Here the vector \(z\) is called \emph{approximation solution via the method of the least squares}.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
 We know that because of \(rg(A) = n\) our solution is unique. And that \(p_A(b) = Ax\) is our orthogonal 
 projection. We can use Pythagoras theorem to
-
 
 \begin{align*}
 	\| b - Az \|^2 &= \| (b  - p_A (b))  + (p + p_A(b)) \|^2 \\
@@ -87,10 +82,8 @@ projection. We can use Pythagoras theorem to
 Thus, \(p_A(b)\) gives us the smallest distance to the \(Img(A)\)
 
 \QED
-\vspace{\baselineskip}
 
 \textbf{Example I:}
-\vspace{\baselineskip}
 
 \[
 	x = 1, x = -1
@@ -101,10 +94,9 @@ Thus, \(p_A(b)\) gives us the smallest distance to the \(Img(A)\)
 \]
 
 Then \(\| Ax - b \|^2\) gives us the smallest distance for \(x = 0\).
-\vspace{\baselineskip}
 
 \textbf{Example II:}
-\vspace{\baselineskip}
+
 We can also take the last example and solve it with an alternative method.
 
 \[
@@ -136,7 +128,6 @@ Let us use the normal equations
 \]
 
 \textbf{Example 3:}
-\vspace{\baselineskip}
 
 Given are 
 
@@ -202,7 +193,6 @@ Now let us build the normal equation
 \]
 
 Now with Gaussian elimination we get \(x = (-\frac{1}{3}, \frac{2}{3})^T\). 
-\vspace{\baselineskip}
 
 Finally, we can use the \(\vec{x}\) to solve \(Ax - b\)
 
@@ -255,12 +245,10 @@ and \(x_s\) is orthogonal to the homogenous system \(Az = 0\) which means
 \]
 
 Finally, we call for  \(rg(A) = m\), \(A^T {(A A^T)}^{-1}\) the \emph{Generalized Inverse} of \(A\).
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
 First, we show the invertibility of \(AA^T\) because this implies that \(x_s\) is defined.
-\vspace{\baselineskip}
 
 Given \(x \in kern(AA^T)\). This implies that 
 
@@ -281,18 +269,15 @@ because of \(x^T A = A^T x\) and this gives us
 \] 
 
 therefore, \(x \in kern(A^T)\).
-\vspace{\baselineskip}
 
 Now because of \(rg(A^T) = rg(A) = m\) we get \(dim(kern(A)^T) = 0\), thus \(x = \vec{0}\). 
 Because of that \(kern(A A^T) = 0\) and \(rg(AA^T) = m\) thus, the invertibility is proven.
-\vspace{\baselineskip}
 
 \(x_s\) is a solution of \(Ax = b\) because of 
 
 \[
 	Ax_s = A(A^T {(A A^T)}^{-1} b) = AA^T {(A A^T)}^{-1} b = b
 \]
-
 
 \(x_s \bot kern(A)\) because for \(z \in kern)(A)\)
 
@@ -301,7 +286,6 @@ Because of that \(kern(A A^T) = 0\) and \(rg(AA^T) = m\) thus, the invertibility
 \]
 
 doe to \(Az = 0\).
-\vspace{\baselineskip}
 
 Finally, thanks to the general solution theorem we know that \(x = x_s + z\). Using Pythagoras and by 
 taking into consideration \(x_s \bot kern(A)\)
@@ -310,12 +294,9 @@ taking into consideration \(x_s \bot kern(A)\)
 	\| x\|^2 = \|x\|^2 + \|z\|^2 \ge \|x_s\|^2
 \]
 
-
 \textbf{Example:}
-\vspace{\baselineskip}
 
 We have the equation \(2x_1 + 2x_2 - x_3 = 6\).
-\vspace{\baselineskip}
 
 In this case the solution build a plane in \(\Reals^3\), thus the solution is the normal vector that 
 cuts the plane. We build the hessian normal form.
@@ -325,7 +306,6 @@ cuts the plane. We build the hessian normal form.
 \]
 
 whose solution is \(x = \frac{2}{3}(2, 2, -1)^T\).
-\vspace{\baselineskip}
 
 Now with our method: \(A = (2, 2, -1)\), \(x = (x_1, x_2, x_3)\), \(b = 6\)
 

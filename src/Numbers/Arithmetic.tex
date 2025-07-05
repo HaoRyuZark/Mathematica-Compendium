@@ -24,7 +24,6 @@ Every integer greater than 1 can be written in the form
 
 Where \(n_i \geq 0\) and the \(p_i\) are distinct primes. The factorization is unique, except possibly for 
 the order of the factors.
-\vspace{\baselineskip}
 
 \textbf{Example.}
 
@@ -44,7 +43,6 @@ That is,
 \textbf{Lemma} 
 
 If \(m \mid pq\) and \(\gcd(m, p) = 1\), then \(m \mid q\).
-\vspace{\baselineskip}
 
 \textbf{Proof:} 
 
@@ -61,17 +59,14 @@ Since \(m \mid amq\) and \(m \mid bpq\) (because \(m \mid pq\)), we conclude \(m
 \textbf{Lemma} 
 
 If \(p\) is prime and \(p \mid a_1a_2 \cdots a_n\), then \(p \mid a_i\) for some \(i\).
-\vspace{\baselineskip}
 
 \textbf{Proof (Case \(n=2\)):} 
 
 Suppose \(p \mid a_1a_2\), and \(p \nmid a_1\).
 Then \(\gcd(p, a_1) = 1\), and by the previous lemma, \(p \mid a_2\).
-\vspace{\baselineskip}
 
 For general \(n > 2\): Assume the result is true for \(n-1\). Suppose \(p \mid a_1a_2 \cdots a_n\).
 Group as \((a_1a_2 \cdots a_{n-1})a_n\).
-\vspace{\baselineskip}
 
 By the \(n=2\) case, either \(p \mid a_n\) or \(p \mid a_1a_2 \cdots a_{n-1}\), and by induction, 
 \(p \mid a_i\) for some \(i\).
@@ -83,11 +78,9 @@ By the \(n=2\) case, either \(p \mid a_n\) or \(p \mid a_1a_2 \cdots a_{n-1}\), 
 \textbf{Existence:}
 
 Use induction on \(n > 1\). Base case: \(n = 2\) is prime.
-\vspace{\baselineskip}
 
 Inductive step: If \(n\) is prime, done. Otherwise, \(n = ab\), with \(1 < a, b < n\).
 By induction, both \(a\) and \(b\) factor into primes, so \(n\) does too.
-\vspace{\baselineskip}
 
 \textbf{Uniqueness:}
 
@@ -98,7 +91,6 @@ Suppose:
 \]
 
 With all \(p_i\) and \(q_i\) distinct primes.
-\vspace{\baselineskip}
 
 Since \(p_1\) divides the LHS, it divides the RHS. So \(p_1 \mid q_i^{n_i}\) for some \(i\), hence 
 \(p_1 = q_i\). Re-order so \(p_1 = q_1\). Then:
@@ -110,7 +102,6 @@ If \(m_1 > n_1\), divide both sides by \(q_1^{n_1}\):
 \]
 
 But then \(p_1\) divides LHS but not RHS, contradiction. So \(m_1 = n_1\). Cancel and repeat.
-\vspace{\baselineskip}
 
 Eventually, all \(p_i\) match with some \(q_i\), and the exponents are equal. So the factorizations 
 are the same up to order.
@@ -121,10 +112,8 @@ are the same up to order.
 
 The least common multiple of \(a\) and \(b\), denoted \([a, b]\), is the smallest positive integer 
 divisible by both.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \[
 	[6, 4] = 12, \quad [33, 15] = 165

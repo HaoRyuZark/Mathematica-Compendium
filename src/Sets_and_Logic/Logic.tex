@@ -135,8 +135,6 @@ logic, and we can use any symbol for a representing a proposition, such
 
 \emph{Contradiction}: A formula that is always false.
 
-\newpage
-
 \subsection{Logical Equivalences}
 
 \emph{Commutative Laws}
@@ -246,15 +244,12 @@ logic, and we can use any symbol for a representing a proposition, such
 \emph{Truth tables} are a fundamental tool in logic that systematically show the truth value
 (true or false) of a compound statement for every possible combination of the truth values of 
 its individual component statements.
-\vspace{\baselineskip}
 
 Essentially, they lay out all the scenarios and the resulting truth of the overall logical expression.
 This helps determine if an argument is valid, if statements are logically equivalent, or the circumstances
 under which a complex statement is true or false.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -299,7 +294,6 @@ for the variables are covered.
 \end{enumerate}
 
 \textbf{Example: } 
-\vspace{\baselineskip}
 
 For 3 variables, there are \(2^3 = 8\) possible combinations of truth values. The truth values are filled 
 in the following order:
@@ -360,15 +354,12 @@ can then evaluate the logical expression for each combination.
 \emph{Disjunctive Normal Form (DNF)} is a standard way of writing a logical expression as a 
 \emph{disjunction(OR)} of \emph{conjunctions (ANDs)}. A DNF expression consists of a series of
 conjunctions of literals, where each conjunction is connected by disjunctions.
-\vspace{\baselineskip}
 
 To find the DNF in a truth table take the rows of the final result where there are
 true statements and bind the propositions that generated it with an AND inside parenthesis.
 Repeat it with each of true rows and connect all parenthesis with OR's
-\vspace{\baselineskip}
 
 \textbf{Example of DNF:}
-\vspace{\baselineskip}
 
 Consider the logical expression:
 
@@ -383,15 +374,12 @@ This is in DNF because it is a disjunction (OR) of conjunctions (ANDs) of litera
 \emph{Conjunctive Normal Form (CNF)} is a standard way of writing a logical expression as a 
 \emph{conjunction (AND)} of \emph{disjunctions (ORs)}. A CNF expression consists of a series of 
 disjunctions of literals, where each disjunction is connected by conjunctions.
-\vspace{\baselineskip}
 
 To find the CNF proceed just as the DNF but with the false rows and instead
 of ANDs inside the parenthesis use OR and connect the terms with OR\@. 
 Also add a negation before each parenthesis.
-\vspace{\baselineskip}
 
 \textbf{Example of CNF:}
-\vspace{\baselineskip}
 
 Consider the logical expression:
 
@@ -410,7 +398,6 @@ A K-map helps identify common terms, allowing the Boolean expression to be reduc
 \subsubsection{Karnaugh Map for Two Variables}
 
 Consider the Boolean expression \( (A \lor (B \land \neg A \land \neg B)) \).
-\vspace{\baselineskip}
 
 We first construct a K-map for two variables, \(A\) and \(B\). The truth table for this expression 
 gives the following values:
@@ -451,7 +438,6 @@ Here, we group the ones together to simplify the Boolean expression. The simplif
 Now, let's consider the expression \( \neg C \). This expression only 
 depends on one variable, but for illustration, we will use a 
 3-variable K-map with variables \(A\), \(B\), and \(C\).
-\vspace{\baselineskip}
 
 The truth table for \( \neg C \) is as follows:
 
@@ -556,63 +542,47 @@ To solve a Karnaugh Map and simplify a Boolean expression, follow these steps:
 \subsubsection{Universal Quantifier \texorpdfstring{\(\forall\)}{}}  
 
 Means \textbf{``for all''} or \textbf{``for every''}.
-\vspace{\baselineskip}
-		
+
 {Negation:} \(\neg (\forall x)\,P(x) \equiv (\exists x)\, \neg P(x)\) ``Not all'' is the same as 
 ``There exists one that does not''.
-\vspace{\baselineskip}
 
 \textbf{Example:} 
-\vspace{\baselineskip}
 
 \(\forall x \in \Reals,\ x^2 \geq 0\) For all real numbers, the square is greater than or equal to zero.
-\vspace{\baselineskip}
-	
+
 \textbf{Negated Example:} 
-\vspace{\baselineskip}
 
 \(\exists x \in \Reals,\ x^2 < 0\) There exists a real number whose square is less than zero — this is 
 false.
-		
 
 \subsubsection{Existential Quantifier \texorpdfstring{\(\exists\)}{}}  
 	
 Means \textbf{``there exists at least one''}.
- \vspace{\baselineskip}
-			
+ 		
 \emph{Negation:}  \(\neg (\exists x)\,P(x) \equiv (\forall x)\, \neg P(x)\) ``There does not exist'' is 
 the same as ``For all, not''.
-\vspace{\baselineskip}
 
 \textbf{Example:} 
-\vspace{\baselineskip}
 
 \(\exists x \in \Naturals,\ x > 10\) There exists a natural number greater than 10.
-\vspace{\baselineskip}
 			
 \textbf{Negated Example:}  
-\vspace{\baselineskip}
 
 \(\forall x \in \Naturals,\ x \leq 10\) All natural numbers are less than or equal to 10 — this is false.
 
 \subsubsection{Unique Existential Quantifier \texorpdfstring{\(\exists ! \)}{}} 
 	
 Means \textbf{``there exists exactly one''}.
-\vspace{\baselineskip}
 		
 \emph{Negation:} ``Not exactly one'' means:
 \(\neg (\exists! x)\, P(x) \equiv (\forall x)\, \neg P(x)\ \lor\ (\exists x_1 \neq x_2)\, P(x_1) \land 
 P(x_2)\) Either no such \(x\) exists, or more than one does.
-\vspace{\baselineskip}
 
 \textbf{Example:} 
-\vspace{\baselineskip}
 
 \(\exists! x \in \Reals,\ x + 5 = 0\) There exists exactly one real number such that \( x + 5 = 0 \).
-\vspace{\baselineskip}
 
 \textbf{Negated Example:}  
-\vspace{\baselineskip}
 
 \(\exists x_1 \neq x_2 \in \Reals,\ x_1^2 = 4 \land x_2^2 = 4\) There are multiple solutions to 
 \( x^2 = 4 \).
@@ -654,5 +624,4 @@ P(x_2)\) Either no such \(x\) exists, or more than one does.
 	\item \(\iff\)  (if and only if)
 
 \end{itemize}
-
 

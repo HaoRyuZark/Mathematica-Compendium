@@ -56,13 +56,10 @@ The \emph{line integral} of \(F\) along \( \gamma \) is:
 
 In the context of physics this integral measures the work done by the field \( \vec{F} \) 
 along the path \( \gamma \), such as force over distance.
-\vspace{\baselineskip}
 
 \textbf{Example: Line Integral over a Vector Field}
-\vspace{\baselineskip}
 
 Let \( f(x, y) = 2x + 2y \) be our vector field. 
-\vspace{\baselineskip}
 
 Let the curve \(c\) be the quarter-circle of radius 1 from \( (1, 0) \) to \( (0, 1) \), 
 parametrized by:
@@ -135,9 +132,8 @@ is parametrized by a vector function.
 Then, the line integral of \(f\) over \(c\) is given by:
 
 \[
-    \int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \vec{r}'(t) \right\| \, dt
+    \int_C f(x_1, x_2, \ldots, x_n) \, ds = \int_a^b f(\vec{r}(t)) \left\| \frac{\vec{r}(t)}{dt} \right\| \, dt
 \]
-
 
 \begin{center}
     \includegraphics[width=0.5\textwidth]{Line-integral.png}
@@ -148,10 +144,9 @@ and the arclength \(\varDelta s_k\), we will simplify to three dimensions for th
 of simplicity, but like seen before this works for \(n\) dimensions. 
 \(A_k = f(x_k, y_k) \varDelta s_k\), where 
 \(\varDelta s_k = \sqrt{(\varDelta s_k)^2 + (\varDelta y_k)^2} \). Now by using or formula 
-for the arclength we already know, we get \(\|\vec{r}' (t)\| dt = ds\). 
+for the arclength we already know, we get \(\| \frac{\vec{r}(t)}{dt}\| dt = ds\). 
 
 \textbf{Example: Scalar Field}
-\vspace{\baselineskip}
 
 Compute the line integral of \(f(x,y) = x^2 + y^2\) over the straight line segment going
 from \((1,1)\) to \((3,3)\)
@@ -185,7 +180,6 @@ fact that in the norm of our curve the component that was responsible for \(y\) 
 
 In the case of a field the story is different in the fact that now our output vectors change depending 
 on the variable we are choosing to left out.
-\vspace{\baselineskip}
 
 Now, given a field \(\vec{F}(x,y) = M(x,y)\imath + N(x,y)\jmath\) and the curve
  \(\vec{r}(t) = g(t)\imath + h(t)\jmath\). The line integral of \(\vec{F}\) along \(C\) is 
@@ -205,16 +199,12 @@ Here \(g'(t)dt = dx\) and \(h'(t)dt = dy\)
 \]
 
 These two integrals give us both the integral with respect to \(x\) and \(y\).
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Curve \(C\) is a portion of the parabola \(y = x^2\)that goes through the points (1,1) to (2,4)
-\vspace{\baselineskip}
 
 Compute: \(\int_{a}^{b} \frac{x}{y} dy\)
-\vspace{\baselineskip}
 
 \textbf{Step 1: Parametrize \(C\)}
 
@@ -242,7 +232,6 @@ scalar function \( \phi : \Reals^n \to \Reals \) such that:
 \]
 
 The function \( \phi \) is then called a \emph{potential function} of \( \vec{F} \).
-\vspace{\baselineskip}
 
 \textbf{Properties:}
 
@@ -303,7 +292,6 @@ First, check if the field is conservative by verifying:
 \]
 
 Since \( \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \), the field is conservative.
-\vspace{\baselineskip}
 
 \textbf{Step 1: Integrate \( P(x, y) \) with respect to \(x\):}
 
@@ -312,7 +300,6 @@ Since \( \frac{\partial P}{\partial y} = \frac{\partial Q}{\partial x} \), the f
 \]
 
 Here, \( h(y) \) is a function of \(y\) only.
-\vspace{\baselineskip}
 
 \textbf{Step 2: Differentiate \( \phi(x, y) \) with respect to \(y\):}
 
@@ -343,7 +330,6 @@ Therefore, the potential function is:
 \[
     \phi(x, y) = x^2y + e^x + \sqrt{y} + C
 \]
-
 
 \subsection{Double Integral over a Rectangular Region}
 
@@ -377,10 +363,8 @@ In practice, for regions bounded by curves, we integrate in the form:
 \]
 
 Here, \( y \in [u(x), o(x)] \) describes the vertical bounds as functions of \(x\).
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Compute the volume under \(f(x,y) = 1 + x + y^2\) bounded by \(x\)-axis, \(x = 1\) and \(y\)-axis 
 \(y = \sqrt{x}\)
@@ -447,7 +431,6 @@ The steps are the same as in the previous Example.
 
     \item Write the same expression without bounds and change the order of the differentials
 
-
     \item Imagine slicing the area underneath vertically for \(x\) and horizontally for \(y\) with their 
           respective bounds corresponding to the perspective.
 
@@ -489,7 +472,6 @@ The steps are the same as in the previous Example.
                 fill opacity=0.3
             ] fill between[of=A and B];
 
-            
             \addplot[color=black, domain=0:8, samples=200]{pow(x, 1/3)};
 
             \addplot[color=blue, dashed, domain=0:8, samples=200]{2};
@@ -505,7 +487,6 @@ Therefore, the smallest \(x\) can get is 0 and the biggest is 2. While for \(y\)
 vertically we get that \(x\) goes from 0 to \(\sqrt[3]{x}\), but 
 we do not want to leave \(x\), so we solve for \(y\) and get \(y^3\). 
 Now we can put all of this together and integrate.
-
 
 \subsection{The Jacobian}
 
@@ -573,10 +554,8 @@ and provides important information about the local behavior of the function. For
 When we change our systems of coordinates it is important that our differential make sense in the original 
 system we were. Because of that, we take the determinant with respect to the new coordinates to tell us 
 the scaling factor that we have to use for our result to make sense.
-\vspace{\baselineskip}
 
 \textbf{Use Cases:}
-\vspace{\baselineskip}
 
 The Jacobian matrix and its determinant appear in many areas, including:
 
@@ -672,7 +651,6 @@ The Jacobian matrix and its determinant appear in many areas, including:
 \subsection{Integration in Polar Coordinates}
 
 For radially symmetric regions or functions, switching to polar coordinates simplifies the computation.
-\vspace{\baselineskip}
 
 \emph{Transformation:}
 
@@ -686,7 +664,6 @@ The Jacobian of the transformation gives the area element:
     dA = r\, dr\, d\varphi
 \]
 
-
 \emph{Integral:}
 
 \[
@@ -698,15 +675,12 @@ The Jacobian of the transformation gives the area element:
 
 When we divide our circle in the sections we get both a difference in then angle and the radius which 
 generate another area. The difference \(\Delta A =\) Area of big wedge \(-\) Area of small wedge
-\vspace{\baselineskip}
 
 \emph{Radius: }\(r_k + \frac{\Delta r}{2}\) for the big wedge and \(r_k - \frac{\Delta r}{2}\) for the 
 small wedge
-\vspace{\baselineskip}
 
 \emph{Angle: }\(\frac{\Delta \theta}{2 \pi}\) which is the angle of the fraction of the circle 
 because the formula for the area is \(r^2 \pi\) and the whole circle would be \(2\pi\)
-\vspace{\baselineskip}
 
 \emph{Final Formula for the difference in the Area}
 
@@ -727,7 +701,6 @@ Which multiplied by the function value and by taking the limit of these sections
 \]
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 \(f(r, \theta) = r\) above cardioid \(r = 1 - \sin \theta\)
 
@@ -741,7 +714,6 @@ Then
     = \int_{0}^{2\pi}\frac{r^3}{3} |_{0}^{1 - \sin \theta} d\theta = \int_{0}^{2\pi} 
     \frac{{(1 - \sin\theta)}^3}{3} d\theta = \frac{5 \pi}{3}
 \]
-
 
 \subsection{Improper Integrals over Unbounded Regions}
 
@@ -759,7 +731,6 @@ Often, using polar coordinates simplifies such cases, reducing multiple limits t
     \iint_{\Reals^2} f(x, y)\, dx\, dy = \int_0^{2\pi} \int_0^{\infty} f(r \cos \varphi, r \sin \varphi)\, 
     r\, dr\, d\varphi
 \]
-
 
 \subsubsection{Gaussian Integral}
 
@@ -817,7 +788,6 @@ In this short section we, will look at an example of how to calculate the volume
 between two functions using triple integrals.
 
 Given are the functions \(f_1(x,y) = x^2 + y^2\) and \(f_2(x,y) = 3 - x^2 - y^2\)
-
 
 \begin{center}
     
@@ -882,9 +852,7 @@ Here \(z\) means the height which is just the output
 of the original functions.
 
 The bounds of \(y\) just by looking at out constraint and solving for it.
-
 And \(x\) only depends on the concrete limit of integration.
-
 
 \subsubsection{Coordinate Transformation and the Jacobian Determinant}
 
@@ -913,7 +881,6 @@ where \( J \) is the \emph{Jacobian matrix} of the transformation:
 \]
 
 \textbf{Example: Transformation to Cylindrical Coordinates}
-\vspace{\baselineskip}
 
 The standard cylindrical coordinate transformation is:
 

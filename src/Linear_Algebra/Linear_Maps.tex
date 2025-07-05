@@ -19,11 +19,14 @@ This kind of function is also called \emph{Homomorphism}. If \(V = W\) is it cal
 
 \begin{itemize}
     
-    \item \emph{Injective or Monomorphism} (One-to-One): A linear map \( f: V \to W \) is injective if \( f(v_1) = f(v_2) \) implies \( v_1 = v_2 \).
+    \item \emph{Injective or Monomorphism} (One-to-One): A linear map \( f: V \to W \) is injective if 
+          \( f(v_1) = f(v_2) \) implies \( v_1 = v_2 \).
     
-    \item \emph{Surjective or Epimorphism} (Onto): A linear map \( f: V \to W \) is surjective if for every \( w \in W \), there exists a \( v \in V \) such that \( f(v) = w \).
+    \item \emph{Surjective or Epimorphism} (Onto): A linear map \( f: V \to W \) is surjective if for 
+          every \( w \in W \), there exists a \( v \in V \) such that \( f(v) = w \).
     
-    \item \emph{Bijective or Isomorphism}: A linear map \( f: V \to W \) is bijective if it is both injective and surjective.
+    \item \emph{Bijective or Isomorphism}: A linear map \( f: V \to W \) is bijective if it is both 
+          injective and surjective.
 
 \end{itemize}
 
@@ -83,7 +86,7 @@ The image of a linear map \( f: V \to W \) is the set of all vectors in \( W \) 
 as \( f(v) \) for some \( v \in V \):
 
 \[
-    \text{Im}(f) = \{ w \in W \mid w = f(v) \text{ for some } v \in V \}
+    \img(f) = \{ w \in W \mid w = f(v) \text{ for some } v \in V \}
 \]
  
 \subsection{The Rank of a Linear Map}
@@ -91,7 +94,7 @@ as \( f(v) \) for some \( v \in V \):
 The rank of a linear map \( f: V \to W \) is the dimension of its image:
 
 \[
-    \text{rank}(f) = (\text{Im}(f))
+    \rank(f) = \img(f)
 \]
 
 \subsection{The Nullity of a Linear Map}
@@ -107,7 +110,7 @@ The nullity of a linear map \( f: V \to W \) is the dimension of its kernel:
 The rank-nullity theorem states that for a linear map \( f: V \to W \):
 
 \[
-    \ker(f) + \text{dim}(\text{Im}(f)) = \text{dim}(V).
+    \ker(f) + \dim(\img(f)) = \dim(V).
 \]
 
 \subsection{Proof of the injectivity of the Kernel}
@@ -133,7 +136,7 @@ kernel of a linear map is injective.
 Let \(f: V \to W\) be linear and \(\dim(V) = n\). Then
     
 \[
-    \dim(\ker(f)) + \operatorname{rank}(f) = n.
+    \dim(\ker(f)) + \rank(f) = n.
 \]
     
 Remember that \(\ker(f)\) forms a subspace of \(V\) and therefore, \(\dim(\ker(f)) := r \leq n\). We extend an arbitrary basis \((v_1, \ldots, v_r)\) of \(\ker(f)\) to a basis \((v_1, \ldots, v_r, v_{r+1}, \ldots, v_n)\) of \(V\). Setting \(w_{r+i} = f(v_{r+i})\) for \(i = 1, \ldots, n - r\), we have \(\forall v \in V\):
@@ -222,5 +225,4 @@ an \( m \times n \) matrix. The action of the linear map on a vector can be expr
 where \(A\) is the matrix representation of \(f\) and \( v \) is the vector represented in a column 
 format. The columns of the matrix \(A\) are the images of the basis vectors of \( V \) under the linear 
 map \(f\).
-
 

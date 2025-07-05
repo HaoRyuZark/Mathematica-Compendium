@@ -119,7 +119,6 @@ It can also be written in the parameterized form:
 \]
 
 \textbf{Example: \( f(x, y) = 4x^2y + xy^2 + 1 \)}
-\vspace{\baselineskip}
 
 Compute partial derivatives:
 
@@ -255,8 +254,26 @@ If \( f : \Reals^n \to \Reals \) is differentiable at \( \vec{x}_0 \), then the
     d\vec{x} \rangle
 \]
 
-This expresses how small changes in the input variables propagate into changes in the function value.
+This expresses how small changes in the input variables propagate into changes in the function values.
 
+\subsection{The Chain Rule}
+
+Let \( f : \Reals^n \to \Reals \) be differentiable, and suppose \( \vec{x} = \vec{x}(t) \in \Reals^n \) 
+is a differentiable path. Then:
+
+\[
+    \frac{d}{dt} f(\vec{x}(t)) = \left\langle \nabla f(\vec{x}(t)), \frac{d\vec{x}(t)}{dt} \right\rangle
+\]
+
+This is the chain rule in vector form.
+
+Or to be more explicit, the small change in \(t\) makes a change in \(x_1, x_2, \cdots\) and the addition 
+of all this changes sum up to the total change in the original function.
+
+\[
+    \frac{\partial z}{\partial t} = \frac{\partial z}{\partial x_1}\frac{\partial x_1}{ \partial t} + 
+    \cdots + \frac{\partial z}{\partial x_n}\frac{\partial x_n}{\partial t}
+\]
 
 \subsection{Absolute and Relative Error}
 
@@ -272,12 +289,9 @@ Given an approximate value \( \tilde{x} \) for the exact value \(x\):
 
 \end{itemize}
 
-
 In multi-variable contexts, similar formulas apply using vector norms.
-\vspace{\baselineskip}
 
 \textbf{Absolute Error Example}
-\vspace{\baselineskip}
 
 We consider the function:
 
@@ -322,29 +336,9 @@ error in \(z\).
 
 \textbf{Conclusion:}  
 
-The result for \(z\) is accurate to within \( \boxed{0{,}14 \, \text{cm}} \).
-
-
-\subsection{The Chain Rule}
-
-Let \( f : \Reals^n \to \Reals \) be differentiable, and suppose \( \vec{x} = \vec{x}(t) \in \Reals^n \) 
-is a differentiable path. Then:
-
-\[
-    \frac{d}{dt} f(\vec{x}(t)) = \langle \nabla f(\vec{x}(t)), \vec{x}'(t) \rangle
-\]
-
-This is the chain rule in vector form.
-
-Or to be more explicit, the small change in \(t\) makes a change in \(x_1, x_2, \cdots\) and the addition 
-of all this changes sum up to the total change in the original function.
-
-\[
-    \frac{dz}{dt} = \frac{dz}{dx_1}\frac{dx_1}{dt} + \cdots + \frac{dz}{dx_n}\frac{dx_n}{dt}
-\]
+The result for \(z\) is accurate to within \( 0,14 \text{cm} \).
 
 \textbf{Relative Error Example}
-\vspace{\baselineskip}
 
 The relative error of a function \( z = f(x_1, \dots, x_n) \) is defined by:
 
@@ -356,8 +350,9 @@ Assuming \(z\) depends on variables with known relative measurement errors, and 
 differentiable, we estimate:
 
 \[
-    \varepsilon = \frac{|\partial f / \partial x_1| \cdot \Delta x_1 + \cdots + |\partial f / 
-    \partial x_n| \cdot \Delta x_n}{f(x_1, \dots, x_n)}
+    \varepsilon = \frac{\left| \frac{\partial f}{\partial x_1} \right| \cdot 
+    \Delta x_1 + \cdots + \left| \frac{\partial f}{ 
+    \partial x_n}\right| \cdot \Delta x_n}{f(x_1, \dots, x_n)}
 \]
 
 or more directly using relative errors:
@@ -368,7 +363,6 @@ or more directly using relative errors:
 \]
 
 \textbf{Example: Volume of a Cuboid}
-\vspace{\baselineskip}
 
 Let:
 
@@ -378,7 +372,6 @@ Let:
 
 Assume the side lengths \( a = b = c \) are measured with a uniform relative error 
 \( \varepsilon_{\text{in}} = \frac{\Delta a}{a} = \frac{\Delta b}{b} = \frac{\Delta c}{c} = \varepsilon \)
-\vspace{\baselineskip}
 
 Then the partial derivatives are:
 
@@ -401,17 +394,16 @@ If the final result \(z\) must be accurate within \( \varepsilon_z = 0{,}01 \) (
 satisfy:
 
 \[
-    3 \varepsilon \leq 0{,}01 \Rightarrow \varepsilon \leq \frac{0{,}01}{3} = \boxed{0{,}0033} \quad 
-    \text{(or } 0{,}33\% \text{)}
+    3 \varepsilon \leq 0{,}01 \Rightarrow \varepsilon \leq \frac{0{,}01}{3} = 0,0033 \quad 
+    \text{(or } 0,33\% \text{)}
 \]
 
 \textbf{Conclusion:}
-\vspace{\baselineskip}
 
-Each input measurement must be made with a maximum relative error of \( \boxed{0{,}33\%} \) to ensure 
+Each input measurement must be made with a maximum relative error of \( 0,33\% \) to ensure 
 the output \( z = abc \) is accurate to within 1 percent.
 
-\subsubsection{Implicit Differentiation}
+\subsection{Implicit Differentiation}
 
 If a function \( F(x, y) = 0 \) defines \(y\) implicitly as a function of \(x\), and \(F\) is 
 differentiable, then:
@@ -421,10 +413,8 @@ differentiable, then:
 \]
 
 This generalizes to higher dimensions using the total differential and the implicit function theorem.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is \(x^2 + y^2 + z^2 = 1\) differentiate with respect to \(x\).
 See \(z\) or the target function as function in terms of the other variables. 
@@ -443,7 +433,6 @@ In this case \(z(x,y)\).
 \]
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given the implicitly defined function:
 
@@ -454,7 +443,7 @@ Given the implicitly defined function:
 We are asked to compute the derivative \( y'(1) \), that is, the derivative of \(y\) 
 with respect to \(y\) at the point \( (1, 1) \).
 
-\subsection*{Step 1: Differentiate implicitly}
+\textbf{Step 1: Differentiate implicitly}
 
 Differentiate both sides of the equation with respect to \(x\), 
 treating \( y = y(x) \) as a function of \(x\):
@@ -554,7 +543,6 @@ The \emph{Jacobian matrix} of \( \vec{f} \) is the \( m \times n \) matrix:
 In the case \( n = m \), the \emph{Jacobian determinant} \( \det J_{\vec{f}}(\vec{x}) \) 
 describes local invertibility and orientation.
 
-
 \subsection{Taylor's Theorem}
 
 Let \( f : \Reals^n \to \Reals \) be \(k\)-times continuously differentiable at \( \vec{x}_0 \). Then 
@@ -566,13 +554,10 @@ the Taylor polynomial of degree 2 around \( \vec{x}_0 \) is:
 \]
 
 where \( H_f(\vec{x}_0) \) is the \emph{Hessian matrix} of second partial derivatives.
-\vspace{\baselineskip}
 
 \textbf{Example:} 
-\vspace{\baselineskip}
 
 Let \( f(x, y) = e^y \sin(x + 2y) \). We expand around the point \( (a, b) = (0, 0) \).
-\vspace{\baselineskip}
 
 First, compute the necessary derivatives at \( (0, 0) \):
 
@@ -585,7 +570,6 @@ First, compute the necessary derivatives at \( (0, 0) \):
     f_{yy} &= -3 e^y \sin(x + 2y) + 4e^y \cos(x + 2y) \quad \Rightarrow \quad f_{yy}(0, 0) = 0 + 4 = 4
 \end{align*}
 
-
 Now, the second order Taylor polynomial at \( (0, 0) \) is:
 
 \begin{align*}
@@ -593,7 +577,6 @@ Now, the second order Taylor polynomial at \( (0, 0) \) is:
     &+ \frac{1}{2} \cdot 0 \cdot x^2 + 3 \cdot x y + \frac{1}{2} \cdot 4 \cdot y^2 \\
     =\, & x + 2y + 3xy + 2y^2
 \end{align*}
-
 
 \subsection{Relative Extrema}
 
@@ -615,46 +598,19 @@ To determine local extrema for \( f : \Reals^n \to \Reals \), follow this proced
 
 \begin{itemize}
 
-    \item If \( H_f \) is positive definite \( \Rightarrow \) local minimum
+    \item If \( H \) is positive definite \(f_{xx}(x_0, y_0) > 0, \det(H) > 0 \implies\) local minimum
 
-    \item If \( H_f \) is negative definite \( \Rightarrow \) local maximum
+    \item If \( H \) is negative definite \(f_{xx}(x_0, y_0) < 0, \det(H) > 0 \implies\) local maximum
 
-    \item If \( H_f \) has mixed signs (indefinite) \( \Rightarrow \) saddle point
+    \item If \( H \) has mixed signs (indefinite) \(\det(H) < 0 \implies  \) saddle point
 
-\end{itemize}
-
-More precisely
-
-\begin{itemize}
-
-    \item If \(f_{xx}(x_0, y_0) > 0, d > 0 \implies\) positive definite
-
-    \item If \(f_{xx}(x_0, y_0) < 0, d > 0 \implies\) negative definite
-
-    \item If \(d < 0 \implies \) saddle point indefinite
-
-    \item If \(d = 0 \implies \) Next derivative decides
-
-\end{itemize}
-
-Or in general 
-
-\begin{itemize}
-
-    \item \(f\) has a local maximum if \(f_{xx}(a_0) < 0 \text{and} \det(H) > 0 \)
-
-    \item \(f\) has a local minimum if \(f_{xx}(a_0) > 0 \text{and} \det(H) > 0 \)
-
-    \item \(f\) has a local saddle  if \(\det(H) < 0\)
-
-    \item The test is inconclusive if \(\det(H) = 0\)
+    \item If \(\det(H) = 0 \implies \) Next derivative decides
 
 \end{itemize}
 
 The determinant is needed as part of the test because, while the second derive tells us about the concavity, the 
 determinant help us determine if all the concavities given by the axis second derivatives with respect to 
 \(x_1, x_2, \dots, x_n\) and the mix partials are up, down or neither. If the signs are mixed then it is a saddle.  
-\vspace{\baselineskip}
 
 \textbf{Example: \( f(x, y) = x^2 + y^2 \)}
 
@@ -672,7 +628,6 @@ determinant help us determine if all the concavities given by the axis second de
 To find local minima or maxima of a function \( f : \Reals^n \to \Reals \), we first identify 
 \emph{critical points}, which are the candidates for relative extrema. 
 These are the points where the gradient of \(f\) vanishes or does not exist.
-\vspace{\baselineskip}
 
 \textbf{Step 1: Compute the Gradient}
 
@@ -698,7 +653,6 @@ Find all points \( \vec{x}_0 \in \Reals^n \) such that:
 This is a nonlinear system of \(n\) equations in \(n\) variables. The solutions \( \vec{x}_0 \) 
 are the \emph{candidate points for extrema}, and also referred to as the 
 \textbf{stationary points} or \emph{critical points} of the function.
-\vspace{\baselineskip}
 
 You use the following techniques to find the points: 
 
@@ -713,7 +667,6 @@ You use the following techniques to find the points:
 \end{itemize}
 
 There are more but which one to use depends on the kind problem.
-\vspace{\baselineskip}
 
 \textbf{Step 3: Analyze the Nature of the Critical Points}
 
@@ -751,12 +704,10 @@ or directional behavior.
 
 Let \( f : \Reals^n \to \Reals \) be the function to optimize, subject to the constraint 
 \( g(\vec{x}) = 0 \), where \( g : \Reals^n \to \Reals \).  
-\vspace{\baselineskip}
 
 If we look at the constraint intersection with the original function we are going to notice that along 
 the intersection there are maxima and minima with their respective tangent lines and gradients that are 
 normal to them. We also are going to see that both the gradient of \(f\) and the gradient of \(g\) are just scalar version of each other so: 
-\vspace{\baselineskip}
 
 This leads to the \emph{Lagrange system}:
 
@@ -794,8 +745,7 @@ Sometimes it is a good way to solve a problem of this topic is to:
     \item Build the \emph{Lagrangian}
     
     \item \(\nabla L = 0\) and maybe compute the determinant to generate another equation to solve
-    
-    
+        
     \item Get rid of \(\lambda\) via factorization, substitution, addition of rows, etc.
     
     \item Solve the system without \(\lambda\)
@@ -825,14 +775,9 @@ Where:
 
 \end{itemize}
 
-Or basically a Hessian of the Lagrangian starting with\(lambda_1\).
-\vspace{\baselineskip}
-
-\textbf{Example:}
-\vspace{\baselineskip}
+\textbf{Example I:}
 
 Find the point on the circle \(x^2 + y^2 = 4\) that is the closest to the point \((3,4)\).
-\vspace{\baselineskip}
 
 The function \(f(x,y)\) is this case the euclidean norm:
 
@@ -854,7 +799,6 @@ The gradient of the constraint is:
 
 Since \( \nabla g \ne 0 \), the rank condition is fulfilled, and no further critical points 
 need to be analyzed.
-\vspace{\baselineskip}
 
 \textbf{Step 1: Build the Lagrangian}
 
@@ -872,17 +816,11 @@ of the root function is the minimum of the term under root therefore, we can sim
 
 \textbf{Step 2: Compute the necessary conditions}
 
-\[
-    \textbf{I } \frac{\partial \mathcal{L}}{\partial x} = 2(x - 3) + 2\lambda x = 0
-\]
-
-\[
-    \textbf{II } \frac{\partial \mathcal{L}}{\partial y} = 2(y - 4) + 2\lambda y = 0
-\]
-
-\[
-    \textbf{III } \frac{\partial \mathcal{L}}{\partial \lambda} = x^2 + y^2 - 4 = 0
-\]
+\begin{align*}
+   \textbf{I } &\frac{\partial \mathcal{L}}{\partial x} = 2(x - 3) + 2\lambda x = 0 \\
+   \textbf{II } &\frac{\partial \mathcal{L}}{\partial y} = 2(y - 4) + 2\lambda y = 0 \\
+   \textbf{III } &\frac{\partial \mathcal{L}}{\partial \lambda} = x^2 + y^2 - 4 = 0
+\end{align*}
 
 Now, this is the difficult part. The best approach in this case is to use substitution to 
 with a top-bottom approach:
@@ -912,7 +850,6 @@ because they tend to have a similar form when solving for them.
     \lambda_1 = \frac{-7}{2} \quad \lambda_2 = \frac{3}{2}
 \]
 
-
 Now, let us substitute backwards for \(\lambda_1\):
 
 \[
@@ -933,7 +870,6 @@ Now,  for \(\lambda_2\):
     y = \frac{4}{1 + \frac{3}{2}} = \frac{8}{5}
 \]
 
-
 \textbf{Step 3: Hessian Test with Constraint}
 
 We construct the Hessian:
@@ -948,6 +884,70 @@ We construct the Hessian:
 
 For \(\lambda_1\) we get \( \det(H) =  \frac{244}{5} > 0 \), a minimum 
 and for \(\lambda_2\) \(\det(H) = \frac{-244}{5}\) a maximum.
+
+\textbf{Example II:}
+
+Optimize the distance to the origin \(f(x,y,z)\) with respect to the constraints 
+\(g_1(x,y,z) = z^2 - x^2 - y^2 = 0\) and \(g_2(x,y,z) = x - 2z - 3 = 0\)
+
+\begin{align*}
+    \nabla f &= \lambda \nabla g_1 + \mu \nabla g_2 \\
+    g_1 &= 0 \\
+    g_2 &= 0 
+\end{align*}
+
+We know that \(f(x,y,z) = \sqrt{x^2 + y^2 + z^2}\). Like with other minimization problems we can 
+just find the minimum of the part under root thus, \(f(x,y,z) = x^2 + y^2 + z^2\). Now we can put 
+the build our system of equations
+
+\begin{align*}
+    \textbf{I   } &2x = \lambda(-2x) + \mu \\
+    \textbf{II  } &2y = \lambda(-2y) \\
+    \textbf{III } &2z = \lambda(2z) + \mu(-2) \\
+    \textbf{IV  } &z^2 = x^2 + y^2 \\
+    \textbf{V   } &x = 2z + 3   
+\end{align*}
+
+For the equation \textbf{II} we can already see that the equation is equal to zero only if 
+\(\lambda = -1\) or \(y = 0\). Thus, we have got our first numbers to work with.
+
+\textbf{Case \(\lambda = -1\):}
+
+\begin{align*}
+    \textbf{I   } &2x = -1(-2x) + \mu  \implies \mu = 0\\
+    \textbf{III } &2z = -1(2z) + 0(-2) \implies z = 0 \\
+    \textbf{IV  } &0^2 = x^2 + y^2  \implies x = y = 0\\
+    \textbf{V   } &0 = 0 + 3 \implies 0 = 3   
+\end{align*}
+
+With the last contradiction we know that the whole case \(\lambda = -1\) is not valid.
+
+\textbf{Case \(y = 0\):}
+
+\begin{align*}
+    \textbf{IV  } &z^2 = x^2 + y^2 \implies z^2 = x^2  \implies z = \pm x\\
+    \textbf{V   } &x = 2x + 3  \implies x = -3 (z = x)\\ 
+    \textbf{V   } &x = -2x + 3  \implies x = 1 (z = -x)\\ 
+\end{align*}
+
+Now with this new information we can get two different points \(P_1(1, 0, -1)\) and \(P_2(-3, 0, -3)\).
+We do not need to write the Hessian in this case because with geometric intuition the problem can be 
+solved.
+
+\[
+    f(P_1) = 1^2 + 0^2 + (-1)^2 = 2 
+\]
+
+So the distance is \(\sqrt{2}\).
+
+\[
+    f(P_2) = -3^2 + 0^2 -3^2 = 18
+\]
+
+Thus, the distance is \(3\sqrt{2}\).
+
+Our final Answer is that \(P_1\) is the closest point to the intersection of the two planes with the 
+function \(f\).
 
 \subsection{The Tangent Vector}
 

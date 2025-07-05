@@ -5,7 +5,6 @@
 
 Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V 
 \to K\) is called an inner product (or inner product) if the following conditions are satisfied:
-\vspace{\baselineskip}
 
 \emph{Symmetry}
 
@@ -190,12 +189,10 @@ This is exactly the expansion of \( {(\|a\| + \|b\|)}^2 \), which completes the 
 The concept of the \emph{inner product} plays a major rule in linear algebra, and there are various 
 manifestations of this element. We are going to see how inner products are constructed based on the 
 properties we are interested in. Those being linearity for the columns, symmetry and positive definiteness.
-\vspace{\baselineskip}
 
 Let us start with a matrix \(A \in \Reals^{n \times n}\) and a map 
 \((\centerdot , \centerdot)_A \Reals^n \times \Reals^n : \to \Reals \) more specific 
 \((x,y)_A := \langle x, Ay\rangle\) using the standard Euclidean inner product.
-\vspace{\baselineskip}
 
 For our first property, the linearity; it is granted for every matrix \(A = (a_1, a_2, \dots, a_n)\) 
 because of the rules of matrix-vector multiplication. For example for the basis vectors \(e_i, e_j\) 
@@ -236,13 +233,10 @@ Given a symmetric \(A \in \Reals^{n \times n}\) then:
 \end{enumerate}
 
 \((\centerdot , \centerdot)_A\) is only an inner product if \(A\) is symmetric and positive definite.
-\vspace{\baselineskip}
 
 \textbf{Example:}
-\vspace{\baselineskip}
 
 Given is the term \(x_{1}^{2} - x_{3}^{2} + x_1 x_4\), show that it is a quadratic form.
-\vspace{\baselineskip}
 
 First write the formula for the quadratic form \(\langle x, Ax\rangle\) where \(A\) is real symmetric 
 matrix
@@ -279,7 +273,6 @@ matrix
     \end{pmatrix}
     \right\rangle
 \]
-
 
 \[
     x_1(ax_1  + bx_2 + cx_3 + dx_4) + 
@@ -392,7 +385,6 @@ If \(A\) is negative definite then
 
 Given \(m \ge n\) and \(A \in \Reals^{m \times n}\) with \(rg(A) = n\). Then \(A^T A\) is positive 
 definite. For \(rg(A) < n\) is \(A^T A\) positive semidefinite.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -411,6 +403,4 @@ Also, \(A^T A\) is positive semidefinite, and it is also invertible for \(rg(A) 
 
 Given \(m \le n\) and \(A \in \Reals^{m \times n}\). Then \(A^T A\) is positive semidefinite and even 
 positive definite if \(rg(A) = m\).
-
-
 

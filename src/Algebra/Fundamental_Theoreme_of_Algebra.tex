@@ -35,10 +35,9 @@ function on a closed set achieves its minimum at some point in the domain. This 
 or can be easily proved by applying other well-known completeness axioms, such as the Cauchy sequence 
 axiom or the nested interval axiom.
 
-\subsection{Theorem 1}
+\subsection{Theorem I}
 
 Every polynomial with real or complex coefficients has at least one complex root.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
@@ -46,13 +45,11 @@ Suppose that \(p(z)\) has no roots in the complex plane. First note that for lar
 \(|z| > 2 \max_i |p_i/p_n|\), the \(z^n\) term of \(p(z)\) is greater in absolute 
 value than the sum of all the other terms. Thus, given some \(B > 0\), for any sufficiently large \(s\), 
 we have \(|p(z)| > B\) for all \(z\) with \(|z| \geq s\). We will take \(B = 2|p(0)| = 2|p_0|\).
-\vspace{\baselineskip}
 
 Since \(|p(z)|\) is continuous on the interior and boundary of the circle with radius \(s\), it follows 
 by the completeness axiom that \(|p(z)|\) achieves its minimum value at some point \(t\) in this circle. 
 But since \(|p(0)| < \frac{1}{2} |p(z)|\) for all \(z\) on the circumference of the circle, it follows 
 that \(|p(z)|\) achieves its minimum at some point \(t\) in the interior.
-\vspace{\baselineskip}
 
 Now rewrite the polynomial \(p(z)\) by translating the argument \(z\) by \(t\), thus, producing a 
 new polynomial
@@ -63,14 +60,11 @@ new polynomial
 
 and similarly translate the circle. Presumably the polynomial \(q(z)\), defined on some circle centered 
 at the origin, has a minimum absolute value \(M > 0\) at \(z = 0\). Note that \(M = |q(0)| = |q_0|\).
-\vspace{\baselineskip}
 
 Our proof strategy is to construct some point \(x\), close to the origin, such that \(|q(x)| < |q(0)|\), 
 thus, contradicting the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
-\vspace{\baselineskip}
 
 \textbf{Construction of \(x\) such that \(|q(x)| < |q(0)|\)}
-\vspace{\baselineskip}
 
 Let the first nonzero coefficient of \(q(z)\) following \(q_0\) be \(q_m\), so that
 
@@ -86,7 +80,6 @@ We choose
 
 where \(r\) is a small positive real value, and \({\left(-\frac{q_0}{q_m}\right)}^{1/m}\) denotes any 
 \(m\)-th root of \(\left(-\frac{q_0}{q_m}\right)\).
-\vspace{\baselineskip}
 
 Unlike the real numbers, in the complex number system the \(m\)-th roots of any complex number are 
 guaranteed to exist. If \(z = z_1 + i z_2\), then the \(m\)-th roots of \(z\) are given by
@@ -97,7 +90,6 @@ guaranteed to exist. If \(z = z_1 + i z_2\), then the \(m\)-th roots of \(z\) ar
 \]
 
 where \(R = \sqrt{z_1^2 + z_2^2}\) and \(\theta = \arctan(z_2 / z_1)\).
-\vspace{\baselineskip}
 
 \textbf{Proof:} 
 
@@ -129,11 +121,10 @@ small enough. For example, select \(r\) so that \(|E| < \frac{|q_0| r^m}{2}\). T
 which contradicts the assumption that \(|q(z)|\) has a minimum nonzero value at \(z = 0\).
 \QED
 
-\subsection{Theorem 2}
+\subsection{Theorem II}
 
 Every polynomial of degree \(n\) with real or complex coefficients has exactly \(n\) complex roots, 
 when counting multiplicities.
-\vspace{\baselineskip}
 
 \textbf{Proof:}
 
