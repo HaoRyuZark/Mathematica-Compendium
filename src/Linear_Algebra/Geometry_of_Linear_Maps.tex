@@ -25,10 +25,10 @@ This matrix is a common example of an isometric linear map, because of the way i
 For the \(2D\) we have 
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
         \cos(\phi) & -\sin(\phi)\\
         \sin(\phi) & \cos(\phi)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 The derivation comes from the addition theorems for \(\sin(\phi) \) and \(\cos(\phi)\).
@@ -72,14 +72,14 @@ Now notice that we have our \(x\) and \(y\) inside the expression
 which gives us 
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
         \cos(\phi) & -\sin(\phi)\\
         \sin(\phi) & \cos(\phi)
-    \end{pmatrix}
-    \begin{pmatrix}
+    \end{bmatrix}
+    \begin{bmatrix}
         x\\
         y
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \QED
@@ -88,29 +88,29 @@ which gives us
 
 \[
     R_x (\phi) =
-    \begin{pmatrix}
+    \begin{bmatrix}
         1 & 0 & 0 \\
         0 & \cos(\phi) & -\sin(\phi) \\
         0 & \sin(\phi) & \cos(\phi)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \[
     R_y (\phi) =
-    \begin{pmatrix}
+    \begin{bmatrix}
         1 & 0 & \sin(\phi) \\
         0 & 1 & 0 \\
         -\sin(\phi) & 0 & \cos(\phi)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \[
     R_z (\phi) =
-    \begin{pmatrix}
+    \begin{bmatrix}
         \cos(\phi) & -\sin(\phi) & 0 \\
         \sin(\phi) & \cos(\phi) & 0 \\
         0 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsection{Orthogonal Matrices}
@@ -175,7 +175,7 @@ Prove that \(H_n\) is \emph{orthogonal} for all \(\vec{u}\in \Reals^n \backslash
 
 The \emph{determinant} of this kind of matrices can only be either positioning 1 or negative 1.
 
-\textbf{Proof}:
+\textbf{Proof:}:
 
 We know that \(\det(I) = I \), therefore
 
@@ -334,12 +334,12 @@ inner products our \(A\) matrix and \emph{Q}
 
 \[
     R =
-    \begin{pmatrix}
+    \begin{bmatrix}
         \langle q_1, a_1 \rangle & \langle q_1, a_2 \rangle & \cdots &\langle q_1, a_n\rangle \\ 
         0 & \langle q_2, a_2 \rangle & \cdots & \langle q_2, a_n\rangle \\ 
         \vdots & \vdots  & \ddots & \vdots \\
         0 & 0  & \cdots & \langle q_n, a_n \rangle \\ 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Or even simpler \(R = Q^T A\).
@@ -349,57 +349,57 @@ Or even simpler \(R = Q^T A\).
 Find the \emph{QR-Decomposition} of the matrix \(A\) given by:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
         1 & 3 \\
         1 & -1 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 First, we find the orthonormal basis of the columns of our matrix \(A\) 
 
 \[ 
-    q_1 = \frac{a_1}{\|a_1\|} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+    q_1 = \frac{a_1}{\|a_1\|} = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 \]
 
 \[ 
     r_2 = a_2 - \langle a_2, q_1\rangle q_1 
     = 
-    \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+    \begin{bmatrix} 1 \\ 3 \end{bmatrix}
     - 
     \langle  
-    \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+    \begin{bmatrix} 1 \\ 3 \end{bmatrix}
     ,
-    \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+    \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
     \rangle    
     \frac{1}{\sqrt{2}} 
-    \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+    \begin{bmatrix} 1 \\ 1 \end{bmatrix}
     = 
-    \begin{pmatrix}
+    \begin{bmatrix}
         2 \\ -2 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \[
     q_2 =
     \frac{1}{\sqrt{8}}
-    \begin{pmatrix}
+    \begin{bmatrix}
         2 \\ -2 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \[
     Q = 
-    \begin{pmatrix}
+    \begin{bmatrix}
         \frac{1}{\sqrt{2}} & \frac{2}{\sqrt{8}} \\
         \frac{1}{\sqrt{2}} & -\frac{2}{\sqrt{8}}
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \[
     R =
-    \begin{pmatrix}
+    \begin{bmatrix}
         \sqrt{2} & sqrt{2} \\
         0    &    \sqrt{8}
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 

@@ -60,15 +60,11 @@ there exists \( n_0 \in \Naturals \) such that:
 \textbf{Example I:}
 
 \[
-    \lim_{n \to \infty} \vec{X}_n = \lim_{n \to \infty} \begin{pmatrix} \frac{1}{n} \\
-    1 + \frac{1}{n^2} \\ \frac{\sin n}{n}\end{pmatrix} = \begin{pmatrix}
+    \lim_{n \to \infty} \vec{X}_n = \lim_{n \to \infty} \begin{bmatrix} \frac{1}{n} \\
+    1 + \frac{1}{n^2} \\ \frac{\sin n}{n}\end{bmatrix} = \begin{bmatrix}
         0 \\ 1 \\ 0
-    \end{pmatrix}
+    \end{bmatrix}
 \]
-
-\subsection{Different Norms}
-
-From linear algebra it is known what a \emph{Norm} is and its properties:
 
 \subsection{Different Norms}
 
@@ -118,20 +114,20 @@ Given is
 
 \[
     \vec{X}_n = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     5 - \frac{10}{n}\\
     \frac{1}{n}   
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 we want to find \(n_0\) for \(\varepsilon = 0,1\)
 
 \[
     \lim_{n \to \infty} \vec{X}_n = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     5 \\
     0
-    \end{pmatrix}
+    \end{bmatrix}
     = \vec{X}_0
 \]
 
@@ -143,10 +139,10 @@ Now use the definition for convergence and \emph{Euclidean Norm}
 
 \[
     \left\| 
-    \begin{pmatrix}
+    \begin{bmatrix}
         -\frac{10}{n}\\
         \frac{1}{n}
-    \end{pmatrix}
+    \end{bmatrix}
     \right\|
 \]
 
@@ -158,8 +154,6 @@ Now use the definition for convergence and \emph{Euclidean Norm}
 \]
 
 Therefore, \(n_0 = 101\).
-
-
 
 \subsubsection{Equivalence of Norms}
 
@@ -179,8 +173,8 @@ induce the same topology and convergence behavior in finite-dimensional spaces.
 In the \(\Reals^n\) all norms are equivalent and 
 
 \begin{align*}
-     \|\vec{x}\|_\infty &\le \|\vec{x}\|_2 \le \sqrt{n}\|\vec{x}\|_infty \\
-     \|\vec{x}\|_\infty &\le \|\vec{x}\|_1 \le n\|\vec{x}\|_infty \\
+     \|\vec{x}\|_\infty &\le \|\vec{x}\|_2 \le \sqrt{n}\|\vec{x}\|_\infty \\
+     \|\vec{x}\|_\infty &\le \|\vec{x}\|_1 \le n\|\vec{x}\|_\infty \\
      \|\vec{x}\|_2 &\le \|\vec{x}\|_1 \le n\|\vec{x}\|_2
 \end{align*}
 
@@ -228,15 +222,15 @@ multi-variable limit path-independent and unique (if it exists).
 
 \textbf{Example:}
 
-\(\vec{X}_n = \begin{pmatrix} \frac{1}{n} \\ 1 + \frac{1}{n^2} \\ \frac{\sin(n)}{n} \end{pmatrix}\)
+\(\vec{X}_n = \begin{bmatrix} \frac{1}{n} \\ 1 + \frac{1}{n^2} \\ \frac{\sin(n)}{n} \end{bmatrix}\)
 
 The limit towards infinity is then 
 
 \[
-    \lim_{n \to \infty} \begin{pmatrix} \frac{1}{n} \\ 1 + \frac{1}{n^2} \\ \frac{\sin(n)}{n} \end{pmatrix}
-    = \begin{pmatrix}
+    \lim_{n \to \infty} \begin{bmatrix} \frac{1}{n} \\ 1 + \frac{1}{n^2} \\ \frac{\sin(n)}{n} \end{bmatrix}
+    = \begin{bmatrix}
         0 \\ 1 \\ 0
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsection{Partial Functions}

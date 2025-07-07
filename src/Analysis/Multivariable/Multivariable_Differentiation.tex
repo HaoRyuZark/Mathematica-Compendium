@@ -41,11 +41,11 @@ Let \( f : U \subseteq \Reals^n \to \Reals \) be differentiable at \( \vec{X}_0 
 \dots, x_n^{(0)}) \). The \emph{gradient} of \(f\) at \( \vec{X}_0 \) is:
 
 \[
-    \nabla f(\vec{X}_0) = \begin{pmatrix}
+    \nabla f(\vec{X}_0) = \begin{bmatrix}
     \frac{\partial f}{\partial x_1}(\vec{X}_0) \\
     \vdots \\
     \frac{\partial f}{\partial x_n}(\vec{X}_0)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsubsection{Origin of the formula}
@@ -103,10 +103,10 @@ and shares its slope in both \(x\)- and \(y\)-directions.
 It can also be written in the parameterized form:
 
 \[
-    T(x,y) = \begin{pmatrix} x_0\\ y_0\\ z_0\end{pmatrix} + \lambda 
-    \begin{pmatrix} 1\\ 0 \\ f_x(x_0,y_0)\end{pmatrix} + \mu \begin{pmatrix}
+    T(x,y) = \begin{bmatrix} x_0\\ y_0\\ z_0\end{bmatrix} + \lambda 
+    \begin{bmatrix} 1\\ 0 \\ f_x(x_0,y_0)\end{bmatrix} + \mu \begin{bmatrix}
     0 \\ 1 \\ f_y(x_0, y_0)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsubsection{Generalization}
@@ -178,17 +178,17 @@ We begin by considering the tangent plane to the surface \( z = f(x, y) \) at th
 
 \[
     \vec{u}_1 = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 \\
     0 \\
     f_x(x_0, y_0)
-    \end{pmatrix}, \quad
+    \end{bmatrix}, \quad
     \vec{u}_2 = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     0 \\
     1 \\
     f_y(x_0, y_0)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 These correspond to directional derivatives along the \(x\)- and \(y\)-axes, respectively.
@@ -198,11 +198,11 @@ plane) as:
 
 \[
     \vec{u}_3 =
-    \begin{pmatrix}
+    \begin{bmatrix}
     e_1 \\
     e_2 \\
     D_{\vec{v}}f
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Since all three vectors lie in the same plane, the determinant of the matrix formed by these vectors as 
@@ -216,11 +216,11 @@ Explicitly:
 
 \[
     \det
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & e_1 \\
     0 & 1 & e_2 \\
     f_x(x_0, y_0) & f_y(x_0, y_0) & D_{\vec{v}}f
-    \end{pmatrix} = 0
+    \end{bmatrix} = 0
 \]
 
 Expanding the determinant gives:
@@ -481,7 +481,7 @@ Final Answer
     y'(1) = -4
 \]
 
-\subsection{Divergence and Curl (Rotation)}
+\subsection{Divergence and Curl}
 
 Let \( \vec{F} = (F_1, F_2, F_3) : \Reals^3 \to \Reals^3 \) be a vector field.
 
@@ -495,11 +495,11 @@ Let \( \vec{F} = (F_1, F_2, F_3) : \Reals^3 \to \Reals^3 \) be a vector field.
 \subsubsection{Curl:}
 
 \[
-    \operatorname{rot} \vec{F} = \nabla \times \vec{F} = \begin{pmatrix}
+    \operatorname{rot} \vec{F} = \nabla \times \vec{F} = \begin{bmatrix}
     \frac{\partial F_3}{\partial x_2} - \frac{\partial F_2}{\partial x_3} \\
     \frac{\partial F_1}{\partial x_3} - \frac{\partial F_3}{\partial x_1} \\
     \frac{\partial F_2}{\partial x_1} - \frac{\partial F_1}{\partial x_2}
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 These describe how the field spreads or rotates around a point.
@@ -523,21 +523,21 @@ That is, the order of partial differentiation does not matter if all second deri
 Let \( \vec{f} : \Reals^n \to \Reals^m \), where
 
 \[
-    \vec{f}(\vec{x}) = \begin{pmatrix}
+    \vec{f}(\vec{x}) = \begin{bmatrix}
     f_1(x_1, \dots, x_n) \\
     \vdots \\
     f_m(x_1, \dots, x_n)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 The \emph{Jacobian matrix} of \( \vec{f} \) is the \( m \times n \) matrix:
 
 \[
-    J_{\vec{f}}(\vec{x}) = \begin{pmatrix}
+    J_{\vec{f}}(\vec{x}) = \begin{bmatrix}
     \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\
     \vdots & \ddots & \vdots \\
     \frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 In the case \( n = m \), the \emph{Jacobian determinant} \( \det J_{\vec{f}}(\vec{x}) \) 
@@ -615,11 +615,11 @@ determinant help us determine if all the concavities given by the axis second de
 \textbf{Example: \( f(x, y) = x^2 + y^2 \)}
 
 \[
-    \nabla f = \begin{pmatrix} 2x \\ 2y \end{pmatrix} \Rightarrow \text{Critical point at } (0, 0)
+    \nabla f = \begin{bmatrix} 2x \\ 2y \end{bmatrix} \Rightarrow \text{Critical point at } (0, 0)
 \]
 
 \[
-    H_f = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \Rightarrow \text{positive definite}
+    H_f = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \Rightarrow \text{positive definite}
     \Rightarrow (0, 0) \text{ is a local minimum}
 \]
 
@@ -635,11 +635,11 @@ The gradient of \(f\), denoted \( \nabla f \), collects all the first partial de
 
 \[
     \nabla f(x_1, \dots, x_n) =
-    \begin{pmatrix}
+    \begin{bmatrix}
     \frac{\partial f}{\partial x_1} \\
     \vdots \\
     \frac{\partial f}{\partial x_n}
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 2: Solve the System \( \nabla f = 0 \)}
@@ -794,7 +794,7 @@ subject to the constraint:
 The gradient of the constraint is:
 
 \[
-    \nabla g = \begin{pmatrix} 2x \\ 2y \end{pmatrix}
+    \nabla g = \begin{bmatrix} 2x \\ 2y \end{bmatrix}
 \]
 
 Since \( \nabla g \ne 0 \), the rank condition is fulfilled, and no further critical points 
@@ -875,11 +875,11 @@ Now,  for \(\lambda_2\):
 We construct the Hessian:
 
 \[
-    H = \begin{pmatrix}
+    H = \begin{bmatrix}
     2 + 2\lambda & 0 & 2x \\
     0 & 2 + 2\lambda & 2 \\
     2x & 2 & 0
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 For \(\lambda_1\) we get \( \det(H) =  \frac{244}{5} > 0 \), a minimum 
@@ -955,9 +955,9 @@ Let \( \vec{X}(t) \in \Reals^n \) be a differentiable, parameterized curve. The 
 at the point \( \vec{X}(t_0) \) is given by:
 
 \[
-    \vec{X}'(t_0) = \begin{pmatrix}
+    \vec{X}'(t_0) = \begin{bmatrix}
         x_1 ' (t_0) \\ x_2 ' (t_0) \\ \vdots \\ x_n ' (t_0)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 This vector points in the direction in which the curve is moving at \( t_0 \), and its magnitude 
@@ -970,19 +970,19 @@ corresponds to the instantaneous speed. The unit tangent vector is:
 The speed of the vector in \(\Reals^2\) is given by:
 
 \[
-    \vec{X}(t) = \begin{pmatrix}
+    \vec{X}(t) = \begin{bmatrix}
         t \\ f(t)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 and the tangent is:
 
 \[
-    T(t) = \begin{pmatrix}
+    T(t) = \begin{bmatrix}
         t \\ f(t)
-    \end{pmatrix} + \lambda \begin{pmatrix}
+    \end{bmatrix} + \lambda \begin{bmatrix}
         1 \\ f'(t)
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsubsection{Derivation of the Tangent Vector Formula}

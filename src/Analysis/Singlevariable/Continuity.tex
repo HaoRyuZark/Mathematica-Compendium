@@ -119,13 +119,13 @@ The Banach Fixed Point Theorem ensures:
 \emph{A priori estimate:}
 
 \[
-    |x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
+    |x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0| < \epsilon
 \]
 
 \emph{A posteriori estimate:}
 
 \[
-    |x_n - x^*| \le \frac{L}{1 - L} |x_n - x_{n-1}|
+    |x_n - x^*| \le \frac{L}{1 - L} |x_n - x_{n-1}| \epsilon
 \]
 
 \subsubsection{Steps for a Fixed Point Exercise}
@@ -146,30 +146,66 @@ Given \(f: [a, b] \to [a, b]\), to prove existence and convergence:
 
 \end{enumerate}
 
-\textbf{Example: \(f(x) = \frac{1}{x} + 3\) on \([2, 5]\)}
+\textbf{Example:} 
 
-\begin{itemize}
+\(f(x) = \frac{1}{x} + 3\) on \([2, 5]\)
 
-    \item \emph{Domain check:} \(x \in [2, 5] \Rightarrow \frac{1}{x} \in [0.2, 0.5] \Rightarrow f(x) \in [3.2, 3.5] \subset [2, 5]\)
+\textbf{Step 1: Monotonicity}
 
-    \item \emph{Lipschitz constant:}
+In this case we will assume that it is monotonous. 
 
-        \[
-            f'(x) = -\frac{1}{x^2} \Rightarrow |f'(x)| \le \frac{1}{2^2} = \frac{1}{4} < 1
-            \Rightarrow \text{Lipschitz with } L = \frac{1}{4}
-        \]
+\textbf{Step 2: Domain check} 
+ 
+ \(x \in [2, 5] \Rightarrow \frac{1}{x} \in [0.2, 0.5] \Rightarrow f(x) \in [3.2, 3.5] \subset [2, 5]\)
 
-    \item \emph{Contraction verified:} By derivative bound
+ \textbf{Step 3: Lipschitz constant}
 
-    \item \emph{Fixed point iteration:}
+\[
+    f'(x) = -\frac{1}{x^2} \Rightarrow |f'(x)| \le \frac{1}{2^2} = \frac{1}{4} < 1
+    \Rightarrow \text{Lipschitz with } L = \frac{1}{4} < 1
+\]
 
-        \[
-            x_0 = 3, \quad x_1 = f(3) = \frac{1}{3} + 3 = \frac{10}{3}, \quad x_2 = f(x_1), \dots
-        \]
 
-    \item \emph{Use approximation bounds:}
+\textbf{Step 4: Fixed point iteration}
 
-        \[
-            |x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
-        \]
-\end{itemize}
+\[
+    x_0 = 3, \quad x_1 = f(3) = \frac{1}{3} + 3 = \frac{10}{3}, \quad x_2 = f(x_1), \dots
+\]
+
+\textbf{Step 5: Approximations}
+
+\emph{A priori}
+
+\[
+    |x_n - x^*| \le \frac{L^n}{1 - L} |x_1 - x_0|
+\]
+
+\[
+    |x_n - x^*| \le \frac{\frac{1}{4}^n}{1 - \frac{1}{4}} |\frac{10}{3}  - 3|
+\]
+
+\begin{align*}
+    |x_n - x^*| &\le \frac{\left(\frac{1}{4}\right)^n}{1 - \frac{1}{4}} \cdot \left|\frac{10}{3} - 3\right| \\
+    &= \frac{\left(\frac{1}{4}\right)^n}{\frac{3}{4}} \cdot \frac{1}{3}\\
+    &= \frac{4}{3} \cdot \left(\frac{1}{4}\right)^n \cdot \frac{1}{3}\\
+    &= \frac{4}{9} \cdot \left(\frac{1}{4}\right)^n
+\end{align*}
+
+For \(\varepsilon = 0,1\)
+
+\begin{align*}
+    \frac{4}{9} \cdot \left(\frac{1}{4}\right)^n &< \varepsilon \\
+    \left(\frac{1}{4}\right)^n &< \frac{9}{4} \varepsilon \\
+    \ln\left(\left(\frac{1}{4}\right)^n\right) &< \ln\left(\frac{9}{4} \varepsilon\right) \\
+    n \cdot \ln\left(\frac{1}{4}\right) &< \ln\left(\frac{9}{4} \varepsilon\right) \\
+    n &> \frac{\ln\left(\frac{9}{4} \varepsilon\right)}{\ln\left(\frac{1}{4}\right)} \\
+    n &> \frac{\ln\left(\frac{9}{4} \varepsilon\right)}{-\ln 4}
+\end{align*}
+
+
+\emph{A posteriori}
+
+\[
+    |x_n - x^*| \le \frac{L}{1 - L} |x_n - x_{n-1}| = \frac{\frac{1}{4}}{1 - \frac{1}{4}} |x_n - x_{n-1}| = \frac{1}{3} |x_n - x_{n-1}|
+\]
+

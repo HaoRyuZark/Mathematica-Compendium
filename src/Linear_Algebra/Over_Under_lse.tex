@@ -100,7 +100,7 @@ Then \(\| Ax - b \|^2\) gives us the smallest distance for \(x = 0\).
 We can also take the last example and solve it with an alternative method.
 
 \[
-	A = \begin{pmatrix} 1 \\ 1 \end{pmatrix}, x = (x), b = \begin{pmatrix} 1 \\ -1 \end{pmatrix}
+	A = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, x = (x), b = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 \]
 
 Let us use the normal equations
@@ -111,16 +111,16 @@ Let us use the normal equations
 
 \[
 	(1, 1) 
-	\begin{pmatrix} 
+	\begin{bmatrix} 
 	1 \\ 
 	1
-	\end{pmatrix} x
+	\end{bmatrix} x
 	= 
 	(1, 1)
-	\begin{pmatrix} 
+	\begin{bmatrix} 
 		1 \\ 
 		-1
-	\end{pmatrix} 
+	\end{bmatrix} 
 \]
 
 \[
@@ -138,58 +138,58 @@ Given are
 with the corresponding matrix
 
 \[
-	\begin{pmatrix}
+	\begin{bmatrix}
 		1 & 0 \\
 		0 & 1 \\
 		1 & 1  
-	\end{pmatrix}
+	\end{bmatrix}
 \]
 
 and solution vector 
 
 \[
-	b = \begin{pmatrix}
+	b = \begin{bmatrix}
 		1 \\
 		2 \\
 		-1
-	\end{pmatrix}
+	\end{bmatrix}
 \]
 
 Now let us build the normal equation
 
 \[
-	\begin{pmatrix}
+	\begin{bmatrix}
 	1 & 0 & 1 \\
 	0 & 1 & 1
-	\end{pmatrix}
-	\begin{pmatrix}
+	\end{bmatrix}
+	\begin{bmatrix}
 	1 & 0 \\
 	0 & 1 \\
 	1 & 1  
-	\end{pmatrix}
+	\end{bmatrix}
 	\vec{x}
 	=
-	\begin{pmatrix}
+	\begin{bmatrix}
 	1 & 0 & 1 \\
 	0 & 1 & 1
-	\end{pmatrix}
-	\begin{pmatrix}
+	\end{bmatrix}
+	\begin{bmatrix}
 	1 \\
 	2 \\
 	-1
-	\end{pmatrix}
+	\end{bmatrix}
 \]
 
 \[
-	\begin{pmatrix}
+	\begin{bmatrix}
 	2 & 1 \\
 	1 & 2
-	\end{pmatrix}
+	\end{bmatrix}
 	= 
-	\begin{pmatrix}
+	\begin{bmatrix}
 	0 \\
 	1
-	\end{pmatrix}
+	\end{bmatrix}
 \]
 
 Now with Gaussian elimination we get \(x = (-\frac{1}{3}, \frac{2}{3})^T\). 
@@ -197,28 +197,28 @@ Now with Gaussian elimination we get \(x = (-\frac{1}{3}, \frac{2}{3})^T\).
 Finally, we can use the \(\vec{x}\) to solve \(Ax - b\)
 
 \[
-	\begin{pmatrix}
+	\begin{bmatrix}
 		1 & 0 \\
 		0 & 1 \\
 		1 & 1 \\
-	\end{pmatrix}
-	\begin{pmatrix}
+	\end{bmatrix}
+	\begin{bmatrix}
 		-\frac{1}{3} \\
 		\frac{2}{3}
-	\end{pmatrix}
+	\end{bmatrix}
 	-
-	\begin{pmatrix}
+	\begin{bmatrix}
 		1 \\
 		2 \\
 		-1
-	\end{pmatrix}
+	\end{bmatrix}
 	=
 	\frac{4}{3}
-	\begin{pmatrix}
+	\begin{bmatrix}
 	-1 \\
 	-1 \\
 	1
-	\end{pmatrix}
+	\end{bmatrix}
 \]
 
 And therefore, \(\|Ax - b\|^2 = \frac{48}{9}\).
@@ -311,18 +311,18 @@ Now with our method: \(A = (2, 2, -1)\), \(x = (x_1, x_2, x_3)\), \(b = 6\)
 
 \[
 	x = A^T {(AA^T)}^{-1} b =
-	\begin{pmatrix}
+	\begin{bmatrix}
 	2\\
 	2\\
 	-1
-	\end{pmatrix}
+	\end{bmatrix}
 	{\left(
 		(2,2,-1)
-	\begin{pmatrix}
+	\begin{bmatrix}
 	2\\
 	2\\
 	-1		
-	\end{pmatrix}
+	\end{bmatrix}
 	\right)}^{-1}
 	6
 \]

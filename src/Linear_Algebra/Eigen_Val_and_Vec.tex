@@ -173,20 +173,20 @@ parameters.
 Find the eigenvalues and vectors of 
 
 \[
-    A = \begin{pmatrix}
+    A = \begin{bmatrix}
         1 & 1 \\
         4 & 1 \\
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Let us build the characteristic equation and solve it
 
 \[
     \det 
-    \begin{pmatrix}
+    \begin{bmatrix}
         1 - \lambda & 1 \\
         4 & 1 - \lambda \\
-    \end{pmatrix}
+    \end{bmatrix}
     = 0
 \]
 
@@ -201,25 +201,25 @@ We have got the eigenvalues \(\lambda_1 = 3\) and \(\lambda_2 = -1\). Now let us
 substituting our eigenvalues in the original equation.
 
 \begin{align*}
-    \begin{pmatrix} 1 - \lambda_2 & 1 \\ 4 & 1 - \lambda-2 \\ \end{pmatrix} &= \vec{0} \\
-    \begin{pmatrix} 1 - 2 & 1 \\ 4 & 1 - 2 \\ \end{pmatrix} &= \vec{0} \\
-    \begin{pmatrix} 2 & 1 \\ 4 & 2 \\ \end{pmatrix} &= \vec{0} 
+    \begin{bmatrix} 1 - \lambda_2 & 1 \\ 4 & 1 - \lambda-2 \\ \end{bmatrix} &= \vec{0} \\
+    \begin{bmatrix} 1 - 2 & 1 \\ 4 & 1 - 2 \\ \end{bmatrix} &= \vec{0} \\
+    \begin{bmatrix} 2 & 1 \\ 4 & 2 \\ \end{bmatrix} &= \vec{0} 
 \end{align*}
 
 Using Gaussian elimination we get: 
 
 \[
-    \begin{pmatrix} 
+    \begin{bmatrix} 
         2 & 1 \\ 
         0 & 0 \\ 
-    \end{pmatrix} 
+    \end{bmatrix} 
 \]
 
 Thus, let \(v_2 = -2\) and \(v_1 = \frac{2}{2} = 1\). This give us the first eigenvector and all of it 
 scalar versions.
 
 \[
-    e_1 = \left\{ c \begin{pmatrix} 1 \\ -2 \end{pmatrix} | c \in \Reals\right\}
+    e_1 = \left\{ c \begin{bmatrix} 1 \\ -2 \end{bmatrix} | c \in \Reals\right\}
 \]
 
 The process for the other eigenvalue is exactly the same.
@@ -233,18 +233,18 @@ This is a special case of \emph{eigenvalues} which are not as easy to visualize.
 Find the eigenvalues and vectors of
 
 \[
-    A = \begin{pmatrix}
+    A = \begin{bmatrix}
         0 & 1 \\
         -1 & 0 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \[
     \det\left( 
-    \begin{pmatrix}
+    \begin{bmatrix}
         -\lambda & 1 \\
         -1 & -\lambda
-    \end{pmatrix}
+    \end{bmatrix}
     \right) = 0
 \]
 
@@ -261,49 +261,49 @@ Now the corresponding eigenvectors.
 For \(\lambda = i\)
 
 \[     
-    \begin{pmatrix}
+    \begin{bmatrix}
         -i & 1 \\
         -1 & -i
-    \end{pmatrix}
+    \end{bmatrix}
     \rightarrow
-    \begin{pmatrix}
+    \begin{bmatrix}
         1 & i \\
         0 & 0
-    \end{pmatrix} 
+    \end{bmatrix} 
 \]
 
 Therefore, our first eigenvector is 
 
 \[  
     c
-    \begin{pmatrix}
+    \begin{bmatrix}
         -i \\
         1        
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 For \(\lambda = -i\)
 
 \[     
-    \begin{pmatrix}
+    \begin{bmatrix}
         i & 1 \\
         -1 & i
-    \end{pmatrix}
+    \end{bmatrix}
     \rightarrow
-    \begin{pmatrix}
+    \begin{bmatrix}
         1 & -i \\
         0 & 0
-    \end{pmatrix} 
+    \end{bmatrix} 
 \]
 
 Therefore, the second eigenvector is 
 
 \[  
     c
-    \begin{pmatrix}
+    \begin{bmatrix}
         i \\
         1        
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsection{Similar Matrices}
@@ -343,11 +343,113 @@ diagonalizable. But this does not guaranty the diagonalizibility for \(\Reals\).
 \subsubsection{Geometric and Algebraic Multiplicity}
 
 Given a matrix \(A \in \Complex^{n \times n}\) with \(\lambda\) as eigenvalue. The multiple occurrences 
-of the zero \(\lambda\) of \(\mathcal{X}_A\) is called \emph{algebraic multiplicity} \(a(\lambda)\). 
-Continuing, \(g(\lambda):= dim(Eig(A;\lambda))\) is the \emph{geometrical multiplicity} of \(\lambda\).
+of the zero \(\lambda\) of \(\mathcal{X}_A\) is called \emph{algebraic multiplicity} \(\alg(\lambda)\). 
+Continuing, \(\geo(\lambda):= dim(Eig(A;\lambda))\) is the \emph{geometrical multiplicity} of \(\lambda\).
 
 Also, \(A\) is diagonalizable if and only if the \emph{geometric multiplicity} of every eigenvalue is equal 
 to its \emph{algebraic multiplicity}.
+
+\textbf{Example:}
+
+This example shows a matrix which is not diagonalizable:
+
+\[
+    \begin{bmatrix}
+        1 & 1 \\
+        0 & 1 \\
+    \end{bmatrix}
+\]
+
+The corresponding multiplicities are:
+
+\begin{align*}
+    \mathcal{X} =\det (A - \lambda I) &= 0 \\
+    (1 - \lambda)^2 &= 0
+\end{align*}
+
+\(\alg(1)= 2\) and the \(\geo(1) = 1\) because of 
+
+\[
+    \begin{bmatrix}
+        0 & 1 \\
+        0 & 0
+    \end{bmatrix}
+\]
+
+More precisely \(\dim(Eig(A;1)) = 1\).
+
+\textbf{Example of Complex Eigenvalues:}
+
+Given is the rotation matrix
+
+\[
+    \begin{bmatrix}
+        \cos(\theta) & -\sin(\theta) \\
+        \sin(\theta) & \cos(\theta)
+    \end{bmatrix}
+\]
+
+With the characteristic polynomial 
+
+\begin{align*}
+    \mathcal{X} &= (\cos(\theta)- \lambda)^2 + \sin^2(\theta) = 0\\
+    &= \cos^2(\theta) - 2\cos(\theta)\lambda + \lambda^2 + \sin^2(\theta) = 0 \\
+    &= \lambda^2 -2\cos(\theta)\lambda + 1 = 0 \\
+\end{align*}
+
+Using the quadratic formula gives us 
+
+\begin{align*}
+    \lambda_{1,2} &= \cos(\theta) \pm \sqrt{\cos^2(\theta) - 1} \\ 
+    &= \cos(\theta) \pm \sqrt{-\sin^2(\theta)} \\
+    &= \cos(\theta) \pm i\sin(\theta) = e^{\pm i\theta}
+\end{align*}
+
+Therefore, our eigenvalues are complex. Now, is the matrix diagonalizable? The answer is yes. 
+
+Because of  \((\cos(\theta) - \lambda)^2\) \(\alg(\lambda) = 2\)
+
+\[
+    \alg(e^{i\theta}) =  2, \, \alg(e^{-i\theta}) = 2
+\]
+
+And 
+
+\[
+    \geo(e^{i\theta}) = 2, \, \geo(e^{-i\theta}) = 2
+\]
+
+For \(\lambda = e^{i\theta}\) we get two linearly independent vectors
+
+\[
+    \begin{bmatrix}
+        \cos(\theta) - \cos(\theta) - i\sin(\theta) & -\sin(\theta) \\
+        \sin(\theta) & \cos(\theta) - \cos(\theta) - i\sin(\theta)
+    \end{bmatrix}
+\]
+
+\[
+    \begin{bmatrix}
+        - i\sin(\theta) & -\sin(\theta) \\ 
+        \sin(\theta) &    -i\sin(\theta)
+    \end{bmatrix}
+\]
+
+For \(\lambda = e^{-i\theta}\) we also get two linearly independent vectors
+
+\[
+    \begin{bmatrix}
+        \cos(\theta) - \cos(\theta) +i\sin(\theta) & -\sin(\theta) \\
+        \sin(\theta) & \cos(\theta) - \cos(\theta) +i\sin(\theta)
+    \end{bmatrix}
+\]
+
+\[
+    \begin{bmatrix}
+        i\sin(\theta) & -\sin(\theta) \\ 
+        \sin(\theta) &    i\sin(\theta)
+    \end{bmatrix}
+\]
 
 \subsubsection{Eigenvalues of Real Symmetric Matrices}
 
@@ -371,12 +473,13 @@ With this we know that the denominator is a real number thus, if we prove that t
 we are done. For this we will use the properties of the conjugate.
 
 \begin{align*}
-    &\bar{x}^T A x\\
-    &=\bar{\bar{x}^T A x} \\
-    &=\bar{\bar{x}^T} \bar{Ax} \\
-    &=x^T \bar{Ax} &= \\
-    &=(\bar{A}\bar{x})^T x \\
-    &=\bar{x}^T A  x 
+    \bar{x}^T A x 
+    &= \overline{\bar{x}^T A x} \\
+    &= \overline{\bar{x}^T} \, \overline{A x} \\
+    &= x^T \, \overline{A x} \\
+    &= (\overline{A x})^T x \\
+    &= (\bar{A} \, \bar{x})^T x \\
+    &= \bar{x}^T \bar{A}^T x
 \end{align*}
 
 Notice that we ended just were we started. Therefore, the conjugate had no effect on whole term, thus 
@@ -448,10 +551,10 @@ A matrix \(A\) is diagonalizable if and only if it has \(n\) linearly independen
 Consider the matrix
 
 \[
-    A = \begin{pmatrix}
+    A = \begin{bmatrix}
     -3 & -4 \\
     5 & 6
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 The characteristic equation is
@@ -459,10 +562,10 @@ The characteristic equation is
 \[
     \det(A - \lambda I) 
     = \det 
-    \begin{pmatrix}
+    \begin{bmatrix}
             -3 - \lambda & -4 \\
         5 & 6 - \lambda
-    \end{pmatrix} 
+    \end{bmatrix} 
     = (-3 - \lambda)(6 - \lambda) + 20 = \lambda^2 - 3\lambda + 2 = 0    
 \]
 \[
@@ -474,50 +577,50 @@ Solving for \(\lambda\), we get \(\lambda_1 = 1\) and \(\lambda_2 = 2\).
 For \(\lambda_1 = 1\):
 
 \[
-   (A - I)\vec{v} = \begin{pmatrix}
+   (A - I)\vec{v} = \begin{bmatrix}
     -4 & -4 \\
     5 & 5
-    \end{pmatrix} \begin{pmatrix}
+    \end{bmatrix} \begin{bmatrix}
     x \\
     y
-    \end{pmatrix} = \begin{pmatrix}
+    \end{bmatrix} = \begin{bmatrix}
     0 \\
     0
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Note that this is telling us that \(x = -y\). Now choose \(x = -1\) and \(y = 1\), which gives us 
 the vector 
 
 \[
-    \vec{x} = \begin{pmatrix}
+    \vec{x} = \begin{bmatrix}
         -1 // 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 For \(\lambda_2 = 2\) the process is similar, so we are going to skip it. We get the vector
 
 \[
-    \vec{y} = \begin{pmatrix}
+    \vec{y} = \begin{bmatrix}
         -\frac{4}{5} \\ 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Now we will complete the process by writing \(D, X, \text{ and } X^{-1}\).
 
 \[
-    D = \begin{pmatrix}
+    D = \begin{bmatrix}
         1 & 0 \\
         0 & 2
-    \end{pmatrix}
-    X = \begin{pmatrix}
+    \end{bmatrix}
+    X = \begin{bmatrix}
         -1  & -\frac{4}{5} \\
         1   &   1 
-    \end{pmatrix}
-    X^{1} = \begin{pmatrix}
+    \end{bmatrix}
+    X^{1} = \begin{bmatrix}
         -1  & \frac{4}{5} \\
         -1   &   -1 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \subsubsection{Normal Matrices}

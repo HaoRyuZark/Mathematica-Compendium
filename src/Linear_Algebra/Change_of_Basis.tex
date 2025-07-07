@@ -33,10 +33,10 @@ Now let us write then a matrix vector multiplication
 
 \[
     (\vec{v}_1, \dots, \vec{v}_ n) 
-    \begin{pmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{pmatrix}
+    \begin{bmatrix} \lambda_1 \\ \vdots \\ \lambda_n \end{bmatrix}
     =
     (\vec{b}_1, \dots, \vec{b}_ n) 
-    \begin{pmatrix} \mu_1 \\ \vdots \\ \mu_n \end{pmatrix}
+    \begin{bmatrix} \mu_1 \\ \vdots \\ \mu_n \end{bmatrix}
 \]
 
 Now let us use the following notation for the Basis and the coefficient vectors.
@@ -101,11 +101,11 @@ Now we can write this in matrix form
     \begin{bmatrix}
         1 & 3 \\
         2 & 3 \\
-    \end{bmatrix} \begin{pmatrix}
+    \end{bmatrix} \begin{bmatrix}
         \lambda_1 \\ \lambda2
-    \end{pmatrix} = \begin{pmatrix}
+    \end{bmatrix} = \begin{bmatrix}
         \mu_1 \\ \mu_2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 This equation relates the coefficient in the standard basis to the new basis
@@ -199,18 +199,18 @@ Let \( v \in V \) be arbitrary, with \( K_A(v) = {(x_1, \dots, x_n)}^T \)
 and \( K_B(v) = {(y_1, \dots, y_n)}^T \).  Then the following holds:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     y_1 \\
     \vdots \\
     y_n
-    \end{pmatrix}
+    \end{bmatrix}
     =
     T_B^A
-    \begin{pmatrix}
+    \begin{bmatrix}
     x_1 \\
     \vdots \\
     x_n
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 If the coordinates of \( v \) with respect to \(A\) are known, then the matrix \( T_B^A \) can be used to compute the coordinates of \( v \) with respect to \(B\).

@@ -101,20 +101,32 @@ If \(u = g(x)\) and \(f = F'\), then:
 
 \end{enumerate}
 
-\emph{Cyclic Integrals:} Some integrals cycle back to the original (e.g., \(e^x \sin x\)).
+\emph{Cyclic Integrals:} Some integrals cycle back to the original (e.g., \(e^x \sin(x)\)).
 
 \textbf{Example:}
 
- \(\int e^x \sin x\,dx\)
+\(\int e^x \sin(x)dx\)
 
 Let:
 
 \[
-    u = \sin x,\ dv = e^x dx \Rightarrow du = \cos x\,dx,\ v = e^x
-    \Rightarrow \int e^x \sin x\,dx = e^x \sin x - \int e^x \cos x\,dx
+    u = \sin (x), \, dv = e^x \Rightarrow du = \cos (x)dx, \, v = e^x
 \]
 
-Repeat integration by parts to complete.
+\[
+    \int e^x \sin(x)dx = e^x \sin (x) - \int e^x \cos(x)\,dx 
+\]
+
+\[
+    u = \cos(x), \, dv = e^x \Rightarrow du = -\sin(x), \, v = e^x
+\]
+
+\begin{align*}
+    \int e^x \sin(x)dx &= e^x \sin (x) - \left[\cos(x)e^x - \int \sin(x)e^x dx \right] \\
+    \int e^x \sin(x)dx &= e^x \sin (x) - \cos(x)e^x - \int \sin(x)e^x dx \\
+    2\int e^x \sin(x)dx &= e^x \sin (x) - \cos(x)e^x \\
+    \int e^x \sin(x)dx &= \frac{e^x \sin (x) +\cos(x)e^x + C}{2}
+\end{align*}
 
 \subsection{Integration by Partial Fractions}
 
@@ -122,15 +134,36 @@ Applies to rational functions. Four cases:
 
 \begin{itemize}
 
-    \item Linear factors
+    \item \emph{Linear factors} \\
+    Denominator: \((x - a)(x - b)\) \\
+    Decomposition: 
+    \[
+        \frac{P(x)}{(x - a)(x - b)} = \frac{A}{x - a} + \frac{B}{x - b}
+    \]
 
-    \item Repeated linear factors
+    \item \emph{Repeated linear factors} \\
+    Denominator: \((x - a)^n\) \\
+    Decomposition: 
+    \[
+        \frac{P(x)}{(x - a)^n} = \frac{A_1}{x - a} + \frac{A_2}{(x - a)^2} + \cdots + \frac{A_n}{(x - a)^n}
+    \]
 
-    \item Irreducible quadratic factors
+    \item \emph{Irreducible quadratic factors} \\
+    Denominator: \((x^2 + px + q)\), where \(x^2 + px + q\) cannot be factored over the reals \\
+    Decomposition:
+    \[
+        \frac{P(x)}{x^2 + px + q} = \frac{Ax + B}{x^2 + px + q}
+    \]
 
-    \item Repeated irreducible quadratic factors
+    \item \emph{Repeated irreducible quadratic factors} \\
+    Denominator: \((x^2 + px + q)^n\) \\
+    Decomposition:
+    \[
+        \frac{P(x)}{(x^2 + px + q)^n} = \frac{A_1x + B_1}{x^2 + px + q} + \frac{A_2x + B_2}{(x^2 + px + q)^2} + \cdots + \frac{A_nx + B_n}{(x^2 + px + q)^n}
+    \]
 
 \end{itemize}
+
 
 \textbf{Example:}
 
@@ -154,7 +187,9 @@ expressions.
 
 \end{itemize}
 
-\textbf{Example 1: \( \int \frac{1}{\sqrt{4 - x^2}} \,dx \)}
+\textbf{Example I:}
+
+\( \int \frac{1}{\sqrt{4 - x^2}} \,dx \)
 
 We use: \( x = 2\sin \theta \Rightarrow dx = 2\cos \theta\, d\theta \)
 
@@ -173,10 +208,12 @@ Return to \(x\) using:
 
 \[
     x = 2\sin \theta \Rightarrow \theta = \arcsin\left(\frac{x}{2}\right)
-    \Rightarrow \boxed{\int \frac{1}{\sqrt{4 - x^2}} \,dx = \arcsin\left(\frac{x}{2}\right) + C}
+    \Rightarrow \int \frac{1}{\sqrt{4 - x^2}} \,dx = \arcsin\left(\frac{x}{2}\right) + C
 \]
 
-\textbf{Example 2: \( \int \frac{x^3}{\sqrt{x^2 + 4}} \,dx \)}
+\textbf{Example II:} 
+
+\( \int \frac{x^3}{\sqrt{x^2 + 4}} \,dx \)
 
 Use: \( x = 2\tan \theta \Rightarrow dx = 2\sec^2 \theta\, d\theta \)
 
@@ -235,11 +272,14 @@ This leaves us with
     \frac{8}{3} {\left(\frac{\sqrt{x^2 + 4}}{2}\right)}^3 - 8 \left( \frac{\sqrt{x^2 + 4}}{2}\right) + c
 \]
 
-\textbf{Example 3: \( \int \frac{x^3}{\sqrt{x^4 - 4}} \,dx \)}
+\textbf{Example III:} 
+
+\( \int \frac{x^3}{\sqrt{x^4 - 4}} \,dx \)
 
 Use: \(x = 2\sec \theta, \ dx = 2\sec \theta \tan \theta \,d\theta \)
 
 Then
+
 \[
     \int \frac{{(2\sec\theta)}^2 2\sec\theta \tan\theta \,d\theta}{2\tan\theta} = \int 8\sec^4 \theta\,d\theta
 \]

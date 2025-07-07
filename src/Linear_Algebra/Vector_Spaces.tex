@@ -357,7 +357,7 @@ Given the \(n+1\) points \((x_k, y_k)\), with \(0 \leq k \leq n\) and all \(x_k\
 there exists exactly one polynomial \(p_n \in P_n\) such that \(y_k = p_n(x_k)\) for all 
 \(0 \leq k \leq n\). This polynomial is called the interpolation polynomial.
 
-\textbf{Proof}
+\textbf{Proof:}
 
 The uniqueness follows immediately. We prove the existence by induction on 
 \(n\). For \(n = 0\), choose \(p_0(x) = y_0\). 
@@ -418,22 +418,22 @@ Substituting the three points into this form gives the system of equations:
 This leads to the system of equations:
 
 \[
-	\begin{pmatrix}
+	\begin{bmatrix}
 	1 & 1 & 1 \\
 	1 & -1 & 1 \\
 	4 & -2 & 1
-	\end{pmatrix}
-	\begin{pmatrix}
+	\end{bmatrix}
+	\begin{bmatrix}
 	a \\
 	b \\
 	c
-	\end{pmatrix}
+	\end{bmatrix}
 	=
-	\begin{pmatrix}
+	\begin{bmatrix}
 	1 \\
 	-1 \\
 	1
-	\end{pmatrix}
+	\end{bmatrix}
 \]
 
 Solving this system gives \(a = 1\), \(b = 1\), and \(c = -1\), so the interpolation polynomial is

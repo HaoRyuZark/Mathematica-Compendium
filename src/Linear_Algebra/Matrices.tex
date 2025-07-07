@@ -9,12 +9,12 @@ A matrix is a rectangular array of numbers, symbols, or expressions arranged in 
 
 \[
     A = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     a_{11} & a_{12} & \cdots & a_{1n} \\
     a_{21} & a_{22} & \cdots & a_{2n} \\
     \vdots & \vdots & \ddots & \vdots \\
     a_{m1} & a_{m2} & \cdots & a_{mn}
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 The set of all \(m \times n\) matrices with real entries is denoted by \(\Reals^{m \times n}\). Special cases include:
@@ -72,23 +72,23 @@ of the current row with the column vector of the other matrix.
 
 \[
     A \circ \vec{v} = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     \langle a_{1}^T, v\rangle \\
     \langle a_{2}^T, v\rangle \\
     \vdots \\
     \langle a_{n}^T, v\rangle 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 As for the case with multiple columns
 
 \[
     A \circ B = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     \langle a_{1}^T, b_{j} \rangle & \dots  & \langle a_{1}^T, b_{n} \rangle \\
     \vdots                         & \cdots &              \vdots            \\
     \langle a_{n}^T, b_{j} \rangle & \dots  & \langle a_{n}^T, b_{n} \rangle 
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Matrix multiplication satisfies the following properties:
@@ -376,17 +376,17 @@ Consider the matrices \(A\) and \(B\) given by:
 
 \[
     A = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 3 & 1 \\
     1 & 0 & -2
-    \end{pmatrix} \in \Reals^{2 \times 3}
+    \end{bmatrix} \in \Reals^{2 \times 3}
     \quad \text{and} \quad
     B = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 2 \\
     -1 & 3 \\
     4 & 0
-    \end{pmatrix} \in \Reals^{3 \times 2}
+    \end{bmatrix} \in \Reals^{3 \times 2}
 \]
 
 To compute the product \(C = AB \in \Reals^{2 \times 2}\), we calculate each entry \(c_{ij}\) using the formula:
@@ -425,10 +425,10 @@ Therefore, the product \(C = AB\) is:
 
 \[
     C = AB = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     3 & 13 \\
     -7 & 2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Let's verify that matrix multiplication is not generally commutative by attempting to compute \(BA\):
@@ -448,11 +448,11 @@ We'll use Gauss-Jordan elimination to solve the linear system:
 First, we set up the augmented matrix:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 1 & -1 & | & 8 \\
     -3 & -1 & 2 & | & -11 \\
     1 & 1 & 1 & | & 3
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Now we apply Gauss-Jordan elimination to transform this into reduced row echelon form:
@@ -460,11 +460,11 @@ Now we apply Gauss-Jordan elimination to transform this into reduced row echelon
 \textbf{Step 1:} We'll choose the first element in the first row as our pivot. Let's first swap row 1 and row 3 to get a simpler pivot:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 1 & 1 & | & 3 \\
     -3 & -1 & 2 & | & -11 \\
     2 & 1 & -1 & | & 8
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 2:} Eliminate the first elements in rows 2 and 3:
@@ -472,31 +472,31 @@ Now we apply Gauss-Jordan elimination to transform this into reduced row echelon
 Row 2 + 3 \(\times\) Row 1:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 1 & 1 & | & 3 \\
     0 & 2 & 5 & | & -2 \\
     2 & 1 & -1 & | & 8
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Row 3 - 2 \(\times\) Row 1:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 1 & 1 & | & 3 \\
     0 & 2 & 5 & | & -2 \\
     0 & -1 & -3 & | & 2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 3:} Make the pivot in row 2 equal to 1 by dividing the entire row by 2:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 1 & 1 & | & 3 \\
     0 & 1 & \frac{5}{2} & | & -1 \\
     0 & -1 & -3 & | & 2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 4:} Eliminate the second element in rows 1 and 3:
@@ -504,31 +504,31 @@ Row 3 - 2 \(\times\) Row 1:
 Row 1 - Row 2:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & -\frac{3}{2} & | & 4 \\
     0 & 1 & \frac{5}{2} & | & -1 \\
     0 & -1 & -3 & | & 2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Row 3 + Row 2:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & -\frac{3}{2} & | & 4 \\
     0 & 1 & \frac{5}{2} & | & -1 \\
     0 & 0 & -\frac{1}{2} & | & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 5:} Make the pivot in row 3 equal to 1 by multiplying the entire row by -2:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & -\frac{3}{2} & | & 4 \\
     0 & 1 & \frac{5}{2} & | & -1 \\
     0 & 0 & 1 & | & -2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 6:} Eliminate the third element in rows 1 and 2:
@@ -536,31 +536,31 @@ Row 3 + Row 2:
 Row 1 + \(\frac{3}{2} \times\) Row 3:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 0 & | & 1 \\
     0 & 1 & \frac{5}{2} & | & -1 \\
     0 & 0 & 1 & | & -2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Row 2 - \(\frac{5}{2} \times\) Row 3:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 0 & | & 1 \\
     0 & 1 & 0 & | & -1 + 5 = 4 \\
     0 & 0 & 1 & | & -2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 The matrix is now in reduced row echelon form:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 0 & | & 1 \\
     0 & 1 & 0 & | & 4 \\
     0 & 0 & 1 & | & -2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 This corresponds to the system:
@@ -579,21 +579,21 @@ Let's find the inverse of the matrix:
 
 \[
     A = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 1 & 1 \\
     3 & 2 & 1 \\
     2 & 1 & 2
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 We form the augmented matrix \([A|I_3]\):
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 1 & 1 & | & 1 & 0 & 0 \\
     3 & 2 & 1 & | & 0 & 1 & 0 \\
     2 & 1 & 2 & | & 0 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Now we apply Gauss-Jordan elimination:
@@ -601,11 +601,11 @@ Now we apply Gauss-Jordan elimination:
 \textbf{Step 1:} Make the first pivot equal to 1 by dividing the first row by 2:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
     3 & 2 & 1 & | & 0 & 1 & 0 \\
     2 & 1 & 2 & | & 0 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 2:} Eliminate the first element in rows 2 and 3:
@@ -613,52 +613,52 @@ Now we apply Gauss-Jordan elimination:
 Row 2 - 3 \(\times\) Row 1:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
     0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
     2 & 1 & 2 & | & 0 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Row 3 - 2 \(\times\) Row 1:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
     0 & \frac{1}{2} & -\frac{1}{2} & | & -\frac{3}{2} & 1 & 0 \\
     0 & 0 & 1 & | & -1 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 3:} Make the second pivot equal to 1 by multiplying the second row by 2:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & \frac{1}{2} & \frac{1}{2} & | & \frac{1}{2} & 0 & 0 \\
     0 & 1 & -1 & | & -3 & 2 & 0 \\
     0 & 0 & 1 & | & -1 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 4:} Eliminate the second element in row 1 and the third element in row 2:
 
 Row 1 - \(\frac{1}{2} \times\) Row 2:
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 1 & | & 2 & -1 & 0 \\
     0 & 1 & -1 & | & -3 & 2 & 0 \\
     0 & 0 & 1 & | & -1 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 Row 2 + Row 3:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 1 & | & 2 & -1 & 0 \\
     0 & 1 & 0 & | & -4 & 2 & 1 \\
     0 & 0 & 1 & | & -1 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 \textbf{Step 5:} Eliminate the third element in row 1:
@@ -666,56 +666,56 @@ Row 2 + Row 3:
 Row 1 - Row 3:
 
 \[
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 0 & | & 3 & -1 & -1 \\
     0 & 1 & 0 & | & -4 & 2 & 1 \\
     0 & 0 & 1 & | & -1 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 The right side of the augmented matrix now gives us \(A^{-1}\):
 
 \[
     A^{-1} = 
-    \begin{pmatrix}
+    \begin{bmatrix}
     3 & -1 & -1 \\
     -4 & 2 & 1 \\
     -1 & 0 & 1
-    \end{pmatrix}
+    \end{bmatrix}
 \]
 
 To verify, we can check that \(AA^{-1} = I_3\):
 
 \begin{align*}
     AA^{-1} &= 
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 1 & 1 \\
     3 & 2 & 1 \\
     2 & 1 & 2
-    \end{pmatrix}
-    \begin{pmatrix}
+    \end{bmatrix}
+    \begin{bmatrix}
     3 & -1 & -1 \\
     -4 & 2 & 1 \\
     -1 & 0 & 1
-    \end{pmatrix} \\
+    \end{bmatrix} \\
     &= 
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 \cdot 3 + 1 \cdot (-4) + 1 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 1 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 1 \cdot 1 \\
     3 \cdot 3 + 2 \cdot (-4) + 1 \cdot (-1) & 3 \cdot (-1) + 2 \cdot 2 + 1 \cdot 0 & 3 \cdot (-1) + 2 \cdot 1 + 1 \cdot 1 \\
     2 \cdot 3 + 1 \cdot (-4) + 2 \cdot (-1) & 2 \cdot (-1) + 1 \cdot 2 + 2 \cdot 0 & 2 \cdot (-1) + 1 \cdot 1 + 2 \cdot 1
-    \end{pmatrix} \\
+    \end{bmatrix} \\
     &= 
-    \begin{pmatrix}
+    \begin{bmatrix}
     6 - 4 - 1 & -2 + 2 + 0 & -2 + 1 + 1 \\
     9 - 8 - 1 & -3 + 4 + 0 & -3 + 2 + 1 \\
     6 - 4 - 2 & -2 + 2 + 0 & -2 + 1 + 2
-    \end{pmatrix} \\
+    \end{bmatrix} \\
     &= 
-    \begin{pmatrix}
+    \begin{bmatrix}
     1 & 0 & 0 \\
     0 & 1 & 0 \\
     0 & 0 & 1
-    \end{pmatrix} = I_3
+    \end{bmatrix} = I_3
 \end{align*}
 
 This confirms that we have correctly found the inverse of matrix \(A\).
@@ -761,16 +761,16 @@ Let \(V\) and \(W\) be two \(K\)-vector spaces, \(B_V = (v_1, \dots, v_n)\) a ba
 Given
 
 \[
-    f\begin{pmatrix}
+    f\begin{bmatrix}
     x_1 \\
     x_2 \\
     x_3
-    \end{pmatrix} =
-    \begin{pmatrix}
+    \end{bmatrix} =
+    \begin{bmatrix}
     2x_1 + x_2 \\
     x_1 - x_2 + x_3 \\
     4x_1 - x_2 + 2x_3
-    \end{pmatrix} .
+    \end{bmatrix} .
 \]
 
 It should be shown that \(f\) is linear, and \(\ker(f)\), \(\img(f)\) and their dimensions should be determined.
@@ -778,47 +778,47 @@ It should be shown that \(f\) is linear, and \(\ker(f)\), \(\img(f)\) and their 
 A direct proof of linearity is easily possible. Instead, we give the transformation matrix \(A\). The images of the (canonical) basis vectors are
 
 \[
-    f\begin{pmatrix}
+    f\begin{bmatrix}
     1 \\
     0 \\
     0
-    \end{pmatrix} =
-    \begin{pmatrix}
+    \end{bmatrix} =
+    \begin{bmatrix}
     2 \\
     1 \\
     4
-    \end{pmatrix} , \quad
-    f\begin{pmatrix}
+    \end{bmatrix} , \quad
+    f\begin{bmatrix}
     0 \\
     1 \\
     0
-    \end{pmatrix} =
-    \begin{pmatrix}
+    \end{bmatrix} =
+    \begin{bmatrix}
     1 \\
     -1 \\
     -1
-    \end{pmatrix} , \quad
-    f\begin{pmatrix}
+    \end{bmatrix} , \quad
+    f\begin{bmatrix}
     0 \\
     0 \\
     1
-    \end{pmatrix} =
-    \begin{pmatrix}
+    \end{bmatrix} =
+    \begin{bmatrix}
     0 \\
     1 \\
     2
-    \end{pmatrix} .
+    \end{bmatrix} .
 \]
 
 We obtain
 
 \[
     A =
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 1 & 0 \\
     1 & -1 & 1 \\
     4 & -1 & 2
-    \end{pmatrix} .
+    \end{bmatrix} .
 \]
 
 But now it must be shown that indeed \(f(x) = Ax \quad \forall x \in \Reals^3\) holds, by, 
@@ -827,22 +827,22 @@ general \(x\) and showing equality: Here, with \(x = {(x_1, x_2, x_3)}^T\)
 
 \[
     A \cdot x =
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 & 1 & 0 \\
     1 & -1 & 1 \\
     4 & -1 & 2
-    \end{pmatrix}
+    \end{bmatrix}
     \cdot
-    \begin{pmatrix}
+    \begin{bmatrix}
     x_1 \\
     x_2 \\
     x_3
-    \end{pmatrix} =
-    \begin{pmatrix}
+    \end{bmatrix} =
+    \begin{bmatrix}
     2x_1 + x_2 \\
     x_1 - x_2 + x_3 \\
     4x_1 - x_2 + 2x_3
-    \end{pmatrix} .
+    \end{bmatrix} .
 \]
 
 This obviously corresponds to \(f(x)\), so that by Theorem 4.36, the map \(f\) is linear. To determine the kernel, one has to solve the system of linear equations
@@ -864,11 +864,11 @@ thus, with \(\lambda = \frac{1}{3} \lambda'\):
     \ker(f) =
     \left\{
     x = \lambda
-    \begin{pmatrix}
+    \begin{bmatrix}
     -1 \\
     2 \\
     3
-    \end{pmatrix}
+    \end{bmatrix}
     \, \middle| \, \lambda \in \Reals
     \right\}
 \]
@@ -885,16 +885,16 @@ not a multiple of the first. It follows therefore,
     \img(f) =
     \left\{
     x \, \middle| \, x = \lambda
-    \begin{pmatrix}
+    \begin{bmatrix}
     2 \\
     1 \\
     4
-    \end{pmatrix} + \mu
-    \begin{pmatrix}
+    \end{bmatrix} + \mu
+    \begin{bmatrix}
     1 \\
     -1 \\
     -1
-    \end{pmatrix}
+    \end{bmatrix}
     , \quad \lambda, \mu \in \Reals
     \right\}
 \]
