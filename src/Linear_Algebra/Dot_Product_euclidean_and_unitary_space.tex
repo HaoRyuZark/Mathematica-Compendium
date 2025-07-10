@@ -1,7 +1,7 @@
 \newpage
 \section{Dot Product, Euclidean and Unitary Space}
 
-\subsection{Scalar Product}
+\subsection{Inner Product}
 
 Let \(V\) be a vector space over a field \(K\). A mapping \(\langle \cdot, \cdot \rangle : V \times V 
 \to K\) is called an inner product (or inner product) if the following conditions are satisfied:
@@ -73,16 +73,24 @@ Here we add \(\|a\|\|b\|\) to make this function linear.
     \langle a, b \rangle = \|a\| \|b\| \cos (\theta)
 \]
 
-\subsection{Standard Scalar Product for Complex Number}
+\subsection{Standard Inner Product for Complex Number}
 
 Let \( a = {(a_i)}_{i=1}^n \) and \( b = {(b_i)}_{i=1}^n \) be vectors in \( \Complex^n \). The standard 
 inner product is defined by
 
 \[
-    \langle a, b \rangle := \sum_{i=1}^n a_i b_i.
+    \langle a, b \rangle := \sum_{i=1}^n a_i \overline{b_i} = a^T \overline{b}
 \]
 
-\subsection{Scalar Product on \texorpdfstring{\( C[a, b] \)}{}}
+and by the \emph{hermitian inner product}
+
+\[
+   \langle a, b \rangle := \overline{a^{T}} b
+\]
+
+Here the \emph{symmetry} is given by \(\langle a, b \rangle = \overline{\langle b, a \rangle}\).
+
+\subsection{Inner Product on \texorpdfstring{\( C[a, b] \)}{}}
 
 Let \( f, g \in C[a, b] \). The inner product on \( C[a, b] \) is defined by
 
@@ -114,7 +122,7 @@ is called a norm if and only if the following conditions hold:
 
 \end{itemize}
 
-\subsubsection{Induced Norm by a Scalar Product}
+\subsubsection{Induced Norm by a Inner Product}
 
 As in the special case \( V = \Reals^n \), an inner product induces a norm.
 In a unitary (or Euclidean) space, the inner product induces a (standard) norm defined by
@@ -360,6 +368,66 @@ For a real symmetric matrix \(A\) the following statements are equivalent.
 
 Continuing, \(A\) is positive semidefinite, if all eigenvalues of \(A\) are not negative and the 
 main minors are all not positive.
+
+\textbf{Example: Symmetry and Positive Definiteness of \(BAB^T\) and \(B^T A B\)}
+
+Let \( A \in \Reals^{n \times n} \) be a symmetric matrix and \( B \in \mathbb{R}^{m \times n} \) 
+be a real matrix. We study the symmetry and positive definiteness of the matrices 
+\( C = BAB^T \in \Reals^{m \times m} \) and \( D = B^T A B \in \Reals^{n \times n} \).
+
+\textbf{(i) Symmetry of \( BAB^T \):}  
+
+\[
+    (BAB^T)^T = (B^T)^T A^T B^T = B A B^T,
+\]
+
+since \( (B^T)^T = B \) and \( A^T = A \). Thus, \( BAB^T \) is symmetric.
+
+\textbf{(ii) Symmetry of \( B^T A B \):}  
+
+\[
+    (B^T A B)^T = B^T A^T B = B^T A B,
+\]
+
+since \( A \) is symmetric. Hence, \( B^T A B \) is symmetric as well.
+
+To determine when \( BAB^T \) and \( B^T A B \) are positive definite, we use the quadratic form criterion.
+
+\textbf{(i) Positive definiteness of \( C = BAB^T \):}  
+
+Let \( x \in \mathbb{R}^m \), \( x \ne 0 \). Consider:
+
+\[
+    x^T C x = x^T BAB^T x.
+\]
+
+Let \( y = B^T x \in \mathbb{R}^n \). Then:
+
+\[
+    x^T BAB^T x = y^T A y.
+\]
+
+Since \( A \) is positive definite, \( y^T A y > 0 \) for all \( y \ne 0 \). Therefore, 
+\( x^T C x > 0 \) if and only if \( B^T x \ne 0 \) for all \( x \ne 0 \), which holds if and only if 
+\( \ker(B^T) = \{0\} \), or equivalently, \( B \) has full column rank.
+
+\textbf{(ii) Positive definiteness of \( D = B^T A B \):}  
+
+Let \( z \in \mathbb{R}^n \), \( z \ne 0 \). Then:
+
+\[
+    z^T D z = z^T B^T A B z = (B z)^T A (B z).
+\]
+Let \( w = B z \). Since \( A \) is positive definite, \( w^T A w > 0 \) if \( w \ne 0 \). Thus, \( D \) is positive definite if and only if \( B z \ne 0 \) for all \( z \ne 0 \), i.e., if \( B \) has full rank (i.e., \( \ker(B) = \{0\} \)).
+
+In summary:
+
+\begin{itemize}
+    \item \( BAB^T \) is positive definite if \( B \) has full column rank.
+    \item \( B^T A B \) is positive definite if \( B \) has full rank.
+\end{itemize}
+
+\QED
 
 \subsection{Sign of the \texorpdfstring{\(D_k\)}{}}
 

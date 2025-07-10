@@ -9,98 +9,120 @@ expansion, row reduction, or the Leibniz formula.
 
 The determinant of a \(2 \times 2\) matrix is given by:
 
-\begin{equation*}
-\det(A) =
-\begin{vmatrix}
-a & b \\
-c & d
-\end{vmatrix}
-= ad - bc
-\end{equation*}
+\[
+    \det(A) =
+    \begin{vmatrix}
+    a & b \\
+    c & d
+    \end{vmatrix}
+    = ad - bc
+\]
 
 For a \(3 \times 3\) matrix, the determinant can be computed using the rule of Sarrus or the co-factor expansion:
 
-\begin{equation*}
-\det(A) =
-\begin{vmatrix}
-a & b & c \\
-d & e & f \\
-g & h & i
-\end{vmatrix}
-= aei + bfg + cdh - ceg - bdi - afh
-\end{equation*}
+\[
+    \det(A) =
+    \begin{vmatrix}
+    a & b & c \\
+    d & e & f \\
+    g & h & i
+    \end{vmatrix}
+    = aei + bfg + cdh - ceg - bdi - afh
+\]
 
 The determinant of larger matrices can be computed using co-factor expansion along any row or column:
 
-\begin{equation*}
-\det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(A_{ij}),
-\end{equation*}
+\[
+    \det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(A_{ij}),
+\]
 
 where \(A_{ij}\) is the \((n-1) \times (n-1)\) sub-matrix obtained by deleting the \(i\)-th row and \(j\)-th column of \(A\).
 
 \subsection{Properties of the determinant}
 
 \begin{itemize}
+    
     \item \(\det(A) = 0\) if and only if \(A\) is singular (not invertible).
+    
     \item \(\det(AB) = \det(A) \cdot \det(B)\) for any square matrices \(A\) and \(B\) of the same size.
+    
     \item \(\det(A^T) = \det(A)\).
-    \item If a row (or column) of \(A\) is multiplied by a scalar \(\alpha\), 
+    
+    \item If a row (or column) of \(A\) is multiplied by a scalar \(\alpha\),     
     then \(\det(A)\) is multiplied by \(\alpha\).
+    
     \item If two rows (or columns) of \(A\) are swapped, then \(\det(A)\) changes sign.
-    \[\det(a,b,c) = - \det(b,a,c)\]
-    \item If a row (or column) of \(A\) is added to another row (or column), then \(\det(A)\) remains unchanged.
-    \item If one of the columns is a linear combination of the others, then \(\det(A) = 0\).
-    \item The determinant of the identity matrix \(I_n\) is 1.
-    \item The determinant of can split into the sum of more determinants:
+    
     \[
-    \det(a,b,c + d) = \det(a,b,c) + \det(a,b,d)
+        \det(a,b,c) = - \det(b,a,c)
     \]
+    
+    \item If a row (or column) of \(A\) is added to another row (or column), then \(\det(A)\) remains unchanged.
+
+    \item If one of the columns is a linear combination of the others, then \(\det(A) = 0\).
+    
+    \item The determinant of the identity matrix \(I_n\) is 1.
+    
+    \item The determinant of can split into the sum of more determinants:
+
+    \[
+        \det(a,b,c + d) = \det(a,b,c) + \det(a,b,d)
+    \]
+    
     \item The determinant of a diagonal matrix is the product of its diagonal entries.
-    \item For elementary matrices \(\det C1 = 1\), \(\det C2 = -1\), \(\det C3 = \lambda\)
+    
+    \item For elementary matrices \(\det C1 = 1\), \(\det C2 = -1\), \(\det C3 = \lambda\).
+    
+    \item For \(A \in \Reals^{n\times n}\, \det(\lambda A) = \lambda^n \det(A)\) 
+
 \end{itemize}
 
 \subsection{Proof of the multiplication of determinants}
 
 For \( A, B \in K^{n \times n} \), it holds that
+
 \[
-\det(AB) = \det(A)\det(B).
+    \det(AB) = \det(A)\det(B).
 \]
 
 \textbf{Proof:}
 
 If \( \det(A) = 0 \) or \( \det(B) = 0 \), 
-then \( \rank(L_A) < n \) or \( \rank(L_B) < n \). \\
+then \( \rank(L_A) < n \) or \( \rank(L_B) < n \).
+
 Thus, \( \rank(L_{AB}) < n \), 
 and the statement is trivial.
 
 So let us assume that \(A\) and \(B\) are 
-invertible, i.e., \( \rank(A) = \rank(B) = n \). \\
+invertible, i.e., \( \rank(A) = \rank(B) = n \).
+
 We now assume that in such a case, a matrix can 
 always be transformed into reduced row 
 echelon form using the row operations 
 from Gaussian elimination.
 
-Then, \( A = C_k \cdot \cdots \cdot C_1 \) for certain elementary matrices \( C_i \), and therefore, by Corollary 5.13:
+Then, \( A = C_k \cdot \cdots \cdot C_1 \) for certain elementary matrices \( C_i \), and therefore:
 
 \begin{align*}
-\det(AB) &= \det(C_k \cdot \cdots \cdot C_1 B) \\
-&= \det(C_k)\det(C_{k-1} \cdot \cdots \cdot C_1 B) \\
-&\quad \vdots \\
-&= \det(C_k) \cdots \det(C_1)\det(B) \\
-&= \det(C_k \cdot \cdots \cdot C_1)\det(B) \\
-&= \det(A)\det(B).
+    \det(AB) &= \det(C_k \cdot \cdots \cdot C_1 B) \\
+    &= \det(C_k)\det(C_{k-1} \cdot \cdots \cdot C_1 B) \\
+    &\quad \vdots \\
+    &= \det(C_k) \cdots \det(C_1)\det(B) \\
+    &= \det(C_k \cdot \cdots \cdot C_1)\det(B) \\
+    &= \det(A)\det(B).
 \end{align*}
 
 Therefore, also if \(A\) is invertible, then
+
 \[
-\det(A^{-1}) = {(\det(A))}^{-1}.
+    \det(A^{-1}) = {(\det(A))}^{-1}.
 \]
 
 \textbf{Proof:} 
 
 It holds that
 \[
-\det(A)\det(A^{-1}) = \det(AA^{-1}) = \det(E) = 1.
+    \det(A)\det(A^{-1}) = \det(AA^{-1}) = \det(E) = 1.
 \]
 
 \subsection{The Leibniz Formula}
@@ -108,13 +130,17 @@ It holds that
 Let \( A = (a_{ij}) \in K^{n \times n} \) be a square matrix over a field \( K \). The determinant of \(A\) is defined via the \textbf{Leibniz formula} as:
 
 \[
-\det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)},
+    \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)},
 \]
 
 where:
+
 \begin{itemize}
+
     \item \( S_n \) is the set of all permutations of \( \{1, 2, \dots, n\} \),
+
     \item \( \operatorname{sgn}(\sigma) \) is the sign of the permutation \( \sigma \), equal to \( +1 \) for even permutations and \( -1 \) for odd ones.
+
 \end{itemize}
 
 \subsubsection{Derivation}
@@ -124,19 +150,19 @@ where:
 Each column vector \( a_j \) of the matrix \(A\) can be written as a linear combination of the standard basis vectors \( e_1, \dots, e_n \):
 
 \[
-a_j = \sum_{i=1}^n a_{ij} e_i.
+    a_j = \sum_{i=1}^n a_{ij} e_i.
 \]
 
 Using the multilinearity of the determinant function (i.e., linearity in each column), we expand:
 
 \[
-\det(a_1, a_2, \dots, a_n) = \det\left( \sum_{i_1} a_{i_1 1} e_{i_1}, \sum_{i_2} a_{i_2 2} e_{i_2}, \dots, \sum_{i_n} a_{i_n n} e_{i_n} \right).
+    \det(a_1, a_2, \dots, a_n) = \det\left( \sum_{i_1} a_{i_1 1} e_{i_1}, \sum_{i_2} a_{i_2 2} e_{i_2}, \dots, \sum_{i_n} a_{i_n n} e_{i_n} \right).
 \]
 
 By multilinearity, this becomes a sum over all \(n\)-tuples \( (i_1, i_2, \dots, i_n) \):
 
 \[
-= \sum_{i_1, i_2, \dots, i_n = 1}^n a_{i_1 1} a_{i_2 2} \cdots a_{i_n n} \cdot \det(e_{i_1}, e_{i_2}, \dots, e_{i_n}).
+    = \sum_{i_1, i_2, \dots, i_n = 1}^n a_{i_1 1} a_{i_2 2} \cdots a_{i_n n} \cdot \det(e_{i_1}, e_{i_2}, \dots, e_{i_n}).
 \]
 
 \textbf{Step 2: Eliminate repeated indices}
@@ -148,7 +174,7 @@ Therefore, only terms with pairwise distinct indices remain. These correspond to
 Let \( \sigma \in S_n \) be such a permutation. Then we can write:
 
 \[
-\det(A) = \sum_{\sigma \in S_n} a_{\sigma(1) 1} a_{\sigma(2) 2} \cdots a_{\sigma(n) n} \cdot \det(e_{\sigma(1)}, e_{\sigma(2)}, \dots, e_{\sigma(n)}).
+    \det(A) = \sum_{\sigma \in S_n} a_{\sigma(1) 1} a_{\sigma(2) 2} \cdots a_{\sigma(n) n} \cdot \det(e_{\sigma(1)}, e_{\sigma(2)}, \dots, e_{\sigma(n)}).
 \]
 
 \textbf{Step 3: Sign of the permutation}
@@ -156,13 +182,13 @@ Let \( \sigma \in S_n \) be such a permutation. Then we can write:
 Since the determinant of \( (e_{\sigma(1)}, \dots, e_{\sigma(n)}) \) is \( \operatorname{sgn}(\sigma) \), we obtain:
 
 \[
-\det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot a_{\sigma(1)1} a_{\sigma(2)2} \cdots a_{\sigma(n)n}.
+    \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot a_{\sigma(1)1} a_{\sigma(2)2} \cdots a_{\sigma(n)n}.
 \]
 
 Equivalently, by re-indexing:
 
 \[
-\det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot \prod_{i=1}^n a_{i \sigma(i)}.
+    \det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \cdot \prod_{i=1}^n a_{i \sigma(i)}.
 \]
 
 This formula expresses the determinant as a sum over all permutations of the indices \( \{1, \dots, n\} \), where each term is a product of matrix entries taken from different rows and columns, weighted by the sign of the corresponding permutation.
@@ -170,27 +196,31 @@ This formula expresses the determinant as a sum over all permutations of the ind
 \subsection{Laplace's Method (Co-factor Expansion)}
 
 The determinant of an \( n \times n \) matrix \( A = [a_{ij}] \) can be 
-computed using the \textbf{Laplace expansion}, also known as co-factor expansion. 
+computed using the \emph{Laplace expansion}, also known as co-factor expansion. 
 This method expands the determinant along a specific row or column.
 
-\subsubsection*{Expansion Along Row \(i\):}
+Expansion Along Row \(i\):
 
 \[
-\det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(M_{ij})
+    \det(A) = \sum_{j=1}^{n} {(-1)}^{i+j} a_{ij} \det(M_{ij})
 \]
 
-\subsubsection*{Expansion Along Column \(j\):}
+Expansion Along Column \(j\):
 
 \[
-\det(A) = \sum_{i=1}^{n} {(-1)}^{i+j} a_{ij} \det(M_{ij})
+    \det(A) = \sum_{i=1}^{n} {(-1)}^{i+j} a_{ij} \det(M_{ij})
 \]
 
 Where:
 
 \begin{itemize}
+
     \item \( a_{ij} \) is the element in the \(i\)-th row and \(j\)-th column of matrix \(A\).
-    \item \( M_{ij} \) is the \textbf{minor} of \( a_{ij} \), i.e., the determinant of the submatrix formed by removing the \(i\)-th row and \(j\)-th column from \(A\).
-    \item \( {(-1)}^{i+j} \) is the \textbf{sign factor}, determining the sign of each co-factor term.
+
+    \item \( M_{ij} \) is the \emph{minor} of \( a_{ij} \), i.e., the determinant of the submatrix formed by removing the \(i\)-th row and \(j\)-th column from \(A\).
+
+    \item \( {(-1)}^{i+j} \) is the \emph{sign factor}, determining the sign of each co-factor term.
+
 \end{itemize}
 
 \textbf{Steps:}
@@ -203,18 +233,20 @@ Where:
     \indent \(i\)-th row and the \(j\)-th column of the original matrix.
 
     \textbf{Find the Co-factor, \(C_{ij}\):} The co-factor \(C_{ij}\) is the minor multiplied by a sign factor:
+        
         \[
-        C_{ij} = {(-1)}^{i+j} M_{ij}
+            C_{ij} = {(-1)}^{i+j} M_{ij}
         \]
         The term  \({(-1)}^{i+j}\)  gives a checkerboard pattern of signs:
+        
         \[
-        \begin{bmatrix}
-        + & - & + & - & \cdots \\
-        - & + & - & + & \cdots \\
-        + & - & + & - & \cdots \\
-        - & + & - & + & \cdots \\
-        \vdots & \vdots & \vdots & \vdots & \ddots
-        \end{bmatrix}
+            \begin{bmatrix}
+            + & - & + & - & \cdots \\
+            - & + & - & + & \cdots \\
+            + & - & + & - & \cdots \\
+            - & + & - & + & \cdots \\
+            \vdots & \vdots & \vdots & \vdots & \ddots
+            \end{bmatrix}
         \]
 
  3.\textbf{ Calculate the Determinant:} The determinant of the matrix, \(A\), is the sum of 
@@ -222,12 +254,12 @@ Where:
 
     \textbf{Expansion along the \(i\)-th row:}
         \[
-        \det(A) = \sum_{j=1}^{n} a_{ij} C_{ij} = a_{i1}C_{i1} + a_{i2}C_{i2} + \cdots + a_{in}C_{in}
+            \det(A) = \sum_{j=1}^{n} a_{ij} C_{ij} = a_{i1}C_{i1} + a_{i2}C_{i2} + \cdots + a_{in}C_{in}
         \]
 
     \textbf{Expansion along the \(j\)-th column:}
         \[
-        \det(A) = \sum_{i=1}^{n} a_{ij} C_{ij} = a_{1j}C_{1j} + a_{2j}C_{2j} + \cdots + a_{nj}C_{nj}
+            \det(A) = \sum_{i=1}^{n} a_{ij} C_{ij} = a_{1j}C_{1j} + a_{2j}C_{2j} + \cdots + a_{nj}C_{nj}
         \]
         Both expansions give the same result.
 
@@ -235,11 +267,11 @@ Where:
 
 Let
 \[
-A = \begin{bmatrix}
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33}
-\end{bmatrix}
+    A = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+    \end{bmatrix}
 \]
 
 Expanding along the first row:
@@ -258,44 +290,51 @@ Therefore,
 \textbf{Example of Determinant Calculation}
 
 Let's calculate the determinant of the matrix:
-\begin{equation*}
-A =
-\begin{bmatrix}
-2 & 1 & 3 \\
-1 & 0 & 2 \\
-0 & 1 & 1
-\end{bmatrix}
-\end{equation*}
+
+\[
+    A =
+    \begin{bmatrix}
+    2 & 1 & 3 \\
+    1 & 0 & 2 \\
+    0 & 1 & 1
+    \end{bmatrix}
+\]
+
 Using the rule of Sarrus for \(3 \times 3\) matrices:
+
 \begin{align*}
-\det(A) &= 2 \cdot 0 \cdot 1 + 1 \cdot 2 \cdot 3 + 3 \cdot 1 \cdot 1 - (3 \cdot 0 \cdot 0 + 1 \cdot 2 \cdot 2 + 2 \cdot 1 \cdot 1) \\
-&= 0 + 6 + 3 - (0 + 4 + 2) \\
-&= 9 - 6 = 3
+    \det(A) &= 2 \cdot 0 \cdot 1 + 1 \cdot 2 \cdot 3 + 3 \cdot 1 \cdot 1 - (3 \cdot 0 \cdot 0 + 1 \cdot 2 \cdot 2 + 2 \cdot 1 \cdot 1) \\
+    &= 0 + 6 + 3 - (0 + 4 + 2) \\
+    &= 9 - 6 = 3
 \end{align*}
- Thus, the determinant of matrix \(A\) is \(\det(A) = 3\).
+ 
+Thus, the determinant of matrix \(A\) is \(\det(A) = 3\).
 
  Now consider the following \(4 \times 4\) matrix:
 
-\begin{equation*}
-A = 
-\begin{bmatrix}
-2 & 1 & 3 & 2 \\
-4 & 0 & -1 & 3 \\
--2 & 3 & 1 & 5 \\
-1 & -1 & 0 & 2
-\end{bmatrix}
-\end{equation*}
+\[
+    A = 
+    \begin{bmatrix}
+    2 & 1 & 3 & 2 \\
+    4 & 0 & -1 & 3 \\
+    -2 & 3 & 1 & 5 \\
+    1 & -1 & 0 & 2
+    \end{bmatrix}
+\]
 
 For a \(4 \times 4\) matrix, we can use Laplace Method along the first row:
+
 \begin{align*}
-\det(A) &= a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13} + a_{14}C_{14} \\
-&= 2 \cdot \det\begin{bmatrix} 0 & -1 & 3 \\ 3 & 1 & 5 \\ -1 & 0 & 2 \end{bmatrix} 
-- 1 \cdot \det\begin{bmatrix} 4 & -1 & 3 \\ -2 & 1 & 5 \\ 1 & 0 & 2 \end{bmatrix} \\
-&\quad + 3 \cdot \det\begin{bmatrix} 4 & 0 & 3 \\ -2 & 3 & 5 \\ 1 & -1 & 2 \end{bmatrix} 
-- 2 \cdot \det\begin{bmatrix} 4 & 0 & -1 \\ -2 & 3 & 1 \\ 1 & -1 & 0 \end{bmatrix}
+    \det(A) &= a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13} + a_{14}C_{14} \\
+    &= 2 \cdot \det\begin{bmatrix} 0 & -1 & 3 \\ 3 & 1 & 5 \\ -1 & 0 & 2 \end{bmatrix} 
+    - 1 \cdot \det\begin{bmatrix} 4 & -1 & 3 \\ -2 & 1 & 5 \\ 1 & 0 & 2 \end{bmatrix} \\
+    &\quad + 3 \cdot \det\begin{bmatrix} 4 & 0 & 3 \\ -2 & 3 & 5 \\ 1 & -1 & 2 \end{bmatrix} 
+    - 2 \cdot \det\begin{bmatrix} 4 & 0 & -1 \\ -2 & 3 & 1 \\ 1 & -1 & 0 \end{bmatrix}
 \end{align*}
 
-\[\det(A) = 145\]
+\[
+    \det(A) = 145
+\]
 
 \subsection{Determinant of the reduced echelon form}
 
@@ -315,12 +354,12 @@ by \(\frac{1}{\lambda}\).
 We are given the matrix:
 
 \[
-A = \begin{bmatrix}
-1 & 1 & 1 & 0 \\
-1 & 1 & 0 & 1 \\
-1 & 0 & 1 & 1 \\
-0 & 1 & 1 & 1
-\end{bmatrix}
+    A = \begin{bmatrix}
+    1 & 1 & 1 & 0 \\
+    1 & 1 & 0 & 1 \\
+    1 & 0 & 1 & 1 \\
+    0 & 1 & 1 & 1
+    \end{bmatrix}
 \]
 
 We apply Gaussian elimination:
@@ -328,41 +367,43 @@ We apply Gaussian elimination:
 Swap \( R_2 \leftrightarrow R_3 \):
 
 \[
-\Rightarrow
-\begin{bmatrix}
-1 & 1 & 1 & 0 \\
-1 & 0 & 1 & 1 \\
-1 & 1 & 0 & 1 \\
-0 & 1 & 1 & 1
-\end{bmatrix}
-\rightarrow
-\begin{bmatrix}
-1 & 1 & 1 & 0 \\
-0 & -1 & 0 & 1 \\
-0 & 0 & -1 & 1 \\
-0 & 1 & 1 & 1
-\end{bmatrix}
-\rightarrow
-\begin{bmatrix}
-1 & 1 & 1 & 0 \\
-0 & -1 & 0 & 1 \\
-0 & 0 & -1 & 1 \\
-0 & 0 & 1 & 2
-\end{bmatrix}
-\rightarrow
-\begin{bmatrix}
-1 & 1 & 1 & 0 \\
-0 & -1 & 0 & 1 \\
-0 & 0 & -1 & 1 \\
-0 & 0 & 0 & 3
-\end{bmatrix}
+    \Rightarrow
+    \begin{bmatrix}
+    1 & 1 & 1 & 0 \\
+    1 & 0 & 1 & 1 \\
+    1 & 1 & 0 & 1 \\
+    0 & 1 & 1 & 1
+    \end{bmatrix}
+    \rightarrow
+    \begin{bmatrix}
+    1 & 1 & 1 & 0 \\
+    0 & -1 & 0 & 1 \\
+    0 & 0 & -1 & 1 \\
+    0 & 1 & 1 & 1
+    \end{bmatrix}
+    \rightarrow
+    \begin{bmatrix}
+    1 & 1 & 1 & 0 \\
+    0 & -1 & 0 & 1 \\
+    0 & 0 & -1 & 1 \\
+    0 & 0 & 1 & 2
+    \end{bmatrix}
+    \rightarrow
+    \begin{bmatrix}
+    1 & 1 & 1 & 0 \\
+    0 & -1 & 0 & 1 \\
+    0 & 0 & -1 & 1 \\
+    0 & 0 & 0 & 3
+    \end{bmatrix}
 \]
 
 Now the matrix is upper triangular. The determinant is the product of diagonal elements times \( -1 \) for one row swap:
 
 \[
-\det(A) = {(-1)}^1 \cdot (1) \cdot (-1) \cdot (-1) \cdot (3) = -3
+    \det(A) = {(-1)}^1 \cdot (1) \cdot (-1) \cdot (-1) \cdot (3) = -3
 \]
 
-\[\det(A) = -3\]
+\[
+    \det(A) = -3
+\]
 

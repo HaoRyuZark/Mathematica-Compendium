@@ -647,3 +647,89 @@ This implies that
 
 \end{enumerate}
 
+\subsection{Singular Value Decomposition (SVD)}
+
+The \emph{Singular Value Decomposition (SVD)} is a fundamental matrix factorization technique in linear 
+algebra. It expresses any real matrix \( A \in \mathbb{R}^{n \times n} \) as a product of three specific 
+matrices:
+
+\[
+    A = U S V^T
+\]
+
+where:
+
+\begin{itemize}
+
+    \item \( U \in \mathbb{R}^{n \times n} \) is an orthogonal matrix whose columns are called the 
+          \emph{left singular vectors} of \( A \),
+
+    \item \( V \in \mathbb{R}^{n \times n} \) is an orthogonal matrix whose columns are the 
+          \emph{right singular vectors} of \( A \),
+
+    \item \( S \in \mathbb{R}^{n \times n} \) is a diagonal matrix with non-negative entries 
+          \( \sigma_i \geq 0 \) on the diagonal, called the \emph{singular values} of \( A \).
+
+\end{itemize}
+
+
+The SVD has numerous applications in mathematics, science, and engineering, including:
+
+\begin{itemize}
+
+    \item Dimensionality reduction (e.g., Principal Component Analysis),
+
+    \item Solving ill-posed or overdetermined systems of linear equations,
+
+    \item Low-rank matrix approximations,
+
+    \item Signal processing and image compression,
+
+    \item Latent Semantic Analysis (LSA) in natural language processing.
+
+\end{itemize}
+
+\textbf{Example:}
+
+Let \( A \in \Reals^{n \times n} \) be a real square matrix with SVD given by:
+
+\[
+    A = U S V^T
+\]
+
+We show that:
+
+\begin{enumerate}
+
+    \item The columns of \( U \) are eigenvectors of \( AA^T \),
+
+    \item The columns of \( V \) are eigenvectors of \( A^T A \),
+
+    \item The eigenvalues of both \( AA^T \) and \( A^T A \) are the squares of the singular values \( \sigma_i^2 \).
+
+\end{enumerate}
+
+\textbf{Proof:}
+
+For \( AA^T \), we compute:
+
+\[
+    AA^T = (U S V^T)(V S^T U^T) = U S V^T V S^T U^T = U S S^T U^T = U S^2 U^T
+\]
+
+Since \( SS^T \) is diagonal with entries \( \sigma_i^2 \), this is an eigenvalue decomposition of 
+\( AA^T \). Thus, the columns of \( U \) are eigenvectors of \( AA^T \), and the corresponding eigenvalues 
+are \( \sigma_i^2 \).
+
+For \( A^T A \), we have:
+
+\[
+    A^T A = (V S^T U^T)(U S V^T) = V S^T U^T U S V^T = V S^T S V^T = V S^2 V^T
+\]
+
+Again, \( S^T S \) is diagonal with entries \( \sigma_i^2 \), so the matrix \( A^T A \) is diagonalized 
+by \( V \), and the columns of \( V \) are eigenvectors of \( A^T A \), with eigenvalues \( \sigma_i^2 \).
+
+\QED
+
+

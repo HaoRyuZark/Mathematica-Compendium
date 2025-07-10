@@ -116,7 +116,11 @@ The transpose of a matrix \(A \in \Reals^{m \times n}\), denoted \(A^T \in \Real
     {(A^T)}^T &= A \\
     {(A + B)}^T &= A^T + B^T \\
     {(AB)}^T &= B^T A^T \\
-    {(\alpha A)}^T &= \alpha A^T \quad \text{for any scalar } \alpha
+    {(\alpha A)}^T &= \alpha A^T \quad \text{for any scalar } \alpha \\
+    {(A)^{-1}}^T &= (A^T)^{-1} \\
+    \rank(A) &= \rank(A^T) \\
+    \det(A) &= \det(A^T) \\
+    eig(A) &= eig(A^T) \text{ where } eig() \text{ are the eigenvalues}
 \end{align*}
 
 The transpose can also help us interpret the dot product of two vectors being 0 as a matrix multiplication.
@@ -187,7 +191,7 @@ The Gauss-Jordan elimination algorithm proceeds as follows:
 
 \end{itemize}
 
-\subsection{The Inverse of a Matrix and Its Properties}
+\subsection{The Inverse of a Matrix}
 
 For a square matrix \(A \in \Reals^{n \times n}\), the inverse matrix \(A^{-1}\) (if it exists) satisfies:
 
@@ -201,10 +205,15 @@ For a square matrix \(A \in \Reals^{n \times n}\), the inverse matrix \(A^{-1}\)
     {(A^{-1})}^{-1} &= A \\
     {(AB)}^{-1} &= B^{-1}A^{-1} \\
     {(A^T)}^{-1} &= {(A^{-1})}^T \\
-    \det(A^{-1}) &= \frac{1}{\det(A)}
+    \det(A^{-1}) &= \frac{1}{\det(A)} \\
+    (cA)^{-1} &= \frac{1}{c} A^{-1} \\
+    \det(A^{-1}) &= \det(A)^{-1} \\
+    \rank(A^{-1}) &= \rank(A) \\
+    eig(A^{-1}) &= eig(A)^{-1}
 \end{align*}
 
 \subsubsection{Finding the Inverse}
+
 There are several methods to find the inverse of a matrix:
 
 \emph{Gauss-Jordan Method} 
@@ -898,6 +907,18 @@ not a multiple of the first. It follows therefore,
     , \quad \lambda, \mu \in \Reals
     \right\}
 \]
+
+\subsection{Diagonal and Triangular Matrices}
+
+A matrix is called \emph{Diagonal} if the only non-zero elements are the elements on the main diagonal. 
+A matrix is \emph{Over Triangular} if all elements under or above the main diagonal are all zeroes.
+
+\subsubsection{Properties of Diagonal and Triangular Matrices}
+
+\begin{align*}
+    \det(A) &= \prod_{i = 1}^{n} a_{ii} \\
+    eig(A) &= \{a_{1,1}, a_{2,2}, \dots, a_{n,n}\}
+\end{align*}
 
 \subsection{Complex Matrices}
 

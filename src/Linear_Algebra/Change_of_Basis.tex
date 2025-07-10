@@ -1,14 +1,14 @@
 \newpage
 \section{Changing between Basis}
 
-To change from one basis to another of the same space, the question we are asking is How to write our basis vector 
-in terms of the other basis. Because after that any linear combination of our basis vector will be directly translated 
-to the other basis, just by writing them in terms of the other basis. So the matrix made of the new basis vectors 
+To change from one basis to another of the same space, the question we are asking is \textbf{how to write our basis vector 
+in terms of the other basis}. Because any linear combination of our basis vector will be directly translated 
+into the other basis, just by writing them in terms of the other basis. So the matrix made of the new basis vectors 
 \(T\) times a vector of coefficient in our systems of coordinates gives us the same vector but described in the new basis.
 And to translate to our language we just have to multiply the vector in the other basis by \(T^{-1}\).
 
 Finally, imagine that you have a matrix that represents some linear transformation in our language, but we want to transform 
-a vector in another language. We need to first take that vector in the foreign basis, apply \(T^{-1}\), apply the transformation \emph{M} 
+a vector in another language. We need to first take that vector in the foreign basis, apply \(T^{-1}\), apply the transformation \(M\) 
 and finally multiply by \(T\) to return to the new basis.
 
 Now to formalize these ideas:
@@ -128,6 +128,14 @@ Now let us understand what really is happening in the step where we multiply by 
 Now it is clear that the inverse is just taking our basis vector and transforming
 them in to basis vector with respect to \(C\).
 
+One important note here is that we are always using the \emph{canonical} basis \(E\) as a stepping stone between 
+the transformation, because the way we define our matrices use the canonical basis for the definition. In 
+mathematical terms 
+
+\[ 
+    T_{B}^{C} = P_{B}^{-1}P_{C} = T_{B}^{E} T_{E}^{C}
+\]
+
 \subsection{Translation under transformation}
 
 For linear transformation we use the formula.
@@ -137,7 +145,7 @@ For linear transformation we use the formula.
 \]
 
 Where \(\vec{v}\) is a vector in the other basis, \(A\) the
-other basis,\emph{M} the linear transformation and \(A^{-1}\) the inverse of
+other basis, \(M\) the linear transformation and \(A^{-1}\) the inverse of
 the basis vector of \(A\).
 
 We interpret this as taking a vector of the new basis, translating it to our language,
@@ -260,9 +268,14 @@ The formula says that to interpret a linear transformation in terms of the
 new coordinates we have to:
 
 \begin{enumerate}
+    
     \item Take a vector of the new coordinates
+    
     \item Multiply it the matrix of its basis vectors. (Translate to our basis)
+    
     \item Apply the linear transformation
+    
     \item Inverse the change of basis by taking the inverse of the 
-    matrix in step 2.
+          matrix in step 2.
+
 \end{enumerate}

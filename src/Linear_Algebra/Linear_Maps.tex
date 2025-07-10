@@ -80,6 +80,9 @@ the zero vector in \( W \):
     \ker(f) = \{ v \in V \mid f(v) = 0 \}
 \]
 
+To compute the \emph{kernel} of the linear map, we just solve the homogenous system of equations \(Ax = \vec{0}\) 
+where \(A\) is the matrix representation of \(f\). The number of free variables is the \(\dim(\ker(f))\).
+
 \subsection{The Image of a Linear Map}
 
 The image of a linear map \( f: V \to W \) is the set of all vectors in \( W \) that can be expressed 
@@ -88,7 +91,10 @@ as \( f(v) \) for some \( v \in V \):
 \[
     \img(f) = \{ w \in W \mid w = f(v) \text{ for some } v \in V \}
 \]
- 
+
+To find \( \dim(\text{im}(f)) \), compute the rank of the matrix representing \( f \). This 
+is the number of pivot columns in the row-reduced form of \( A \).
+
 \subsection{The Rank of a Linear Map}
 
 The rank of a linear map \( f: V \to W \) is the dimension of its image:
@@ -103,14 +109,6 @@ The nullity of a linear map \( f: V \to W \) is the dimension of its kernel:
     
 \[
     \text{nullity}(f) = \ker(f)
-\]
-
-\subsection{The Rank-Nullity Theorem}
-
-The rank-nullity theorem states that for a linear map \( f: V \to W \):
-
-\[
-    \ker(f) + \dim(\img(f)) = \dim(V).
 \]
 
 \subsection{Proof of the injectivity of the Kernel}
@@ -148,7 +146,7 @@ Remember that \(\ker(f)\) forms a subspace of \(V\) and therefore, \(\dim(\ker(f
     &= \lambda_{r+1}w_{r+1} + \cdots + \lambda_n w_n
 \end{align*}
     
-Thus, \(\operatorname{Im}(f) = \operatorname{span}(w_{r+1}, \ldots, w_n)\). We now show that \(w_{r+1}, \ldots, w_n\) are linearly independent. Let 
+Thus, \(\img(f) = \operatorname{span}(w_{r+1}, \ldots, w_n)\). We now show that \(w_{r+1}, \ldots, w_n\) are linearly independent. Let 
     
 \[
     \lambda_{r+1}w_{r+1} + \cdots + \lambda_n w_n = 0
@@ -170,48 +168,20 @@ Therefore,
     
 \[
     \lambda_{r+1}v_{r+1} + \cdots + \lambda_n v_n = \lambda_1v_1 + \cdots + \lambda_r v_r
-\]
+\]\
 
 For some \(\lambda_1, \ldots, \lambda_r\). Since \(v_1, \ldots, v_n\) are linearly independent, 
 we have \(\lambda_1 = \cdots = \lambda_n = 0\). Thus, the vectors \(w_{r+1}, \ldots, w_n\) are linearly 
 independent.
     
-It follows that \(\dim(\operatorname{Im}(f)) = \operatorname{rank}(f) = n - r\) and therefore,
+It follows that \(\dim(\img(f)) = \rank(f) = n - r\) and therefore,
     
 \[
-    \dim(\ker(f)) + \dim(\operatorname{Im}(f)) = \dim(\ker(f)) + \operatorname{rank}(f) = r + n - r = n
+    \dim(\ker(f)) + \dim(\img(f)) = \dim(\ker(f)) + \rank(f) = r + n - r = n
 \]
 
 \QED
   
-\subsection{Identifying the type of linear map}
-
-\begin{itemize} 
-    
-    \item If \(\dim(\ker(f)) = 0\) then the map is injective.
-    
-    \item If \(\dim(\ker(f)) = \dim(V)\) then the map is surjective.
-
-    \item If \(\dim(\ker(f)) = \dim(V)\) and \(\dim(W) = 0\) then the map is bijective.
-
-\end{itemize}
-
-\subsection{Image of the basis}
-
-Let \(\dim(W) = n\). For the basis \((v_1, \dots, v_n)\) of \(V\) we have the image \((w_1, \dots, w_n)\) 
-of \(W\). Then:
-
-\begin{itemize}
-
-    \item If \(\dim(\ker(f)) = 0\) then the map is injective and \((w_1, \dots, w_n)\) is a basis of \(W\).    
-
-    \item If \(\dim(\ker(f)) = \dim(V)\) then the map is surjective and \((w_1, \dots, w_n)\) is a spanning set of \(W\).
-
-    \item If \(\dim(\ker(f)) = \dim(V)\) and \(\dim(W) = 0\) then the map is bijective and \((w_1, \dots, w_n)\) is a 
-          basis of \(W\).
-
-\end{itemize}
-
 \subsection{Linear Maps and Matrices}
 
 Let \( V \) and \( W \) be finite-dimensional vector spaces over the same field \( K \). 
@@ -225,4 +195,61 @@ an \( m \times n \) matrix. The action of the linear map on a vector can be expr
 where \(A\) is the matrix representation of \(f\) and \( v \) is the vector represented in a column 
 format. The columns of the matrix \(A\) are the images of the basis vectors of \( V \) under the linear 
 map \(f\).
+
+\subsection{How to identify the type of Linear Map Summary}
+
+We want to summarize how to identify the type of linear map given \( f: V \to W \),
+
+\begin{itemize}
+
+    \item \emph{Injective}: A linear map \( f \) is injective if and only if
+
+    \[
+        \dim(\ker(f)) = 0.
+    \]
+
+    \item \emph{Surjective}: The map \( f \) is surjective if every element of \( W \) is the 
+    image of some element in \( V \). This occurs when
+
+    \[
+        \dim(\img(f)) = \dim(W).
+    \]
+
+    That is, the image of \( f \) are the linear independent vector of \(f\).
+
+    \item \emph{Bijective}: A linear map is bijective if it is both injective and surjective. 
+    Therefore, it must satisfy both conditions:
+    
+    \[
+        \dim(\ker(f)) = 0 \quad \text{and} \quad \dim(\text{im}(f)) = \dim(W).
+    \]
+    
+    \item \emph{Neither}: If neither of the above conditions is satisfied, the map is neither injective 
+    nor surjective.
+
+\end{itemize}
+
+\textbf{Example:}
+
+Let \( f: \Reals^3 \to \Reals^2 \) be defined by the matrix
+
+\[
+    A = \begin{bmatrix} 2 & 1 & 1 \\ 2 & 3 & 2 \end{bmatrix}.
+\]
+
+To identify the type of this linear map:
+
+\begin{itemize}
+    
+    \item Compute \( \dim(\ker(f)) \): By reducing the matrix \( A \) to row echelon form, we find that 
+    \( \dim(\ker(f)) = 1 \). This means \( f \) is not injective.
+    
+    \item Compute \( \dim(\text{im}(f)) \): The image corresponds to the column space of \( A \). Since 
+    there are 2 linearly independent rows in the row echelon form, we have \( \dim(\text{im}(f)) = 2 \), 
+    which equals \( \dim(W) = 2 \). Therefore, \( f \) is surjective.
+
+\end{itemize}
+
+Thus, \( f \) is surjective but not injective.
+
 

@@ -1,0 +1,124 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{tikz, tcolorbox}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{fullpage}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage[siunitx]{circuitikz}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{polynom}
+\usepackage{tikz-cd}
+\usepackage[utf8]{inputenc}
+\usepackage{pst-eucl}
+\usepackage{tabu}
+\usepackage{comment}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{fncychap}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{tkz-euclide}
+\usepackage{parskip}
+\usetikzlibrary{calc,intersections,decorations.pathreplacing, patterns, angles, quotes, cd, shapes, arrows, positioning, automata}
+\usepgfplotslibrary{fillbetween}
+\geometry{margin=1in}
+\graphicspath{{./resources/images}}
+\pgfplotsset{compat=newest}
+\setlength\parindent{0pt} 
+
+% Long Division for Polynomials
+\makeatletter
+\def\pld@CF@loop#1+{%
+    \ifx\relax#1\else
+        \begingroup
+          \pld@AccuSetX11%
+          \def\pld@frac{{}{}}\let\pld@symbols\@empty\let\pld@vars\@empty
+          \pld@false
+          #1%
+          \let\pld@temp\@empty
+          \pld@AccuIfOne{}{\pld@AccuGet\pld@temp
+                            \edef\pld@temp{\noexpand\pld@R\pld@temp}}%
+           \pld@if \pld@Extend\pld@temp{\expandafter\pld@F\pld@frac}\fi
+           \expandafter\pld@CF@loop@\pld@symbols\relax\@empty
+           \expandafter\pld@CF@loop@\pld@vars\relax\@empty
+           \ifx\@empty\pld@temp
+               \def\pld@temp{\pld@R11}%
+           \fi
+          \global\let\@gtempa\pld@temp
+        \endgroup
+        \ifx\@empty\@gtempa\else
+            \pld@ExtendPoly\pld@tempoly\@gtempa
+        \fi
+        \expandafter\pld@CF@loop
+    \fi}
+\def\pld@CMAddToTempoly{%
+    \pld@AccuGet\pld@temp\edef\pld@temp{\noexpand\pld@R\pld@temp}%
+    \pld@CondenseMonomials\pld@false\pld@symbols
+    \ifx\pld@symbols\@empty \else
+        \pld@ExtendPoly\pld@temp\pld@symbols
+    \fi
+    \ifx\pld@temp\@empty \else
+        \pld@if
+            \expandafter\pld@IfSum\expandafter{\pld@temp}%
+                {\expandafter\def\expandafter\pld@temp\expandafter
+                    {\expandafter\pld@F\expandafter{\pld@temp}{}}}%
+                {}%
+        \fi
+        \pld@ExtendPoly\pld@tempoly\pld@temp
+        \pld@Extend\pld@tempoly{\pld@monom}%
+    \fi}
+\makeatother
+
+\newcommand{\QED}{\begin{flushright}\(\mathfrak{QED}\)\end{flushright}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Rationals}{\mathbb{Q}}
+\newcommand{\Integers}{\mathbb{Z}}
+\newcommand{\Naturals}{\mathbb{N}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\img}{\text{img}}
+\newcommand{\geo}{\text{geo}}
+\newcommand{\alg}{\text{alg}}
+\tikzstyle{terminator} = [rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{decision} = [diamond, aspect=2, minimum width=3.5cm, text centered, draw=black, fill=blue!30, inner sep=1pt]
+\tikzstyle{connector} = [draw, -latex']
+
+
+\title{Mathematica Compendium}
+\author{Miguel Antonio Méndez Hernández}
+\date{\today}
+
+\begin{document}
+\documentclass[10pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{tikz, tcolorbox}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{fullpage}
+\usepackage{pgfplots}
+\usepackage{multicol}
+\usepackage[siunitx]{circuitikz}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{polynom}
+\usepackage{tikz-cd}
+\usepackage[utf8]{inputenc}
+\usepackage{pst-eucl}
+\usepackage{tabu}
+\usepackage{comment}
+\end{document}
