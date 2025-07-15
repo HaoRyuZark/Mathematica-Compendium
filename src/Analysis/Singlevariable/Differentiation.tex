@@ -159,12 +159,65 @@ To find local or global extrema:
 
 \end{enumerate}
 
-\textbf{Example:}
+\textbf{Example I:}
 
 Maximize area \(A = x(10 - 2x)\)
 
 \[
     A = 10x - 2x^2, \quad A' = 10 - 4x, \quad A' = 0 \Rightarrow x = 2.5
+\]
+
+\textbf{Example II:}
+
+Given a number \( c > 0 \), we want to factor it into two positive numbers \( x \) and \( y \) such that 
+their product is \( c \), and their sum \( S = x + y \) is minimal.
+
+Since \( x \cdot y = c \), we can express one variable in terms of the other, e.g.,
+
+\[
+    y = \frac{c}{x}
+\]
+
+Substituting into the sum:
+
+\[
+    S(x) = x + \frac{c}{x}
+\]
+
+To minimize \( S(x) \), we take the derivative:
+
+\[
+    S'(x) = 1 - \frac{c}{x^2}
+\]
+
+Setting the derivative to zero gives:
+
+\[
+    1 - \frac{c}{x^2} = 0 \quad \Rightarrow \quad x^2 = c \quad \Rightarrow \quad x = \sqrt{c}
+\]
+
+Then:
+
+\[
+    y = \frac{c}{x} = \sqrt{c}
+\]
+
+So the minimal sum occurs when \( x = y = \sqrt{c} \), and the minimum value of the sum is:
+
+\[
+x + y = 2\sqrt{c}
+\]
+
+Let \( c = 25 \). Then the two positive factors that minimize the sum are:
+
+\[
+    x = y = \sqrt{25} = 5
+\]
+
+and the minimal sum is:
+
+\[
+    x + y = 5 + 5 = 10
 \]
 
 \subsection{Power Rule Derivation}

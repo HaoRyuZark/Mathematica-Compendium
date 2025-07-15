@@ -445,27 +445,29 @@ A linear system of three equation has the following properties:
 \begin{tikzpicture}[node distance=1cm and 2cm]
     % Nodes
     \node [terminator] (start) {Linear \(n \times n\) System};
-    \node [decision, below=of start] (decision1) {\(\text{rg}(A) = \text{rg}(A,b)?\)};
-    \node [terminator, left=of decision1] (noS) {No solution};
-    \node [decision, below=of decision1] (decision2) {\(\text{rg}(A) = n?\)};
-    \node [terminator, below left=of decision2] (inS) {Inf. sol. with \((n - \text{rg}(A))\) parameters};
-    \node [terminator, below right=of decision2] (oneS) {Exactly one solution};
+    \node [decision, below=of start] (decision1) {\(\det(A) = 0?\)};
+	\node [decision, below=of decision1] (decision2) {\(\rank(A) = \rank(A,b)?\)};
+    \node [terminator, left=of decision1] (oneS) {Exactly one solution};
+    \node [terminator, below left=of decision2] (inS) {Inf. sol. with \((n - \rank(A))\) parameters};
+    \node [terminator, below=of decision2] (noS) {No solution};
 
     % Arrows
     \path [connector] (start) -- (decision1);
-    \path [connector] (decision1.west) -- node[above] {No} (noS.east);
+    \path [connector] (decision1.west) -- node[above] {No} (oneS.east);
     \path [connector] (decision1) -- node[right] {Yes} (decision2);
-    \path [connector] (decision2.south west) -- node[above left] {No} (inS.north east);
-    \path [connector] (decision2.south east) -- node[above right] {Yes} (oneS.north west);
+    \path [connector] (decision2.south west) -- node[above left] {Yes} (inS.north east);
+    \path [connector] (decision2.south) -- node[above right] {No} (noS.north);
 \end{tikzpicture}
+
+\bigskip
 
 \begin{tikzpicture}[node distance=1cm and 2cm]
     % Nodes
     \node [terminator] (start) {Linear \(m \times n\) System};
-    \node [decision, below=of start] (decision1) {\(\text{rg}(A) = \text{rg}(A,b)?\)};
+    \node [decision, below=of start] (decision1) {\(\rank(A) = \rank(A,b)?\)};
     \node [terminator, left=of decision1] (noS) {No solution};
-    \node [decision, below=of decision1] (decision2) {\(\text{rg}(A) = n?\)};
-    \node [terminator, below left=of decision2] (inS) {Inf. sol. with \((n - \text{rg}(A))\) parameters};
+    \node [decision, below=of decision1] (decision2) {\(\rank(A) = n?\)};
+    \node [terminator, below left=of decision2] (inS) {Inf. sol. with \((n - \rank(A))\) parameters};
     \node [terminator, below right=of decision2] (oneS) {Exactly one solution};
 
     % Arrows

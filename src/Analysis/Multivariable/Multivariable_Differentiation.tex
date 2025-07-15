@@ -48,6 +48,12 @@ Let \( f : U \subseteq \Reals^n \to \Reals \) be differentiable at \( \vec{X}_0 
     \end{bmatrix}
 \]
 
+The angle of the maximal slope is \(\phi = \frac{\pi}{2}\). This comes from the fact that 
+the directional derivative which is defined as \(\langle \nabla f, \vec{v}\rangle = \|\nabla f\| 
+\|\vec{v}\| \cos(\phi)\) is orthogonal to the gradient and this happens at that specific angle. 
+
+And for smallest slope \(\phi = \frac{3 \pi}{4}\).
+
 \subsubsection{Origin of the formula}
 
 Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_n(t)\hat{v_n}\) that 
@@ -63,8 +69,8 @@ Suppose along the curve \(r(t) = x_1(t)\hat{v_1} + x_2(t)\hat{v_2} + \cdots + x_
 \]
 
 \[
-    \langle \left(\frac{\partial f}{\partial x_1}\hat{v_1} + \cdots + \frac{\partial f}{\partial x_n}
-    \hat{v_n}\right) , \left( \frac{dx_1}{dt}\hat{v_1} + \cdots + \frac{dx_n}{dt}\hat{v_n}\right)\rangle = 0
+    \left\langle \left(\frac{\partial f}{\partial x_1}\hat{v_1} + \cdots + \frac{\partial f}{\partial x_n}
+    \hat{v_n}\right) , \left( \frac{dx_1}{dt}\hat{v_1} + \cdots + \frac{dx_n}{dt}\hat{v_n}\right)\right\rangle = 0
 \]
 
 From the formula we see that: \(\nabla f\) is the normal and \(\frac{d\vec{r}}{dt}\) the tangent vector 

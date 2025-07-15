@@ -369,29 +369,53 @@ Let \(F(p) = \int_a^b f(x, p)\,dx\). If \(f\) is continuous and differentiable i
 \subsection{Leibniz Rule for Differentiating Under the Integral Sign}
 
 \[
-    \frac{d}{dp} \int_{a(p)}^{b(p)} f(x, p)\,dx = f(b(p), p) \cdot b'(p) - f(a(p), p) \cdot a'(p) + \int_{a(p)}^{b(p)} \frac{\partial f}{\partial p}(x, p)\,dx
+    \frac{\partial F}{\partial x} \int_{a(x)}^{b(x)} f(x, t)\,dx = f(x, b(x)) \cdot b'(x) - f(x, a(x)) \cdot a'(x) + \int_{a(x)}^{b(x)} \frac{\partial f}{\partial t}(x, t)\,dt
 \]
 
-\subsection{Improper Integrals (Infinite Bounds)}
+\subsection{Improper Integrals with infinite Bounds}
 
 \[
     \int_a^\infty f(x)\,dx = \lim_{R \to \infty} \int_a^R f(x)\,dx
 \]
+
+The value when the bounds look like \(\int_{-\infty}^\infty f(x)\,dx \) is called the \emph{Cauchy-Main-Value}.
+
 \[
-    \int_{-\infty}^\infty f(x)\,dx = \int_{-\infty}^0 f(x)\,dx + \int_0^\infty f(x)\,dx
+    \int_{-\infty}^\infty f(x)\,dx = \lim_{R \to \infty} \int_{-R}^{c} f(x)\,dx + \int_{c}^{R} f(x)\,dx
 \]
 
-\subsection{Improper Integrals (Unbounded Functions)}
+\subsection{Improper Integrals with Discontinuity}
+
+These integrals have some kind of asymptote between the bounds we want to evaluate.  
+More concrete: 
 
 \[
     \int_a^b f(x)\,dx \text{ improper if } f \text{ has an infinite discontinuity on } [a, b]
 \]
 
+To tackle this type of problems we just like before use a limit to approach the discontinuity without 
+reaching it.
+
+\[
+    \int_{a}^{b} dx = \lim_{\varepsilon \to 0 } \int_{a}^{c - \varepsilon} f(x)dx + 
+    \int_{c + \varepsilon}^{b} f(x) dx 
+\]
+
+Here \(c\) is the value of the discontinuity.
+
 \textbf{Example:}
 
 \[
-    \int_0^1 \frac{1}{\sqrt{x}}\,dx = \lim_{\varepsilon \to 0^+} \int_\varepsilon^1 \frac{1}{\sqrt{x}}\,dx = 2
+    \int_{0}^{1} \frac{1}{2\sqrt{x}}
 \]
+
+Discontinuity at \(c = 0\)
+
+\begin{align*}
+    \int_{0}^{1} \frac{1}{2\sqrt{x}} &= \lim_{\varepsilon \to 0} \int_{\varepsilon}^{1} \frac{1}{2\sqrt{x}} dx\\
+    &= \lim_{\varepsilon \to 0} \sqrt{x} |_{\varepsilon}^{1} \\
+    &= 1 - \lim_{\varepsilon \to 0} \sqrt{\varepsilon} = 1
+\end{align*}
 
 \subsection{Convergence Criteria for Improper Integrals}
 
@@ -414,3 +438,4 @@ Let \(f(n) = a_n\) where \(f\) is continuous, decreasing, and positive for \(n \
 \textbf{Example:}
 
 \(\sum \frac{1}{n^p}\) converges \(\iff p > 1\)
+

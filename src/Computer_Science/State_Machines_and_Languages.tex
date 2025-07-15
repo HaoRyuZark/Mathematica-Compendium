@@ -513,8 +513,9 @@ Convert to DFA
 \begin{center}
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt, auto, node distance=3cm, on grid, semithick]
   \node[state, initial] (A) {\(\{p,q,r\}\)};
+
   \node[state] (B) [right=of A] {\(\{q,r\}\)};
-  \node[state] (C) [right=of B] {\(\{r\}\)};
+  \node[state, accepting] (C) [right=of B] {\(\{r\}\)};
 
   \path[->]
     (A) edge[loop above] node {a,c} (A)
@@ -527,8 +528,105 @@ Convert to DFA
 
 \subsection{Epsilon-NFA to NFA}
 
+Here the key is to eliminate the \(varepsilon\) transitions from the automata. It can be done 
+with the following steps:
+
+\begin{enumerate}
+     
+    \item Write a table empty transition table of the automata but without the transition epsilon. And then 
+          all epsilon closures of each state in a list
+   
+    \item For state and transition. Take \(\varepsilon\)-closure of the state, find where do
+          these states go with the current transition and the take their epsilon closure. The final closure
+          goes into to the corresponding transition column of the current state.
+    
+    \item Look for new final states. A final state will be a state that can be reached only using epsilon 
+          transitions.
+    
+    \item Finally, write the new automaton using the information from the transition table with the new 
+          final states. It is important to note that the automaton is not minimal. 
+
+\end{enumerate}
+
+\textbf{Example:}
+
+Transform to a nondeterministic automaton 
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt, auto, node distance=3cm, on grid, semithick]
+  \node[state, initial] (q0) {\(q_0\)};
+  \node[state] (q1) [right=of q1] {\(q_1\)};
+  \node[state] (q2) [below=of q0] {\(q_2\)};
+  \node[state, accepting] (q3) [below=of q1] {\(q_3\)};
+
+  \path[->]
+    (q0) edge[left] node [above]{\(\varepsilon\)} (q1)
+    (q1) edge[below] node [right]{1} (q3)
+         edge[->] node {\(\varepsilon\)} (q2)
+    (q2) edge[->] node[left]{0} (q0)
+         edge[right] node[above]{\(\varepsilon\)} (q3);
+\end{tikzpicture}
+\end{center}
+
+\textbf{Step 1:Set up table and closures}
+
+\[
+    \begin{array}{|c|c|c|}
+    \hline
+    \textbf{State} & 0              & 1    \\
+    \hline
+    q_0            &  &   \\
+    q_1   &  &   \\
+    q_2   &  &   \\
+    q_3   &  &   \\
+    \hline
+    \end{array}
+\]
+
+\(\varepsilon\)-Closures
+\begin{align*}
+    q_0 &= \{q_0, q_1, q_2, q_3\} \\
+    q_1 &= \{q_1, q_2, q_3\} \\
+    q_2 &= \{q_2, q_3\} \\
+    q_3 &= \{q_3\} \\
+\end{align*}
 
 
+\textbf{Step 2: Filling the table using the transition and closures}
+
+\[
+    \begin{array}{|c|c|c|}
+    \hline
+    \textbf{State} & 0              & 1    \\
+    \hline
+    q_0   & q_3 & q_0  \\
+    q_1   & q_3 & q_0  \\
+    q_2   & \emptyset & q_0  \\
+    q_3   &  \emptyset & \emptyset   \\
+    \hline
+    \end{array}
+\]
+\textbf{Step 3: Identify Final States}
+
+Here every state is a final state of the every state contains the final state in the epsilon closure.
+
+\textbf{Step 4: Draw the automaton}
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt, auto, node distance=2cm, on grid, semithick]
+  \node[state, initial, accepting] (q0) {\(q_0\)};
+  \node[state, accepting] (q1) [right=of q1] {\(q_1\)};
+  \node[state, accepting] (q2) [below=of q0] {\(q_2\)};
+  \node[state, accepting] (q3) [below=of q1] {\(q_3\)};
+
+  \path[->]
+    (q0) edge[loop above] node [above]{0} ()
+         edge[->] node{1} (q3)
+    (q1) edge[below] node [right]{1} (q3)
+         edge[->] node {0} (q0)
+    (q2) edge[->] node[left]{0} (q0);
+\end{tikzpicture}
+\end{center}
 
 \subsubsection{NFA to Regex}
 
@@ -568,11 +666,11 @@ You are given some NFA with \(n\) states and \(m\) transitions. Set your system 
     
     \begin{itemize}
         
-        \item If an equation \(L_i\) does \textbf{not} reference itself (i.e., no recursion), substitute 
+        \item If an equation \(L_i\) does not reference itself (i.e., no recursion), substitute 
         it into the other equations directly.
         
-        \item If an equation \(L_i\) \textbf{does} reference itself (e.g., \(L_i = r L_i + s\)), apply 
-        \textbf{Arden's Lemma}:  
+        \item If an equation \(L_i\) does reference itself (e.g., \(L_i = r L_i + s\)), apply 
+        \emph{Arden's Lemma}:  
         
         \[
             \text{If } L = YL \cup X, \text{ then } L = Y^*X
@@ -762,21 +860,146 @@ method is the \emph{table-filling algorithm}.
 
 \subsubsection{Table Method for DFA Minimization}
 
-\textbf{Steps:}
+Steps:
 
 \begin{enumerate}
     
-    \item \emph{List all pairs of states}: Create a table of all possible state pairs \((p, q)\).
+    \item Put all non-accepting states an equivalence class \(\alpha\), and  the accepting states in another 
+          called \(\Omega\). Write a table with the following columns: state, 
+          transition 1, transitions 2,..., transition n. On the first row put \(alpha\) and in the state column 
+          the states of the class. Then do the same with \(\Omega\). You can also optionally make a table 
+          of transition for the states.
 
-    \item \emph{Mark Distinguishable Pairs}: Initially mark pairs where one is accepting, and the other is not.
+    \item Start evaluating each state with each transition, and write the equivalence class reached by that transition. 
+          This means that you have to write the name of the set (class) the reached state is in. For example if 
+          we evaluate \(a\) with transition 0, and it leads to \(b\) and \(b\) is in the same set as \(a\) then for 
+          the row \(a\) with the transition 0 we write the name of that set.
 
-    \item \emph{Iteratively Mark Pairs}: For each unmarked pair \((p, q)\), if a transition on any symbol leads to a marked pair, mark \((p, q)\).
+    \item  For each state in the current class which has a tuple of classes different from the rest create 
+           a new class which is going to be included in the next iteration of the table. Then repeat step 2.
 
-    \item \emph{Equivalent States}: Unmarked pairs are equivalent and can be merged.
+    \item Terminate the process if no more new class tuple appear.
 
-    \item \emph{Reconstruct DFA}: Build a new DFA with merged equivalent states and updated transitions.
+    \item Build a new DFA with merged equivalent states and updated transitions.
 
 \end{enumerate}
 
-\textbf{Result}: A minimized DFA that accepts the same language with optimal state count.
+\textbf{Example:}
 
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt, auto, node distance=2cm, on grid, semithick]
+  \node[state, initial] (A) {A};
+  \node[state] (B) [above right=of A] {B};
+  \node[state] (C) [below=of B] {C};
+  \node[state] (D) [right=of B] {D};
+  \node[state, accepting] (E) [right=of C]{E};
+
+  \path[->]
+    (A) edge[right] node [above]{0} (B)
+        edge[right] node [below]{1} (C)
+    (B) edge[loop above] node{0} (B)
+        edge[right] node [below]{1} (D)
+    (C) edge[loop below] node[right]{1} (C)
+        edge[->] node[left]{0} (B)
+    (D) edge[bend left] node{0} (B)
+        edge[->] node[right]{1} (E)
+    (E) edge[->] node[below]{0} (B)
+        edge[->] node[below]{1} (C);
+\end{tikzpicture}
+\end{center}
+
+\textbf{Step 1 and 2: Table}
+
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline     &   &   & \\
+Class      & State                                                 & 0 & 1 \\
+\hline
+\(\alpha\) & \begin{tabular}[c]{@{}l@{}}A\\ B\\ C\\ D\end{tabular} &   &   \\
+\hline
+\(\Omega\)  & E                                                     &   &  \\
+\hline 
+\end{tabular}
+\end{table}
+\end{center}
+
+\textbf{Step 3: Evaluation}
+
+First iteration
+
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline     &   &   & \\
+Class      & State                                                 & 0 & 1 \\
+\hline
+\(\alpha\) & \begin{tabular}[c]{@{}l@{}}A\\ B\\ C\\ D\end{tabular} & \begin{tabular}[c]{@{}l@{}}\(\alpha\)\\ \(\alpha\)\\ \(\alpha\)\\ \(\alpha\)\end{tabular} &  
+\begin{tabular}[c]{@{}l@{}}\(\alpha\)\\ \(\alpha\)\\ \(\alpha\)\\ \(\Omega\)\end{tabular}  \\
+\hline
+\(\Omega\)  & E                                                     &  \(\alpha\) &\(\alpha\)\\
+\hline 
+\end{tabular}
+\end{table}
+\end{center}
+
+Second iteration
+
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline     &   &   & \\
+Class      & State                                                 & 0 & 1 \\
+\hline
+\(\alpha\) & \begin{tabular}[c]{@{}l@{}}A\\ B\\ C\end{tabular} & \begin{tabular}[c]{@{}l@{}}\(\alpha\)\\ \(\alpha\)\\ \(\alpha\)\end{tabular} &  
+\begin{tabular}[c]{@{}l@{}}\(\alpha\)\\ \(\beta\)\\ \(\alpha\)\end{tabular}  \\
+\hline
+\(\beta\) & D & \(\alpha\) & \(\Omega\) \\
+\hline
+\(\Omega\)  & E                                                     &  \(\alpha\) &\(\alpha\)\\
+\hline 
+\end{tabular}
+\end{table}
+\end{center}
+
+Third and final iteration
+
+\begin{center}
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline     &   &   & \\
+Class      & State                                                 & 0 & 1 \\
+\hline
+\(\alpha\) & \begin{tabular}[c]{@{}l@{}}A\\ C\end{tabular} & \begin{tabular}[c]{@{}l@{}}\(\gamma\)\\ \(\gamma\)\end{tabular} &  
+\begin{tabular}[c]{@{}l@{}}\(\alpha\)\\ \(\alpha\)\end{tabular}  \\
+\hline
+\(\beta\) & D & \(\gamma\) & \(\Omega\) \\
+\hline
+\(\gamma\) & B & \(\gamma\) & \(\beta\) \\
+\hline  
+\(\Omega\)  & E                                                     &  \(\gamma\) &\(\alpha\)\\
+\hline 
+\end{tabular}
+\end{table}
+\end{center}
+
+\textbf{State 4: Draw the automata}
+
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt, auto, node distance=2cm, on grid, semithick]
+  \node[state, initial] (A) {\(\alpha\)};
+  \node[state] (C) [above right=of A] {\(\gamma\)};
+  \node[state] (B) [right=of C] {\(\beta\)};
+  \node[state, accepting] (D) [right=of B] {\(\Omega\)};
+
+  \path[->]
+    (A) edge[right] node [above]{0} (C)
+        edge[loop above] node {1} ()
+    (C) edge[loop above] node{0} ()
+        edge[->] node{1} (B)
+    (B) edge[bend left] node{0} (C)
+        edge[->] node{1}(D)
+    (D) edge[bend right] node[above]{0} (C)
+        edge[bend left] node{1} (A);
+\end{tikzpicture}
+\end{center}
