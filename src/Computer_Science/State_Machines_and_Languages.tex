@@ -248,17 +248,25 @@ Regex: \texttt{a(b|c)*d}
 Regular expressions describe sets of strings using a small set of operations:
 
 \begin{itemize}
-    \item \textbf{Concatenation \((R.S)\)}: A string from \(R\) followed by a string from \(S\).
-    \item \textbf{Union \((R + S)\)}: A string from either \(R\) or \(S\).
-    \item \textbf{Kleene star \((R^*)\)}: Zero or more repetitions of strings from \(R\).
+    
+    \item \emph{Concatenation \((R.S)\)}: A string from \(R\) followed by a string from \(S\).
+    
+    \item \emph{Union \((R + S)\)}: A string from either \(R\) or \(S\).
+    
+    \item \emph{Kleene star \((R^*)\)}: Zero or more repetitions of strings from \(R\).
+
 \end{itemize}
 
 Special symbols:
 
 \begin{itemize}
+   
     \item \(\emptyset\): Matches no string.
+   
     \item \(\varepsilon\): Matches the empty string.
+   
     \item Literal characters (e.g., \(a, b, c\)): Match themselves.
+
 \end{itemize}
 
 Below are \(\varepsilon\)-NFAs (nondeterministic automata with \(\varepsilon\)-transitions) for some 
@@ -444,25 +452,27 @@ our initial state is not only \(q_0\) but also all other from \(q_0\) reachable 
 
 \begin{enumerate}
     
-    \item Write the transition table of the automata for all transition including epsilon.
+    \item Write a transition table.
+    
+    \item Write the new initial state which is going to be a set of states with the 
+          original initial state and all states reachable via \(\varepsilon\) from it. This 
+          also includes states reachable via multiple epsilon transitions. 
+          This is the epsilon closure of the initial state.
 
-    \item Like for the case \emph{NFA to DFA}, write the respective 
-          table, but for the second one leave out the epsilon.
+    \item Find the states reachable via the first transition of this epsilon closure.
+    
+    \item Then find the epsilon closure of the previously found set of states. This becomes a new state 
+          in the DFA.  
 
-    \item For filling the entries, the start is going to be a tuple of 
-          the start state plus all other states that are reachable via epsilon from the start, if they 
-          exist.
-
-    \item Start filling the table by evaluating the transitions like for the previously discussed type 
-          conversion with new the states transitions. For each transition visited like from \(q_x\) to 
-          \(q_x\) via "a" you would also have to include the states reachable from \(q_y\) with \(\varepsilon\) 
-          to your set of reachable states.
+    \item Repeat the process with each new created state and transition until you get no new epsilon 
+          closure.
 
 \end{enumerate}
 
 \textbf{Example:} 
 
 Convert to DFA
+
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[,scale=0.9, transform shape, shorten >=1pt, node distance=1.5cm and 1.5cm, on grid, auto]
@@ -493,8 +503,15 @@ Convert to DFA
     \end{array}
 \]
 
-\textbf{Step 2: Table for the DFA}
+\textbf{Step 2: Epsilon Closure and Transitions}
 
+The initial state is \(A = \varepsilon(p) = \{p,q,r\}\).
+
+Using the transition \(a\) we get the set \(\{p\}\) with \(\varepsilon(p) = \{p,q,r\}\). This state 
+is just \(A\) again. Using the transition \(b\) we get the set \(\{q,r\}\) with \(B = \varepsilon(\{q,r\}) = \{q,r\}\).
+And finally with \(c\) we get the set \(\{p, q, r\}\) with \(\varepsilon(\{p, q, r\}) = \{p,q, r\}\).
+ 
+Repeating this process with the rest of state will give us: 
 
 \[
     \begin{array}{|c|c|c|c|c|}
@@ -507,6 +524,7 @@ Convert to DFA
     \hline
     \end{array}
 \]
+
 
 \textbf{Step 3: Construct the Automaton}
 

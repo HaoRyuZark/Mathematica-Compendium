@@ -192,7 +192,57 @@ Here \(a = 4\), \(b = 2\) and \(d = 1\). Since \(d < \log_b a\) \(1 < \log_2 4 =
 \]    
 
 
-\subsection{How to Find Time Complexity}
+\subsection{How To Identify Time Complexity of a Function}
+
+The process can be summarized into 5 steps:
+
+\begin{enumerate}
+    
+    \item Write the definition of the bound we are looking for.
+    
+    \item Identify the most dominant term in \(f(n)\). The one that grows the faster.
+    
+    \item Set up the inequality and solve for \(c\).
+    
+    \item Take the limit of \(\frac{f(n)}{g(n)}\).
+    
+    \item Choose a \(c\) using the knowledge of the limit and find \(n0\). 
+
+\end{enumerate}
+
+\textbf{Example:}
+
+Find the time complexity \(0(n)\), the constant, at the start term for the inequality of \(\sqrt{4n}\).
+
+\textbf{Step 1: Definition}
+
+\[
+    f(n) \in O(g(n)) \iff f(n) \le c g(n)
+\]
+
+\textbf{Step 2: Dominant Term}
+
+The dominant term is \(\sqrt{n}\).
+
+\textbf{Step 3: Inequality}
+
+We are going to assume that it is part of \(O(\sqrt{n})\) 
+
+\[
+    \sqrt{n} \le c \sqrt{n}
+\]
+
+\textbf{Step 4: Limit}
+
+\[
+    \lim_{n \to \infty} \frac{\sqrt{n}}{\sqrt{n}} = 1 \le c
+\]
+
+\textbf{Step 5: Choose c}
+
+Let us choose \(c = 2\) which gives us \(n_0 = 1\).
+
+\subsection{How to Find Time Complexity In Code}
 
 \begin{enumerate}
 
